@@ -1,6 +1,6 @@
 {
     "name": "rapid-prototyping-wizard",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "private": false,
     "license": "SEE LICENSE IN LICENSE",
     "description": "Utilize edge new exponential technoligies in your project and business",
@@ -16,7 +16,6 @@
         "lint": "next lint",
         "test": "echo \"No tests yet\""
     },
- 
     "dependencies": {
         "@next/font": "13.1.1",
         "@types/node": "18.11.18",
