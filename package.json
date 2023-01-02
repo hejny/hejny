@@ -12,7 +12,6 @@
     "scripts": {
         "dev": "next dev",
         "build": "next build && next export",
-        "deploy": "gh-pages --dist ./out",
         "start": "next start",
         "lint": "next lint",
         "test": "echo \"No tests yet\"",

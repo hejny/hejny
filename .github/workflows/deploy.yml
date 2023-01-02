@@ -1,4 +1,4 @@
-name: Publish new version
+name: Deploy the page
 
 on:
     push:
@@ -44,7 +44,10 @@ jobs:
               env:
                   NODE_OPTIONS: --openssl-legacy-provider
 
-            - name: Deploy
-              run: npm run deploy
-              env:
-                  NODE_OPTIONS: --openssl-legacy-provider
+            - name: Configurate GIT
+              run: |
+                  git config --global user.email "me@pavolhejny.com"
+                  git config --global user.name "hejny"
+
+            - name: Deploy on GitHub pages
+              run: npx gh-pages --dist ./out --repo https://x-access-token:${{secrets.GITHUB_TOKEN}}@github.com/${GITHUB_REPOSITORY}.git
