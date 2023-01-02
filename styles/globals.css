@@ -1,3 +1,11 @@
+
+
+@font-face {
+  font-family: PassionsConflict;
+  src: url(../public/fonts/PassionsConflict-Regular.ttf);
+}
+
+
 :root {
 
   /* TODO: !!! What is this :root? */
