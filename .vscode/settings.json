@@ -1,0 +1,10 @@
+{
+    "files.eol": "\n",
+    "editor.formatOnSave": true,
+    "prettier.configPath": ".prettierrc",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "html.autoClosingTags": false,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    }
+}
