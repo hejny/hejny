@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-}
+    reactStrictMode: true,
+    basePath: '/rapid-prototyping-wizard' /* <- !!! */,
 
-module.exports = nextConfig
+    // TODO: !!! Go through all option @see https://nextjs.org/docs/api-reference/next.config.js/introduction
+};
+
+module.exports = nextConfig;
