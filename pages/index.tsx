@@ -1,8 +1,6 @@
 import Head from 'next/head';
-import Image from 'next/image';
 
 import { Inter } from '@next/font/google';
-import styles from '../styles/Home.module.css';
 import caveOfIdeasImage from '../public/wallpapers/cave-of-ideas.webp';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -19,7 +17,7 @@ export default function Home() {
             </Head>
             <main
                 style={{
-                    backgroundImage: `url(${caveOfIdeasImage.src})`,
+                    backgroundImage: `url('${caveOfIdeasImage.src}')`,
                     backgroundSize: `cover`,
                     backgroundPosition: `46% bottom`,
                     backgroundRepeat: `no-repeat`,
@@ -61,3 +59,7 @@ export default function Home() {
         </>
     );
 }
+
+/**
+ * TODO: !!! Custom 404 page
+ */
