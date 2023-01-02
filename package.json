@@ -15,6 +15,7 @@
         "start": "next start",
         "lint": "next lint",
         "test": "echo \"No tests yet\"",
+        "prettier": "prettier --config .prettierrc --ignore-unknown --write \"{pages,public,styles}/**/*\"",
         "prettier-commit": "git diff --exit-code && npm run prettier && git add . && git commit --allow-empty -m \"🧹 Prettier\"",
         "preversion": "git pull && npm run prettier-commit&& npm run lint && npm test",
         "postversion": "git push && git push --tags && npm run deploy"
