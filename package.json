@@ -4,6 +4,7 @@
     "private": false,
     "license": "SEE LICENSE IN LICENSE",
     "description": "Utilize edge new exponential technoligies in your project and business",
+    "homepage": "https://hejny.github.io/rapid-prototyping-wizard/",
     "repository": {
         "type": "git",
         "url": "https://github.com/hejny/rapid-prototyping-wizard"
