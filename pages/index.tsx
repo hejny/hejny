@@ -7,6 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
+    // TODO: !!! Change from boilerplate 
     <>
       <Head>
         <title>Create Next App</title>
