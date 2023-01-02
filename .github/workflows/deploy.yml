@@ -26,7 +26,7 @@ jobs:
               env:
                   NODE_OPTIONS: --openssl-legacy-provider
 
-    publish-github:
+    deploy:
         name: Publish on Github pages
         needs: test
         runs-on: ubuntu-latest
