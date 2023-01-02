@@ -20,32 +20,35 @@ export default function Home() {
       <main style={{
         backgroundImage: `url(${caveOfIdeasImage.src})`,
         backgroundSize: `cover`,
-        backgroundPosition: `10% bottom`,
+        backgroundPosition: `46% bottom`,
         backgroundRepeat: `no-repeat`,
         minHeight: `100vh`,
-        padding: 10,
+        padding: '5vh',
         display: 'grid',
-        gridTemplateRows: `1fr 1fr 1fr`,
-        gridTemplateColumns: `1fr 1fr 1fr`,
+        gridTemplateRows: `repeat(1,1fr)`,
+        gridTemplateColumns: `repeat(1,1fr)`,
+        placeItems: 'center',
       }}>
         <h1 style={{
           // !!! Should be font in "
 
           gridRowStart: 1,
-          gridRowEnd: 4,
+          //gridRowEnd: 4,
           gridColumnStart: 1,
-          gridColumnEnd: 4,
-          //textAlign:'center',
+          //gridColumnEnd: 3,
+          textAlign:'center',
 
 
           fontFamily: '"PassionsConflict", Helvetica Neue',
           fontSize: '70px',
           bottom: 0,
+          color: 'white',
+          textShadow: `#ff5500 0px 0px 10px`
           // width: 100,
         }}>
-          Rapid
-          prototyping
-          wizard
+          Rapid<br/>
+          Prototyping<br/>
+          Wizard
           {/*🧙‍♂️*/}
         </h1>
         {/*<Image alt="Cave of ideas" src={caveOfIdeasImage} />*/}
