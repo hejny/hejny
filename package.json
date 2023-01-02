@@ -1,13 +1,22 @@
 {
     "name": "rapid-prototyping-wizard",
     "version": "0.1.0",
-    "private": true,
+    "private": false,
+    "license": "SEE LICENSE IN LICENSE",
+    "description": "First, run the development server:",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/hejny/rapid-prototyping-wizard"
+    },
     "scripts": {
         "dev": "next dev",
-        "build": "next build",
+        "build": "next build && next export",
+        "deploy": "gh-pages --dist ./.next/static",
         "start": "next start",
-        "lint": "next lint"
+        "lint": "next lint",
+        "test": "echo \"No tests yet\""
     },
+ 
     "dependencies": {
         "@next/font": "13.1.1",
         "@types/node": "18.11.18",
@@ -20,10 +29,7 @@
         "react-dom": "18.2.0",
         "typescript": "4.9.4"
     },
-    "license": "SEE LICENSE IN LICENSE",
-    "description": "First, run the development server:",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/hejny/rapid-prototyping-wizard"
+    "devDependencies": {
+        "gh-pages": "^4.0.0"
     }
 }
