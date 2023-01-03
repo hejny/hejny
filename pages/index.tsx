@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
 import { Inter } from '@next/font/google';
-import caveOfIdeasImage from '../public/wallpapers/cave-of-ideas-1.remastered.jpeg';
+import caveOfIdeasImage from '../public/wallpapers/Pavol_Hejn_cave_of_ideas_with_transparent_look_through_fe3480c5-76af-45da-ac4e-5177062bcb6b.png';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -25,21 +25,23 @@ export default function Home() {
                     backgroundRepeat: `no-repeat`,
                     width: `100vw`,
                     minHeight: `100vh`,
-                    padding: '5vh',
-                    //display: 'grid',
-                    //gridTemplateRows: `repeat(1,1fr)`,
-                    //gridTemplateColumns: `repeat(1,1fr)`,
-                    //placeItems: 'center',
+                    //padding: '5vh',
+
+                    display: 'grid',
+                    gridTemplateRows: `repeat(5,1fr)`,
+                    gridTemplateColumns: `repeat(5,1fr)`,
+                    placeItems: 'center',
                 }}
             >
                 <h1
                     style={{
                         // !!! Should be font in "
 
-                        //gridRowStart: 1,
-                        //gridRowEnd: 4,
-                        //gridColumnStart: 1,
-                        //gridColumnEnd: 3,
+                        gridRowStart: 1,
+                        gridRowEnd: 1,
+                        gridColumnStart: 1,
+                        gridColumnEnd: 6,
+
                         textAlign: 'center',
 
                         fontFamily: '"PassionsConflict", Helvetica Neue',
@@ -53,6 +55,32 @@ export default function Home() {
                     Rapid Prototyping Wizard
                     {/*🧙‍♂️*/}
                 </h1>
+
+                <main
+                    style={{
+                        // !!! Should be font in "
+
+                        gridRowStart: 2,
+                        gridRowEnd: 4,
+                        gridColumnStart: 4,
+                        gridColumnEnd: 6,
+
+                        textAlign: 'center',
+
+                        fontSize: '20px',
+                        bottom: 0,
+                        color: 'white',
+                        textShadow: `#ff5500 0px 0px 10px`,
+
+                        padding: 5,
+                        borderRadius: 5,
+                        backgroundColor: 'rgba(0,0,0,0.3)',
+                        // width: 100,
+                    }}
+                >
+                    AI, VR/AR,...
+                </main>
+
                 {/*<Image alt="Cave of ideas" src={caveOfIdeasImage} />*/}
             </div>
         </>
