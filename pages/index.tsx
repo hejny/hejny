@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
 import { Inter } from '@next/font/google';
-import caveOfIdeasImage from '../public/wallpapers/cave-of-ideas.webp';
+import caveOfIdeasImage from '../public/wallpapers/cave-of-ideas-1.remastered.jpeg';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -15,27 +15,30 @@ export default function Home() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main
+
+            {/* TODO: !!! Use somewhere <main> element */}
+            <div
                 style={{
                     backgroundImage: `url('${caveOfIdeasImage.src}')`,
-                    backgroundSize: `cover`,
-                    backgroundPosition: `46% bottom`,
+                    backgroundSize: `90% auto`,
+                    backgroundPosition: `46% 50%`,
                     backgroundRepeat: `no-repeat`,
+                    width: `100vw`,
                     minHeight: `100vh`,
                     padding: '5vh',
-                    display: 'grid',
-                    gridTemplateRows: `repeat(1,1fr)`,
-                    gridTemplateColumns: `repeat(1,1fr)`,
-                    placeItems: 'center',
+                    //display: 'grid',
+                    //gridTemplateRows: `repeat(1,1fr)`,
+                    //gridTemplateColumns: `repeat(1,1fr)`,
+                    //placeItems: 'center',
                 }}
             >
                 <h1
                     style={{
                         // !!! Should be font in "
 
-                        gridRowStart: 1,
+                        //gridRowStart: 1,
                         //gridRowEnd: 4,
-                        gridColumnStart: 1,
+                        //gridColumnStart: 1,
                         //gridColumnEnd: 3,
                         textAlign: 'center',
 
@@ -47,15 +50,11 @@ export default function Home() {
                         // width: 100,
                     }}
                 >
-                    Rapid
-                    <br />
-                    Prototyping
-                    <br />
-                    Wizard
+                    Rapid Prototyping Wizard
                     {/*🧙‍♂️*/}
                 </h1>
                 {/*<Image alt="Cave of ideas" src={caveOfIdeasImage} />*/}
-            </main>
+            </div>
         </>
     );
 }
