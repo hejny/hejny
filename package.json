@@ -4,14 +4,14 @@
     "private": false,
     "license": "SEE LICENSE IN LICENSE",
     "description": "Utilize edge new exponential technoligies in your project and business",
-    "homepage": "https://hejny.github.io/rapid-prototyping-wizard/",
+    "homepage": "https://prototyping.hejny.org/",
     "repository": {
         "type": "git",
         "url": "https://github.com/hejny/rapid-prototyping-wizard"
     },
     "scripts": {
         "dev": "next dev",
-        "build": "rm -rf ./out && next build && next export && echo \"!!!\" > ./out/__CNAME",
+        "build": "rm -rf ./out && next build && next export && echo \"prototyping.hejny.org\" > ./out/__CNAME",
         "start": "next start",
         "lint": "next lint",
         "test": "echo \"No tests yet\"",
