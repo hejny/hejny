@@ -50,4 +50,4 @@ jobs:
                   git config --global user.name "hejny"
 
             - name: Deploy on GitHub pages
-              run: npx gh-pages --dist ./out --repo https://x-access-token:${{secrets.GITHUB_TOKEN}}@github.com/${GITHUB_REPOSITORY}.git
+              run: npx gh-pages --dotfiles --dist ./out --repo https://x-access-token:${{secrets.GITHUB_TOKEN}}@github.com/${GITHUB_REPOSITORY}.git
