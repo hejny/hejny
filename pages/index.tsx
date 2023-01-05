@@ -36,7 +36,7 @@ export default function Home() {
                 <div
                     style={{
                         zIndex: 1,
-                        outline: '1px dotted red',
+                        // outline: '1px dotted red',
 
                         gridColumn: `2 / span 3`,
                         gridRow: `2 / span 1`,
@@ -48,7 +48,7 @@ export default function Home() {
                 <div
                     style={{
                         zIndex: 2,
-                        outline: '1px dotted red',
+                        // outline: '1px dotted red',
                         gridColumn: `2 / span 3`,
                         gridRow: `3 / span 2`,
                         textAlign: 'center',
