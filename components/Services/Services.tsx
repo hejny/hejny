@@ -1,7 +1,7 @@
 import {
     CaveOfIdeasInLightbulbWithTransparentLookThrImage,
+    CaveWithPresentationImage,
     CaveWithPrototypingLaboratoryImage,
-    LightbulbOfIdeasWithTransparentLookThroughImage,
 } from '../wallpapers';
 import { Service } from './Service';
 import styles from './Services.module.css';
@@ -9,14 +9,14 @@ import styles from './Services.module.css';
 export function Services() {
     return (
         <div className={styles.services}>
-            <Service title="Hello1">
+            <Service title="Consulting">
                 <CaveOfIdeasInLightbulbWithTransparentLookThrImage />
             </Service>
-            <Service title="Hello2">
-                <CaveWithPrototypingLaboratoryImage />
+            <Service title="Talk">
+                <CaveWithPresentationImage />
             </Service>
-            <Service title="Hello3">
-                <LightbulbOfIdeasWithTransparentLookThroughImage />
+            <Service title="Prototyping">
+                <CaveWithPrototypingLaboratoryImage />
             </Service>
         </div>
     );
