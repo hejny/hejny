@@ -30,6 +30,12 @@
             "onlySingle": true
         },
         {
+            "name": "🏭🖼️ Generate wallpapers library",
+            "commands": ["ts-node ./scripts/generate-wallpapers-library/generate-wallpapers-library.ts --commit"],
+            "onlySingle": true,
+            "focus": true
+        },
+        {
             "name": "🔼👑 Release major version",
             "command": "npm version major",
             "onlySingle": true,
