@@ -1,9 +1,11 @@
-import Head from 'next/head';
-
 import { Inter } from '@next/font/google';
-import caveOfIdeasImage from '../public/wallpapers/Pavol_Hejn_cave_of_ideas_with_transparent_look_through_fe3480c5-76af-45da-ac4e-5177062bcb6b.png';
+import Head from 'next/head';
+import { Cave } from './components/Cave';
 
+// !!! What is this - inter/Inter
 const inter = Inter({ subsets: ['latin'] });
+
+// !!! The best way to import the fonts
 
 export default function Home() {
     return (
@@ -17,76 +19,60 @@ export default function Home() {
             </Head>
 
             {/* TODO: !!! Use somewhere <main> element */}
-            <div
-                style={{
-                    backgroundImage: `url('${caveOfIdeasImage.src}')`,
-                    backgroundSize: `90% auto`,
-                    backgroundPosition: `46% 50%`,
-                    backgroundRepeat: `no-repeat`,
-                    width: `100vw`,
-                    minHeight: `100vh`,
-                    //padding: '5vh',
+            <Cave />
 
-                    display: 'grid',
-                    gridTemplateRows: `repeat(5,1fr)`,
-                    gridTemplateColumns: `repeat(5,1fr)`,
-                    placeItems: 'center',
+            <h1
+                style={{
+                    // !!! Should be font in "
+
+                    gridRowStart: 1,
+                    gridRowEnd: 1,
+                    gridColumnStart: 1,
+                    gridColumnEnd: 6,
+
+                    textAlign: 'center',
+
+                    fontFamily: '"PassionsConflict", Helvetica Neue',
+                    fontSize: '70px',
+                    bottom: 0,
+                    color: 'white',
+                    textShadow: `#ff5500 0px 0px 10px`,
+                    // width: 100,
                 }}
             >
-                <h1
-                    style={{
-                        // !!! Should be font in "
+                Rapid Prototyping Wizard
+            </h1>
 
-                        gridRowStart: 1,
-                        gridRowEnd: 1,
-                        gridColumnStart: 1,
-                        gridColumnEnd: 6,
+            <main
+                style={{
+                    // !!! Should be font in "
 
-                        textAlign: 'center',
+                    gridRowStart: 2,
+                    gridRowEnd: 4,
+                    gridColumnStart: 5,
+                    gridColumnEnd: 6,
 
-                        fontFamily: '"PassionsConflict", Helvetica Neue',
-                        fontSize: '70px',
-                        bottom: 0,
-                        color: 'white',
-                        textShadow: `#ff5500 0px 0px 10px`,
-                        // width: 100,
-                    }}
-                >
-                    Rapid Prototyping Wizard
-                    {/*🧙‍♂️*/}
-                </h1>
+                    textAlign: 'center',
 
-                <main
-                    style={{
-                        // !!! Should be font in "
+                    fontSize: '20px',
+                    bottom: 0,
+                    color: 'white',
+                    textShadow: `#ff5500 0px 0px 10px`,
 
-                        gridRowStart: 2,
-                        gridRowEnd: 4,
-                        gridColumnStart: 4,
-                        gridColumnEnd: 6,
-
-                        textAlign: 'center',
-
-                        fontSize: '20px',
-                        bottom: 0,
-                        color: 'white',
-                        textShadow: `#ff5500 0px 0px 10px`,
-
-                        padding: 5,
-                        borderRadius: 5,
-                        backgroundColor: 'rgba(0,0,0,0.3)',
-                        // width: 100,
-                    }}
-                >
-                    AI, VR/AR,...
-                </main>
-
-                {/*<Image alt="Cave of ideas" src={caveOfIdeasImage} />*/}
-            </div>
+                    padding: 5,
+                    borderRadius: 5,
+                    backgroundColor: 'rgba(0,0,0,0.3)',
+                    // width: 100,
+                }}
+            >
+                AI, Neural networks, VR/AR, WebGL, WebVR, Webassembly, WebSockets. Bitcoin, Ethereum, Cardano, Crypto,
+                Smart contracts, Web3, ...
+            </main>
         </>
     );
 }
 
 /**
+ * TODO: !!! Split into components
  * TODO: !!! Custom 404 page
  */
