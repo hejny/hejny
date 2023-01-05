@@ -1,3 +1,4 @@
+import { PropsWithChildren } from 'react';
 import styles from './Items.module.css';
 
 export function Items({ children }: PropsWithChildren<{}>) {
