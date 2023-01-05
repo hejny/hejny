@@ -1,19 +1,22 @@
-import { CaveOfIdeasInLightbulbImage } from '../wallpapers';
+import {
+    CaveOfIdeasInLightbulbWithTransparentLookThrImage,
+    CaveWithPrototypingLaboratoryImage,
+    LightbulbOfIdeasWithTransparentLookThroughImage,
+} from '../wallpapers';
 import { Service } from './Service';
 import styles from './Services.module.css';
 
-// !!! Wallpapers image library + script
 export function Services() {
     return (
         <div className={styles.services}>
             <Service title="Hello1">
-                <CaveOfIdeasInLightbulbImage />
+                <CaveOfIdeasInLightbulbWithTransparentLookThrImage />
             </Service>
             <Service title="Hello2">
-                <CaveOfIdeasInLightbulbImage />
+                <CaveWithPrototypingLaboratoryImage />
             </Service>
             <Service title="Hello3">
-                <CaveOfIdeasInLightbulbImage />
+                <LightbulbOfIdeasWithTransparentLookThroughImage />
             </Service>
         </div>
     );

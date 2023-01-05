@@ -6,7 +6,7 @@ import { writeFile } from 'fs/promises';
 import glob from 'glob-promise';
 import { normalizeToCamelCase } from 'n12';
 import { capitalize } from 'n12/dist/capitalize';
-import { basename, join, relative } from 'path';
+import { basename, dirname, join, relative } from 'path';
 import { commit } from '../utils/autocommit/commit';
 import { isWorkingTreeClean } from '../utils/autocommit/isWorkingTreeClean';
 import { prettify } from '../utils/prettify';
@@ -46,7 +46,7 @@ async function generateWallpapersLibrary({ isCommited }: { isCommited: boolean }
     const wallpapers = wallpapersPaths.map((wallpaperPath) => {
         let name = basename(wallpaperPath);
 
-        const jobUuidMatch = name.match(/_(?<jobUuid>[^_]*?)$/);
+        const jobUuidMatch = name.match(/_(?<jobUuid>[^_]*?)(\.png)?$/);
         const jobUuid = jobUuidMatch?.groups?.jobUuid;
 
         if (!jobUuid) {
@@ -57,6 +57,7 @@ async function generateWallpapersLibrary({ isCommited }: { isCommited: boolean }
 
         name = name.replace(/^Pavol_Hejn_/, '');
         name = name.replace('_' + jobUuid, '');
+        name = name.replace(/\.png$/, '');
 
         const index = namesRegistry[name] || 0;
         namesRegistry[name] = index + 1;
@@ -66,7 +67,10 @@ async function generateWallpapersLibrary({ isCommited }: { isCommited: boolean }
         return {
             componentName: capitalize(normalizeToCamelCase(name)) + 'Image' + indexSuffix,
             entityName: normalizeToCamelCase(name /* <- !!! normalize_imported_names_like_this */) + indexSuffix,
-            importPath: './' + relative(wallpapersFilePath, wallpaperPath).split('\\').join('/'),
+            importPath: ('./' + relative(dirname(wallpapersFilePath), wallpaperPath).split('\\').join('/')).replace(
+                /^\.\/\.\.\//,
+                '../',
+            ),
             title: name.split('_').join(' '),
             jobUrl,
         };
@@ -110,3 +114,7 @@ async function generateWallpapersLibrary({ isCommited }: { isCommited: boolean }
     console.info(`[ Done 🖼️  Generating wallpapers library ]`);
     process.exit(0);
 }
+
+/**
+ * TODO: !!! Persistency and uniqueness of the names
+ */

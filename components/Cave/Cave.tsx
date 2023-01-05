@@ -1,7 +1,5 @@
-import { CaveOfIdeasImage } from '../wallpapers';
+import { CaveOfIdeasWithTransparentLookThroughImage2 } from '../wallpapers';
 import styles from './Cave.module.css';
-
-// !!! Wallpapers image library
 
 export function Cave() {
     return (
@@ -12,7 +10,7 @@ export function Cave() {
                     zIndex: 1,
                 }}
             >
-                <CaveOfIdeasImage />
+                <CaveOfIdeasWithTransparentLookThroughImage2 />
             </div>
 
             {/* 
