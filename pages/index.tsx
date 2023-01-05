@@ -1,6 +1,7 @@
 import { Inter } from '@next/font/google';
 import Head from 'next/head';
 import { Cave } from './components/Cave';
+import { Services } from './components/Services';
 
 // !!! What is this - inter/Inter
 const inter = Inter({ subsets: ['latin'] });
@@ -24,7 +25,7 @@ export default function Home() {
 
                     display: 'grid',
                     gridTemplateColumns: `20vw 1fr 3fr 1fr 20vw`,
-                    gridTemplateRows: `0px auto 20vh 1fr 1fr 1fr`,
+                    gridTemplateRows: `0px auto 20vh minmax`,
 
                     alignItems: 'stretch',
                     justifyItems: 'stretch',
@@ -47,16 +48,17 @@ export default function Home() {
                         zIndex: 2,
                         outline: '1px dotted red',
                         gridColumn: `2 / span 3`,
-                        gridRow: `3 / span 1`,
+                        gridRow: `3 / span 2`,
                         textAlign: 'center',
                         color: 'white',
                         textShadow: `#ff5500 0px 0px 10px`,
                     }}
                 >
+                    {/* TODO: Make as <Component/> */}
                     <h1
                         style={{
                             fontFamily: '"PassionsConflict", Helvetica Neue',
-                            fontSize: '50px',
+                            fontSize: '60px',
 
                             // TODO: DRY
                             margin: 0,
@@ -69,10 +71,14 @@ export default function Home() {
                     >
                         Wizard
                     </h1>
+
+                    {/* TODO: Make as <Component/> */}
                     <p style={{ width: 'calc(50% + 1vw)', margin: 'auto' }}>
                         AI, Neural networks, VR/AR, WebGL, WebVR, Webassembly, WebSockets. Bitcoin, Ethereum, Cardano,
                         Crypto, Smart contracts, Web3, ...
                     </p>
+
+                    <Services />
                 </div>
             </div>
         </>

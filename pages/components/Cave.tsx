@@ -48,7 +48,7 @@ export function Cave() {
                 style={{
                     zIndex: 1,
                     gridColumn: `1 / span 1`,
-                    gridRowStart: `1/ span 1`,
+                    gridRow: `1 / span 1`,
                 }}
             >
                 <Image alt="!!!" src={caveOfIdeasImage} style={{ width: '100%', height: 'auto' }} />
