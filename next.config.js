@@ -5,6 +5,10 @@ const nextConfig = {
 
     // TODO: !!! Go through all option @see https://nextjs.org/docs/api-reference/next.config.js/introduction
 
+    images: {
+        unoptimized: true /* <- TODO: Optimize images, all images should be in some modern format like webp/svg */,
+    },
+
     async exportPathMap(/* defaultPathMap, { dev, dir, outDir, distDir, buildId } */) {
         return {
             '/': { page: '/' },

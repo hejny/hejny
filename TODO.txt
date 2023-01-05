@@ -1,2 +1,0 @@
-TODO: !!! Use webp not pngs
-TODO: !!! Use different port than 3000
