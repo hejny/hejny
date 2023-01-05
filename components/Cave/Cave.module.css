@@ -1,0 +1,20 @@
+.cave {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+    transform: translateX(3.3%) /* <- Note: This centeres man in the image of the cave */;
+
+    align-items: stretch;
+    justify-items: stretch;
+}
+
+.layer {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.layer img {
+    width: 100%;
+    height: auto;
+}
