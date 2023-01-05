@@ -1,23 +1,28 @@
+import { Item } from '../Items/Item';
+import { Items } from '../Items/Items';
 import {
     CaveOfIdeasInLightbulbWithTransparentLookThrImage,
     CaveWithPresentationImage,
     CaveWithPrototypingLaboratoryImage,
 } from '../wallpapers';
-import { Service } from './Service';
 import styles from './Services.module.css';
 
 export function Services() {
     return (
         <div className={styles.services}>
-            <Service title="Consulting">
-                <CaveOfIdeasInLightbulbWithTransparentLookThrImage />
-            </Service>
-            <Service title="Talk">
-                <CaveWithPresentationImage />
-            </Service>
-            <Service title="Prototyping">
-                <CaveWithPrototypingLaboratoryImage />
-            </Service>
+            <h2>How can I help you?</h2>
+
+            <Items>
+                <Item title="Consulting">
+                    <CaveOfIdeasInLightbulbWithTransparentLookThrImage />
+                </Item>
+                <Item title="Talk">
+                    <CaveWithPresentationImage />
+                </Item>
+                <Item title="Prototyping">
+                    <CaveWithPrototypingLaboratoryImage />
+                </Item>
+            </Items>
         </div>
     );
 }

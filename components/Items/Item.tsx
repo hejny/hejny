@@ -1,9 +1,9 @@
 import { PropsWithChildren } from 'react';
-import styles from './Service.module.css';
+import styles from './Item.module.css';
 
-export function Service({ title, children }: PropsWithChildren<{ title: string }>) {
+export function Item({ title, children }: PropsWithChildren<{ title: string }>) {
     return (
-        <div className={styles.service}>
+        <div className={styles.item}>
             <div className={styles['image-container']}>{children}</div>
             <div className={styles.title}>{title}</div>
         </div>

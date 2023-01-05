@@ -1,0 +1,14 @@
+.items {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.items > * {
+    width: 33.333%;
+}
+
+@media only screen and (max-width: 650px) {
+    .items > * {
+        width: 100%;
+    }
+}
