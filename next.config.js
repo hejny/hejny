@@ -9,11 +9,16 @@ const nextConfig = {
         unoptimized: true /* <- TODO: Optimize images, all images should be in some modern format like webp/svg */,
     },
 
-    async exportPathMap(/* defaultPathMap, { dev, dir, outDir, distDir, buildId } */) {
+    /* 
+    TODO: Avoid warn - Statically exporting a Next.js application via `next export` disables API routes.
+
+    async exportPathMap(/* defaultPathMap, { dev, dir, outDir, distDir, buildId } * /) {
         return {
             '/': { page: '/' },
         };
     },
+
+    */
 };
 
 module.exports = nextConfig;
