@@ -21,53 +21,7 @@ export default function Home() {
             {/* TODO: !!! Use somewhere <main> element */}
             <Cave />
 
-            <h1
-                style={{
-                    // !!! Should be font in "
-
-                    gridRowStart: 1,
-                    gridRowEnd: 1,
-                    gridColumnStart: 1,
-                    gridColumnEnd: 6,
-
-                    textAlign: 'center',
-
-                    fontFamily: '"PassionsConflict", Helvetica Neue',
-                    fontSize: '70px',
-                    bottom: 0,
-                    color: 'white',
-                    textShadow: `#ff5500 0px 0px 10px`,
-                    // width: 100,
-                }}
-            >
-                Rapid Prototyping Wizard
-            </h1>
-
-            <main
-                style={{
-                    // !!! Should be font in "
-
-                    gridRowStart: 2,
-                    gridRowEnd: 4,
-                    gridColumnStart: 5,
-                    gridColumnEnd: 6,
-
-                    textAlign: 'center',
-
-                    fontSize: '20px',
-                    bottom: 0,
-                    color: 'white',
-                    textShadow: `#ff5500 0px 0px 10px`,
-
-                    padding: 5,
-                    borderRadius: 5,
-                    backgroundColor: 'rgba(0,0,0,0.3)',
-                    // width: 100,
-                }}
-            >
-                AI, Neural networks, VR/AR, WebGL, WebVR, Webassembly, WebSockets. Bitcoin, Ethereum, Cardano, Crypto,
-                Smart contracts, Web3, ...
-            </main>
+            <main>dddd</main>
         </>
     );
 }

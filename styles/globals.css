@@ -2,6 +2,13 @@
     font-family: PassionsConflict;
     src: url(../public/fonts/PassionsConflict-Regular.ttf);
 }
+
+@font-face {
+    font-family: Oswald;
+    src: url(../public/fonts/Oswald/Oswald-VariableFont_wght.ttf);
+}
+
 body {
-    background-color: black;
+    background-color: rgba(0, 0, 20, 1);
+    font-family: 'Oswald', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
