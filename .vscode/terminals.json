@@ -7,6 +7,12 @@
             "focus": true
         },
         {
+            "name": "🌎 Expose",
+            "command": "npx lt --port 4455 --subdomain wizard",
+            "focus": true
+        },
+
+        {
             "name": "🧪 Test",
             "command": "npm run test",
             "onlySingle": true,

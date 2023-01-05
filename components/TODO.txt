@@ -1,2 +1,3 @@
 TODO: !!! What is the best place to put components in
 TODO: !!! What is the best way how to make looooookg single page with hash-routed sections 
+TODO: !!! Expose in terminals
