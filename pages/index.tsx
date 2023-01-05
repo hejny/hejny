@@ -1,7 +1,7 @@
 import { Inter } from '@next/font/google';
 import Head from 'next/head';
-import { Cave } from './components/Cave/Cave';
-import { Services } from './components/Services/Services';
+import { Cave } from '../components/Cave/Cave';
+import { Services } from '../components/Services/Services';
 
 // !!! What is this - inter/Inter
 const inter = Inter({ subsets: ['latin'] });
