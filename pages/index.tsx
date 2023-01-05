@@ -18,15 +18,69 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            {/* TODO: !!! Use somewhere <main> element */}
-            <Cave />
+            <div
+                style={{
+                    width: `100%`,
 
-            <main>dddd</main>
+                    display: 'grid',
+                    gridTemplateColumns: `20vw 1fr 3fr 1fr 20vw`,
+                    gridTemplateRows: `0px auto 20vh 1fr 1fr 1fr`,
+
+                    alignItems: 'stretch',
+                    justifyItems: 'stretch',
+                }}
+            >
+                <div
+                    style={{
+                        zIndex: 1,
+                        outline: '1px dotted red',
+
+                        gridColumn: `2 / span 3`,
+                        gridRow: `2 / span 1`,
+                    }}
+                >
+                    <Cave />
+                </div>
+
+                <div
+                    style={{
+                        zIndex: 2,
+                        outline: '1px dotted red',
+                        gridColumn: `2 / span 3`,
+                        gridRow: `3 / span 1`,
+                        textAlign: 'center',
+                        color: 'white',
+                        textShadow: `#ff5500 0px 0px 10px`,
+                    }}
+                >
+                    <h1
+                        style={{
+                            fontFamily: '"PassionsConflict", Helvetica Neue',
+                            fontSize: '50px',
+
+                            // TODO: DRY
+                            margin: 0,
+                            padding: 0,
+                            marginBlockStart: 0,
+                            marginBlockEnd: 0,
+                            marginInlineStart: 0,
+                            marginInlineEnd: 0,
+                        }}
+                    >
+                        Wizard
+                    </h1>
+                    <p style={{ width: 'calc(50% + 1vw)', margin: 'auto' }}>
+                        AI, Neural networks, VR/AR, WebGL, WebVR, Webassembly, WebSockets. Bitcoin, Ethereum, Cardano,
+                        Crypto, Smart contracts, Web3, ...
+                    </p>
+                </div>
+            </div>
         </>
     );
 }
 
 /**
+ * TODO: !!! Use somewhere <main> element
  * TODO: !!! Split into components
  * TODO: !!! Custom 404 page
  */
