@@ -26,7 +26,7 @@ export default function Home() {
                     display: 'grid',
 
                     // TODO: !!! On mobile strech cave from edge to edge
-                    gridTemplateColumns: `20vw 1fr 3fr 1fr 20vw`,
+                    gridTemplateColumns: `2vw 1fr 3fr 1fr 2vw`,
                     gridTemplateRows: `0px auto 20vh minmax`,
 
                     alignItems: 'stretch',
