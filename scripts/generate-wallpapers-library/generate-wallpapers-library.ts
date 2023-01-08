@@ -4,7 +4,7 @@ import chalk from 'chalk';
 import commander from 'commander';
 import { writeFile } from 'fs/promises';
 import glob from 'glob-promise';
-import { normalizeToCamelCase } from 'n12';
+import { normalizeTo_camelCase, normalizeTo_snake_case } from 'n12';
 import { capitalize } from 'n12/dist/capitalize';
 import { basename, dirname, join, relative } from 'path';
 import { commit } from '../utils/autocommit/commit';
@@ -65,8 +65,8 @@ async function generateWallpapersLibrary({ isCommited }: { isCommited: boolean }
         const indexSuffix = index === 0 ? '' : (index + 1).toString();
 
         return {
-            componentName: capitalize(normalizeToCamelCase(name)) + 'Image' + indexSuffix,
-            entityName: normalizeToCamelCase(name /* <- !!! normalize_imported_names_like_this */) + indexSuffix,
+            componentName: capitalize(normalizeTo_camelCase(name)) + 'Image' + indexSuffix,
+            entityName: normalizeTo_snake_case(name) + indexSuffix,
             importPath: ('./' + relative(dirname(wallpapersFilePath), wallpaperPath).split('\\').join('/')).replace(
                 /^\.\/\.\.\//,
                 '../',
