@@ -3,9 +3,8 @@
 
     display: grid;
 
-    /* TODO: !!! On mobile strech cave from edge to edge */
     grid-template-columns: 20vw 1fr 3fr 1fr 20vw;
-    grid-template-rows: 0px auto 20vh minmax;
+    grid-template-rows: auto /* <- [🦉] Here should be vh limit instead of in .cave  */ 20vh auto;
 
     align-items: stretch;
     justify-items: stretch;

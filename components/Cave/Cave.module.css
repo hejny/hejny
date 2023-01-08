@@ -1,10 +1,13 @@
 .cave {
+    max-height: 70vh /* <- [🦉] This value should be defined in grid but I can not figure out how to do it */;
+
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
 
     /*
-    !!! Restore
+    !!! Do it inside of the image
+    */
     transform: translateX(3.3%); /* <- Note: This centeres man in the image of the cave */
 
     align-items: stretch;
