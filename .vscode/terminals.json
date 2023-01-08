@@ -9,6 +9,7 @@
         {
             "name": "🌎 Expose",
             "command": "npx lt --port 4455 --subdomain wizard",
+            "onlySingle": true,
             "focus": true
         },
 

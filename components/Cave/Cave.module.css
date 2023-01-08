@@ -3,7 +3,9 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
 
-    transform: translateX(3.3%) /* <- Note: This centeres man in the image of the cave */;
+    /*
+    !!! Restore
+    transform: translateX(3.3%); /* <- Note: This centeres man in the image of the cave */
 
     align-items: stretch;
     justify-items: stretch;

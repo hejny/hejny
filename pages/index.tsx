@@ -21,6 +21,23 @@ export default function Home() {
             </Head>
 
             <div className={styles.page}>
+                {Array.apply(null, Array(5 * 10)).map((_, index) => {
+                    const y = Math.floor(index / 5);
+                    const x = index - y * 5;
+                    return (
+                        <div
+                            key={index}
+                            className={styles.outline}
+                            style={{
+                                gridColumn: `${x + 1} / span 1`,
+                                gridRow: `${y + 1} / span 1`,
+                            }}
+                        >
+                            {index}
+                        </div>
+                    );
+                })}
+
                 <div className={styles.cave}>
                     <Cave />
                 </div>
