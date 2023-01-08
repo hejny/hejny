@@ -96,7 +96,7 @@ async function generateWallpapersLibrary({ isCommited }: { isCommited: boolean }
                          * @see ${jobUrl.href}
                          */
                         export function ${componentName}() {
-                            return <Image alt="${title}" src={${entityName}} />;
+                            return <Image alt="${title}" src={${entityName}} draggable="false" />;
                         }
                     
                     

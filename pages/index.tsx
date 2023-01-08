@@ -44,7 +44,7 @@ export default function Home() {
 
                 <div className={styles.content}>
                     {/* TODO: Make as <Component/> */}
-                    <h1>Wizard</h1>
+                    <h1>From 0 to 1</h1>
 
                     {/* TODO: Make as <Component/> */}
                     <p>
