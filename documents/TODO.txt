@@ -1,3 +1,0 @@
-TODO: !!! Basic setup - auto prettier + organize imports
-TODO: !!! VSCode terminals
-TODO: !!! Static deploy

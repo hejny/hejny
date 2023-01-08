@@ -5,7 +5,7 @@ type Data = {
     name: string;
 };
 
-// TODO: !!! Change from boilerplate
+// TODO: Change from boilerplate
 export default function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
     res.status(200).json({ name: 'John Doe' });
 }
