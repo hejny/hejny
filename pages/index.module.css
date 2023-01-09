@@ -64,7 +64,7 @@
     outline: 1px dotted purple;
     /**/
 
-    width: calc(50% + 1vw);
+    /*width: calc(50% + 1vw);*/
     margin: auto;
 }
 
