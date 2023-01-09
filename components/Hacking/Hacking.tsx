@@ -9,8 +9,8 @@ export function Hacking() {
         <Section id="hacking" className={styles.hacking}>
             <h2>Hacking!</h2>
             <p>
-                Lorem <b>ipsum dolor sit amet consectetur adipisicing elit</b>. Maxime mollitia, molestiae quas vel sint
-                commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit
+                Lorem <b>ipsum d!!!olor sit amet consectetur adipisicing elit</b>. Maxime mollitia, molestiae quas vel
+                sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit
                 fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
                 obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa
                 officia aut! Impedit sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas aliquid.
@@ -22,7 +22,7 @@ export function Hacking() {
                 <Item>
                     <Item.Title>Case</Item.Title>
                     <Item.Description>
-                        Lorem <b>ipsum dolor sit amet consectetur adipisicing elit</b>. Maxime mollitia
+                        Lorem <b>ipsum d!!!olor sit amet consectetur adipisicing elit</b>. Maxime mollitia
                     </Item.Description>
                     <Item.Image>
                         <ProjectPlaceholder />
@@ -31,7 +31,7 @@ export function Hacking() {
                 <Item>
                     <Item.Title>Case</Item.Title>
                     <Item.Description>
-                        Lorem <b>ipsum dolor sit amet consectetur adipisicing elit</b>. Maxime mollitia
+                        Lorem <b>ipsum d!!!olor sit amet consectetur adipisicing elit</b>. Maxime mollitia
                     </Item.Description>
                     <Item.Image>
                         <ProjectPlaceholder />
@@ -40,7 +40,7 @@ export function Hacking() {
                 <Item>
                     <Item.Title>Case</Item.Title>
                     <Item.Description>
-                        Lorem <b>ipsum dolor sit amet consectetur adipisicing elit</b>. Maxime mollitia
+                        Lorem <b>ipsum d!!!olor sit amet consectetur adipisicing elit</b>. Maxime mollitia
                     </Item.Description>
                     <Item.Image>
                         <ProjectPlaceholder />
@@ -49,7 +49,7 @@ export function Hacking() {
                 <Item>
                     <Item.Title>Case</Item.Title>
                     <Item.Description>
-                        Lorem <b>ipsum dolor sit amet consectetur adipisicing elit</b>. Maxime mollitia
+                        Lorem <b>ipsum d!!!olor sit amet consectetur adipisicing elit</b>. Maxime mollitia
                     </Item.Description>
                     <Item.Image>
                         <ProjectPlaceholder />
@@ -58,7 +58,7 @@ export function Hacking() {
                 <Item>
                     <Item.Title>Case</Item.Title>
                     <Item.Description>
-                        Lorem <b>ipsum dolor sit amet consectetur adipisicing elit</b>. Maxime mollitia
+                        Lorem <b>ipsum d!!!olor sit amet consectetur adipisicing elit</b>. Maxime mollitia
                     </Item.Description>
                     <Item.Image>
                         <ProjectPlaceholder />
@@ -68,3 +68,7 @@ export function Hacking() {
         </Section>
     );
 }
+
+/**
+ * TODO: !!! Add links
+ */

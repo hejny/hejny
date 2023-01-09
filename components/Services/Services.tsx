@@ -13,8 +13,8 @@ export function Services() {
         <Section id="services" className={styles.services}>
             <h2>How can I help you?</h2>
             <p>
-                Lorem <b>ipsum dolor sit amet consectetur adipisicing elit</b>. Maxime mollitia, molestiae quas vel sint
-                commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit
+                Lorem <b>ipsum d!!!olor sit amet consectetur adipisicing elit</b>. Maxime mollitia, molestiae quas vel
+                sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit
                 fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
                 obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa
                 officia aut! Impedit sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas aliquid.
@@ -27,7 +27,7 @@ export function Services() {
                     <Item>
                         <Item.Title>Consulting</Item.Title>
                         <Item.Description>
-                            Lorem <b>ipsum dolor sit amet consectetur adipisicing elit</b>. Maxime mollitia
+                            Lorem <b>ipsum d!!!olor sit amet consectetur adipisicing elit</b>. Maxime mollitia
                         </Item.Description>
                         <Item.Image>
                             <CaveOfIdeasInLightbulbWithTransparentLookThrImage />
@@ -39,7 +39,7 @@ export function Services() {
                     <Item>
                         <Item.Title>Talk</Item.Title>
                         <Item.Description>
-                            Lorem <b>ipsum dolor sit amet consectetur adipisicing elit</b>. Maxime mollitia
+                            Lorem <b>ipsum d!!!olor sit amet consectetur adipisicing elit</b>. Maxime mollitia
                         </Item.Description>
                         <Item.Image>
                             <CaveWithPresentationImage />
@@ -51,7 +51,7 @@ export function Services() {
                     <Item>
                         <Item.Title>Prototyping</Item.Title>
                         <Item.Description>
-                            Lorem <b>ipsum dolor sit amet consectetur adipisicing elit</b>. Maxime mollitia
+                            Lorem <b>ipsum d!!!olor sit amet consectetur adipisicing elit</b>. Maxime mollitia
                         </Item.Description>
                         <Item.Image>
                             <CaveWithPrototypingLaboratoryImage />

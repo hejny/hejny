@@ -9,8 +9,8 @@ export function MyProjects() {
         <Section id="projects" className={styles.myProjects}>
             <h2>What have I worked on?</h2>
             <p>
-                Lorem <b>ipsum dolor sit amet consectetur adipisicing elit</b>. Maxime mollitia, molestiae quas vel sint
-                commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit
+                Lorem <b>ipsum d!!!olor sit amet consectetur adipisicing elit</b>. Maxime mollitia, molestiae quas vel
+                sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit
                 fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
                 obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa
                 officia aut! Impedit sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas aliquid.
@@ -22,7 +22,7 @@ export function MyProjects() {
                 <Item>
                     <Item.Title>Birds.cz</Item.Title>
                     <Item.Description>
-                        Lorem <b>ipsum dolor sit amet consectetur adipisicing elit</b>. Maxime mollitia
+                        Lorem <b>ipsum d!!!olor sit amet consectetur adipisicing elit</b>. Maxime mollitia
                     </Item.Description>
                     <Item.Image>
                         <ProjectPlaceholder />
@@ -31,7 +31,7 @@ export function MyProjects() {
                 <Item>
                     <Item.Title>Towns.cz</Item.Title>
                     <Item.Description>
-                        Lorem <b>ipsum dolor sit amet consectetur adipisicing elit</b>. Maxime mollitia
+                        Lorem <b>ipsum d!!!olor sit amet consectetur adipisicing elit</b>. Maxime mollitia
                     </Item.Description>
                     <Item.Image>
                         <ProjectTowns />
@@ -40,7 +40,7 @@ export function MyProjects() {
                 <Item>
                     <Item.Title>Collboard.com</Item.Title>
                     <Item.Description>
-                        Lorem <b>ipsum dolor sit amet consectetur adipisicing elit</b>. Maxime mollitia
+                        Lorem <b>ipsum d!!!olor sit amet consectetur adipisicing elit</b>. Maxime mollitia
                     </Item.Description>
                     <Item.Image>
                         <ProjectPlaceholder />
@@ -50,3 +50,7 @@ export function MyProjects() {
         </Section>
     );
 }
+
+/**
+ * TODO: !!! Add links
+ */

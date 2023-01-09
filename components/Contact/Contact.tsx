@@ -25,3 +25,8 @@ export function Contact() {
         </Section>
     );
 }
+
+/**
+ * TODO: !!! Real contacts
+ * TODO: !!! Style
+ */
