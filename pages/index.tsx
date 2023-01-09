@@ -1,6 +1,8 @@
 import { Inter } from '@next/font/google';
 import Head from 'next/head';
+import { Vector } from 'xyzt';
 import { Cave } from '../components/Cave/Cave';
+import { DebugGrid } from '../components/DebugGrid/DebugGrid';
 import { Services } from '../components/Services/Services';
 import styles from './index.module.css';
 
@@ -19,22 +21,7 @@ export default function Home() {
             </Head>
 
             <main className={styles.page}>
-                {Array.apply(null, Array(5 * 10)).map((_, index) => {
-                    const y = Math.floor(index / 5);
-                    const x = index - y * 5;
-                    return (
-                        <div
-                            key={index}
-                            className={styles.outline}
-                            style={{
-                                gridColumn: `${x + 1} / span 1`,
-                                gridRow: `${y + 1} / span 1`,
-                            }}
-                        >
-                            {index}
-                        </div>
-                    );
-                })}
+                <DebugGrid size={new Vector(5, 3)} />
 
                 <div className={styles.cave}>
                     <Cave />
@@ -58,6 +45,8 @@ export default function Home() {
 }
 
 /**
+ * TODO: !!! Do not oversize right border
+ * TODO: !!! Debug mode for grid
  * TODO: !!! Custom 404 page
  * TODO: !!! * generated with MidJourney
  * TODO: The best way to import the fonts

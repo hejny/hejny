@@ -25,7 +25,8 @@
         "react": "18.2.0",
         "react-dom": "18.2.0",
         "typescript": "4.4.4",
-        "waitasecond": "^1.11.1"
+        "waitasecond": "^1.11.1",
+        "xyzt": "^5.4.0"
     },
     "devDependencies": {
         "@next/font": "13.1.1",
