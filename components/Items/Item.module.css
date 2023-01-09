@@ -6,7 +6,9 @@
     justify-items: stretch;
 }
 
-.image-container {
+.imageContainer /* <- TODO: [🦂] CSS class imageContainer vs image-container*/ {
+    order: 1;
+
     /*/
     outline: 1px dotted red;
     /**/
@@ -14,12 +16,14 @@
     grid-row: 1 / span 3;
 }
 
-.image-container img {
+.imageContainer img {
     width: 100%;
     height: auto;
 }
 
 .title {
+    order: 3;
+
     /*/
     outline: 1px dotted red;
     /**/
@@ -30,6 +34,8 @@
 }
 
 .description {
+    order: 2;
+
     /*/
     outline: 1px dotted red;
     /**/

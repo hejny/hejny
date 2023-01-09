@@ -1,17 +1,22 @@
-import { PropsWithChildren } from 'react';
+import { ReactNode } from 'react';
 import styles from './Item.module.css';
 
-interface ItemProps {
-    title: string;
-    description?: string;
+export function Item({ children }: { children: Iterable<ReactNode> }) {
+    return <div className={styles.item}>{children}</div>;
 }
 
-export function Item({ title, description, children }: PropsWithChildren<ItemProps>) {
-    return (
-        <div className={styles.item}>
-            <div className={styles['image-container']}>{children}</div>
-            <div className={styles.title}>{title}</div>
-            {description && <div className={styles.description}>{description}</div>}
-        </div>
-    );
-}
+Item.Title = function ItemTitle({ children }: { children: ReactNode }) {
+    return <div className={styles.title}>{children}</div>;
+};
+
+Item.Description = function ItemDescription({ children }: { children: ReactNode }) {
+    return <div className={styles.description}>{children}</div>;
+};
+
+Item.Image = function ItemImage({ children }: { children: ReactNode }) {
+    return <div className={styles.imageContainer}>{children}</div>;
+};
+
+/**
+ * TODO: Children of Item should be only and exacly Item.Title, Item.Description and Item.Image and theese components should be used only inside of <Item/> and <Item> used only inside of <Items> - How to implement and type this?
+ */

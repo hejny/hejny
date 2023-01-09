@@ -23,14 +23,34 @@ export function Services() {
                 laborum.
             </p>
             <Items>
-                <Item title="Consulting">
-                    <CaveOfIdeasInLightbulbWithTransparentLookThrImage />
+                <Item>
+                    <Item.Title>Consulting</Item.Title>
+                    <Item.Description>
+                        Lorem <b>ipsum dolor sit amet consectetur adipisicing elit</b>. Maxime mollitia
+                    </Item.Description>
+                    <Item.Image>
+                        <CaveOfIdeasInLightbulbWithTransparentLookThrImage />
+                    </Item.Image>
                 </Item>
-                <Item title="Talk">
-                    <CaveWithPresentationImage />
+
+                <Item>
+                    <Item.Title>Talk</Item.Title>
+                    <Item.Description>
+                        Lorem <b>ipsum dolor sit amet consectetur adipisicing elit</b>. Maxime mollitia
+                    </Item.Description>
+                    <Item.Image>
+                        <CaveWithPresentationImage />
+                    </Item.Image>
                 </Item>
-                <Item title="Prototyping">
-                    <CaveWithPrototypingLaboratoryImage />
+
+                <Item>
+                    <Item.Title>Prototyping</Item.Title>
+                    <Item.Description>
+                        Lorem <b>ipsum dolor sit amet consectetur adipisicing elit</b>. Maxime mollitia
+                    </Item.Description>
+                    <Item.Image>
+                        <CaveWithPrototypingLaboratoryImage />
+                    </Item.Image>
                 </Item>
             </Items>
         </Section>

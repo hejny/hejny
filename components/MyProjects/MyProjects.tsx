@@ -19,14 +19,32 @@ export function MyProjects() {
                 laborum.
             </p>
             <Items>
-                <Item title="Birds.cz" description="Afdasdf fdsf sfsdf werwert dsgsdg">
-                    <ProjectPlaceholder />
+                <Item>
+                    <Item.Title>Birds.cz</Item.Title>
+                    <Item.Description>
+                        Lorem <b>ipsum dolor sit amet consectetur adipisicing elit</b>. Maxime mollitia
+                    </Item.Description>
+                    <Item.Image>
+                        <ProjectPlaceholder />
+                    </Item.Image>
                 </Item>
-                <Item title="Towns.cz" description="Afdasdf fdsf sfsdf werwert dsgsdg">
-                    <ProjectTowns />
+                <Item>
+                    <Item.Title>Towns.cz</Item.Title>
+                    <Item.Description>
+                        Lorem <b>ipsum dolor sit amet consectetur adipisicing elit</b>. Maxime mollitia
+                    </Item.Description>
+                    <Item.Image>
+                        <ProjectTowns />
+                    </Item.Image>
                 </Item>
-                <Item title="Collboard.com" description="Afdasdf fdsf sfsdf werwert dsgsdg">
-                    <ProjectPlaceholder />
+                <Item>
+                    <Item.Title>Collboard.com</Item.Title>
+                    <Item.Description>
+                        Lorem <b>ipsum dolor sit amet consectetur adipisicing elit</b>. Maxime mollitia
+                    </Item.Description>
+                    <Item.Image>
+                        <ProjectPlaceholder />
+                    </Item.Image>
                 </Item>
             </Items>
         </Section>
