@@ -21,31 +21,31 @@
         "postversion": "git push && git push --tags"
     },
     "dependencies": {
-        "@types/styled-components": "^5.1.26",
+        "@types/styled-components": "5.1.26",
         "next": "13.1.1",
         "react": "18.2.0",
         "react-dom": "18.2.0",
-        "styled-components": "^5.3.6",
+        "styled-components": "5.3.6",
         "typescript": "4.4.4",
-        "waitasecond": "^1.11.1",
-        "xyzt": "^5.4.0"
+        "waitasecond": "1.11.1",
+        "xyzt": "5.4.0"
     },
     "devDependencies": {
         "@next/font": "13.1.1",
         "@types/node": "18.11.18",
-        "@types/prettier": "^2.7.2",
+        "@types/prettier": "2.7.2",
         "@types/react": "18.0.26",
         "@types/react-dom": "18.0.10",
         "chalk": "4.1.2",
-        "commander": "^9.4.1",
+        "commander": "9.4.1",
         "eslint": "8.31.0",
         "eslint-config-next": "13.1.1",
-        "gh-pages": "^4.0.0",
-        "glob-promise": "^6.0.1",
-        "localtunnel": "^2.0.2",
-        "n12": "^1.3.0",
-        "prettier": "^2.8.1",
-        "spacetrim": "^0.9.0",
-        "ts-node": "^10.9.1"
+        "gh-pages": "4.0.0",
+        "glob-promise": "6.0.1",
+        "localtunnel": "2.0.2",
+        "n12": "1.3.0",
+        "prettier": "2.8.1",
+        "spacetrim": "0.9.0",
+        "ts-node": "10.9.1"
     }
 }
