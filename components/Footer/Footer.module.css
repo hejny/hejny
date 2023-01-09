@@ -1,0 +1,43 @@
+.footer {
+    /*/
+    outline: 1px dotted red; /**/
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: black;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.footer ul {
+    /*/
+    outline: 1px dotted red; /**/
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-left: 0;
+}
+
+.footer ul li {
+    /*/
+    outline: 1px dotted red;/**/
+
+    list-style: none;
+    margin: 0 10px;
+}
+
+/* TODO: Should be ul->li->a OR ul->a->li */
+.footer ul li a {
+    /*/
+    outline: 1px dotted red; /**/
+
+    display: inline;
+    color: white;
+}

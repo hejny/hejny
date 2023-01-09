@@ -3,6 +3,8 @@ import Head from 'next/head';
 import { Vector } from 'xyzt';
 import { Cave } from '../components/Cave/Cave';
 import { DebugGrid } from '../components/DebugGrid/DebugGrid';
+import { Footer } from '../components/Footer/Footer';
+import { MyProjects } from '../components/MyProjects/MyProjects';
 import { Services } from '../components/Services/Services';
 import styles from './index.module.css';
 
@@ -20,14 +22,14 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main className={styles.page}>
-                <DebugGrid size={new Vector(5, 3)} />
+            <div className={styles.page}>
+                <DebugGrid size={new Vector(5, 4)} />
 
-                <div className={styles.cave}>
+                <header>
                     <Cave />
-                </div>
+                </header>
 
-                <div className={styles.content}>
+                <main>
                     {/* TODO: Make as <Component/> */}
                     <h1>From 0 to 1</h1>
 
@@ -38,8 +40,14 @@ export default function Home() {
                     </p>
 
                     <Services />
-                </div>
-            </main>
+
+                    <MyProjects />
+                </main>
+
+                <footer>
+                    <Footer />
+                </footer>
+            </div>
         </>
     );
 }
@@ -50,4 +58,8 @@ export default function Home() {
  * TODO: !!! Custom 404 page
  * TODO: !!! * generated with MidJourney
  * TODO: The best way to import the fonts
+ * TODO: !!! Add Google Analytics
+ * TODO: !!! Add cookies icon
+ * TODO: !!! Add AMP capability
+ * TODO: !!! Add Preview image for Facebook, Facebook App/Page, Twitter, Instagram, OG images, description and keywords
  */
