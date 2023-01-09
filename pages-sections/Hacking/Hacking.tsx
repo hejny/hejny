@@ -1,7 +1,8 @@
-import { Item } from '../Items/Item';
-import { Items } from '../Items/Items';
+import { Item } from '../../components/Items/Item';
+import { Items } from '../../components/Items/Items';
+import { Section } from '../../components/Section/Section';
 import { ProjectPlaceholder } from '../MyProjects/projects-images';
-import { Section } from '../Section/Section';
+
 import styles from './Hacking.module.css';
 
 export function Hacking() {

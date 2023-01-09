@@ -1,4 +1,5 @@
-import { Section } from '../Section/Section';
+
+import { Section } from '../../components/Section/Section';
 import styles from './Contact.module.css';
 
 export function Contact() {

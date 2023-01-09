@@ -30,7 +30,7 @@ async function generateWallpapersLibrary({ isCommited }: { isCommited: boolean }
     console.info(`🖼️  Generating wallpapers library`);
 
     const rootDirectory = join(__dirname, '../../');
-    const wallpapersFilePath = join(rootDirectory, 'components/wallpapers.tsx');
+    const wallpapersFilePath = join(rootDirectory, 'public/wallpapers/index.tsx');
 
     if (isCommited && !(await isWorkingTreeClean(process.cwd()))) {
         throw new Error(`Working tree is not clean`);

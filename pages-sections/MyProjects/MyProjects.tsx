@@ -1,6 +1,6 @@
-import { Item } from '../Items/Item';
-import { Items } from '../Items/Items';
-import { Section } from '../Section/Section';
+import { Item } from '../../components/Items/Item';
+import { Items } from '../../components/Items/Items';
+import { Section } from '../../components/Section/Section';
 import styles from './MyProjects.module.css';
 import { ProjectPlaceholder, ProjectTowns } from './projects-images';
 

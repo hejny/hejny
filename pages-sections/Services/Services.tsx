@@ -1,11 +1,11 @@
-import { Item } from '../Items/Item';
-import { Items } from '../Items/Items';
-import { Section } from '../Section/Section';
+import { Item } from '../../components/Items/Item';
+import { Items } from '../../components/Items/Items';
+import { Section } from '../../components/Section/Section';
 import {
     CaveOfIdeasInLightbulbWithTransparentLookThrImage,
     CaveWithPresentationImage,
     CaveWithPrototypingLaboratoryImage,
-} from '../wallpapers';
+} from '../../public/wallpapers';
 import styles from './Services.module.css';
 
 export function Services() {

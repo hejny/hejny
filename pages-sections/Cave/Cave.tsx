@@ -1,4 +1,4 @@
-import { CaveOfIdeasWithTransparentLookThroughImage2 } from '../wallpapers';
+import { CaveOfIdeasWithTransparentLookThroughImage2 } from '../../public/wallpapers';
 import styles from './Cave.module.css';
 
 export function Cave() {

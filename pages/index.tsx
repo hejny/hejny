@@ -1,14 +1,14 @@
 import { Inter } from '@next/font/google';
 import Head from 'next/head';
 import { Vector } from 'xyzt';
-import { Cave } from '../components/Cave/Cave';
-import { Contact } from '../components/Contact/Contact';
 import { DebugGrid } from '../components/DebugGrid/DebugGrid';
-import { Footer } from '../components/Footer/Footer';
-import { Hacking } from '../components/Hacking/Hacking';
-import { MyProjects } from '../components/MyProjects/MyProjects';
-import { Reference } from '../components/Reference/Reference';
-import { Services } from '../components/Services/Services';
+import { Cave } from '../pages-sections/Cave/Cave';
+import { Contact } from '../pages-sections/Contact/Contact';
+import { Footer } from '../pages-sections/Footer/Footer';
+import { Hacking } from '../pages-sections/Hacking/Hacking';
+import { MyProjects } from '../pages-sections/MyProjects/MyProjects';
+import { Reference } from '../pages-sections/Reference/Reference';
+import { Services } from '../pages-sections/Services/Services';
 import styles from './index.module.css';
 
 // TODO: What is this - inter/Inter

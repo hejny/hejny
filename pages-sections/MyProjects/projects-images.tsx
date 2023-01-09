@@ -1,8 +1,3 @@
-/**
- * 🏭 GENERATED WITH 🖼️ Generate wallpapers library
- * ⚠️ Warning: Do not edit by hand, all changes will be lost on next execution!
- */
-
 import placeholder from '../../public/projects/placeholder.png';
 import towns from '../../public/projects/towns.jpg';
 

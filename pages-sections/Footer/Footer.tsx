@@ -1,4 +1,5 @@
-import { DisplayOn } from '../DisplayOn/DisplayOn';
+
+import { DisplayOn } from '../../components/DisplayOn/DisplayOn';
 import styles from './Footer.module.css';
 
 export function Footer() {

@@ -4,13 +4,13 @@
  */
 
 import Image from 'next/image';
-import cave_of_ideas_in_lightbulb_with_transparent_look_thr from '../public/wallpapers/Pavol_Hejn_cave_of_ideas_in_lightbulb_with_transparent_look_thr_d3273ad0-097f-4011-b799-1c379bb05ee3.png';
-import cave_of_ideas_with_transparent_look_through from '../public/wallpapers/Pavol_Hejn_cave_of_ideas_with_transparent_look_through_285b9893-443d-47e2-80d4-763b73ae4a44.png';
-import cave_of_ideas_with_transparent_look_through2 from '../public/wallpapers/Pavol_Hejn_cave_of_ideas_with_transparent_look_through_fe3480c5-76af-45da-ac4e-5177062bcb6b.png';
-import cave_with_presentation from '../public/wallpapers/Pavol_Hejn_cave_with_presentation_dec31ff2-3b9d-42b9-b84f-f87d02d6a391.png';
-import cave_with_prototyping_laboratory from '../public/wallpapers/Pavol_Hejn_cave_with_prototyping_laboratory_ca9b82b9-0ded-44a3-b7ec-344ebb539439.png';
-import cave_with_prototyping_laboratory2 from '../public/wallpapers/Pavol_Hejn_cave_with_prototyping_laboratory_e224a8e2-8e46-405e-9182-f9d31c39979e.png';
-import lightbulb_of_ideas_with_transparent_look_through from '../public/wallpapers/Pavol_Hejn_lightbulb_of_ideas_with_transparent_look_through_1df5cc46-efcf-4014-929f-3e55c2542d50.png';
+import cave_of_ideas_in_lightbulb_with_transparent_look_thr from './Pavol_Hejn_cave_of_ideas_in_lightbulb_with_transparent_look_thr_d3273ad0-097f-4011-b799-1c379bb05ee3.png';
+import cave_of_ideas_with_transparent_look_through from './Pavol_Hejn_cave_of_ideas_with_transparent_look_through_285b9893-443d-47e2-80d4-763b73ae4a44.png';
+import cave_of_ideas_with_transparent_look_through2 from './Pavol_Hejn_cave_of_ideas_with_transparent_look_through_fe3480c5-76af-45da-ac4e-5177062bcb6b.png';
+import cave_with_presentation from './Pavol_Hejn_cave_with_presentation_dec31ff2-3b9d-42b9-b84f-f87d02d6a391.png';
+import cave_with_prototyping_laboratory from './Pavol_Hejn_cave_with_prototyping_laboratory_ca9b82b9-0ded-44a3-b7ec-344ebb539439.png';
+import cave_with_prototyping_laboratory2 from './Pavol_Hejn_cave_with_prototyping_laboratory_e224a8e2-8e46-405e-9182-f9d31c39979e.png';
+import lightbulb_of_ideas_with_transparent_look_through from './Pavol_Hejn_lightbulb_of_ideas_with_transparent_look_through_1df5cc46-efcf-4014-929f-3e55c2542d50.png';
 
 /**
  * Image of cave of ideas in lightbulb with transparent look thr
