@@ -1,3 +1,3 @@
 export const DEBUG = {
-    showGrid: true,
+    showGrid: false,
 };

@@ -1,7 +1,7 @@
 .item {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 5fr 1fr;
+    grid-template-rows: 5fr 1fr min-content;
     align-items: stretch;
     justify-items: stretch;
 }
@@ -11,7 +11,7 @@
     outline: 1px dotted red;
     /**/
     grid-column: 1 / span 1;
-    grid-row: 1 / span 2;
+    grid-row: 1 / span 3;
 }
 
 .image-container img {
@@ -25,4 +25,16 @@
     /**/
     grid-column: 1 / span 1;
     grid-row: 2 / span 1;
+
+    font-size: 20px;
+}
+
+.description {
+    /*/
+    outline: 1px dotted red;
+    /**/
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+
+    font-size: 15px;
 }

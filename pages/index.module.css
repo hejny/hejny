@@ -18,7 +18,7 @@
 
 .page header {
     z-index: 1;
-    /**/
+    /*/
     outline: 1px dotted red;
     /**/
 
@@ -28,7 +28,7 @@
 
 .page main {
     z-index: 2;
-    /**/
+    /*/
     outline: 1px dotted green;
     /**/
     grid-column: 2 / span 3;
@@ -41,7 +41,7 @@
 .page main h1 {
     /* TODO: !!! h1 should be in header*/
 
-    /**/
+    /*/
     outline: 1px dotted purple;
     /**/
 
@@ -60,7 +60,7 @@
 .page main p {
     /* TODO: !!! perex should be in header*/
 
-    /**/
+    /*/
     outline: 1px dotted purple;
     /**/
 
@@ -70,7 +70,7 @@
 
 .page footer {
     z-index: 2;
-    /**/
+    /*/
     outline: 1px dotted green;
     /**/
     grid-column: 1 / span 5;

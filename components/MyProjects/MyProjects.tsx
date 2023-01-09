@@ -1,27 +1,23 @@
 import { Item } from '../Items/Item';
 import { Items } from '../Items/Items';
 import { Section } from '../Section/Section';
-import {
-    CaveOfIdeasInLightbulbWithTransparentLookThrImage,
-    CaveWithPresentationImage,
-    CaveWithPrototypingLaboratoryImage,
-} from '../wallpapers';
 import styles from './MyProjects.module.css';
+import { ProjectPlaceholder, ProjectTowns } from './projects-images';
 
 export function MyProjects() {
     return (
         <Section id="myProjects" className={styles.myProjects}>
-            <h2>How can I help you?</h2>
+            <h2>What have I worked on?</h2>
 
             <Items>
-                <Item title="Consulting">
-                    <CaveOfIdeasInLightbulbWithTransparentLookThrImage />
+                <Item title="Birds.cz" description="Afdasdf fdsf sfsdf werwert dsgsdg">
+                    <ProjectPlaceholder />
                 </Item>
-                <Item title="Talk">
-                    <CaveWithPresentationImage />
+                <Item title="Towns.cz" description="Afdasdf fdsf sfsdf werwert dsgsdg">
+                    <ProjectTowns />
                 </Item>
-                <Item title="Prototyping">
-                    <CaveWithPrototypingLaboratoryImage />
+                <Item title="Collboard.com" description="Afdasdf fdsf sfsdf werwert dsgsdg">
+                    <ProjectPlaceholder />
                 </Item>
             </Items>
         </Section>
