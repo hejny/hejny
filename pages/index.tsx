@@ -2,9 +2,12 @@ import { Inter } from '@next/font/google';
 import Head from 'next/head';
 import { Vector } from 'xyzt';
 import { Cave } from '../components/Cave/Cave';
+import { Contact } from '../components/Contact/Contact';
 import { DebugGrid } from '../components/DebugGrid/DebugGrid';
 import { Footer } from '../components/Footer/Footer';
+import { Hacking } from '../components/Hacking/Hacking';
 import { MyProjects } from '../components/MyProjects/MyProjects';
+import { Reference } from '../components/Reference/Reference';
 import { Services } from '../components/Services/Services';
 import styles from './index.module.css';
 
@@ -42,6 +45,10 @@ export default function Home() {
                     <Services />
 
                     <MyProjects />
+
+                    <Hacking />
+                    <Reference />
+                    <Contact />
                 </main>
 
                 <footer>

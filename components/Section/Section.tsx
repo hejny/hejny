@@ -9,3 +9,7 @@ export function Section({ id, children, className }: PropsWithChildren<{ id: str
         </div>
     );
 }
+
+/**
+ * !!!!! Everything A LINKED should be a section
+ */

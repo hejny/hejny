@@ -23,40 +23,48 @@ export function Services() {
                 laborum.
             </p>
             <Items>
-                <Item>
-                    <Item.Title>Consulting</Item.Title>
-                    <Item.Description>
-                        Lorem <b>ipsum dolor sit amet consectetur adipisicing elit</b>. Maxime mollitia
-                    </Item.Description>
-                    <Item.Image>
-                        <CaveOfIdeasInLightbulbWithTransparentLookThrImage />
-                    </Item.Image>
-                </Item>
+                <a href="#contact">
+                    <Item>
+                        <Item.Title>Consulting</Item.Title>
+                        <Item.Description>
+                            Lorem <b>ipsum dolor sit amet consectetur adipisicing elit</b>. Maxime mollitia
+                        </Item.Description>
+                        <Item.Image>
+                            <CaveOfIdeasInLightbulbWithTransparentLookThrImage />
+                        </Item.Image>
+                    </Item>
+                </a>
 
-                <Item>
-                    <Item.Title>Talk</Item.Title>
-                    <Item.Description>
-                        Lorem <b>ipsum dolor sit amet consectetur adipisicing elit</b>. Maxime mollitia
-                    </Item.Description>
-                    <Item.Image>
-                        <CaveWithPresentationImage />
-                    </Item.Image>
-                </Item>
+                <a href="#contact">
+                    <Item>
+                        <Item.Title>Talk</Item.Title>
+                        <Item.Description>
+                            Lorem <b>ipsum dolor sit amet consectetur adipisicing elit</b>. Maxime mollitia
+                        </Item.Description>
+                        <Item.Image>
+                            <CaveWithPresentationImage />
+                        </Item.Image>
+                    </Item>
+                </a>
 
-                <Item>
-                    <Item.Title>Prototyping</Item.Title>
-                    <Item.Description>
-                        Lorem <b>ipsum dolor sit amet consectetur adipisicing elit</b>. Maxime mollitia
-                    </Item.Description>
-                    <Item.Image>
-                        <CaveWithPrototypingLaboratoryImage />
-                    </Item.Image>
-                </Item>
+                <a href="#contact">
+                    <Item>
+                        <Item.Title>Prototyping</Item.Title>
+                        <Item.Description>
+                            Lorem <b>ipsum dolor sit amet consectetur adipisicing elit</b>. Maxime mollitia
+                        </Item.Description>
+                        <Item.Image>
+                            <CaveWithPrototypingLaboratoryImage />
+                        </Item.Image>
+                    </Item>
+                </a>
             </Items>
         </Section>
     );
 }
 
 /**
+ * TODO: !!! CSS links
+ * TODO: !!! Smooth scrolling + highlighting of the section
  * TODO: !!! Rename to HowCanIHelpYou OR Better
  */

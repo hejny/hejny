@@ -1,13 +1,13 @@
 import { Item } from '../Items/Item';
 import { Items } from '../Items/Items';
+import { ProjectPlaceholder } from '../MyProjects/projects-images';
 import { Section } from '../Section/Section';
-import styles from './MyProjects.module.css';
-import { ProjectPlaceholder, ProjectTowns } from './projects-images';
+import styles from './Hacking.module.css';
 
-export function MyProjects() {
+export function Hacking() {
     return (
-        <Section id="projects" className={styles.myProjects}>
-            <h2>What have I worked on?</h2>
+        <Section id="hacking" className={styles.hacking}>
+            <h2>Hacking!</h2>
             <p>
                 Lorem <b>ipsum dolor sit amet consectetur adipisicing elit</b>. Maxime mollitia, molestiae quas vel sint
                 commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit
@@ -20,7 +20,7 @@ export function MyProjects() {
             </p>
             <Items>
                 <Item>
-                    <Item.Title>Birds.cz</Item.Title>
+                    <Item.Title>Case</Item.Title>
                     <Item.Description>
                         Lorem <b>ipsum dolor sit amet consectetur adipisicing elit</b>. Maxime mollitia
                     </Item.Description>
@@ -29,16 +29,34 @@ export function MyProjects() {
                     </Item.Image>
                 </Item>
                 <Item>
-                    <Item.Title>Towns.cz</Item.Title>
+                    <Item.Title>Case</Item.Title>
                     <Item.Description>
                         Lorem <b>ipsum dolor sit amet consectetur adipisicing elit</b>. Maxime mollitia
                     </Item.Description>
                     <Item.Image>
-                        <ProjectTowns />
+                        <ProjectPlaceholder />
                     </Item.Image>
                 </Item>
                 <Item>
-                    <Item.Title>Collboard.com</Item.Title>
+                    <Item.Title>Case</Item.Title>
+                    <Item.Description>
+                        Lorem <b>ipsum dolor sit amet consectetur adipisicing elit</b>. Maxime mollitia
+                    </Item.Description>
+                    <Item.Image>
+                        <ProjectPlaceholder />
+                    </Item.Image>
+                </Item>
+                <Item>
+                    <Item.Title>Case</Item.Title>
+                    <Item.Description>
+                        Lorem <b>ipsum dolor sit amet consectetur adipisicing elit</b>. Maxime mollitia
+                    </Item.Description>
+                    <Item.Image>
+                        <ProjectPlaceholder />
+                    </Item.Image>
+                </Item>
+                <Item>
+                    <Item.Title>Case</Item.Title>
                     <Item.Description>
                         Lorem <b>ipsum dolor sit amet consectetur adipisicing elit</b>. Maxime mollitia
                     </Item.Description>
