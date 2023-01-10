@@ -1,1 +1,2 @@
-TODO: !!! Upscale to max in main wallpaper BUT probbaby in every wallpaper
+TODO: Upscale to max in main wallpaper BUT probbaby in every wallpaper
+TODO: [🧠] Where is the best place to be index.tsx as a library of the images
