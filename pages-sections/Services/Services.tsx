@@ -64,7 +64,6 @@ export function Services() {
 }
 
 /**
- * TODO: !!! CSS links
  * TODO: !!! Smooth scrolling + highlighting of the section
  * TODO: !!! Rename to HowCanIHelpYou OR Better
  */

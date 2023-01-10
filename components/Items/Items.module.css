@@ -7,6 +7,11 @@
     width: 33.333%;
 }
 
+.items > a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
 @media only screen and (max-width: 650px) {
     .items > * {
         width: 100%;

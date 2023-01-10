@@ -18,7 +18,3 @@ export function Section({ id, children, className }: SectionProps) {
         </div>
     );
 }
-
-/**
- * TODO: !!! Style of the links
- */
