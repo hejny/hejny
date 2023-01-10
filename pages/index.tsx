@@ -36,7 +36,9 @@ export default function Home() {
                 <main>
                     {/* TODO: !!! Make as <Section/> (without top margin) */}
 
-                    <h1>From 0 to 1</h1>
+                    <h1>
+                        From 0{/*⬛*/} to 1{/* TODO: Use Hero,💡,⬜*/}
+                    </h1>
                     <p>
                         {/* TODO: !!! Use <Shuffle> for technologies */}
                         AI, Neural networks, <Acronym>Virtual Reality</Acronym>, <Acronym>Augmented Reality</Acronym>,
