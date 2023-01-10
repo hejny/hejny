@@ -1,7 +1,9 @@
 import { Inter } from '@next/font/google';
 import Head from 'next/head';
 import { Vector } from 'xyzt';
+import { Acronym } from '../components/Acronym/Acronym';
 import { DebugGrid } from '../components/DebugGrid/DebugGrid';
+import { Shuffle } from '../components/Shuffle/Shuffle';
 import { Cave } from '../pages-sections/Cave/Cave';
 import { Contact } from '../pages-sections/Contact/Contact';
 import { Footer } from '../pages-sections/Footer/Footer';
@@ -41,6 +43,10 @@ export default function Home() {
                         AI, Neural networks, V<span style={{ opacity: 0.5 }}>irtual</span> R
                         <span style={{ opacity: 0.5 }}>eality</span>, A<span style={{ opacity: 0.5 }}>ugmented</span> R
                         <span style={{ opacity: 0.5 }}>eality</span>, Bitcoin, Crypto, Smart contracts, Web3…
+                        <Shuffle>
+                            <Acronym>Virtual Reality</Acronym>
+                            <Acronym>Augmented Reality</Acronym>
+                        </Shuffle>
                     </p>
                     <p>
                         I live by the new technologies

@@ -1,8 +1,8 @@
-import { ReactFragment } from 'react';
+import { ReactNode } from 'react';
 import styles from './Items.module.css';
 
 interface ItemsProps {
-    children: ReactFragment;
+    children: ReactNode;
 }
 
 export function Items({ children }: ItemsProps) {

@@ -23,6 +23,8 @@ export function Services() {
                 laborum.
             </p>
             <Items>
+                {/* Note: Not using <Shuffle/> here in the services section */}
+
                 <a href="#contact">
                     <Item>
                         <Item.Title>Consulting</Item.Title>
