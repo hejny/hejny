@@ -33,19 +33,21 @@ export default function Home() {
                 </header>
 
                 <main>
-                    {/* TODO: Make as <Component/> */}
+                    {/* TODO: !!! Make as <Section/> (without top margin) */}
+
                     <h1>From 0 to 1</h1>
-
-                    {/* TODO: Make as <Component/> */}
                     <p>
-                        AI, Neural networks, VR/AR, WebGL, WebVR, Webassembly, WebSockets. Bitcoin, Ethereum, Cardano,
-                        Crypto, Smart contracts, Web3, ...
+                        {/* TODO: !!! Nicer syntax for <span style={{opacity:0.5}}> */}
+                        AI, Neural networks, V<span style={{ opacity: 0.5 }}>irtual</span> R
+                        <span style={{ opacity: 0.5 }}>eality</span>, A<span style={{ opacity: 0.5 }}>ugmented</span> R
+                        <span style={{ opacity: 0.5 }}>eality</span>, Bitcoin, Crypto, Smart contracts, Web3…
                     </p>
-
+                    <p>
+                        I live by the new technologies
+                        <br />I will carry out
+                    </p>
                     <Services />
-
                     <MyProjects />
-
                     <Hacking />
                     <Reference />
                     <Contact />
