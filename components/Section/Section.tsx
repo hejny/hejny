@@ -1,15 +1,24 @@
-import { PropsWithChildren } from 'react';
+import { ReactFragment } from 'react';
 import { classNames } from '../../utils/classNames';
 import styles from './Section.module.css';
 
-export function Section({ id, children, className }: PropsWithChildren<{ id: string; className?: string }>) {
+interface SectionProps {
+    children: ReactFragment;
+    id: string;
+    className?: string;
+}
+
+export function Section({ id, children, className }: SectionProps) {
+    const [headChild, ...restChildren] = children;
+
     return (
         <div id={id} className={classNames(styles.section, className)}>
-            {children}
+            <a href={`#${id}`}>{headChild}</a>
+            {restChildren}
         </div>
     );
 }
 
 /**
- * !!!!! Everything A LINKED should be a section
+ * TODO: !!! Style of the links
  */
