@@ -9,9 +9,9 @@ export function Shuffle(props: ShuffleProps) {
 
     // const shuffledChildren = [...children];
     // shuffledChildren.sort(() => Math.random() - 0.5);
-    // return <>{children}</>
+    // return <>{shuffledChildren}</>
 
-    return children;
+    return <>{children}</>;
 }
 
 /**

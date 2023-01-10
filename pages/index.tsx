@@ -3,7 +3,6 @@ import Head from 'next/head';
 import { Vector } from 'xyzt';
 import { Acronym } from '../components/Acronym/Acronym';
 import { DebugGrid } from '../components/DebugGrid/DebugGrid';
-import { Shuffle } from '../components/Shuffle/Shuffle';
 import { Cave } from '../pages-sections/Cave/Cave';
 import { Contact } from '../pages-sections/Contact/Contact';
 import { Footer } from '../pages-sections/Footer/Footer';
@@ -39,14 +38,9 @@ export default function Home() {
 
                     <h1>From 0 to 1</h1>
                     <p>
-                        {/* TODO: !!! Nicer syntax for <span style={{opacity:0.5}}> */}
-                        AI, Neural networks, V<span style={{ opacity: 0.5 }}>irtual</span> R
-                        <span style={{ opacity: 0.5 }}>eality</span>, A<span style={{ opacity: 0.5 }}>ugmented</span> R
-                        <span style={{ opacity: 0.5 }}>eality</span>, Bitcoin, Crypto, Smart contracts, Web3…
-                        <Shuffle>
-                            <Acronym>Virtual Reality</Acronym>
-                            <Acronym>Augmented Reality</Acronym>
-                        </Shuffle>
+                        {/* TODO: !!! Use <Shuffle> for technologies */}
+                        AI, Neural networks, <Acronym>Virtual Reality</Acronym>, <Acronym>Augmented Reality</Acronym>,
+                        Bitcoin, Crypto, Smart contracts, Web3…
                     </p>
                     <p>
                         I live by the new technologies
