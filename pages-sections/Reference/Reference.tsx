@@ -19,6 +19,15 @@ export function Reference() {
                         <ProjectPlaceholder />
                     </Item.Image>
                 </Item>
+                <Item>
+                    <Item.Title>Birds.cz</Item.Title>
+                    <Item.Description>
+                        Lorem <b>ipsum d!!!olor sit amet consectetur adipisicing elit</b>. Maxime mollitia
+                    </Item.Description>
+                    <Item.Image>
+                        <ProjectPlaceholder />
+                    </Item.Image>
+                </Item>
             </Items>
         </Section>
     );
