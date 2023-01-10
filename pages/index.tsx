@@ -43,8 +43,8 @@ export default function Home() {
                         Bitcoin, Crypto, Smart contracts, Web3…
                     </p>
                     <p>
-                        I live by the new technologies
-                        <br />I will carry out
+                        {/* TODO: !!! Bigger margin between paragraphs */}I live by the new technologies. I will carry
+                        out you through the wilderness of the world of new, emerging and disruptive technologies.
                     </p>
                     <Services />
                     <MyProjects />
