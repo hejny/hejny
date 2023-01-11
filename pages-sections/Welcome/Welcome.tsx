@@ -13,10 +13,6 @@ export function Welcome() {
                 AI, Neural networks, <Acronym>Virtual Reality</Acronym>, <Acronym>Augmented Reality</Acronym>, Bitcoin,
                 Crypto, Smart contracts, Web3…
             </p>
-            <p>
-                {/* TODO: !!! Bigger margin between paragraphs */}I live by the new technologies. I will carry out you
-                through the wilderness of the world of new, emerging and disruptive technologies.
-            </p>
         </Section>
     );
 }
