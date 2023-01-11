@@ -27,12 +27,14 @@ export default function Home() {
             </Head>
 
             <div className={styles.page}>
-                <DebugGrid size={new Vector(5, 4)} />
+                <DebugGrid size={new Vector(5, 5)} />
 
                 <header>
                     <Cave />
                 </header>
 
+                <div className={styles.headerToMainGradientBackground} />
+                <div className={styles.mainBackground} />
                 <main>
                     <Welcome />
                     <Services />
