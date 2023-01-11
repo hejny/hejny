@@ -4,7 +4,7 @@
     display: grid;
 
     grid-template-columns: 20vw 1fr 3fr 1fr 20vw;
-    grid-template-rows: 70vh 10vh 10vh auto minmax(17vh, 75px);
+    grid-template-rows: 40vh 10vh 10vh auto minmax(17vh, 75px);
 
     align-items: stretch;
     justify-items: stretch;

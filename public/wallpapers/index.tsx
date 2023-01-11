@@ -55,8 +55,7 @@ export function CaveOfIdeasWithTransparentLookThroughImage2() {
             style={{
                 backgroundImage: `url(${cave_of_ideas_with_transparent_look_through2.src})` /* <- TODO: url(...) vs url('...') */,
                 backgroundSize: 'cover',
-                backgroundPosition:
-                    '45.5% 80%' /* <- Note: This centeres man in the image of the cave !!! Do it in the image */,
+                backgroundPosition: '50% 80%',
                 backgroundColor: '#ccc' /* <- TODO: Create from image / project color */,
                 // aspectRatio: '3/2',
             }}
