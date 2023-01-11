@@ -1,2 +1,3 @@
 .contact {
+    margin-bottom: 50px; /* <- TODO: !!! Move this rule to section's css as last child */
 }

@@ -30,18 +30,18 @@
     z-index: 2;
 
     grid-column: 1 / span 5;
-    grid-row: 2 / span 2;
+    grid-row: 2 / span 1;
 
-    background-image: linear-gradient(to bottom, transparent, #0a1225);
+    background-image: linear-gradient(to bottom, transparent, #111530);
 }
 
 .mainBackground {
     z-index: 2;
 
     grid-column: 1 / span 5;
-    grid-row: 4 / span 2;
+    grid-row: 3 / span 3;
 
-    background-color: #0a1225;
+    background-color: #111530;
 }
 
 .page main {
