@@ -14,12 +14,7 @@
     justify-items: stretch;
 }
 
-.layer {
-    grid-column: 1 / span 1;
-    grid-row: 1 / span 1;
-}
-
-.layer img {
+.cave img {
     width: 100%;
     height: auto;
 }
