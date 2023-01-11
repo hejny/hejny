@@ -49,10 +49,17 @@ export function CaveOfIdeasWithTransparentLookThroughImage() {
  */
 export function CaveOfIdeasWithTransparentLookThroughImage2() {
     return (
-        <Image
-            alt="cave of ideas with transparent look through"
-            src={cave_of_ideas_with_transparent_look_through2}
-            draggable="false"
+        // TODO: !!!  TO Genetator - pass img/background form in props
+
+        <div
+            style={{
+                backgroundImage: `url(${cave_of_ideas_with_transparent_look_through2.src})` /* <- TODO: url(...) vs url('...') */,
+                backgroundSize: 'cover',
+                backgroundPosition:
+                    '45.5% 80%' /* <- Note: This centeres man in the image of the cave !!! Do it in the image */,
+                backgroundColor: '#ccc' /* <- TODO: Create from image / project color */,
+                // aspectRatio: '3/2',
+            }}
         />
     );
 }
