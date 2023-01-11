@@ -53,7 +53,7 @@ export function Services() {
                     <Item>
                         <Item.Title>Prototyping</Item.Title>
                         <Item.Description>
-                            Lorem <b>ipsum d!!!olor sit amet consectetur adipisicing elit</b>. Maxime mollitia
+                            I am best at creating of the functional foundation of the new project; from 0 to 1.
                         </Item.Description>
                         <Item.Image>
                             <CaveWithPrototypingLaboratoryImage />

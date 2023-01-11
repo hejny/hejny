@@ -1,0 +1,22 @@
+import { Acronym } from '../../components/Acronym/Acronym';
+import { Section } from '../../components/Section/Section';
+import styles from './Welcome.module.css';
+
+export function Welcome() {
+    return (
+        <Section id="welcome" className={styles.welcome}>
+            <h1>
+                From 0{/*⬛*/} to 1{/* TODO: Use Hero,💡,⬜*/}
+            </h1>
+            <p>
+                {/* TODO: !!! Use <Shuffle> for technologies */}
+                AI, Neural networks, <Acronym>Virtual Reality</Acronym>, <Acronym>Augmented Reality</Acronym>, Bitcoin,
+                Crypto, Smart contracts, Web3…
+            </p>
+            <p>
+                {/* TODO: !!! Bigger margin between paragraphs */}I live by the new technologies. I will carry out you
+                through the wilderness of the world of new, emerging and disruptive technologies.
+            </p>
+        </Section>
+    );
+}
