@@ -7,7 +7,6 @@ import { Contact } from '../pages-sections/Contact/Contact';
 import { Footer } from '../pages-sections/Footer/Footer';
 import { Hacking } from '../pages-sections/Hacking/Hacking';
 import { MyProjects } from '../pages-sections/MyProjects/MyProjects';
-import { Reference } from '../pages-sections/Reference/Reference';
 import { Services } from '../pages-sections/Services/Services';
 import { Welcome } from '../pages-sections/Welcome/Welcome';
 import styles from './index.module.css';
@@ -40,7 +39,7 @@ export default function Home() {
                     <Services />
                     <MyProjects />
                     <Hacking />
-                    <Reference />
+                    {/* TODO: !!! <Reference /> */}
                     <Contact />
                 </main>
 

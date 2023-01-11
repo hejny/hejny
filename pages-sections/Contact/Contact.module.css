@@ -1,3 +1,37 @@
 .contact {
     margin-bottom: 50px; /* <- TODO: !!! Move this rule to section's css as last child */
 }
+
+.vcard {
+    /*/
+    outline: 1px dotted green;
+    /**/
+
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.vcard img {
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    border-radius: 100%;
+}
+
+.vcard ul {
+    text-align: left;
+    color: white;
+    list-style: none;
+    padding-left: 0;
+}
+
+.vcard ul a {
+    color: white;
+    text-decoration: none;
+
+    /* TODO: !!! Make some global hover/interactivity for the a hrefs and items */
+}

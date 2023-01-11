@@ -48,6 +48,24 @@ export function MyProjects() {
                             <ProjectPlaceholder />
                         </Item.Image>
                     </Item>
+                    <Item>
+                        <Item.Title>H-edu.cz</Item.Title>
+                        <Item.Description>
+                            Lorem <b>ipsum d!!!olor sit amet consectetur adipisicing elit</b>. Maxime mollitia
+                        </Item.Description>
+                        <Item.Image>
+                            <ProjectPlaceholder />
+                        </Item.Image>
+                    </Item>
+
+                    <a href="https://pavolhejny.com/documents/projects.html">
+                        <Item>
+                            <Item.Title>All my projects</Item.Title>
+                            <Item.Image>
+                                <ProjectPlaceholder />
+                            </Item.Image>
+                        </Item>
+                    </a>
                 </Shuffle>
             </Items>
         </Section>
