@@ -2,6 +2,7 @@ import { Item } from '../../components/Items/Item';
 import { Items } from '../../components/Items/Items';
 import { Section } from '../../components/Section/Section';
 import { Shuffle } from '../../components/Shuffle/Shuffle';
+import { Tag } from '../../components/Tag/Tag';
 import styles from './MyProjects.module.css';
 import { ProjectPlaceholder, ProjectTowns } from './projects-images';
 
@@ -9,13 +10,13 @@ export function MyProjects() {
     return (
         <Section id="projects" className={styles.myProjects}>
             <h2>What have I worked on?</h2>
-            <p>Here are some of the larger projects that I have been involved in.</p>
+            <p>Here are some of the larger projects that I have been involved in:</p>
             <Items>
                 <Shuffle>
                     <Item>
                         <Item.Title>Birds.cz</Item.Title>
                         <Item.Description>
-                            Lorem <b>ipsum d!!!olor sit amet consectetur adipisicing elit</b>. Maxime mollitia
+                            A variety of projects focusing on citizenship science for the Czech Society of Ornithology
                         </Item.Description>
                         <Item.Image>
                             <ProjectPlaceholder />
@@ -24,7 +25,8 @@ export function MyProjects() {
                     <Item>
                         <Item.Title>Towns.cz</Item.Title>
                         <Item.Description>
-                            Lorem <b>ipsum d!!!olor sit amet consectetur adipisicing elit</b>. Maxime mollitia
+                            Browser online game
+                            <Tag>WebGL</Tag>
                         </Item.Description>
                         <Item.Image>
                             <ProjectTowns />
@@ -33,7 +35,8 @@ export function MyProjects() {
                     <Item>
                         <Item.Title>Collboard.com</Item.Title>
                         <Item.Description>
-                            Lorem <b>ipsum d!!!olor sit amet consectetur adipisicing elit</b>. Maxime mollitia
+                            Virtual online collaborative whiteboard started during the the initial week of the
+                            pandemic-induced lockdown.
                         </Item.Description>
                         <Item.Image>
                             <ProjectPlaceholder />
@@ -41,9 +44,7 @@ export function MyProjects() {
                     </Item>
                     <Item>
                         <Item.Title>H-edu.cz</Item.Title>
-                        <Item.Description>
-                            Lorem <b>ipsum d!!!olor sit amet consectetur adipisicing elit</b>. Maxime mollitia
-                        </Item.Description>
+                        <Item.Description>Online pupil books for schools and teachers</Item.Description>
                         <Item.Image>
                             <ProjectPlaceholder />
                         </Item.Image>
