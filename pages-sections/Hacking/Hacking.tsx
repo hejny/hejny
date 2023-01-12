@@ -2,6 +2,7 @@ import { Item } from '../../components/Items/Item';
 import { Items } from '../../components/Items/Items';
 import { Section } from '../../components/Section/Section';
 import { Shuffle } from '../../components/Shuffle/Shuffle';
+import { Tag } from '../../components/Tag/Tag';
 import { ProjectPlaceholder } from '../MyProjects/projects-images';
 
 import styles from './Hacking.module.css';
@@ -10,7 +11,10 @@ export function Hacking() {
     return (
         <Section id="hacking" className={styles.hacking}>
             <h2>Hacking!</h2>
-            <p>Case studies what could be done in 24/48 hours</p>
+            <p>These are some hackathon undertakings and proof of concept initiatives I have been involved in.</p>
+            <p>
+                Case studies what could be <b>done in 24/48 hours</b>
+            </p>
             <Items>
                 <Shuffle>
                     <Item>
@@ -23,7 +27,11 @@ export function Hacking() {
                     <Item>
                         <Item.Title>SigmaStamp</Item.Title>
                         <Item.Description>
-                            Lorem <b>ipsum d!!!olor sit amet consectetur adipisicing elit</b>. Maxime mollitia
+                            <p>Tool for time-signing documents on the blockchain.</p>
+                            <p>
+                                <Tag>Smart contract</Tag>
+                            </p>
+                            {/* TODO: Wining 3rd price on hackathon. */}
                         </Item.Description>
                         <Item.Image>
                             <ProjectPlaceholder />

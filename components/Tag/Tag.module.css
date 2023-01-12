@@ -1,0 +1,10 @@
+.tag {
+    display: inline-block;
+    padding: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    background-color: burlywood /* <- TODO: !!! ACRY all colors in one place */;
+    color: black /* <- TODO: !!! ACRY all colors in one place */;
+    border-radius: 3px;
+}

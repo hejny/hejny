@@ -23,7 +23,8 @@ export function Services() {
                     <Item>
                         <Item.Title>Consulting</Item.Title>
                         <Item.Description>
-                            Lorem <b>ipsum d!!!olor sit amet consectetur adipisicing elit</b>. Maxime mollitia
+                            I will talk to you about the different technologies and provide the advantages and
+                            disadvantages of each one.
                         </Item.Description>
                         <Item.Image>
                             <CaveOfIdeasInLightbulbWithTransparentLookThrImage />
@@ -35,7 +36,8 @@ export function Services() {
                     <Item>
                         <Item.Title>Talk</Item.Title>
                         <Item.Description>
-                            Lorem <b>ipsum d!!!olor sit amet consectetur adipisicing elit</b>. Maxime mollitia
+                            I am able to present an overview of the different technologies and their benefits and
+                            drawbacks.
                         </Item.Description>
                         <Item.Image>
                             <CaveWithPresentationImage />
@@ -48,6 +50,7 @@ export function Services() {
                         <Item.Title>Prototyping</Item.Title>
                         <Item.Description>
                             I am best at creating of the functional foundation of the new project; from 0 to 1.
+                            {/* By utilizing the latest technologies, I can create a prototype with a fully operational codebase that can be used for constructing a large-scale project or simply to test the viability of an idea. */}
                         </Item.Description>
                         <Item.Image>
                             <CaveWithPrototypingLaboratoryImage />
