@@ -4,6 +4,7 @@
  */
 
 import Image from 'next/image';
+import { Float } from '../../components/Float/Float';
 import cave_of_ideas_in_lightbulb_with_transparent_look_thr from './Pavol_Hejn_cave_of_ideas_in_lightbulb_with_transparent_look_thr_d3273ad0-097f-4011-b799-1c379bb05ee3.png';
 import cave_of_ideas_with_transparent_look_through from './Pavol_Hejn_cave_of_ideas_with_transparent_look_through_285b9893-443d-47e2-80d4-763b73ae4a44.png';
 import cave_of_ideas_with_transparent_look_through2 from './Pavol_Hejn_cave_of_ideas_with_transparent_look_through_fe3480c5-76af-45da-ac4e-5177062bcb6b.png';
@@ -49,17 +50,33 @@ export function CaveOfIdeasWithTransparentLookThroughImage() {
  */
 export function CaveOfIdeasWithTransparentLookThroughImage2() {
     return (
-        // TODO: !!!  TO Genetator - pass img/background form in props
+        // TODO: !!!  [😁] TO Genetator - pass img/background form in props
 
         <div
             style={{
+                // Image:
                 backgroundImage: `url(${cave_of_ideas_with_transparent_look_through2.src})` /* <- TODO: url(...) vs url('...') */,
                 backgroundSize: 'cover',
                 backgroundPosition: '50% 80%',
                 backgroundColor: '#ccc' /* <- TODO: Create from image / project color */,
-                // aspectRatio: '3/2',
+
+                // Description:
+                display: 'flex',
+                justifyContent: 'end',
+                alignItems: 'end',
+                paddingBottom: 20,
+                paddingRight: 5,
             }}
-        />
+        >
+            <Float>
+                <a
+                    href="https://www.midjourney.com/app/jobs/fe3480c5-76af-45da-ac4e-5177062bcb6b"
+                    style={{ zIndex: 10, fontSize: 10, textDecoration: 'none', color: '#ccc', textShadow: 'none' }}
+                >
+                    Created by AI
+                </a>
+            </Float>
+        </div>
     );
 }
 
