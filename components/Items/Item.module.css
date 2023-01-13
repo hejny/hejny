@@ -5,17 +5,17 @@
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr min-content;
+    grid-template-rows: min-content min-content;
     align-items: stretch;
     justify-content: stretch;
 }
 
 .imageContainer /* <- TODO: [🦂] CSS class imageContainer vs image-container*/ {
-    order: 1;
-
     /*/
     outline: 1px dotted red;
     /**/
+
+    order: 1;
     grid-column: 1 / span 1;
     grid-row: 1 / span 1;
 }
@@ -26,11 +26,11 @@
 }
 
 .title {
-    order: 3;
-
-    /**/
+    /*/
     outline: 1px dotted blue;
     /**/
+
+    order: 3;
     grid-column: 1 / span 1;
     grid-row: 1 / span 1;
 
@@ -43,11 +43,11 @@
 }
 
 .description {
-    order: 2;
+    /*/
+    outline: 1px dotted yellow;
+    /**/
 
-    /**/
-    outline: 1px dotted red;
-    /**/
+    order: 2;
     grid-column: 1 / span 1;
     grid-row: 2 / span 1;
 
@@ -55,5 +55,7 @@
     align-items: start;
     justify-content: start;
 
+    text-align: left;
+    padding: 5px;
     font-size: 15px;
 }
