@@ -37,9 +37,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
 
-    /* !!! TODO: Maybe mask */
+.title .inner {
+    /*/
+    outline: 1px dotted blue;
+    /**/
+
+    padding: 5px;
+    border-radius: 3px;
     font-size: 30px;
+    text-shadow: none;
+    background-color: rgba(56, 74, 150, 0.486);
 }
 
 .description {
