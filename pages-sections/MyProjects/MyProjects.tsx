@@ -13,42 +13,64 @@ export function MyProjects() {
             <p>Here are some of the larger projects that I have been involved in:</p>
             <Items>
                 <Shuffle>
-                    <Item>
-                        <Item.Title>Birds.cz</Item.Title>
-                        <Item.Description>
-                            A variety of projects focusing on citizenship science for the Czech Society of Ornithology
-                        </Item.Description>
-                        <Item.Image>
-                            <ProjectPlaceholder />
-                        </Item.Image>
-                    </Item>
-                    <Item>
-                        <Item.Title>Towns.cz</Item.Title>
-                        <Item.Description>
-                            Browser online game
-                            <Tag>WebGL</Tag>
-                        </Item.Description>
-                        <Item.Image>
-                            <ProjectTowns />
-                        </Item.Image>
-                    </Item>
-                    <Item>
-                        <Item.Title>Collboard.com</Item.Title>
-                        <Item.Description>
-                            Virtual online collaborative whiteboard started during the the initial week of the
-                            pandemic-induced lockdown.
-                        </Item.Description>
-                        <Item.Image>
-                            <ProjectPlaceholder />
-                        </Item.Image>
-                    </Item>
-                    <Item>
-                        <Item.Title>H-edu.cz</Item.Title>
-                        <Item.Description>Online pupil books for schools and teachers</Item.Description>
-                        <Item.Image>
-                            <ProjectPlaceholder />
-                        </Item.Image>
-                    </Item>
+                    <a href="https://!!!">
+                        <Item>
+                            <Item.Title>Birds.cz</Item.Title>
+                            <Item.Description>
+                                A variety of projects focusing on citizenship science for the Czech Society of
+                                Ornithology
+                            </Item.Description>
+                            <Item.Image>
+                                <ProjectPlaceholder />
+                            </Item.Image>
+                        </Item>{' '}
+                    </a>
+
+                    <a href="https://!!!">
+                        <Item>
+                            <Item.Title>Towns.cz</Item.Title>
+                            <Item.Description>
+                                Browser online game
+                                <Tag>WebGL</Tag>
+                            </Item.Description>
+                            <Item.Image>
+                                <ProjectTowns />
+                            </Item.Image>
+                        </Item>{' '}
+                    </a>
+
+                    <a href="https://!!!">
+                        <Item>
+                            <Item.Title>Collboard.com</Item.Title>
+                            <Item.Description>
+                                Virtual online collaborative whiteboard started during the the initial week of the
+                                pandemic-induced lockdown.
+                            </Item.Description>
+                            <Item.Image>
+                                <ProjectPlaceholder />
+                            </Item.Image>
+                        </Item>{' '}
+                    </a>
+
+                    <a href="https://!!!">
+                        <Item>
+                            <Item.Title>H-edu.cz</Item.Title>
+                            <Item.Description>Online pupil books for schools and teachers</Item.Description>
+                            <Item.Image>
+                                <ProjectPlaceholder />
+                            </Item.Image>
+                        </Item>
+                    </a>
+
+                    <a href="https://!!!">
+                        <Item>
+                            <Item.Title>Czech.events</Item.Title>
+                            <Item.Description>Most interesting events in Czechia in Tech comunity</Item.Description>
+                            <Item.Image>
+                                <ProjectPlaceholder />
+                            </Item.Image>
+                        </Item>
+                    </a>
 
                     <a href="https://pavolhejny.com/documents/projects.html">
                         <Item>
