@@ -36,8 +36,8 @@ export function Services() {
                     <Item>
                         <Item.Title>Talk</Item.Title>
                         <Item.Description>
-                            I am able to present an overview of the different technologies and their benefits and
-                            drawbacks.
+                            {/* TODO: !!! Text should be selectable even inside of <a> */}I am able to present an
+                            overview of the different technologies and their benefits and drawbacks.
                         </Item.Description>
                         <Item.Image>
                             <CaveWithPresentationImage />

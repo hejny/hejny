@@ -7,5 +7,5 @@
     grid-template-rows: 1fr;
 
     align-items: stretch;
-    justify-items: stretch;
+    justify-content: stretch;
 }

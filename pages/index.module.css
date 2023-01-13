@@ -7,7 +7,7 @@
     grid-template-rows: 40vh 10vh 10vh auto minmax(17vh, 75px);
 
     align-items: stretch;
-    justify-items: stretch;
+    justify-content: stretch;
 }
 
 @media only screen and (max-width: 1000px) {

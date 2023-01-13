@@ -1,9 +1,13 @@
 .item {
+    /*/
+    outline: 1px dotted red;
+    /**/
+
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 5fr 1fr min-content;
+    grid-template-rows: 1fr min-content;
     align-items: stretch;
-    justify-items: stretch;
+    justify-content: stretch;
 }
 
 .imageContainer /* <- TODO: [🦂] CSS class imageContainer vs image-container*/ {
@@ -13,7 +17,7 @@
     outline: 1px dotted red;
     /**/
     grid-column: 1 / span 1;
-    grid-row: 1 / span 3;
+    grid-row: 1 / span 1;
 }
 
 .imageContainer img {
@@ -24,23 +28,32 @@
 .title {
     order: 3;
 
-    /*/
-    outline: 1px dotted red;
+    /**/
+    outline: 1px dotted blue;
     /**/
     grid-column: 1 / span 1;
-    grid-row: 2 / span 1;
+    grid-row: 1 / span 1;
 
-    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* !!! TODO: Maybe mask */
+    font-size: 30px;
 }
 
 .description {
     order: 2;
 
-    /*/
+    /**/
     outline: 1px dotted red;
     /**/
     grid-column: 1 / span 1;
-    grid-row: 3 / span 1;
+    grid-row: 2 / span 1;
+
+    display: flex;
+    align-items: start;
+    justify-content: start;
 
     font-size: 15px;
 }
