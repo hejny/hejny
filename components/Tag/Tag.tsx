@@ -1,7 +1,7 @@
 import styles from './Tag.module.css';
 
 interface TagProps {
-    children: string;
+    children: string /* <- TODO: Constrain to options like> 'WebGL'|'Smart contract' */;
 }
 
 export function Tag(props: TagProps) {

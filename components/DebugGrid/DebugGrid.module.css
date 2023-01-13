@@ -6,8 +6,8 @@
     font-size: 30px;
     text-align: center;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     overflow: hidden;
     pointer-events: none;
 }

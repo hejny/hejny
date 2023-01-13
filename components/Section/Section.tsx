@@ -9,12 +9,12 @@ interface SectionProps {
 }
 
 export function Section({ id, children, className }: SectionProps) {
-    const [headChild, ...restChildren] = children;
+    // TODO: [0] Do or comment> const [headChild, ...restChildren] = children;
 
     return (
         <div id={id} className={classNames(styles.section, className)}>
-            <a href={`#${id}`}>{headChild}</a>
-            {restChildren}
+            {/* [0] <a href={`#${id}`}>{headChild}</a>{restChildren}*/}
+            {children}
         </div>
     );
 }
