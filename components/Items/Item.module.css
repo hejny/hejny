@@ -10,7 +10,7 @@
     justify-content: stretch;
 }
 
-.imageContainer /* <- TODO: [🦂] CSS class imageContainer vs image-container*/ {
+.item .imageContainer /* <- TODO: [🦂] CSS class imageContainer vs image-container*/ {
     /*/
     outline: 1px dotted red;
     /**/
@@ -20,12 +20,29 @@
     grid-row: 1 / span 1;
 }
 
-.imageContainer img {
+.item .imageContainer img {
     width: 100%;
     height: auto;
 }
 
-.title {
+.item .overlay {
+    /*/
+    outline: 1px dotted red;
+    /**/
+
+    order: 2;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+
+    background-color: rgba(0, 0, 0, 0.37);
+    transition: all 0.2s ease-in-out;
+}
+
+.item:hover .overlay {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.item .title {
     /*/
     outline: 1px dotted blue;
     /**/
@@ -39,7 +56,7 @@
     justify-content: center;
 }
 
-.title .inner {
+.item .title .inner {
     /*/
     outline: 1px dotted blue;
     /**/
@@ -51,12 +68,12 @@
     background-color: rgba(56, 74, 150, 0.486);
 }
 
-.description {
+.item .description {
     /*/
     outline: 1px dotted yellow;
     /**/
 
-    order: 2;
+    order: 3;
     grid-column: 1 / span 1;
     grid-row: 2 / span 1;
 

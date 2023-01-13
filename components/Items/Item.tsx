@@ -18,7 +18,12 @@ Item.Description = function ItemDescription({ children }: { children: ReactNode 
 };
 
 Item.Image = function ItemImage({ children }: { children: ReactNode }) {
-    return <div className={styles.imageContainer}>{children}</div>;
+    return (
+        <>
+            <div className={styles.imageContainer}>{children}</div>
+            <div className={styles.overlay} />
+        </>
+    );
 };
 
 /**
