@@ -1,11 +1,9 @@
 import { Item } from '../../components/Items/Item';
 import { Items } from '../../components/Items/Items';
 import { Section } from '../../components/Section/Section';
-import {
-    CaveOfIdeasInLightbulbWithTransparentLookThrImage,
-    CaveWithPresentationImage,
-    CaveWithPrototypingLaboratoryImage,
-} from '../../public/wallpapers';
+import { CaveOfIdeasInLightbulbWithTransparentLookThrImageXd3273ad0 } from '../../public/wallpapers/Pavol_Hejn_cave_of_ideas_in_lightbulb_with_transparent_look_thr_d3273ad0-097f-4011-b799-1c379bb05ee3';
+import { CaveWithPresentationImageXdec31ff2 } from '../../public/wallpapers/Pavol_Hejn_cave_with_presentation_dec31ff2-3b9d-42b9-b84f-f87d02d6a391';
+import { CaveWithPrototypingLaboratoryImageXca9b82b9 } from '../../public/wallpapers/Pavol_Hejn_cave_with_prototyping_laboratory_ca9b82b9-0ded-44a3-b7ec-344ebb539439';
 import styles from './Services.module.css';
 
 export function Services() {
@@ -27,7 +25,7 @@ export function Services() {
                             disadvantages of each one.
                         </Item.Description>
                         <Item.Image>
-                            <CaveOfIdeasInLightbulbWithTransparentLookThrImage />
+                            <CaveOfIdeasInLightbulbWithTransparentLookThrImageXd3273ad0 />
                         </Item.Image>
                     </Item>
                 </a>
@@ -40,7 +38,7 @@ export function Services() {
                             overview of the different technologies and their benefits and drawbacks.
                         </Item.Description>
                         <Item.Image>
-                            <CaveWithPresentationImage />
+                            <CaveWithPresentationImageXdec31ff2 />
                         </Item.Image>
                     </Item>
                 </a>
@@ -53,7 +51,7 @@ export function Services() {
                             {/* By utilizing the latest technologies, I can create a prototype with a fully operational codebase that can be used for constructing a large-scale project or simply to test the viability of an idea. */}
                         </Item.Description>
                         <Item.Image>
-                            <CaveWithPrototypingLaboratoryImage />
+                            <CaveWithPrototypingLaboratoryImageXca9b82b9 />
                         </Item.Image>
                     </Item>
                 </a>
