@@ -1,5 +1,6 @@
 import { Item } from '../../../components/Items/Item';
 import { ProjectPlaceholder } from '../../MyProjects/projects-images';
+import hacking from './hacking.md';
 
 export function WebVRHacking() {
     return (

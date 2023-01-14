@@ -4,13 +4,11 @@
 
 DevConf, CzechVRFest, Hackuj Stát
 
-
 ## SigmaStamp
 
-`[Smart contract]`
+`Smart contract`
 
 !!!
-
 
 ## Toilet finder
 
