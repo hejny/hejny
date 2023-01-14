@@ -3,7 +3,6 @@
 import chalk from 'chalk';
 import commander from 'commander';
 import { readFile, writeFile } from 'fs/promises';
-import glob from 'glob-promise';
 import { normalizeTo_camelCase, normalizeTo_snake_case } from 'n12';
 import { capitalize } from 'n12/dist/capitalize';
 import { basename, dirname, join, relative } from 'path';
@@ -16,7 +15,7 @@ program.option('--commit', `Autocommit changes`);
 program.parse(process.argv);
 const { commit: isCommited } = program.opts();
 
-generateWallpapersLibrary({ isCommited })
+generateHackingLibrary({ isCommited })
     .catch((error) => {
         console.error(chalk.bgRed(error.name));
         console.error(error);
@@ -26,19 +25,19 @@ generateWallpapersLibrary({ isCommited })
         process.exit(0);
     });
 
-async function generateWallpapersLibrary({ isCommited }: { isCommited: boolean }) {
-    console.info(`🖼️  Generating wallpapers library`);
+async function generateHackingLibrary({ isCommited }: { isCommited: boolean }) {
+    console.info(`🖼️  Generating hacking library`);
 
     if (isCommited && !(await isWorkingTreeClean(process.cwd()))) {
         throw new Error(`Working tree is not clean`);
     }
 
+    // !!! Replace all "wallpapers"
+    // !!! Generate index Component
+
     const rootDirectory = join(__dirname, '../../');
-    const wallpapersDirectoryPath = join(rootDirectory, 'public/wallpapers');
-    const wallpapersDirectory = join(rootDirectory, 'public/wallpapers');
-    const wallpapersPaths = await glob(
-        join(wallpapersDirectory, '*.png' /* <- TODO: Maybe do not hardcode PNGs */).split('\\').join('/'),
-    );
+    const hackingDirectory = join(rootDirectory, 'pages-sections/Hacking/hacking');
+    const hackingFilePath = join(hackingDirectory, 'hacking.txt');
 
     for (const wallpaperPath of wallpapersPaths) {
         const name = basename(wallpaperPath);

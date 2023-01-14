@@ -1,7 +1,7 @@
 import { Item } from '../../../components/Items/Item';
 import { ProjectPlaceholder } from '../../MyProjects/projects-images';
-import hacking from './hacking.md';
 
+// TODO: !!! Use or remove this file
 export function WebVRHacking() {
     return (
         <Item>
