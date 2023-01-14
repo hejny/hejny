@@ -6,6 +6,7 @@ import { Tag } from '../../components/Tag/Tag';
 import { ProjectPlaceholder } from '../MyProjects/projects-images';
 
 import styles from './Hacking.module.css';
+import { WebVRHacking } from './hacking/WebVRHacking';
 
 export function Hacking() {
     return (
@@ -17,13 +18,7 @@ export function Hacking() {
             </p>
             <Items>
                 <Shuffle>
-                    <Item>
-                        <Item.Title>Web VR</Item.Title>
-                        <Item.Description>DevConf, CzechVRFest, Hackuj Stát</Item.Description>
-                        <Item.Image>
-                            <ProjectPlaceholder />
-                        </Item.Image>
-                    </Item>
+                    <WebVRHacking />
                     <Item>
                         <Item.Title>SigmaStamp</Item.Title>
                         <Item.Description>
