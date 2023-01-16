@@ -6,6 +6,7 @@ import { readFile, writeFile } from 'fs/promises';
 import { normalizeTo_camelCase, normalizeTo_snake_case } from 'n12';
 import { capitalize } from 'n12/dist/capitalize';
 import { basename, dirname, join, relative } from 'path';
+import fetch from 'node-fetch';
 import { commit } from '../utils/autocommit/commit';
 import { isWorkingTreeClean } from '../utils/autocommit/isWorkingTreeClean';
 import { prettify } from '../utils/prettify';
@@ -33,14 +34,19 @@ async function generateHackingLibrary({ isCommited }: { isCommited: boolean }) {
     }
 
     // !!! Replace all "wallpapers"
-    // !!! Generate index Component
 
-    const rootDirectory = join(__dirname, '../../');
-    const hackingDirectory = join(rootDirectory, 'pages-sections/Hacking/hacking');
-    const hackingFilePath = join(hackingDirectory, 'hacking.txt');
+    const rootDir = join(__dirname, '../../');
+    const hackingDir = join(rootDir, 'pages-sections/Hacking/hacking');
+    const hackingFilePath = join(hackingDir, 'hacking.md');
+    const hackingFileContent = await readFile(hackingFilePath, 'utf-8');
+    const hackingUrls = hackingFileContent
+        .split('\n')
+        .map((line) => line.trim())
+        .filter((line) => line !== '' && !line.startsWith('#'));
 
-    for (const wallpaperPath of wallpapersPaths) {
-        const name = basename(wallpaperPath);
+
+    for (const hackinUrl of hackingUrls) {
+        const name = await fetch(hackinUrl);
 
         const jobUuidMatch = name.match(/_(?<jobUuid>[^_]*?)(\.png)?$/);
         const jobUuid = jobUuidMatch?.groups?.jobUuid;
@@ -54,7 +60,7 @@ async function generateHackingLibrary({ isCommited }: { isCommited: boolean }) {
 
         const nameWithoutExtension = name.replace(/\.png$/, '');
 
-        const wallpaperFilePath = join(wallpapersDirectoryPath, nameWithoutExtension) + '.tsx';
+        const wallpaperFilePath = join(wallpapersDir, nameWithoutExtension) + '.tsx';
 
         const wallpaperFileOldContent = await readFile(wallpaperFilePath, 'utf-8');
 
@@ -105,8 +111,10 @@ async function generateHackingLibrary({ isCommited }: { isCommited: boolean }) {
     }
 
     if (isCommited) {
-        await commit(dirname(wallpapersDirectoryPath), `🖼️  Generate wallpapers library`);
+        await commit(dirname(wallpapersDir), `🖼️  Generate wallpapers library`);
     }
+
+    // !!! Generate index Component
 
     console.info(`[ Done 🖼️  Generating wallpapers library ]`);
     process.exit(0);

@@ -31,6 +31,7 @@
         "xyzt": "5.4.0"
     },
     "devDependencies": {
+        "node-fetch": "^3.3.0",
         "@next/font": "13.1.1",
         "@types/node": "18.11.18",
         "@types/prettier": "2.7.2",

@@ -33,11 +33,10 @@ async function generateWallpapersLibrary({ isCommited }: { isCommited: boolean }
         throw new Error(`Working tree is not clean`);
     }
 
-    const rootDirectory = join(__dirname, '../../');
-    const wallpapersDirectoryPath = join(rootDirectory, 'public/wallpapers');
-    const wallpapersDirectory = join(rootDirectory, 'public/wallpapers');
+    const rootDir = join(__dirname, '../../');
+    const wallpapersDir = join(rootDir, 'public/wallpapers');
     const wallpapersPaths = await glob(
-        join(wallpapersDirectory, '*.png' /* <- TODO: Maybe do not hardcode PNGs */).split('\\').join('/'),
+        join(wallpapersDir, '*.png' /* <- TODO: Maybe do not hardcode PNGs */).split('\\').join('/'),
     );
 
     for (const wallpaperPath of wallpapersPaths) {
@@ -55,7 +54,7 @@ async function generateWallpapersLibrary({ isCommited }: { isCommited: boolean }
 
         const nameWithoutExtension = name.replace(/\.png$/, '');
 
-        const wallpaperFilePath = join(wallpapersDirectoryPath, nameWithoutExtension) + '.tsx';
+        const wallpaperFilePath = join(wallpapersDir, nameWithoutExtension) + '.tsx';
 
         const wallpaperFileOldContent = await readFile(wallpaperFilePath, 'utf-8');
 
@@ -106,7 +105,7 @@ async function generateWallpapersLibrary({ isCommited }: { isCommited: boolean }
     }
 
     if (isCommited) {
-        await commit(dirname(wallpapersDirectoryPath), `🖼️  Generate wallpapers library`);
+        await commit(dirname(wallpapersDir), `🖼️  Generate wallpapers library`);
     }
 
     console.info(`[ Done 🖼️  Generating wallpapers library ]`);
@@ -115,5 +114,6 @@ async function generateWallpapersLibrary({ isCommited }: { isCommited: boolean }
 
 /**
  * TODO: !!!  [😁]
+ * TODO: Maybe use getMidjourneyLink from batch-froject-editor
  * TODO: !!! Persistency and uniqueness of the names
  */

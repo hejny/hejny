@@ -13,6 +13,7 @@ export function MyProjects() {
             <p>Here are some of the larger projects that I have been involved in:</p>
             <Items>
                 <Shuffle>
+                    {/* !!! Use (generated) from hacking.md */}
                     <a href="https://!!!">
                         <Item>
                             <Item.Title>Birds.cz</Item.Title>
