@@ -6,7 +6,7 @@ import { Tag } from '../../components/Tag/Tag';
 import { ProjectPlaceholder } from '../MyProjects/projects-images';
 
 import styles from './Hacking.module.css';
-import { WebVRHacking } from './hacking/WebVRHacking';
+import { WebVRHacking } from './hackings/WebVRHacking';
 
 export function Hacking() {
     return (

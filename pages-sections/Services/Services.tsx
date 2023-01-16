@@ -1,3 +1,4 @@
+import { Vector } from 'xyzt';
 import { Item } from '../../components/Items/Item';
 import { Items } from '../../components/Items/Items';
 import { Section } from '../../components/Section/Section';
@@ -43,7 +44,32 @@ export function Services() {
                     </Item>
                 </a>
 
-                <a href="#contact">
+                <a
+                    href="#contact"
+                    ref={(element) => {
+                        // TODO: To separate util addFoooInteractivity
+
+                        if (element === null) {
+                            return;
+                        }
+
+                        let drawing: Drawing | null = null;
+
+                        element.addEventListener('mouseEnter', (event) => {
+                            if (drawing) {
+                                return;
+                            }
+
+                            drawing = new Drawing(Vector.fromObject(element, ['clientX', 'clientY']));
+                        });
+
+                        element.addEventListener('mouseLeave', (event) => {
+                            // TODO: A
+                            drawing.destroy();
+                        });
+                    }}
+                >
+                    {/* TODO: !!! Interactivity here should be on project Collboard */}
                     <Item>
                         <Item.Title>Prototyping</Item.Title>
                         <Item.Description>
@@ -61,6 +87,7 @@ export function Services() {
 }
 
 /**
+ * TODO: Maybe split every item into separate file component
  * TODO: !!! Smooth scrolling + highlighting of the section
  * TODO: !!! Rename to HowCanIHelpYou OR Better
  */

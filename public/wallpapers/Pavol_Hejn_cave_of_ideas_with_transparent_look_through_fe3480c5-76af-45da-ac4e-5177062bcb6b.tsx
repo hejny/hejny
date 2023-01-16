@@ -37,7 +37,3 @@ export function CaveOfIdeasWithTransparentLookThroughImageXfe3480c5() {
     );
 }
 
-/**
- * TODO: !!! Suffixing
- * TODO: !!!  [😁] TO Genetator - pass img/background form in props
- */

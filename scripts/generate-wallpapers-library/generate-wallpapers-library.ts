@@ -113,7 +113,6 @@ async function generateWallpapersLibrary({ isCommited }: { isCommited: boolean }
 }
 
 /**
- * TODO: !!!  [😁]
  * TODO: Maybe use getMidjourneyLink from batch-froject-editor
  * TODO: !!! Persistency and uniqueness of the names
  */
