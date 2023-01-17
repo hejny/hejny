@@ -83,9 +83,13 @@ https://pavolhejny.com/documents/projects.html
 
 ![](/public/projects/placeholder.png)
 
+<!--
+TODO:
 ## All my talks
 
 ![](/public/projects/placeholder.png)
+
+-->
 
 <!--
 TODO: Maybe add SigmaStamp project/hacking

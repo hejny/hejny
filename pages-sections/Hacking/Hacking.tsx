@@ -3,17 +3,10 @@ import { Section } from '../../components/Section/Section';
 import { Shuffle } from '../../components/Shuffle/Shuffle';
 
 import styles from './Hacking.module.css';
-import { AllMyProjectsHacking } from './hackings/AllMyProjectsHacking';
-import { AllMyTalksHacking } from './hackings/AllMyTalksHacking';
-import { BirdsCzHacking } from './hackings/BirdsCzHacking';
-import { CollboardHacking } from './hackings/CollboardHacking';
-import { CzechEventsHacking } from './hackings/CzechEventsHacking';
 import { FunctionBuilderHacking } from './hackings/FunctionBuilderHacking';
-import { HEduHacking } from './hackings/HEduHacking';
 import { LibrariesHacking } from './hackings/LibrariesHacking';
 import { MapsForGeographyHacking } from './hackings/MapsForGeographyHacking';
 import { ModulesForCollboardHacking } from './hackings/ModulesForCollboardHacking';
-import { TownsHacking } from './hackings/TownsHacking';
 import { WebVrHacking } from './hackings/WebVRHacking';
 
 export function Hacking() {
@@ -26,19 +19,11 @@ export function Hacking() {
             </p>
             <Items>
                 <Shuffle>
-                    <AllMyProjectsHacking />
-                    <AllMyTalksHacking />
-                    <BirdsCzHacking />
-                    <CollboardHacking />
-                    <CzechEventsHacking />
                     <FunctionBuilderHacking />
-                    <HEduHacking />
                     <LibrariesHacking />
                     <MapsForGeographyHacking />
                     <ModulesForCollboardHacking />
-                    <TownsHacking />
                     <WebVrHacking />
-                    {/* TODO: Some of theese hackings should be in projects */}
                 </Shuffle>
             </Items>
         </Section>
