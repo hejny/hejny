@@ -26,9 +26,6 @@ export function BirdsCzHacking() {
                 <p>
                     A variety of projects focusing on citizenship science for the Czech Society of Ornithology Feeders
                 </p>
-                <p>
-                    <img src="/public/projects/placeholder.png" alt="" />
-                </p>
             </Item.Description>
             <Item.Image>
                 <Image alt="" src={background} draggable="false" />

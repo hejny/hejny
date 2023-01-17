@@ -24,9 +24,6 @@ export function MapsForGeographyHacking() {
             <Item.Description>
                 {/* TODO: !!! Text should be selectable even inside of <a> */}
                 <p>https://github.com/collboard/map</p>
-                <p>
-                    <img src="/public/projects/collboard-geography-2.jpeg" alt="" />
-                </p>
             </Item.Description>
             <Item.Image>
                 <Image alt="" src={background} draggable="false" />

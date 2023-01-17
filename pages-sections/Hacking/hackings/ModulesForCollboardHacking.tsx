@@ -24,9 +24,6 @@ export function ModulesForCollboardHacking() {
             <Item.Description>
                 {/* TODO: !!! Text should be selectable even inside of <a> */}
                 <p>https://github.com/collboard/modules-sdk</p>
-                <p>
-                    <img src="/public/projects/geometry-on-board.png" alt="" />
-                </p>
             </Item.Description>
             <Item.Image>
                 <Image alt="" src={background} draggable="false" />

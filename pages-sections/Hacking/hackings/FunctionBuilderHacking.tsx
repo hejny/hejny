@@ -24,9 +24,6 @@ export function FunctionBuilderHacking() {
             <Item.Description>
                 {/* TODO: !!! Text should be selectable even inside of <a> */}
                 <p>https://github.com/collboard/function-builder</p>
-                <p>
-                    <img src="/public/projects/collboard-function-builder.png" alt="" />
-                </p>
             </Item.Description>
             <Item.Image>
                 <Image alt="" src={background} draggable="false" />

@@ -21,12 +21,7 @@ export function AllMyTalksHacking() {
     return (
         <Item>
             <Item.Title>All my talks</Item.Title>
-            <Item.Description>
-                {/* TODO: !!! Text should be selectable even inside of <a> */}
-                <p>
-                    <img src="/public/projects/placeholder.png" alt="" />
-                </p>
-            </Item.Description>
+            <Item.Description>{/* TODO: !!! Text should be selectable even inside of <a> */}</Item.Description>
             <Item.Image>
                 <Image alt="" src={background} draggable="false" />
             </Item.Image>

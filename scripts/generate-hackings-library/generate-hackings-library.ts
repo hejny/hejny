@@ -7,6 +7,7 @@ import markdownToTxt from 'markdown-to-txt';
 import { normalizeTo_PascalCase } from 'n12';
 import { dirname, join, relative } from 'path';
 import { Converter } from 'showdown';
+import spaceTrim from 'spacetrim';
 import { commit } from '../utils/autocommit/commit';
 import { isWorkingTreeClean } from '../utils/autocommit/isWorkingTreeClean';
 import { prettify } from '../utils/prettify';
@@ -48,6 +49,8 @@ async function generateHackingsLibrary({ isCommited }: { isCommited: boolean }) 
 
         const title = markdownToTxt(titleMarkdown);
 
+        // TODO: !!! Find also the links and replace
+
         let imagesMatch = bodyMarkdown.matchAll(/!\[(?<alt>.*?)\]\((?<src>.*?)\)/g);
         const images: Array<{ src: string; alt: string }> = Array.from(imagesMatch).map(
             ({ groups: { alt, src } }: any) => ({ alt, src }),
@@ -58,14 +61,26 @@ async function generateHackingsLibrary({ isCommited }: { isCommited: boolean }) 
             throw new Error(`Hacking ${title} has no image`);
         }
 
+        if (images.length > 1) {
+            console.warn(chalk.yellow(`Only first image will be used in ${title} `));
+        }
+
+        /* 
         let tagsMatch = bodyMarkdown.matchAll(/`(?<tag>.*?)`/g);
         const tags: Array<string> = Array.from(tagsMatch).map(({ groups: { tag } }: any) => tag);
+        // TODO: [🛰] Use tags
+        // TODO: [🛰] Remove tags from body
+        */
 
-        // TODO: !!! Remove image from body
-        // TODO: !!! Remove tags from body
+        let bodyMarkdownWithoutImages = bodyMarkdown;
+        for (const { alt, src } of images) {
+            bodyMarkdownWithoutImages = bodyMarkdownWithoutImages.split(`![${alt}](${src})`).join('\n');
+        }
+        bodyMarkdownWithoutImages = bodyMarkdownWithoutImages.split('\n\n\n').join('\n\n');
+        bodyMarkdownWithoutImages = spaceTrim(bodyMarkdownWithoutImages);
 
         const converter = new Converter();
-        const bodyHtml = converter.makeHtml(bodyMarkdown);
+        const bodyHtml = converter.makeHtml(bodyMarkdownWithoutImages);
 
         const componentName = normalizeTo_PascalCase(titleMarkdown) + 'Hacking';
         const hackingFilePath = join(hackingsComponentsDir, componentName) + '.tsx';

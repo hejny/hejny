@@ -23,12 +23,6 @@ export function TownsHacking() {
             <Item.Title>Towns</Item.Title>
             <Item.Description>
                 {/* TODO: !!! Text should be selectable even inside of <a> */}
-                <p>
-                    <code>WebGL</code>
-                </p>
-                <p>
-                    <img src="/public/projects/towns.jpg" alt="" />
-                </p>
                 <p>Browser online game https://github.com/townsgame</p>
             </Item.Description>
             <Item.Image>

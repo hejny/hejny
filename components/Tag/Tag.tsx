@@ -8,3 +8,8 @@ export function Tag(props: TagProps) {
     const { children } = props;
     return <span className={styles.tag}>{children}</span>;
 }
+
+
+/**
+ * TODO: [🛰] Use for technologies
+ */

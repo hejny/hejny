@@ -27,9 +27,6 @@ export function CollboardHacking() {
                     Virtual online collaborative whiteboard started during the the initial week of the pandemic-induced
                     lockdown.
                 </p>
-                <p>
-                    <img src="/public/projects/placeholder.png" alt="" />
-                </p>
             </Item.Description>
             <Item.Image>
                 <Image alt="" src={background} draggable="false" />

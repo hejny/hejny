@@ -28,9 +28,6 @@ export function LibrariesHacking() {
                     https://github.com/hejny/xyzt https://github.com/hejny/locate-app
                     https://github.com/hejny/destroyable
                 </p>
-                <p>
-                    <img src="/public/projects/placeholder.png" alt="" />
-                </p>
             </Item.Description>
             <Item.Image>
                 <Image alt="" src={background} draggable="false" />

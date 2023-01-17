@@ -5,7 +5,7 @@
 
 ## Birds.cz
 
-<!-- TODO: !!! Tags everywhere-->
+<!-- [🛰] `Maps` -->
 
 A variety of projects focusing on citizenship science for the Czech Society of
 Ornithology
@@ -15,6 +15,8 @@ Feeders
 
 ## Collboard
 
+<!-- [🛰] `Real time app` -->
+
 Virtual online collaborative whiteboard started during the the initial week of the
 pandemic-induced lockdown.
 
@@ -22,7 +24,7 @@ pandemic-induced lockdown.
 
 ## Towns
 
-`WebGL`
+<!-- [🛰] `WebGL` -->
 
 ![](/public/projects/towns.jpg)
 

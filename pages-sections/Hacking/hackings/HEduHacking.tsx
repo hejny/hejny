@@ -24,9 +24,6 @@ export function HEduHacking() {
             <Item.Description>
                 {/* TODO: !!! Text should be selectable even inside of <a> */}
                 <p>Online pupil books for schools and teachers</p>
-                <p>
-                    <img src="/public/projects/placeholder.png" alt="" />
-                </p>
             </Item.Description>
             <Item.Image>
                 <Image alt="" src={background} draggable="false" />
