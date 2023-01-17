@@ -3,13 +3,9 @@
 <!-- TODO: !!! Maybe rename to projects.md -->
 <!-- Note: In this file there are all URLs which will be converted into the hacking cases components -->
 
-<!--
-TODO: Allow comments everywhere without errors in generate-hackings-library
-TODO: Maybe add SigmaStamp project/hacking
-
--->
-
 ## Birds.cz
+
+<!-- TODO: !!! Tags everywhere-->
 
 A variety of projects focusing on citizenship science for the Czech Society of
 Ornithology
@@ -88,3 +84,8 @@ https://pavolhejny.com/documents/projects.html
 ## All my talks
 
 ![](/public/projects/placeholder.png)
+
+<!--
+TODO: Maybe add SigmaStamp project/hacking
+
+-->

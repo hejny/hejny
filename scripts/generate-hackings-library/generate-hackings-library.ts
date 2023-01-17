@@ -10,6 +10,7 @@ import { Converter } from 'showdown';
 import { commit } from '../utils/autocommit/commit';
 import { isWorkingTreeClean } from '../utils/autocommit/isWorkingTreeClean';
 import { prettify } from '../utils/prettify';
+import { removeMarkdownComments } from './removeMarkdownComments';
 
 const program = new commander.Command();
 program.option('--commit', `Autocommit changes`);
@@ -38,7 +39,8 @@ async function generateHackingsLibrary({ isCommited }: { isCommited: boolean }) 
     const rootDir = join(__dirname, '../../');
     const hackingsComponentsDir = join(rootDir, 'pages-sections/Hacking/hackings');
     const hackingsDocumentFilePath = join(rootDir, 'public/hackings/0-hackings.md');
-    const hackingsDocumentFileContent = await readFile(hackingsDocumentFilePath, 'utf-8');
+    const hackingsDocumentFileContent = await readFile(hackingsDocumentFilePath, 'utf-8').then(removeMarkdownComments);
+
     const matches = hackingsDocumentFileContent.matchAll(/(?<titleMarkdown>^##.*?$)(?<bodyMarkdown>[^^#]+)/gms);
 
     for (const match of matches) {
