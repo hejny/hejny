@@ -9,7 +9,7 @@
 
 import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
-import background /* <- TODO: Put filename into this import name .replace(/.[a-z0-9]+$/, '') */ from '../../../public/projects/placeholder.png';
+import background /* <- TODO: Put filename into this import name .replace(/.[a-z0-9]+$/, '') */ from '../../../public/projects/collboard-geography-2.jpeg';
 
 /**
  * !!!
@@ -25,7 +25,7 @@ export function MapsForGeographyHacking() {
                 {/* TODO: !!! Text should be selectable even inside of <a> */}
                 <p>https://github.com/collboard/map</p>
                 <p>
-                    <img src="/public/projects/placeholder.png" alt="" />
+                    <img src="/public/projects/collboard-geography-2.jpeg" alt="" />
                 </p>
             </Item.Description>
             <Item.Image>

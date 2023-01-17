@@ -37,7 +37,7 @@ https://github.com/townsgame
 
 https://github.com/collboard/modules-sdk
 
-![](/public/projects/placeholder.png)
+![](/public/projects/geometry-on-board.png)
 
 ## H-edu
 
@@ -49,13 +49,13 @@ Online pupil books for schools and teachers
 
 https://github.com/collboard/map
 
-![](/public/projects/placeholder.png)
+![](/public/projects/collboard-geography-2.jpeg)
 
 ## Function builder
 
 https://github.com/collboard/function-builder
 
-![](/public/projects/placeholder.png)
+![](/public/projects/collboard-function-builder.png)
 
 ## Web VR
 

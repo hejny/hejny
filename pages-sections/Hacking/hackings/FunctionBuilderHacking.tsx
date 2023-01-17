@@ -9,7 +9,7 @@
 
 import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
-import background /* <- TODO: Put filename into this import name .replace(/.[a-z0-9]+$/, '') */ from '../../../public/projects/placeholder.png';
+import background /* <- TODO: Put filename into this import name .replace(/.[a-z0-9]+$/, '') */ from '../../../public/projects/collboard-function-builder.png';
 
 /**
  * !!!
@@ -25,7 +25,7 @@ export function FunctionBuilderHacking() {
                 {/* TODO: !!! Text should be selectable even inside of <a> */}
                 <p>https://github.com/collboard/function-builder</p>
                 <p>
-                    <img src="/public/projects/placeholder.png" alt="" />
+                    <img src="/public/projects/collboard-function-builder.png" alt="" />
                 </p>
             </Item.Description>
             <Item.Image>
