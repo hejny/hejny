@@ -36,4 +36,3 @@ export function CaveOfIdeasWithTransparentLookThroughImageXfe3480c5() {
         </div>
     );
 }
-
