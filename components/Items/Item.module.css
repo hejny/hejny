@@ -78,10 +78,28 @@
     grid-row: 2 / span 1;
 
     display: flex;
-    align-items: start;
-    justify-content: start;
+    align-items: flex-start;
+    justify-content: flex-start;
 
     text-align: left;
     padding: 5px;
     font-size: 15px;
+}
+
+.item .description a::before {
+    content: ' ';
+}
+
+.item .description a::after {
+    content: ' ';
+}
+
+.item .description a {
+    /*/
+    outline: 1px dotted yellow;
+    /**/
+
+    display: inline-block;
+    color: #ccf;
+    text-decoration: none;
 }

@@ -9,7 +9,7 @@
 
 import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
-import background /* <- TODO: Put filename into this import name .replace(/.[a-z0-9]+$/, '') */ from '../placeholder.png';
+import background /* <- TODO: Put filename into this import name .replace(/.[a-z0-9]+$/, '') */ from '../whiteboard-with-tiles.png';
 
 /**
  * !!!

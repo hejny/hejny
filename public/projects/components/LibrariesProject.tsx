@@ -9,7 +9,7 @@
 
 import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
-import background /* <- TODO: Put filename into this import name .replace(/.[a-z0-9]+$/, '') */ from '../placeholder.png';
+import background /* <- TODO: Put filename into this import name .replace(/.[a-z0-9]+$/, '') */ from '../xyzt.png';
 
 /**
  * !!!
@@ -24,9 +24,13 @@ export function LibrariesProject() {
             <Item.Description>
                 {/* TODO: !!! Text should be selectable even inside of <a> */}
                 <p>
-                    https://github.com/hejny/waitasecond https://github.com/hejny/spacetrim
-                    https://github.com/hejny/xyzt https://github.com/hejny/locate-app
-                    https://github.com/hejny/destroyable
+                    I am working on several OpenSource libraries like
+                    <a href="https://github.com/hejny/xyzt">vector library xyzt</a>,
+                    <a href="https://github.com/hejny/locate-app">locating apps in your system</a>,
+                    <a href="https://github.com/hejny/waitasecond">waitasecond to supercharge the promises</a>,
+                    <a href="https://github.com/hejny/spacetrim">trimming from all 4 directions</a>,
+                    <a href="https://github.com/hejny/destroyable">working with destroyable objects</a>
+                    or see <a href="https://github.com/hejny?tab=repositories">my GitHub repositories</a>.
                 </p>
             </Item.Description>
             <Item.Image>

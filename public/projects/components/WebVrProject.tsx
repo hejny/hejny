@@ -7,9 +7,8 @@
  *    Then the file will not be re-generated automatically
  */
 
-import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
-import background /* <- TODO: Put filename into this import name .replace(/.[a-z0-9]+$/, '') */ from '../placeholder.png';
+import background /* <- TODO: Put filename into this import name .replace(/.[a-z0-9]+$/, '') */ from '../webvr.jpg';
 
 /**
  * !!!
@@ -26,7 +25,14 @@ export function WebVrProject() {
                 <p>DevConf, CzechVRFest, Hackuj Stát</p>
             </Item.Description>
             <Item.Image>
-                <Image alt="" src={background} draggable="false" />
+                <div
+                    style={{
+                        backgroundImage: background.src,
+                        backgroundSize: 'cover',
+                        backgroundRepeat: 'no-repeat',
+                        aspectRatio: '2/3',
+                    }}
+                ></div>
             </Item.Image>
         </Item>
     );
