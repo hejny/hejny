@@ -9,7 +9,7 @@
 
 import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
-import background /* <- TODO: Put filename into this import name .replace(/.[a-z0-9]+$/, '') */ from '../xyzt.png';
+import background from '../xyzt.png';
 
 /**
  * !!!
@@ -22,7 +22,6 @@ export function LibrariesProject() {
         <Item>
             <Item.Title>Libraries</Item.Title>
             <Item.Description>
-                {/* TODO: !!! Text should be selectable even inside of <a> */}
                 <p>
                     I am working on several OpenSource libraries like
                     <a href="https://github.com/hejny/xyzt">vector library xyzt</a>,
@@ -30,11 +29,20 @@ export function LibrariesProject() {
                     <a href="https://github.com/hejny/waitasecond">waitasecond to supercharge the promises</a>,
                     <a href="https://github.com/hejny/spacetrim">trimming from all 4 directions</a>,
                     <a href="https://github.com/hejny/destroyable">working with destroyable objects</a>
-                    or see <a href="https://github.com/hejny?tab=repositories">my GitHub repositories</a>.
+                    <a href="https://github.com/hejny?tab=repositories">or see my GitHub repositories</a>.
                 </p>
             </Item.Description>
             <Item.Image>
-                <Image alt="" src={background} draggable="false" />
+                <div
+                    style={{
+                        backgroundImage: `url(${background.src})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: '50% 30%',
+                        backgroundRepeat: 'no-repeat',
+                        aspectRatio: '3/2',
+                    }}
+                />
+                {/* <Image alt="" src={background} draggable="false" /> */}
             </Item.Image>
         </Item>
     );

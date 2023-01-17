@@ -9,7 +9,7 @@
 
 import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
-import background /* <- TODO: Put filename into this import name .replace(/.[a-z0-9]+$/, '') */ from '../placeholder.png';
+import background from '../placeholder.png';
 
 /**
  * !!!
@@ -22,13 +22,21 @@ export function BirdsCzProject() {
         <Item>
             <Item.Title>Birds.cz</Item.Title>
             <Item.Description>
-                {/* TODO: !!! Text should be selectable even inside of <a> */}
                 <p>
                     A variety of projects focusing on citizenship science for the Czech Society of Ornithology Feeders
                 </p>
             </Item.Description>
             <Item.Image>
-                <Image alt="" src={background} draggable="false" />
+                <div
+                    style={{
+                        backgroundImage: `url(${background.src})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: '50% 30%',
+                        backgroundRepeat: 'no-repeat',
+                        aspectRatio: '3/2',
+                    }}
+                />
+                {/* <Image alt="" src={background} draggable="false" /> */}
             </Item.Image>
         </Item>
     );

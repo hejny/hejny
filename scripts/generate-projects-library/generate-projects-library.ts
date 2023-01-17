@@ -92,6 +92,10 @@ async function generateProjectsLibrary({ isCommited }: { isCommited: boolean }) 
         }
 
         // TODO: !!! Remove use tags in body
+        // TODO: Use alt in generated component
+        // TODO: Put filename into this import name .replace(/\.[a-z0-9]+$/, ''
+        // TODO: !!! Text should be selectable even inside of <a>
+        // TODO: !!! Antialiasing of the images
 
         const projectFileContent = await prettify(`
 
@@ -106,7 +110,7 @@ async function generateProjectsLibrary({ isCommited }: { isCommited: boolean }) 
         
             import Image from 'next/image';
             import { Item } from '../../../components/Items/Item';
-            import background /* <- TODO: Put filename into this import name .replace(/\.[a-z0-9]+$/, '') */ from '${relative(
+            import background from '${relative(
                 dirname(projectFilePath),
                 join(process.cwd(), image.src),
                 // TODO: Here should be sth like> join(dirname(projectsDocumentFilePath), image.src),
@@ -126,11 +130,19 @@ async function generateProjectsLibrary({ isCommited }: { isCommited: boolean }) 
                     <Item>
                         <Item.Title>${title}</Item.Title>
                         <Item.Description>
-                            {/* TODO: !!! Text should be selectable even inside of <a> */}
                             ${bodyHtml}
                         </Item.Description>
                         <Item.Image>
-                            <Image alt="${image.alt}" src={background} draggable="false" />
+                            <div
+                                style={{
+                                    backgroundImage: \`url(\${background.src})\`,
+                                    backgroundSize: 'cover',
+                                    backgroundPosition: '50% 30%',
+                                    backgroundRepeat: 'no-repeat',
+                                    aspectRatio: '3/2',
+                                }}
+                            />
+                            {/* <Image alt="${image.alt}" src={background} draggable="false" /> */}
                         </Item.Image>
                     </Item>
                 );

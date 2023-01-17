@@ -7,8 +7,9 @@
  *    Then the file will not be re-generated automatically
  */
 
+import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
-import background /* <- TODO: Put filename into this import name .replace(/.[a-z0-9]+$/, '') */ from '../webvr.jpg';
+import background from '../webvr.jpg';
 
 /**
  * !!!
@@ -21,18 +22,19 @@ export function WebVrProject() {
         <Item>
             <Item.Title>Web VR</Item.Title>
             <Item.Description>
-                {/* TODO: !!! Text should be selectable even inside of <a> */}
                 <p>DevConf, CzechVRFest, Hackuj Stát</p>
             </Item.Description>
             <Item.Image>
                 <div
                     style={{
-                        backgroundImage: background.src,
+                        backgroundImage: `url(${background.src})`,
                         backgroundSize: 'cover',
+                        backgroundPosition: '50% 30%',
                         backgroundRepeat: 'no-repeat',
-                        aspectRatio: '2/3',
+                        aspectRatio: '3/2',
                     }}
-                ></div>
+                />
+                {/* <Image alt="" src={background} draggable="false" /> */}
             </Item.Image>
         </Item>
     );

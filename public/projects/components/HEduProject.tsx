@@ -9,7 +9,7 @@
 
 import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
-import background /* <- TODO: Put filename into this import name .replace(/.[a-z0-9]+$/, '') */ from '../whiteboard-with-tiles.png';
+import background from '../whiteboard-with-tiles.png';
 
 /**
  * !!!
@@ -22,11 +22,19 @@ export function HEduProject() {
         <Item>
             <Item.Title>H-edu</Item.Title>
             <Item.Description>
-                {/* TODO: !!! Text should be selectable even inside of <a> */}
                 <p>Online pupil books for schools and teachers</p>
             </Item.Description>
             <Item.Image>
-                <Image alt="" src={background} draggable="false" />
+                <div
+                    style={{
+                        backgroundImage: `url(${background.src})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: '50% 30%',
+                        backgroundRepeat: 'no-repeat',
+                        aspectRatio: '3/2',
+                    }}
+                />
+                {/* <Image alt="" src={background} draggable="false" /> */}
             </Item.Image>
         </Item>
     );

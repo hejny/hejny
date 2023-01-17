@@ -9,7 +9,7 @@
 
 import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
-import background /* <- TODO: Put filename into this import name .replace(/.[a-z0-9]+$/, '') */ from '../whiteboard.png';
+import background from '../whiteboard.png';
 
 /**
  * !!!
@@ -22,14 +22,22 @@ export function CollboardProject() {
         <Item>
             <Item.Title>Collboard</Item.Title>
             <Item.Description>
-                {/* TODO: !!! Text should be selectable even inside of <a> */}
                 <p>
                     Virtual online collaborative whiteboard started during the the initial week of the pandemic-induced
                     lockdown.
                 </p>
             </Item.Description>
             <Item.Image>
-                <Image alt="" src={background} draggable="false" />
+                <div
+                    style={{
+                        backgroundImage: `url(${background.src})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: '50% 30%',
+                        backgroundRepeat: 'no-repeat',
+                        aspectRatio: '3/2',
+                    }}
+                />
+                {/* <Image alt="" src={background} draggable="false" /> */}
             </Item.Image>
         </Item>
     );
