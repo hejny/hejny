@@ -12,7 +12,6 @@
             "onlySingle": true,
             "focus": true
         },
-
         {
             "name": "🧪 Test",
             "command": "npm run test",
@@ -32,13 +31,17 @@
         },
         {
             "name": "🏭🖼️ Generate wallpapers library",
-            "commands": ["ts-node ./scripts/generate-wallpapers-library/generate-wallpapers-library.ts --commit"],
+            "commands": [
+                "ts-node ./scripts/generate-wallpapers-library/generate-wallpapers-library.ts --commit"
+            ],
             "onlySingle": true,
             "focus": true
         },
         {
             "name": "🏭🖼️ Generate hackings library",
-            "commands": ["ts-node ./scripts/generate-hackings-library/generate-hackings-library.ts --commit"],
+            "commands": [
+                "ts-node ./scripts/generate-hackings-library/generate-hackings-library.ts --commit"
+            ],
             "onlySingle": true,
             "focus": true
         },
