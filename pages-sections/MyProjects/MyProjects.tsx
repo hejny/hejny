@@ -1,12 +1,12 @@
 import { Items } from '../../components/Items/Items';
 import { Section } from '../../components/Section/Section';
 import { Shuffle } from '../../components/Shuffle/Shuffle';
-import { AllMyProjectsHacking } from '../Hacking/hackings/AllMyProjectsHacking';
-import { BirdsCzHacking } from '../Hacking/hackings/BirdsCzHacking';
-import { CollboardHacking } from '../Hacking/hackings/CollboardHacking';
-import { CzechEventsHacking } from '../Hacking/hackings/CzechEventsHacking';
-import { HEduHacking } from '../Hacking/hackings/HEduHacking';
-import { TownsHacking } from '../Hacking/hackings/TownsHacking';
+import { AllMyProjectsProject } from '../../public/projects/components/AllMyProjectsProject';
+import { BirdsCzProject } from '../../public/projects/components/BirdsCzProject';
+import { CollboardProject } from '../../public/projects/components/CollboardProject';
+import { CzechEventsProject } from '../../public/projects/components/CzechEventsProject';
+import { HEduProject } from '../../public/projects/components/HEduProject';
+import { TownsProject } from '../../public/projects/components/TownsProject';
 import styles from './MyProjects.module.css';
 
 export function MyProjects() {
@@ -16,13 +16,13 @@ export function MyProjects() {
             <p>Here are some of the larger projects that I have been involved in:</p>
             <Items>
                 <Shuffle>
-                    <BirdsCzHacking />
-                    <TownsHacking />
-                    <CollboardHacking />
-                    <HEduHacking />
-                    <CzechEventsHacking />
+                    <BirdsCzProject />
+                    <TownsProject />
+                    <CollboardProject />
+                    <HEduProject />
+                    <CzechEventsProject />
                 </Shuffle>
-                <AllMyProjectsHacking />
+                <AllMyProjectsProject />
             </Items>
         </Section>
     );

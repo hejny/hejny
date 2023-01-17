@@ -1,13 +1,14 @@
 import { Items } from '../../components/Items/Items';
 import { Section } from '../../components/Section/Section';
 import { Shuffle } from '../../components/Shuffle/Shuffle';
+import { FunctionBuilderProject } from '../../public/projects/components/FunctionBuilderProject';
 
 import styles from './Hacking.module.css';
-import { FunctionBuilderHacking } from './hackings/FunctionBuilderHacking';
-import { LibrariesHacking } from './hackings/LibrariesHacking';
-import { MapsForGeographyHacking } from './hackings/MapsForGeographyHacking';
-import { ModulesForCollboardHacking } from './hackings/ModulesForCollboardHacking';
-import { WebVrHacking } from './hackings/WebVRHacking';
+
+import { LibrariesProject } from '../../public/projects/components/LibrariesProject';
+import { MapsForGeographyProject } from '../../public/projects/components/MapsForGeographyProject';
+import { ModulesForCollboardProject } from '../../public/projects/components/ModulesForCollboardProject';
+import { WebVrProject } from '../../public/projects/components/WebVRProject';
 
 export function Hacking() {
     return (
@@ -19,11 +20,11 @@ export function Hacking() {
             </p>
             <Items>
                 <Shuffle>
-                    <FunctionBuilderHacking />
-                    <LibrariesHacking />
-                    <MapsForGeographyHacking />
-                    <ModulesForCollboardHacking />
-                    <WebVrHacking />
+                    <FunctionBuilderProject/>
+                    <LibrariesProject/>
+                    <MapsForGeographyProject/>
+                    <ModulesForCollboardProject/>
+                    <WebVrProject/>
                 </Shuffle>
             </Items>
         </Section>
