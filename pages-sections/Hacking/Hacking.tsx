@@ -1,12 +1,20 @@
-import { Item } from '../../components/Items/Item';
 import { Items } from '../../components/Items/Items';
 import { Section } from '../../components/Section/Section';
 import { Shuffle } from '../../components/Shuffle/Shuffle';
-import { Tag } from '../../components/Tag/Tag';
-import { ProjectPlaceholder } from '../MyProjects/projects-images';
 
 import styles from './Hacking.module.css';
-import { WebVRHacking } from './hackings/WebVRHacking';
+import { AllMyProjectsHacking } from './hackings/AllMyProjectsHacking';
+import { AllMyTalksHacking } from './hackings/AllMyTalksHacking';
+import { BirdsCzHacking } from './hackings/BirdsCzHacking';
+import { CollboardHacking } from './hackings/CollboardHacking';
+import { CzechEventsHacking } from './hackings/CzechEventsHacking';
+import { FunctionBuilderHacking } from './hackings/FunctionBuilderHacking';
+import { HEduHacking } from './hackings/HEduHacking';
+import { LibrariesHacking } from './hackings/LibrariesHacking';
+import { MapsForGeographyHacking } from './hackings/MapsForGeographyHacking';
+import { ModulesForCollboardHacking } from './hackings/ModulesForCollboardHacking';
+import { TownsHacking } from './hackings/TownsHacking';
+import { WebVrHacking } from './hackings/WebVRHacking';
 
 export function Hacking() {
     return (
@@ -18,45 +26,19 @@ export function Hacking() {
             </p>
             <Items>
                 <Shuffle>
-                    <WebVRHacking />
-                    <Item>
-                        <Item.Title>SigmaStamp</Item.Title>
-                        <Item.Description>
-                            <p>Tool for time-signing documents on the blockchain.</p>
-                            <p>
-                                <Tag>Smart contract</Tag>
-                            </p>
-                            {/* TODO: Wining 3rd price on hackathon. */}
-                        </Item.Description>
-                        <Item.Image>
-                            <ProjectPlaceholder />
-                        </Item.Image>
-                    </Item>
-                    <Item>
-                        <Item.Title>Toilet finder</Item.Title>
-                        <Item.Description>
-                            Lorem <b>ipsum d!!!olor sit amet consectetur adipisicing elit</b>. Maxime mollitia
-                        </Item.Description>
-                        <Item.Image>
-                            <ProjectPlaceholder />
-                        </Item.Image>
-                    </Item>
-                    <Item>
-                        <Item.Title>AI Batch</Item.Title>
-                        <Item.Description>
-                            Lorem <b>ipsum d!!!olor sit amet consectetur adipisicing elit</b>. Maxime mollitia
-                        </Item.Description>
-                        <Item.Image>
-                            <ProjectPlaceholder />
-                        </Item.Image>
-                    </Item>
-                    <Item>
-                        <Item.Title>More</Item.Title>
-                        <Item.Description>Find on my github / codepen</Item.Description>
-                        <Item.Image>
-                            <ProjectPlaceholder />
-                        </Item.Image>
-                    </Item>
+                    <AllMyProjectsHacking />
+                    <AllMyTalksHacking />
+                    <BirdsCzHacking />
+                    <CollboardHacking />
+                    <CzechEventsHacking />
+                    <FunctionBuilderHacking />
+                    <HEduHacking />
+                    <LibrariesHacking />
+                    <MapsForGeographyHacking />
+                    <ModulesForCollboardHacking />
+                    <TownsHacking />
+                    <WebVrHacking />
+                    {/* TODO: Some of theese hackings should be in projects */}
                 </Shuffle>
             </Items>
         </Section>
