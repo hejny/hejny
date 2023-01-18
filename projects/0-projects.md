@@ -47,19 +47,23 @@ Online pupil books for schools and teachers
 
 https://github.com/collboard/map
 
-![](/public/projects/collboard-geography-2.jpeg)
+![](/public/projects/geography-in-collboard.png)
 
 ## Function builder
 
 https://github.com/collboard/function-builder
 
-![](/public/projects/collboard-function-builder.png)
+![](/public/projects/functions-graphing-in-collboard.png)
 
-## Web VR
+## Virtual and augmented reality
 
 DevConf, CzechVRFest, Hackuj Stát
 
+![](/public/projects/drawing-in-vr.png)
+
+<!--
 ![](/public/projects/webvr.jpg)
+-->
 
 ## Czech.events
 

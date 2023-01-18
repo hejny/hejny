@@ -7,9 +7,8 @@
  *    Then the file will not be re-generated automatically
  */
 
-import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
-import background from '../collboard-function-builder.png';
+import background from '../functions-graphing-in-collboard.png';
 
 /**
  * !!!
@@ -32,6 +31,7 @@ export function FunctionBuilderProject() {
                         backgroundPosition: '50% 30%',
                         backgroundRepeat: 'no-repeat',
                         aspectRatio: '3/2',
+                        filter: 'invert(1)',
                     }}
                 />
                 {/* <Image alt="" src={background} draggable="false" /> */}
