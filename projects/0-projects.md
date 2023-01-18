@@ -3,13 +3,9 @@
 <!-- TODO: !!! Maybe rename to projects.md -->
 <!-- Note: In this file there are all URLs which will be converted into the hacking cases components -->
 
-<!--
-TODO: Allow comments everywhere without errors in generate-hackings-library
-TODO: Maybe add SigmaStamp project/hacking
-
--->
-
 ## Birds.cz
+
+<!-- [🛰] `Maps` -->
 
 A variety of projects focusing on citizenship science for the Czech Society of
 Ornithology
@@ -19,14 +15,16 @@ Feeders
 
 ## Collboard
 
+<!-- [🛰] `Real time app` -->
+
 Virtual online collaborative whiteboard started during the the initial week of the
 pandemic-induced lockdown.
 
-![](/public/projects/placeholder.png)
+![](/public/projects/whiteboard.png)
 
 ## Towns
 
-`WebGL`
+<!-- [🛰] `WebGL` -->
 
 ![](/public/projects/towns.jpg)
 
@@ -43,7 +41,7 @@ https://github.com/collboard/modules-sdk
 
 Online pupil books for schools and teachers
 
-![](/public/projects/placeholder.png)
+![](/public/projects/whiteboard-with-tiles.png)
 
 ## Maps for Geography
 
@@ -61,7 +59,7 @@ https://github.com/collboard/function-builder
 
 DevConf, CzechVRFest, Hackuj Stát
 
-![](/public/projects/placeholder.png)
+![](/public/projects/webvr.jpg)
 
 ## Czech.events
 
@@ -71,20 +69,31 @@ Most interesting events in Czechia in Tech comunity
 
 ## Libraries
 
-https://github.com/hejny/waitasecond
-https://github.com/hejny/spacetrim
-https://github.com/hejny/xyzt
-https://github.com/hejny/locate-app
-https://github.com/hejny/destroyable
+I am working on several OpenSource libraries like
+[vector library xyzt](https://github.com/hejny/xyzt),
+[locating apps in your system](https://github.com/hejny/locate-app),
+[waitasecond to supercharge the promises](https://github.com/hejny/waitasecond),
+[trimming from all 4 directions](https://github.com/hejny/spacetrim),
+[working with destroyable objects](https://github.com/hejny/destroyable)
+[or see my GitHub repositories](https://github.com/hejny?tab=repositories).
 
-![](/public/projects/placeholder.png)
+![](/public/projects/xyzt.png)
 
 ## All my projects
 
 https://pavolhejny.com/documents/projects.html
 
-![](/public/projects/placeholder.png)
+![](/public/projects/all-projects.png)
 
+<!--
+TODO:
 ## All my talks
 
 ![](/public/projects/placeholder.png)
+
+-->
+
+<!--
+TODO: Maybe add SigmaStamp project/hacking
+
+-->
