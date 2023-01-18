@@ -2,13 +2,11 @@ import { Items } from '../../components/Items/Items';
 import { Section } from '../../components/Section/Section';
 import { Shuffle } from '../../components/Shuffle/Shuffle';
 import { FunctionBuilderProject } from '../../public/projects/components/FunctionBuilderProject';
-
-import styles from './Hacking.module.css';
-
 import { LibrariesProject } from '../../public/projects/components/LibrariesProject';
 import { MapsForGeographyProject } from '../../public/projects/components/MapsForGeographyProject';
 import { ModulesForCollboardProject } from '../../public/projects/components/ModulesForCollboardProject';
-import { WebVrProject } from '../../public/projects/components/WebVRProject';
+import { WebVrProject } from '../../public/projects/components/WebVrProject';
+import styles from './Hacking.module.css';
 
 export function Hacking() {
     return (
@@ -20,11 +18,11 @@ export function Hacking() {
             </p>
             <Items>
                 <Shuffle>
-                    <FunctionBuilderProject/>
-                    <LibrariesProject/>
-                    <MapsForGeographyProject/>
-                    <ModulesForCollboardProject/>
-                    <WebVrProject/>
+                    <FunctionBuilderProject />
+                    <LibrariesProject />
+                    <MapsForGeographyProject />
+                    <ModulesForCollboardProject />
+                    <WebVrProject />
                 </Shuffle>
             </Items>
         </Section>
