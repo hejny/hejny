@@ -5,7 +5,7 @@ import { FunctionBuilderProject } from '../../public/projects/components/Functio
 import { LibrariesProject } from '../../public/projects/components/LibrariesProject';
 import { MapsForGeographyProject } from '../../public/projects/components/MapsForGeographyProject';
 import { ModulesForCollboardProject } from '../../public/projects/components/ModulesForCollboardProject';
-import { WebVrProject } from '../../public/projects/components/WebVrProject';
+import { VirtualAndAugmentedRealityProject } from '../../public/projects/components/VirtualAndAugmentedRealityProject';
 import styles from './Hacking.module.css';
 
 export function Hacking() {
@@ -22,7 +22,7 @@ export function Hacking() {
                     <LibrariesProject />
                     <MapsForGeographyProject />
                     <ModulesForCollboardProject />
-                    <WebVrProject />
+                    <VirtualAndAugmentedRealityProject />
                 </Shuffle>
             </Items>
         </Section>

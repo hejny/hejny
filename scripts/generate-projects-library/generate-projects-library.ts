@@ -165,5 +165,6 @@ async function generateProjectsLibrary({ isCommited }: { isCommited: boolean }) 
 }
 
 /**
+ * TODO: When the heading is changes, old file will be still in place, this can be a bit misleading
  * TODO: Maybe rename generateProjectsLibrary
  */

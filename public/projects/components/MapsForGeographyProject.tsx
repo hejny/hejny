@@ -7,9 +7,8 @@
  *    Then the file will not be re-generated automatically
  */
 
-import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
-import background from '../collboard-geography-2.jpeg';
+import background from '../geography-in-collboard.png';
 
 /**
  * !!!
@@ -32,6 +31,7 @@ export function MapsForGeographyProject() {
                         backgroundPosition: '50% 30%',
                         backgroundRepeat: 'no-repeat',
                         aspectRatio: '3/2',
+                        filter: 'invert(1)',
                     }}
                 />
                 {/* <Image alt="" src={background} draggable="false" /> */}
