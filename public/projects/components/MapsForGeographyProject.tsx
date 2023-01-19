@@ -27,13 +27,14 @@ export function MapsForGeographyProject() {
                 <div
                     style={{
                         backgroundImage: `url(${background.src})`,
-                        backgroundSize: 'cover',
+                        backgroundSize: '200%',
                         backgroundPosition: '50% 30%',
                         backgroundRepeat: 'no-repeat',
                         aspectRatio: '3/2',
                         filter: 'invert(1)',
                     }}
                 />
+
                 {/* <Image alt="" src={background} draggable="false" /> */}
             </Item.Image>
         </Item>
