@@ -27,8 +27,8 @@ export function FunctionBuilderProject() {
                 <div
                     style={{
                         backgroundImage: `url(${background.src})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: '50% 30%',
+                        backgroundSize: '200%',
+                        backgroundPosition: '70% 50%',
                         backgroundRepeat: 'no-repeat',
                         aspectRatio: '3/2',
                         filter: 'invert(1)',
