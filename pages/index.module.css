@@ -6,7 +6,7 @@
     grid-template-columns: 20vw 1fr 3fr 1fr 20vw;
     grid-template-rows: 20vh 10vh 10vh auto minmax(17vh, 75px);
 
-    /* !!! 40vh */
+    /* TODO: !!! Find optimal cave size Desktop 40vh; Mobile 20vh*/
 
     align-items: stretch;
     justify-content: stretch;
@@ -34,6 +34,8 @@
     grid-column: 1 / span 5;
     grid-row: 2 / span 1;
 
+    /* !!! Gradient from one image to another */
+
     background-image: linear-gradient(to bottom, transparent, #111530);
 }
 
@@ -43,7 +45,11 @@
     grid-column: 1 / span 5;
     grid-row: 3 / span 3;
 
-    background-color: #111530;
+    /* background-color: #111530; */
+    /* TODO: !!! ACRY all background-image should have background-color fallback */
+    background-image: url(../public/patterns/Pavol_Hejny_Altamira_Cave_painting_5732f60b-c6cc-462b-8b51-45403e055bd3.png);
+    background-size: 350px 350px;
+    background-repeat: repeat;
 }
 
 .page main {
