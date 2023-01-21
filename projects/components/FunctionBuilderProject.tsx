@@ -7,6 +7,7 @@
  *    Then the file will not be re-generated automatically
  */
 
+import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
 import background from '../functions-graphing-in-collboard.png';
 
@@ -18,24 +19,25 @@ import background from '../functions-graphing-in-collboard.png';
  */
 export function FunctionBuilderProject() {
     return (
-        <Item>
-            <Item.Title>Function builder</Item.Title>
-            <Item.Description>
-                <p>https://github.com/collboard/function-builder</p>
-            </Item.Description>
-            <Item.Image>
-                <div
-                    style={{
-                        backgroundImage: `url(${background.src})`,
-                        backgroundSize: '200%',
-                        backgroundPosition: '70% 50%',
-                        backgroundRepeat: 'no-repeat',
-                        aspectRatio: '3/2',
-                        filter: 'invert(1)',
-                    }}
-                />
-                {/* <Image alt="" src={background} draggable="false" /> */}
-            </Item.Image>
-        </Item>
+        <a href="https://github.com/collboard/function-builder" target="_blank" rel="noreferrer">
+            <Item>
+                <Item.Title>Function builder</Item.Title>
+                <Item.Description>
+                    <p>@@@</p>
+                </Item.Description>
+                <Item.Image>
+                    <div
+                        style={{
+                            backgroundImage: `url(${background.src})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: '50% 30%',
+                            backgroundRepeat: 'no-repeat',
+                            aspectRatio: '3/2',
+                        }}
+                    />
+                    {/* <Image alt="@@@" src={background} draggable="false" /> */}
+                </Item.Image>
+            </Item>
+        </a>
     );
 }

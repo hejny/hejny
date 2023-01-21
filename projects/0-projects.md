@@ -9,70 +9,79 @@
 
 A variety of projects focusing on citizenship science for the Czech Society of
 Ornithology
-Feeders
 
-![](/public/projects/placeholder.png)
+<!--
+TODO: More about
+Feeders
+-->
+
+[![@@@](/public/projects/Pavol_Hejn_birds_3eee9b48-0331-462d-b11d-367626cf028c.png)](#)
 
 ## Collboard
-
-<!-- [🛰] `Real time app` -->
 
 Virtual online collaborative whiteboard started during the the initial week of the
 pandemic-induced lockdown.
 
-![](/public/projects/whiteboard.png)
+<!-- [🛰] `Real time app` -->
+
+[![@@@](/public/projects/whiteboard.png)](#)
 
 ## Towns
 
+Browser online game @@@
+
 <!-- [🛰] `WebGL` -->
 
-![](/public/projects/towns.jpg)
-
-Browser online game
-https://github.com/townsgame
+[![@@@](/public/projects/towns.jpg)](https://towns.cz/)
 
 ## Modules for Collboard
 
-https://github.com/collboard/modules-sdk
+@@@
 
-![](/public/projects/geometry-on-board.png)
+[![@@@](/public/projects/geometry-on-board.png)](https://github.com/collboard/modules-sdk)
 
 ## H-edu
 
 Online pupil books for schools and teachers
 
-![](/public/projects/whiteboard-with-tiles.png)
+[![@@@](/public/projects/whiteboard-with-tiles.png)](https://www.h-edu.cz/)
 
 ## Maps for Geography
 
-https://github.com/collboard/map
+@@@
 
-![](/public/projects/geography-in-collboard.png)
+[![@@@](/public/projects/geography-in-collboard.png)](https://github.com/collboard/map)
 
 ## Function builder
 
-https://github.com/collboard/function-builder
+@@@
 
-![](/public/projects/functions-graphing-in-collboard.png)
+[![@@@](/public/projects/functions-graphing-in-collboard.png)](https://github.com/collboard/function-builder)
 
 ## Virtual and augmented reality
 
 DevConf, CzechVRFest, Hackuj Stát
 
-![](/public/projects/drawing-in-vr.png)
+[![@@@](/public/projects/drawing-in-vr.png)](#!!!)
 
 <!--
-![](/public/projects/webvr.jpg)
+![@@@](/public/projects/webvr.jpg)
 -->
 
 ## Czech.events
 
 Most interesting events in Czechia in Tech comunity
 
-![](/public/projects/placeholder.png)
+[![@@@](/public/projects/placeholder.png)](https://czech.events/)
 
 ## Libraries
 
+@@@
+
+[![@@@](/public/projects/xyzt.png)](https://github.com/hejny?tab=repositories)
+
+<!--
+TODO: Allow links in links
 I am working on several OpenSource libraries like
 [vector library xyzt](https://github.com/hejny/xyzt),
 [locating apps in your system](https://github.com/hejny/locate-app),
@@ -80,20 +89,19 @@ I am working on several OpenSource libraries like
 [trimming from all 4 directions](https://github.com/hejny/spacetrim),
 [working with destroyable objects](https://github.com/hejny/destroyable)
 [or see my GitHub repositories](https://github.com/hejny?tab=repositories).
-
-![](/public/projects/xyzt.png)
+-->
 
 ## All my projects
 
-https://pavolhejny.com/documents/projects.html
+@@@
 
-![](/public/projects/all-projects.png)
+[![@@@](/public/projects/all-projects.png)](https://pavolhejny.com/documents/projects.html)
 
 <!--
 TODO:
 ## All my talks
 
-![](/public/projects/placeholder.png)
+![@@@](/public/projects/placeholder.png)
 
 -->
 

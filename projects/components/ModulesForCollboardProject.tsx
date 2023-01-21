@@ -19,23 +19,25 @@ import background from '../geometry-on-board.png';
  */
 export function ModulesForCollboardProject() {
     return (
-        <Item>
-            <Item.Title>Modules for Collboard</Item.Title>
-            <Item.Description>
-                <p>https://github.com/collboard/modules-sdk</p>
-            </Item.Description>
-            <Item.Image>
-                <div
-                    style={{
-                        backgroundImage: `url(${background.src})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: '50% 30%',
-                        backgroundRepeat: 'no-repeat',
-                        aspectRatio: '3/2',
-                    }}
-                />
-                {/* <Image alt="" src={background} draggable="false" /> */}
-            </Item.Image>
-        </Item>
+        <a href="https://github.com/collboard/modules-sdk" target="_blank" rel="noreferrer">
+            <Item>
+                <Item.Title>Modules for Collboard</Item.Title>
+                <Item.Description>
+                    <p>@@@</p>
+                </Item.Description>
+                <Item.Image>
+                    <div
+                        style={{
+                            backgroundImage: `url(${background.src})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: '50% 30%',
+                            backgroundRepeat: 'no-repeat',
+                            aspectRatio: '3/2',
+                        }}
+                    />
+                    {/* <Image alt="@@@" src={background} draggable="false" /> */}
+                </Item.Image>
+            </Item>
+        </a>
     );
 }

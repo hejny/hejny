@@ -19,26 +19,28 @@ import background from '../whiteboard.png';
  */
 export function CollboardProject() {
     return (
-        <Item>
-            <Item.Title>Collboard</Item.Title>
-            <Item.Description>
-                <p>
-                    Virtual online collaborative whiteboard started during the the initial week of the pandemic-induced
-                    lockdown.
-                </p>
-            </Item.Description>
-            <Item.Image>
-                <div
-                    style={{
-                        backgroundImage: `url(${background.src})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: '50% 30%',
-                        backgroundRepeat: 'no-repeat',
-                        aspectRatio: '3/2',
-                    }}
-                />
-                {/* <Image alt="" src={background} draggable="false" /> */}
-            </Item.Image>
-        </Item>
+        <a href="#" target="_blank" rel="noreferrer">
+            <Item>
+                <Item.Title>Collboard</Item.Title>
+                <Item.Description>
+                    <p>
+                        Virtual online collaborative whiteboard started during the the initial week of the
+                        pandemic-induced lockdown.
+                    </p>
+                </Item.Description>
+                <Item.Image>
+                    <div
+                        style={{
+                            backgroundImage: `url(${background.src})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: '50% 30%',
+                            backgroundRepeat: 'no-repeat',
+                            aspectRatio: '3/2',
+                        }}
+                    />
+                    {/* <Image alt="@@@" src={background} draggable="false" /> */}
+                </Item.Image>
+            </Item>
+        </a>
     );
 }

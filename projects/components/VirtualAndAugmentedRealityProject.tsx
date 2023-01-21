@@ -19,23 +19,25 @@ import background from '../drawing-in-vr.png';
  */
 export function VirtualAndAugmentedRealityProject() {
     return (
-        <Item>
-            <Item.Title>Virtual and augmented reality</Item.Title>
-            <Item.Description>
-                <p>DevConf, CzechVRFest, Hackuj Stát</p>
-            </Item.Description>
-            <Item.Image>
-                <div
-                    style={{
-                        backgroundImage: `url(${background.src})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: '50% 30%',
-                        backgroundRepeat: 'no-repeat',
-                        aspectRatio: '3/2',
-                    }}
-                />
-                {/* <Image alt="" src={background} draggable="false" /> */}
-            </Item.Image>
-        </Item>
+        <a href="#!!!" target="_blank" rel="noreferrer">
+            <Item>
+                <Item.Title>Virtual and augmented reality</Item.Title>
+                <Item.Description>
+                    <p>DevConf, CzechVRFest, Hackuj Stát</p>
+                </Item.Description>
+                <Item.Image>
+                    <div
+                        style={{
+                            backgroundImage: `url(${background.src})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: '50% 30%',
+                            backgroundRepeat: 'no-repeat',
+                            aspectRatio: '3/2',
+                        }}
+                    />
+                    {/* <Image alt="@@@" src={background} draggable="false" /> */}
+                </Item.Image>
+            </Item>
+        </a>
     );
 }

@@ -19,23 +19,25 @@ import background from '../placeholder.png';
  */
 export function CzechEventsProject() {
     return (
-        <Item>
-            <Item.Title>Czech.events</Item.Title>
-            <Item.Description>
-                <p>Most interesting events in Czechia in Tech comunity</p>
-            </Item.Description>
-            <Item.Image>
-                <div
-                    style={{
-                        backgroundImage: `url(${background.src})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: '50% 30%',
-                        backgroundRepeat: 'no-repeat',
-                        aspectRatio: '3/2',
-                    }}
-                />
-                {/* <Image alt="" src={background} draggable="false" /> */}
-            </Item.Image>
-        </Item>
+        <a href="https://czech.events/" target="_blank" rel="noreferrer">
+            <Item>
+                <Item.Title>Czech.events</Item.Title>
+                <Item.Description>
+                    <p>Most interesting events in Czechia in Tech comunity</p>
+                </Item.Description>
+                <Item.Image>
+                    <div
+                        style={{
+                            backgroundImage: `url(${background.src})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: '50% 30%',
+                            backgroundRepeat: 'no-repeat',
+                            aspectRatio: '3/2',
+                        }}
+                    />
+                    {/* <Image alt="@@@" src={background} draggable="false" /> */}
+                </Item.Image>
+            </Item>
+        </a>
     );
 }

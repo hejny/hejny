@@ -19,31 +19,25 @@ import background from '../xyzt.png';
  */
 export function LibrariesProject() {
     return (
-        <Item>
-            <Item.Title>Libraries</Item.Title>
-            <Item.Description>
-                <p>
-                    I am working on several OpenSource libraries like
-                    <a href="https://github.com/hejny/xyzt">vector library xyzt</a>,
-                    <a href="https://github.com/hejny/locate-app">locating apps in your system</a>,
-                    <a href="https://github.com/hejny/waitasecond">waitasecond to supercharge the promises</a>,
-                    <a href="https://github.com/hejny/spacetrim">trimming from all 4 directions</a>,
-                    <a href="https://github.com/hejny/destroyable">working with destroyable objects</a>
-                    <a href="https://github.com/hejny?tab=repositories">or see my GitHub repositories</a>.
-                </p>
-            </Item.Description>
-            <Item.Image>
-                <div
-                    style={{
-                        backgroundImage: `url(${background.src})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: '50% 30%',
-                        backgroundRepeat: 'no-repeat',
-                        aspectRatio: '3/2',
-                    }}
-                />
-                {/* <Image alt="" src={background} draggable="false" /> */}
-            </Item.Image>
-        </Item>
+        <a href="https://github.com/hejny?tab=repositories" target="_blank" rel="noreferrer">
+            <Item>
+                <Item.Title>Libraries</Item.Title>
+                <Item.Description>
+                    <p>@@@</p>
+                </Item.Description>
+                <Item.Image>
+                    <div
+                        style={{
+                            backgroundImage: `url(${background.src})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: '50% 30%',
+                            backgroundRepeat: 'no-repeat',
+                            aspectRatio: '3/2',
+                        }}
+                    />
+                    {/* <Image alt="@@@" src={background} draggable="false" /> */}
+                </Item.Image>
+            </Item>
+        </a>
     );
 }

@@ -19,23 +19,25 @@ import background from '../all-projects.png';
  */
 export function AllMyProjectsProject() {
     return (
-        <Item>
-            <Item.Title>All my projects</Item.Title>
-            <Item.Description>
-                <p>https://pavolhejny.com/documents/projects.html</p>
-            </Item.Description>
-            <Item.Image>
-                <div
-                    style={{
-                        backgroundImage: `url(${background.src})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: '50% 30%',
-                        backgroundRepeat: 'no-repeat',
-                        aspectRatio: '3/2',
-                    }}
-                />
-                {/* <Image alt="" src={background} draggable="false" /> */}
-            </Item.Image>
-        </Item>
+        <a href="https://pavolhejny.com/documents/projects.html" target="_blank" rel="noreferrer">
+            <Item>
+                <Item.Title>All my projects</Item.Title>
+                <Item.Description>
+                    <p>@@@</p>
+                </Item.Description>
+                <Item.Image>
+                    <div
+                        style={{
+                            backgroundImage: `url(${background.src})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: '50% 30%',
+                            backgroundRepeat: 'no-repeat',
+                            aspectRatio: '3/2',
+                        }}
+                    />
+                    {/* <Image alt="@@@" src={background} draggable="false" /> */}
+                </Item.Image>
+            </Item>
+        </a>
     );
 }

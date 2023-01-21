@@ -19,23 +19,25 @@ import background from '../whiteboard-with-tiles.png';
  */
 export function HEduProject() {
     return (
-        <Item>
-            <Item.Title>H-edu</Item.Title>
-            <Item.Description>
-                <p>Online pupil books for schools and teachers</p>
-            </Item.Description>
-            <Item.Image>
-                <div
-                    style={{
-                        backgroundImage: `url(${background.src})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: '50% 30%',
-                        backgroundRepeat: 'no-repeat',
-                        aspectRatio: '3/2',
-                    }}
-                />
-                {/* <Image alt="" src={background} draggable="false" /> */}
-            </Item.Image>
-        </Item>
+        <a href="https://www.h-edu.cz/" target="_blank" rel="noreferrer">
+            <Item>
+                <Item.Title>H-edu</Item.Title>
+                <Item.Description>
+                    <p>Online pupil books for schools and teachers</p>
+                </Item.Description>
+                <Item.Image>
+                    <div
+                        style={{
+                            backgroundImage: `url(${background.src})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: '50% 30%',
+                            backgroundRepeat: 'no-repeat',
+                            aspectRatio: '3/2',
+                        }}
+                    />
+                    {/* <Image alt="@@@" src={background} draggable="false" /> */}
+                </Item.Image>
+            </Item>
+        </a>
     );
 }

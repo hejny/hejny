@@ -9,7 +9,7 @@
 
 import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
-import background from '../placeholder.png';
+import background from '../Pavol_Hejn_birds_3eee9b48-0331-462d-b11d-367626cf028c.png';
 
 /**
  * !!!
@@ -19,25 +19,25 @@ import background from '../placeholder.png';
  */
 export function BirdsCzProject() {
     return (
-        <Item>
-            <Item.Title>Birds.cz</Item.Title>
-            <Item.Description>
-                <p>
-                    A variety of projects focusing on citizenship science for the Czech Society of Ornithology Feeders
-                </p>
-            </Item.Description>
-            <Item.Image>
-                <div
-                    style={{
-                        backgroundImage: `url(${background.src})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: '50% 30%',
-                        backgroundRepeat: 'no-repeat',
-                        aspectRatio: '3/2',
-                    }}
-                />
-                {/* <Image alt="" src={background} draggable="false" /> */}
-            </Item.Image>
-        </Item>
+        <a href="#" target="_blank" rel="noreferrer">
+            <Item>
+                <Item.Title>Birds.cz</Item.Title>
+                <Item.Description>
+                    <p>A variety of projects focusing on citizenship science for the Czech Society of Ornithology</p>
+                </Item.Description>
+                <Item.Image>
+                    <div
+                        style={{
+                            backgroundImage: `url(${background.src})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: '50% 30%',
+                            backgroundRepeat: 'no-repeat',
+                            aspectRatio: '3/2',
+                        }}
+                    />
+                    {/* <Image alt="@@@" src={background} draggable="false" /> */}
+                </Item.Image>
+            </Item>
+        </a>
     );
 }

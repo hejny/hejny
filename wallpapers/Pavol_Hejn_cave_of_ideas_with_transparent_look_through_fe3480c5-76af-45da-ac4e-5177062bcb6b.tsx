@@ -30,7 +30,15 @@ export function CaveOfIdeasWithTransparentLookThroughImageXfe3480c5() {
                     href="https://www.midjourney.com/app/jobs/fe3480c5-76af-45da-ac4e-5177062bcb6b"
                     style={{ zIndex: 10, fontSize: 10, textDecoration: 'none', color: '#ccc', textShadow: 'none' }}
                 >
-                    Created by AI
+                    {/*
+
+                    TODO: Text
+                    
+                    > Created by AI
+
+                    Should be referenced at the bottom of the page
+
+                    */}
                 </a>
             </Float>
         </div>
