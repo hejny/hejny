@@ -44,20 +44,32 @@ async function generateProjectsLibrary({ isCommited }: { isCommited: boolean }) 
 
     const matches = projectsDocumentFileContent.matchAll(/(?<titleMarkdown>^##.*?$)(?<bodyMarkdown>[^^#]+)/gms);
 
-    for (const match of matches) {
-        const { titleMarkdown, bodyMarkdown } = match.groups!;
+    // TODO: Make some util - splitMarkdownIntoHeaderSections
+    const sections: Array<{ titleMarkdown: string; bodyMarkdown: string }> = [];
+    for (const line of projectsDocumentFileContent.split('\n').map((line) => line.trim())) {
+        if (line.startsWith('#')) {
+            sections.push({ titleMarkdown: line.replace(/^#+/, ''), bodyMarkdown: `` });
+        } else {
+            const section = sections[sections.length - 1];
+            section.bodyMarkdown += (section.bodyMarkdown.trim() ? '\n' : '') + line;
+        }
+    }
 
+    sections.shift(/* To remove the first paragraph */);
+
+    for (const { titleMarkdown, bodyMarkdown } of sections) {
         const title = markdownToTxt(titleMarkdown);
 
         // TODO: !!! Find also the links and replace
 
-        let imagesMatch = bodyMarkdown.matchAll(/!\[(?<alt>.*?)\]\((?<src>.*?)\)/g);
-        const images: Array<{ src: string; alt: string }> = Array.from(imagesMatch).map(
-            ({ groups: { alt, src } }: any) => ({ alt, src }),
+        let imagesMatch = bodyMarkdown.matchAll(/\[!\[(?<alt>.*?)\]\((?<src>.*?)\)\]\((?<href>.*?)\)/g);
+        const images: Array<{ src: string; alt: string; href: string }> = Array.from(imagesMatch).map(
+            ({ groups: { alt, src, href } }: any) => ({ alt, src, href }),
         );
         const image = images[0];
 
         if (!image) {
+            console.info({ bodyMarkdown });
             throw new Error(`Project ${title} has no image`);
         }
 
@@ -73,8 +85,8 @@ async function generateProjectsLibrary({ isCommited }: { isCommited: boolean }) 
         */
 
         let bodyMarkdownWithoutImages = bodyMarkdown;
-        for (const { alt, src } of images) {
-            bodyMarkdownWithoutImages = bodyMarkdownWithoutImages.split(`![${alt}](${src})`).join('\n');
+        for (const { alt, src, href } of images) {
+            bodyMarkdownWithoutImages = bodyMarkdownWithoutImages.split(`[![${alt}](${src})](${href})`).join('\n');
         }
         bodyMarkdownWithoutImages = bodyMarkdownWithoutImages.split('\n\n\n').join('\n\n');
         bodyMarkdownWithoutImages = spaceTrim(bodyMarkdownWithoutImages);
@@ -127,24 +139,26 @@ async function generateProjectsLibrary({ isCommited }: { isCommited: boolean }) 
              */
             export function ${componentName}() {
                 return(
-                    <Item>
-                        <Item.Title>${title}</Item.Title>
-                        <Item.Description>
-                            ${bodyHtml}
-                        </Item.Description>
-                        <Item.Image>
-                            <div
-                                style={{
-                                    backgroundImage: \`url(\${background.src})\`,
-                                    backgroundSize: 'cover',
-                                    backgroundPosition: '50% 30%',
-                                    backgroundRepeat: 'no-repeat',
-                                    aspectRatio: '3/2',
-                                }}
-                            />
-                            {/* <Image alt="${image.alt}" src={background} draggable="false" /> */}
-                        </Item.Image>
-                    </Item>
+                    <a href="${image.href}" target="_blank" rel="noreferrer">
+                        <Item>
+                            <Item.Title>${title}</Item.Title>
+                            <Item.Description>
+                                ${bodyHtml}
+                            </Item.Description>
+                            <Item.Image>
+                                <div
+                                    style={{
+                                        backgroundImage: \`url(\${background.src})\`,
+                                        backgroundSize: 'cover',
+                                        backgroundPosition: '50% 30%',
+                                        backgroundRepeat: 'no-repeat',
+                                        aspectRatio: '3/2',
+                                    }}
+                                />
+                                {/* <Image alt="${image.alt}" src={background} draggable="false" /> */}
+                            </Item.Image>
+                        </Item>
+                    </a>
                 );
             }
 

@@ -6,10 +6,11 @@
     width: 100%;
     height: 100%;
 
-    mask-image: linear-gradient(to bottom, transparent 0%, #fff 100px, #fff 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, #fff 100px, #fff 100%)
+        /* <- TODO: [🛹] Make some more interesting mask-gradient */;
     mask-size: 100% 100%;
     mask-repeat: no-repeat;
-    /* !!! 100px should be configurabke*/
+    /* TODO: 100px should be configurable OR same as the coresponding cell in the main grid */
 
     display: grid;
     grid-template-columns: auto;

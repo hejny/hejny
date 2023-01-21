@@ -19,23 +19,25 @@ import background from '../towns.jpg';
  */
 export function TownsProject() {
     return (
-        <Item>
-            <Item.Title>Towns</Item.Title>
-            <Item.Description>
-                <p>Browser online game https://github.com/townsgame</p>
-            </Item.Description>
-            <Item.Image>
-                <div
-                    style={{
-                        backgroundImage: `url(${background.src})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: '50% 30%',
-                        backgroundRepeat: 'no-repeat',
-                        aspectRatio: '3/2',
-                    }}
-                />
-                {/* <Image alt="" src={background} draggable="false" /> */}
-            </Item.Image>
-        </Item>
+        <a href="https://towns.cz/" target="_blank" rel="noreferrer">
+            <Item>
+                <Item.Title>Towns</Item.Title>
+                <Item.Description>
+                    <p>Browser online game @@@</p>
+                </Item.Description>
+                <Item.Image>
+                    <div
+                        style={{
+                            backgroundImage: `url(${background.src})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: '50% 30%',
+                            backgroundRepeat: 'no-repeat',
+                            aspectRatio: '3/2',
+                        }}
+                    />
+                    {/* <Image alt="@@@" src={background} draggable="false" /> */}
+                </Item.Image>
+            </Item>
+        </a>
     );
 }
