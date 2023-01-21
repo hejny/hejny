@@ -2,6 +2,7 @@ import { Inter } from '@next/font/google';
 import Head from 'next/head';
 import { Vector } from 'xyzt';
 import { DebugGrid } from '../components/DebugGrid/DebugGrid';
+import { TiledBackground } from '../components/TiledBackground/TiledBackground';
 import { Cave } from '../pages-sections/Cave/Cave';
 import { Contact } from '../pages-sections/Contact/Contact';
 import { Footer } from '../pages-sections/Footer/Footer';
@@ -32,8 +33,10 @@ export default function Home() {
                     <Cave />
                 </header>
 
-                <div className={styles.headerToMainGradientBackground} />
-                <div className={styles.mainBackground} />
+                <div className={styles.background}>
+                    <TiledBackground />
+                </div>
+
                 <main>
                     <Welcome />
                     <Services />

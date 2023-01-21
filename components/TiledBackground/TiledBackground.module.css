@@ -1,0 +1,18 @@
+.tiledBackground /* <- TODO: Probbably name ACRY main container classes of the component as the component name - TiledBackground */ {
+    /*/
+    outline: 1px dotted yellow;
+    /**/
+
+    width: 100%;
+    height: 100%;
+
+    mask-image: linear-gradient(to bottom, transparent 0%, #fff 100px, #fff 100%);
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+    /* !!! 100px should be configurabke*/
+
+    background-image: url(../../public/patterns/Pavol_Hejny_Altamira_Cave_painting_5732f60b-c6cc-462b-8b51-45403e055bd3.png);
+    background-size: 350px 350px;
+    background-repeat: repeat;
+    /* TODO: !!! ACRY all background-image should have background-color fallback */
+}

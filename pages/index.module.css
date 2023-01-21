@@ -19,44 +19,34 @@
 }
 
 .page header {
-    z-index: 1;
     /*/
     outline: 1px dotted red;
     /**/
+
+    z-index: 1;
 
     grid-column: 1 / span 5;
     grid-row: 1 / span 2;
 }
 
-.headerToMainGradientBackground {
+.background {
+    /*/
+    outline: 1px dotted red;
+    /**/
+
     z-index: 2;
 
     grid-column: 1 / span 5;
-    grid-row: 2 / span 1;
-
-    /* !!! Gradient from one image to another */
-
-    background-image: linear-gradient(to bottom, transparent, #111530);
-}
-
-.mainBackground {
-    z-index: 2;
-
-    grid-column: 1 / span 5;
-    grid-row: 3 / span 3;
-
-    /* background-color: #111530; */
-    /* TODO: !!! ACRY all background-image should have background-color fallback */
-    background-image: url(../public/patterns/Pavol_Hejny_Altamira_Cave_painting_5732f60b-c6cc-462b-8b51-45403e055bd3.png);
-    background-size: 350px 350px;
-    background-repeat: repeat;
+    grid-row: 2 / span 4;
 }
 
 .page main {
-    z-index: 3;
     /*/
     outline: 1px dotted green;
     /**/
+
+    z-index: 3;
+
     grid-column: 2 / span 3;
     grid-row: 2 / span 3;
     text-align: center;
@@ -95,10 +85,12 @@
 }
 
 .page footer {
-    z-index: 3;
     /*/
     outline: 1px dotted green;
     /**/
+
+    z-index: 3;
+
     grid-column: 1 / span 5;
     grid-row: 5 / span 1;
 }
