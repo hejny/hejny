@@ -44,7 +44,7 @@ Browser online game @@@
 
 Online pupil books for schools and teachers
 
-[![@@@](/public/projects/whiteboard-with-tiles.png)](https://www.h-edu.cz/)
+[![@@@](/public/projects/hedu-screenshot.png)](https://www.h-edu.cz/)
 
 ## Maps for Geography
 
@@ -56,7 +56,7 @@ Online pupil books for schools and teachers
 
 @@@
 
-[![@@@](/public/projects/functions-graphing-in-collboard.png)](https://github.com/collboard/function-builder)
+[![@@@](/public/projects/collboard-function-builder-3.png)](https://github.com/collboard/function-builder)
 
 ## Virtual and augmented reality
 
@@ -72,7 +72,7 @@ DevConf, CzechVRFest, Hackuj Stát
 
 Most interesting events in Czechia in Tech comunity
 
-[![@@@](/public/projects/placeholder.png)](https://czech.events/)
+[![@@@](/public/projects/czechevents-screenshot.png)](https://czech.events/)
 
 ## Libraries
 
