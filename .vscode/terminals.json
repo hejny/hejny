@@ -32,7 +32,7 @@
         {
             "name": "🏭🖼️ Generate wallpapers library",
             "commands": [
-                "ts-node ./scripts/generate-wallpapers-library/generate-wallpapers-library.ts --commit"
+                "ts-node ./scripts/generate-wallpapers-library/generate-wallpapers-library.ts"
             ],
             "onlySingle": true,
             "focus": true
@@ -40,7 +40,7 @@
         {
             "name": "🏭🖼️ Generate projects library",
             "commands": [
-                "ts-node ./scripts/generate-projects-library/generate-projects-library.ts --commit"
+                "ts-node ./scripts/generate-projects-library/generate-projects-library.ts"
             ],
             "onlySingle": true,
             "focus": true

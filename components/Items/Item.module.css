@@ -20,6 +20,8 @@
 
     grid-column: 1 / span 1;
     grid-row: 1 / span 1;
+
+    aspect-ratio: 3 / 2;
 }
 
 .item .imageContainer img {
@@ -40,10 +42,6 @@
 
     background-color: rgba(0, 0, 0, 0.37);
     transition: all 0.2s ease-in-out;
-}
-
-.item:hover .overlay {
-    background-color: rgba(0, 0, 0, 0);
 }
 
 .item .title {
@@ -68,10 +66,24 @@
     /**/
 
     padding: 5px;
-    border-radius: 3px;
+    border-radius: 5px /* <- TODO: Unite border-radius ACRY*/;
     font-size: 30px;
     text-shadow: none;
-    background-color: rgba(56, 74, 150, 0.486);
+    /*background-color: rgba(56, 74, 150, 0.486); <- TODO: Unite glass effect ACRY */
+
+    backdrop-filter: blur(10px) /* <- TODO: Unite glass effect ACRY */;
+
+    transition: all 0.2s ease-in-out /* <- TODO: Unite transition effects ACRY */;
+    opacity: 0.9;
+}
+
+.item:hover .overlay {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.item:hover .title .inner {
+    background-color: rgba(0, 0, 0, 0);
+    opacity: 0;
 }
 
 .item .description {

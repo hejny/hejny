@@ -9,7 +9,7 @@
 
 import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
-import background from '../functions-graphing-in-collboard.png';
+import background from '../collboard-function-builder-3.png';
 
 /**
  * !!!
@@ -32,7 +32,8 @@ export function FunctionBuilderProject() {
                             backgroundSize: 'cover',
                             backgroundPosition: '50% 30%',
                             backgroundRepeat: 'no-repeat',
-                            aspectRatio: '3/2',
+                            width: '100%',
+                            height: '100%',
                         }}
                     />
                     {/* <Image alt="@@@" src={background} draggable="false" /> */}

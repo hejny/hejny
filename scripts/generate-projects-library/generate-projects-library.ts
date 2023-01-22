@@ -152,7 +152,8 @@ async function generateProjectsLibrary({ isCommited }: { isCommited: boolean }) 
                                         backgroundSize: 'cover',
                                         backgroundPosition: '50% 30%',
                                         backgroundRepeat: 'no-repeat',
-                                        aspectRatio: '3/2',
+                                        width: '100%',
+                                        height: '100%',
                                     }}
                                 />
                                 {/* <Image alt="${image.alt}" src={background} draggable="false" /> */}
