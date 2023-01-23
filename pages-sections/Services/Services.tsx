@@ -1,3 +1,4 @@
+import { forTime } from 'waitasecond';
 import { Vector } from 'xyzt';
 import { Item } from '../../components/Items/Item';
 import { Items } from '../../components/Items/Items';
@@ -48,6 +49,7 @@ export function Services() {
                 <a
                     href="#contact"
                     ref={(element) => {
+                        // !!! Also work on mobile
                         // TODO: To separate util addFoooInteractivity
 
                         if (element === null) {
@@ -61,26 +63,35 @@ export function Services() {
                                 return;
                             }
 
+                            // !!! Integrate scroll
                             drawing = new Drawing(Vector.fromObject(event, ['clientX', 'clientY']));
                         });
 
-                        element.addEventListener('mousemove', (event) => {
-                            console.log('mousemove');
+                        window.addEventListener('mousemove', (event) => {
+                            // console.log('mousemove');
                             if (!drawing) {
                                 return;
                             }
 
+                            // !!! Integrate scroll
                             drawing.addPoint(Vector.fromObject(event, ['clientX', 'clientY']));
                         });
 
-                        element.addEventListener('mouseLeave', (event) => {
+                        element.addEventListener('mouseleave', async (event) => {
+                            console.log('mouseleave');
                             // TODO: Add more events like leaving whole document / loose of focus /...
 
                             if (!drawing) {
                                 return;
                             }
 
-                            drawing.destroy();
+                            await forTime(100);
+
+                            // TODO: Make here a propper queue
+                            if (drawing && !drawing.isDestroyed) {
+                                /* not await */ drawing.destroy();
+                                drawing = null;
+                            }
                         });
                     }}
                 >

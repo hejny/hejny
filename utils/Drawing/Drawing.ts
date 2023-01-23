@@ -1,8 +1,10 @@
 import { Destroyable, IDestroyable } from 'destroyable';
+import { forTime } from 'waitasecond';
 import { BoundingBox, IVector } from 'xyzt';
 import { ISvgPath } from '../svgPath/ISvgPath';
 import { stringifySvgPath } from '../svgPath/stringifySvgPath';
 
+const FADE_OUT_DURATION_MS = 1200;
 export class Drawing extends Destroyable implements IDestroyable {
     private readonly svgElement: SVGSVGElement;
     private readonly pathElement: SVGPathElement;
@@ -73,6 +75,18 @@ export class Drawing extends Destroyable implements IDestroyable {
     redraw() {
         //console.log('redraw');
         this.pathElement.setAttribute('d', stringifySvgPath({ path: this.path, topLeft: this.boundingBox.topLeft }));
+    }
+
+    async destroy(): Promise<void> {
+        await super.destroy();
+
+        this.svgElement.style.opacity = '1';
+        this.svgElement.style.transition = `opacity ${FADE_OUT_DURATION_MS / 1000}s ease-in-out`;
+        this.svgElement.style.opacity = '0';
+
+        await forTime(FADE_OUT_DURATION_MS);
+
+        document.body.removeChild(this.svgElement);
     }
 }
 
