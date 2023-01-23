@@ -63,8 +63,7 @@ export function Services() {
                                 return;
                             }
 
-                            // !!! Integrate scroll
-                            drawing = new Drawing(Vector.fromObject(event, ['clientX', 'clientY']));
+                            drawing = new Drawing(Vector.fromObject(event, ['pageX', 'pageY']));
                         });
 
                         window.addEventListener('mousemove', (event) => {
@@ -73,8 +72,7 @@ export function Services() {
                                 return;
                             }
 
-                            // !!! Integrate scroll
-                            drawing.addPoint(Vector.fromObject(event, ['clientX', 'clientY']));
+                            drawing.addPoint(Vector.fromObject(event, ['pageX', 'pageY']));
                         });
 
                         element.addEventListener('mouseleave', async (event) => {
