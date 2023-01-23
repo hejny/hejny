@@ -64,6 +64,15 @@ export function Services() {
                             drawing = new Drawing(Vector.fromObject(event, ['clientX', 'clientY']));
                         });
 
+                        element.addEventListener('mousemove', (event) => {
+                            console.log('mousemove');
+                            if (!drawing) {
+                                return;
+                            }
+
+                            drawing.addPoint(Vector.fromObject(event, ['clientX', 'clientY']));
+                        });
+
                         element.addEventListener('mouseLeave', (event) => {
                             // TODO: Add more events like leaving whole document / loose of focus /...
 

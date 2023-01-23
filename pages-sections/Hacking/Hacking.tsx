@@ -1,6 +1,7 @@
 import { Items } from '../../components/Items/Items';
 import { Section } from '../../components/Section/Section';
 import { Shuffle } from '../../components/Shuffle/Shuffle';
+import { AllMyProjectsProject } from '../../public/projects/components/AllMyProjectsProject';
 import { FunctionBuilderProject } from '../../public/projects/components/FunctionBuilderProject';
 import { LibrariesProject } from '../../public/projects/components/LibrariesProject';
 import { MapsForGeographyProject } from '../../public/projects/components/MapsForGeographyProject';
@@ -24,6 +25,7 @@ export function Hacking() {
                     <ModulesForCollboardProject />
                     <VirtualAndAugmentedRealityProject />
                 </Shuffle>
+                <AllMyProjectsProject />
             </Items>
         </Section>
     );

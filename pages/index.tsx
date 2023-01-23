@@ -40,8 +40,9 @@ export default function Home() {
                 <main>
                     <Welcome />
                     <Services />
-                    <Hacking />
+
                     <MyProjects />
+                    <Hacking />
                     {/* TODO: !!! <Reference /> */}
                     <Contact />
                 </main>

@@ -1,8 +1,83 @@
 import { Destroyable, IDestroyable } from 'destroyable';
-import { IVector } from 'xyzt';
+import { BoundingBox, IVector } from 'xyzt';
+import { ISvgPath } from '../svgPath/ISvgPath';
+import { stringifySvgPath } from '../svgPath/stringifySvgPath';
 
 export class Drawing extends Destroyable implements IDestroyable {
-    public constructor(private readonly start: IVector) {
+    private readonly svgElement: SVGSVGElement;
+    private readonly pathElement: SVGPathElement;
+    private readonly path: ISvgPath;
+
+    public constructor(start: IVector) {
         super();
+
+        this.path = [{ command: 'M', positions: [start] }];
+
+        this.svgElement = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        this.pathElement = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+
+        this.svgElement.appendChild(this.pathElement);
+        document.body.appendChild(this.svgElement);
+
+        this.svgElement.style.pointerEvents = 'none';
+        this.svgElement.style.position = 'absolute';
+
+        // TODO: To method  setStyle
+        this.pathElement.setAttribute('stroke', '#1c3660');
+        this.pathElement.setAttribute('stroke-width', '5');
+        this.pathElement.setAttribute('fill-opacity', 'null');
+        this.pathElement.setAttribute('stroke-opacity', 'null');
+        this.pathElement.setAttribute('stroke-linecap', 'round');
+        this.pathElement.setAttribute('stroke-linejoin', 'round');
+        this.pathElement.setAttribute('fill', 'none');
+
+        // !!!this.resize();
+    }
+
+    addPoint(position: IVector) {
+        //console.log('addPoint');
+        this.path.push({ command: 'L', positions: [position] });
+
+        // !!! Increase boundaries - resize
+        this.resize();
+        this.redraw();
+    }
+
+    private get boundingBox(): BoundingBox {
+        // TODO: [0] Cache internally
+        const points = this.path.flatMap(({ positions }) => positions);
+
+        if (points.length === 0) {
+            return BoundingBox.cube(/* TODO: Better */);
+        } else if (points.length === 1) {
+            return BoundingBox.cube(/* TODO: Better */);
+        } else {
+            return BoundingBox.fromPoints(...(points as any));
+        }
+    }
+
+    resize() {
+        //console.log('resize');
+        // TODO: !!!  Listen on windowchange / scroll / zoomchange...
+
+        // TODO: [0] Just use this.boundingBox
+        const boundingBox = this.boundingBox;
+
+        this.svgElement.style.left = `${boundingBox.topLeft.x}px`;
+        this.svgElement.style.top = `${boundingBox.topLeft.y}px`;
+
+        this.svgElement.setAttribute('width', boundingBox.width.toString());
+        this.svgElement.setAttribute('height', boundingBox.height.toString());
+    }
+
+    redraw() {
+        //console.log('redraw');
+        this.pathElement.setAttribute('d', stringifySvgPath({ path: this.path, topLeft: this.boundingBox.topLeft }));
     }
 }
+
+/**
+ * TODO: !!! resize+resize where to call
+ * TODO: All private/public
+ * TODO: Should be used setAttribute OR setAttributeNS
+ */

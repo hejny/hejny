@@ -1,12 +1,12 @@
 import { Items } from '../../components/Items/Items';
 import { Section } from '../../components/Section/Section';
 import { Shuffle } from '../../components/Shuffle/Shuffle';
-import { AllMyProjectsProject } from '../../public/projects/components/AllMyProjectsProject';
 import { BirdsCzProject } from '../../public/projects/components/BirdsCzProject';
 import { CollboardProject } from '../../public/projects/components/CollboardProject';
 import { CzechEventsProject } from '../../public/projects/components/CzechEventsProject';
 import { HEduProject } from '../../public/projects/components/HEduProject';
 import { TownsProject } from '../../public/projects/components/TownsProject';
+import { YourProjectProject } from '../../public/projects/components/YourProjectProject';
 import styles from './MyProjects.module.css';
 
 export function MyProjects() {
@@ -22,7 +22,7 @@ export function MyProjects() {
                     <HEduProject />
                     <CzechEventsProject />
                 </Shuffle>
-                <AllMyProjectsProject />
+                <YourProjectProject />
             </Items>
         </Section>
     );
