@@ -1,10 +1,12 @@
 import { Destroyable, IDestroyable } from 'destroyable';
+import spaceTrim from 'spacetrim';
 import { forTime } from 'waitasecond';
-import { BoundingBox, IVector } from 'xyzt';
+import { BoundingBox, IVector, Vector } from 'xyzt';
 import { ISvgPath } from '../svgPath/ISvgPath';
 import { stringifySvgPath } from '../svgPath/stringifySvgPath';
 
-const FADE_OUT_DURATION_MS = 1200;
+// TODO: Use Collboard appereance
+const FADE_OUT_DURATION_MS = 1200 * 1000;
 export class Drawing extends Destroyable implements IDestroyable {
     private readonly svgElement: SVGSVGElement;
     private readonly pathElement: SVGPathElement;
@@ -17,7 +19,9 @@ export class Drawing extends Destroyable implements IDestroyable {
 
         this.svgElement = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
         this.pathElement = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        const defsElement = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
 
+        this.svgElement.appendChild(defsElement);
         this.svgElement.appendChild(this.pathElement);
         document.body.appendChild(this.svgElement);
 
@@ -25,13 +29,27 @@ export class Drawing extends Destroyable implements IDestroyable {
         this.svgElement.style.position = 'absolute';
 
         // TODO: To method  setStyle
-        this.pathElement.setAttribute('stroke', '#1c3660');
-        this.pathElement.setAttribute('stroke-width', '5');
-        this.pathElement.setAttribute('fill-opacity', 'null');
-        this.pathElement.setAttribute('stroke-opacity', 'null');
-        this.pathElement.setAttribute('stroke-linecap', 'round');
-        this.pathElement.setAttribute('stroke-linejoin', 'round');
-        this.pathElement.setAttribute('fill', 'none');
+        this.pathElement.style.stroke = '#ff9912';
+        this.pathElement.style.strokeWidth = '5px';
+        this.pathElement.style.fill = 'none';
+        // Redundant> this.pathElement.style.fillOpacity = '1';
+        // Redundant> this.pathElement.style.strokeOpacity = '0';
+        this.pathElement.style.strokeLinecap = 'round';
+        this.pathElement.style.strokeLinejoin = 'round';
+        this.pathElement.style.filter = `url(#glow)`;
+
+        // TODO: To method  setStyle
+        defsElement.innerHTML = spaceTrim(`
+            <filter id="glow">
+                <fegaussianblur class="blur" result="coloredBlur" stddeviation="4"></fegaussianblur>
+                <femerge>
+                    <femergenode in="coloredBlur"></femergenode>
+                    <femergenode in="coloredBlur"></femergenode>
+                    <femergenode in="coloredBlur"></femergenode>
+                    <femergenode in="SourceGraphic"></femergenode>
+                </femerge>
+            </filter>
+        `);
 
         // !!!this.resize();
     }
@@ -54,7 +72,12 @@ export class Drawing extends Destroyable implements IDestroyable {
         } else if (points.length === 1) {
             return BoundingBox.cube(/* TODO: Better */);
         } else {
-            return BoundingBox.fromPoints(...(points as any));
+            const boundingBox = BoundingBox.fromPoints(...(points as any));
+            // TODO: LIB xyzt inPlaceMethods, BoundingBox.apply,BoundingBox.addMargin
+            boundingBox.transform.scale = boundingBox.transform.scale.add(
+                Vector.square(parseInt(this.pathElement.style.strokeWidth, 10) * 3.5 /* <- Because of blur */),
+            );
+            return boundingBox;
         }
     }
 

@@ -1,0 +1,15 @@
+<svg height="300" width="824">
+	<g class="svgWrapper" transform="translate(412,150)">
+		<defs>
+			<filter id="glow">
+				<fegaussianblur class="blur" result="coloredBlur" stddeviation="4"></fegaussianblur>
+				<femerge>
+					<femergenode in="coloredBlur"></femergenode>
+          <femergenode in="coloredBlur"></femergenode>
+          <femergenode in="coloredBlur"></femergenode>
+					<femergenode in="SourceGraphic"></femergenode>
+				</femerge>
+			</filter>
+		</defs>
+     <path class="exampleGlow" d="M100,250 C100,100 400,100 400,250" style="fill-opacity: 0; stroke-width: 2; stroke: red; filter: url(#glow);" transform="translate(-250,-200)"/></path>
+	</g></svg>
