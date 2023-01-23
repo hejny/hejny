@@ -1,21 +1,21 @@
 import { Destroyable, IDestroyable } from 'destroyable';
 import spaceTrim from 'spacetrim';
-import { forTime } from 'waitasecond';
+import { forAnimationFrame, forTime } from 'waitasecond';
 import { BoundingBox, IVector, Vector } from 'xyzt';
 import { ISvgPath } from '../svgPath/ISvgPath';
 import { stringifySvgPath } from '../svgPath/stringifySvgPath';
 
 // TODO: Use Collboard appereance
-const FADE_OUT_DURATION_MS = 1200 * 1000;
+const FADE_OUT_DURATION_MS = 1200;
 export class Drawing extends Destroyable implements IDestroyable {
     private readonly svgElement: SVGSVGElement;
     private readonly pathElement: SVGPathElement;
-    private readonly path: ISvgPath;
+    private path: ISvgPath = [];
 
-    public constructor(start: IVector) {
+    public constructor() {
         super();
 
-        this.path = [{ command: 'M', positions: [start] }];
+        this.path = [];
 
         this.svgElement = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
         this.pathElement = document.createElementNS('http://www.w3.org/2000/svg', 'path');
@@ -51,16 +51,41 @@ export class Drawing extends Destroyable implements IDestroyable {
             </filter>
         `);
 
-        // !!!this.resize();
+        /* not await */ this.loop();
     }
 
-    addPoint(position: IVector) {
-        //console.log('addPoint');
-        this.path.push({ command: 'L', positions: [position] });
+    private isDrawingUpdated = false;
 
-        // !!! Increase boundaries - resize
-        this.resize();
-        this.redraw();
+    public clean(): this {
+        this.path = [];
+        this.isDrawingUpdated = false;
+
+        return this;
+    }
+
+    public addPoint(position: IVector): this {
+        //console.log('addPoint');
+        this.path.push({ command: this.path.length === 0 ? 'M' : 'L', positions: [position] });
+        this.isDrawingUpdated = false;
+        return this;
+    }
+
+    private async loop() {
+        while (true) {
+            await forAnimationFrame();
+
+            if (this.isDestroyed) {
+                return;
+            }
+
+            if (this.isDrawingUpdated) {
+                continue;
+            }
+
+            this.resize(/* TODO: Call resize only when needed */);
+            this.redraw();
+            this.isDrawingUpdated = true;
+        }
     }
 
     private get boundingBox(): BoundingBox {
@@ -81,7 +106,7 @@ export class Drawing extends Destroyable implements IDestroyable {
         }
     }
 
-    resize() {
+    private resize() {
         //console.log('resize');
         // TODO: !!!  Listen on windowchange / scroll / zoomchange...
 
@@ -95,14 +120,12 @@ export class Drawing extends Destroyable implements IDestroyable {
         this.svgElement.setAttribute('height', boundingBox.height.toString());
     }
 
-    redraw() {
-        //console.log('redraw');
+    private redraw() {
+        console.log('redraw');
         this.pathElement.setAttribute('d', stringifySvgPath({ path: this.path, topLeft: this.boundingBox.topLeft }));
     }
 
-    async destroy(): Promise<void> {
-        await super.destroy();
-
+    public async destroy(): Promise<void> {
         this.svgElement.style.opacity = '1';
         this.svgElement.style.transition = `opacity ${FADE_OUT_DURATION_MS / 1000}s ease-in-out`;
         this.svgElement.style.opacity = '0';
@@ -110,6 +133,8 @@ export class Drawing extends Destroyable implements IDestroyable {
         await forTime(FADE_OUT_DURATION_MS);
 
         document.body.removeChild(this.svgElement);
+
+        await super.destroy();
     }
 }
 
