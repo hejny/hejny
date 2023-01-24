@@ -1,12 +1,17 @@
-<svg width="160" height="98" xmlns="http://www.w3.org/2000/svg"><defs><filter id="glow">
-    <feGaussianBlur class="blur" result="coloredBlur" stdDeviation="4"></feGaussianBlur>
-    <feMerge>
+<svg width="160" height="98" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur class="blur" result="coloredBlur" stdDeviation="4"></feGaussianBlur>
+      <feMerge>
         <feMergeNode in="coloredBlur"></feMergeNode>
         <feMergeNode in="coloredBlur"></feMergeNode>
         <feMergeNode in="coloredBlur"></feMergeNode>
         <feMergeNode in="SourceGraphic"></feMergeNode>
-    </feMerge>
-</filter></defs><path d="
+      </feMerge>
+    </filter>
+  </defs>
+  <path
+    d="
 M 3.5,2.5
 L 3.5,2.5
   2.5,9.5
@@ -51,4 +56,6 @@ L 3.5,2.5
   143.5,64.5
   152.5,48.5
   157.5,40.5
-" style="stroke: red; stroke-width: 5px; fill: none; stroke-linecap: round; stroke-linejoin: round; filter: url(#glow);"></path></svg>
+"
+    style="stroke: red; stroke-width: 5px; fill: none; stroke-linecap: round; stroke-linejoin: round; filter: url(#glow);"></path>
+</svg>

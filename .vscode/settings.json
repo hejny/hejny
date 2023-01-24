@@ -6,5 +6,8 @@
     "html.autoClosingTags": false,
     "editor.codeActionsOnSave": {
         "source.organizeImports": true
+    },
+    "[xml]": {
+        "editor.defaultFormatter": "redhat.vscode-xml"
     }
 }

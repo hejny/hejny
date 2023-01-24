@@ -1,13 +1,17 @@
-<svg width="23.497405450819826" height="23.49849058181678"><defs><filter id="glow">
-    <feGaussianBlur class="blur" result="coloredBlur" stdDeviation="4"></feGaussianBlur>
-    <feMerge>
+<svg width="23.497405450819826" height="23.49849058181678">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur class="blur" result="coloredBlur" stdDeviation="4"></feGaussianBlur>
+      <feMerge>
         <feMergeNode in="coloredBlur"></feMergeNode>
         <feMergeNode in="coloredBlur"></feMergeNode>
         <feMergeNode in="coloredBlur"></feMergeNode>
         <feMergeNode in="SourceGraphic"></feMergeNode>
         <!--!!! Border should not be cut -->
-    </feMerge>
-</filter></defs><path style="stroke: rgb(255, 153, 18); stroke-width: 5px; fill: none; stroke-linecap: round; stroke-linejoin: round; filter: url(&quot;#glow&quot;);" d="
+      </feMerge>
+    </filter>
+  </defs>
+  <path style="stroke: rgb(255, 153, 18); stroke-width: 5px; fill: none; stroke-linecap: round; stroke-linejoin: round; filter: url(&quot;#glow&quot;);" d="
 M 8.8,11.7
 L 8.8,11.4
   8.8,11.2
@@ -71,4 +75,5 @@ L 8.8,11.4
   8.9,12.6
   8.8,12.3
   8.8,12.0
-"></path></svg>
+"></path>
+</svg>

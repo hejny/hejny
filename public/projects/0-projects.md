@@ -5,7 +5,7 @@
 
 ## Birds.cz
 
-<!-- [🛰] `Maps` -->
+<!-- [🛰] Tags: `Maps` -->
 
 A variety of projects focusing on citizenship science for the Czech Society of
 Ornithology
@@ -15,14 +15,16 @@ TODO: More about
 Feeders
 -->
 
-[![@@@](/public/projects/Pavol_Hejn_birds_3eee9b48-0331-462d-b11d-367626cf028c.png)](#)
+[![@@@](/public/projects/paths/bird.svg)](#)
+
+<!--[![@@@](/public/projects/Pavol_Hejn_birds_3eee9b48-0331-462d-b11d-367626cf028c.png)](#)-->
 
 ## Collboard
 
 Virtual online collaborative whiteboard started during the the initial week of the
 pandemic-induced lockdown.
 
-<!-- [🛰] `Real time app` -->
+<!-- [🛰] Tags: `Real time app` -->
 
 [![@@@](/public/projects/whiteboard.png)](#)
 
@@ -30,7 +32,7 @@ pandemic-induced lockdown.
 
 Browser online game @@@
 
-<!-- [🛰] `WebGL` -->
+<!-- [🛰] Tags: `WebGL` -->
 
 [![@@@](/public/projects/towns.jpg)](https://towns.cz/)
 
