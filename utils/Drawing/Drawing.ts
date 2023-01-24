@@ -37,6 +37,7 @@ export class Drawing extends Destroyable implements IDestroyable {
         this.pathElement.style.strokeLinecap = 'round';
         this.pathElement.style.strokeLinejoin = 'round';
         this.pathElement.style.filter = `url(#glow)`;
+        this.pathElement.setAttribute('vector-effect', 'non-scaling-stroke');
 
         // TODO: To method  setStyle
         defsElement.innerHTML = spaceTrim(`
