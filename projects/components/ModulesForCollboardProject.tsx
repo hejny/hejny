@@ -9,6 +9,8 @@
 
 import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
+import { effectToRef } from '../../../utils/Drawing/effectToRef';
+import { modulesForCollboardEffect } from '../../../utils/Drawing/projectsEffectsLibrary';
 import background from '../geometry-on-board.png';
 
 /**
@@ -27,13 +29,9 @@ export function ModulesForCollboardProject() {
                 </Item.Description>
                 <Item.Image>
                     <div
+                        ref={effectToRef(modulesForCollboardEffect)}
                         style={{
                             backgroundImage: `url(${background.src})`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: '50% 30%',
-                            backgroundRepeat: 'no-repeat',
-                            width: '100%',
-                            height: '100%',
                         }}
                     />
                     {/* <Image alt="@@@" src={background} draggable="false" /> */}

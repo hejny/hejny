@@ -9,6 +9,8 @@
 
 import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
+import { effectToRef } from '../../../utils/Drawing/effectToRef';
+import { virtualAndAugmentedRealityEffect } from '../../../utils/Drawing/projectsEffectsLibrary';
 import background from '../drawing-in-vr.png';
 
 /**
@@ -27,13 +29,9 @@ export function VirtualAndAugmentedRealityProject() {
                 </Item.Description>
                 <Item.Image>
                     <div
+                        ref={effectToRef(virtualAndAugmentedRealityEffect)}
                         style={{
                             backgroundImage: `url(${background.src})`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: '50% 30%',
-                            backgroundRepeat: 'no-repeat',
-                            width: '100%',
-                            height: '100%',
                         }}
                     />
                     {/* <Image alt="@@@" src={background} draggable="false" /> */}
