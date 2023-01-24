@@ -43,3 +43,7 @@ type ISvgPathSegmentCommand =
     | 'a'
     | 'Z'
     | 'z';
+
+/**
+ * TODO: !!! Bring whole ISvgPath and test with jest
+ */

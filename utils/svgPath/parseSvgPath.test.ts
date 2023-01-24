@@ -3,6 +3,8 @@ import { Vector } from 'xyzt';
 import { parseSvgPath } from './parseSvgPath';
 
 describe('parsing of SVG path', () => {
+    // TODO: !!! Implement more and more sofisticated cases
+
     it(`parse simple path with explicit command before each coordinates`, () => {
         expect(
             parseSvgPath(`

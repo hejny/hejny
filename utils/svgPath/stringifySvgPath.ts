@@ -23,6 +23,7 @@ export function stringifySvgPath({ path, topLeft }: IStringifySvgPathOptions): s
 }
 
 /**
+ * TODO: !!! Test
  * TODO: Use toFixed
  * TODO: ${firstPoint.x} ${firstPoint.y}`  <- via xyzt method
  */
