@@ -7,10 +7,9 @@
  *    Then the file will not be re-generated automatically
  */
 
-import { forTime } from 'waitasecond';
-import { Vector } from 'xyzt';
 import { Item } from '../../../components/Items/Item';
-import { Drawing } from '../../../utils/Drawing/Drawing';
+import { drawingEffect } from '../../../utils/Drawing/drawingEffect';
+import { effectToRef } from '../../../utils/Drawing/effectToRef';
 import background from '../whiteboard.png';
 
 /**
@@ -21,53 +20,7 @@ import background from '../whiteboard.png';
  */
 export function CollboardProject() {
     return (
-        <a
-            href="#"
-            target="_blank"
-            rel="noreferrer"
-            ref={(element) => {
-                // !!! Also work on mobile
-                // TODO: To separate util addFoooInteractivity
-
-                if (element === null) {
-                    return;
-                }
-
-                let drawing: Drawing | null = null;
-
-                element.addEventListener('pointerenter', (event) => {
-                    if (drawing) {
-                        return;
-                    }
-
-                    drawing = new Drawing().addPoint(Vector.fromObject(event, ['pageX', 'pageY']));
-                });
-
-                window.addEventListener('pointermove', (event) => {
-                    if (!drawing) {
-                        return;
-                    }
-
-                    drawing.addPoint(Vector.fromObject(event, ['pageX', 'pageY']));
-                });
-
-                element.addEventListener('pointerleave', async (event) => {
-                    // TODO: Add more events like leaving whole document / loose of focus /...
-
-                    if (!drawing) {
-                        return;
-                    }
-
-                    await forTime(100);
-
-                    // TODO: Make here a propper queue
-                    if (drawing && !drawing.isDestroyed) {
-                        /* not await */ drawing.destroy();
-                        drawing = null;
-                    }
-                });
-            }}
-        >
+        <a href="#" target="_blank" rel="noreferrer">
             <Item>
                 <Item.Title>Collboard</Item.Title>
                 <Item.Description>
@@ -78,6 +31,7 @@ export function CollboardProject() {
                 </Item.Description>
                 <Item.Image>
                     <div
+                        ref={effectToRef(drawingEffect)}
                         style={{
                             backgroundImage: `url(${background.src})`,
                             backgroundSize: 'cover',

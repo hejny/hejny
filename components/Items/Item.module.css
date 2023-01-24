@@ -58,6 +58,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    pointer-events: none;
 }
 
 .item .title .inner {
@@ -79,6 +81,7 @@
 
 .item:hover .overlay {
     background-color: rgba(0, 0, 0, 0);
+    pointer-events: none;
 }
 
 .item:hover .title .inner {

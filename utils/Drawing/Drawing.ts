@@ -121,7 +121,7 @@ export class Drawing extends Destroyable implements IDestroyable {
     }
 
     private redraw() {
-        console.log('redraw');
+        // console.log('redraw');
         this.pathElement.setAttribute('d', stringifySvgPath({ path: this.path, topLeft: this.boundingBox.topLeft }));
     }
 
