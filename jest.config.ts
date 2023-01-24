@@ -6,4 +6,5 @@ module.exports = {
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
     coverageDirectory: './coverage/',
     collectCoverage: true,
+    testEnvironment: 'jsdom',
 };
