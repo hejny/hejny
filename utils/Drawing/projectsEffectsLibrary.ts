@@ -1,12 +1,27 @@
+import { createGraphEffect } from './createGraphEffect';
 import { drawingEffect } from './drawingEffect';
-import { graphEffect } from './graphEffect';
 import { noEffect } from './noEffect';
 
 export const allMyProjectsEffect = noEffect;
 export const birdsCzEffect = noEffect;
 export const collboardEffect = drawingEffect;
 export const czechEventsEffect = noEffect;
-export const functionBuilderEffect = graphEffect;
+export const functionBuilderEffect = createGraphEffect({
+    range: {
+        min: -100,
+        max: 100,
+        step: 2,
+    },
+    plot({ t, seed }) {
+        const x = t;
+        let y = Math.sin(x / 10) * 30 + Math.cos(x / 50 + seed.x / 50) * 30 + Math.sin(x / 10 + seed.y / 50) * 5;
+
+        y = Math.min(y, 100);
+        y = Math.max(y, -100);
+
+        return { x, y };
+    },
+});
 export const hEduEffect = noEffect;
 export const librariesEffect = noEffect;
 export const mapsForGeographyEffect = noEffect;
