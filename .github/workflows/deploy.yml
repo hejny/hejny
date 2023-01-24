@@ -22,7 +22,7 @@ jobs:
               run: npm run lint
 
             - name: Test
-              run: npm run test
+              run: npm run test-unit
               env:
                   NODE_OPTIONS: --openssl-legacy-provider
 
