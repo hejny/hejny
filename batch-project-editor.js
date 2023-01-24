@@ -1,7 +1,7 @@
 module.exports = {
     ignoreWorkflows: [
-        'aiGeneratedWallpaperPrepare',
-        'aiGeneratedWallpaperLand',
+        //'aiGeneratedWallpaperPrepare',
+        //'aiGeneratedWallpaperLand',
         'aiGeneratedWallpaperTrigger',
         'aiGeneratedWallpaperHarvest',
         'aiGeneratedWallpaperPick',
