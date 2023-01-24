@@ -13,3 +13,7 @@ body {
     color: white;
     font-family: 'Oswald', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+* {
+    image-rendering: smooth;
+}

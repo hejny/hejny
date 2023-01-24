@@ -10,7 +10,7 @@ export function drawingEffect<TElement extends HTMLElement>(element: TElement): 
             return;
         }
 
-        drawing = new Drawing().addPoint(Vector.fromObject(event, ['pageX', 'pageY']));
+        drawing = new Drawing(element).addPoint(Vector.fromObject(event, ['pageX', 'pageY']));
     });
 
     window.addEventListener('pointermove', (event) => {

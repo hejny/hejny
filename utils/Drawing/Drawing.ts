@@ -12,7 +12,7 @@ export class Drawing extends Destroyable implements IDestroyable {
     private readonly pathElement: SVGPathElement;
     private path: ISvgPath = [];
 
-    public constructor() {
+    public constructor(private readonly place: HTMLElement) {
         super();
 
         this.path = [];
@@ -23,7 +23,7 @@ export class Drawing extends Destroyable implements IDestroyable {
 
         this.svgElement.appendChild(defsElement);
         this.svgElement.appendChild(this.pathElement);
-        document.body.appendChild(this.svgElement);
+        place.appendChild(this.svgElement);
 
         this.svgElement.style.pointerEvents = 'none';
         this.svgElement.style.position = 'absolute';
@@ -132,7 +132,7 @@ export class Drawing extends Destroyable implements IDestroyable {
 
         await forTime(FADE_OUT_DURATION_MS);
 
-        document.body.removeChild(this.svgElement);
+        this.place.removeChild(this.svgElement);
 
         await super.destroy();
     }

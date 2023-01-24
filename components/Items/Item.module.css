@@ -30,7 +30,7 @@
 }
 
 .item .imageContainer div[style*='background-image'] {
-    background-size: 100%;
+    background-size: 100% 100%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     width: 100%;
@@ -39,7 +39,7 @@
 }
 
 .item:hover .imageContainer div[style*='background-image'] {
-    background-size: 200%;
+    background-size: 200% 200%;
 }
 
 .item .overlay {

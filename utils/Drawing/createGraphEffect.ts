@@ -21,7 +21,7 @@ export function createGraphEffect<TElement extends HTMLElement>(formula: {
                 const origin = Vector.fromObject(window, ['pageXOffset', 'pageYOffset'])
                     .add(Vector.fromObject(element.getBoundingClientRect(), ['x', 'y']))
                     .add(Vector.fromObject(element.getBoundingClientRect(), ['width', 'height']).half());
-                let drawing = new Drawing();
+                let drawing = new Drawing(element);
 
                 /*
             drawing
