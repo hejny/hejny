@@ -25,7 +25,7 @@ export function FunctionBuilderProject() {
             <Item>
                 <Item.Title>Function builder</Item.Title>
                 <Item.Description>
-                    <p>@@@</p>
+                    <p>Modul for Collboard to teach the math in visual way.</p>
                 </Item.Description>
                 <Item.Image>
                     <div

@@ -25,7 +25,11 @@ export function CzechEventsProject() {
             <Item>
                 <Item.Title>Czech.events</Item.Title>
                 <Item.Description>
-                    <p>Most interesting events in Czechia in Tech comunity</p>
+                    <p>Newsletter of Most interesting events in Czechia in Tech comunity</p>
+                    <p>
+                        A have big interest in Czech Tech&amp;startul community in general. I have organized,spoken on,
+                        mentored a lot of events and hackathons
+                    </p>
                 </Item.Description>
                 <Item.Image>
                     <div

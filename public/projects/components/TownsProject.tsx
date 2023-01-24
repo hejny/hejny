@@ -25,7 +25,7 @@ export function TownsProject() {
             <Item>
                 <Item.Title>Towns</Item.Title>
                 <Item.Description>
-                    <p>Browser online game @@@</p>
+                    <p>Browser online game. You can build your own City and your world.</p>
                 </Item.Description>
                 <Item.Image>
                     <div

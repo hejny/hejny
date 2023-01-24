@@ -1,6 +1,6 @@
 # Hacking
 
-<!-- TODO: !!! Maybe rename to projects.md -->
+<!-- TODO: !!! Enhance texts https://www.deepl.com/write -->
 <!-- Note: In this file there are all URLs which will be converted into the hacking cases components -->
 
 ## Birds.cz
@@ -45,8 +45,7 @@ A successful design to split up big application into hundreds multiple indopende
 
 ## H-edu
 
-Online pupil books for schools and teachers with interactive playground and misc tools for teachers 
-
+Online pupil books for schools and teachers with interactive playground and misc tools for teachers
 
 [![@@@](/public/projects/hedu-screenshot.png)](https://www.h-edu.cz/)
 
@@ -92,7 +91,6 @@ I have organized,spoken on, mentored a lot of events and hackathons
 I love Open-source.
 Every time I work on some project I try to extract reusable parts into independent library
 
-
 [![@@@](/public/projects/xyzt.png)](https://github.com/hejny?tab=repositories)
 
 <!--
@@ -108,7 +106,7 @@ I am working on several OpenSource libraries like
 
 ## All my projects
 
-I am program from my 13 and now I am 29 so I have worked on looooooooot of projects. 
+I am program from my 13 and now I am 29 so I have worked on looooooooot of projects.
 
 [![@@@](/public/projects/all-projects.png)](https://pavolhejny.com/documents/projects.html)
 
@@ -117,7 +115,6 @@ I am program from my 13 and now I am 29 so I have worked on looooooooot of proje
 I will be happy kick off your project
 
 What I offer?
-
 
 [![@@@](/public/projects/placeholder.png)](https://pavolhejny.com/documents/projects.html)
 

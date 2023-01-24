@@ -25,7 +25,10 @@ export function LibrariesProject() {
             <Item>
                 <Item.Title>Libraries</Item.Title>
                 <Item.Description>
-                    <p>@@@</p>
+                    <p>
+                        I love Open-source. Every time I work on some project I try to extract reusable parts into
+                        independent library
+                    </p>
                 </Item.Description>
                 <Item.Image>
                     <div
