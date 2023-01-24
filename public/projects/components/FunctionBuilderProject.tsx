@@ -7,9 +7,10 @@
  *    Then the file will not be re-generated automatically
  */
 
+import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
 import { effectToRef } from '../../../utils/Drawing/effectToRef';
-import { graphEffect } from '../../../utils/Drawing/graphEffect';
+import { functionBuilderEffect } from '../../../utils/Drawing/projectsEffectsLibrary';
 import background from '../collboard-function-builder-3.png';
 
 /**
@@ -28,7 +29,7 @@ export function FunctionBuilderProject() {
                 </Item.Description>
                 <Item.Image>
                     <div
-                        ref={effectToRef(graphEffect)}
+                        ref={effectToRef(functionBuilderEffect)}
                         style={{
                             backgroundImage: `url(${background.src})`,
                             backgroundSize: 'cover',

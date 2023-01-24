@@ -9,6 +9,8 @@
 
 import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
+import { effectToRef } from '../../../utils/Drawing/effectToRef';
+import { hEduEffect } from '../../../utils/Drawing/projectsEffectsLibrary';
 import background from '../hedu-screenshot.png';
 
 /**
@@ -27,6 +29,7 @@ export function HEduProject() {
                 </Item.Description>
                 <Item.Image>
                     <div
+                        ref={effectToRef(hEduEffect)}
                         style={{
                             backgroundImage: `url(${background.src})`,
                             backgroundSize: 'cover',

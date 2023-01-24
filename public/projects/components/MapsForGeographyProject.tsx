@@ -9,6 +9,8 @@
 
 import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
+import { effectToRef } from '../../../utils/Drawing/effectToRef';
+import { mapsForGeographyEffect } from '../../../utils/Drawing/projectsEffectsLibrary';
 import background from '../geography-in-collboard.png';
 
 /**
@@ -27,6 +29,7 @@ export function MapsForGeographyProject() {
                 </Item.Description>
                 <Item.Image>
                     <div
+                        ref={effectToRef(mapsForGeographyEffect)}
                         style={{
                             backgroundImage: `url(${background.src})`,
                             backgroundSize: 'cover',

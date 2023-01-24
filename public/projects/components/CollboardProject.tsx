@@ -7,9 +7,10 @@
  *    Then the file will not be re-generated automatically
  */
 
+import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
-import { drawingEffect } from '../../../utils/Drawing/drawingEffect';
 import { effectToRef } from '../../../utils/Drawing/effectToRef';
+import { collboardEffect } from '../../../utils/Drawing/projectsEffectsLibrary';
 import background from '../whiteboard.png';
 
 /**
@@ -31,7 +32,7 @@ export function CollboardProject() {
                 </Item.Description>
                 <Item.Image>
                     <div
-                        ref={effectToRef(drawingEffect)}
+                        ref={effectToRef(collboardEffect)}
                         style={{
                             backgroundImage: `url(${background.src})`,
                             backgroundSize: 'cover',

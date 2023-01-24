@@ -9,6 +9,8 @@
 
 import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
+import { effectToRef } from '../../../utils/Drawing/effectToRef';
+import { allMyProjectsEffect } from '../../../utils/Drawing/projectsEffectsLibrary';
 import background from '../all-projects.png';
 
 /**
@@ -27,6 +29,7 @@ export function AllMyProjectsProject() {
                 </Item.Description>
                 <Item.Image>
                     <div
+                        ref={effectToRef(allMyProjectsEffect)}
                         style={{
                             backgroundImage: `url(${background.src})`,
                             backgroundSize: 'cover',

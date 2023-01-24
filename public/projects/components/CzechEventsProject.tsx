@@ -9,6 +9,8 @@
 
 import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
+import { effectToRef } from '../../../utils/Drawing/effectToRef';
+import { czechEventsEffect } from '../../../utils/Drawing/projectsEffectsLibrary';
 import background from '../czechevents-screenshot.png';
 
 /**
@@ -27,6 +29,7 @@ export function CzechEventsProject() {
                 </Item.Description>
                 <Item.Image>
                     <div
+                        ref={effectToRef(czechEventsEffect)}
                         style={{
                             backgroundImage: `url(${background.src})`,
                             backgroundSize: 'cover',

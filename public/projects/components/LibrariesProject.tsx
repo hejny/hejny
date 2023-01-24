@@ -9,6 +9,8 @@
 
 import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
+import { effectToRef } from '../../../utils/Drawing/effectToRef';
+import { librariesEffect } from '../../../utils/Drawing/projectsEffectsLibrary';
 import background from '../xyzt.png';
 
 /**
@@ -27,6 +29,7 @@ export function LibrariesProject() {
                 </Item.Description>
                 <Item.Image>
                     <div
+                        ref={effectToRef(librariesEffect)}
                         style={{
                             backgroundImage: `url(${background.src})`,
                             backgroundSize: 'cover',

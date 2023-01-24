@@ -9,6 +9,8 @@
 
 import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
+import { effectToRef } from '../../../utils/Drawing/effectToRef';
+import { townsEffect } from '../../../utils/Drawing/projectsEffectsLibrary';
 import background from '../towns.jpg';
 
 /**
@@ -27,6 +29,7 @@ export function TownsProject() {
                 </Item.Description>
                 <Item.Image>
                     <div
+                        ref={effectToRef(townsEffect)}
                         style={{
                             backgroundImage: `url(${background.src})`,
                             backgroundSize: 'cover',
