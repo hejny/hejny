@@ -1,3 +1,5 @@
+import { parseSvgPath } from './parseSvgPath';
+
 describe('parsing of SVG path', () => {
     it(`parse simple path`, () => {
         expect(
