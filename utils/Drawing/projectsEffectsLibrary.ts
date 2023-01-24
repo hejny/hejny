@@ -2,8 +2,27 @@ import { createGraphEffect } from './createGraphEffect';
 import { drawingEffect } from './drawingEffect';
 import { noEffect } from './noEffect';
 
+const circleEffect = createGraphEffect({
+    range: {
+        min: -Math.PI,
+        max: Math.PI,
+        step: 0.1,
+        /*
+        TODO:
+        min: -Math.PI,
+        max: Math.PI,
+        step: Math.PI / 100,
+        */
+    },
+    plot({ t, seed }) {
+        const x = Math.cos(t) * 30; //* Math.cos(seed.x / 10);
+        const y = Math.sin(t) * 30; //* Math.cos(seed.x / 10);
+        return { x, y };
+    },
+});
+
 export const allMyProjectsEffect = noEffect;
-export const birdsCzEffect = noEffect;
+export const birdsCzEffect = circleEffect;
 export const collboardEffect = drawingEffect;
 export const czechEventsEffect = noEffect;
 export const functionBuilderEffect = createGraphEffect({

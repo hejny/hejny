@@ -35,11 +35,6 @@ export function CollboardProject() {
                         ref={effectToRef(collboardEffect)}
                         style={{
                             backgroundImage: `url(${background.src})`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: '50% 30%',
-                            backgroundRepeat: 'no-repeat',
-                            width: '100%',
-                            height: '100%',
                         }}
                     />
                     {/* <Image alt="@@@" src={background} draggable="false" /> */}

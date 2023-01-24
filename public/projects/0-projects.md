@@ -56,7 +56,7 @@ Online pupil books for schools and teachers
 
 @@@
 
-[![@@@](/public/projects/collboard-function-builder-3.png)](https://github.com/collboard/function-builder)
+[![@@@](/public/projects/collboard-function-builder-blank-dark.png)](https://github.com/collboard/function-builder)
 
 ## Virtual and augmented reality
 

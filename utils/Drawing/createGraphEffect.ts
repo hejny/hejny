@@ -1,4 +1,5 @@
 import { Destroyable, Registration } from 'destroyable';
+import { forTime } from 'waitasecond';
 import { IVector, Vector } from 'xyzt';
 import { Drawing } from './Drawing';
 
@@ -8,13 +9,13 @@ export function createGraphEffect<TElement extends HTMLElement>(formula: {
 }): (element: TElement) => Destroyable {
     return (element: TElement) => {
         return Registration.create(
-            (
+            async (
                 {
                     /* !!! LIB destroyable @@@addSubdestroyable */
                 },
             ) => {
-                // !!! What about waiting
-                // await forTime(1000);
+                await forTime(1000);
+
                 // !!! await forDocumentReady();
                 //  console.log(element.getBoundingClientRect());
                 const origin = Vector.fromObject(window, ['pageXOffset', 'pageYOffset'])
@@ -33,7 +34,28 @@ export function createGraphEffect<TElement extends HTMLElement>(formula: {
                     drawing.clean();
 
                     for (let t = formula.range.min; t <= formula.range.max; t += formula.range.step) {
-                        drawing.addPoint(origin.add(formula.plot({ t, seed })));
+                        const point = formula.plot({ t, seed });
+
+                        console.log(point);
+
+                        if (point.x === Infinity) {
+                            point.x = 1000;
+                        }
+
+                        if (point.x === -Infinity) {
+                            point.x = -1000;
+                        }
+                        if (point.y === Infinity) {
+                            point.y = 1000;
+                        }
+
+                        if (point.y === -Infinity) {
+                            point.y = -1000;
+                        }
+
+                        // TODO: How to plot asymptotes
+
+                        drawing.addPoint(origin.add(point));
                     }
                 }
 
@@ -51,3 +73,8 @@ export function createGraphEffect<TElement extends HTMLElement>(formula: {
         );
     };
 }
+
+/**
+ * TODO: createPolarGraphEffect
+ * TODO: createYGraphEffect
+ */

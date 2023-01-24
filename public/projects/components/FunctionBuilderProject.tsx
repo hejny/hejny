@@ -11,7 +11,7 @@ import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
 import { effectToRef } from '../../../utils/Drawing/effectToRef';
 import { functionBuilderEffect } from '../../../utils/Drawing/projectsEffectsLibrary';
-import background from '../collboard-function-builder-3.png';
+import background from '../collboard-function-builder-blank-dark.png';
 
 /**
  * !!!
@@ -32,11 +32,6 @@ export function FunctionBuilderProject() {
                         ref={effectToRef(functionBuilderEffect)}
                         style={{
                             backgroundImage: `url(${background.src})`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: '50% 30%',
-                            backgroundRepeat: 'no-repeat',
-                            width: '100%',
-                            height: '100%',
                         }}
                     />
                     {/* <Image alt="@@@" src={background} draggable="false" /> */}
