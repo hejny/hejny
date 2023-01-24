@@ -14,7 +14,11 @@
         "build": "rm -rf ./out && next build && next export && echo prototyping.hejny.org > ./out/CNAME && echo > ./out/.nojekyll",
         "start": "next start",
         "lint": "next lint",
-        "test": "echo \"No tests yet\"",
+        "test": "npm run test-unit && npm run test-integration",
+        "test-unit": "jest",
+        "test-integration": "./node_modules/.bin/cypress run",
+        "test-integration-interactive": "./node_modules/.bin/cypress open",
+        "test-with-lighthouse": " lighthouse https://collboard.com/ --output html --output-path ./other/lighthouse-reports/report.html --view",
         "prettier": "prettier --config .prettierrc --ignore-unknown --write \"{pages,public,styles}/**/*\"",
         "prettier-commit": "git diff --exit-code && npm run prettier && git add . && git commit --allow-empty -m \"🧹 Prettier\"",
         "preversion": "git pull && npm run prettier-commit&& npm run lint && npm test",
@@ -33,6 +37,7 @@
     },
     "devDependencies": {
         "@next/font": "13.1.1",
+        "@types/jest": "^29.2.6",
         "@types/node": "18.11.18",
         "@types/prettier": "2.7.2",
         "@types/react": "18.0.26",
@@ -40,10 +45,12 @@
         "@types/showdown": "2.0.0",
         "chalk": "4.1.2",
         "commander": "9.4.1",
+        "cypress": "^12.3.0",
         "eslint": "8.31.0",
         "eslint-config-next": "13.1.1",
         "gh-pages": "4.0.0",
         "glob-promise": "6.0.1",
+        "jest": "^29.4.0",
         "localtunnel": "2.0.2",
         "markdown-to-txt": "2.0.1",
         "n12": "1.3.0",
@@ -51,6 +58,7 @@
         "prettier": "2.8.1",
         "showdown": "2.1.0",
         "spacetrim": "0.9.0",
+        "ts-jest": "^29.0.5",
         "ts-node": "10.9.1"
     }
 }

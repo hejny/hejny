@@ -13,12 +13,6 @@
             "focus": true
         },
         {
-            "name": "🧪 Test",
-            "command": "npm run test",
-            "onlySingle": true,
-            "focus": true
-        },
-        {
             "name": "🧪 Lint",
             "command": "npm run lint",
             "onlySingle": true,
@@ -30,18 +24,32 @@
             "onlySingle": true
         },
         {
+            "name": "🧪 Unit tests",
+            "command": "npm run test-unit",
+            "onlySingle": true,
+            "focus": true
+        },
+        {
+            "name": "🧪 Integration tests",
+            "command": "npm run test-integration",
+            "onlySingle": true,
+            "focus": true
+        },
+        {
+            "name": "🧪🔥 Integration tests (interactive)",
+            "command": "npm run test-integration-interactive",
+            "onlySingle": true,
+            "focus": true
+        },
+        {
             "name": "🏭🖼️ Generate wallpapers library",
-            "commands": [
-                "ts-node ./scripts/generate-wallpapers-library/generate-wallpapers-library.ts"
-            ],
+            "commands": ["ts-node ./scripts/generate-wallpapers-library/generate-wallpapers-library.ts"],
             "onlySingle": true,
             "focus": true
         },
         {
             "name": "🏭🖼️ Generate projects library",
-            "commands": [
-                "ts-node ./scripts/generate-projects-library/generate-projects-library.ts"
-            ],
+            "commands": ["ts-node ./scripts/generate-projects-library/generate-projects-library.ts"],
             "onlySingle": true,
             "focus": true
         },
