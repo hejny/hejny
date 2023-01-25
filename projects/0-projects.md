@@ -3,7 +3,7 @@
 <!-- TODO: !!! Enhance texts https://www.deepl.com/write -->
 <!-- Note: In this file there are all URLs which will be converted into the hacking cases components -->
 
-## Birds.cz
+## Birds
 
 <!-- [🛰] Tags: `Maps` -->
 
@@ -36,7 +36,7 @@ Browser online game. You can build your own City and your world.
 
 [![@@@](/public/projects/towns.jpg)](https://towns.cz/)
 
-## Modules for Collboard
+## Modules
 
 Software development kit to extend The Collboard, The virtual whiteboard.
 A successful design to split up big application into hundreds multiple indopendent codebases.
@@ -49,13 +49,13 @@ Online pupil books for schools and teachers with interactive playground and misc
 
 [![@@@](/public/projects/hedu-screenshot.png)](https://www.h-edu.cz/)
 
-## Maps for Geography
+## Maps
 
 Modul for Collboard to learn the geography. It was the developed in kooperation with capital city of Prague
 
 [![@@@](/public/projects/geography-in-collboard.png)](https://github.com/collboard/map)
 
-## Function builder
+## Functions
 
 Modul for Collboard to teach the math in visual way.
 
@@ -63,7 +63,7 @@ Modul for Collboard to teach the math in visual way.
 
 [![@@@](/public/projects/collboard-function-builder-blank-dark.png)](https://github.com/collboard/function-builder)
 
-## Virtual and augmented reality
+## VR/AR
 
 I have worked on multiple projects for virtuen augmented reality imosu Ambassador of association of virtual
 
