@@ -36,7 +36,7 @@ export function createGraphEffect<TElement extends HTMLElement>(formula: {
                     for (let t = formula.range.min; t <= formula.range.max; t += formula.range.step) {
                         const point = formula.plot({ t, seed });
 
-                        console.log(point);
+                        // console.log(point);
 
                         if (point.x === Infinity) {
                             point.x = 1000;
@@ -66,6 +66,15 @@ export function createGraphEffect<TElement extends HTMLElement>(formula: {
                     // TODO: LIB xyzt: addInPlace
 
                     seedPosition = seedPosition.add(Vector.fromObject(event, ['movementX', 'movementY']));
+
+                    graph(seedPosition);
+                });
+
+                window.addEventListener('scroll', (event) => {
+                    // console.log('scroll', event);
+                    // TODO: LIB xyzt: addInPlace
+
+                    seedPosition = seedPosition.add(new Vector(1, 0));
 
                     graph(seedPosition);
                 });
