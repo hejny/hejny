@@ -25,7 +25,10 @@ export function MapsForGeographyProject() {
             <Item>
                 <Item.Title>Maps for Geography</Item.Title>
                 <Item.Description>
-                    <p>@@@</p>
+                    <p>
+                        Modul for Collboard to learn the geography. It was the developed in kooperation with capital
+                        city of Prague
+                    </p>
                 </Item.Description>
                 <Item.Image>
                     <div

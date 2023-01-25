@@ -11,7 +11,7 @@ import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
 import { effectToRef } from '../../../utils/Drawing/effectToRef';
 import { birdsCzEffect } from '../../../utils/Drawing/projectsEffectsLibrary';
-import background from '../Pavol_Hejn_birds_3eee9b48-0331-462d-b11d-367626cf028c.png';
+import background from '../paths/bird.svg';
 
 /**
  * !!!

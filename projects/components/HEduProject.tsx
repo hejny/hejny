@@ -25,7 +25,10 @@ export function HEduProject() {
             <Item>
                 <Item.Title>H-edu</Item.Title>
                 <Item.Description>
-                    <p>Online pupil books for schools and teachers</p>
+                    <p>
+                        Online pupil books for schools and teachers with interactive playground and misc tools for
+                        teachers
+                    </p>
                 </Item.Description>
                 <Item.Image>
                     <div

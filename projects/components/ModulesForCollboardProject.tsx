@@ -25,7 +25,10 @@ export function ModulesForCollboardProject() {
             <Item>
                 <Item.Title>Modules for Collboard</Item.Title>
                 <Item.Description>
-                    <p>@@@</p>
+                    <p>
+                        Software development kit to extend The Collboard, The virtual whiteboard. A successful design to
+                        split up big application into hundreds multiple indopendent codebases.
+                    </p>
                 </Item.Description>
                 <Item.Image>
                     <div

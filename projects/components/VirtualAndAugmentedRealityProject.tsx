@@ -25,7 +25,11 @@ export function VirtualAndAugmentedRealityProject() {
             <Item>
                 <Item.Title>Virtual and augmented reality</Item.Title>
                 <Item.Description>
-                    <p>DevConf, CzechVRFest, Hackuj Stát</p>
+                    <p>
+                        I have worked on multiple projects for virtuen augmented reality imosu Ambassador of association
+                        of virtual
+                    </p>
+                    <p>I have presented this DevConf, CzechVRFest, Hackuj Stát</p>
                 </Item.Description>
                 <Item.Image>
                     <div

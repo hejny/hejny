@@ -25,7 +25,7 @@ export function AllMyProjectsProject() {
             <Item>
                 <Item.Title>All my projects</Item.Title>
                 <Item.Description>
-                    <p>@@@</p>
+                    <p>I am program from my 13 and now I am 29 so I have worked on looooooooot of projects.</p>
                 </Item.Description>
                 <Item.Image>
                     <div

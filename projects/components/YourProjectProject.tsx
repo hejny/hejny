@@ -25,7 +25,8 @@ export function YourProjectProject() {
             <Item>
                 <Item.Title>Your project</Item.Title>
                 <Item.Description>
-                    <p>@@@</p>
+                    <p>I will be happy kick off your project</p>
+                    <p>What I offer?</p>
                 </Item.Description>
                 <Item.Image>
                     <div
