@@ -1,7 +1,7 @@
 import { Items } from '../../components/Items/Items';
 import { Section } from '../../components/Section/Section';
 import { Shuffle } from '../../components/Shuffle/Shuffle';
-import { BirdsCzProject } from '../../public/projects/components/BirdsCzProject';
+import { BirdsProject } from '../../public/projects/components/BirdsProject';
 import { CollboardProject } from '../../public/projects/components/CollboardProject';
 import { CzechEventsProject } from '../../public/projects/components/CzechEventsProject';
 import { HEduProject } from '../../public/projects/components/HEduProject';
@@ -16,7 +16,7 @@ export function MyProjects() {
             <p>Here are some of the larger projects that I have been involved in:</p>
             <Items>
                 <Shuffle>
-                    <BirdsCzProject />
+                    <BirdsProject />
                     <TownsProject />
                     <CollboardProject />
                     <HEduProject />

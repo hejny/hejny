@@ -3,10 +3,10 @@ import { drawingEffect } from './drawingEffect';
 import { noEffect } from './noEffect';
 
 export const allMyProjectsEffect = noEffect;
-export const birdsCzEffect = noEffect;
+export const birdsEffect = noEffect;
 export const collboardEffect = drawingEffect;
 export const czechEventsEffect = noEffect;
-export const functionBuilderEffect = createGraphEffect({
+export const functionsEffect = createGraphEffect({
     range: {
         min: -100,
         max: 100,
@@ -24,10 +24,10 @@ export const functionBuilderEffect = createGraphEffect({
 });
 export const hEduEffect = noEffect;
 export const librariesEffect = noEffect;
-export const mapsForGeographyEffect = noEffect;
-export const modulesForCollboardEffect = noEffect;
+export const mapsEffect = noEffect;
+export const modulesEffect = noEffect;
 export const townsEffect = noEffect;
-export const virtualAndAugmentedRealityEffect = noEffect;
+export const vrArEffect = noEffect;
 export const yourProjectEffect = noEffect;
 
 /**
