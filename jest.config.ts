@@ -1,4 +1,4 @@
-module.exports = {
+const jestConfig = {
     transform: {
         '^.+\\.(t|j)sx?$': 'ts-jest',
     },
@@ -8,3 +8,5 @@ module.exports = {
     collectCoverage: true,
     testEnvironment: 'jsdom',
 };
+
+export default jestConfig;
