@@ -1,5 +1,4 @@
-import cave_pattern from '../../public/patterns/Pavol_Hejny_Altamira_Cave_painting_5732f60b-c6cc-462b-8b51-45403e055bd3.png';
-import ornaments_pattern from '../../public/patterns/Pavol_Hejny_ornaments_aa4f57c8-b7ac-4894-96df-0e93bf1522d2.png';
+import tile_pattern from '../../public/patterns/Pavol_Hejn_Wallpaper_by_Wassily_Kandinsky_39a6badd-d6ec-48d9-8d93-a198a2c57973.png';
 import styles from './TiledBackground.module.css';
 
 interface TiledBackgroundProps {
@@ -12,6 +11,7 @@ export function TiledBackground(props: TiledBackgroundProps) {
 
     return (
         <div className={styles.tiledBackground}>
+            {/* 
             <div
                 className={styles.layer}
                 style={{
@@ -20,16 +20,17 @@ export function TiledBackground(props: TiledBackgroundProps) {
                     opacity: 0.5,
                     backgroundSize: `100px 100px`,
                     backgroundRepeat: `repeat`,
-                    /* TODO: !!! ACRY all background-image should have background-color fallback */
+                    /* TODO: !!! ACRY all background-image should have background-color fallback * /
                 }}
             ></div>
+            */}
 
             <div
                 className={styles.layer}
                 style={{
                     zIndex: 20,
-                    backgroundImage: `url(${cave_pattern.src})`,
-                    backgroundSize: `500px 500px`,
+                    backgroundImage: `url(${tile_pattern.src})`,
+                    backgroundSize: `350px 350px`,
                     backgroundRepeat: `repeat`,
                     /* TODO: !!! ACRY all background-image should have background-color fallback */
                 }}
@@ -39,7 +40,7 @@ export function TiledBackground(props: TiledBackgroundProps) {
                 className={styles.layer}
                 style={{
                     zIndex: 1000,
-                    backgroundColor: `rgba(0, 0, 0, 0.9)`,
+                    backgroundColor: `rgba(0, 0, 0,1)`,
                     // backgroundColor: `rgba(25, 13, 78, 0.9)`,
                 }}
             ></div>
