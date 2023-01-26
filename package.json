@@ -21,7 +21,7 @@
         "test-with-lighthouse": " lighthouse https://collboard.com/ --output html --output-path ./other/lighthouse-reports/report.html --view",
         "prettier": "prettier --config .prettierrc --ignore-unknown --write \"{pages,public,styles}/**/*\"",
         "prettier-commit": "git diff --exit-code && npm run prettier && git add . && git commit --allow-empty -m \"🧹 Prettier\"",
-        "preversion": "git pull && npm run prettier-commit&& npm run lint && npm test",
+        "preversion": "git pull && npm run prettier-commit && npm run lint && npm test",
         "postversion": "git push && git push --tags && echo \"Check the deploy process: https://github.com/hejny/rapid-prototyping-wizard/actions/\""
     },
     "devDependencies": {

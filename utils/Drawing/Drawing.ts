@@ -140,6 +140,7 @@ export class Drawing extends Destroyable implements IDestroyable {
 }
 
 /**
+ * TODO: !!! Drawing will move when Toggle device toolbar
  * TODO: !!! resize+resize where to call
  * TODO: All private/public
  * TODO: Should be used setAttribute OR setAttributeNS

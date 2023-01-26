@@ -71,13 +71,12 @@ export function createGraphEffect<TElement extends HTMLElement>(formula: {
                 });
 
                 window.addEventListener('touchmove', (event) => {
-                    // console.log('scroll', event);
-                    // TODO: LIB xyzt: addInPlace
+                    const targetTouch = event.targetTouches[0];
+                    const seedPositionAtractor = seedPosition.add(
+                        Vector.fromObject(targetTouch, ['clientX', 'clientY']),
+                    );
 
-                    // TODO: event.targetTouches[0].
-                    // TODO:  seedPosition =  seedPosition.add(Vector.fromObject(event, ['movementX', 'movementY']));
-
-                    seedPosition = seedPosition.add(new Vector(2, 2));
+                    seedPosition = Vector.add(seedPosition.scale(0.99), seedPositionAtractor.scale(0.01));
 
                     graph(seedPosition);
                 });
@@ -89,4 +88,7 @@ export function createGraphEffect<TElement extends HTMLElement>(formula: {
 /**
  * TODO: createPolarGraphEffect
  * TODO: createYGraphEffect
+ * TODO: LIB xyzt: addInPlace
+ * TODO: LIB xyzt: Some util for Weighted arithmetic mean of Vector
+ * TODO: Multiple touches creates multiple graphs> Array.from(event.targetTouches)
  */
