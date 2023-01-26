@@ -70,11 +70,14 @@ export function createGraphEffect<TElement extends HTMLElement>(formula: {
                     graph(seedPosition);
                 });
 
-                window.addEventListener('scroll', (event) => {
+                window.addEventListener('touchmove', (event) => {
                     // console.log('scroll', event);
                     // TODO: LIB xyzt: addInPlace
 
-                    seedPosition = seedPosition.add(new Vector(1, 0));
+                    // TODO: event.targetTouches[0].
+                    // TODO:  seedPosition =  seedPosition.add(Vector.fromObject(event, ['movementX', 'movementY']));
+
+                    seedPosition = seedPosition.add(new Vector(2, 2));
 
                     graph(seedPosition);
                 });
