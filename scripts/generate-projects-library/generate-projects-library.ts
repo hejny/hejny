@@ -38,8 +38,8 @@ async function generateProjectsLibrary({ isCommited }: { isCommited: boolean }) 
     // !!! Replace all "projects"
 
     const rootDir = join(__dirname, '../../');
-    const projectsComponentsDir = join(rootDir, 'public/projects/components');
-    const projectsDocumentFilePath = join(rootDir, 'public/projects/projects.md');
+    const projectsComponentsDir = join(rootDir, 'public/projects');
+    const projectsDocumentFilePath = join(projectsComponentsDir, 'projects.md');
     const projectsDocumentFileContent = await readFile(projectsDocumentFilePath, 'utf-8').then(removeMarkdownComments);
 
     const matches = projectsDocumentFileContent.matchAll(/(?<titleMarkdown>^##.*?$)(?<bodyMarkdown>[^^#]+)/gms);
@@ -94,8 +94,9 @@ async function generateProjectsLibrary({ isCommited }: { isCommited: boolean }) 
         const converter = new Converter();
         const bodyHtml = converter.makeHtml(bodyMarkdownWithoutImages);
 
-        const componentName = normalizeTo_PascalCase(titleMarkdown) + 'Project';
-        const projectFilePath = join(projectsComponentsDir, componentName) + '.tsx';
+        const dirName = normalizeTo_PascalCase(titleMarkdown);
+        const componentName = dirName + 'Project';
+        const projectFilePath = join(projectsComponentsDir, dirName, componentName) + '.tsx';
         const projectFileOldContent = await readFile(projectFilePath, 'utf-8').catch(() => ``);
 
         // TODO: LIB n12: normalizeTo_camelCase Should make ALWAYS first letter a lowercase - create tests for this case
