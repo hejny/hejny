@@ -39,7 +39,7 @@ async function generateProjectsLibrary({ isCommited }: { isCommited: boolean }) 
 
     const rootDir = join(__dirname, '../../');
     const projectsComponentsDir = join(rootDir, 'public/projects/components');
-    const projectsDocumentFilePath = join(rootDir, 'public/projects/0-projects.md');
+    const projectsDocumentFilePath = join(rootDir, 'public/projects/projects.md');
     const projectsDocumentFileContent = await readFile(projectsDocumentFilePath, 'utf-8').then(removeMarkdownComments);
 
     const matches = projectsDocumentFileContent.matchAll(/(?<titleMarkdown>^##.*?$)(?<bodyMarkdown>[^^#]+)/gms);
