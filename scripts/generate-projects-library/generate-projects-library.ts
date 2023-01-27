@@ -10,6 +10,7 @@ import { Converter } from 'showdown';
 import spaceTrim from 'spacetrim';
 import { commit } from '../utils/autocommit/commit';
 import { isWorkingTreeClean } from '../utils/autocommit/isWorkingTreeClean';
+import { generateImport } from '../utils/generateImport';
 import { prettify } from '../utils/prettify';
 import { removeMarkdownComments } from './removeMarkdownComments';
 
@@ -128,14 +129,11 @@ async function generateProjectsLibrary({ isCommited }: { isCommited: boolean }) 
             import { Item } from '../../../components/Items/Item';
             import { effectToRef } from '../../../utils/Drawing/effectToRef';
             import { ${effectName} } from '../../../utils/Drawing/projectsEffectsLibrary';
-            import background from '${relative(
-                dirname(projectFilePath),
-                join(process.cwd(), image.src),
-                // TODO: Here should be sth like> join(dirname(projectsDocumentFilePath), image.src),
-            )
-                .split('\\')
-                .join('/')
-                .replace(/^\.\/\.\.\//, '../')}';
+            ${generateImport({
+                entityName: 'background',
+                entityPath: join(process.cwd(), image.src),
+                itselfPath: projectFilePath,
+            })}
 
             /**
              * !!!

@@ -11,7 +11,7 @@ import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
 import { effectToRef } from '../../../utils/Drawing/effectToRef';
 import { modulesEffect } from '../../../utils/Drawing/projectsEffectsLibrary';
-import background from '../geometry-on-board.png';
+import background from './geometry-on-board.png';
 
 /**
  * !!!

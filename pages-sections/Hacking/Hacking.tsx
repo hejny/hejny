@@ -1,12 +1,12 @@
 import { Items } from '../../components/Items/Items';
 import { Section } from '../../components/Section/Section';
 import { Shuffle } from '../../components/Shuffle/Shuffle';
-import { AllMyProjectsProject } from '../../public/projects/components/AllMyProjectsProject';
-import { FunctionsProject } from '../../public/projects/components/FunctionsProject';
-import { LibrariesProject } from '../../public/projects/components/LibrariesProject';
-import { MapsProject } from '../../public/projects/components/MapsProject';
-import { ModulesProject } from '../../public/projects/components/ModulesProject';
-import { VrArProject } from '../../public/projects/components/VrArProject';
+import { AllMyProjectsProject } from '../../public/projects/AllMyProjects/AllMyProjectsProject';
+import { FunctionsProject } from '../../public/projects/Functions/FunctionsProject';
+import { LibrariesProject } from '../../public/projects/Libraries/LibrariesProject';
+import { MapsProject } from '../../public/projects/Maps/MapsProject';
+import { ModulesProject } from '../../public/projects/Modules/ModulesProject';
+import { VrArProject } from '../../public/projects/VrAr/VrArProject';
 import styles from './Hacking.module.css';
 
 export function Hacking() {

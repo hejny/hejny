@@ -11,7 +11,7 @@ import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
 import { effectToRef } from '../../../utils/Drawing/effectToRef';
 import { vrArEffect } from '../../../utils/Drawing/projectsEffectsLibrary';
-import background from '../drawing-in-vr.png';
+import background from './drawing-in-vr.png';
 
 /**
  * !!!

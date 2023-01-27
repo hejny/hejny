@@ -11,7 +11,7 @@ import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
 import { effectToRef } from '../../../utils/Drawing/effectToRef';
 import { collboardEffect } from '../../../utils/Drawing/projectsEffectsLibrary';
-import background from '../whiteboard.png';
+import background from './whiteboard.png';
 
 /**
  * !!!
