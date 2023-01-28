@@ -62,6 +62,7 @@ export function Services() {
 }
 
 /**
+ * TODO: !!! Examples how can I help you
  * TODO: Maybe split every item into separate file component
  * TODO: !!! Smooth scrolling + highlighting of the section
  * TODO: !!! Rename to HowCanIHelpYou OR Better

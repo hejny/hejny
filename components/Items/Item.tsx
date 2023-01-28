@@ -27,6 +27,7 @@ Item.Image = function ItemImage({ children }: { children: ReactNode }) {
 };
 
 /**
+ * TODO: !!! Outline zoom overflow
  * TODO: Maybe mask image with text
  * TODO: Children of Item should be only and exacly Item.Title, Item.Description and Item.Image and theese components should be used only inside of <Item/> and <Item> used only inside of <Items> - How to implement and type this?
  */
