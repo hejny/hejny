@@ -3,6 +3,12 @@
 <!-- TODO: !!! Enhance texts https://www.deepl.com/write -->
 <!-- Note: In this file there are all URLs which will be converted into the hacking cases components -->
 
+## All my projects
+
+I am program from my 13 and now I am 29 so I have worked on looooooooot of projects.
+
+[![@@@](/public/projects/AllMyProjects/Pavol_Hejn_modular_gadget_as_a_coloring_book_black_and_white_il_05f61e28-a9e6-41e5-9105-0708c5294006.svg)](https://pavolhejny.com/documents/projects.html)
+
 ## Birds
 
 <!-- [🛰] Tags: `Maps` -->
@@ -28,54 +34,6 @@ pandemic-induced lockdown.
 
 [![@@@](/public/projects/Collboard/whiteboard.png)](#)
 
-## Towns
-
-Browser online game. You can build your own City and your world.
-
-<!-- [🛰] Tags: `WebGL` -->
-
-[![@@@](/public/projects/Towns/towns.jpg)](https://towns.cz/)
-
-## Modules
-
-Software development kit to extend The Collboard, The virtual whiteboard.
-A successful design to split up big application into hundreds multiple indopendent codebases.
-
-[![@@@](/public/projects/Modules/geometry-on-board.png)](https://github.com/collboard/modules-sdk)
-
-## H-edu
-
-Online pupil books for schools and teachers with interactive playground and misc tools for teachers
-
-[![@@@](/public/projects/Hedu/HEdu-screenshot.png)](https://www.h-edu.cz/)
-
-## Maps
-
-Modul for Collboard to learn the geography. It was the developed in kooperation with capital city of Prague
-
-[![@@@](/public/projects/Maps/geography-in-collboard.png)](https://github.com/collboard/map)
-
-## Functions
-
-Modul for Collboard to teach the math in visual way.
-
-<!--TODO: create study cases of topics I worked on, graphs, fractals,...-->
-
-[![@@@](/public/projects/Functions/collboard-function-builder-blank-dark.png)](https://github.com/collboard/function-builder)
-
-## VR/AR
-
-I have worked on multiple projects for virtuen augmented reality imosu Ambassador of association of virtual
-
-I have presented this
-DevConf, CzechVRFest, Hackuj Stát
-
-[![@@@](/public/projects/VrAr/drawing-in-vr.png)](#!!!)
-
-<!--
-![@@@](/public/projects/webvr.jpg)
--->
-
 ## Czech.events
 
 Newsletter of
@@ -85,6 +43,20 @@ A have big interest in Czech Tech&startul community in general.
 I have organized,spoken on, mentored a lot of events and hackathons
 
 [![@@@](/public/projects/CzechEvents/czechevents-screenshot.png)](https://czech.events/)
+
+## Functions
+
+Modul for Collboard to teach the math in visual way.
+
+<!--TODO: create study cases of topics I worked on, graphs, fractals,...-->
+
+[![@@@](/public/projects/Functions/collboard-function-builder-blank-dark.png)](https://github.com/collboard/function-builder)
+
+## H-edu
+
+Online pupil books for schools and teachers with interactive playground and misc tools for teachers
+
+[![@@@](/public/projects/Hedu/HEdu-screenshot.png)](https://www.h-edu.cz/)
 
 ## Libraries
 
@@ -104,11 +76,39 @@ I am working on several OpenSource libraries like
 [or see my GitHub repositories](https://github.com/hejny?tab=repositories).
 -->
 
-## All my projects
+## Maps
 
-I am program from my 13 and now I am 29 so I have worked on looooooooot of projects.
+Modul for Collboard to learn the geography. It was the developed in kooperation with capital city of Prague
 
-[![@@@](/public/projects/AllMyProjects/Pavol_Hejn_modular_gadget_as_a_coloring_book_black_and_white_il_05f61e28-a9e6-41e5-9105-0708c5294006.svg)](https://pavolhejny.com/documents/projects.html)
+[![@@@](/public/projects/Maps/geography-in-collboard.png)](https://github.com/collboard/map)
+
+## Modules
+
+Software development kit to extend The Collboard, The virtual whiteboard.
+A successful design to split up big application into hundreds multiple indopendent codebases.
+
+[![@@@](/public/projects/Modules/geometry-on-board.png)](https://github.com/collboard/modules-sdk)
+
+## Towns
+
+Browser online game. You can build your own City and your world.
+
+<!-- [🛰] Tags: `WebGL` -->
+
+[![@@@](/public/projects/Towns/towns.jpg)](https://towns.cz/)
+
+## VR/AR
+
+I have worked on multiple projects for virtuen augmented reality imosu Ambassador of association of virtual
+
+I have presented this
+DevConf, CzechVRFest, Hackuj Stát
+
+[![@@@](/public/projects/VrAr/drawing-in-vr.png)](#!!!)
+
+<!--
+![@@@](/public/projects/webvr.jpg)
+-->
 
 ## Your project
 
