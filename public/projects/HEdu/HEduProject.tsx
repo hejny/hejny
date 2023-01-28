@@ -7,10 +7,11 @@
  *    Then the file will not be re-generated automatically
  */
 
+import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
 import { effectToRef } from '../../../utils/Drawing/effectToRef';
 import { hEduEffect } from '../../../utils/Drawing/projectsEffectsLibrary';
-import background from './outline.svg';
+import background from './HEdu-screenshot.png';
 
 /**
  * !!!

@@ -7,10 +7,11 @@
  *    Then the file will not be re-generated automatically
  */
 
+import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
 import { effectToRef } from '../../../utils/Drawing/effectToRef';
 import { vrArEffect } from '../../../utils/Drawing/projectsEffectsLibrary';
-import background from './outline.svg';
+import background from './Pavol_Hejn_coloring_book_black_and_white_illustration_outline_o_850cbc2d-9088-4113-bdbc-8fbf566e170c.svg';
 
 /**
  * !!!

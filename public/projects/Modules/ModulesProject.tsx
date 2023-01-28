@@ -7,10 +7,11 @@
  *    Then the file will not be re-generated automatically
  */
 
+import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
 import { effectToRef } from '../../../utils/Drawing/effectToRef';
 import { modulesEffect } from '../../../utils/Drawing/projectsEffectsLibrary';
-import background from './outline.svg';
+import background from './Pavol_Hejn_code_as_a_coloring_book_black_and_white_illustration_a8a23039-8249-4844-8bea-937a31d471e5.svg';
 
 /**
  * !!!

@@ -42,7 +42,7 @@ Most interesting events in Czechia in Tech comunity
 A have big interest in Czech Tech&startul community in general.
 I have organized,spoken on, mentored a lot of events and hackathons
 
-[![@@@](/public/projects/CzechEvents/czechevents-screenshot.png)](https://czech.events/)
+[![@@@](/public/projects/CzechEvents/Pavol_Hejn_Coloring_book_black_and_white_illustration_outline_o_1a4c414f-0033-4d76-942d-be2b3b171834.svg)](https://czech.events/)
 
 ## Functions
 
@@ -63,7 +63,7 @@ Online pupil books for schools and teachers with interactive playground and misc
 I love Open-source.
 Every time I work on some project I try to extract reusable parts into independent library
 
-[![@@@](/public/projects/Libraries/xyzt.png)](https://github.com/hejny?tab=repositories)
+[![@@@](/public/projects/Libraries/Pavol_Hejny_coloring_book_black_and_white_illustration_outline__b8c24f85-9ee6-4d9e-96d7-fe550fe78b9b.svg)](https://github.com/hejny?tab=repositories)
 
 <!--
 TODO: Allow links in links
@@ -80,14 +80,14 @@ I am working on several OpenSource libraries like
 
 Modul for Collboard to learn the geography. It was the developed in kooperation with capital city of Prague
 
-[![@@@](/public/projects/Maps/geography-in-collboard.png)](https://github.com/collboard/map)
+[![@@@](/public/projects/Maps/outline.svg)](https://github.com/collboard/map)
 
 ## Modules
 
 Software development kit to extend The Collboard, The virtual whiteboard.
 A successful design to split up big application into hundreds multiple indopendent codebases.
 
-[![@@@](/public/projects/Modules/geometry-on-board.png)](https://github.com/collboard/modules-sdk)
+[![@@@](/public/projects/Modules/Pavol_Hejn_code_as_a_coloring_book_black_and_white_illustration_a8a23039-8249-4844-8bea-937a31d471e5.svg)](https://github.com/collboard/modules-sdk)
 
 ## Towns
 
@@ -95,7 +95,7 @@ Browser online game. You can build your own City and your world.
 
 <!-- [🛰] Tags: `WebGL` -->
 
-[![@@@](/public/projects/Towns/towns.jpg)](https://towns.cz/)
+[![@@@](/public/projects/Towns/Pavol_Hejn_isometric_game_as_a_coloring_book_black_and_white_il_b1cde821-101c-4d3f-ad5b-1f345d4009c5.svg)](https://towns.cz/)
 
 ## VR/AR
 
@@ -104,7 +104,7 @@ I have worked on multiple projects for virtuen augmented reality imosu Ambassado
 I have presented this
 DevConf, CzechVRFest, Hackuj Stát
 
-[![@@@](/public/projects/VrAr/drawing-in-vr.png)](#!!!)
+[![@@@](/public/projects/VrAr/Pavol_Hejn_coloring_book_black_and_white_illustration_outline_o_850cbc2d-9088-4113-bdbc-8fbf566e170c.svg)](#!!!)
 
 <!--
 ![@@@](/public/projects/webvr.jpg)
@@ -116,7 +116,7 @@ I will be happy kick off your project
 
 What I offer?
 
-[![@@@](/public/projects/YourProject/placeholder.png)](https://pavolhejny.com/documents/projects.html)
+[![@@@](/public/projects/YourProject/Pavol_Hejn_Coloring_book_black_and_white_illustration_outline_o_fbf45e15-a73d-474c-8d08-98188a1010ef.svg)](https://pavolhejny.com/documents/projects.html)
 
 <!--
 TODO:

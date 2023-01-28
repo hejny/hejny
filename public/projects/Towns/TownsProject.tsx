@@ -7,10 +7,11 @@
  *    Then the file will not be re-generated automatically
  */
 
+import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
 import { effectToRef } from '../../../utils/Drawing/effectToRef';
 import { townsEffect } from '../../../utils/Drawing/projectsEffectsLibrary';
-import background from './outline.svg';
+import background from './Pavol_Hejn_isometric_game_as_a_coloring_book_black_and_white_il_b1cde821-101c-4d3f-ad5b-1f345d4009c5.svg';
 
 /**
  * !!!

@@ -7,10 +7,11 @@
  *    Then the file will not be re-generated automatically
  */
 
+import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
 import { effectToRef } from '../../../utils/Drawing/effectToRef';
 import { czechEventsEffect } from '../../../utils/Drawing/projectsEffectsLibrary';
-import background from './outline.svg';
+import background from './Pavol_Hejn_Coloring_book_black_and_white_illustration_outline_o_1a4c414f-0033-4d76-942d-be2b3b171834.svg';
 
 /**
  * !!!
