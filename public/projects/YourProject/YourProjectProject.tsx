@@ -7,11 +7,10 @@
  *    Then the file will not be re-generated automatically
  */
 
-import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
 import { effectToRef } from '../../../utils/Drawing/effectToRef';
 import { yourProjectEffect } from '../../../utils/Drawing/projectsEffectsLibrary';
-import background from './placeholder.png';
+import background from './outline.svg';
 
 /**
  * !!!
