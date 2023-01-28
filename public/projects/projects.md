@@ -108,7 +108,7 @@ I am working on several OpenSource libraries like
 
 I am program from my 13 and now I am 29 so I have worked on looooooooot of projects.
 
-[![@@@](/public/projects/AllMyProjects/all-projects.png)](https://pavolhejny.com/documents/projects.html)
+[![@@@](/public/projects/AllMyProjects/Pavol_Hejn_modular_gadget_as_a_coloring_book_black_and_white_il_05f61e28-a9e6-41e5-9105-0708c5294006.svg)](https://pavolhejny.com/documents/projects.html)
 
 ## Your project
 
