@@ -28,3 +28,23 @@
     grid-column: 1 / span 1;
     grid-row: 1 / span 1;
 }
+
+.picker {
+    display: grid;
+    z-index: 999999999999;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    color: black;
+    font-size: 12px;
+
+    width: 250px;
+    min-height: 100px;
+
+    align-items: flex-end;
+}
+
+.pickerControls {
+}
