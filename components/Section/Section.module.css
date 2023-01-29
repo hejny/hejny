@@ -10,3 +10,8 @@
     color: inherit;
     text-decoration: inherit;
 }
+
+.section h2 {
+    display: inline-block;
+    /* border-top: 5px solid #ff9912; */
+}

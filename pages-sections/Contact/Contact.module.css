@@ -16,6 +16,8 @@
     height: 150px;
     margin: 20px;
     border-radius: 100%;
+
+    border: 5px solid #ff9912;
 }
 
 .vcard ul {
