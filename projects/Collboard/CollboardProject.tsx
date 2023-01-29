@@ -26,8 +26,8 @@ export function CollboardProject() {
                 <Item.Title>Collboard</Item.Title>
                 <Item.Description>
                     <p>
-                        Virtual online collaborative whiteboard started during the the initial week of the
-                        pandemic-induced lockdown.
+                        Collboard is a customizable and modular online virtual whiteboard for all devices, suitable for
+                        education.
                     </p>
                 </Item.Description>
                 <Item.Image>
@@ -37,7 +37,7 @@ export function CollboardProject() {
                             backgroundImage: `url(${background.src})`,
                         }}
                     />
-                    {/* <Image alt="@@@" src={background} draggable="false" /> */}
+                    {/* <Image alt="Tablet with drawing" src={background} draggable="false" /> */}
                 </Item.Image>
             </Item>
         </a>

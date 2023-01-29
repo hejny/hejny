@@ -26,10 +26,11 @@ export function VrArProject() {
                 <Item.Title>VR/AR</Item.Title>
                 <Item.Description>
                     <p>
-                        I have worked on multiple projects for virtuen augmented reality imosu Ambassador of association
-                        of virtual
+                        I have extensive experience in virtual and augmented reality projects, serving as a
+                        representative and ambassador for the Association of Virtual Reality. My expertise in this field
+                        has led to my involvement in multiple projects, including presentations at industry conferences
+                        such as DevConf, CzechVRFest, and Hackuj Stát.
                     </p>
-                    <p>I have presented this DevConf, CzechVRFest, Hackuj Stát</p>
                 </Item.Description>
                 <Item.Image>
                     <div
@@ -38,7 +39,7 @@ export function VrArProject() {
                             backgroundImage: `url(${background.src})`,
                         }}
                     />
-                    {/* <Image alt="@@@" src={background} draggable="false" /> */}
+                    {/* <Image alt="Virtual reality helmet" src={background} draggable="false" /> */}
                 </Item.Image>
             </Item>
         </a>

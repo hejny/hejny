@@ -11,7 +11,7 @@ import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
 import { effectToRef } from '../../../utils/Drawing/effectToRef';
 import { mapsEffect } from '../../../utils/Drawing/projectsEffectsLibrary';
-import background from './outline.svg';
+import background from './europe.svg';
 
 /**
  * Presentation of project Maps
@@ -26,8 +26,9 @@ export function MapsProject() {
                 <Item.Title>Maps</Item.Title>
                 <Item.Description>
                     <p>
-                        Modul for Collboard to learn the geography. It was the developed in kooperation with capital
-                        city of Prague
+                        The Geography Learning Module for Collboard was developed in collaboration with the capital city
+                        of Prague, offering a unique tool for geography teachers. Experience a fresh and interactive way
+                        to teach geography with the help of Collboard innovative platform.
                     </p>
                 </Item.Description>
                 <Item.Image>
@@ -37,7 +38,7 @@ export function MapsProject() {
                             backgroundImage: `url(${background.src})`,
                         }}
                     />
-                    {/* <Image alt="@@@" src={background} draggable="false" /> */}
+                    {/* <Image alt="Globe" src={background} draggable="false" /> */}
                 </Item.Image>
             </Item>
         </a>
