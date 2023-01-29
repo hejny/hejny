@@ -2,6 +2,7 @@
 
 <!-- TODO: !!! Enhance texts https://www.deepl.com/write -->
 <!-- Note: In this file there are all URLs which will be converted into the hacking cases components -->
+<!-- TODO: Rename all outline.svg to original names -->
 
 ## All my projects
 
@@ -32,7 +33,7 @@ pandemic-induced lockdown.
 
 <!-- [🛰] Tags: `Real time app` -->
 
-[![@@@](/public/projects/Collboard/whiteboard.png)](#)
+[![@@@](/public/projects/Collboard/outline.svg)](#)
 
 ## Czech.events
 
