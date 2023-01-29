@@ -22,7 +22,7 @@ TODO: More about
 Feeders
 -->
 
-[![@@@](/public/projects/Birds/bird.svg)](#)
+[![@@@](/public/projects/Birds/outline.svg)](#)
 
 <!--[![@@@](/public/projects/Pavol_Hejn_birds_3eee9b48-0331-462d-b11d-367626cf028c.png)](#)-->
 
