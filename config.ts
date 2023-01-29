@@ -1,4 +1,4 @@
 export const DEBUG = {
-    backgroundPatternPicker: false,
+    backgroundPatternPicker: true,
     showGrid: false,
 };
