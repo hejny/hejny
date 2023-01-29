@@ -30,7 +30,7 @@
 }
 
 .picker {
-    display: grid;
+    display: block;
     z-index: 999999999999;
     position: fixed;
     right: 10px;
@@ -41,7 +41,7 @@
     font-size: 12px;
 
     width: 250px;
-    min-height: 100px;
+    height: 150px;
 
     align-items: flex-end;
 }

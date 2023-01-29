@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
+import { DEBUG } from '../../config';
 import { generated_patterns } from '../../public/patterns';
+import { MidjourneyLink } from '../MidjourneyLink/MidjourneyLink';
 import styles from './TiledBackground.module.css';
 
 interface TiledBackgroundProps {
@@ -10,15 +12,22 @@ interface TiledBackgroundProps {
 export function TiledBackground(props: TiledBackgroundProps) {
     // const { size } = props;
 
-    const [size, setSize] = useState(350);
+    const [size, setSize] = useState(350 /* <- TODO: [🌾] This should be passed as prop */);
 
-    const [index, setIndexRaw] = useState(0);
+    // Good are: 12,26,27,51,53,67,68,72,81
+    const [index, setIndexRaw] = useState(26 - 1 /* <- TODO: [🌾] This should be passed as prop */);
+
+    // TODO: Add some prefix like tintColor
+    const [color, setColor] = useState('#0f0a05' /* <- TODO: [🌾] This should be passed as prop */);
+    const [colorOpacity, setColorOpacity] = useState(0.77 /* <- TODO: [🌾] This should be passed as prop */);
+
+    const [filter, setFilter] = useState('blur(0px)' /* <- TODO: [🌾] This should be passed as prop */);
 
     const setIndex = (index: number) => {
         setIndexRaw((index + generated_patterns.length) % generated_patterns.length);
     };
 
-    const [isPlaying, setPlaying] = useState(true);
+    const [isPlaying, setPlaying] = useState(false);
 
     useEffect(() => {
         if (!isPlaying) {
@@ -33,24 +42,55 @@ export function TiledBackground(props: TiledBackgroundProps) {
 
     return (
         <div className={styles.tiledBackground}>
-            <div className={styles.picker}>
-                <div className={styles.pickerControls}>
-                    <button onClick={() => setIndex(index - 1)}>◀</button>
-                    {`${index + 1} / ${generated_patterns.length}`}
-                    <button onClick={() => setIndex(index + 1)}>▶</button>
+            {DEBUG.backgroundPatternPicker && (
+                <div className={styles.picker}>
+                    <div className={styles.pickerControls}>
+                        <button
+                            onClick={() => {
+                                setPlaying(false);
+                                setIndex(index - 1);
+                            }}
+                        >
+                            ◀
+                        </button>
+                        {`${index + 1} / ${generated_patterns.length}`}
+                        <button
+                            onClick={() => {
+                                setPlaying(false);
+                                setIndex(index + 1);
+                            }}
+                        >
+                            ▶
+                        </button>
 
-                    <button onClick={() => setPlaying(!isPlaying)}>{isPlaying ? '⏸' : '▶'}</button>
+                        <button onClick={() => setPlaying(!isPlaying)}>{isPlaying ? '⏸' : '▶'}</button>
 
-                    <input
-                        type={'number'}
-                        value={size}
-                        min={0}
-                        step={50}
-                        onChange={(event) => setSize(parseInt(event.target.value, 10))}
-                    />
+                        <input
+                            type={'number'}
+                            value={size}
+                            min={0}
+                            step={50}
+                            onChange={(event) => setSize(parseInt(event.target.value, 10))}
+                        />
+
+                        <input type={'color'} value={color} onChange={(event) => setColor(event.target.value)} />
+                        {color}
+                        <input
+                            type={'number'}
+                            value={colorOpacity * 100}
+                            min={0}
+                            step={1}
+                            max={100}
+                            onChange={(event) => setColorOpacity(parseInt(event.target.value, 10) / 100)}
+                        />
+
+                        <input type={'text'} value={filter} onChange={(event) => setFilter(event.target.value)} />
+                    </div>
+                    <div>
+                        <MidjourneyLink>{generated_patterns[index].src.split('/').pop() || ''}</MidjourneyLink>
+                    </div>
                 </div>
-                <div>{generated_patterns[index].src.split('/').pop()}</div>
-            </div>
+            )}
 
             <div
                 className={styles.layer}
@@ -59,6 +99,7 @@ export function TiledBackground(props: TiledBackgroundProps) {
                     backgroundImage: `url(${generated_patterns[index].src})`,
                     backgroundSize: `${size}px ${size}px`,
                     backgroundRepeat: `repeat`,
+                    filter,
                     /* TODO: !!! ACRY all background-image should have background-color fallback */
                 }}
             ></div>
@@ -90,21 +131,22 @@ export function TiledBackground(props: TiledBackgroundProps) {
             ></div>
             */}
 
-            {/* 
             <div
                 className={styles.layer}
                 style={{
                     zIndex: 1000,
-                    backgroundColor: `rgba(0, 0, 0,1)`,
-                    // backgroundColor: `rgba(25, 13, 78, 0.9)`,
+                    backgroundColor: color,
+                    opacity: colorOpacity,
                 }}
             ></div>
-            */}
         </div>
     );
 }
 
 /**
- * TODO: Extract background picker from this to separate LIB
+ * TODO: [🌾] Separate testing and usage into components
+ * TODO: !!! Figure out the best mask according to choosen background
+ * TODO: Make this truly on top (now is for example behind the footer despite it is fixed)
+ * TODO: [🌾] Extract background picker from this to separate LIB
  * TODO: LIB xyzt: Make loop via Vector.someMethodForEach((x,y)=>...) instead
  */
