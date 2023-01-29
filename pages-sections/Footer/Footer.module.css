@@ -33,12 +33,3 @@
     list-style: none;
     margin: 0 10px;
 }
-
-/* TODO: Should be ul->li->a OR ul->a->li */
-.footer ul li a {
-    /*/
-    outline: 1px dotted red; /**/
-
-    display: inline;
-    color: white;
-}

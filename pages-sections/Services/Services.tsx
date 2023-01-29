@@ -34,7 +34,7 @@ export function Services() {
                     <Item>
                         <Item.Title>Talk</Item.Title>
                         <Item.Description>
-                            {/* TODO: !!! Text should be selectable even inside of <a> */}I am able to present an
+                            I am able to present an
                             overview of the different technologies and their benefits and drawbacks.
                         </Item.Description>
                         <Item.Image>
@@ -61,8 +61,10 @@ export function Services() {
 }
 
 /**
- * TODO: !!! Examples how can I help you
+ * TODO: Make pages internall 
+ * TODO: Text should be selectable even inside of <a>
+ * TODO:  Examples how can I help you
  * TODO: Maybe split every item into separate file component
- * TODO: !!! Smooth scrolling + highlighting of the section
+ * TODO: After scrolling highlighting of the section
  * TODO: Rename to HowCanIHelpYou OR Better
  */

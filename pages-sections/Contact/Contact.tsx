@@ -39,7 +39,3 @@ export function Contact() {
         </Section>
     );
 }
-
-/**
- * TODO: !!! Style + filter
- */

@@ -59,7 +59,7 @@ async function generateProjectsLibrary({ isCommited }: { isCommited: boolean }) 
     for (const { titleMarkdown, bodyMarkdown } of sections) {
         const title = markdownToTxt(titleMarkdown);
 
-        // TODO: !!! Find also the links and replace
+        // TODO:  Find also the links and replace
 
         let imagesMatch = bodyMarkdown.matchAll(/\[!\[(?<alt>.*?)\]\((?<src>.*?)\)\]\((?<href>.*?)\)/g);
         const images: Array<{ src: string; alt: string; href: string }> = Array.from(imagesMatch).map(
@@ -108,7 +108,6 @@ async function generateProjectsLibrary({ isCommited }: { isCommited: boolean }) 
 
         // TODO: Use alt in generated component
         // TODO: Put filename into this import name .replace(/\.[a-z0-9]+$/, ''
-        // TODO: !!! Text should be selectable even inside of <a>
 
         const projectFileContent = await prettify(`
 

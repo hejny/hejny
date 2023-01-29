@@ -8,7 +8,3 @@ interface ItemsProps {
 export function Items({ children }: ItemsProps) {
     return <div className={styles.items}>{children}</div>;
 }
-
-/**
- * TODO: !!! Hover of links
- */

@@ -8,14 +8,18 @@
     src: url(../public/fonts/Oswald/Oswald-VariableFont_wght.ttf);
 }
 
+html {
+    color-scheme: dark;
+    image-rendering: smooth;
+
+    scroll-behavior: smooth;
+    scroll-padding-top: 10px;
+}
+
 body {
     background-color: #121121 /* <- TODO: Color to config */;
     color: white;
     font-family: 'Oswald', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-* {
-    image-rendering: smooth;
 }
 
 /* TODO: [🎨] ACRY all colors in one place HERE */

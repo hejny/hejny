@@ -58,7 +58,7 @@
 }
 
 .page main h1 {
-    /* TODO: !!! h1 should be in header*/
+    /* TODO: h1 should be semantically in <header/> */
 
     /*/
     outline: 1px dotted purple;
@@ -77,7 +77,7 @@
 }
 
 .page main p {
-    /* TODO: !!! perex should be in header*/
+    /* TODO: perex should be semantically in <header/> */
 
     /*/
     outline: 1px dotted purple;
@@ -96,4 +96,13 @@
 
     grid-column: 1 / span 3;
     grid-row: 5 / span 1;
+}
+
+.page a {
+    color: white;
+    text-decoration: none;
+}
+
+.page a:hover {
+    color: rgb(165, 159, 159);
 }
