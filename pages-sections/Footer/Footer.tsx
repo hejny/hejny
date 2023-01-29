@@ -1,4 +1,3 @@
-
 import { DisplayOn } from '../../components/DisplayOn/DisplayOn';
 import styles from './Footer.module.css';
 
@@ -30,7 +29,6 @@ export function Footer() {
 
 /**
  * TODO: !!! Make meaningfull footer
- * TODO: !!! Dynamic year in copyright
- * TODO: !!! Link to MidJourney
- * TODO: !!! Link to GitHub
+ * TODO: Link to MidJourney + * generated with MidJourney
+ * TODO: Link to GitHub
  */

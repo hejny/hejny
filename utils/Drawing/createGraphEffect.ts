@@ -11,12 +11,12 @@ export function createGraphEffect<TElement extends HTMLElement>(formula: {
         return Registration.create(
             async (
                 {
-                    /* !!! LIB destroyable @@@addSubdestroyable */
+                    /* TODO: LIB: destroyable @@addSubdestroyable */
                 },
             ) => {
                 await forTime(1000);
 
-                // !!! await forDocumentReady();
+                // TODO: await forDocumentReady();
                 //  console.log(element.getBoundingClientRect());
                 const origin = Vector.fromObject(window, ['pageXOffset', 'pageYOffset'])
                     .add(Vector.fromObject(element.getBoundingClientRect(), ['x', 'y']))

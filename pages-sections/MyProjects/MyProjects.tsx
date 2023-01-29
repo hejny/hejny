@@ -27,7 +27,3 @@ export function MyProjects() {
         </Section>
     );
 }
-
-/**
- * TODO: !!! Add links
- */

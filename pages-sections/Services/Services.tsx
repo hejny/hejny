@@ -44,7 +44,6 @@ export function Services() {
                 </a>
 
                 <a href="#contact">
-                    {/* TODO: !!! Interactivity here should be on project Collboard */}
                     <Item>
                         <Item.Title>Prototyping</Item.Title>
                         <Item.Description>
@@ -65,5 +64,5 @@ export function Services() {
  * TODO: !!! Examples how can I help you
  * TODO: Maybe split every item into separate file component
  * TODO: !!! Smooth scrolling + highlighting of the section
- * TODO: !!! Rename to HowCanIHelpYou OR Better
+ * TODO: Rename to HowCanIHelpYou OR Better
  */

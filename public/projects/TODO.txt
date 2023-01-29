@@ -3,4 +3,4 @@ TODO: [👣] Why is here broken hot-reload and you need to restart next dev to r
 TODO: MJ images should be as original name <- [🛹] Maybe some BPE script for this
 TODO: Get images of original quality (as png) <- [🛹] Maybe some BPE script for this
 TODO: collboard-geography-2.jpeg has ugly horizonal line <- [🛹] Maybe some BPE script for this
-TODO: !!! Make cleanup of all assets in one commit
+TODO: Make cleanup of all unused assets in one commit

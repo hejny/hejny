@@ -17,11 +17,10 @@ const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
     return (
-        // TODO: !!! Change from boilerplate
         <>
             <Head>
-                <title>🧙‍♂️ Rapid prototyping wizard !!!</title>
-                <meta name="description" content="!!!" />
+                <title>🧙‍♂️ Rapid prototyping wizard @@@</title>
+                <meta name="description" content="@@@" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
@@ -43,7 +42,7 @@ export default function Home() {
 
                     <MyProjects />
                     <Hacking />
-                    {/* TODO: !!! <Reference /> */}
+                    {/* TODO: <Reference /> */}
                     <Contact />
                 </main>
 
@@ -56,13 +55,10 @@ export default function Home() {
 }
 
 /**
- * TODO: !!! Do not oversize right border
- * TODO: !!! Debug mode for grid
- * TODO: !!! Custom 404 page
- * TODO: !!! * generated with MidJourney
+ * TODO: Custom 404 page
  * TODO: The best way to import the fonts
- * TODO: !!! Add Google Analytics
- * TODO: !!! Add cookies icon
- * TODO: !!! Add AMP capability
- * TODO: !!! Add Preview image for Facebook, Facebook App/Page, Twitter, Instagram, OG images, description and keywords
+ * TODO: Add Google Analytics
+ * TODO: Add cookies icon
+ * TODO: Add AMP capability
+ * TODO: Add Preview image for Facebook, Facebook App/Page, Twitter, Instagram, OG images, description and keywords
  */

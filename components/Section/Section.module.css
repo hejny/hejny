@@ -2,6 +2,10 @@
     margin-top: 50px;
 }
 
+.section:last-child {
+    margin-bottom: 50px;
+}
+
 .section > a {
     color: inherit;
     text-decoration: inherit;

@@ -4,7 +4,7 @@
     padding-left: 5px;
     padding-right: 5px;
 
-    background-color: burlywood /* <- TODO: !!! ACRY all colors in one place */;
-    color: black /* <- TODO: !!! ACRY all colors in one place */;
+    background-color: burlywood /* <- [🎨] */;
+    color: black /* <- [🎨] */;
     border-radius: 3px;
 }

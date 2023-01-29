@@ -5,7 +5,7 @@ import { MidjourneyLink } from '../MidjourneyLink/MidjourneyLink';
 import styles from './TiledBackground.module.css';
 
 interface TiledBackgroundProps {
-    // !!! Pass props
+    // TODO: [🌾] Pass props
     // size: Vector;
 }
 
@@ -100,7 +100,6 @@ export function TiledBackground(props: TiledBackgroundProps) {
                     backgroundSize: `${size}px ${size}px`,
                     backgroundRepeat: `repeat`,
                     filter,
-                    /* TODO: !!! ACRY all background-image should have background-color fallback */
                 }}
             ></div>
 
@@ -113,7 +112,6 @@ export function TiledBackground(props: TiledBackgroundProps) {
                     opacity: 0.5,
                     backgroundSize: `100px 100px`,
                     backgroundRepeat: `repeat`,
-                    /* TODO: !!! ACRY all background-image should have background-color fallback * /
                 }}
             ></div>
             */}
@@ -126,7 +124,6 @@ export function TiledBackground(props: TiledBackgroundProps) {
                     backgroundImage: `url(${tile_pattern.src})`,
                     backgroundSize: `350px 350px`,
                     backgroundRepeat: `repeat`,
-                    /* TODO: !!! ACRY all background-image should have background-color fallback * /
                 }}
             ></div>
             */}
@@ -145,7 +142,7 @@ export function TiledBackground(props: TiledBackgroundProps) {
 
 /**
  * TODO: [🌾] Separate testing and usage into components
- * TODO: !!! Figure out the best mask according to choosen background
+ * TODO: Figure out the best mask according to choosen background
  * TODO: Make this truly on top (now is for example behind the footer despite it is fixed)
  * TODO: [🌾] Extract background picker from this to separate LIB
  * TODO: LIB xyzt: Make loop via Vector.someMethodForEach((x,y)=>...) instead

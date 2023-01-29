@@ -15,7 +15,7 @@ export function Reference() {
                     <Item>
                         <Item.Title>Birds</Item.Title>
                         <Item.Description>
-                            Lorem <b>ipsum d!!!olor sit amet consectetur adipisicing elit</b>. Maxime mollitia
+                            Lorem <b>ipsum dolor sit amet consectetur adipisicing elit</b>. Maxime mollitia
                         </Item.Description>
                         <Item.Image>
                             <ProjectPlaceholder />
@@ -24,7 +24,7 @@ export function Reference() {
                     <Item>
                         <Item.Title>Birds.cz</Item.Title>
                         <Item.Description>
-                            Lorem <b>ipsum d!!!olor sit amet consectetur adipisicing elit</b>. Maxime mollitia
+                            Lorem <b>ipsum dolor sit amet consectetur adipisicing elit</b>. Maxime mollitia
                         </Item.Description>
                         <Item.Image>
                             <ProjectPlaceholder />
@@ -37,7 +37,7 @@ export function Reference() {
 }
 
 /**
- * TODO: !!! Round people
- * TODO: !!! Ask for reference
- * TODO: !!! Add links to multiple socials
+ * TODO: Round people
+ * TODO: Ask for reference
+ * TODO: Add links to multiple socials
  */

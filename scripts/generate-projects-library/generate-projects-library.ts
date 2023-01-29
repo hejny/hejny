@@ -36,8 +36,6 @@ async function generateProjectsLibrary({ isCommited }: { isCommited: boolean }) 
         throw new Error(`Working tree is not clean`);
     }
 
-    // !!! Replace all "projects"
-
     const rootDir = join(__dirname, '../../');
     const projectsComponentsDir = join(rootDir, 'public/projects');
     const projectsDocumentFilePath = join(projectsComponentsDir, 'projects.md');
@@ -108,11 +106,10 @@ async function generateProjectsLibrary({ isCommited }: { isCommited: boolean }) 
             continue;
         }
 
-        // TODO: !!! Remove use tags in body
         // TODO: Use alt in generated component
         // TODO: Put filename into this import name .replace(/\.[a-z0-9]+$/, ''
         // TODO: !!! Text should be selectable even inside of <a>
-        // TODO: !!! Antialiasing of the images
+
 
         const projectFileContent = await prettify(`
 

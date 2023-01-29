@@ -29,7 +29,6 @@ export function drawingEffect<TElement extends HTMLElement>(element: TElement): 
         }
 
         // TODO: Do some nice over+beforeshoot and make it symetric
-        // TODO: !!! Do not interact on text
         // await forTime(100);
 
         // TODO: Make here a propper queue
@@ -39,5 +38,5 @@ export function drawingEffect<TElement extends HTMLElement>(element: TElement): 
         }
     });
 
-    return Registration.void(/* TODO: !!! Same as in graphEffect */);
+    return Registration.void(/* TODO: !! Same as in graphEffect */);
 }
