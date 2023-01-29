@@ -5,7 +5,7 @@ import styles from './Contact.module.css';
 export function Contact() {
     return (
         <Section id="contact">
-            <h2>Contact me!</h2>
+            <h2>Get in touch!</h2>
 
             <div className={styles.vcard}>
                 <Image
@@ -41,5 +41,5 @@ export function Contact() {
 }
 
 /**
- * TODO: !!! Style
+ * TODO: !!! Style + filter
  */
