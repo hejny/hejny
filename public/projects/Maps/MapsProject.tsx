@@ -11,7 +11,7 @@ import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
 import { effectToRef } from '../../../utils/Drawing/effectToRef';
 import { mapsEffect } from '../../../utils/Drawing/projectsEffectsLibrary';
-import background from './outline.svg';
+import background from './europe.svg';
 
 /**
  * Presentation of project Maps

@@ -43,7 +43,7 @@ Most interesting events in Czechia in Tech comunity
 A have big interest in Czech Tech&startul community in general.
 I have organized,spoken on, mentored a lot of events and hackathons
 
-[![@@@](/public/projects/CzechEvents/Pavol_Hejn_Coloring_book_black_and_white_illustration_outline_o_1a4c414f-0033-4d76-942d-be2b3b171834.svg)](https://czech.events/)
+[![@@@](/public/projects/CzechEvents/Pavol_Hejn_Simple_pen_sketch_of_A_have_big_interest_in_Czech_Te_62acce49-a9db-4d36-9199-d606551f463c.svg)](https://czech.events/)
 
 ## Functions
 
@@ -81,14 +81,14 @@ I am working on several OpenSource libraries like
 
 Modul for Collboard to learn the geography. It was the developed in kooperation with capital city of Prague
 
-[![@@@](/public/projects/Maps/outline.svg)](https://github.com/collboard/map)
+[![@@@](/public/projects/Maps/europe.svg)](https://github.com/collboard/map)
 
 ## Modules
 
 Software development kit to extend The Collboard, The virtual whiteboard.
 A successful design to split up big application into hundreds multiple indopendent codebases.
 
-[![@@@](/public/projects/Modules/Pavol_Hejn_code_as_a_coloring_book_black_and_white_illustration_a8a23039-8249-4844-8bea-937a31d471e5.svg)](https://github.com/collboard/modules-sdk)
+[![@@@](/public/projects/Modules/placeholder.svg)](https://github.com/collboard/modules-sdk)
 
 ## Towns
 

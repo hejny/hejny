@@ -51,7 +51,10 @@
     grid-row: 2 / span 3;
     text-align: center;
     color: white;
-    text-shadow: #ff5500 0px 0px 10px;
+}
+.page h1,
+.page h2 {
+    text-shadow: #ff9912 0px 0px 25px;
 }
 
 .page main h1 {
@@ -62,7 +65,7 @@
     /**/
 
     font-family: 'PassionsConflict', Helvetica Neue;
-    font-size: 60px;
+    font-size: 70px /* <- [🔠] Make one place for font-size */;
 
     /* TODO: DRY */
     margin: 0;

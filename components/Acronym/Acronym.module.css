@@ -1,5 +1,20 @@
 .acronym {
-    /* TODO: Use or remove empty css */
+    /*/
+    outline: 1px dotted red;
+    /**/
+
+    display: inline-flex;
+
+    align-items: start;
+    justify-content: center;
+    flex-flow: column;
+
+    height: 1em;
+
+    line-height: 1em;
+}
+
+.word {
 }
 
 .initial {

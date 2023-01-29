@@ -17,7 +17,8 @@
     margin: 20px;
     border-radius: 100%;
 
-    border: 5px solid #ff9912;
+    /*border: 5px solid #ff9912;*/
+    box-shadow: #ff981231 0px 0px 15px;
 }
 
 .vcard ul {

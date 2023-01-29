@@ -87,8 +87,7 @@
 
     padding: 5px;
     border-radius: 5px /* <- TODO: Unite border-radius ACRY*/;
-    font-size: 30px;
-    text-shadow: none;
+    font-size: 30px /* <- [🔠] Make one place for font-size */;
     /*background-color: rgba(56, 74, 150, 0.486); <- TODO: Unite glass effect ACRY */
 
     backdrop-filter: blur(10px) /* <- TODO: Unite glass effect ACRY */;
@@ -97,10 +96,12 @@
     opacity: 0.9;
 }
 
+/*
 .item:hover .overlay {
     background-color: rgba(0, 0, 0, 0);
     pointer-events: none;
 }
+*/
 
 .item:hover .title .inner {
     background-color: rgba(0, 0, 0, 0);
@@ -121,7 +122,14 @@
 
     text-align: left;
     padding: 5px;
-    font-size: 15px;
+    font-size: 15px /* <- [🔠] Make one place for font-size */;
+
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.3s ease-in-out /* <- TODO: Unite transition effects ACRY */;
+}
+
+.item:hover .description {
+    color: white;
 }
 
 .item .description a::before {

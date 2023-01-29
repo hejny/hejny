@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: #000 /* <- TODO: Color to config */;
+    background-color: #121121 /* <- TODO: Color to config */;
     color: white;
     font-family: 'Oswald', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
