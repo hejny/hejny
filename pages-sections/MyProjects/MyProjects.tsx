@@ -16,11 +16,11 @@ export function MyProjects() {
             <p>Here are some of the larger projects that I have been involved in:</p>
             <Items>
                 <Shuffle>
-                    <BirdsProject />
                     <TownsProject />
+                    <BirdsProject />
                     <CollboardProject />
-                    <HEduProject />
                     <CzechEventsProject />
+                    <HEduProject />
                 </Shuffle>
                 <YourProjectProject />
             </Items>
