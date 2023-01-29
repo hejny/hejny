@@ -1,4 +1,4 @@
-.tiledBackground /* <- TODO: Probbably name ACRY main container classes of the component as the component name - TiledBackground */ {
+.tiledBackground /* <- TODO: Probbably name ACRY main container classes of the component as the component name - TiledBackgroundPlayground */ {
     /*/
     outline: 1px dotted yellow;
     /**/
@@ -29,4 +29,22 @@
     grid-row: 1 / span 1;
 }
 
-/* TODO: TiledBackground and TiledBackgroundPlayground can share a css module*/
+.picker {
+    display: block;
+    z-index: 999999999999;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    color: black;
+    font-size: 12px;
+
+    width: 250px;
+    height: 150px;
+
+    align-items: flex-end;
+}
+
+.pickerControls {
+}

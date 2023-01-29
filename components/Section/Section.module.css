@@ -2,6 +2,10 @@
     margin-top: 50px;
 }
 
+.section:nth-child(2) {
+    margin-top: 100px;
+}
+
 .section:last-child {
     margin-bottom: 50px;
 }
