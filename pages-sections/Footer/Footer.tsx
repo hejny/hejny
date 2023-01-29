@@ -6,7 +6,7 @@ export function Footer() {
         <div className={styles.footer}>
             <ul>
                 <li>
-                    © 2020 — {new Date().getFullYear()} <a href="https://pavolhejny.com">Pavol Hejný</a>
+                    © {new Date().getFullYear()} <a href="https://pavolhejny.com">Pavol Hejný</a>
                 </li>
 
                 <li>
