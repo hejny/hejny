@@ -51,7 +51,7 @@ Modul for Collboard to teach the math in visual way.
 
 <!--TODO: create study cases of topics I worked on, graphs, fractals,...-->
 
-[![@@@](/public/projects/Functions/collboard-function-builder-blank-dark.png)](https://github.com/collboard/function-builder)
+[![@@@](/public/projects/Functions/graph-plot.svg)](https://github.com/collboard/function-builder)
 
 ## H-edu
 

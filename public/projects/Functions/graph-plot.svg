@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- TODO: !!! Name as original -->
-
 <svg
-     version="1.1"
-     id="Layer_1"
-     x="0px"
-     y="0px"
-     width="3000"
-     viewBox="0 0 3000 2000"
-     enable-background="new 0 0 1024 672"
-     xml:space="preserve"
-     sodipodi:docname="outline.svg"
-     height="2000"
-     inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
-     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-     xmlns="http://www.w3.org/2000/svg"
-     xmlns:svg="http://www.w3.org/2000/svg">
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   width="3000"
+   viewBox="0 0 3000 2000"
+   enable-background="new 0 0 1024 672"
+   xml:space="preserve"
+   sodipodi:docname="graph-plot.svg"
+   height="2000"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
   <defs
    id="defs41" />
   <sodipodi:namedview
@@ -29,23 +27,23 @@
    inkscape:pagecheckerboard="0"
    inkscape:deskcolor="#d1d1d1"
    showgrid="false"
-   inkscape:zoom="0.24832917"
-   inkscape:cx="783.23462"
-   inkscape:cy="1530.227"
+   inkscape:zoom="0.17559524"
+   inkscape:cx="2639.5932"
+   inkscape:cy="296.13559"
    inkscape:window-width="1920"
    inkscape:window-height="1017"
-   inkscape:window-x="-8"
-   inkscape:window-y="1072"
+   inkscape:window-x="3"
+   inkscape:window-y="-8"
    inkscape:window-maximized="1"
    inkscape:current-layer="Layer_1" />
   <defs
    id="defs429">
     <filter
    id="glow"
-   x="-1.4723605"
-   y="-2.1639"
-   width="3.9432114"
-   height="5.3311136">
+   x="-0.011181987"
+   y="-0.017259153"
+   width="1.022364"
+   height="1.0345183">
       <feGaussianBlur
    class="blur"
    result="coloredBlur"
@@ -72,7 +70,8 @@
   <path
    id="path2"
    vector-effect="non-scaling-stroke"
-   style="fill:none;stroke:#ff9912;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;filter:url(#glow)"
-   sodipodi:nodetypes="czc"
-   d="m 1496.5407,999.2974 c -3.7367,4.0689 10.1263,-0.47075 7.1543,2.9237 -2.972,3.3945 -2.2649,-10.00685 -7.1543,-2.9237" />
+   style="fill:none;stroke:#ff9912;stroke-width:1.64064;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;filter:url(#glow)"
+   sodipodi:nodetypes="cccc"
+   d="M 1107.579,633.78804 V 1237.5442 M 641.63671,935.66614 h 931.88449"
+   transform="matrix(3.0475878,0,0,3.0475878,-1875.4442,-1851.5247)" />
 </svg>

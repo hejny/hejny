@@ -1,10 +1,9 @@
 import { createGraphEffect } from './createGraphEffect';
-import { drawingEffect } from './drawingEffect';
 import { noEffect } from './noEffect';
 
 export const allMyProjectsEffect = noEffect;
 export const birdsEffect = noEffect;
-export const collboardEffect = drawingEffect;
+export const collboardEffect = noEffect; // TODO: drawingEffect;
 export const czechEventsEffect = noEffect;
 export const functionsEffect = createGraphEffect({
     range: {
