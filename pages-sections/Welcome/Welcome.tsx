@@ -12,8 +12,8 @@ export function Welcome() {
             <p>
                 <Acronym>Virtual Reality</Acronym>, <Acronym>Augmented Reality</Acronym>,{' '}
                 <Acronym abbr="XR">Extended Reality</Acronym>, GraphQL <Acronym>Progressive Web Apps</Acronym>,{' '}
-                <Acronym>Single-page Apps</Acronym>,<Acronym>Artificial Intelligence</Acronym>,{' '}
-                <Acronym>Machine Learning</Acronym>, Smart contracts, Web3, Chatbots… 🤯
+                <Acronym abbr="SPA">Single-page Apps</Acronym>,<Acronym>Artificial Intelligence</Acronym>,{' '}
+                <Acronym>Machine Learning</Acronym>, Blockchain, Smart contracts, Web3, Chatbots… 🤯
             </p>
 
             <p>
