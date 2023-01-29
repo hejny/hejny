@@ -39,8 +39,9 @@ async function generatePatternsLibrary({ isCommited }: { isCommited: boolean }) 
 
     const patterns = (
         await glob(join(patternsDir, '*.png' /* <- TODO: Maybe do not hardcode PNGs */).split('\\').join('/'))
-    ).map((entityPath) => {
-        const entityName = normalizeTo_snake_case(basename(entityPath)); /* <- TODO: Probbably some beter name */
+    ).map((entityPath, index) => {
+        const entityName =
+            normalizeTo_snake_case(basename(entityPath)) + '_' + index; /* <- TODO: Probbably some beter name */
         return { entityName, entityPath };
     }); /*  TODO: Consistent order> .sort(()=>{
 

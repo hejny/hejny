@@ -12,10 +12,10 @@ interface TiledBackgroundPlaygroundProps {
 export function TiledBackgroundPlayground(props: TiledBackgroundPlaygroundProps) {
     // const { size } = props;
 
-    const [size, setSize] = useState(350 /* <- TODO: [🌾] This should be passed as prop */);
+    const [size, setSize] = useState(450 /* <- TODO: [🌾] This should be passed as prop */);
 
     // Good are: 12,26,27,51,53,67,68,72,81
-    const [index, setIndexRaw] = useState(27 - 1 /* <- TODO: [🌾] This should be passed as prop */);
+    const [index, setIndexRaw] = useState(84 - 1 /* <- TODO: [🌾] This should be passed as prop */);
 
     // TODO: Add some prefix like tintColor
     const [color, setColor] = useState('#0f0a05' /* <- TODO: [🌾] This should be passed as prop */);
@@ -46,6 +46,7 @@ export function TiledBackgroundPlayground(props: TiledBackgroundPlaygroundProps)
                 <div className={styles.picker}>
                     <div className={styles.pickerControls}>
                         <button
+                            accessKey={'a'}
                             onClick={() => {
                                 setPlaying(false);
                                 setIndex(index - 1);
@@ -55,6 +56,7 @@ export function TiledBackgroundPlayground(props: TiledBackgroundPlaygroundProps)
                         </button>
                         {`${index + 1} / ${generated_patterns.length}`}
                         <button
+                            accessKey={'d'}
                             onClick={() => {
                                 setPlaying(false);
                                 setIndex(index + 1);
@@ -63,7 +65,9 @@ export function TiledBackgroundPlayground(props: TiledBackgroundPlaygroundProps)
                             ▶
                         </button>
 
-                        <button onClick={() => setPlaying(!isPlaying)}>{isPlaying ? '⏸' : '▶'}</button>
+                        <button accessKey={'p'} onClick={() => setPlaying(!isPlaying)}>
+                            {isPlaying ? '⏸' : '▶'}
+                        </button>
 
                         <input
                             type={'number'}

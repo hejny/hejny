@@ -1,5 +1,6 @@
 import cityscapeBottom from '../../public/patterns/splitted/Pavol_Hejn_A_tiled_background_featuring_a_futuristic_cityscape__d68f41f8-1374-4a58-9cf3-36e9ad9f9d03.bottom.png';
 import cityscapeTop from '../../public/patterns/splitted/Pavol_Hejn_A_tiled_background_featuring_a_futuristic_cityscape__d68f41f8-1374-4a58-9cf3-36e9ad9f9d03.top.png';
+import { TiledBackgroundPlayground } from '../TiledBackgroundPlayground/TiledBackgroundPlayground';
 import styles from './TiledBackground.module.css';
 
 export function TiledBackground() {
@@ -13,6 +14,7 @@ export function TiledBackground() {
                     backgroundSize: `350px 350px`,
                     backgroundPosition: `center top`,
                     backgroundRepeat: `repeat no-repeat`,
+                    opacity: 0,
                 }}
             ></div>
 
@@ -24,14 +26,6 @@ export function TiledBackground() {
                     backgroundSize: `350px 350px`,
                     backgroundPosition: `center bottom`,
                     backgroundRepeat: `repeat no-repeat`,
-                }}
-            ></div>
-
-            <div
-                className={styles.layer}
-                style={{
-                    zIndex: 1000,
-                    backgroundColor: '#000',
                     opacity: 0,
                 }}
             ></div>
@@ -39,10 +33,21 @@ export function TiledBackground() {
             <div
                 className={styles.layer}
                 style={{
-                    zIndex: 10,
-                    backgroundColor: '#000',
+                    zIndex: 1000,
+                    backgroundColor: 'rgb(29 23 37)',
+                    opacity: 1,
                 }}
             ></div>
+
+            <div
+                className={styles.layer}
+                style={{
+                    zIndex: 10,
+                    opacity: 0,
+                }}
+            >
+                <TiledBackgroundPlayground />
+            </div>
         </div>
     );
 }
