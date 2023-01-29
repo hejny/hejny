@@ -21,7 +21,7 @@ import background from './Pavol_Hejn_coloring_book_black_and_white_illustration_
  */
 export function VrArProject() {
     return (
-        <a href="#!!!" target="_blank" rel="noreferrer">
+        <a href="https://pavolhejny.com/documents/projects.html#-vr-paint" target="_blank" rel="noreferrer">
             <Item>
                 <Item.Title>VR/AR</Item.Title>
                 <Item.Description>

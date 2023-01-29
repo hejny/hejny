@@ -105,7 +105,7 @@ I have worked on multiple projects for virtuen augmented reality imosu Ambassado
 I have presented this
 DevConf, CzechVRFest, Hackuj Stát
 
-[![@@@](/public/projects/VrAr/Pavol_Hejn_coloring_book_black_and_white_illustration_outline_o_850cbc2d-9088-4113-bdbc-8fbf566e170c.svg)](#!!!)
+[![@@@](/public/projects/VrAr/Pavol_Hejn_coloring_book_black_and_white_illustration_outline_o_850cbc2d-9088-4113-bdbc-8fbf566e170c.svg)](https://pavolhejny.com/documents/projects.html#-vr-paint)
 
 <!--
 ![@@@](/public/projects/webvr.jpg)

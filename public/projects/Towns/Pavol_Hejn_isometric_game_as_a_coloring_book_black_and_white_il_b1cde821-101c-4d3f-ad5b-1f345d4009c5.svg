@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- TODO: !!! Name as original -->
 
 <svg
-   version="1.1"
-   id="Layer_1"
-   x="0px"
-   y="0px"
-   width="3000"
-   viewBox="0 0 3000 2000"
-   enable-background="new 0 0 1024 672"
-   xml:space="preserve"
-   sodipodi:docname="outline.svg"
-   height="2000"
-   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
+     version="1.1"
+     id="Layer_1"
+     x="0px"
+     y="0px"
+     width="3000"
+     viewBox="0 0 3000 2000"
+     enable-background="new 0 0 1024 672"
+     xml:space="preserve"
+     sodipodi:docname="outline.svg"
+     height="2000"
+     inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
   <defs
    id="defs41"><filter
      id="glow-9"
