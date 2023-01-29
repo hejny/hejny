@@ -30,7 +30,7 @@ export class Drawing extends Destroyable implements IDestroyable {
 
         // TODO: To method  setStyle
         this.pathElement.style.stroke = '#ff9912';
-        this.pathElement.style.strokeWidth = '5px';
+        this.pathElement.style.strokeWidth = '3px';
         this.pathElement.style.fill = 'none';
         // Redundant> this.pathElement.style.fillOpacity = '1';
         // Redundant> this.pathElement.style.strokeOpacity = '0';

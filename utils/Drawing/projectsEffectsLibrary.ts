@@ -21,7 +21,7 @@ export const functionsEffect = createGraphEffect({
         return { x, y };
     },
 });
-export const hEduEffect = noEffect;
+export const hEduEffect = noEffect; // TODO: squaresEffect;
 export const librariesEffect = noEffect;
 export const mapsEffect = noEffect;
 export const modulesEffect = noEffect;

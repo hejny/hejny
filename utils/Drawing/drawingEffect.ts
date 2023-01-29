@@ -1,4 +1,5 @@
 import { IDestroyable, Registration } from 'destroyable';
+import { forTime } from 'waitasecond';
 import { Vector } from 'xyzt';
 import { Drawing } from './Drawing';
 
@@ -29,7 +30,7 @@ export function drawingEffect<TElement extends HTMLElement>(element: TElement): 
         }
 
         // TODO: Do some nice over+beforeshoot and make it symetric
-        // await forTime(100);
+        await forTime(1);
 
         // TODO: Make here a propper queue
         if (drawing && !drawing.isDestroyed) {

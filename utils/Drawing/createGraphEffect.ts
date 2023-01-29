@@ -18,17 +18,24 @@ export function createGraphEffect<TElement extends HTMLElement>(formula: {
 
                 // TODO: await forDocumentReady();
                 //  console.log(element.getBoundingClientRect());
-                const origin = Vector.fromObject(window, ['pageXOffset', 'pageYOffset'])
-                    .add(Vector.fromObject(element.getBoundingClientRect(), ['x', 'y']))
-                    .add(Vector.fromObject(element.getBoundingClientRect(), ['width', 'height']).half());
+                let origin: Vector;
+
+                function resize() {
+                    origin = Vector.fromObject(window, ['pageXOffset', 'pageYOffset'])
+                        .add(Vector.fromObject(element.getBoundingClientRect(), ['x', 'y']))
+                        .add(Vector.fromObject(element.getBoundingClientRect(), ['width', 'height']).half());
+                }
+
+                resize();
+
                 let drawing = new Drawing(element);
 
                 /*
-            drawing
-                .addPoint(origin)
-                .addPoint(origin.add({ x: 5, y: 5 }))
-                .addPoint(origin.add({ x: -5, y: 5 }));
-            */
+                drawing
+                    .addPoint(origin)
+                    .addPoint(origin.add({ x: 5, y: 5 }))
+                    .addPoint(origin.add({ x: -5, y: 5 }));
+                */
 
                 function graph(seed: Vector) {
                     drawing.clean();
@@ -67,6 +74,11 @@ export function createGraphEffect<TElement extends HTMLElement>(formula: {
 
                     seedPosition = seedPosition.add(Vector.fromObject(event, ['movementX', 'movementY']));
 
+                    graph(seedPosition);
+                });
+
+                window.addEventListener('resize', (event) => {
+                    resize();
                     graph(seedPosition);
                 });
 
