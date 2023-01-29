@@ -56,7 +56,7 @@ Modul for Collboard to teach the math in visual way.
 
 Online pupil books for schools and teachers with interactive playground and misc tools for teachers
 
-[![@@@](/public/projects/Hedu/HEdu-screenshot.png)](https://www.h-edu.cz/)
+[![@@@](/public/projects/Hedu/outline.svg)](https://www.h-edu.cz/)
 
 ## Libraries
 

@@ -11,7 +11,7 @@ import Image from 'next/image';
 import { Item } from '../../../components/Items/Item';
 import { effectToRef } from '../../../utils/Drawing/effectToRef';
 import { hEduEffect } from '../../../utils/Drawing/projectsEffectsLibrary';
-import background from './HEdu-screenshot.png';
+import background from './outline.svg';
 
 /**
  * !!!
