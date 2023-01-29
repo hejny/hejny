@@ -1,18 +1,16 @@
-
-
 .page {
     /*width: 100%;*/
 
     display: grid;
 
     grid-template-columns: 20vw 1fr 3fr 1fr 20vw;
-    grid-template-rows: 20vh 10vh 10vh auto minmax(17vh, 75px);
-
-    /* TODO: !!! Find optimal cave size Desktop 40vh; Mobile 20vh*/
+    grid-template-rows: calc(30vw + 10vh) 10vh 10vh auto minmax(17vh, 75px);
 
     align-items: stretch;
     justify-content: stretch;
 }
+
+/* TODO: Do not show white page scrollbar */
 
 @media only screen and (max-width: 1000px) {
     .page {
