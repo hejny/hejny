@@ -22,6 +22,8 @@
     grid-row: 1 / span 1;
 
     aspect-ratio: 3 / 2;
+
+    margin: -0px;
 }
 
 .item .imageContainer img {
@@ -35,12 +37,15 @@
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
-    transition: all 2s ease-in-out /* <- TODO: Unite transition effects ACRY */;
+
+    /* transition: all 2s ease-in-out /* <- TODO: Unite transition effects ACRY */
 }
 
+/*
 .item:hover .imageContainer div[style*='background-image'] {
     background-size: 200% 200%;
 }
+*/
 
 .item .overlay {
     /*/
