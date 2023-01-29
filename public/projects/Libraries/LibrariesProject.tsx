@@ -26,7 +26,7 @@ export function LibrariesProject() {
                 <Item.Title>Libraries</Item.Title>
                 <Item.Description>
                     <p>
-                        I 💜 Open Source. Every time I work on a project, I try to extract reusable parts into an
+                        I ❤ Open Source. Every time I work on a project, I try to extract reusable parts into an
                         independent library.
                     </p>
                 </Item.Description>

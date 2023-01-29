@@ -1,6 +1,5 @@
 # Hacking
 
-<!-- TODO: !!! Enhance texts https://www.deepl.com/write -->
 <!-- Note: In this file there are all URLs which will be converted into the hacking cases components -->
 <!-- TODO: Rename all outline.svg to original names -->
 
@@ -14,7 +13,7 @@ Discover my portfolio of projects and see my range of experience and expertise.
 
 <!-- [🛰] Tags: `Maps` -->
 
-A series of citizen science projects for the [Czech Society for Ornithology](https://www.birdlife.cz/).
+A series of citizen science projects for the Czech Society for Ornithology.
 
 <!--
 TODO: More about
@@ -25,7 +24,11 @@ Feeders
 
 ## Collboard
 
+Collboard is a customizable and modular online virtual whiteboard for all devices, suitable for education.
+
+<!--
 Collboard is an online virtual whiteboard that offers simplicity, creativity, and closeness to content. It's built with customization in mind, giving teachers the flexibility to build their own teaching paths. Collboard is also modular, allowing for various subjects and use cases to be combined. It's available on all devices and can be used for all forms of online collaboration, including education and beyond.
+-->
 
 <!-- [🛰] Tags: `Real time app` -->
 
@@ -33,7 +36,7 @@ Collboard is an online virtual whiteboard that offers simplicity, creativity, an
 
 ## Czech.events
 
-Czech Tech Community Newsletter: Stay updated on the most exciting events in the Czech tech scene. With a passion for tech and startups, I've organized, spoken at, and mentored many events and hackathons.
+Stay updated on the latest tech events in Czechia with the Czech Tech Community Newsletter. I bring expertise from organizing, speaking at, and mentoring events.
 
 [![Meetup](/public/projects/CzechEvents/Pavol_Hejn_Simple_pen_sketch_of_A_have_big_interest_in_Czech_Te_62acce49-a9db-4d36-9199-d606551f463c.svg)](https://czech.events/)
 
@@ -53,7 +56,7 @@ An online platform for schools and teachers with interactive materials and tools
 
 ## Libraries
 
-I 💜 Open Source.
+I ❤ Open Source.
 Every time I work on a project, I try to extract reusable parts into an independent library.
 
 [![Toolbox](/public/projects/Libraries/Pavol_Hejny_coloring_book_black_and_white_illustration_outline__b8c24f85-9ee6-4d9e-96d7-fe550fe78b9b.svg)](https://github.com/hejny?tab=repositories)

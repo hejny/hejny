@@ -26,11 +26,8 @@ export function CollboardProject() {
                 <Item.Title>Collboard</Item.Title>
                 <Item.Description>
                     <p>
-                        Collboard is an online virtual whiteboard that offers simplicity, creativity, and closeness to
-                        content. It&apos;s built with customization in mind, giving teachers the flexibility to build
-                        their own teaching paths. Collboard is also modular, allowing for various subjects and use cases
-                        to be combined. It&apos;s available on all devices and can be used for all forms of online
-                        collaboration, including education and beyond.
+                        Collboard is a customizable and modular online virtual whiteboard for all devices, suitable for
+                        education.
                     </p>
                 </Item.Description>
                 <Item.Image>

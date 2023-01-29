@@ -25,10 +25,7 @@ export function BirdsProject() {
             <Item>
                 <Item.Title>Birds</Item.Title>
                 <Item.Description>
-                    <p>
-                        A series of citizen science projects for the{' '}
-                        <a href="https://www.birdlife.cz/">Czech Society for Ornithology</a>.
-                    </p>
+                    <p>A series of citizen science projects for the Czech Society for Ornithology.</p>
                 </Item.Description>
                 <Item.Image>
                     <div
