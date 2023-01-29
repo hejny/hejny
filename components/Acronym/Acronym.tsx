@@ -1,23 +1,26 @@
 import styles from './Acronym.module.css';
 
 interface AcronymProps {
+    abbr?: string;
     children: string;
 }
 
 export function Acronym(props: AcronymProps) {
-    const { children } = props;
+    const { children, abbr } = props;
 
     const words = children.split(' ');
-    const acronym = words
-        .map((word, i) => {
-            return word.substring(0, 1).toUpperCase();
-        })
-        .join('');
+    const acronym =
+        abbr ||
+        words
+            .map((word, i) => {
+                return word.substring(0, 1).toUpperCase();
+            })
+            .join('');
 
     return (
-        <span className={styles.acronym} title={words.join(' ')}>
+        <abbr className={styles.acronym} title={words.join(' ')}>
             {acronym}
-        </span>
+        </abbr>
     );
 }
 

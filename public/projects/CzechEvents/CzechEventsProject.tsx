@@ -25,10 +25,10 @@ export function CzechEventsProject() {
             <Item>
                 <Item.Title>Czech.events</Item.Title>
                 <Item.Description>
-                    <p>Newsletter of Most interesting events in Czechia in Tech comunity</p>
                     <p>
-                        A have big interest in Czech Tech&amp;startul community in general. I have organized,spoken on,
-                        mentored a lot of events and hackathons
+                        Czech Tech Community Newsletter: Stay updated on the most exciting events in the Czech tech
+                        scene. With a passion for tech and startups, I&apos;ve organized, spoken at, and mentored many
+                        events and hackathons.
                     </p>
                 </Item.Description>
                 <Item.Image>
@@ -38,7 +38,7 @@ export function CzechEventsProject() {
                             backgroundImage: `url(${background.src})`,
                         }}
                     />
-                    {/* <Image alt="@@@" src={background} draggable="false" /> */}
+                    {/* <Image alt="Meetup" src={background} draggable="false" /> */}
                 </Item.Image>
             </Item>
         </a>

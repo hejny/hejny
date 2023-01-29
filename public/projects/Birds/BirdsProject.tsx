@@ -25,7 +25,10 @@ export function BirdsProject() {
             <Item>
                 <Item.Title>Birds</Item.Title>
                 <Item.Description>
-                    <p>A variety of projects focusing on citizenship science for the Czech Society of Ornithology</p>
+                    <p>
+                        A series of citizen science projects for the{' '}
+                        <a href="https://www.birdlife.cz/">Czech Society for Ornithology</a>.
+                    </p>
                 </Item.Description>
                 <Item.Image>
                     <div
@@ -34,7 +37,7 @@ export function BirdsProject() {
                             backgroundImage: `url(${background.src})`,
                         }}
                     />
-                    {/* <Image alt="@@@" src={background} draggable="false" /> */}
+                    {/* <Image alt="Bird outline" src={background} draggable="false" /> */}
                 </Item.Image>
             </Item>
         </a>

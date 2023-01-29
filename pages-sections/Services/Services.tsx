@@ -11,8 +11,12 @@ export function Services() {
         <Section id="services" className={styles.services}>
             <h2>How can I help you?</h2>
             <p>
-                I live by the new technologies. I will carry out you through the wilderness of the world of new,
-                emerging and disruptive technologies.
+                I specialise in building fully functional prototypes from scratch to proof of concept, staying ahead of
+                the latest technologies. Let me guide you through the ever-changing landscape of new, emerging and
+                disruptive technologies. Consulting I offer expert advice on various technologies, providing insightful
+                analysis of their benefits and limitations to help you make informed decisions. Speaking I provide
+                comprehensive overviews of various technologies, highlighting their advantages and disadvantages to
+                ensure a well-rounded understanding. Prototyping
             </p>
             <Items>
                 {/* Note: Not using <Shuffle/> here in the services section */}
@@ -21,8 +25,8 @@ export function Services() {
                     <Item>
                         <Item.Title>Consulting</Item.Title>
                         <Item.Description>
-                            I will talk to you about the different technologies and provide the advantages and
-                            disadvantages of each one.
+                            I offer expert advice on various technologies, providing insightful analysis of their
+                            benefits and limitations to help you make informed decisions.
                         </Item.Description>
                         <Item.Image>
                             <CaveOfIdeasInLightbulbWithTransparentLookThrImageXd3273ad0 />
@@ -32,10 +36,10 @@ export function Services() {
 
                 <a href="#contact">
                     <Item>
-                        <Item.Title>Talk</Item.Title>
+                        <Item.Title>Speaking</Item.Title>
                         <Item.Description>
-                            I am able to present an
-                            overview of the different technologies and their benefits and drawbacks.
+                            I provide comprehensive overviews of various technologies, highlighting their advantages and
+                            disadvantages to ensure a well-rounded understanding.
                         </Item.Description>
                         <Item.Image>
                             <CaveWithPresentationImageXdec31ff2 />
@@ -47,8 +51,8 @@ export function Services() {
                     <Item>
                         <Item.Title>Prototyping</Item.Title>
                         <Item.Description>
-                            I am best at creating of the functional foundation of the new project; from 0 to 1.
-                            {/* By utilizing the latest technologies, I can create a prototype with a fully operational codebase that can be used for constructing a large-scale project or simply to test the viability of an idea. */}
+                            I specialize in bringing new project ideas to reality through effective prototyping and
+                            seamless transition from concept to implementation.
                         </Item.Description>
                         <Item.Image>
                             <CaveWithPrototypingLaboratoryImageXca9b82b9 />
@@ -61,7 +65,7 @@ export function Services() {
 }
 
 /**
- * TODO: Make pages internall 
+ * TODO: Make pages internall
  * TODO: Text should be selectable even inside of <a>
  * TODO:  Examples how can I help you
  * TODO: Maybe split every item into separate file component

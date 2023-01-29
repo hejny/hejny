@@ -25,7 +25,6 @@
 
 .vcard ul {
     text-align: left;
-    color: white;
     list-style: none;
     padding-left: 0;
 
@@ -35,4 +34,3 @@
 .vcard li {
     padding: 2px;
 }
-

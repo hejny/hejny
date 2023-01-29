@@ -26,8 +26,9 @@ export function ModulesProject() {
                 <Item.Title>Modules</Item.Title>
                 <Item.Description>
                     <p>
-                        Software development kit to extend The Collboard, The virtual whiteboard. A successful design to
-                        split up big application into hundreds multiple indopendent codebases.
+                        The Collboard Virtual Whiteboard now has a powerful Software Development Kit for extension and
+                        customization. Experience the benefits of modular design with the ability to break down complex
+                        applications into smaller, independent codebases for improved scalability and efficiency.
                     </p>
                 </Item.Description>
                 <Item.Image>
@@ -37,7 +38,7 @@ export function ModulesProject() {
                             backgroundImage: `url(${background.src})`,
                         }}
                     />
-                    {/* <Image alt="@@@" src={background} draggable="false" /> */}
+                    {/* <Image alt="Pseudo-USB gadget" src={background} draggable="false" /> */}
                 </Item.Image>
             </Item>
         </a>

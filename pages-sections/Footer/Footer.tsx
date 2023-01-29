@@ -27,3 +27,7 @@ export function Footer() {
  * TODO: Link to MidJourney + * generated with MidJourney
  * TODO: Link to GitHub
  */
+
+
+
+

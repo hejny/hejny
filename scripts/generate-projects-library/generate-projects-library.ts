@@ -142,7 +142,7 @@ async function generateProjectsLibrary({ isCommited }: { isCommited: boolean }) 
                         <Item>
                             <Item.Title>${title}</Item.Title>
                             <Item.Description>
-                                ${bodyHtml}
+                                ${bodyHtml.split(`'`).join(`&apos;`)}
                             </Item.Description>
                             <Item.Image>
                                 <div

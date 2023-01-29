@@ -50,8 +50,21 @@
     grid-column: 2 / span 1;
     grid-row: 2 / span 3;
     text-align: center;
-    color: white;
+    color: var(--normal-text-color);
 }
+
+.page a {
+    color: var(--normal-text-color);
+    text-decoration: none;
+}
+
+.page h1,
+.page h2,
+.page b,
+.page a:hover {
+    color: var(--highlighted-text-color);
+}
+
 .page h1,
 .page h2 {
     text-shadow: #ff9912 0px 0px 25px;
@@ -76,17 +89,6 @@
     margin-inline-end: 0;
 }
 
-.page main p {
-    /* TODO: perex should be semantically in <header/> */
-
-    /*/
-    outline: 1px dotted purple;
-    /**/
-
-    /*width: calc(50% + 1vw);*/
-    margin: auto;
-}
-
 .page footer {
     /*/
     outline: 1px dotted green;
@@ -96,13 +98,4 @@
 
     grid-column: 1 / span 3;
     grid-row: 5 / span 1;
-}
-
-.page a {
-    color: white;
-    text-decoration: none;
-}
-
-.page a:hover {
-    color: rgb(165, 159, 159);
 }

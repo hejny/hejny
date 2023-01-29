@@ -25,7 +25,7 @@ export function AllMyProjectsProject() {
             <Item>
                 <Item.Title>All my projects</Item.Title>
                 <Item.Description>
-                    <p>I am program from my 13 and now I am 29 so I have worked on looooooooot of projects.</p>
+                    <p>Discover my portfolio of projects and see my range of experience and expertise.</p>
                 </Item.Description>
                 <Item.Image>
                     <div
@@ -34,7 +34,7 @@ export function AllMyProjectsProject() {
                             backgroundImage: `url(${background.src})`,
                         }}
                     />
-                    {/* <Image alt="@@@" src={background} draggable="false" /> */}
+                    {/* <Image alt="Multiple PC boxes joined together" src={background} draggable="false" /> */}
                 </Item.Image>
             </Item>
         </a>

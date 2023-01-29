@@ -26,8 +26,8 @@ export function LibrariesProject() {
                 <Item.Title>Libraries</Item.Title>
                 <Item.Description>
                     <p>
-                        I love Open-source. Every time I work on some project I try to extract reusable parts into
-                        independent library
+                        I 💜 Open Source. Every time I work on a project, I try to extract reusable parts into an
+                        independent library.
                     </p>
                 </Item.Description>
                 <Item.Image>
@@ -37,7 +37,7 @@ export function LibrariesProject() {
                             backgroundImage: `url(${background.src})`,
                         }}
                     />
-                    {/* <Image alt="@@@" src={background} draggable="false" /> */}
+                    {/* <Image alt="Toolbox" src={background} draggable="false" /> */}
                 </Item.Image>
             </Item>
         </a>

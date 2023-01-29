@@ -25,10 +25,7 @@ export function HEduProject() {
             <Item>
                 <Item.Title>H-edu</Item.Title>
                 <Item.Description>
-                    <p>
-                        Online pupil books for schools and teachers with interactive playground and misc tools for
-                        teachers
-                    </p>
+                    <p>An online platform for schools and teachers with interactive materials and tools.</p>
                 </Item.Description>
                 <Item.Image>
                     <div
@@ -37,7 +34,7 @@ export function HEduProject() {
                             backgroundImage: `url(${background.src})`,
                         }}
                     />
-                    {/* <Image alt="@@@" src={background} draggable="false" /> */}
+                    {/* <Image alt="Triangle for counting" src={background} draggable="false" /> */}
                 </Item.Image>
             </Item>
         </a>

@@ -25,7 +25,7 @@ export function TownsProject() {
             <Item>
                 <Item.Title>Towns</Item.Title>
                 <Item.Description>
-                    <p>Browser online game. You can build your own City and your world.</p>
+                    <p>A browser-based online game where players can build their own cities and worlds.</p>
                 </Item.Description>
                 <Item.Image>
                     <div
@@ -34,7 +34,7 @@ export function TownsProject() {
                             backgroundImage: `url(${background.src})`,
                         }}
                     />
-                    {/* <Image alt="@@@" src={background} draggable="false" /> */}
+                    {/* <Image alt="Tile of online game" src={background} draggable="false" /> */}
                 </Item.Image>
             </Item>
         </a>

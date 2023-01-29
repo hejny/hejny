@@ -25,7 +25,12 @@ export function FunctionsProject() {
             <Item>
                 <Item.Title>Functions</Item.Title>
                 <Item.Description>
-                    <p>Modul for Collboard to teach the math in visual way.</p>
+                    <p>
+                        Collboard module for visualizing functions: Experience the power of mathematics in a visually
+                        appealing way. This module for the online virtual whiteboard, Collboard, allows you to graph
+                        functions like sin, cos, and tan by connecting simple boxes. Say goodbye to intimidating formula
+                        writing and hello to a fun and easy way to understand math.
+                    </p>
                 </Item.Description>
                 <Item.Image>
                     <div
@@ -34,7 +39,7 @@ export function FunctionsProject() {
                             backgroundImage: `url(${background.src})`,
                         }}
                     />
-                    {/* <Image alt="@@@" src={background} draggable="false" /> */}
+                    {/* <Image alt="Axis of the graph" src={background} draggable="false" /> */}
                 </Item.Image>
             </Item>
         </a>

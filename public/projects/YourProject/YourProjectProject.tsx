@@ -25,8 +25,10 @@ export function YourProjectProject() {
             <Item>
                 <Item.Title>Your project</Item.Title>
                 <Item.Description>
-                    <p>I will be happy kick off your project</p>
-                    <p>What I offer?</p>
+                    <p>
+                        I am eager to start your project and bring it to life. Let&apos;s get your ideas off the ground
+                        and turn them into a reality!
+                    </p>
                 </Item.Description>
                 <Item.Image>
                     <div
@@ -35,7 +37,7 @@ export function YourProjectProject() {
                             backgroundImage: `url(${background.src})`,
                         }}
                     />
-                    {/* <Image alt="@@@" src={background} draggable="false" /> */}
+                    {/* <Image alt="Light bulb of ideas" src={background} draggable="false" /> */}
                 </Item.Image>
             </Item>
         </a>

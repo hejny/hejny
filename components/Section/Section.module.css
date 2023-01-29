@@ -1,4 +1,8 @@
 .section {
+    /*/
+    outline: 1px dotted green;
+    /**/
+
     margin-top: 50px;
 }
 
@@ -13,15 +17,30 @@
 }
 
 .section > p {
+    /*/
+    outline: 1px dotted yellow;
+    /**/
+
+    display: block;
     font-size: 20px /* <- [🔠] Make one place for font-size */;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .section > a {
+    /*/
+    outline: 1px dotted magenta;
+    /**/
+
     color: inherit;
     text-decoration: inherit;
 }
 
 .section h2 {
+    /*/
+    outline: 1px dotted red;
+    /**/
+
     display: inline-block;
     /* border-top: 5px solid #ff9912; */
 }
