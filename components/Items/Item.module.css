@@ -124,6 +124,7 @@
 
     text-align: left;
     padding: 5px;
+
     font-size: 15px /* <- [🔠] Make one place for font-size */;
     transition: color 0.3s ease-in-out /* <- TODO: Unite transition effects ACRY */;
 }

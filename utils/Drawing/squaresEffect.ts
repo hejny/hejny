@@ -68,7 +68,7 @@ export function squaresEffect<TElement extends HTMLElement>(element: TElement): 
         await end();
     });
 
-    return Registration.void(/* TODO: !! Same as in graphEffect */);
+    return Registration.void(/* TODO: !! Same as in graph effect */);
 }
 
 /**

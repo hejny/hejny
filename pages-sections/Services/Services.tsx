@@ -13,10 +13,7 @@ export function Services() {
             <p>
                 I specialise in building fully functional prototypes from scratch to proof of concept, staying ahead of
                 the latest technologies. Let me guide you through the ever-changing landscape of new, emerging and
-                disruptive technologies. Consulting I offer expert advice on various technologies, providing insightful
-                analysis of their benefits and limitations to help you make informed decisions. Speaking I provide
-                comprehensive overviews of various technologies, highlighting their advantages and disadvantages to
-                ensure a well-rounded understanding. Prototyping
+                disruptive technologies.
             </p>
             <Items>
                 {/* Note: Not using <Shuffle/> here in the services section */}
@@ -25,8 +22,8 @@ export function Services() {
                     <Item>
                         <Item.Title>Consulting</Item.Title>
                         <Item.Description>
-                            I offer expert advice on various technologies, providing insightful analysis of their
-                            benefits and limitations to help you make informed decisions.
+                            I offer expert advice on various technologies, providing {/*insightful*/} analysis of their
+                            benefits and limitations to help you make decisions.
                         </Item.Description>
                         <Item.Image>
                             <CaveOfIdeasInLightbulbWithTransparentLookThrImageXd3273ad0 />
@@ -38,8 +35,9 @@ export function Services() {
                     <Item>
                         <Item.Title>Speaking</Item.Title>
                         <Item.Description>
-                            I provide comprehensive overviews of various technologies, highlighting their advantages and
-                            disadvantages to ensure a well-rounded understanding.
+                            I provide overviews of various technologies, highlighting their{' '}
+                            <span style={{ color: '#11ff11' }}>pros</span> and{' '}
+                            <span style={{ color: '#ff0000' }}>cons</span> to ensure a well-rounded understanding.
                         </Item.Description>
                         <Item.Image>
                             <CaveWithPresentationImageXdec31ff2 />
@@ -51,8 +49,8 @@ export function Services() {
                     <Item>
                         <Item.Title>Prototyping</Item.Title>
                         <Item.Description>
-                            I specialize in bringing new project ideas to reality through effective prototyping and
-                            seamless transition from concept to implementation.
+                            I will bring your new project into the reality through effective prototyping and seamless
+                            transition from concept to implementation.
                         </Item.Description>
                         <Item.Image>
                             <CaveWithPrototypingLaboratoryImageXca9b82b9 />

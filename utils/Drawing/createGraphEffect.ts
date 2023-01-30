@@ -82,6 +82,12 @@ export function createGraphEffect<TElement extends HTMLElement>(formula: {
                     graph(seedPosition);
                 });
 
+                window.addEventListener('scroll', (event) => {
+                    seedPosition = seedPosition.add({ x: 5 });
+                    graph(seedPosition);
+                });
+
+                /* 
                 window.addEventListener('touchmove', (event) => {
                     const targetTouch = event.targetTouches[0];
                     const seedPositionAtractor = seedPosition.add(
@@ -92,6 +98,7 @@ export function createGraphEffect<TElement extends HTMLElement>(formula: {
 
                     graph(seedPosition);
                 });
+                */
             },
         );
     };
@@ -102,5 +109,5 @@ export function createGraphEffect<TElement extends HTMLElement>(formula: {
  * TODO: createYGraphEffect
  * TODO: LIB xyzt: addInPlace
  * TODO: LIB xyzt: Some util for Weighted arithmetic mean of Vector
- * TODO: Multiple touches creates multiple graphs> Array.from(event.targetTouches)
+ * TODO: Idea: Multiple touches creates multiple graphs> Array.from(event.targetTouches)
  */
