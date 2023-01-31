@@ -2,21 +2,21 @@
 <!-- TODO: Name as original -->
 
 <svg
-   version="1.1"
-   id="Layer_1"
-   x="0px"
-   y="0px"
-   width="3000"
-   viewBox="0 0 3000 2000"
-   enable-background="new 0 0 1024 672"
-   xml:space="preserve"
-   sodipodi:docname="Pavol_Hejn_Simple_pen_sketch_of_A_have_big_interest_in_Czech_Te_62acce49-a9db-4d36-9199-d606551f463c.svg"
-   height="2000"
-   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
+     version="1.1"
+     id="Layer_1"
+     x="0px"
+     y="0px"
+     width="3000"
+     viewBox="0 0 3000 2000"
+     enable-background="new 0 0 1024 672"
+     xml:space="preserve"
+     sodipodi:docname="Pavol_Hejn_Simple_pen_sketch_of_A_have_big_interest_in_Czech_Te_62acce49-a9db-4d36-9199-d606551f463c.svg"
+     height="2000"
+     inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
   <defs
    id="defs41" />
   <sodipodi:namedview
@@ -50,7 +50,7 @@
       <feGaussianBlur
    class="blur"
    result="coloredBlur"
-   stdDeviation="4"
+   stdDeviation="9"
    vector-effect="non-scaling-stroke"
    id="feGaussianBlur416" />
       <feMerge

@@ -25,10 +25,7 @@ export function YourProjectProject() {
             <Item>
                 <Item.Title>Your project</Item.Title>
                 <Item.Description>
-                    <p>
-                        I am eager to start your project and bring it to life. Let&apos;s get your ideas off the ground
-                        and turn them into a reality!
-                    </p>
+                    <p>Let&apos;s get your ideas off the ground and turn them into a reality!</p>
                 </Item.Description>
                 <Item.Image>
                     <div

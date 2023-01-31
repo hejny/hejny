@@ -25,10 +25,7 @@ export function CzechEventsProject() {
             <Item>
                 <Item.Title>Czech.events</Item.Title>
                 <Item.Description>
-                    <p>
-                        Stay updated on the latest tech events in Czechia with the Czech Tech Community Newsletter. I
-                        bring expertise from organizing, speaking at, and mentoring events.
-                    </p>
+                    <p>Newsletter of the most interesting Tech&amp;Startup events in Czechia</p>
                 </Item.Description>
                 <Item.Image>
                     <div

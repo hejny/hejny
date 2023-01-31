@@ -50,7 +50,7 @@
       <feGaussianBlur
    class="blur"
    result="coloredBlur"
-   stdDeviation="4"
+   stdDeviation="7"
    vector-effect="non-scaling-stroke"
    id="feGaussianBlur416" />
       <feMerge
