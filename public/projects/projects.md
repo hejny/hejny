@@ -24,7 +24,7 @@ Feeders
 
 ## Collboard
 
-Collboard is a customizable and modular online virtual whiteboard for all devices, suitable for education.
+Collboard is a modular online virtual whiteboard for education.
 
 <!--
 Collboard is an online virtual whiteboard that offers simplicity, creativity, and closeness to content. It's built with customization in mind, giving teachers the flexibility to build their own teaching paths. Collboard is also modular, allowing for various subjects and use cases to be combined. It's available on all devices and can be used for all forms of online collaboration, including education and beyond.
@@ -36,7 +36,7 @@ Collboard is an online virtual whiteboard that offers simplicity, creativity, an
 
 ## Czech.events
 
-Stay updated on the latest tech events in Czechia with the Czech Tech Community Newsletter. I bring expertise from organizing, speaking at, and mentoring events.
+Newsletter of the most interesting Tech&Startup events in Czechia
 
 [![Meetup](/public/projects/CzechEvents/Pavol_Hejn_Simple_pen_sketch_of_A_have_big_interest_in_Czech_Te_62acce49-a9db-4d36-9199-d606551f463c.svg)](https://czech.events/)
 
@@ -58,6 +58,8 @@ An online platform for schools and teachers with interactive materials and tools
 
 I ❤ Open Source.
 Every time I work on a project, I try to extract reusable parts into an independent library.
+
+For example, I have created library for managing Promises or utility to find the apps in your OS to save space.
 
 [![Toolbox](/public/projects/Libraries/Pavol_Hejny_coloring_book_black_and_white_illustration_outline__b8c24f85-9ee6-4d9e-96d7-fe550fe78b9b.svg)](https://github.com/hejny?tab=repositories)
 
@@ -100,7 +102,7 @@ I have extensive experience in virtual and augmented reality projects, serving a
 
 ## Your project
 
-I am eager to start your project and bring it to life. Let's get your ideas off the ground and turn them into a reality!
+Let's get your ideas off the ground and turn them into a reality!
 
 [![Light bulb of ideas](/public/projects/YourProject/Pavol_Hejn_Coloring_book_black_and_white_illustration_outline_o_fbf45e15-a73d-474c-8d08-98188a1010ef.svg)](https://pavolhejny.com/documents/projects.html)
 

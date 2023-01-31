@@ -21,24 +21,26 @@ export function CaveOfIdeasWithTransparentLookThroughImageXfe3480c5() {
                 display: 'flex',
                 justifyContent: 'end',
                 alignItems: 'end',
-                paddingBottom: 20,
+                paddingBottom: 60,
                 paddingRight: 5,
             }}
         >
             <Float>
                 <a
                     href="https://www.midjourney.com/app/jobs/fe3480c5-76af-45da-ac4e-5177062bcb6b"
-                    style={{ zIndex: 10, fontSize: 10, textDecoration: 'none', color: '#ccc', textShadow: 'none' }}
+                    // TODO: This should lead to some explain page how the AI work
+                    target={'_blank'}
+                    rel="noreferrer"
+                    style={{
+                        zIndex: 10,
+                        fontSize: 10,
+                        textDecoration: 'none',
+                        color: '#ccc',
+                        textShadow: 'none',
+                    }}
                 >
-                    {/*
-
-                    TODO: Text
-                    
-                    > Created by AI
-
-                    Should be referenced at the bottom of the page
-
-                    */}
+                    ⬅ Created by AI
+                    {/* TODO: Should be also referenced at the bottom of the page */}
                 </a>
             </Float>
         </div>
