@@ -39,5 +39,5 @@ export function drawingEffect<TElement extends HTMLElement>(element: TElement): 
         }
     });
 
-    return Registration.void(/* TODO: !! Same as in graph effect */);
+    return Registration.void(/* TODO: Same as in graph effect */);
 }

@@ -109,7 +109,6 @@ export class Drawing extends Destroyable implements IDestroyable {
 
     private resize() {
         //console.log('resize');
-        // TODO: !!  Listen on windowchange / scroll / zoomchange...
 
         // TODO: [0] Just use this.boundingBox
         const boundingBox = this.boundingBox;
@@ -140,8 +139,7 @@ export class Drawing extends Destroyable implements IDestroyable {
 }
 
 /**
- * TODO: !! Drawing will move when Toggle device toolbar
- * TODO: !! resize+resize where to call
+ * TODO: Optimize calling of resize+resize
  * TODO: All private/public
  * TODO: Should be used setAttribute OR setAttributeNS
  */
