@@ -1,4 +1,4 @@
-import { Float } from '../../components/Float/Float';
+import { Float } from '../../src/components/Float/Float';
 import cave_of_ideas_with_transparent_look_through from './Pavol_Hejn_cave_of_ideas_with_transparent_look_through_fe3480c5-76af-45da-ac4e-5177062bcb6b.png';
 
 /**

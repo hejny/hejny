@@ -1,4 +1,4 @@
-import { version } from '../../package.json';
+import { version } from '../../../package.json';
 import styles from './Footer.module.css';
 
 export function Footer() {
@@ -27,7 +27,3 @@ export function Footer() {
  * TODO: Link to MidJourney + * generated with MidJourney
  * TODO: Link to GitHub
  */
-
-
-
-
