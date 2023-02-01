@@ -1,4 +1,4 @@
-import { Drawing } from '../../../utils/Drawing/Drawing';
+import { Drawing } from '../../../src/utils/Drawing/Drawing';
 
 export function drawBird(place: HTMLElement): Drawing {
     // Implement

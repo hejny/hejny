@@ -1,1 +1,1 @@
-TODO: Split public into deployed public vs source public (figure out better names)
+TODO: Split public into deployed public vs source public (maybe use assets folder) (figure out better names)

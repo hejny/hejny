@@ -8,9 +8,9 @@
  */
 
 import Image from 'next/image';
-import { Item } from '../../../components/Items/Item';
-import { effectToRef } from '../../../utils/Drawing/effectToRef';
-import { allMyProjectsEffect } from '../../../utils/Drawing/projectsEffectsLibrary';
+import { Item } from '../../../src/components/Items/Item';
+import { effectToRef } from '../../../src/utils/Drawing/effectToRef';
+import { allMyProjectsEffect } from '../../../src/utils/Drawing/projectsEffectsLibrary';
 import background from './Pavol_Hejn_modular_gadget_as_a_coloring_book_black_and_white_il_05f61e28-a9e6-41e5-9105-0708c5294006.svg';
 
 /**

@@ -8,9 +8,9 @@
  */
 
 import Image from 'next/image';
-import { Item } from '../../../components/Items/Item';
-import { effectToRef } from '../../../utils/Drawing/effectToRef';
-import { librariesEffect } from '../../../utils/Drawing/projectsEffectsLibrary';
+import { Item } from '../../../src/components/Items/Item';
+import { effectToRef } from '../../../src/utils/Drawing/effectToRef';
+import { librariesEffect } from '../../../src/utils/Drawing/projectsEffectsLibrary';
 import background from './Pavol_Hejny_coloring_book_black_and_white_illustration_outline__b8c24f85-9ee6-4d9e-96d7-fe550fe78b9b.svg';
 
 /**

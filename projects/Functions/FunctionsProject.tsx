@@ -7,10 +7,9 @@
  *    Then the file will not be re-generated automatically
  */
 
-import Image from 'next/image';
-import { Item } from '../../../components/Items/Item';
-import { effectToRef } from '../../../utils/Drawing/effectToRef';
-import { functionsEffect } from '../../../utils/Drawing/projectsEffectsLibrary';
+import { Item } from '../../../src/components/Items/Item';
+import { effectToRef } from '../../../src/utils/Drawing/effectToRef';
+import { functionsEffect } from '../../../src/utils/Drawing/projectsEffectsLibrary';
 import background from './graph-plot.svg';
 
 /**
