@@ -2,7 +2,7 @@
 
 import chalk from 'chalk';
 import { ChildProcessWithoutNullStreams, spawn } from 'child_process';
-import fetch from 'node-fetch';
+import fetch from 'isomorphic-fetch';
 import { join } from 'path';
 import { execCommand } from '../utils/execCommand/execCommand';
 import { forCondition } from './forCondition';
