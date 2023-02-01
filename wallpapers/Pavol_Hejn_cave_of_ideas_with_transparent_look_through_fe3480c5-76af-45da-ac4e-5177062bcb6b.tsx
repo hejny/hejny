@@ -40,6 +40,7 @@ export function CaveOfIdeasWithTransparentLookThroughImageXfe3480c5() {
                     }}
                 >
                     ⬅ Created by AI
+                    {/* TODO: Here shpuld be hashed link to /midjourney gallery */}
                     {/* TODO: Should be also referenced at the bottom of the page */}
                 </a>
             </Float>
