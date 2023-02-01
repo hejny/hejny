@@ -19,6 +19,11 @@ program.option('--commit', `Autocommit changes`);
 program.parse(process.argv);
 const { commit: isCommited } = program.opts();
 
+if (process.cwd() !== join(__dirname, '../..')) {
+    console.error(chalk.red(`CWD must be root of the project`));
+    process.exit(1);
+}
+
 generateProjectsLibrary({ isCommited })
     .catch((error) => {
         console.error(chalk.bgRed(error.name));

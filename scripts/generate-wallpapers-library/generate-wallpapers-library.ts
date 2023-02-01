@@ -11,6 +11,11 @@ import { commit } from '../utils/autocommit/commit';
 import { isWorkingTreeClean } from '../utils/autocommit/isWorkingTreeClean';
 import { prettify } from '../utils/prettify';
 
+if (process.cwd() !== join(__dirname, '../..')) {
+    console.error(chalk.red(`CWD must be root of the project`));
+    process.exit(1);
+}
+
 const program = new commander.Command();
 program.option('--commit', `Autocommit changes`);
 program.parse(process.argv);

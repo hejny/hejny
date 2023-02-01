@@ -30,7 +30,6 @@ async function integrationTestWithServer() {
         await fetch('http://localhost:4455/' /* <- TODO: DRY */)
             .then((response) => response.statusText === 'OK')
             .catch(() => false);
-    console.log({ isServerRunning });
 
     let serverProcess: ChildProcessWithoutNullStreams | null;
 
