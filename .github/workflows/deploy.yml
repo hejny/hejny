@@ -39,6 +39,15 @@ jobs:
             - name: Install dependencies
               run: npm ci
 
+            - name: Generate projects library
+              run: ts-node ./scripts/generate-projects-library/generate-projects-library.ts --commit
+
+            - name: Generate wallpapers library
+              run: ts-node ./scripts/generate-projects-library/generate-wallpapers-library.ts --commit
+
+            - name: Generate patterns library
+              run: ts-node ./scripts/generate-projects-library/generate-patterns-library.ts --commit
+
             - name: Build
               run: npm run build
               env:
