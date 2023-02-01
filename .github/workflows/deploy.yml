@@ -18,6 +18,11 @@ jobs:
             - name: Install dependencies
               run: npm ci
 
+            - name: Configurate GIT
+              run: |
+                  git config --global user.email "me@pavolhejny.com"
+                  git config --global user.name "hejny"
+
             - name: Generate projects library
               run: npx ts-node ./scripts/generate-projects-library/generate-projects-library.ts --commit
 
@@ -38,11 +43,6 @@ jobs:
 
             - name: Build
               run: npm run build
-
-            - name: Configurate GIT
-              run: |
-                  git config --global user.email "me@pavolhejny.com"
-                  git config --global user.name "hejny"
 
             - name: Deploy on GitHub pages
               run: npx gh-pages --dotfiles --dist ./out --repo https://x-access-token:${{secrets.GITHUB_TOKEN}}@github.com/${GITHUB_REPOSITORY}.git
