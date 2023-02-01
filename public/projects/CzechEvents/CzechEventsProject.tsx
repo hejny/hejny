@@ -8,9 +8,9 @@
  */
 
 import Image from 'next/image';
-import { Item } from '../../../components/Items/Item';
-import { effectToRef } from '../../../utils/Drawing/effectToRef';
-import { czechEventsEffect } from '../../../utils/Drawing/projectsEffectsLibrary';
+import { Item } from '../../../src/components/Items/Item';
+import { effectToRef } from '../../../src/utils/Drawing/effectToRef';
+import { czechEventsEffect } from '../../../src/utils/Drawing/projectsEffectsLibrary';
 import background from './Pavol_Hejn_Simple_pen_sketch_of_A_have_big_interest_in_Czech_Te_62acce49-a9db-4d36-9199-d606551f463c.svg';
 
 /**

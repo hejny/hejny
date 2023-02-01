@@ -121,9 +121,9 @@ async function generateProjectsLibrary({ isCommited }: { isCommited: boolean }) 
              */
         
             import Image from 'next/image';
-            import { Item } from '../../../components/Items/Item';
-            import { effectToRef } from '../../../utils/Drawing/effectToRef';
-            import { ${effectName} } from '../../../utils/Drawing/projectsEffectsLibrary';
+            import { Item } from '../../../src/components/Items/Item';
+            import { effectToRef } from '../../../src/utils/Drawing/effectToRef';
+            import { ${effectName} } from '../../../src/utils/Drawing/projectsEffectsLibrary';
             ${generateImport({
                 entityName: 'background',
                 entityPath: join(process.cwd(), image.src),
