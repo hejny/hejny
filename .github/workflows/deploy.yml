@@ -18,14 +18,14 @@ jobs:
             - name: Install dependencies
               run: npm ci
 
-            - name: Generate projects library
-              run: ts-node ./scripts/generate-projects-library/generate-projects-library.ts --commit
+            # restore!!> - name: Generate projects library
+            # restore!!>   run: ts-node ./scripts/generate-projects-library/generate-projects-library.ts --commit
 
-            - name: Generate wallpapers library
-              run: ts-node ./scripts/generate-projects-library/generate-wallpapers-library.ts --commit
+            # restore!!> - name: Generate wallpapers library
+            # restore!!>   run: ts-node ./scripts/generate-projects-library/generate-wallpapers-library.ts --commit
 
-            - name: Generate patterns library
-              run: ts-node ./scripts/generate-projects-library/generate-patterns-library.ts --commit
+            # restore!!> - name: Generate patterns library
+            # restore!!>   run: ts-node ./scripts/generate-projects-library/generate-patterns-library.ts --commit
 
             - name: Lint
               run: npm run lint
