@@ -51,8 +51,6 @@ async function integrationTestWithServer() {
         await forCondition(isServerRunning);
 
         console.info(chalk.green(`Server is now running`));
-
-        // !!! Remve await forTime(100 /* <- TODO: Some smarter way of waiting for server to spin up */);
     }
 
     await execCommand('npm run test-integration-without-server');
@@ -61,8 +59,6 @@ async function integrationTestWithServer() {
         console.info(chalk.magenta(`Stopping the server`));
         serverProcess.kill();
     }
-
-    // !!! Stop server if started
 }
 
 /**

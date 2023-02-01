@@ -2,7 +2,7 @@
 const nextConfig = {
     reactStrictMode: true,
     experimental: {
-        appDir: true /* <- TODO: !!! Same in rapid prototyping */,
+        appDir: true ,
     },
     images: {
         unoptimized: true /* <- TODO: Optimize images, all images should be in some modern format like webp/svg */,
