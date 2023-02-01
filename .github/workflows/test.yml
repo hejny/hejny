@@ -28,4 +28,4 @@ jobs:
               run: npm run test-unit
 
             - name: Integration test
-              run: npm run integration-unit
+              run: npm run test-integration
