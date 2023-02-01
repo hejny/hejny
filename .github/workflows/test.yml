@@ -26,5 +26,6 @@ jobs:
 
             - name: Unit test
               run: npm run test-unit
-              env:
-                  NODE_OPTIONS: --openssl-legacy-provider
+
+            - name: Integration test
+              run: npm run integration-unit

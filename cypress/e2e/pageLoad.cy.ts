@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('Local Collboard', () => {
+context('localhost', () => {
     beforeEach(() => {
         cy.visit('http://localhost:4455/');
     });

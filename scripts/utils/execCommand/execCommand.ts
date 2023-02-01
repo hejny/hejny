@@ -2,8 +2,8 @@ import chalk from 'chalk';
 import { spawn } from 'child_process';
 import spaceTrim from 'spacetrim';
 import { forTime } from 'waitasecond';
-import { execCommandNormalizeOptions } from './execCommandNormalizeOptions';
 import { IExecCommandOptions } from './IExecCommandOptions';
+import { execCommandNormalizeOptions } from './execCommandNormalizeOptions';
 
 export function execCommand(options: IExecCommandOptions): Promise<string> {
     return new Promise((resolve, reject) => {
@@ -46,11 +46,7 @@ export function execCommand(options: IExecCommandOptions): Promise<string> {
             commandProcess.stderr.on('data', (stderr) => {
                 output.push(stderr.toString());
                 if (stderr.toString().trim()) {
-                    if (crashOnError) {
-                        reject(new Error(stderr.toString()));
-                    } else {
-                        console.warn(stderr.toString());
-                    }
+                    console.warn(stderr.toString());
                 }
             });
 
