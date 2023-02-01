@@ -23,14 +23,14 @@ jobs:
                   git config --global user.email "me@pavolhejny.com"
                   git config --global user.name "hejny"
 
-            - name: Generate projects library
-              run: npx ts-node ./scripts/generate-projects-library/generate-projects-library.ts --commit
+            # [0] - name: Generate projects library
+            # [0]   run: npx ts-node ./scripts/generate-projects-library/generate-projects-library.ts --commit
 
-            - name: Generate wallpapers library
-              run: npx ts-node ./scripts/generate-wallpapers-library/generate-wallpapers-library.ts --commit
+            # [0] - name: Generate wallpapers library
+            # [0]   run: npx ts-node ./scripts/generate-wallpapers-library/generate-wallpapers-library.ts --commit
 
-            - name: Generate patterns library
-              run: npx ts-node ./scripts/generate-patterns-library/generate-patterns-library.ts --commit
+            # [0] - name: Generate patterns library
+            # [0]   run: npx ts-node ./scripts/generate-patterns-library/generate-patterns-library.ts --commit
 
             - name: Lint
               run: npm run lint
@@ -46,3 +46,9 @@ jobs:
 
             - name: Deploy on GitHub pages
               run: npx gh-pages --dotfiles --dist ./out --repo https://x-access-token:${{secrets.GITHUB_TOKEN}}@github.com/${GITHUB_REPOSITORY}.git
+
+# TODO: [0] Make this work - Now there is error after running generate-projects-library
+#
+#       import background from '../Hedu/outline.svg';
+#
+#       @see https://github.com/hejny/rapid-prototyping-wizard/actions/runs/4065771347/jobs/7000940802
