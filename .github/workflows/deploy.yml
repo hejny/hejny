@@ -39,6 +39,7 @@ jobs:
             - name: Build
               run: npm run build
               env:
+                  # !! Remove openssl-legacy-provider ACRY
                   NODE_OPTIONS: --openssl-legacy-provider
 
             - name: Configurate GIT
