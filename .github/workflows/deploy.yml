@@ -22,10 +22,10 @@ jobs:
               run: npx ts-node ./scripts/generate-projects-library/generate-projects-library.ts --commit
 
             - name: Generate wallpapers library
-              run: npx ts-node ./scripts/generate-projects-library/generate-wallpapers-library.ts --commit
+              run: npx ts-node ./scripts/generate-wallpapers-library/generate-wallpapers-library.ts --commit
 
             - name: Generate patterns library
-              run: npx ts-node ./scripts/generate-projects-library/generate-patterns-library.ts --commit
+              run: npx ts-node ./scripts/generate-patterns-library/generate-patterns-library.ts --commit
 
             - name: Lint
               run: npm run lint
