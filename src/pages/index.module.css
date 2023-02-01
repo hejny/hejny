@@ -101,3 +101,12 @@
     grid-column: 1 / span 3;
     grid-row: 5 / span 1;
 }
+
+.galleryItem {
+    /* <- TODO: [🧈] Best way how to share page css */
+
+    display: block;
+    aspect-ratio: 3 / 2 /* <- TODO: Correct aspect? */;
+}
+
+/* TODO: [🧈] Best way how to share page css */

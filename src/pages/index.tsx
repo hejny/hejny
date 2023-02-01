@@ -55,6 +55,7 @@ export default function Home() {
 }
 
 /**
+ * TODO: [🧈] Best way how to share page css
  * TODO: Custom 404 page
  * TODO: The best way to import the fonts
  * TODO: Add Google Analytics

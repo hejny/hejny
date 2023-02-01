@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { version } from '../../../package.json';
 import styles from './Footer.module.css';
 
@@ -10,7 +11,7 @@ export function Footer() {
                 </li>
 
                 <li>
-                    <a href=" https://www.midjourney.com/app/jobs/fe3480c5-76af-45da-ac4e-5177062bcb6b">*MidJourney</a>
+                    <Link href="/midjourney">*MidJourney</Link>
                 </li>
 
                 <li>

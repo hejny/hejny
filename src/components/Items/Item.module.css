@@ -23,7 +23,7 @@
     grid-column: 1 / span 1;
     grid-row: 1 / span 1;
 
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 3 / 2 /* <- TODO: Correct aspect? */;
 
     margin: -0px;
 }
