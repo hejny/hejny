@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     reactStrictMode: true,
+    experimental: {
+        appDir: true /* <- TODO: !!! Same in rapid prototyping */,
+    },
     images: {
         unoptimized: true /* <- TODO: Optimize images, all images should be in some modern format like webp/svg */,
     },
