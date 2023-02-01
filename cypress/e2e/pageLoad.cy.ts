@@ -8,7 +8,6 @@ context('localhost', () => {
     describe('Visiting the page', () => {
         it('should be able to see the heading', () => {
             cy.contains(/From 0 to 1/i);
-            cy.contains(/wsfdhuiguygyufgy!!/i);
         });
     });
 });
