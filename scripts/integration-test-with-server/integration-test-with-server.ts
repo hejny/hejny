@@ -39,7 +39,15 @@ async function integrationTestWithServer() {
         serverProcess = null;
     } else {
         console.info(chalk.magenta(`Server is NOT running, starting...`));
-        serverProcess = spawn('npm', ['run', 'dev'] /* <- TODO: Maybe build + start */, { cwd: process.cwd() });
+
+        // TODO: Following lines should be DRY with execCommand - probbably export some class RunningProcess
+        let command = 'npm';
+
+        if (/^win/.test(process.platform) && ['npm', 'npx'].includes(command)) {
+            command = `${command}.cmd`;
+        }
+
+        serverProcess = spawn(command, ['run', 'dev'] /* <- TODO: Maybe build + start */, { cwd: process.cwd() });
         serverProcess.stdout.on('data', (stdout) => {
             console.info(chalk.gray('server> ' + stdout.toString()));
         });
