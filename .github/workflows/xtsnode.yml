@@ -1,4 +1,5 @@
-name: Test
+# !! Remove the file
+name: Test TSNode
 
 on:
     push:
