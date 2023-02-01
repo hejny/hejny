@@ -61,6 +61,12 @@
             "focus": true
         },
         {
+            "name": "🧪⚙ Build locally",
+            "command": "npm run build",
+            "onlySingle": true,
+            "focus": true
+        },
+        {
             "name": "🔼👑 Release major version",
             "command": "npm version major",
             "onlySingle": true,
