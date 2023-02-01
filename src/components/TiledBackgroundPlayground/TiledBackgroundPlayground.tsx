@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { DEBUG } from '../../config';
-import { generated_patterns } from '../../public/patterns';
+import { DEBUG } from '../../../config';
+import { generated_patterns } from '../../../public/patterns';
 import { MidjourneyLink } from '../MidjourneyLink/MidjourneyLink';
 import styles from './TiledBackgroundPlayground.module.css';
 

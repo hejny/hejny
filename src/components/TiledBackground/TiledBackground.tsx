@@ -1,5 +1,5 @@
-import cityscapeBottom from '../../public/patterns/splitted/Pavol_Hejn_A_tiled_background_featuring_a_futuristic_cityscape__d68f41f8-1374-4a58-9cf3-36e9ad9f9d03.bottom.png';
-import cityscapeTop from '../../public/patterns/splitted/Pavol_Hejn_A_tiled_background_featuring_a_futuristic_cityscape__d68f41f8-1374-4a58-9cf3-36e9ad9f9d03.top.png';
+import cityscapeBottom from '../../../public/patterns/splitted/Pavol_Hejn_A_tiled_background_featuring_a_futuristic_cityscape__d68f41f8-1374-4a58-9cf3-36e9ad9f9d03.bottom.png';
+import cityscapeTop from '../../../public/patterns/splitted/Pavol_Hejn_A_tiled_background_featuring_a_futuristic_cityscape__d68f41f8-1374-4a58-9cf3-36e9ad9f9d03.top.png';
 import { TiledBackgroundPlayground } from '../TiledBackgroundPlayground/TiledBackgroundPlayground';
 import styles from './TiledBackground.module.css';
 

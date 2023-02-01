@@ -1,6 +1,6 @@
 import { Head, Html, Main, NextScript } from 'next/document';
 import { createContext } from 'react';
-import { DEBUG } from '../config';
+import { DEBUG } from '../../config';
 
 export const DebugContext = createContext<typeof DEBUG>(DEBUG);
 

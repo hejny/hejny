@@ -1,5 +1,5 @@
-import placeholder from '../../public/projects/placeholder.png';
-import towns from '../../public/projects/towns.jpg';
+import placeholder from '../../../public/projects/placeholder.png';
+import towns from '../../../public/projects/towns.jpg';
 
 /**
  * Image of Towns projects
