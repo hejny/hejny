@@ -1,10 +1,8 @@
-/**
- * Converts hsl arry
- *
- * @collboard-modules-sdk
- */
 
-import { number_integer, number_percent, number_positive } from '../../typeAliases';
+
+import { number_integer, number_percent, number_positive } from "../Color";
+
+
 
 /**
  * Converts HSL values to RGB values

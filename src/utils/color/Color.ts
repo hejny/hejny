@@ -3,6 +3,9 @@ import { CSS_COLORS } from './css-colors';
 import { hslToRgb } from './utils/hslToRgb';
 import { rgbToHsl } from './utils/rgbToHsl';
 
+export type number_integer = number;
+export type number_positive = number;
+export type number_percent = number;
 export type string_color = string;
 export type string_url_image = string;
 

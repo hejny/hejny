@@ -1,4 +1,4 @@
-import { number_integer, number_percent, number_positive } from '../../typeAliases';
+import { number_integer, number_percent, number_positive } from '../Color';
 
 /**
  * Converts RGB values to HSL values
