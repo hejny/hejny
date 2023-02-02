@@ -1,12 +1,15 @@
-import { Destroyable, Registration } from 'destroyable';
+import { Registration } from 'destroyable';
 import { forTime } from 'waitasecond';
 import { IVector, Vector } from 'xyzt';
 import { Drawing } from './Drawing';
+import { Effect } from './effect';
 
-export function createGraphEffect<TElement extends HTMLElement>(formula: {
+interface GraphEffectOptions {
     range: { min: number; max: number; step: number };
     plot(input: { t: number; seed: Vector }): IVector;
-}): (element: TElement) => Destroyable {
+}
+
+export function createGraphEffect<TElement extends HTMLElement>(formula: GraphEffectOptions): Effect<TElement> {
     return (element: TElement) => {
         return Registration.create(
             async (

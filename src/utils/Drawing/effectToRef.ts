@@ -1,14 +1,12 @@
-import { IDestroyable } from 'destroyable';
+import { Effect } from './effect';
 
-export function effectToRef<TElement extends HTMLElement>(
-    effectCreator: (element: TElement) => IDestroyable,
-): (element: TElement | null) => void {
+export function effectToRef<TElement extends HTMLElement>(effect: Effect<TElement>): (element: TElement | null) => void {
     return (element: TElement | null) => {
         if (element === null) {
             return;
         }
 
-        const effect = effectCreator(element);
+        const effectOnElement = effect(element);
 
         // TODO: Destroy effect
     };
