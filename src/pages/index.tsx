@@ -64,7 +64,7 @@ export default function Home() {
                     <MyProjectsSection />
                     <HackingSection />
                     {/* TODO: <Reference /> */}
-                    <ContactSection />
+                    <ContactSection variant="SHORT" />
                 </main>
 
                 <footer>

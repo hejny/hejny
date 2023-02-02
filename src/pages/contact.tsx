@@ -35,7 +35,7 @@ export default function ContactPage() {
                 </div>
                 <main>
                     <WelcomeSection />
-                    <ContactSection /> {/* <- TODO: !!! Full / short version  */}{' '}
+                    <ContactSection variant='FULL'/>
                 </main>
                 <footer>
                     <FooterSection />

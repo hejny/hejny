@@ -1,8 +1,14 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { Section } from '../../components/Section/Section';
 import styles from './Contact.module.css';
 
-export function ContactSection() {
+interface ContactProps {
+    variant: 'SHORT' | 'FULL';
+}
+
+export function ContactSection(props: ContactProps) {
+    const { variant } = props;
     return (
         <Section id="contact">
             <h2>Get in touch!</h2>
@@ -31,9 +37,14 @@ export function ContactSection() {
                     <li>
                         <a href="https://m.me/hejny">Messenger</a>
                     </li>
-                    <li>
-                        <a href="/documents/contact.html">…More contacts…</a>
-                    </li>
+
+                    {variant === 'FULL' && <></>}
+
+                    {variant === 'SHORT' && (
+                        <li>
+                            <Link href="/contact">More</Link>
+                        </li>
+                    )}
                 </ul>
             </div>
         </Section>
@@ -41,5 +52,10 @@ export function ContactSection() {
 }
 
 /**
+ * TODO: !!! Add dynamically from https://raw.githubusercontent.com/hejny/hejny/main/documents/contact.md
+ *       1) Download from external repo script (and add copy warning)
+ *       2) Convert from local markdown to conponent
+ *       3) Add also VCard
+ *       4) Add also crypto
  * TODO: [🔗] ACRY should we use <a ...>...</a> OR <Link ...>...</Link> for external links in Next App
  */
