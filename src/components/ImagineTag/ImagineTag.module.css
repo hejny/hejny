@@ -1,0 +1,7 @@
+.imagineTag::before {
+    content: '/imagine';
+}
+
+.imagineTag {
+    /* TODO: Use or remove empty css */
+}

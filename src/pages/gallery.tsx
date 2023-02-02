@@ -1,11 +1,12 @@
 import { Inter } from '@next/font/google';
 import Head from 'next/head';
-import Link from 'next/link';
 import { Vector } from 'xyzt';
 import { CaveOfIdeasInLightbulbWithTransparentLookThr_d3273ad0_Image } from '../../public/wallpapers/Pavol_Hejn_cave_of_ideas_in_lightbulb_with_transparent_look_thr_d3273ad0-097f-4011-b799-1c379bb05ee3_AsImage';
+import { CaveOfIdeasWithTransparentLookThrough_fe3480c5_Image } from '../../public/wallpapers/Pavol_Hejn_cave_of_ideas_with_transparent_look_through_fe3480c5-76af-45da-ac4e-5177062bcb6b_AsImage';
 import { CaveWithPresentation_dec31ff2_Image } from '../../public/wallpapers/Pavol_Hejn_cave_with_presentation_dec31ff2-3b9d-42b9-b84f-f87d02d6a391_AsImage';
 import { CaveWithPrototypingLaboratory_ca9b82b9_Image } from '../../public/wallpapers/Pavol_Hejn_cave_with_prototyping_laboratory_ca9b82b9-0ded-44a3-b7ec-344ebb539439_AsImage';
 import { DebugGrid } from '../components/DebugGrid/DebugGrid';
+import { ImagineTag } from '../components/ImagineTag/ImagineTag';
 import { Item } from '../components/Items/Item';
 import { Items } from '../components/Items/Items';
 import { TiledBackground } from '../components/TiledBackground/TiledBackground';
@@ -40,57 +41,64 @@ export default function Midjourney() {
                 </div>
                 <main>
                     <Welcome /> {/* <- TODO: Children here */}
-                    <Items>
-                        {/* TODO Fix <a> in <a>
-                    <Link
-                        className={styles.galleryItem}
-                        href="https://www.midjourney.com/app/jobs/fe3480c5-76af-45da-ac4e-5177062bcb6b"
-                        target="_blank"
-                        // TODO: Is rel="noreferrer" added here
-                    >
-                        <CaveOfIdeasWithTransparentLookThroughImageXfe3480c5 />
-                    </Link>
-                    */}
+                    <Items /* !!! 2x2 */>
+                        <a
+                            href="https://www.midjourney.com/app/jobs/fe3480c5-76af-45da-ac4e-5177062bcb6b"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <Item>
+                                <Item.Image>
+                                    <CaveOfIdeasWithTransparentLookThrough_fe3480c5_Image />
+                                </Item.Image>
+                                <Item.Description>
+                                    <ImagineTag>Xxxx</ImagineTag>
+                                </Item.Description>
+                            </Item>
+                        </a>
 
-                        <Link
-                            className={styles.galleryItem}
+                        <a
                             href="https://www.midjourney.com/app/jobs/fe3480c5-76af-45da-ac4e-5177062bcb6b" // <- TODO: Real link here
                             target="_blank"
-                            // TODO: Is rel="noreferrer" added here
+                            rel="noreferrer"
                         >
                             <Item>
                                 <Item.Image>
                                     <CaveOfIdeasInLightbulbWithTransparentLookThr_d3273ad0_Image />
                                 </Item.Image>
-                                <Item.Description> AA</Item.Description>
+                                <Item.Description>
+                                    <ImagineTag>Xxxx</ImagineTag>
+                                </Item.Description>
                             </Item>
-                        </Link>
-                        <Link
-                            className={styles.galleryItem}
+                        </a>
+                        <a
                             href="https://www.midjourney.com/app/jobs/fe3480c5-76af-45da-ac4e-5177062bcb6b" // <- TODO: Real link here
                             target="_blank"
-                            // TODO: Is rel="noreferrer" added here
+                            rel="noreferrer"
                         >
                             <Item>
                                 <Item.Image>
                                     <CaveWithPresentation_dec31ff2_Image />
                                 </Item.Image>
-                                <Item.Description> AA</Item.Description>
+                                <Item.Description>
+                                    <ImagineTag>Xxxx</ImagineTag>
+                                </Item.Description>
                             </Item>
-                        </Link>
-                        <Link
-                            className={styles.galleryItem}
+                        </a>
+                        <a
                             href="https://www.midjourney.com/app/jobs/fe3480c5-76af-45da-ac4e-5177062bcb6b" // <- TODO: Real link here
                             target="_blank"
-                            // TODO: Is rel="noreferrer" added here
+                            rel="noreferrer"
                         >
                             <Item>
                                 <Item.Image>
                                     <CaveWithPrototypingLaboratory_ca9b82b9_Image />
                                 </Item.Image>
-                                <Item.Description> AA</Item.Description>
+                                <Item.Description>
+                                    <ImagineTag>Xxxx</ImagineTag>
+                                </Item.Description>
                             </Item>
-                        </Link>
+                        </a>
                     </Items>
                 </main>
                 <footer>

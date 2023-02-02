@@ -15,7 +15,7 @@ export function Footer() {
                 </li>
 
                 <li>
-                    <Link href="/gallery">Used images</Link>
+                    <Link href="/gallery">Gallery</Link>
                 </li>
 
                 <li>
