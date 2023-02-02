@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { version } from '../../../package.json';
+import { VERSION } from '../../../config';
 import styles from './Footer.module.css';
 
 export function Footer() {
@@ -23,7 +23,7 @@ export function Footer() {
                 </li>
 
                 <li>
-                    <a href="https://github.com/hejny/rapid-prototyping-wizard/">v{version}</a>
+                    <a href="https://github.com/hejny/rapid-prototyping-wizard/">v{VERSION}</a>
                 </li>
             </ul>
         </div>
