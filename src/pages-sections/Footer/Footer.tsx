@@ -11,7 +11,15 @@ export function Footer() {
                 </li>
 
                 <li>
-                    <Link href="/midjourney">*MidJourney</Link>
+                    <Link href="https://blog.pavolhejny.com">Blog</Link>
+                </li>
+
+                <li>
+                    <Link href="/gallery">Used images</Link>
+                </li>
+
+                <li>
+                    <Link href="/contact/">Contact</Link>
                 </li>
 
                 <li>

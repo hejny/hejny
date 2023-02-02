@@ -85,7 +85,7 @@ export default function Midjourney() {
  * TODO: Make some menu
  * TODO: Link to main homepage
  * TODO: Fix Aspect
- * TODO: Better URL than /midjourney
+ * TODO: Better URL than /gallery
  * TODO: Generate the components like <CaveOfIdeasWithTransparentLookThroughImageXfe3480c5 /> with links
  * TODO: [🧈] Best way how to share page css
  * TODO: !! Make the page
