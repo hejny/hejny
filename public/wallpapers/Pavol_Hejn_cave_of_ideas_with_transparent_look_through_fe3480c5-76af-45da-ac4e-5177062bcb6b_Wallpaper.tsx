@@ -113,4 +113,3 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
         </div>
     );
 }
-
