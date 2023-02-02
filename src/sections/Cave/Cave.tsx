@@ -10,5 +10,5 @@ export function CaveSection() {
 }
 
 /**
- *  !!! Remove this useless wrapper
+ *  TODO: Maybe remove - this is just wrapper component
  */

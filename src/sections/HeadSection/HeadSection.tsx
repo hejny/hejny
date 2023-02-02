@@ -17,15 +17,14 @@ export function HeadSection(props: HeadSectionProps) {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link rel="icon" href="/favicon.ico" />
 
+            <meta property="og:title" content={`From 0 to 1`} />
             <meta property="og:image" content={cave_of_ideas_with_transparent_look_through.src} />
         </>
     );
 }
 
 /**
- * TODO: !!! Is OG image in the build?
- * TODO: !!! Full OG tags
- * TODO: !!! Create better summary
+ * TODO: Create better summary
  * TODO: Maybe import from some JSON
  * TODO: What is ideal viewport value
  */

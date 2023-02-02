@@ -9,6 +9,7 @@ import { DebugGrid } from '../components/DebugGrid/DebugGrid';
 import { ImagineTag } from '../components/ImagineTag/ImagineTag';
 import { Item } from '../components/Items/Item';
 import { Items } from '../components/Items/Items';
+import { Section } from '../components/Section/Section';
 import { TiledBackground } from '../components/TiledBackground/TiledBackground';
 import { CaveSection } from '../sections/Cave/Cave';
 import { FooterSection } from '../sections/Footer/Footer';
@@ -38,65 +39,70 @@ export default function Midjourney() {
                 </div>
                 <main>
                     <WelcomeSection /> {/* <- TODO: Children here */}
-                    <Items itemsOnRow={2}>
-                        <a
-                            href="https://www.midjourney.com/app/jobs/fe3480c5-76af-45da-ac4e-5177062bcb6b"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <Item>
-                                <Item.Image>
-                                    <CaveOfIdeasWithTransparentLookThrough_fe3480c5_Image />
-                                </Item.Image>
-                                <Item.Description>
-                                    <ImagineTag>Cave of ideas with transparent look through</ImagineTag>
-                                </Item.Description>
-                            </Item>
-                        </a>
+                    <Section>
+                        <h2>Gallery</h2>
+                        <p>Images used on this page are generated using MidJourney:</p>
 
-                        <a
-                            href="https://www.midjourney.com/app/jobs/d3273ad0-097f-4011-b799-1c379bb05ee3"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <Item>
-                                <Item.Image>
-                                    <CaveOfIdeasInLightbulbWithTransparentLookThr_d3273ad0_Image />
-                                </Item.Image>
-                                <Item.Description>
-                                    <ImagineTag>Cave of ideas in lightbulb</ImagineTag>
-                                </Item.Description>
-                            </Item>
-                        </a>
-                        <a
-                            href="https://www.midjourney.com/app/jobs/dec31ff2-3b9d-42b9-b84f-f87d02d6a391"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <Item>
-                                <Item.Image>
-                                    <CaveWithPresentation_dec31ff2_Image />
-                                </Item.Image>
-                                <Item.Description>
-                                    <ImagineTag>Cave with presentation</ImagineTag>
-                                </Item.Description>
-                            </Item>
-                        </a>
-                        <a
-                            href="https://www.midjourney.com/app/jobs/ca9b82b9-0ded-44a3-b7ec-344ebb539439"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <Item>
-                                <Item.Image>
-                                    <CaveWithPrototypingLaboratory_ca9b82b9_Image />
-                                </Item.Image>
-                                <Item.Description>
-                                    <ImagineTag>Cave with prototyping laboratory</ImagineTag>
-                                </Item.Description>
-                            </Item>
-                        </a>
-                    </Items>
+                        <Items itemsOnRow={2}>
+                            <a
+                                href="https://www.midjourney.com/app/jobs/fe3480c5-76af-45da-ac4e-5177062bcb6b"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <Item>
+                                    <Item.Image>
+                                        <CaveOfIdeasWithTransparentLookThrough_fe3480c5_Image />
+                                    </Item.Image>
+                                    <Item.Description>
+                                        <ImagineTag>Cave of ideas with transparent look through</ImagineTag>
+                                    </Item.Description>
+                                </Item>
+                            </a>
+
+                            <a
+                                href="https://www.midjourney.com/app/jobs/d3273ad0-097f-4011-b799-1c379bb05ee3"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <Item>
+                                    <Item.Image>
+                                        <CaveOfIdeasInLightbulbWithTransparentLookThr_d3273ad0_Image />
+                                    </Item.Image>
+                                    <Item.Description>
+                                        <ImagineTag>Cave of ideas in lightbulb</ImagineTag>
+                                    </Item.Description>
+                                </Item>
+                            </a>
+                            <a
+                                href="https://www.midjourney.com/app/jobs/dec31ff2-3b9d-42b9-b84f-f87d02d6a391"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <Item>
+                                    <Item.Image>
+                                        <CaveWithPresentation_dec31ff2_Image />
+                                    </Item.Image>
+                                    <Item.Description>
+                                        <ImagineTag>Cave with presentation</ImagineTag>
+                                    </Item.Description>
+                                </Item>
+                            </a>
+                            <a
+                                href="https://www.midjourney.com/app/jobs/ca9b82b9-0ded-44a3-b7ec-344ebb539439"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <Item>
+                                    <Item.Image>
+                                        <CaveWithPrototypingLaboratory_ca9b82b9_Image />
+                                    </Item.Image>
+                                    <Item.Description>
+                                        <ImagineTag>Cave with prototyping laboratory</ImagineTag>
+                                    </Item.Description>
+                                </Item>
+                            </a>
+                        </Items>
+                    </Section>
                 </main>
                 <footer>
                     <FooterSection />
@@ -107,9 +113,8 @@ export default function Midjourney() {
 }
 
 /**
- * TODO: !!! Better bottom margin
- * TODO: !!! Write more about how are images created
- *       TODO: !!! Connect with section/article about AI generative technology
+ * TODO: Write better about how are images created
+ *       TODO: Connect with section/article about AI generative technology
  * TODO: Some image frames
  * TODO: Make some menu
  * TODO: [🧈] Best way how to share page css
