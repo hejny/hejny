@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { VERSION } from '../../../config';
 import styles from './Footer.module.css';
 
-export function Footer() {
+export function FooterSection() {
     return (
         <div className={styles.footer}>
             <ul>

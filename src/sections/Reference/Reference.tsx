@@ -5,7 +5,7 @@ import { Shuffle } from '../../components/Shuffle/Shuffle';
 import { ProjectPlaceholder } from '../MyProjects/projects-images';
 import styles from './Reference.module.css';
 
-export function Reference() {
+export function ReferenceSection() {
     return (
         <Section id="reference" className={styles.reference}>
             <h2>Reference</h2>

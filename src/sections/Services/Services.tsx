@@ -6,7 +6,7 @@ import { Items } from '../../components/Items/Items';
 import { Section } from '../../components/Section/Section';
 import styles from './Services.module.css';
 
-export function Services() {
+export function ServicesSection() {
     return (
         <Section id="services" className={styles.services}>
             <h2>How can I help you?</h2>

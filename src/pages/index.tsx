@@ -4,13 +4,13 @@ import { Vector } from 'xyzt';
 import { Acronym } from '../components/Acronym/Acronym';
 import { DebugGrid } from '../components/DebugGrid/DebugGrid';
 import { TiledBackground } from '../components/TiledBackground/TiledBackground';
-import { Cave } from '../pages-sections/Cave/Cave';
-import { Contact } from '../pages-sections/Contact/Contact';
-import { Footer } from '../pages-sections/Footer/Footer';
-import { Hacking } from '../pages-sections/Hacking/Hacking';
-import { MyProjects } from '../pages-sections/MyProjects/MyProjects';
-import { Services } from '../pages-sections/Services/Services';
-import { Welcome } from '../pages-sections/Welcome/Welcome';
+import { CaveSection } from '../sections/Cave/Cave';
+import { ContactSection } from '../sections/Contact/Contact';
+import { FooterSection } from '../sections/Footer/Footer';
+import { HackingSection } from '../sections/Hacking/Hacking';
+import { MyProjectsSection } from '../sections/MyProjects/MyProjects';
+import { ServicesSection } from '../sections/Services/Services';
+import { WelcomeSection } from '../sections/Welcome/Welcome';
 import styles from './index.module.css';
 
 // TODO: What is this - inter/Inter
@@ -30,7 +30,7 @@ export default function Home() {
                 <DebugGrid size={new Vector(5, 5)} />
 
                 <header>
-                    <Cave />
+                    <CaveSection />
                 </header>
 
                 <div className={styles.background}>
@@ -38,7 +38,7 @@ export default function Home() {
                 </div>
 
                 <main>
-                    <Welcome>
+                    <WelcomeSection>
                         <p>
                             <Acronym>Virtual Reality</Acronym>, <Acronym>Augmented Reality</Acronym>,{' '}
                             <Acronym abbr="XR">Extended Reality</Acronym>, GraphQL{' '}
@@ -58,17 +58,17 @@ export default function Home() {
                             benefiting from GPT when writing code, you can code, you can differentiate your business and
                             achieve new levels of efficiency, innovation and customer engagement. 🚀
                         </p>
-                    </Welcome>
-                    <Services />
+                    </WelcomeSection>
+                    <ServicesSection />
 
-                    <MyProjects />
-                    <Hacking />
+                    <MyProjectsSection />
+                    <HackingSection />
                     {/* TODO: <Reference /> */}
-                    <Contact />
+                    <ContactSection />
                 </main>
 
                 <footer>
-                    <Footer />
+                    <FooterSection />
                 </footer>
             </div>
         </>

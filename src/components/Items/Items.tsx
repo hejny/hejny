@@ -3,7 +3,7 @@ import { classNames } from '../../utils/classNames';
 import styles from './Items.module.css';
 
 interface ItemsProps {
-    itemsOnRow: 2 | 3;
+    itemsOnRow?: 2 | 3;
     children: ReactNode;
 }
 

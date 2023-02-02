@@ -10,9 +10,9 @@ import { ImagineTag } from '../components/ImagineTag/ImagineTag';
 import { Item } from '../components/Items/Item';
 import { Items } from '../components/Items/Items';
 import { TiledBackground } from '../components/TiledBackground/TiledBackground';
-import { Cave } from '../pages-sections/Cave/Cave';
-import { Footer } from '../pages-sections/Footer/Footer';
-import { Welcome } from '../pages-sections/Welcome/Welcome';
+import { CaveSection } from '../sections/Cave/Cave';
+import { FooterSection } from '../sections/Footer/Footer';
+import { WelcomeSection } from '../sections/Welcome/Welcome';
 import styles from './index.module.css';
 
 // TODO: What is this - inter/Inter
@@ -33,14 +33,14 @@ export default function Midjourney() {
                 <DebugGrid size={new Vector(5, 5)} />
                 <header>
                     {/* TODO: Do some system for multiple pages */}
-                    <Cave />
+                    <CaveSection />
                 </header>
                 <div className={styles.background}>
                     {/* TODO: Do some system for multiple pages */}
                     <TiledBackground />
                 </div>
                 <main>
-                    <Welcome /> {/* <- TODO: Children here */}
+                    <WelcomeSection /> {/* <- TODO: Children here */}
                     <Items itemsOnRow={2}>
                         <a
                             href="https://www.midjourney.com/app/jobs/fe3480c5-76af-45da-ac4e-5177062bcb6b"
@@ -102,7 +102,7 @@ export default function Midjourney() {
                     </Items>
                 </main>
                 <footer>
-                    <Footer />
+                    <FooterSection />
                 </footer>
             </div>
         </>

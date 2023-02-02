@@ -9,7 +9,7 @@ import { Section } from '../../components/Section/Section';
 import { Shuffle } from '../../components/Shuffle/Shuffle';
 import styles from './MyProjects.module.css';
 
-export function MyProjects() {
+export function MyProjectsSection() {
     return (
         <Section id="projects" className={styles.myProjects}>
             <h2>What have I worked on?</h2>

@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { Section } from '../../components/Section/Section';
 import styles from './Contact.module.css';
 
-export function Contact() {
+export function ContactSection() {
     return (
         <Section id="contact">
             <h2>Get in touch!</h2>

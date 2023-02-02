@@ -9,7 +9,7 @@ import { Section } from '../../components/Section/Section';
 import { Shuffle } from '../../components/Shuffle/Shuffle';
 import styles from './Hacking.module.css';
 
-export function Hacking() {
+export function HackingSection() {
     return (
         <Section id="hacking" className={styles.hacking}>
             <h2>Hacking!</h2>

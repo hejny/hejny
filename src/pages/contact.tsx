@@ -3,10 +3,10 @@ import Head from 'next/head';
 import { Vector } from 'xyzt';
 import { DebugGrid } from '../components/DebugGrid/DebugGrid';
 import { TiledBackground } from '../components/TiledBackground/TiledBackground';
-import { Cave } from '../pages-sections/Cave/Cave';
-import { Contact } from '../pages-sections/Contact/Contact';
-import { Footer } from '../pages-sections/Footer/Footer';
-import { Welcome } from '../pages-sections/Welcome/Welcome';
+import { CaveSection } from '../sections/Cave/Cave';
+import { ContactSection } from '../sections/Contact/Contact';
+import { FooterSection } from '../sections/Footer/Footer';
+import { WelcomeSection } from '../sections/Welcome/Welcome';
 import styles from './index.module.css';
 
 // TODO: What is this - inter/Inter
@@ -27,19 +27,18 @@ export default function ContactPage() {
                 <DebugGrid size={new Vector(5, 5)} />
                 <header>
                     {/* TODO: Do some system for multiple pages */}
-                    <Cave />
+                    <CaveSection />
                 </header>
                 <div className={styles.background}>
                     {/* TODO: Do some system for multiple pages */}
                     <TiledBackground />
                 </div>
                 <main>
-                    <Welcome /> {/* <- TODO: !!! Children here */}
-                    <Contact /> {/* <- TODO: !!! Full / short version  */}{' '}
-                    {/* <- TODO: !!! Suffix all section Section  */}
+                    <WelcomeSection />
+                    <ContactSection /> {/* <- TODO: !!! Full / short version  */}{' '}
                 </main>
                 <footer>
-                    <Footer />
+                    <FooterSection />
                 </footer>
             </div>
         </>
