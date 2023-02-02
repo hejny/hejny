@@ -6,8 +6,10 @@ export function FooterSection() {
     return (
         <div className={styles.footer}>
             <ul>
+                <li>© {new Date().getFullYear()}</li>
+
                 <li>
-                    © {new Date().getFullYear()} <a href="https://pavolhejny.com">Pavol Hejný</a>
+                    <Link href="https://pavolhejny.com">Pavol Hejný</Link>
                 </li>
 
                 <li>

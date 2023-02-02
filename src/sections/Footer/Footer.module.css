@@ -9,10 +9,11 @@
     justify-content: center;
     align-items: center;
 
+    flex-wrap: wrap;
+
     background-color: hsl(222.2, 60%, 7%) /* <- [🎨] */;
 
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px;
 }
 
 .footer ul li:not(:first-child):before {
@@ -26,11 +27,14 @@
     /*/
     outline: 1px dotted red; /**/
 
+    padding-left: 30px;
+    padding-right: 30px;
+
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    padding-left: 0;
+    flex-wrap: wrap;
 }
 
 .footer ul li {
@@ -40,4 +44,6 @@
     list-style: none;
     margin: 0;
     padding: 0;
+
+    white-space: nowrap;
 }
