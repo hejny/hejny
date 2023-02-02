@@ -2,10 +2,12 @@ import { Inter } from '@next/font/google';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Vector } from 'xyzt';
-import { CaveOfIdeasInLightbulbWithTransparentLookThrImageXd3273ad0 } from '../../public/wallpapers/Pavol_Hejn_cave_of_ideas_in_lightbulb_with_transparent_look_thr_d3273ad0-097f-4011-b799-1c379bb05ee3';
-import { CaveWithPresentationImageXdec31ff2 } from '../../public/wallpapers/Pavol_Hejn_cave_with_presentation_dec31ff2-3b9d-42b9-b84f-f87d02d6a391';
-import { CaveWithPrototypingLaboratoryImageXca9b82b9 } from '../../public/wallpapers/Pavol_Hejn_cave_with_prototyping_laboratory_ca9b82b9-0ded-44a3-b7ec-344ebb539439';
+import { CaveOfIdeasInLightbulbWithTransparentLookThrImageXd3273ad0 } from '../../public/wallpapers/Pavol_Hejn_cave_of_ideas_in_lightbulb_with_transparent_look_thr_d3273ad0-097f-4011-b799-1c379bb05ee3_AsImage';
+import { CaveWithPresentationImageXdec31ff2 } from '../../public/wallpapers/Pavol_Hejn_cave_with_presentation_dec31ff2-3b9d-42b9-b84f-f87d02d6a391_AsImage';
+import { CaveWithPrototypingLaboratoryImageXca9b82b9 } from '../../public/wallpapers/Pavol_Hejn_cave_with_prototyping_laboratory_ca9b82b9-0ded-44a3-b7ec-344ebb539439_AsImage';
 import { DebugGrid } from '../components/DebugGrid/DebugGrid';
+import { Item } from '../components/Items/Item';
+import { Items } from '../components/Items/Items';
 import { TiledBackground } from '../components/TiledBackground/TiledBackground';
 import { Cave } from '../pages-sections/Cave/Cave';
 import { Footer } from '../pages-sections/Footer/Footer';
@@ -38,7 +40,8 @@ export default function Midjourney() {
                 </div>
                 <main>
                     <Welcome /> {/* <- TODO: Children here */}
-                    {/* TODO Fix <a> in <a>
+                    <Items>
+                        {/* TODO Fix <a> in <a>
                     <Link
                         className={styles.galleryItem}
                         href="https://www.midjourney.com/app/jobs/fe3480c5-76af-45da-ac4e-5177062bcb6b"
@@ -48,30 +51,37 @@ export default function Midjourney() {
                         <CaveOfIdeasWithTransparentLookThroughImageXfe3480c5 />
                     </Link>
                     */}
-                    <Link
-                        className={styles.galleryItem}
-                        href="https://www.midjourney.com/app/jobs/fe3480c5-76af-45da-ac4e-5177062bcb6b" // <- TODO: Real link here
-                        target="_blank"
-                        // TODO: Is rel="noreferrer" added here
-                    >
-                        <CaveOfIdeasInLightbulbWithTransparentLookThrImageXd3273ad0 />
-                    </Link>
-                    <Link
-                        className={styles.galleryItem}
-                        href="https://www.midjourney.com/app/jobs/fe3480c5-76af-45da-ac4e-5177062bcb6b" // <- TODO: Real link here
-                        target="_blank"
-                        // TODO: Is rel="noreferrer" added here
-                    >
-                        <CaveWithPresentationImageXdec31ff2 />
-                    </Link>
-                    <Link
-                        className={styles.galleryItem}
-                        href="https://www.midjourney.com/app/jobs/fe3480c5-76af-45da-ac4e-5177062bcb6b" // <- TODO: Real link here
-                        target="_blank"
-                        // TODO: Is rel="noreferrer" added here
-                    >
-                        <CaveWithPrototypingLaboratoryImageXca9b82b9 />
-                    </Link>
+
+                        <Link
+                            className={styles.galleryItem}
+                            href="https://www.midjourney.com/app/jobs/fe3480c5-76af-45da-ac4e-5177062bcb6b" // <- TODO: Real link here
+                            target="_blank"
+                            // TODO: Is rel="noreferrer" added here
+                        >
+                            <Item>
+                                <Item.Image>
+                                    <CaveOfIdeasInLightbulbWithTransparentLookThrImageXd3273ad0 />
+                                </Item.Image>
+                                <Item.Description> AA</Item.Description>
+                            </Item>{' '}
+                        </Link>
+                        <Link
+                            className={styles.galleryItem}
+                            href="https://www.midjourney.com/app/jobs/fe3480c5-76af-45da-ac4e-5177062bcb6b" // <- TODO: Real link here
+                            target="_blank"
+                            // TODO: Is rel="noreferrer" added here
+                        >
+                            <CaveWithPresentationImageXdec31ff2 />
+                        </Link>
+                        <Link
+                            className={styles.galleryItem}
+                            href="https://www.midjourney.com/app/jobs/fe3480c5-76af-45da-ac4e-5177062bcb6b" // <- TODO: Real link here
+                            target="_blank"
+                            // TODO: Is rel="noreferrer" added here
+                        >
+                            <CaveWithPrototypingLaboratoryImageXca9b82b9 />
+                        </Link>
+                    </Items>
                 </main>
                 <footer>
                     <Footer />

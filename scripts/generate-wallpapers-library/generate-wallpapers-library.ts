@@ -59,7 +59,7 @@ async function generateWallpapersLibrary({ isCommited }: { isCommited: boolean }
 
         const nameWithoutExtension = name.replace(/\.png$/, '');
 
-        const wallpaperFilePath = join(wallpapersDir, nameWithoutExtension) + '.tsx';
+        const wallpaperFilePath = join(wallpapersDir, nameWithoutExtension) + '_AsImage.tsx';
 
         const wallpaperFileOldContent = await readFile(wallpaperFilePath, 'utf-8').catch(() => ``);
 
