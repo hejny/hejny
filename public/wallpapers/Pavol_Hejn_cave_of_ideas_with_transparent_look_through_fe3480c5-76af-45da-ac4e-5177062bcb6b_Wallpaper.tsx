@@ -1,6 +1,10 @@
 import Link from 'next/link';
-import { Float } from '../../src/components/Float/Float';
-import cave_of_ideas_with_transparent_look_through from './Pavol_Hejn_cave_of_ideas_with_transparent_look_through_fe3480c5-76af-45da-ac4e-5177062bcb6b.png';
+import { Vector } from 'xyzt';
+import { Color } from '../../src/utils/color/Color';
+import { createParticlesDrawingEffect } from '../../src/utils/Drawing/createParticlesDrawingEffect';
+import { effectToRef } from '../../src/utils/Drawing/effectToRef';
+import cave_of_ideas_with_transparent_look_through_fe3480c5 from './Pavol_Hejn_cave_of_ideas_with_transparent_look_through_fe3480c5-76af-45da-ac4e-5177062bcb6b.png';
+import cave_of_ideas_with_transparent_look_through_fe3480c5_76af_45da_ac4e_5177062bcb6b_foreground from './Pavol_Hejn_cave_of_ideas_with_transparent_look_through_fe3480c5-76af-45da-ac4e-5177062bcb6b_foreground.png';
 
 /**
  * Image of cave of ideas with transparent look through
@@ -12,21 +16,27 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
     return (
         <div
             style={{
-                // Image:
-                backgroundImage: `url(${cave_of_ideas_with_transparent_look_through.src})` /* <- TODO: url(...) vs url('...') */,
-                backgroundSize: 'cover',
-                backgroundPosition: '50% 80%',
-                backgroundColor: '#ccc' /* <- TODO: Create from image / project color */,
-
-                // Description:
-                display: 'flex',
-                justifyContent: 'end',
-                alignItems: 'end',
-                paddingBottom: 60,
-                paddingRight: 5,
+                display: 'grid',
+                gridTemplateColumns: '100%',
+                gridTemplateRows: '100%',
             }}
         >
-            <Float>
+            <div
+                style={{
+                    zIndex: 3,
+                    order: 3,
+
+                    gridColumn: `1 / span 1`,
+                    gridRow: `1 / span 1`,
+
+                    display: 'flex',
+                    justifyContent: 'end',
+                    alignItems: 'end',
+
+                    paddingBottom: 60,
+                    paddingRight: 5,
+                }}
+            >
                 <Link
                     href="/gallery"
                     style={{
@@ -39,7 +49,71 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
                 >
                     ⬅ Created by AI
                 </Link>
-            </Float>
+            </div>
+            <div
+                style={{
+                    zIndex: 2,
+                    order: 2,
+
+                    gridColumn: `1 / span 1`,
+                    gridRow: `1 / span 1`,
+
+                    backgroundImage: `url(${cave_of_ideas_with_transparent_look_through_fe3480c5_76af_45da_ac4e_5177062bcb6b_foreground.src})` /* <- TODO: url(...) vs url('...') */,
+                    backgroundSize: 'cover',
+                    backgroundPosition: '50% 80%',
+                }}
+            />
+
+            <div
+                style={{
+                    zIndex: 1,
+                    order: 1,
+
+                    gridColumn: `1 / span 1`,
+                    gridRow: `1 / span 1`,
+
+                    backgroundImage: `url(${cave_of_ideas_with_transparent_look_through_fe3480c5.src})` /* <- TODO: url(...) vs url('...') */,
+                    backgroundSize: 'cover',
+                    backgroundPosition: '50% 80%',
+                    width: `100%`,
+                    height: `100%`,
+                }}
+                ref={effectToRef(
+                    createParticlesDrawingEffect({
+                        generatePosition(cursorPosition) {
+                            const distance = Math.random() * 30;
+                            const rotation = Math.random() * Math.PI * 2;
+                            return cursorPosition.add(Vector.fromPolar(rotation, distance));
+                        },
+                        generateSize() {
+                            return Math.random() * 5 + 3;
+                        },
+                        generateColor() {
+                            return Color.fromString('#feeac4' /* <- [🎨] */);
+                        },
+                        generateLivetime() {
+                            return Math.random() * 2000 + 100;
+                        },
+                        generateDistance() {
+                            return Math.random() * 100 + 50;
+                        },
+                    }),
+                )}
+            />
+
+            <div
+                style={{
+                    // Image:
+                    backgroundImage: `url(${cave_of_ideas_with_transparent_look_through_fe3480c5_76af_45da_ac4e_5177062bcb6b_foreground.src})` /* <- TODO: url(...) vs url('...') */,
+                    backgroundSize: '100% 100%',
+                    width: `100%`,
+                    height: `100%`,
+                }}
+            />
         </div>
     );
 }
+
+/**
+ * !!! Remove <Float>
+ */
