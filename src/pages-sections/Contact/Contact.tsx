@@ -39,3 +39,7 @@ export function Contact() {
         </Section>
     );
 }
+
+/**
+ * TODO: [🔗] ACRY should we use <a ...>...</a> OR <Link ...>...</Link> for external links in Next App
+ */

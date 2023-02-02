@@ -1,6 +1,6 @@
-import { CaveOfIdeasInLightbulbWithTransparentLookThrImageXd3273ad0 } from '../../../public/wallpapers/Pavol_Hejn_cave_of_ideas_in_lightbulb_with_transparent_look_thr_d3273ad0-097f-4011-b799-1c379bb05ee3';
-import { CaveWithPresentationImageXdec31ff2 } from '../../../public/wallpapers/Pavol_Hejn_cave_with_presentation_dec31ff2-3b9d-42b9-b84f-f87d02d6a391';
-import { CaveWithPrototypingLaboratoryImageXca9b82b9 } from '../../../public/wallpapers/Pavol_Hejn_cave_with_prototyping_laboratory_ca9b82b9-0ded-44a3-b7ec-344ebb539439';
+import { CaveOfIdeasInLightbulbWithTransparentLookThrD3273ad0097f4011B7991c379bb05ee3ImageXcropped } from '../../../public/wallpapers/Pavol_Hejn_cave_of_ideas_in_lightbulb_with_transparent_look_thr_d3273ad0-097f-4011-b799-1c379bb05ee3_cropped_AsImage';
+import { CaveWithPresentationDec31ff23b9d42b9B84fF87d02d6a391ImageXcropped } from '../../../public/wallpapers/Pavol_Hejn_cave_with_presentation_dec31ff2-3b9d-42b9-b84f-f87d02d6a391_cropped_AsImage';
+import { CaveWithPrototypingLaboratoryCa9b82b90ded44a3B7ec344ebb539439ImageXcropped } from '../../../public/wallpapers/Pavol_Hejn_cave_with_prototyping_laboratory_ca9b82b9-0ded-44a3-b7ec-344ebb539439_cropped_AsImage';
 import { Item } from '../../components/Items/Item';
 import { Items } from '../../components/Items/Items';
 import { Section } from '../../components/Section/Section';
@@ -20,40 +20,40 @@ export function Services() {
 
                 <a href="#contact">
                     <Item>
-                        <Item.Title>Consulting</Item.Title>
+                        <Item.Title>Consult</Item.Title>
                         <Item.Description>
                             I offer expert advice on various technologies, providing {/*insightful*/} analysis of their
                             benefits and limitations to help you make decisions.
                         </Item.Description>
                         <Item.Image>
-                            <CaveOfIdeasInLightbulbWithTransparentLookThrImageXd3273ad0 />
+                            <CaveOfIdeasInLightbulbWithTransparentLookThrD3273ad0097f4011B7991c379bb05ee3ImageXcropped />
                         </Item.Image>
                     </Item>
                 </a>
 
                 <a href="#contact">
                     <Item>
-                        <Item.Title>Speaking</Item.Title>
+                        <Item.Title>Talk</Item.Title>
                         <Item.Description>
                             I provide overviews of various technologies, highlighting their{' '}
                             <span style={{ color: '#11ff11' }}>pros</span> and{' '}
                             <span style={{ color: '#ff0000' }}>cons</span> to ensure a well-rounded understanding.
                         </Item.Description>
                         <Item.Image>
-                            <CaveWithPresentationImageXdec31ff2 />
+                            <CaveWithPresentationDec31ff23b9d42b9B84fF87d02d6a391ImageXcropped />
                         </Item.Image>
                     </Item>
                 </a>
 
                 <a href="#contact">
                     <Item>
-                        <Item.Title>Prototyping</Item.Title>
+                        <Item.Title>Prototype</Item.Title>
                         <Item.Description>
                             I will bring your new project into the reality through effective prototyping and seamless
                             transition from concept to implementation.
                         </Item.Description>
                         <Item.Image>
-                            <CaveWithPrototypingLaboratoryImageXca9b82b9 />
+                            <CaveWithPrototypingLaboratoryCa9b82b90ded44a3B7ec344ebb539439ImageXcropped />
                         </Item.Image>
                     </Item>
                 </a>

@@ -48,13 +48,9 @@ export default function ContactPage() {
 
 /**
  * TODO: Make some menu
- * TODO: Link to main homepage
- * TODO: Fix Aspect
- * TODO: Better URL than /gallery
- * TODO: Generate the components like <CaveOfIdeasWithTransparentLookThroughImageXfe3480c5 /> with links
+ * TODO: !!! Link to main homepage
  * TODO: [🧈] Best way how to share page css
  * TODO: !! Make the page
  *        <a href=" https://www.midjourney.com/app/jobs/fe3480c5-76af-45da-ac4e-5177062bcb6b">*MidJourney</a>
  * TODO: DRY with index.tsx
- * TODO: ACRY should we use <a OR <Link
  */

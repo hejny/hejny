@@ -63,7 +63,7 @@ export default function Midjourney() {
                                     <CaveOfIdeasInLightbulbWithTransparentLookThrImageXd3273ad0 />
                                 </Item.Image>
                                 <Item.Description> AA</Item.Description>
-                            </Item>{' '}
+                            </Item>
                         </Link>
                         <Link
                             className={styles.galleryItem}
@@ -71,7 +71,12 @@ export default function Midjourney() {
                             target="_blank"
                             // TODO: Is rel="noreferrer" added here
                         >
-                            <CaveWithPresentationImageXdec31ff2 />
+                            <Item>
+                                <Item.Image>
+                                    <CaveWithPresentationImageXdec31ff2 />
+                                </Item.Image>
+                                <Item.Description> AA</Item.Description>
+                            </Item>
                         </Link>
                         <Link
                             className={styles.galleryItem}
@@ -79,7 +84,12 @@ export default function Midjourney() {
                             target="_blank"
                             // TODO: Is rel="noreferrer" added here
                         >
-                            <CaveWithPrototypingLaboratoryImageXca9b82b9 />
+                            <Item>
+                                <Item.Image>
+                                    <CaveWithPrototypingLaboratoryImageXca9b82b9 />
+                                </Item.Image>
+                                <Item.Description> AA</Item.Description>
+                            </Item>
                         </Link>
                     </Items>
                 </main>
@@ -93,13 +103,9 @@ export default function Midjourney() {
 
 /**
  * TODO: Make some menu
- * TODO: Link to main homepage
- * TODO: Fix Aspect
- * TODO: Better URL than /gallery
- * TODO: Generate the components like <CaveOfIdeasWithTransparentLookThroughImageXfe3480c5 /> with links
+ * TODO: !!! Link to main homepage
  * TODO: [🧈] Best way how to share page css
- * TODO: !! Make the page
- *        <a href=" https://www.midjourney.com/app/jobs/fe3480c5-76af-45da-ac4e-5177062bcb6b">*MidJourney</a>
  * TODO: DRY with index.tsx
- * TODO: ACRY should we use <a OR <Link
+ * TODO: [🔗] ACRY should we use <a ...>...</a> OR <Link ...>...</Link> for external links in Next App
+ * TODO: Generate the components like <CaveOfIdeasWithTransparentLookThroughImageXfe3480c5 /> with links
  */
