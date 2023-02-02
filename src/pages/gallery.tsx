@@ -2,9 +2,9 @@ import { Inter } from '@next/font/google';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Vector } from 'xyzt';
-import { CaveOfIdeasInLightbulbWithTransparentLookThrImageXd3273ad0 } from '../../public/wallpapers/Pavol_Hejn_cave_of_ideas_in_lightbulb_with_transparent_look_thr_d3273ad0-097f-4011-b799-1c379bb05ee3_AsImage';
-import { CaveWithPresentationImageXdec31ff2 } from '../../public/wallpapers/Pavol_Hejn_cave_with_presentation_dec31ff2-3b9d-42b9-b84f-f87d02d6a391_AsImage';
-import { CaveWithPrototypingLaboratoryImageXca9b82b9 } from '../../public/wallpapers/Pavol_Hejn_cave_with_prototyping_laboratory_ca9b82b9-0ded-44a3-b7ec-344ebb539439_AsImage';
+import { CaveOfIdeasInLightbulbWithTransparentLookThr_d3273ad0_Image } from '../../public/wallpapers/Pavol_Hejn_cave_of_ideas_in_lightbulb_with_transparent_look_thr_d3273ad0-097f-4011-b799-1c379bb05ee3_AsImage';
+import { CaveWithPresentation_dec31ff2_Image } from '../../public/wallpapers/Pavol_Hejn_cave_with_presentation_dec31ff2-3b9d-42b9-b84f-f87d02d6a391_AsImage';
+import { CaveWithPrototypingLaboratory_ca9b82b9_Image } from '../../public/wallpapers/Pavol_Hejn_cave_with_prototyping_laboratory_ca9b82b9-0ded-44a3-b7ec-344ebb539439_AsImage';
 import { DebugGrid } from '../components/DebugGrid/DebugGrid';
 import { Item } from '../components/Items/Item';
 import { Items } from '../components/Items/Items';
@@ -60,7 +60,7 @@ export default function Midjourney() {
                         >
                             <Item>
                                 <Item.Image>
-                                    <CaveOfIdeasInLightbulbWithTransparentLookThrImageXd3273ad0 />
+                                    <CaveOfIdeasInLightbulbWithTransparentLookThr_d3273ad0_Image />
                                 </Item.Image>
                                 <Item.Description> AA</Item.Description>
                             </Item>
@@ -73,7 +73,7 @@ export default function Midjourney() {
                         >
                             <Item>
                                 <Item.Image>
-                                    <CaveWithPresentationImageXdec31ff2 />
+                                    <CaveWithPresentation_dec31ff2_Image />
                                 </Item.Image>
                                 <Item.Description> AA</Item.Description>
                             </Item>
@@ -86,7 +86,7 @@ export default function Midjourney() {
                         >
                             <Item>
                                 <Item.Image>
-                                    <CaveWithPrototypingLaboratoryImageXca9b82b9 />
+                                    <CaveWithPrototypingLaboratory_ca9b82b9_Image />
                                 </Item.Image>
                                 <Item.Description> AA</Item.Description>
                             </Item>

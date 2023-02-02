@@ -1,6 +1,6 @@
-import { CaveOfIdeasInLightbulbWithTransparentLookThrD3273ad0097f4011B7991c379bb05ee3ImageXcropped } from '../../../public/wallpapers/Pavol_Hejn_cave_of_ideas_in_lightbulb_with_transparent_look_thr_d3273ad0-097f-4011-b799-1c379bb05ee3_cropped_AsImage';
-import { CaveWithPresentationDec31ff23b9d42b9B84fF87d02d6a391ImageXcropped } from '../../../public/wallpapers/Pavol_Hejn_cave_with_presentation_dec31ff2-3b9d-42b9-b84f-f87d02d6a391_cropped_AsImage';
-import { CaveWithPrototypingLaboratoryCa9b82b90ded44a3B7ec344ebb539439ImageXcropped } from '../../../public/wallpapers/Pavol_Hejn_cave_with_prototyping_laboratory_ca9b82b9-0ded-44a3-b7ec-344ebb539439_cropped_AsImage';
+import { CaveOfIdeasInLightbulbWithTransparentLookThrD3273ad0097f4011B7991c379bb05ee3_cropped_Image } from '../../../public/wallpapers/Pavol_Hejn_cave_of_ideas_in_lightbulb_with_transparent_look_thr_d3273ad0-097f-4011-b799-1c379bb05ee3_cropped_AsImage';
+import { CaveWithPresentationDec31ff23b9d42b9B84fF87d02d6a391_cropped_Image } from '../../../public/wallpapers/Pavol_Hejn_cave_with_presentation_dec31ff2-3b9d-42b9-b84f-f87d02d6a391_cropped_AsImage';
+import { CaveWithPrototypingLaboratoryCa9b82b90ded44a3B7ec344ebb539439_cropped_Image } from '../../../public/wallpapers/Pavol_Hejn_cave_with_prototyping_laboratory_ca9b82b9-0ded-44a3-b7ec-344ebb539439_cropped_AsImage';
 import { Item } from '../../components/Items/Item';
 import { Items } from '../../components/Items/Items';
 import { Section } from '../../components/Section/Section';
@@ -26,7 +26,7 @@ export function Services() {
                             benefits and limitations to help you make decisions.
                         </Item.Description>
                         <Item.Image>
-                            <CaveOfIdeasInLightbulbWithTransparentLookThrD3273ad0097f4011B7991c379bb05ee3ImageXcropped />
+                            <CaveOfIdeasInLightbulbWithTransparentLookThrD3273ad0097f4011B7991c379bb05ee3_cropped_Image />
                         </Item.Image>
                     </Item>
                 </a>
@@ -40,7 +40,7 @@ export function Services() {
                             <span style={{ color: '#ff0000' }}>cons</span> to ensure a well-rounded understanding.
                         </Item.Description>
                         <Item.Image>
-                            <CaveWithPresentationDec31ff23b9d42b9B84fF87d02d6a391ImageXcropped />
+                            <CaveWithPresentationDec31ff23b9d42b9B84fF87d02d6a391_cropped_Image />
                         </Item.Image>
                     </Item>
                 </a>
@@ -53,7 +53,7 @@ export function Services() {
                             transition from concept to implementation.
                         </Item.Description>
                         <Item.Image>
-                            <CaveWithPrototypingLaboratoryCa9b82b90ded44a3B7ec344ebb539439ImageXcropped />
+                            <CaveWithPrototypingLaboratoryCa9b82b90ded44a3B7ec344ebb539439_cropped_Image />
                         </Item.Image>
                     </Item>
                 </a>

@@ -59,7 +59,8 @@ async function generateWallpapersLibrary({ isCommited }: { isCommited: boolean }
 
         const nameWithoutExtension = name.replace(/\.png$/, '');
 
-        const wallpaperFilePath = join(wallpapersDir, nameWithoutExtension) + '_AsImage.tsx';
+        const type = 'Image';
+        const wallpaperFilePath = `${join(wallpapersDir, nameWithoutExtension)}_As${type}.tsx`;
 
         const wallpaperFileOldContent = await readFile(wallpaperFilePath, 'utf-8').catch(() => ``);
 
@@ -69,10 +70,8 @@ async function generateWallpapersLibrary({ isCommited }: { isCommited: boolean }
         }
         const nameWithoutBoilerplate = nameWithoutExtension.replace(/^Pavol_Hejn_/, '').replace('_' + jobUuid, '');
 
-        const componentName =
-            capitalize(normalizeTo_camelCase(nameWithoutBoilerplate)) +
-            'ImageX' +
-            componentId; /* <- TODO: Make some nicer naming of components */
+        const componentName = capitalize(normalizeTo_camelCase(nameWithoutBoilerplate)) + `_${componentId}_` + type;
+
         const entityName = normalizeTo_snake_case(nameWithoutBoilerplate) + '_' + componentId;
         const importPath = ('./' + relative(dirname(wallpaperFilePath), wallpaperPath).split('\\').join('/')).replace(
             /^\.\/\.\.\//,
