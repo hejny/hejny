@@ -107,6 +107,7 @@ export default function Midjourney() {
 }
 
 /**
+ * TODO: !!! Better bottom margin
  * TODO: !!! Write more about how are images created
  *       TODO: !!! Connect with section/article about AI generative technology
  * TODO: Some image frames
