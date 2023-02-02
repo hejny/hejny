@@ -107,6 +107,9 @@ export default function Midjourney() {
 }
 
 /**
+ * TODO: !!! Write more about how are images created
+ *       TODO: !!! Connect with section/article about AI generative technology
+ * TODO: Some image frames
  * TODO: Make some menu
  * TODO: [🧈] Best way how to share page css
  * TODO: DRY with index.tsx
