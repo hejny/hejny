@@ -12,6 +12,7 @@ import { Items } from '../components/Items/Items';
 import { TiledBackground } from '../components/TiledBackground/TiledBackground';
 import { CaveSection } from '../sections/Cave/Cave';
 import { FooterSection } from '../sections/Footer/Footer';
+import { HeadSection } from '../sections/HeadSection/HeadSection';
 import { WelcomeSection } from '../sections/Welcome/Welcome';
 import styles from './index.module.css';
 
@@ -22,11 +23,7 @@ export default function Midjourney() {
     return (
         <>
             <Head>
-                {/* TODO: DRY with index.tsx - probbably some HeadComponent or getTitle */}
-                <title>@@@</title>
-                <meta name="description" content="@@@" />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="icon" href="/favicon.ico" />
+                <HeadSection subtitle="Gallery" />
             </Head>
 
             <div className={styles.page}>

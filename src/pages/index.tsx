@@ -8,6 +8,7 @@ import { CaveSection } from '../sections/Cave/Cave';
 import { ContactSection } from '../sections/Contact/Contact';
 import { FooterSection } from '../sections/Footer/Footer';
 import { HackingSection } from '../sections/Hacking/Hacking';
+import { HeadSection } from '../sections/HeadSection/HeadSection';
 import { MyProjectsSection } from '../sections/MyProjects/MyProjects';
 import { ServicesSection } from '../sections/Services/Services';
 import { WelcomeSection } from '../sections/Welcome/Welcome';
@@ -20,10 +21,7 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>🧙‍♂️ Rapid prototyping wizard @@@</title>
-                <meta name="description" content="@@@" />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="icon" href="/favicon.ico" />
+                <HeadSection />
             </Head>
 
             <div className={styles.page}>
