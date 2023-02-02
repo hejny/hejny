@@ -44,7 +44,6 @@ export default function ContactPage() {
 
 /**
  * TODO: Make some menu
- * TODO: !!! Link to main homepage
  * TODO: [🧈] Best way how to share page css
  * TODO: !! Make the page
  *        <a href=" https://www.midjourney.com/app/jobs/fe3480c5-76af-45da-ac4e-5177062bcb6b">*MidJourney</a>

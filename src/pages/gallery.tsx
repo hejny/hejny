@@ -108,7 +108,6 @@ export default function Midjourney() {
 
 /**
  * TODO: Make some menu
- * TODO: !!! Link to main homepage
  * TODO: [🧈] Best way how to share page css
  * TODO: DRY with index.tsx
  * TODO: [🔗] ACRY should we use <a ...>...</a> OR <Link ...>...</Link> for external links in Next App
