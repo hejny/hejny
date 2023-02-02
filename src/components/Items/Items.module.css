@@ -17,7 +17,11 @@
 }
 
 @media only screen and (max-width: 650px) {
-    .items > * {
+    .items.row-with-2-items > * {
+        width: 100%;
+    }
+
+    .items.row-with-3-items > * {
         width: 100%;
     }
 }

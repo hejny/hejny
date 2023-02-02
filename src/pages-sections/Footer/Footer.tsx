@@ -11,6 +11,10 @@ export function Footer() {
                 </li>
 
                 <li>
+                    <Link href="/">Home</Link>
+                </li>
+
+                <li>
                     <Link href="https://blog.pavolhejny.com">Blog</Link>
                 </li>
 
