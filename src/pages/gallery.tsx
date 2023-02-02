@@ -41,7 +41,7 @@ export default function Midjourney() {
                 </div>
                 <main>
                     <Welcome /> {/* <- TODO: Children here */}
-                    <Items /* !!! 2x2 */>
+                    <Items itemsOnRow={2}>
                         <a
                             href="https://www.midjourney.com/app/jobs/fe3480c5-76af-45da-ac4e-5177062bcb6b"
                             target="_blank"
@@ -52,13 +52,13 @@ export default function Midjourney() {
                                     <CaveOfIdeasWithTransparentLookThrough_fe3480c5_Image />
                                 </Item.Image>
                                 <Item.Description>
-                                    <ImagineTag>Xxxx</ImagineTag>
+                                    <ImagineTag>Cave of ideas with transparent look through</ImagineTag>
                                 </Item.Description>
                             </Item>
                         </a>
 
                         <a
-                            href="https://www.midjourney.com/app/jobs/fe3480c5-76af-45da-ac4e-5177062bcb6b" // <- TODO: Real link here
+                            href="https://www.midjourney.com/app/jobs/d3273ad0-097f-4011-b799-1c379bb05ee3"
                             target="_blank"
                             rel="noreferrer"
                         >
@@ -67,12 +67,12 @@ export default function Midjourney() {
                                     <CaveOfIdeasInLightbulbWithTransparentLookThr_d3273ad0_Image />
                                 </Item.Image>
                                 <Item.Description>
-                                    <ImagineTag>Xxxx</ImagineTag>
+                                    <ImagineTag>Cave of ideas in lightbulb</ImagineTag>
                                 </Item.Description>
                             </Item>
                         </a>
                         <a
-                            href="https://www.midjourney.com/app/jobs/fe3480c5-76af-45da-ac4e-5177062bcb6b" // <- TODO: Real link here
+                            href="https://www.midjourney.com/app/jobs/dec31ff2-3b9d-42b9-b84f-f87d02d6a391"
                             target="_blank"
                             rel="noreferrer"
                         >
@@ -81,12 +81,12 @@ export default function Midjourney() {
                                     <CaveWithPresentation_dec31ff2_Image />
                                 </Item.Image>
                                 <Item.Description>
-                                    <ImagineTag>Xxxx</ImagineTag>
+                                    <ImagineTag>Cave with presentation</ImagineTag>
                                 </Item.Description>
                             </Item>
                         </a>
                         <a
-                            href="https://www.midjourney.com/app/jobs/fe3480c5-76af-45da-ac4e-5177062bcb6b" // <- TODO: Real link here
+                            href="https://www.midjourney.com/app/jobs/ca9b82b9-0ded-44a3-b7ec-344ebb539439"
                             target="_blank"
                             rel="noreferrer"
                         >
@@ -95,7 +95,7 @@ export default function Midjourney() {
                                     <CaveWithPrototypingLaboratory_ca9b82b9_Image />
                                 </Item.Image>
                                 <Item.Description>
-                                    <ImagineTag>Xxxx</ImagineTag>
+                                    <ImagineTag>Cave with prototyping laboratory</ImagineTag>
                                 </Item.Description>
                             </Item>
                         </a>

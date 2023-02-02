@@ -3,7 +3,11 @@
     flex-flow: row wrap;
 }
 
-.items > * {
+.items.row-with-2-items > * {
+    width: 50%;
+}
+
+.items.row-with-3-items > * {
     width: 33.333%;
 }
 
