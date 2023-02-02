@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { ReactNode } from 'react';
 import { Section } from '../../components/Section/Section';
 import styles from './Welcome.module.css';
@@ -11,9 +12,11 @@ export function WelcomeSection(props: WelcomeProps) {
 
     return (
         <Section id="welcome" className={styles.welcome}>
-            <h1>
-                From 0{/*⬛*/} to 1{/* TODO: Use Hero,💡,⬜*/}
-            </h1>
+            <Link href="/">
+                <h1>
+                    From 0{/*⬛*/} to 1{/* TODO: Use Hero,💡,⬜*/}
+                </h1>
+            </Link>
 
             {children}
         </Section>
