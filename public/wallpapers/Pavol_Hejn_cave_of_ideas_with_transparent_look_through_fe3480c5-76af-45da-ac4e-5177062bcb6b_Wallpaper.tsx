@@ -83,7 +83,8 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
                     height: `100%`,
                 }}
                 ref={effectToRef(
-                    // TODO: Palalax to foreground
+                    // TODO: !!! Avoid scrolling - hide overflow
+                    // TODO: !!! Palalax to foreground
                     joinEffects(
                         createParalaxEffect({}),
                         createParticlesDrawingEffect({
