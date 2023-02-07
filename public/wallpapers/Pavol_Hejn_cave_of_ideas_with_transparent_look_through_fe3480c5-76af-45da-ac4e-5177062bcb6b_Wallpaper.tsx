@@ -64,6 +64,13 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
                     backgroundSize: 'cover',
                     backgroundPosition: '50% 80%',
                 }}
+                ref={effectToRef(
+                    // TODO: !!! Avoid scrolling - hide overflow
+
+                    createParalaxEffect({
+                        distance: 1,
+                    }),
+                )}
             />
 
             <div
@@ -86,7 +93,9 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
                     // TODO: !!! Avoid scrolling - hide overflow
                     // TODO: !!! Palalax to foreground
                     joinEffects(
-                        createParalaxEffect({}),
+                        createParalaxEffect({
+                            distance: Infinity,
+                        }),
                         createParticlesDrawingEffect({
                             generatePosition(cursorPosition) {
                                 const distance = Math.random() * 30;

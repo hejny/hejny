@@ -3,11 +3,11 @@ import { Vector } from 'xyzt';
 import { Effect } from './effect';
 
 interface ParalaxEffectOptions {
-    // TODO: Depth / amount
+    distance: number;
 }
 
 export function createParalaxEffect<TElement extends HTMLElement>(options: ParalaxEffectOptions): Effect<TElement> {
-    const {} = options;
+    const { distance } = options;
 
     return (element: TElement) => {
         const elementSize = Vector.fromObject(element.getBoundingClientRect(), ['width', 'height']);
@@ -15,7 +15,7 @@ export function createParalaxEffect<TElement extends HTMLElement>(options: Paral
         window.addEventListener('pointermove', async (event) => {
             const cursorAbsolutePosition = Vector.fromObject(event, ['clientX', 'clientY']);
             const cursorRelativePosition = cursorAbsolutePosition.divide(elementSize).subtract({ x: 0.5, y: 0.5 });
-            const offcenter = cursorRelativePosition.scale(-15);
+            const offcenter = cursorRelativePosition.scale(-10).scale(1 / distance);
             element.style.transform = `translate(${offcenter.x}px,${offcenter.y}px)`;
         });
 
