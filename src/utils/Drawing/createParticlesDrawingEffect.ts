@@ -71,7 +71,7 @@ export function createParticlesDrawingEffect<TElement extends HTMLElement>(
                 color: generateColor(),
             });
 
-            console.log(particle);
+            // console.log(particle);
 
             const livetime = generateLivetime();
 

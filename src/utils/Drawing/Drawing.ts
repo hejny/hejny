@@ -142,4 +142,5 @@ export class Drawing extends Destroyable implements IDestroyable {
  * TODO: Optimize calling of resize+resize
  * TODO: All private/public
  * TODO: Should be used setAttribute OR setAttributeNS
+ * TODO: [🥟] Have windowSize on one place automatically updated
  */

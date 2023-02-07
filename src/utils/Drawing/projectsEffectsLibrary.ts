@@ -12,6 +12,9 @@ export const functionsEffect = createGraphEffect({
         step: 2,
     },
     plot({ t, seed }) {
+
+        // TODO: Draw here some exponential graph
+
         const x = t;
         let y = Math.sin(x / 10) * 30 + Math.cos(x / 50 + seed.x / 50) * 30 + Math.sin(x / 10 + seed.y / 50) * 5;
 

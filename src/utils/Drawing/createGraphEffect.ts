@@ -86,6 +86,8 @@ export function createGraphEffect<TElement extends HTMLElement>(formula: GraphEf
                 });
 
                 window.addEventListener('scroll', (event) => {
+                    // TODO: React here on window.scrollY
+
                     seedPosition = seedPosition.add({ x: 5 });
                     graph(seedPosition);
                 });
@@ -113,4 +115,5 @@ export function createGraphEffect<TElement extends HTMLElement>(formula: GraphEf
  * TODO: LIB xyzt: addInPlace
  * TODO: LIB xyzt: Some util for Weighted arithmetic mean of Vector
  * TODO: Idea: Multiple touches creates multiple graphs> Array.from(event.targetTouches)
+ * TODO: [🥟] Have windowSize on one place automatically updated
  */

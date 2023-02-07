@@ -86,7 +86,8 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
                 }}
                 ref={effectToRef(
                     // TODO: !!! Avoid scrolling - hide overflow
-                    // TODO: !!! Palalax to foreground
+                    // TODO: !!! Separate scroll paralax-background VS pointer paralax-foreground
+
                     joinEffects(
                         createParalaxEffect({
                             distance: Infinity,
