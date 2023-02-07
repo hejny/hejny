@@ -65,8 +65,6 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
                     backgroundPosition: '50% 80%',
                 }}
                 ref={effectToRef(
-                    // TODO: !!! Avoid scrolling - hide overflow
-
                     createParalaxEffect({
                         distance: 1,
                     }),
@@ -80,9 +78,6 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
 
                     gridColumn: `1 / span 1`,
                     gridRow: `1 / span 1`,
-
-                    // TODO: !!! Move background as paralax effect
-
                     backgroundImage: `url(${cave_of_ideas_with_transparent_look_through_fe3480c5_76af_45da_ac4e_5177062bcb6b_background.src})` /* <- TODO: url(...) vs url('...') */,
                     backgroundSize: 'cover',
                     backgroundPosition: '50% 80%',
