@@ -4,10 +4,17 @@ import { Effect } from './effect';
 
 interface ParalaxEffectOptions {
     distance: number;
+
+    /**
+     * Do not move further bottom than 0
+     * This constrain the movement only up
+     */
+    isTopLimited: boolean;
+    reactOn: Array<'SCROLL' | 'POINTER'>;
 }
 
 export function createParalaxEffect<TElement extends HTMLElement>(options: ParalaxEffectOptions): Effect<TElement> {
-    const { distance } = options;
+    const { distance, reactOn, isTopLimited } = options;
 
     return (element: TElement) => {
         let windowSize: Vector;
@@ -26,15 +33,19 @@ export function createParalaxEffect<TElement extends HTMLElement>(options: Paral
             applyParalax();
         });
 
-        window.addEventListener('scroll', (event) => {
-            scrollPosition = new Vector(window.scrollX, window.scrollY);
-            applyParalax();
-        });
+        if (reactOn.includes('SCROLL')) {
+            window.addEventListener('scroll', (event) => {
+                scrollPosition = new Vector(window.scrollX, window.scrollY);
+                applyParalax();
+            });
+        }
 
-        window.addEventListener('pointermove', async (event) => {
-            pointerPosition = Vector.fromObject(event, ['clientX', 'clientY']);
-            applyParalax();
-        });
+        if (reactOn.includes('POINTER')) {
+            window.addEventListener('pointermove', async (event) => {
+                pointerPosition = Vector.fromObject(event, ['clientX', 'clientY']);
+                applyParalax();
+            });
+        }
 
         let cursorRelativePosition: Vector = Vector.zero();
 
@@ -46,8 +57,7 @@ export function createParalaxEffect<TElement extends HTMLElement>(options: Paral
                 .divide(elementSize)
                 .subtract({ x: 0.5, y: 0.5 });
 
-            const offcenter = cursorRelativePosition
-
+            let offcenter = cursorRelativePosition
                 .scale(-10)
                 .scale(1 / distance)
                 // TODO: LIB xyzt: Vector.extend, Vector.log, Vector.logGraphical, Vector.toStringAuto
@@ -75,9 +85,14 @@ export function createParalaxEffect<TElement extends HTMLElement>(options: Paral
                     );
                     */
                     return unlimitedOffcenter;
-                })
-                .apply(({ x, y, z }) => ({ x, y: Math.min(0, y), z }));
+                });
+
             //.add(new Vector(0, window.scrollY).divide(windowSize).scale(-50));
+
+            if (isTopLimited) {
+                // TODO: LIB xyzt: Vector.applyInPlace
+                offcenter = offcenter.apply(({ x, y, z }) => ({ x, y: Math.min(0, y), z }));
+            }
 
             element.style.transform = `translate(${offcenter.x}px,${offcenter.y}px)`;
         }

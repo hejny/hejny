@@ -67,6 +67,8 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
                 ref={effectToRef(
                     createParalaxEffect({
                         distance: 1,
+                        isTopLimited: true,
+                        reactOn: ['POINTER'],
                     }),
                 )}
             />
@@ -85,12 +87,14 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
                     height: `100%`,
                 }}
                 ref={effectToRef(
-                    // TODO: !!! Avoid scrolling - hide overflow
-                    // TODO: !!! Separate scroll paralax-background VS pointer paralax-foreground
+                    // TODO: !!! Hide left gap
 
                     joinEffects(
                         createParalaxEffect({
-                            distance: Infinity,
+                            distance:
+                                -1 /* <- TODO: -1 here is bit ugly - either some new option isInverse OR not distance but ammount,...or some better name? */,
+                            isTopLimited: false,
+                            reactOn: ['SCROLL'],
                         }),
                         createParticlesDrawingEffect({
                             generatePosition(cursorPosition) {
