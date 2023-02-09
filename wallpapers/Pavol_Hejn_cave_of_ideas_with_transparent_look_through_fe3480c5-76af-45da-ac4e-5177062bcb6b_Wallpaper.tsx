@@ -64,15 +64,17 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
                     backgroundSize: 'cover',
                     backgroundPosition: '50% 80%',
                 }}
+                /*
                 ref={effectToRef(
                     createParalaxEffect({
                         distance: 1,
-                        isTopLimited: true,
                         reactOn: ['POINTER'],
                     }),
                 )}
+                */
             />
 
+            {/*
             <div
                 // Note: This layer is to hide the left gap of foreground on paralax effect
                 style={{
@@ -82,9 +84,10 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
                     gridColumn: `1 / span 1`,
                     gridRow: `1 / span 1`,
 
-                    background: `linear-gradient(to right, hsl(222.2,60%,8.8%) 5%, transparent 10%)` /* <- [🎨] */,
+                    background: `linear-gradient(to right, hsl(222.2,60%,8.8%) 5%, transparent 10%)` /* <- [🎨] * /,
                 }}
             />
+            */}
 
             <div
                 style={{
@@ -102,9 +105,7 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
                 ref={effectToRef(
                     joinEffects(
                         createParalaxEffect({
-                            distance:
-                                -1 /* <- TODO: -1 here is bit ugly - either some new option isInverse OR not distance but ammount,...or some better name? */,
-                            isTopLimited: false,
+                            distance: -1, // <- TODO: -1 here is bit ugly - either some new option isInverse OR not distance but ammount,...or some better name?
                             reactOn: ['SCROLL'],
                         }),
                         createParticlesDrawingEffect({
