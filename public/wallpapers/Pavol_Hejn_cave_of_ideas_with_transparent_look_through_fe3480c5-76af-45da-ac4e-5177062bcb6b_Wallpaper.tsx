@@ -100,8 +100,6 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
                     height: `100%`,
                 }}
                 ref={effectToRef(
-                    // TODO: !!! Antialias around the siluette
-
                     joinEffects(
                         createParalaxEffect({
                             distance:

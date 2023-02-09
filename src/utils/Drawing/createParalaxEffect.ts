@@ -56,10 +56,19 @@ export function createParalaxEffect<TElement extends HTMLElement>(options: Paral
         function applyParalax() {
             // console.log(new Vector(0, window.scrollY), windowSize, new Vector(0, window.scrollY).divide(windowSize));
 
-            cursorRelativePosition =
-                pointerPosition === null
-                    ? new Vector(0.5, 0.5) /* <- Note: When pointer not moved, assume that it is right in the middle */
-                    : pointerPosition.add(scrollPosition.scale(10)).divide(elementSize).subtract({ x: 0.5, y: 0.5 });
+            let cursorRelativePosition: Vector;
+
+            if (pointerPosition === null) {
+                // Note: When pointer not moved, assume that it is right in the middle
+                // TODO: DRY [0]
+                cursorRelativePosition = scrollPosition.scale(10 /* <- DRY [0] */).divide(elementSize);
+            } else {
+                // TODO: DRY [0]
+                cursorRelativePosition = pointerPosition
+                    .add(scrollPosition.scale(10 /* <- DRY [0] */))
+                    .divide(elementSize)
+                    .subtract({ x: 0.5, y: 0.5 });
+            }
 
             let offcenter = cursorRelativePosition
                 .scale(-10)
