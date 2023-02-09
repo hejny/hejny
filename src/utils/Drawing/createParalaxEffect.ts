@@ -11,17 +11,21 @@ interface ParalaxEffectOptions {
      */
     isTopLimited: boolean;
     reactOn: Array<'SCROLL' | 'POINTER'>;
+
+    debug?: {
+        tag: string;
+    };
 }
 
 export function createParalaxEffect<TElement extends HTMLElement>(options: ParalaxEffectOptions): Effect<TElement> {
-    const { distance, reactOn, isTopLimited } = options;
+    const { distance, reactOn, isTopLimited, debug } = options;
 
     return (element: TElement) => {
         let windowSize: Vector;
         let elementSize: Vector;
 
         let scrollPosition: Vector = Vector.zero();
-        let pointerPosition: Vector = Vector.zero();
+        let pointerPosition: Vector | null = null;
 
         function resize() {
             windowSize = Vector.fromObject(window, ['innerWidth', 'innerHeight']);
@@ -52,10 +56,10 @@ export function createParalaxEffect<TElement extends HTMLElement>(options: Paral
         function applyParalax() {
             // console.log(new Vector(0, window.scrollY), windowSize, new Vector(0, window.scrollY).divide(windowSize));
 
-            cursorRelativePosition = pointerPosition
-                .add(scrollPosition.scale(10))
-                .divide(elementSize)
-                .subtract({ x: 0.5, y: 0.5 });
+            cursorRelativePosition =
+                pointerPosition === null
+                    ? new Vector(0.5, 0.5) /* <- Note: When pointer not moved, assume that it is right in the middle */
+                    : pointerPosition.add(scrollPosition.scale(10)).divide(elementSize).subtract({ x: 0.5, y: 0.5 });
 
             let offcenter = cursorRelativePosition
                 .scale(-10)
@@ -92,6 +96,10 @@ export function createParalaxEffect<TElement extends HTMLElement>(options: Paral
             if (isTopLimited) {
                 // TODO: LIB xyzt: Vector.applyInPlace
                 offcenter = offcenter.apply(({ x, y, z }) => ({ x, y: Math.min(0, y), z }));
+            }
+
+            if (debug) {
+                console.info(debug.tag, { pointerPosition, scrollPosition, cursorRelativePosition, offcenter });
             }
 
             element.style.transform = `translate(${offcenter.x}px,${offcenter.y}px)`;
