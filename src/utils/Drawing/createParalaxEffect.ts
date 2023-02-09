@@ -4,12 +4,6 @@ import { Effect } from './effect';
 
 interface ParalaxEffectOptions {
     distance: number;
-
-    /**
-     * Do not move further bottom than 0
-     * This constrain the movement only up
-     */
-    isTopLimited: boolean;
     reactOn: Array<'SCROLL' | 'POINTER'>;
 
     debug?: {
@@ -18,7 +12,7 @@ interface ParalaxEffectOptions {
 }
 
 export function createParalaxEffect<TElement extends HTMLElement>(options: ParalaxEffectOptions): Effect<TElement> {
-    const { distance, reactOn, isTopLimited, debug } = options;
+    const { distance, reactOn, debug } = options;
 
     return (element: TElement) => {
         let windowSize: Vector;
@@ -102,15 +96,11 @@ export function createParalaxEffect<TElement extends HTMLElement>(options: Paral
 
             //.add(new Vector(0, window.scrollY).divide(windowSize).scale(-50));
 
-            if (isTopLimited) {
-                // TODO: LIB xyzt: Vector.applyInPlace
-                offcenter = offcenter.apply(({ x, y, z }) => ({ x, y: Math.min(0, y), z }));
-            }
-
             if (debug) {
                 console.info(debug.tag, { pointerPosition, scrollPosition, cursorRelativePosition, offcenter });
             }
 
+            // scale(1.01) translate(...
             element.style.transform = `translate(${offcenter.x}px,${offcenter.y}px)`;
         }
 
@@ -122,6 +112,5 @@ export function createParalaxEffect<TElement extends HTMLElement>(options: Paral
 }
 
 /**
- * TODO: !!! React on scroll - MOBILE/TOUCH
  * TODO: [🥟] Have windowSize on one place automatically updated
  */
