@@ -25,7 +25,7 @@ export default function Home() {
             </Head>
 
             <div className={styles.page}>
-                <DebugGrid size={new Vector(5, 5)} />
+                <DebugGrid size={new Vector(3, 5)} />
 
                 <header>
                     <CaveSection />
