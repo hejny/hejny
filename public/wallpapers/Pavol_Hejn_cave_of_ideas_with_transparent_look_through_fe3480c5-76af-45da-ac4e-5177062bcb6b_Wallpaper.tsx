@@ -60,7 +60,7 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
             </div>
 
             <Image
-                width={1920 /* <- !!! Test this */}
+                // width={1920 /* <- !!! Test this */}
                 alt="Cave of ideas foreground"
                 draggable="false"
                 src={cave_of_ideas_with_transparent_look_through_fe3480c5_76af_45da_ac4e_5177062bcb6b_foreground}
@@ -125,7 +125,7 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
                 )}
             >
                 <Image
-                    width={1920 /* <- !!! Test this */}
+                    // width={1920 /* <- !!! Test this */}
                     alt="Cave of ideas background"
                     draggable="false"
                     src={cave_of_ideas_with_transparent_look_through_fe3480c5_76af_45da_ac4e_5177062bcb6b_background}
