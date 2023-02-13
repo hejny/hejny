@@ -2,10 +2,17 @@
 const nextConfig = {
     reactStrictMode: true,
     experimental: {
-        appDir: true ,
+        appDir: true,
     },
     images: {
-        unoptimized: true /* <- TODO: Optimize images, all images should be in some modern format like webp/svg */,
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'www.gravatar.com',
+                port: '',
+                pathname: '/avatar/**',
+            },
+        ],
     },
 
     async exportPathMap() {
