@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { Vector } from 'xyzt';
 import { Color } from '../../src/utils/color/Color';
@@ -21,12 +22,17 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
                 display: 'grid',
                 gridTemplateColumns: '100%',
                 gridTemplateRows: '100%',
+                overflow: 'hidden' /* <- TODO: Maybe use clip not hidden ACRY */,
             }}
         >
             <div
                 style={{
                     zIndex: 4,
                     order: 4,
+
+                    // !!! Remove all testing outline and bg
+                    //outline: '10px solid green',
+                    //backgroundColor: 'rgba(0,255,0,0.2)',
 
                     gridColumn: `1 / span 1`,
                     gridRow: `1 / span 1`,
@@ -52,7 +58,12 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
                     ⬅ Created by AI
                 </Link>
             </div>
-            <div
+
+            <Image
+                width={64 /* <- !!! Test this */}
+                alt="Cave of ideas foreground"
+                draggable="false"
+                src={cave_of_ideas_with_transparent_look_through_fe3480c5_76af_45da_ac4e_5177062bcb6b_foreground}
                 style={{
                     zIndex: 3,
                     order: 3,
@@ -60,9 +71,12 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
                     gridColumn: `1 / span 1`,
                     gridRow: `1 / span 1`,
 
-                    backgroundImage: `url(${cave_of_ideas_with_transparent_look_through_fe3480c5_76af_45da_ac4e_5177062bcb6b_foreground.src})` /* <- TODO: url(...) vs url('...') */,
-                    backgroundSize: 'cover',
-                    backgroundPosition: '50% 80%',
+                    aspectRatio: 'unset',
+                    width: '100%',
+                    height: '100%',
+
+                    objectFit: 'cover',
+                    objectPosition: '50% 80%',
                 }}
                 /*
                 ref={effectToRef(
@@ -74,21 +88,6 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
                 */
             />
 
-            {/*
-            <div
-                // Note: This layer is to hide the left gap of foreground on paralax effect
-                style={{
-                    zIndex: 2,
-                    order: 2,
-
-                    gridColumn: `1 / span 1`,
-                    gridRow: `1 / span 1`,
-
-                    background: `linear-gradient(to right, hsl(222.2,60%,8.8%) 5%, transparent 10%)` /* <- [🎨] * /,
-                }}
-            />
-            */}
-
             <div
                 style={{
                     zIndex: 1,
@@ -96,11 +95,6 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
 
                     gridColumn: `1 / span 1`,
                     gridRow: `1 / span 1`,
-                    backgroundImage: `url(${cave_of_ideas_with_transparent_look_through_fe3480c5_76af_45da_ac4e_5177062bcb6b_background.src})` /* <- TODO: url(...) vs url('...') */,
-                    backgroundSize: 'cover',
-                    backgroundPosition: '50% 80%',
-                    width: `100%`,
-                    height: `100%`,
                 }}
                 ref={effectToRef(
                     joinEffects(
@@ -129,17 +123,27 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
                         }),
                     ),
                 )}
-            />
+            >
+                <Image
+                    width={64 /* <- !!! Test this */}
+                    alt="Cave of ideas background"
+                    draggable="false"
+                    src={cave_of_ideas_with_transparent_look_through_fe3480c5_76af_45da_ac4e_5177062bcb6b_background}
+                    style={{
+                        aspectRatio: 'unset',
+                        width: '100%',
+                        height: '100%',
 
-            <div
-                style={{
-                    // Image:
-                    backgroundImage: `url(${cave_of_ideas_with_transparent_look_through_fe3480c5_76af_45da_ac4e_5177062bcb6b_foreground.src})` /* <- TODO: url(...) vs url('...') */,
-                    backgroundSize: '100% 100%',
-                    width: `100%`,
-                    height: `100%`,
-                }}
-            />
+                        objectFit: 'cover',
+                        objectPosition: '50% 80%',
+                    }}
+                />
+            </div>
         </div>
     );
 }
+
+/**
+ * Note: [!!!tag] Foreground <Image> is not wrapped into <div> but background is because !!!
+ * TODO: !!! Replace all backgroundImage ACRY by <Image
+ */
