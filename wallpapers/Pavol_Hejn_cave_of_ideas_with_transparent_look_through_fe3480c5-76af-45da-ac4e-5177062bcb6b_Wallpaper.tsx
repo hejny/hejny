@@ -59,7 +59,7 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
                 // width={1920} <- Note: [1]
                 alt="Cave of ideas foreground"
                 priority={true}
-                quality={100}
+                quality={85}
                 placeholder="blur"
                 draggable="false"
                 src={cave_of_ideas_with_transparent_look_through_fe3480c5_76af_45da_ac4e_5177062bcb6b_foreground}
@@ -127,7 +127,7 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
                     // width={1920} <- Note: [1]
                     alt="Cave of ideas background"
                     priority={true}
-                    quality={95}
+                    quality={75}
                     placeholder="blur"
                     draggable="false"
                     src={cave_of_ideas_with_transparent_look_through_fe3480c5_76af_45da_ac4e_5177062bcb6b_background}
