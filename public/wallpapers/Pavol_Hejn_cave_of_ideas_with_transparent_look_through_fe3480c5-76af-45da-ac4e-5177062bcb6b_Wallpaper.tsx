@@ -30,10 +30,6 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
                     zIndex: 4,
                     order: 4,
 
-                    // !!! Remove all testing outline and bg
-                    //outline: '10px solid green',
-                    //backgroundColor: 'rgba(0,255,0,0.2)',
-
                     gridColumn: `1 / span 1`,
                     gridRow: `1 / span 1`,
 
@@ -59,7 +55,7 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
                 </Link>
             </div>
 
-            <Image
+            <Image // <- Note: [0]
                 // width={1920 /* <- !!! Test this */}
                 alt="Cave of ideas foreground"
                 draggable="false"
@@ -88,7 +84,7 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
                 */
             />
 
-            <div
+            <div // <- Note: [0]
                 style={{
                     zIndex: 1,
                     order: 1,
@@ -144,6 +140,6 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
 }
 
 /**
- * Note: [!!!tag] Foreground <Image> is not wrapped into <div> but background is because !!!
+ * Note: [0] Foreground <Image> is not wrapped into <div> but background is because ref works on <div> but not <Image>
  * TODO: !!! Replace all backgroundImage ACRY by <Image
  */
