@@ -56,8 +56,11 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
             </div>
 
             <Image // <- Note: [0]
-                // width={1920 /* <- !!! Test this */}
+                // width={1920} <- Note: [1]
                 alt="Cave of ideas foreground"
+                priority={true}
+                quality={85}
+                placeholder="blur"
                 draggable="false"
                 src={cave_of_ideas_with_transparent_look_through_fe3480c5_76af_45da_ac4e_5177062bcb6b_foreground}
                 style={{
@@ -121,8 +124,11 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
                 )}
             >
                 <Image
-                    // width={1920 /* <- !!! Test this */}
+                    // width={1920} <- Note: [1]
                     alt="Cave of ideas background"
+                    priority={true}
+                    quality={75}
+                    placeholder="blur"
                     draggable="false"
                     src={cave_of_ideas_with_transparent_look_through_fe3480c5_76af_45da_ac4e_5177062bcb6b_background}
                     style={{
@@ -141,5 +147,10 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
 
 /**
  * Note: [0] Foreground <Image> is not wrapped into <div> but background is because ref works on <div> but not <Image>
+ * Note+TODO: [1] Is it important to explicitelly set width on the images for the optimization?
  * TODO: !!! Replace all backgroundImage ACRY by <Image
+ * TODO: !!! Explicit set priority={...} on all images
+ * TODO: !!! Explicit set quality={...} on all images
+ * TODO: !!! Explicit set placeholder={...} on all images
+ * TODO: !!! Explicit set draggable="false" on all images
  */
