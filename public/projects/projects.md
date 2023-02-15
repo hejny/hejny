@@ -38,7 +38,7 @@ Collboard is an online virtual whiteboard that offers simplicity, creativity, an
 
 Newsletter of the most interesting Tech&Startup events in Czechia
 
-[![Meetup](/public/projects/CzechEvents/Pavol_Hejn_Simple_pen_sketch_of_A_have_big_interest_in_Czech_Te_62acce49-a9db-4d36-9199-d606551f463c.svg)](https://czech.events/)
+[![Meetup](/public/projects/CzechEvents/Pavol_Hejny_Coloring_book_black_and_white_illustration_outline__f429b7c9-7d63-4df8-9f95-07158107df10.svg)](https://czech.events/)
 
 ## Functions
 
