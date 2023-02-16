@@ -18,7 +18,7 @@ export function HackingSection() {
                 Case studies what could be <b>done in 24/48 hours</b>
             </p>
             <Items>
-                <Shuffle>
+                <Shuffle seed="hacking">
                     <FunctionsProject />
                     <LibrariesProject />
                     <MapsProject />

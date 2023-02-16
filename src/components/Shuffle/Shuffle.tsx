@@ -1,15 +1,27 @@
-import { ReactNode } from 'react';
+import { createContext, ReactNode, useContext } from 'react';
+import seedrandom from 'seedrandom';
+
+/**
+ * This will be a seed prefix for the random number generator used in the shuffling
+ */
+export const ShuffleSeedContext = createContext<string | number>('');
 
 interface ShuffleProps {
+    /**
+     * This will be a seed suffix for the random number generator used in the shuffling
+     */
+    seed?: string | number;
     children: Array<ReactNode>;
 }
 
 export function Shuffle(props: ShuffleProps) {
-    const { children } = props;
+    const { children, seed } = props;
 
-    const shuffledChildren = [...children]; // useMemo(() => [...children].sort(() => Math.random() - 0.5), [children]);
+    const random = seedrandom(useContext(ShuffleSeedContext).toString() + (seed?.toString() || ''));
 
-    return shuffledChildren;
+    const shuffledChildren = [...children].sort(() => (random() > 0.5 ? 1 : -1));
+
+    return <>{shuffledChildren}</>;
 }
 
 /**

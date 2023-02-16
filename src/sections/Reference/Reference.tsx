@@ -11,7 +11,7 @@ export function ReferenceSection() {
             <h2>Reference</h2>
 
             <Items>
-                <Shuffle>
+                <Shuffle seed="reference">
                     <Item>
                         <Item.Title>Birds</Item.Title>
                         <Item.Description>

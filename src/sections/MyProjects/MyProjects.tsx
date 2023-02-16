@@ -15,7 +15,7 @@ export function MyProjectsSection() {
             <h2>What have I worked on?</h2>
             <p>Here are some of the larger projects that I have been involved in:</p>
             <Items>
-                <Shuffle>
+                <Shuffle seed="projects">
                     <TownsProject />
                     <BirdsProject />
                     <CollboardProject />

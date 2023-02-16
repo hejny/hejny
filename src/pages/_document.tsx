@@ -1,6 +1,7 @@
 import { Head, Html, Main, NextScript } from 'next/document';
 import { createContext } from 'react';
 import { DEBUG } from '../../config';
+import { ShuffleSeedContext } from '../components/Shuffle/Shuffle';
 
 export const DebugContext = createContext<typeof DEBUG>(DEBUG);
 
@@ -10,7 +11,9 @@ export default function Document() {
             <Head />
             <body>
                 <DebugContext.Provider value={DEBUG}>
-                    <Main />
+                    <ShuffleSeedContext.Provider value={new Date().getUTCHours()}>
+                        <Main />
+                    </ShuffleSeedContext.Provider>
                 </DebugContext.Provider>
                 <NextScript />
             </body>
