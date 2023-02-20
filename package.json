@@ -11,7 +11,7 @@
     },
     "scripts": {
         "dev": "next dev -p 4455",
-        "build": "rm -rf ./out && next build && next export && next-export-optimize-images && echo prototyping.hejny.org > ./out/CNAME && echo > ./out/.nojekyll",
+        "build": "rm -rf ./build && next build && next export -o build && next-export-optimize-images && echo prototyping.hejny.org > ./build/CNAME && echo > ./build/.nojekyll",
         "start": "next start",
         "lint": "next lint",
         "test": "npm run test-unit && npm run test-integration",
@@ -63,10 +63,9 @@
         "ts-node": "10.9.1",
         "typescript": "4.9.4",
         "waitasecond": "1.11.1",
-        "xyzt": "5.4.0"
-    },
-    "dependencies": {
+        "xyzt": "5.4.0",
         "@types/seedrandom": "^3.0.4",
         "seedrandom": "^3.0.5"
-    }
+    },
+    "dependencies": {}
 }

@@ -20,6 +20,7 @@ const nextConfig = {
     async exportPathMap() {
         return {
             '/': { page: '/' },
+            // !!!
         };
     },
 };
