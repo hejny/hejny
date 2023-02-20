@@ -34,7 +34,7 @@ export function TiledBackground() {
                 className={styles.layer}
                 style={{
                     zIndex: 1000,
-                    backgroundColor: 'hsl(222.2,60%,8.8%)' /* <- [🎨] */,
+                    background: 'var(--main-background)',
                     opacity: 1,
                 }}
             ></div>

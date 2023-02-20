@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { VERSION } from '../../../config';
 import styles from './Footer.module.css';
 
 export function FooterSection() {
@@ -8,17 +7,21 @@ export function FooterSection() {
             <ul>
                 <li>© {new Date().getFullYear()}</li>
 
+                {/*
                 <li>
                     <Link href="https://pavolhejny.com">Pavol Hejný</Link>
                 </li>
+                */}
 
                 <li>
                     <Link href="/">Home</Link>
                 </li>
 
+                {/*
                 <li>
                     <Link href="https://blog.pavolhejny.com">Blog</Link>
                 </li>
+                */}
 
                 <li>
                     <Link href="/gallery">Gallery</Link>
@@ -28,9 +31,11 @@ export function FooterSection() {
                     <Link href="/contact/">Contact</Link>
                 </li>
 
+                {/*
                 <li>
                     <a href="https://github.com/hejny/rapid-prototyping-wizard/">v{VERSION}</a>
                 </li>
+                */}
             </ul>
         </div>
     );

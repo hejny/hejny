@@ -1,4 +1,7 @@
 :root {
     --normal-text-color: rgb(245, 224, 185);
     --highlighted-text-color: rgb(255, 255, 255);
+
+    --main-background: linear-gradient(to bottom, hsl(222.2, 60%, 8.8%), hsl(223, 43%, 19%));
+    --footer-background: hsl(222.2, 60%, 8.8%);
 }

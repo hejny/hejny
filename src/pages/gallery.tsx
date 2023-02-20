@@ -43,6 +43,7 @@ export default function Midjourney() {
                         <h2>Gallery</h2>
                         <p>Images used on this page are generated using MidJourney:</p>
 
+
                         <Items itemsOnRow={2}>
                             <a
                                 href="https://www.midjourney.com/app/jobs/fe3480c5-76af-45da-ac4e-5177062bcb6b"

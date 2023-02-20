@@ -11,7 +11,7 @@
 
     flex-wrap: wrap;
 
-    background-color: hsl(222.2, 60%, 7%) /* <- [🎨] */;
+    background: var(--footer-background);
 
     padding: 20px;
 }

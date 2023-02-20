@@ -67,9 +67,11 @@
     color: var(--highlighted-text-color);
 }
 
-.page h1,
 .page h2 {
-    text-shadow: #ff9912 0px 0px 25px;
+    font-size: 30px;
+    background: linear-gradient(to right, var(--normal-text-color), rgb(236, 206, 150) /* <- [🎨] */);
+    background-clip: text;
+    color: transparent;
 }
 
 .page main h1 {
@@ -80,7 +82,9 @@
     /**/
 
     font-family: 'PassionsConflict', Helvetica Neue;
-    font-size: 70px /* <- [🔠] Make one place for font-size */;
+    font-size: 85px /* <- [🔠] Make one place for font-size */;
+
+    text-shadow: #ff9912 0px 0px 25px /* <- [🎨] */;
 
     /* TODO: DRY */
     margin: 0;

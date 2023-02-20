@@ -23,7 +23,7 @@ export function ContactSection(props: ContactProps) {
 
                 <ul>
                     <li>
-                        <a href="mailto:pavol@hejny.org">Pavol@Hejny.org</a>
+                        <a href="mailto:pavol@hejny.org">Email</a>
                     </li>
                     <li>
                         <a href="https://github.com/hejny/">GitHub</a>

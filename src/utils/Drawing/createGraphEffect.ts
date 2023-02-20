@@ -85,12 +85,14 @@ export function createGraphEffect<TElement extends HTMLElement>(formula: GraphEf
                     graph(seedPosition);
                 });
 
+                /*
                 window.addEventListener('scroll', (event) => {
                     // TODO: React here on window.scrollY
 
                     seedPosition = seedPosition.add({ x: 5 });
                     graph(seedPosition);
                 });
+                */
 
                 /* 
                 window.addEventListener('touchmove', (event) => {
