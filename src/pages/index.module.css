@@ -83,6 +83,7 @@
 
     font-family: 'PassionsConflict', Helvetica Neue;
     font-size: 85px /* <- [🔠] Make one place for font-size */;
+    white-space: nowrap;
 
     text-shadow: #ff9912 0px 0px 25px /* <- [🎨] */;
 
