@@ -17,7 +17,7 @@ import styles from './index.module.css';
 // TODO: What is this - inter/Inter
 const inter = Inter({ subsets: ['latin'] });
 
-export default function Home() {
+export default function PavolHejny() {
     return (
         <>
             <Head>
@@ -75,5 +75,11 @@ export default function Home() {
 }
 
 /**
- * TODO: !!! Replace this also as personal page
+ * TODO: [🧈] Best way how to share page css
+ * TODO: Custom 404 page
+ * TODO: The best way to import the fonts
+ * TODO: Add Google Analytics
+ * TODO: Add cookies icon
+ * TODO: Add AMP capability
+ * TODO: Add Preview image for Facebook, Facebook App/Page, Twitter, Instagram, OG images, description and keywords
  */
