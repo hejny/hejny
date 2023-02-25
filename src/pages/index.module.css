@@ -96,6 +96,12 @@
     margin-inline-end: 0;
 }
 
+@media only screen and (max-width: 600px) {
+    .page main h1 {
+        font-size: 70px /* <- [🔠] Make one place for font-size */;
+    }
+}
+
 .page footer {
     /*/
     outline: 1px dotted green;
