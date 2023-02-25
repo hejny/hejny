@@ -1,5 +1,4 @@
 import { Inter } from '@next/font/google';
-import Head from 'next/head';
 import Link from 'next/link';
 import { Vector } from 'xyzt';
 import { DebugGrid } from '../components/DebugGrid/DebugGrid';

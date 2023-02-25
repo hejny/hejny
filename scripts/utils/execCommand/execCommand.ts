@@ -2,8 +2,8 @@ import chalk from 'chalk';
 import { spawn } from 'child_process';
 import spaceTrim from 'spacetrim';
 import { forTime } from 'waitasecond';
-import { IExecCommandOptions } from './IExecCommandOptions';
 import { execCommandNormalizeOptions } from './execCommandNormalizeOptions';
+import { IExecCommandOptions } from './IExecCommandOptions';
 
 export function execCommand(options: IExecCommandOptions): Promise<string> {
     return new Promise((resolve, reject) => {
