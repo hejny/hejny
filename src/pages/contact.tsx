@@ -3,10 +3,10 @@ import Head from 'next/head';
 import { Vector } from 'xyzt';
 import { DebugGrid } from '../components/DebugGrid/DebugGrid';
 import { TiledBackground } from '../components/TiledBackground/TiledBackground';
+import { AppHead, HeadSection } from '../sections/AppHead/AppHead';
 import { CaveSection } from '../sections/Cave/Cave';
 import { ContactSection } from '../sections/Contact/Contact';
 import { FooterSection } from '../sections/Footer/Footer';
-import { HeadSection } from '../sections/HeadSection/HeadSection';
 import { WelcomeSection } from '../sections/Welcome/Welcome';
 import styles from './index.module.css';
 
@@ -16,9 +16,9 @@ const inter = Inter({ subsets: ['latin'] });
 export default function ContactPage() {
     return (
         <>
-            <Head>
-            <HeadSection subtitle="Contact" />
-            </Head>
+          
+                <AppHead subtitle="Contact" />
+            
 
             <div className={styles.page}>
                 <DebugGrid size={new Vector(5, 5)} />
@@ -32,7 +32,7 @@ export default function ContactPage() {
                 </div>
                 <main>
                     <WelcomeSection />
-                    <ContactSection variant='FULL'/>
+                    <ContactSection variant="FULL" />
                 </main>
                 <footer>
                     <FooterSection />

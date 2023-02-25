@@ -4,11 +4,11 @@ import { Vector } from 'xyzt';
 import { Acronym } from '../components/Acronym/Acronym';
 import { DebugGrid } from '../components/DebugGrid/DebugGrid';
 import { TiledBackground } from '../components/TiledBackground/TiledBackground';
+import { AppHead, HeadSection } from '../sections/AppHead/AppHead';
 import { CaveSection } from '../sections/Cave/Cave';
 import { ContactSection } from '../sections/Contact/Contact';
 import { FooterSection } from '../sections/Footer/Footer';
 import { HackingSection } from '../sections/Hacking/Hacking';
-import { HeadSection } from '../sections/HeadSection/HeadSection';
 import { MyProjectsSection } from '../sections/MyProjects/MyProjects';
 import { ServicesSection } from '../sections/Services/Services';
 import { WelcomeSection } from '../sections/Welcome/Welcome';
@@ -20,9 +20,9 @@ const inter = Inter({ subsets: ['latin'] });
 export default function PavolHejny() {
     return (
         <>
-            <Head>
-                <HeadSection />
-            </Head>
+          
+                <AppHead />
+        
 
             <div className={styles.page}>
                 <DebugGrid size={new Vector(3, 5)} />

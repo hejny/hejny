@@ -11,9 +11,9 @@ import { Item } from '../components/Items/Item';
 import { Items } from '../components/Items/Items';
 import { Section } from '../components/Section/Section';
 import { TiledBackground } from '../components/TiledBackground/TiledBackground';
+import { AppHead, HeadSection } from '../sections/AppHead/AppHead';
 import { CaveSection } from '../sections/Cave/Cave';
 import { FooterSection } from '../sections/Footer/Footer';
-import { HeadSection } from '../sections/HeadSection/HeadSection';
 import { WelcomeSection } from '../sections/Welcome/Welcome';
 import styles from './index.module.css';
 
@@ -23,9 +23,9 @@ const inter = Inter({ subsets: ['latin'] });
 export default function Midjourney() {
     return (
         <>
-            <Head>
-                <HeadSection subtitle="Gallery" />
-            </Head>
+          
+                <AppHead subtitle="Gallery" />
+          
 
             <div className={styles.page}>
                 <DebugGrid size={new Vector(5, 5)} />
@@ -42,7 +42,6 @@ export default function Midjourney() {
                     <Section>
                         <h2>Gallery</h2>
                         <p>Images used on this page are generated using MidJourney:</p>
-
 
                         <Items itemsOnRow={2}>
                             <a

@@ -1,13 +1,12 @@
 import { Inter } from '@next/font/google';
-import Head from 'next/head';
 import { Vector } from 'xyzt';
 import { VERSION } from '../../config';
 import { DebugGrid } from '../components/DebugGrid/DebugGrid';
 import { Section } from '../components/Section/Section';
 import { TiledBackground } from '../components/TiledBackground/TiledBackground';
+import { AppHead } from '../sections/AppHead/AppHead';
 import { CaveSection } from '../sections/Cave/Cave';
 import { FooterSection } from '../sections/Footer/Footer';
-import { HeadSection } from '../sections/HeadSection/HeadSection';
 import { WelcomeSection } from '../sections/Welcome/Welcome';
 import styles from './index.module.css';
 
@@ -17,9 +16,7 @@ const inter = Inter({ subsets: ['latin'] });
 export default function Midjourney() {
     return (
         <>
-            <Head>
-                <HeadSection subtitle="Gallery" />
-            </Head>
+            <AppHead subtitle="Gallery" />
 
             <div className={styles.page}>
                 <DebugGrid size={new Vector(5, 5)} />
