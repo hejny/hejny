@@ -1,5 +1,4 @@
 import { Inter } from '@next/font/google';
-import Head from 'next/head';
 import { Vector } from 'xyzt';
 import { DebugGrid } from '../components/DebugGrid/DebugGrid';
 import { TiledBackground } from '../components/TiledBackground/TiledBackground';

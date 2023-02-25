@@ -4,7 +4,7 @@ import chalk from 'chalk';
 import commander from 'commander';
 import { readFile, writeFile } from 'fs/promises';
 import markdownToTxt from 'markdown-to-txt';
-import { decapitalize, normalizeTo_PascalCase, normalizeTo_camelCase } from 'n12';
+import { decapitalize, normalizeTo_camelCase, normalizeTo_PascalCase } from 'n12';
 import { dirname, join, relative } from 'path';
 import { Converter } from 'showdown';
 import spaceTrim from 'spacetrim';
