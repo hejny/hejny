@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { Vector } from 'xyzt';
 import { DebugGrid } from '../components/DebugGrid/DebugGrid';
 import { TiledBackground } from '../components/TiledBackground/TiledBackground';
-import { AppHead } from '../sections/AppHead/AppHead';
+import { AppHead, HeadSection } from '../sections/AppHead/AppHead';
 import { CaveSection } from '../sections/Cave/Cave';
 import { ContactSection } from '../sections/Contact/Contact';
 import { FooterSection } from '../sections/Footer/Footer';

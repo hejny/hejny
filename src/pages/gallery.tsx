@@ -11,7 +11,7 @@ import { Item } from '../components/Items/Item';
 import { Items } from '../components/Items/Items';
 import { Section } from '../components/Section/Section';
 import { TiledBackground } from '../components/TiledBackground/TiledBackground';
-import { AppHead } from '../sections/AppHead/AppHead';
+import { AppHead, HeadSection } from '../sections/AppHead/AppHead';
 import { CaveSection } from '../sections/Cave/Cave';
 import { FooterSection } from '../sections/Footer/Footer';
 import { WelcomeSection } from '../sections/Welcome/Welcome';
