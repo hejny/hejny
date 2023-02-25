@@ -12,6 +12,7 @@
     flex-wrap: wrap;
 
     background: var(--footer-background);
+    color: var(--normal-text-color);
 
     padding: 20px;
 }
