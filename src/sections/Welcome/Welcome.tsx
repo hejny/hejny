@@ -1,5 +1,7 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { ReactNode } from 'react';
+import logo from '../../../public/logo/logo.svg';
 import { Section } from '../../components/Section/Section';
 import styles from './Welcome.module.css';
 
@@ -14,7 +16,7 @@ export function WelcomeSection(props: WelcomeProps) {
         <Section id="welcome" className={styles.welcome}>
             <Link href="/">
                 <h1>
-                    From 0{/*⬛*/} to 1{/* TODO: Use Hero,💡,⬜*/}
+                    <Image alt="From 0 to 1" src={logo} />
                 </h1>
             </Link>
 
