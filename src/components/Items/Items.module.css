@@ -1,6 +1,8 @@
 .items {
     display: flex;
     flex-flow: row wrap;
+
+    row-gap: 40px;
 }
 
 .items.row-with-2-items > * {
