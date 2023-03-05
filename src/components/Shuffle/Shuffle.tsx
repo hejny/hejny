@@ -11,13 +11,17 @@ interface ShuffleProps {
      * This will be a seed suffix for the random number generator used in the shuffling
      */
     seed?: string | number;
-    children: Array<ReactNode>;
+    children: ReactNode;
 }
 
 export function Shuffle(props: ShuffleProps) {
     const { children, seed } = props;
 
     const random = seedrandom(useContext(ShuffleSeedContext).toString() + (seed?.toString() || ''));
+
+    if (!Array.isArray(children)) {
+        return children as any;
+    }
 
     const shuffledChildren = [...children].sort(() => (random() > 0.5 ? 1 : -1));
 

@@ -182,4 +182,9 @@ async function generateProjectsLibrary({ isCommited }: { isCommited: boolean }) 
 /**
  * TODO: When the heading is changes, old file will be still in place, this can be a bit misleading
  * TODO: Maybe rename generateProjectsLibrary
+ * TODO: Replace all backgroundImage ACRY by <Image
+ * TODO: Explicit set priority={...} on all images
+ * TODO: Explicit set quality={...} on all images
+ * TODO: Explicit set placeholder={...} on all images
+ * TODO: Explicit set draggable="false" on all images
  */

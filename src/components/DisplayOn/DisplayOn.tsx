@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import styled from 'styled-components';
 import { classNames } from '../../utils/classNames';
 
@@ -5,7 +6,7 @@ interface IDisplayOnProps {
     desktop?: true;
     tablet?: true;
     mobile?: true;
-    children: JSX.Element;
+    children: ReactNode;
 }
 
 /**
@@ -42,9 +43,11 @@ const DisplayOnStyle = styled.div`
         }
     }
 
+    /*
     @media print and speech {
         display: initial;
     }
+    */
 `;
 
 /**

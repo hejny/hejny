@@ -14,12 +14,12 @@
 }
 
 .vcard img {
-    width: 150px;
-    height: 150px;
-    margin: 20px;
-    border-radius: 100%;
+    object-fit: cover;
+    width: 250px;
+    height: 250px;
+    border-radius: 50px;
 
-    /*border: 5px solid #ff9912;*/
+    /*border: 5px solid #dec36f;*/
     /*box-shadow: #ff981231 0px 0px 15px;*/
 }
 
@@ -28,7 +28,7 @@
     list-style: none;
     padding-left: 0;
 
-    margin-left: 5%;
+    margin-left: 15px;
 }
 
 .vcard li {

@@ -1,0 +1,21 @@
+.about {
+    /*/
+    outline: 1px dotted green;
+    /**/
+
+    text-align: left;
+    font-size: 17px /* <- [🔠] Make one place for font-size */;
+}
+
+.about img {
+    width: 250px;
+    height: 250px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    border-radius: 50px;
+
+    float: left;
+
+    /*border: 5px solid #dec36f;*/
+    /*box-shadow: #ff981231 0px 0px 15px;*/
+}

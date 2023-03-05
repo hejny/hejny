@@ -29,7 +29,7 @@ export class Drawing extends Destroyable implements IDestroyable {
         this.svgElement.style.position = 'absolute';
 
         // TODO: To method  setStyle
-        this.pathElement.style.stroke = '#ff9912';
+        this.pathElement.style.stroke = '#dec36f';
         this.pathElement.style.strokeWidth = '3px';
         this.pathElement.style.fill = 'none';
         // Redundant> this.pathElement.style.fillOpacity = '1';

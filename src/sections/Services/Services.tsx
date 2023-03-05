@@ -20,7 +20,7 @@ export function ServicesSection() {
 
                 <a href="#contact">
                     <Item>
-                        <Item.Title>Consult</Item.Title>
+                        <Item.FloatingTitle>Consult</Item.FloatingTitle>
                         <Item.Description>
                             I offer expert advice on various technologies, providing {/*insightful*/} analysis of their
                             benefits and limitations to help you make decisions.
@@ -33,7 +33,7 @@ export function ServicesSection() {
 
                 <a href="#contact">
                     <Item>
-                        <Item.Title>Talk</Item.Title>
+                        <Item.FloatingTitle>Talk</Item.FloatingTitle>
                         <Item.Description>
                             I provide overviews of various technologies, highlighting their{' '}
                             <span style={{ color: '#11ff11' }}>pros</span> and{' '}
@@ -47,7 +47,7 @@ export function ServicesSection() {
 
                 <a href="#contact">
                     <Item>
-                        <Item.Title>Prototype</Item.Title>
+                        <Item.FloatingTitle>Prototype</Item.FloatingTitle>
                         <Item.Description>
                             I will bring your new project into the reality through effective prototyping and seamless
                             transition from concept to implementation.

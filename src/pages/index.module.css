@@ -85,7 +85,7 @@
     font-size: 85px /* <- [🔠] Make one place for font-size */;
     white-space: nowrap;
 
-    text-shadow: #ff9912 0px 0px 25px /* <- [🎨] */;
+    text-shadow: #dec36f 0px 0px 25px /* <- [🎨] */;
 
     /* TODO: DRY */
     margin: 0;

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import pavolHejny from '../../../public/services/prototyping-1.jpg';
 import { Section } from '../../components/Section/Section';
 import styles from './Contact.module.css';
 
@@ -14,12 +15,7 @@ export function ContactSection(props: ContactProps) {
             <h2>Get in touch!</h2>
 
             <div className={styles.vcard}>
-                <Image
-                    src="https://www.gravatar.com/avatar/10bceb8965947164502b4e7b3314733d?s=512"
-                    width={200}
-                    height={200}
-                    alt="Pavol Hejný"
-                />
+                <Image src={pavolHejny} width={200} height={200} alt="Pavol Hejný" />
 
                 <ul>
                     <li>
