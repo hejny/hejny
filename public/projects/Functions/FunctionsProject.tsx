@@ -23,14 +23,7 @@ export function FunctionsProject() {
         <a href="https://github.com/collboard/function-builder" target="_blank" rel="noreferrer">
             <Item>
                 <Item.Title>Functions</Item.Title>
-                <Item.Description>
-                    <p>
-                        Collboard module for visualizing functions: Experience the power of mathematics in a visually
-                        appealing way. This module for the online virtual whiteboard, Collboard, allows you to graph
-                        functions like sin, cos, and tan by connecting simple boxes. Say goodbye to intimidating formula
-                        writing and hello to a fun and easy way to understand math.
-                    </p>
-                </Item.Description>
+
                 <Item.Image>
                     <div
                         ref={effectToRef(functionsEffect)}

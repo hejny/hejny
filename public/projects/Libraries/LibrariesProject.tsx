@@ -23,16 +23,6 @@ export function LibrariesProject() {
         <a href="https://github.com/hejny?tab=repositories" target="_blank" rel="noreferrer">
             <Item>
                 <Item.Title>Libraries</Item.Title>
-                <Item.Description>
-                    <p>
-                        I ❤ Open Source. Every time I work on a project, I try to extract reusable parts into an
-                        independent library.
-                    </p>
-                    <p>
-                        For example, I have created library for managing Promises or utility to find the apps in your OS
-                        to save space.
-                    </p>
-                </Item.Description>
                 <Item.Image>
                     <div
                         ref={effectToRef(librariesEffect)}

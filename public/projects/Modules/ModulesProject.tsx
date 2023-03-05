@@ -23,13 +23,6 @@ export function ModulesProject() {
         <a href="https://github.com/collboard/modules-sdk" target="_blank" rel="noreferrer">
             <Item>
                 <Item.Title>Modules</Item.Title>
-                <Item.Description>
-                    <p>
-                        The Collboard Virtual Whiteboard now has a powerful Software Development Kit for extension and
-                        customization. Experience the benefits of modular design with the ability to break down complex
-                        applications into smaller, independent codebases for improved scalability and efficiency.
-                    </p>
-                </Item.Description>
                 <Item.Image>
                     <div
                         ref={effectToRef(modulesEffect)}
