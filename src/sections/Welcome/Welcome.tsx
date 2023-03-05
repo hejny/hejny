@@ -13,9 +13,7 @@ export function WelcomeSection(props: WelcomeProps) {
     return (
         <Section id="welcome" className={styles.welcome}>
             <Link href="/">
-                <h1>
-                    From 0{/*⬛*/} to 1{/* TODO: Use Hero,💡,⬜*/}
-                </h1>
+                <h1>From 0 to 1</h1>
             </Link>
 
             {children}
