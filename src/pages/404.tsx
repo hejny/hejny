@@ -16,9 +16,7 @@ const inter = Inter({ subsets: ['latin'] });
 export default function Midjourney() {
     return (
         <>
-          
-                <AppHead subtitle="Gallery" />
-         
+            <AppHead subtitle="Gallery" />
 
             <div className={styles.page}>
                 <DebugGrid size={new Vector(5, 5)} />
@@ -33,10 +31,11 @@ export default function Midjourney() {
                 <main>
                     <WelcomeSection /> {/* <- TODO: Children here */}
                     <Section>
-                        <h2>Not found</h2>
-                        <p></p>
-                        {/* TODO: !!! Some better texting <p>Sorry for that</p> */}
-                        <Link href={'/'}>To the homepage</Link>
+                        <h2>Nothing found here</h2>
+                        {/* TODO: Some better texting <p>Sorry for that</p> */}
+                        <Link href={'/'}>
+                            <button>To the homepage</button>
+                        </Link>
                     </Section>
                 </main>
                 <footer>

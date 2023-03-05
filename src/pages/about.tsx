@@ -1,4 +1,5 @@
 import { Inter } from '@next/font/google';
+import Link from 'next/link';
 import { Vector } from 'xyzt';
 import { VERSION } from '../../config';
 import { DebugGrid } from '../components/DebugGrid/DebugGrid';
@@ -33,8 +34,12 @@ export default function Midjourney() {
                     <Section>
                         <h2>About</h2>
                         <p>Technical info about the page</p>
-                        Version: <a href="https://github.com/hejny/rapid-prototyping-wizard/">{VERSION}</a>
-                        {/* !!! more */}
+                        Version: {VERSION}
+                        <br />
+                        Source:{' '}
+                        <Link href="https://github.com/hejny/rapid-prototyping-wizard/">
+                            https://github.com/hejny/rapid-prototyping-wizard/
+                        </Link>
                     </Section>
                 </main>
                 <footer>

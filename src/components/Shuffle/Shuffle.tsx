@@ -57,6 +57,4 @@ export function Shuffle(props: ShuffleProps) {
  *       >     <VrArProject />
  *       >     <AllMyProjectsProject />
  *       > </Items>
- * TODO: !!! How to do this without Next Errors
- * TODO: Deterministic random on some good seed
  */
