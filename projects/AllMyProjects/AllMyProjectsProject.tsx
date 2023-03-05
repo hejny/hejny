@@ -23,9 +23,6 @@ export function AllMyProjectsProject() {
         <a href="https://pavolhejny.com/documents/projects.html" target="_blank" rel="noreferrer">
             <Item>
                 <Item.Title>All my projects</Item.Title>
-                <Item.Description>
-                    <p>Discover my portfolio of projects and see my range of experience and expertise.</p>
-                </Item.Description>
                 <Item.Image>
                     <div
                         ref={effectToRef(allMyProjectsEffect)}

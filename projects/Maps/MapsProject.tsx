@@ -23,13 +23,6 @@ export function MapsProject() {
         <a href="https://github.com/collboard/map" target="_blank" rel="noreferrer">
             <Item>
                 <Item.Title>Maps</Item.Title>
-                <Item.Description>
-                    <p>
-                        The Geography Learning Module for Collboard was developed in collaboration with the capital city
-                        of Prague, offering a unique tool for geography teachers. Experience a fresh and interactive way
-                        to teach geography with the help of Collboard innovative platform.
-                    </p>
-                </Item.Description>
                 <Item.Image>
                     <div
                         ref={effectToRef(mapsEffect)}

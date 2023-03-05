@@ -24,7 +24,7 @@ export function CzechEventsProject() {
             <Item>
                 <Item.Title>Czech.events</Item.Title>
                 <Item.Description>
-                    <p>Newsletter of the most interesting Tech&amp;Startup events in Czechia</p>
+                    <p>Newsletter of the most interesting IT &amp; Startup events in Czechia</p>
                 </Item.Description>
                 <Item.Image>
                     <div

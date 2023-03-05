@@ -23,14 +23,6 @@ export function VrArProject() {
         <a href="https://pavolhejny.com/documents/projects.html#-vr-paint" target="_blank" rel="noreferrer">
             <Item>
                 <Item.Title>VR/AR</Item.Title>
-                <Item.Description>
-                    <p>
-                        I have extensive experience in virtual and augmented reality projects, serving as a
-                        representative and ambassador for the Association of Virtual Reality. My expertise in this field
-                        has led to my involvement in multiple projects, including presentations at industry conferences
-                        such as DevConf, CzechVRFest, and Hackuj Stát.
-                    </p>
-                </Item.Description>
                 <Item.Image>
                     <div
                         ref={effectToRef(vrArEffect)}
