@@ -149,9 +149,4 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
  * Note: [0] Foreground <Image> is not wrapped into <div> but background is because ref works on <div> but not <Image>
  * Note+TODO: [1] Is it important to explicitelly set width on the images for the optimization?
  * Note+TODO: [3] Has this any effect on png images; tweaking with quality but nothing changed in page load size
- * TODO: !!! Replace all backgroundImage ACRY by <Image
- * TODO: !!! Explicit set priority={...} on all images
- * TODO: !!! Explicit set quality={...} on all images
- * TODO: !!! Explicit set placeholder={...} on all images
- * TODO: !!! Explicit set draggable="false" on all images
  */
