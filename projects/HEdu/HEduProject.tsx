@@ -8,8 +8,8 @@
  */
 
 import { Item } from '../../../src/components/Items/Item';
-import { effectToRef } from '../../../src/utils/Drawing/effectToRef';
-import { hEduEffect } from '../../../src/utils/Drawing/projectsEffectsLibrary';
+// import { effectToRef } from '../../../src/utils/Drawing/effectToRef';
+// import { hEduEffect } from '../../../src/utils/Drawing/projectsEffectsLibrary';
 import background from './outline.svg';
 
 /**
@@ -28,7 +28,7 @@ export function HEduProject() {
                 </Item.Description>
                 <Item.Image>
                     <div
-                        ref={effectToRef(hEduEffect)}
+                        // ref={effectToRef(hEduEffect)}
                         style={{
                             backgroundImage: `url(${background.src})`,
                         }}

@@ -8,8 +8,8 @@
  */
 
 import { Item } from '../../../src/components/Items/Item';
-import { effectToRef } from '../../../src/utils/Drawing/effectToRef';
-import { collboardEffect } from '../../../src/utils/Drawing/projectsEffectsLibrary';
+// import { effectToRef } from '../../../src/utils/Drawing/effectToRef';
+// import { collboardEffect } from '../../../src/utils/Drawing/projectsEffectsLibrary';
 import background from './outline.svg';
 
 /**
@@ -28,7 +28,7 @@ export function CollboardProject() {
                 </Item.Description>
                 <Item.Image>
                     <div
-                        ref={effectToRef(collboardEffect)}
+                        // ref={effectToRef(collboardEffect)}
                         style={{
                             backgroundImage: `url(${background.src})`,
                         }}

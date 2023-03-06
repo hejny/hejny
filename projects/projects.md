@@ -40,13 +40,13 @@ Newsletter of the most interesting IT & Startup events in Czechia
 
 [![Meetup](/public/projects/CzechEvents/Pavol_Hejny_Coloring_book_black_and_white_illustration_outline__f429b7c9-7d63-4df8-9f95-07158107df10.svg)](https://czech.events/)
 
-## Functions
+## Visual mathematics
 
-Collboard module for visualizing functions: Experience the power of mathematics in a visually appealing way. This module for the online virtual whiteboard, Collboard, allows you to graph functions like sin, cos, and tan by connecting simple boxes. Say goodbye to intimidating formula writing and hello to a fun and easy way to understand math.
+Collboard's function visualization module lets you graph functions like sin, cos, and tan in a visually appealing way. No more intimidating formulas—just connect simple boxes for a fun and easy math experience.
 
 <!--TODO: create study cases of topics I worked on, graphs, fractals,...-->
 
-[![Axis of the graph](/public/projects/Functions/graph-plot.svg)](https://github.com/collboard/function-builder)
+[![Axis of the graph](/public/projects/VisualMathematics/graph-plot.svg)](https://github.com/collboard/function-builder)
 
 ## H-edu
 
@@ -54,37 +54,23 @@ An online platform for schools and teachers with interactive materials and tools
 
 [![Triangle for counting](/public/projects/Hedu/outline.svg)](https://www.h-edu.cz/)
 
-## Libraries
+## Open Source
 
-I ❤ Open Source.
-Every time I work on a project, I try to extract reusable parts into an independent library.
+I have created or contributed into several Open Source libraries.
 
-For example, I have created library for managing Promises or utility to find the apps in your OS to save space.
-
-[![Toolbox](/public/projects/Libraries/Pavol_Hejny_coloring_book_black_and_white_illustration_outline__b8c24f85-9ee6-4d9e-96d7-fe550fe78b9b.svg)](https://github.com/hejny?tab=repositories)
-
-<!--
-TODO: Allow links in links
-I am working on several OpenSource libraries like
-[vector library xyzt](https://github.com/hejny/xyzt),
-[locating apps in your system](https://github.com/hejny/locate-app),
-[waitasecond to supercharge the promises](https://github.com/hejny/waitasecond),
-[trimming from all 4 directions](https://github.com/hejny/spacetrim),
-[working with destroyable objects](https://github.com/hejny/destroyable)
-[or see my GitHub repositories](https://github.com/hejny?tab=repositories).
--->
+[![Toolbox](/public/projects/OpenSource/Pavol_Hejny_coloring_book_black_and_white_illustration_outline__b8c24f85-9ee6-4d9e-96d7-fe550fe78b9b.svg)](https://github.com/hejny?tab=repositories)
 
 ## Maps
 
-The Geography Learning Module for Collboard was developed in collaboration with the capital city of Prague, offering a unique tool for geography teachers. Experience a fresh and interactive way to teach geography with the help of Collboard innovative platform.
+Geography Learning Module developed with the capital city of Prague.
 
 [![Globe](/public/projects/Maps/europe.svg)](https://github.com/collboard/map)
 
-## Modules
+## Collboard modules SDK
 
-The Collboard Virtual Whiteboard now has a powerful Software Development Kit for extension and customization. Experience the benefits of modular design with the ability to break down complex applications into smaller, independent codebases for improved scalability and efficiency.
+SDK enables modular design, breaking down complex apps for scalability and efficiency.
 
-[![Pseudo-USB gadget](/public/projects/Modules/placeholder.svg)](https://github.com/collboard/modules-sdk)
+[![Pseudo-USB gadget](/public/projects/CollboardModulesSdk/placeholder.svg)](https://github.com/collboard/modules-sdk)
 
 ## Towns
 
@@ -96,7 +82,7 @@ A browser-based online game where players can build their own cities and worlds.
 
 ## VR/AR
 
-I have extensive experience in virtual and augmented reality projects, serving as a representative and ambassador for the Association of Virtual Reality. My expertise in this field has led to my involvement in multiple projects, including presentations at industry conferences such as DevConf, CzechVRFest, and Hackuj Stát.
+I'm an experienced virtual and augmented reality rep, ambassador for the Association of Virtual Reality, and have presented at industry conferences such as CzechVRFest, DevConf or LinuxDays.
 
 [![Virtual reality helmet](/public/projects/VrAr/Pavol_Hejn_coloring_book_black_and_white_illustration_outline_o_850cbc2d-9088-4113-bdbc-8fbf566e170c.svg)](https://pavolhejny.com/documents/projects.html#-vr-paint)
 
