@@ -1,8 +1,8 @@
 import { AllMyProjectsProject } from '../../../public/projects/AllMyProjects/AllMyProjectsProject';
-import { FunctionsProject } from '../../../public/projects/Functions/FunctionsProject';
-import { LibrariesProject } from '../../../public/projects/Libraries/LibrariesProject';
+import { CollboardModulesSdkProject } from '../../../public/projects/CollboardModulesSdk/CollboardModulesSdkProject';
 import { MapsProject } from '../../../public/projects/Maps/MapsProject';
-import { ModulesProject } from '../../../public/projects/Modules/ModulesProject';
+import { OpenSourceProject } from '../../../public/projects/OpenSource/OpenSourceProject';
+import { VisualMathematicsProject } from '../../../public/projects/VisualMathematics/VisualMathematicsProject';
 import { VrArProject } from '../../../public/projects/VrAr/VrArProject';
 import { Items } from '../../components/Items/Items';
 import { Section } from '../../components/Section/Section';
@@ -19,10 +19,10 @@ export function HackingSection() {
             </p>
             <Items>
                 <Shuffle seed="hacking">
-                    <FunctionsProject />
-                    <LibrariesProject />
+                    <VisualMathematicsProject />
+                    <OpenSourceProject />
                     <MapsProject />
-                    <ModulesProject />
+                    <CollboardModulesSdkProject />
                     <VrArProject />
                 </Shuffle>
                 <AllMyProjectsProject />

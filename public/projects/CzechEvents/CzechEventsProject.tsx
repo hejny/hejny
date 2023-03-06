@@ -8,8 +8,8 @@
  */
 
 import { Item } from '../../../src/components/Items/Item';
-import { effectToRef } from '../../../src/utils/Drawing/effectToRef';
-import { czechEventsEffect } from '../../../src/utils/Drawing/projectsEffectsLibrary';
+// import { effectToRef } from '../../../src/utils/Drawing/effectToRef';
+// import { czechEventsEffect } from '../../../src/utils/Drawing/projectsEffectsLibrary';
 import background from './Pavol_Hejny_Coloring_book_black_and_white_illustration_outline__f429b7c9-7d63-4df8-9f95-07158107df10.svg';
 
 /**
@@ -28,7 +28,7 @@ export function CzechEventsProject() {
                 </Item.Description>
                 <Item.Image>
                     <div
-                        ref={effectToRef(czechEventsEffect)}
+                        // ref={effectToRef(czechEventsEffect)}
                         style={{
                             backgroundImage: `url(${background.src})`,
                         }}

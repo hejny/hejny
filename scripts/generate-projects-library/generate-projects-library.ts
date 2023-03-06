@@ -125,10 +125,9 @@ async function generateProjectsLibrary({ isCommited }: { isCommited: boolean }) 
              *    Then the file will not be re-generated automatically
              */
         
-            import Image from 'next/image';
             import { Item } from '../../../src/components/Items/Item';
-            import { effectToRef } from '../../../src/utils/Drawing/effectToRef';
-            import { ${effectName} } from '../../../src/utils/Drawing/projectsEffectsLibrary';
+            // import { effectToRef } from '../../../src/utils/Drawing/effectToRef';
+            // import { ${effectName} } from '../../../src/utils/Drawing/projectsEffectsLibrary';
             ${generateImport({
                 entityName: 'background',
                 entityPath: join(process.cwd(), image.src),
@@ -147,12 +146,11 @@ async function generateProjectsLibrary({ isCommited }: { isCommited: boolean }) 
                         <Item>
                             <Item.Title>${title}</Item.Title>
                             <Item.Description>
-                                {/* TODO: !!! Do not use description BUT link in some article */}
                                 ${bodyHtml.split(`'`).join(`&apos;`)}
                             </Item.Description>
                             <Item.Image>
                                 <div
-                                    ref={effectToRef(${effectName})}
+                                    // ref={effectToRef(${effectName})}
                                     style={{
                                         backgroundImage: \`url(\${background.src})\`,
                                     }}

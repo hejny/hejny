@@ -8,8 +8,8 @@
  */
 
 import { Item } from '../../../src/components/Items/Item';
-import { effectToRef } from '../../../src/utils/Drawing/effectToRef';
-import { mapsEffect } from '../../../src/utils/Drawing/projectsEffectsLibrary';
+// import { effectToRef } from '../../../src/utils/Drawing/effectToRef';
+// import { mapsEffect } from '../../../src/utils/Drawing/projectsEffectsLibrary';
 import background from './europe.svg';
 
 /**
@@ -23,9 +23,15 @@ export function MapsProject() {
         <a href="https://github.com/collboard/map" target="_blank" rel="noreferrer">
             <Item>
                 <Item.Title>Maps</Item.Title>
+                <Item.Description>
+                    <p>
+                        Geography Learning Module for Collboard developed in collaboration with the capital city of
+                        Prague.
+                    </p>
+                </Item.Description>
                 <Item.Image>
                     <div
-                        ref={effectToRef(mapsEffect)}
+                        // ref={effectToRef(mapsEffect)}
                         style={{
                             backgroundImage: `url(${background.src})`,
                         }}

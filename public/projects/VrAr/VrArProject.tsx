@@ -8,8 +8,8 @@
  */
 
 import { Item } from '../../../src/components/Items/Item';
-import { effectToRef } from '../../../src/utils/Drawing/effectToRef';
-import { vrArEffect } from '../../../src/utils/Drawing/projectsEffectsLibrary';
+// import { effectToRef } from '../../../src/utils/Drawing/effectToRef';
+// import { vrArEffect } from '../../../src/utils/Drawing/projectsEffectsLibrary';
 import background from './Pavol_Hejn_coloring_book_black_and_white_illustration_outline_o_850cbc2d-9088-4113-bdbc-8fbf566e170c.svg';
 
 /**
@@ -23,9 +23,16 @@ export function VrArProject() {
         <a href="https://pavolhejny.com/documents/projects.html#-vr-paint" target="_blank" rel="noreferrer">
             <Item>
                 <Item.Title>VR/AR</Item.Title>
+                <Item.Description>
+                    <p>
+                        I&apos;m an experienced virtual and augmented reality rep, ambassador for the Association of
+                        Virtual Reality, and have presented at industry conferences such as DevConf, CzechVRFest, and
+                        Hackuj Stát.
+                    </p>
+                </Item.Description>
                 <Item.Image>
                     <div
-                        ref={effectToRef(vrArEffect)}
+                        // ref={effectToRef(vrArEffect)}
                         style={{
                             backgroundImage: `url(${background.src})`,
                         }}
