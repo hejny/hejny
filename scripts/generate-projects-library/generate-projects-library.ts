@@ -147,6 +147,7 @@ async function generateProjectsLibrary({ isCommited }: { isCommited: boolean }) 
                         <Item>
                             <Item.Title>${title}</Item.Title>
                             <Item.Description>
+                                {/* TODO: !!! Do not use description BUT link in some article */}
                                 ${bodyHtml.split(`'`).join(`&apos;`)}
                             </Item.Description>
                             <Item.Image>

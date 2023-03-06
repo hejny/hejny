@@ -21,8 +21,10 @@ export function PavolHejnySection(props: PavolHejnyProps) {
                     alt="Pavol Hejný"
                 />
 
+                {/* TODO: !!! Pavolhejny section on the mobile */}
                 <p>Hi I am Pavol.</p>
 
+                {/* TODO: !!! Shorten pavolhejny text */}
                 <p>
                     I am co-founder of a platform for teachers, <a href="https://www.h-edu.cz/">H-Edu</a>; when the
                     quarantine on March 2020 began, he founded an <strong>online virtual board</strong>{' '}

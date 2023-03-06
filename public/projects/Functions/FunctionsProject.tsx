@@ -26,6 +26,8 @@ export function FunctionsProject() {
 
                 <Item.Image>
                     <div
+                        // TODO: !!! Rename functions to graph
+                        // TODO: !!! Just static for graph image BUT in same style
                         ref={effectToRef(functionsEffect)}
                         style={{
                             backgroundImage: `url(${background.src})`,

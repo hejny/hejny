@@ -24,6 +24,7 @@ export function ReferencesSection() {
                             </Link>
                         </Item.Title>
                         <Item.Description>
+                            {/* TODO: !!! Shorten Tomáš reference text */}
                             <p>
                                 Pavola znám už 6 let. Zejména z hackathonů a dalších inovačních projektů. Pokud se se
                                 svým týmem zúčastnil, mohli byste si vsadit, že bude mezi nejlepšími třemi. A měli byste
@@ -38,6 +39,9 @@ export function ReferencesSection() {
                             <p>IT je pro něj nejen denním chlebíčkem, ale také životním koníčkem. </p>
                         </Item.Description>
                     </Item>
+
+                    {/* TODO: !!! Reference from person 2 */}
+                    {/* TODO: !!! Reference from person 3 */}
                 </Shuffle>
             </Items>
         </Section>

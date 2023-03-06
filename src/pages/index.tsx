@@ -37,6 +37,9 @@ export default function Home() {
                     <WelcomeSection />
                     <PavolHejnySection variant="SHORT" />
                     <ServicesSection />
+                    {/* TODO: <PresentationSection /> */}
+                    {/* TODO: <PrototypingSection /> */}
+                    {/* TODO: <TechnologiesSection /> */}
                     <ReferencesSection />
                     <MyProjectsSection />
                     <HackingSection />
