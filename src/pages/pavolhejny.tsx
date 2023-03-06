@@ -2,9 +2,9 @@ import { Inter } from '@next/font/google';
 import { Vector } from 'xyzt';
 import { DebugGrid } from '../components/DebugGrid/DebugGrid';
 import { TiledBackground } from '../components/TiledBackground/TiledBackground';
-import { AppHead } from '../sections/AppHead/AppHead';
-import { CaveSection } from '../sections/Cave/Cave';
-import { FooterSection } from '../sections/Footer/Footer';
+import { AppHead } from '../sections/00-AppHead/AppHead';
+import { CaveSection } from '../sections/01-Cave/Cave';
+import { FooterSection } from '../sections/90-Footer/Footer';
 import styles from './index.module.css';
 
 // TODO: What is this - inter/Inter

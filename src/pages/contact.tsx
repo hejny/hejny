@@ -2,11 +2,11 @@ import { Inter } from '@next/font/google';
 import { Vector } from 'xyzt';
 import { DebugGrid } from '../components/DebugGrid/DebugGrid';
 import { TiledBackground } from '../components/TiledBackground/TiledBackground';
-import { AppHead } from '../sections/AppHead/AppHead';
-import { CaveSection } from '../sections/Cave/Cave';
-import { ContactSection } from '../sections/Contact/Contact';
-import { FooterSection } from '../sections/Footer/Footer';
-import { WelcomeSection } from '../sections/Welcome/Welcome';
+import { AppHead } from '../sections/00-AppHead/AppHead';
+import { CaveSection } from '../sections/01-Cave/Cave';
+import { WelcomeSection } from '../sections/10-Welcome/Welcome';
+import { ContactSection } from '../sections/70-Contact/Contact';
+import { FooterSection } from '../sections/90-Footer/Footer';
 import styles from './index.module.css';
 
 // TODO: What is this - inter/Inter

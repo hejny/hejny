@@ -5,10 +5,10 @@ import { VERSION } from '../../config';
 import { DebugGrid } from '../components/DebugGrid/DebugGrid';
 import { Section } from '../components/Section/Section';
 import { TiledBackground } from '../components/TiledBackground/TiledBackground';
-import { AppHead } from '../sections/AppHead/AppHead';
-import { CaveSection } from '../sections/Cave/Cave';
-import { FooterSection } from '../sections/Footer/Footer';
-import { WelcomeSection } from '../sections/Welcome/Welcome';
+import { AppHead } from '../sections/00-AppHead/AppHead';
+import { CaveSection } from '../sections/01-Cave/Cave';
+import { WelcomeSection } from '../sections/10-Welcome/Welcome';
+import { FooterSection } from '../sections/90-Footer/Footer';
 import styles from './index.module.css';
 
 // TODO: What is this - inter/Inter

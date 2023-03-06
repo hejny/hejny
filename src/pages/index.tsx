@@ -2,15 +2,15 @@ import { Inter } from '@next/font/google';
 import { Vector } from 'xyzt';
 import { DebugGrid } from '../components/DebugGrid/DebugGrid';
 import { TiledBackground } from '../components/TiledBackground/TiledBackground';
-import { AppHead } from '../sections/AppHead/AppHead';
-import { CaveSection } from '../sections/Cave/Cave';
-import { ContactSection } from '../sections/Contact/Contact';
-import { FooterSection } from '../sections/Footer/Footer';
-import { MyProjectsSection } from '../sections/MyProjects/MyProjects';
-import { PavolHejnySection } from '../sections/PavolHejny/PavolHejny';
-import { ReferencesSection } from '../sections/References/References';
-import { ServicesSection } from '../sections/Services/Services';
-import { WelcomeSection } from '../sections/Welcome/Welcome';
+import { AppHead } from '../sections/00-AppHead/AppHead';
+import { CaveSection } from '../sections/01-Cave/Cave';
+import { WelcomeSection } from '../sections/10-Welcome/Welcome';
+import { PavolHejnySection } from '../sections/20-PavolHejny/PavolHejny';
+import { ServicesSection } from '../sections/30-Services/Services';
+import { ReferencesSection } from '../sections/40-References/References';
+import { MyProjectsSection } from '../sections/50-MyProjects/MyProjects';
+import { ContactSection } from '../sections/70-Contact/Contact';
+import { FooterSection } from '../sections/90-Footer/Footer';
 import styles from './index.module.css';
 
 // TODO: What is this - inter/Inter
