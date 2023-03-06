@@ -6,7 +6,6 @@ import { AppHead } from '../sections/AppHead/AppHead';
 import { CaveSection } from '../sections/Cave/Cave';
 import { ContactSection } from '../sections/Contact/Contact';
 import { FooterSection } from '../sections/Footer/Footer';
-import { HackingSection } from '../sections/Hacking/Hacking';
 import { MyProjectsSection } from '../sections/MyProjects/MyProjects';
 import { PavolHejnySection } from '../sections/PavolHejny/PavolHejny';
 import { ReferencesSection } from '../sections/References/References';
@@ -42,7 +41,7 @@ export default function Home() {
                     {/* TODO: <TechnologiesSection /> */}
                     <ReferencesSection />
                     <MyProjectsSection />
-                    <HackingSection />
+                    {/* TODO: Finish or remove <HackingSection /> */}
                     <ContactSection variant="SHORT" />
                 </main>
 
