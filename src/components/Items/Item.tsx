@@ -23,7 +23,6 @@ Item.Description = function Description({ children }: { children: ReactNode }) {
     return <div className={styles.description}>{children}</div>;
 };
 
-// !!! Item Images should be bit smaller and better fit
 Item.Image = function Image({ children }: { children: ReactNode }) {
     return (
         <>

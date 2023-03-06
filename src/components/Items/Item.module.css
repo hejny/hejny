@@ -103,6 +103,7 @@
     grid-column: 1 / span 1;
 
     font-size: 30px /* <- [🔠] Make one place for font-size */;
+    margin-top: -7px;
 }
 
 .item .floatingTitle {
