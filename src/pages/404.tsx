@@ -29,7 +29,7 @@ export default function Midjourney() {
                     <TiledBackground />
                 </div>
                 <main>
-                    <WelcomeSection /> {/* <- TODO: Children here */}
+                    <WelcomeSection  variant="SHORT" />
                     <Section>
                         <h2>Nothing found here</h2>
                         {/* TODO: Some better texting <p>Sorry for that</p> */}

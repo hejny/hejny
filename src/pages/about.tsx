@@ -30,7 +30,7 @@ export default function Midjourney() {
                     <TiledBackground />
                 </div>
                 <main>
-                    <WelcomeSection /> {/* <- TODO: Children here */}
+                    <WelcomeSection  variant="SHORT" /> 
                     <Section>
                         <h2>About</h2>
                         <p>Technical info about the page</p>

@@ -28,7 +28,7 @@ export default function ContactPage() {
                     <TiledBackground />
                 </div>
                 <main>
-                    <WelcomeSection />
+                    <WelcomeSection  variant="SHORT"  />
                     <ContactSection variant="FULL" />
                 </main>
                 <footer>

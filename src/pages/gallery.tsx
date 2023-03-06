@@ -35,7 +35,7 @@ export default function Midjourney() {
                     <TiledBackground />
                 </div>
                 <main>
-                    <WelcomeSection /> {/* <- TODO: Children here */}
+                    <WelcomeSection  variant="SHORT" />
                     <Section>
                         <h2>Gallery</h2>
                         <p>Images used on this page are generated using MidJourney:</p>

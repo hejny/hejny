@@ -33,7 +33,7 @@ export default function Home() {
                 </div>
 
                 <main>
-                    <WelcomeSection />
+                    <WelcomeSection  variant="FULL" />
                     <PavolHejnySection variant="SHORT" />
                     <ServicesSection />
                     {/* TODO: <PresentationSection /> */}
