@@ -163,7 +163,8 @@
     grid-column: 1 / span 1;
 
     text-align: left;
-    padding: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
 
     font-size: 15px /* <- [🔠] Make one place for font-size */;
     transition: color 0.3s ease-in-out /* <- TODO: Unite transition effects ACRY */;
@@ -178,6 +179,7 @@
 }
 
 .item:hover .description {
+    /* TODO: Also the outline image should be highlighted */
     color: var(--highlighted-text-color);
 }
 
