@@ -54,6 +54,5 @@ export default function Home() {
 }
 
 /**
- * TODO: !!! CS/EN switch
- * TODO: !!! Replace this also as personal page
+ * TODO: !! CS/EN switch
  */

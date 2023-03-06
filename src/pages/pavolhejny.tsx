@@ -26,7 +26,7 @@ export default function PavolHejny() {
                     <TiledBackground />
                 </div>
 
-                <main>{/* !!! */}</main>
+                <main>{/* !! */}</main>
 
                 <footer>
                     <FooterSection />
@@ -37,6 +37,7 @@ export default function PavolHejny() {
 }
 
 /**
+ * TODO: !! Replace this also as personal page
  * TODO: [🧈] Best way how to share page css
  * TODO: Custom 404 page
  * TODO: The best way to import the fonts
