@@ -42,7 +42,6 @@ export default function ContactPage() {
 /**
  * TODO: Make some menu
  * TODO: [🧈] Best way how to share page css
- * TODO: !!! Fix the contact page
  *        <a href=" https://www.midjourney.com/app/jobs/fe3480c5-76af-45da-ac4e-5177062bcb6b">*MidJourney</a>
  * TODO: DRY with index.tsx
  */
