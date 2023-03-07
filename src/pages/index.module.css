@@ -60,6 +60,15 @@
     text-decoration: none;
 }
 
+.page p a {
+    color: var(--highlighted-text-color);
+    text-decoration: underline;
+}
+
+.page p a:hover {
+    color: var(--normal-text-color);
+}
+
 .page h1,
 .page h2,
 .page b,

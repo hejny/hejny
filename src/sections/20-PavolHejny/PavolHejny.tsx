@@ -22,57 +22,31 @@ export function PavolHejnySection(props: PavolHejnyProps) {
                 placeholder="blur"
             />
 
-            {/* TODO: !!! Shorten pavolhejny text */}
             <p>
-                I am co-founder of a platform for teachers, <a href="https://www.h-edu.cz/">H-Edu</a>; when the
-                quarantine on March 2020 began, he founded an <strong>online virtual board</strong>{' '}
-                <a href="https://collboard.com/">
-                    <strong>CollBoard.com</strong>
+                Hi, I am Pavol, a developer and tech enthusiast passionate about exploring cutting-edge tools and
+                technologies. As a co-founder of{' '}
+                <a href="https://www.h-edu.cz/" target="_blank" rel="noreferrer">
+                    H-edu
+                </a>{' '}
+                and{' '}
+                <a href="https://collboard.com/" target="_blank" rel="noreferrer">
+                    Collboard
                 </a>
-                . He worked on several projects of the Czech Ornithological Society(
-                <a href="https://www.birdlife.cz/">Česká společnost ornitologická</a>) and in the past, he also
-                developed his{' '}
-                <a href="https://github.com/townsgame">
-                    <strong>online game Towns</strong>
-                </a>
-                .
+                , I&apos;m invested in using digital innovation to transform education.
             </p>
             <p>
-                In terms of community, he has organized several conferences. For example,{' '}
-                <a href="https://www.pavolhejny.com/nulty-rocnik-czech-future-tech/">
-                    in autumn 2019, he organized the CzechFuture.tech
-                </a>
-                . He co-organized some hackathons like Educational hackathon or Startup Weekends in Prague.
+                I&apos;ve developed several citizen science projects, including the first mobile app for birdwatchers in
+                the Czech Republic, and spoken at tech and startup conferences on topics like VR, AR, and AI.
             </p>
             <p>
-                At the same time, he participated in many events and startup competitions as a <strong>mentor</strong>{' '}
-                and a <strong>jury</strong>.
-            </p>
-            <p>
-                He has spoken at many conferences such as{' '}
-                <a href="https://www.devconf.info/">
-                    <strong>DevConf</strong>
+                I also run{' '}
+                <a href="https://czech.events/" target="_blank" rel="noreferrer">
+                    Czech.events
                 </a>
-                <strong>,</strong>{' '}
-                <a href="https://www.linuxdays.cz/">
-                    <strong>LinuxDays</strong>
-                </a>
-                <strong>,</strong>{' '}
-                <a href="https://www.openalt.cz/">
-                    <strong>OpenAlt</strong>
-                </a>
-                <strong>,</strong>{' '}
-                <a href="https://www.facebook.com/czechvrfest/">
-                    <strong>Czech VR Fest</strong>
-                </a>
-                , + many other meetups like <a href="https://www.facebook.com/frontendisti/">Frontendisti</a>,{' '}
-                <a href="https://www.facebook.com/itnetworkcz/">ITnetwork.cz</a>,{' '}
-                <a href="https://www.facebook.com/jobsdevcz/">Jobs Dev</a>, etc.
-            </p>
-            <p>
-                He has an overview of what is happening in the Czech Republic for IT &amp; startup events. That’s why he
-                is sending out a regular monthly email about the most exciting events at{' '}
-                <a href="https://czech.events/">Czech.events</a>.
+                , a platform that helps people find and attend technology and innovation events. My talent for
+                identifying opportunities for growth and mentoring startups has led me to win several innovation
+                competitions. I&apos;m committed to inspiring others and believe technology can help solve the
+                world&apos;s problems.
             </p>
         </Section>
     );
