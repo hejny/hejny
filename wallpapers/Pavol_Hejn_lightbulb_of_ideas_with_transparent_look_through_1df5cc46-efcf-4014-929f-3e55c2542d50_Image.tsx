@@ -22,6 +22,7 @@ export function LightbulbOfIdeasWithTransparentLookThrough_1df5cc46_Image() {
             alt="lightbulb of ideas with transparent look through"
             src={lightbulb_of_ideas_with_transparent_look_through_1df5cc46}
             draggable="false"
+            placeholder="blur"
         />
     );
 }

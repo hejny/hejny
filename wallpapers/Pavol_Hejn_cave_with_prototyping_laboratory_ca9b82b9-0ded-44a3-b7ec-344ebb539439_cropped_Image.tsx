@@ -22,6 +22,7 @@ export function CaveWithPrototypingLaboratoryCa9b82b90ded44a3B7ec344ebb539439_cr
             alt="cave with prototyping laboratory ca9b82b9-0ded-44a3-b7ec-344ebb539439"
             src={cave_with_prototyping_laboratory_ca9b82b9_0ded_44a3_b7ec_344ebb539439_cropped}
             draggable="false"
+            placeholder="blur"
             width={650}
         />
     );

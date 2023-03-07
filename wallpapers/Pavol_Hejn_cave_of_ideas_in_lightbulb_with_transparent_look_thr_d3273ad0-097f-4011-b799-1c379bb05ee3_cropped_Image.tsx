@@ -22,6 +22,7 @@ export function CaveOfIdeasInLightbulbWithTransparentLookThrD3273ad0097f4011B799
             alt="cave of ideas in lightbulb with transparent look thr d3273ad0-097f-4011-b799-1c379bb05ee3"
             src={cave_of_ideas_in_lightbulb_with_transparent_look_thr_d3273ad0_097f_4011_b799_1c379bb05ee3_cropped}
             draggable="false"
+            placeholder="blur"
             width={650}
         />
     );

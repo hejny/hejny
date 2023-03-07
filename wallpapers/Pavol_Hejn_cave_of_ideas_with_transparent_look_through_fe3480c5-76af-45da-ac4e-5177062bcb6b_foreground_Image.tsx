@@ -22,6 +22,7 @@ export function CaveOfIdeasWithTransparentLookThroughFe3480c576af45daAc4e5177062
             alt="cave of ideas with transparent look through fe3480c5-76af-45da-ac4e-5177062bcb6b"
             src={cave_of_ideas_with_transparent_look_through_fe3480c5_76af_45da_ac4e_5177062bcb6b_foreground}
             draggable="false"
+            placeholder="blur"
         />
     );
 }

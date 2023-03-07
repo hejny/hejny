@@ -22,6 +22,7 @@ export function CaveWithPresentationDec31ff23b9d42b9B84fF87d02d6a391_cropped_Ima
             alt="cave with presentation dec31ff2-3b9d-42b9-b84f-f87d02d6a391"
             src={cave_with_presentation_dec31ff2_3b9d_42b9_b84f_f87d02d6a391_cropped}
             draggable="false"
+            placeholder="blur"
             width={650}
         />
     );
