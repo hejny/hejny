@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import tomasStudenik from '../../../public/reference/tomas-studenik.jpg';
-import personPlaceholder from '../../../public/services/presentation-2.jpg';
+import personPlaceholder1 from '../../../public/services/presentation-2.jpg';
+import personPlaceholder2 from '../../../public/services/presentation-1.jpg';
 import { Item } from '../../components/Items/Item';
 import { Items } from '../../components/Items/Items';
 import { Section } from '../../components/Section/Section';
@@ -67,7 +68,7 @@ export function ReferencesSection() {
                             <Image
                                 // TODO: !!! Shadow effect on pictures
                                 alt="Portrait photo of Tomáš Studeník"
-                                src={personPlaceholder}
+                                src={personPlaceholder1}
                                 draggable="false"
                                 placeholder="blur"
                             />
@@ -88,6 +89,36 @@ export function ReferencesSection() {
                                 rychlá řešení výzev v průmyslu, vzdělávání či rozvoji měst. Dokáže během 24 hodin
                                 postavit funkční aplilkaci. Je jedním z top 10 lidí v Česku na rychlé prototypování
                                 aplikací.
+                            </p>
+                        </Item.Description>
+                    </Item>
+
+                    <Item>
+                        <Item.PersonImage>
+                            <Image
+                                // TODO: !!! Shadow effect on pictures
+                                alt="Portrait photo of Tomáš Studeník"
+                                src={personPlaceholder2}
+                                draggable="false"
+                                placeholder="blur"
+                            />
+                        </Item.PersonImage>
+                        <Item.Title>
+                            <Link href="https://www.tomas-studenik.com/" target={'_blank'}>
+                                Naj Vákno
+                            </Link>
+                        </Item.Title>
+                        <Item.Description>
+                            <p>
+                                Pavol je inovátor, který se orientuje v nejnovějších technologiích a dokáže nacházet
+                                rychlá řešení výzev v průmyslu, vzdělávání či rozvoji měst. Dokáže během 24 hodin
+                                postavit funkční aplilkaci. Je jedním z top 10 lidí v Česku na rychlé prototypování
+                                aplikací.
+                            </p>
+                            <p>
+                                Pavola znám už 6 let. Zejména z hackathonů a dalších inovačních projektů. Pokud se se
+                                svým týmem zúčastnil, mohli byste si vsadit, že bude mezi nejlepšími třemi. A měli byste
+                                pravdu!
                             </p>
                         </Item.Description>
                     </Item>
