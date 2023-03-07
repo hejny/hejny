@@ -11,15 +11,24 @@ interface ShuffleProps {
      * This will be a seed suffix for the random number generator used in the shuffling
      */
     seed?: string | number;
+
+    /**
+     * Disable shuffling and display items in order as they are.
+     */
+    disable?: boolean;
+
+    /**
+     * Items to shuffle
+     */
     children: ReactNode;
 }
 
 export function Shuffle(props: ShuffleProps) {
-    const { children, seed } = props;
+    const { seed, disable, children } = props;
 
     const random = seedrandom(useContext(ShuffleSeedContext).toString() + (seed?.toString() || ''));
 
-    if (!Array.isArray(children)) {
+    if (!Array.isArray(children) || disable) {
         return children as any;
     }
 

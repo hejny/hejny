@@ -14,8 +14,9 @@ export function PavolHejnySection(props: PavolHejnyProps) {
             <h2>Who I am?</h2>
 
             <Image
+                // TODO: !!! Shadow effect on pictures
+                alt="Portrait photo of Pavol Hejný"
                 src="https://www.gravatar.com/avatar/10bceb8965947164502b4e7b3314733d?s=1024"
-                alt="Pavol Hejný"
                 width={250}
                 height={250}
                 draggable="false"

@@ -16,7 +16,8 @@ export function ContactSection(props: ContactProps) {
 
             <div className={styles.vcard}>
                 <Image
-                    alt="Pavol Hejný"
+                    // TODO: !!! Shadow effect on pictures
+                    alt="Portrait photo of Pavol Hejný looking behind of 3D printer"
                     src={pavolHejny}
                     width={200}
                     height={200}
