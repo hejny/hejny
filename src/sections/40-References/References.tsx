@@ -16,7 +16,7 @@ export function ReferencesSection() {
                 <Shuffle seed="references">
                     <Item>
                         <Item.PersonImage>
-                            <Image alt="Tomáš Studeník" src={tomasStudenik} />
+                            <Image alt="Tomáš Studeník" src={tomasStudenik} draggable="false" placeholder="blur" />
                         </Item.PersonImage>
                         <Item.Title>
                             <Link href="https://www.tomas-studenik.com/" target={'_blank'}>

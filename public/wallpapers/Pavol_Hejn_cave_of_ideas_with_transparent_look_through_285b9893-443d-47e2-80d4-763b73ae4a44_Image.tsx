@@ -22,6 +22,7 @@ export function CaveOfIdeasWithTransparentLookThrough_285b9893_Image() {
             alt="cave of ideas with transparent look through"
             src={cave_of_ideas_with_transparent_look_through_285b9893}
             draggable="false"
+            placeholder="blur"
         />
     );
 }

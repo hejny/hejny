@@ -2,20 +2,31 @@
     /*/
     outline: 1px dotted green;
     /**/
+}
 
+.about p {
     text-align: left;
-    font-size: 17px /* <- [🔠] Make one place for font-size */;
 }
 
 .about img {
+    display: block;
+    float: left;
+
     width: 250px;
     height: 250px;
     margin-right: 25px;
     margin-bottom: 25px;
     border-radius: 50px;
 
-    float: left;
-
     /*border: 5px solid #dec36f;*/
     /*box-shadow: #ff981231 0px 0px 15px;*/
+}
+
+@media screen and (max-width: 550px) {
+    .about img {
+        float: none;
+        width: 100%;
+        object-fit: cover;
+        object-position: 50% 30%;
+    }
 }

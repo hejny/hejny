@@ -25,6 +25,8 @@
     font-size: 20px /* <- [🔠] Make one place for font-size */;
     margin-top: 20px;
     margin-bottom: 20px;
+
+    text-align: center;
 }
 
 .section > a {

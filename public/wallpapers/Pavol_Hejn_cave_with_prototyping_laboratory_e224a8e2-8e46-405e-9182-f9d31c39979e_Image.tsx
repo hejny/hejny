@@ -22,6 +22,7 @@ export function CaveWithPrototypingLaboratory_e224a8e2_Image() {
             alt="cave with prototyping laboratory"
             src={cave_with_prototyping_laboratory_e224a8e2}
             draggable="false"
+            placeholder="blur"
         />
     );
 }

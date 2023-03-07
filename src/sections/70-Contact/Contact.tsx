@@ -15,7 +15,14 @@ export function ContactSection(props: ContactProps) {
             <h2>Get in touch!</h2>
 
             <div className={styles.vcard}>
-                <Image src={pavolHejny} width={200} height={200} alt="Pavol Hejný" />
+                <Image
+                    alt="Pavol Hejný"
+                    src={pavolHejny}
+                    width={200}
+                    height={200}
+                    draggable="false"
+                    placeholder="blur"
+                />
 
                 <ul>
                     <li>

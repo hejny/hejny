@@ -155,7 +155,9 @@ async function generateProjectsLibrary({ isCommited }: { isCommited: boolean }) 
                                         backgroundImage: \`url(\${background.src})\`,
                                     }}
                                 />
-                                {/* <Image alt="${image.alt}" src={background} draggable="false" /> */}
+                                {/* <Image alt="${
+                                    image.alt
+                                }" src={background} draggable="false" placeholder="blur" /> */}
                             </Item.Image>
                         </Item>
                     </a>
