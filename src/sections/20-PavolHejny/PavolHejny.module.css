@@ -18,8 +18,7 @@
     margin-bottom: 25px;
     border-radius: 50px;
 
-    /*border: 5px solid #dec36f;*/
-    /*box-shadow: #ff981231 0px 0px 15px;*/
+    box-shadow: #00000077 -25px 25px 0px; /* <- TODO: Paralax effect on shadow */
 }
 
 @media screen and (max-width: 550px) {
@@ -28,5 +27,6 @@
         width: 100%;
         object-fit: cover;
         object-position: 50% 30%;
+        box-shadow: none;
     }
 }
