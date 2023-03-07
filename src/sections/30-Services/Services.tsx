@@ -11,9 +11,9 @@ export function ServicesSection() {
         <Section id="services" className={styles.services}>
             <h2>How can I help you?</h2>
             <p>
-                I specialise in building fully functional prototypes from scratch to proof of concept, staying ahead of
-                the latest technologies. Let me guide you through the ever-changing landscape of new, emerging and
-                disruptive technologies.
+                I specialise in building <b>fully functional prototypes</b> from scratch to proof of concept, staying
+                ahead of the latest technologies. Let me guide you through the ever-changing landscape of new, emerging
+                and disruptive technologies.
             </p>
             <Items>
                 {/* Note: Not using <Shuffle/> here in the services section */}
