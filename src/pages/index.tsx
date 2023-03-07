@@ -16,7 +16,7 @@ import styles from './index.module.css';
 // TODO: What is this - inter/Inter
 const inter = Inter({ subsets: ['latin'] });
 
-export default function Home() {
+export default function Home({ lang }: any) {
     return (
         <>
             <AppHead />
@@ -33,7 +33,8 @@ export default function Home() {
                 </div>
 
                 <main>
-                    <WelcomeSection  variant="FULL" />
+                  
+                    <WelcomeSection variant="FULL" />
                     <PavolHejnySection variant="SHORT" />
                     <ServicesSection />
                     {/* TODO: <PresentationSection /> */}

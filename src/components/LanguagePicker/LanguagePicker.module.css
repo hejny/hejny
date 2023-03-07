@@ -1,0 +1,15 @@
+.LanguagePicker {
+    /* TODO: Use or remove empty css */
+
+    display: none;
+}
+
+.language {
+    display: block;
+    width: 30px;
+    height: 20px;
+    border-radius: 6px;
+    object-fit: cover;
+    object-position: center center;
+    margin: 10px;
+}
