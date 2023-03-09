@@ -1,4 +1,5 @@
 import { Inter } from '@next/font/google';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { Vector } from 'xyzt';
 import { DebugGrid } from '../components/DebugGrid/DebugGrid';
 import { TiledBackground } from '../components/TiledBackground/TiledBackground';
@@ -36,7 +37,16 @@ export default function PavolHejny() {
     );
 }
 
+export async function getStaticProps({ locale }: { locale: string }) {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ['common', 'footer'])),
+        },
+    };
+}
+
 /**
+ * TODO: [🪒] Can be getStaticProps shared between all pages?
  * TODO: !! Replace this also as personal page
  * TODO: [🧈] Best way how to share page css
  * TODO: Custom 404 page

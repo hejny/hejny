@@ -1,4 +1,5 @@
 import { Inter } from '@next/font/google';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
 import { Vector } from 'xyzt';
 import { DebugGrid } from '../components/DebugGrid/DebugGrid';
@@ -29,7 +30,7 @@ export default function Midjourney() {
                     <TiledBackground />
                 </div>
                 <main>
-                    <WelcomeSection  variant="SHORT" />
+                    <WelcomeSection variant="SHORT" />
                     <Section>
                         <h2>Nothing found here</h2>
                         {/* TODO: Some better texting <p>Sorry for that</p> */}
@@ -46,6 +47,15 @@ export default function Midjourney() {
     );
 }
 
+export async function getStaticProps({ locale }: { locale: string }) {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ['common', 'footer'])),
+        },
+    };
+}
+
 /**
+ * TODO: [🪒] Can be getStaticProps shared between all pages?
  * TODO: Make some menu
  */

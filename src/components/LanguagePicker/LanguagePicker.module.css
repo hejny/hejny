@@ -1,7 +1,9 @@
 .LanguagePicker {
-    /* TODO: Use or remove empty css */
-
-    display: none;
+    display: block;
+    position: fixed;
+    z-index: 10000;
+    right: 10px;
+    top: 10px;
 }
 
 .language {

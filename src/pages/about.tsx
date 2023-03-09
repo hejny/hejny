@@ -1,4 +1,5 @@
 import { Inter } from '@next/font/google';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
 import { Vector } from 'xyzt';
 import { VERSION } from '../../config';
@@ -30,7 +31,7 @@ export default function Midjourney() {
                     <TiledBackground />
                 </div>
                 <main>
-                    <WelcomeSection  variant="SHORT" /> 
+                    <WelcomeSection variant="SHORT" />
                     <Section>
                         <h2>About</h2>
                         <p>Technical info about the page</p>
@@ -50,7 +51,16 @@ export default function Midjourney() {
     );
 }
 
+export async function getStaticProps({ locale }: { locale: string }) {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ['common', 'footer'])),
+        },
+    };
+}
+
 /**
+ * TODO: [🪒] Can be getStaticProps shared between all pages?
  * TODO: Make some menu
  * TODO: [🧈] Best way how to share page css
  * TODO: DRY with index.tsx

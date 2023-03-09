@@ -1,4 +1,5 @@
 import { Inter } from '@next/font/google';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { Vector } from 'xyzt';
 import { CaveOfIdeasInLightbulbWithTransparentLookThr_d3273ad0_Image } from '../../public/wallpapers/Pavol_Hejn_cave_of_ideas_in_lightbulb_with_transparent_look_thr_d3273ad0-097f-4011-b799-1c379bb05ee3_Image';
 import { CaveOfIdeasWithTransparentLookThrough_fe3480c5_Image } from '../../public/wallpapers/Pavol_Hejn_cave_of_ideas_with_transparent_look_through_fe3480c5-76af-45da-ac4e-5177062bcb6b_Image';
@@ -15,6 +16,8 @@ import { CaveSection } from '../sections/01-Cave/Cave';
 import { WelcomeSection } from '../sections/10-Welcome/Welcome';
 import { FooterSection } from '../sections/90-Footer/Footer';
 import styles from './index.module.css';
+
+
 
 // TODO: What is this - inter/Inter
 const inter = Inter({ subsets: ['latin'] });
@@ -35,7 +38,7 @@ export default function Midjourney() {
                     <TiledBackground />
                 </div>
                 <main>
-                    <WelcomeSection  variant="SHORT" />
+                    <WelcomeSection variant="SHORT" />
                     <Section>
                         <h2>Gallery</h2>
                         <p>Images used on this page are generated using MidJourney:</p>
@@ -109,7 +112,16 @@ export default function Midjourney() {
     );
 }
 
+export async function getStaticProps({ locale }: { locale: string }) {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ['common', 'footer'])),
+        },
+    };
+}
+
 /**
+ * TODO: [🪒] Can be getStaticProps shared between all pages?
  * TODO: Write better about how are images created
  *       TODO: Connect with section/article about AI generative technology
  * TODO: Some image frames

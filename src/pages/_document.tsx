@@ -7,7 +7,7 @@ export const DebugContext = createContext<typeof DEBUG>(DEBUG);
 
 export default function Document() {
     return (
-        <Html lang="en">
+        <Html>
             <Head />
             <body>
                 <DebugContext.Provider value={DEBUG}>

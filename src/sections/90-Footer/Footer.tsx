@@ -1,7 +1,10 @@
+import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
 import styles from './Footer.module.css';
 
 export function FooterSection() {
+    const { t } = useTranslation('footer');
+
     return (
         <div className={styles.footer}>
             <ul>
@@ -14,7 +17,7 @@ export function FooterSection() {
                 */}
 
                 <li>
-                    <Link href="/">Home</Link>
+                    <Link href="/">{t('home')}</Link>
                 </li>
 
                 {/*
