@@ -29,5 +29,5 @@ export function LanguagePicker() {
 }
 
 /**
- * !!! Make active
+ * TODO: !!! Rename to <LanguageSwitcher
  */
