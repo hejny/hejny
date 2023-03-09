@@ -13,3 +13,7 @@ export function Translate(props: TranslateProps) {
     }
     return <></>;
 }
+
+/**
+ * !!! Change to translate library and delete the folder
+ */
