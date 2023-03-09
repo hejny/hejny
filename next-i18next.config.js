@@ -1,13 +1,12 @@
+const { join } = require('path');
+
 module.exports = {
     i18n: {
         defaultLocale: 'en',
         locales: ['en', 'cs'],
     },
-
-    // !!! localePath
+    localePath: join(__dirname, 'locales'),
 };
-
-
 
 /**
  * TODO: Fallback locales @see https://github.com/i18next/next-i18next#fallback-locales
