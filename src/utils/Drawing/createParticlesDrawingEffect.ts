@@ -41,18 +41,18 @@ export function createParticlesDrawingEffect<TElement extends HTMLElement>(
     return (element: TElement) => {
         let drawing: Drawing | null = null;
 
-        element.addEventListener('pointerenter', (event) => {
+        function pointerenterHandler(event: PointerEvent) {
             if (drawing) {
                 return;
             }
 
             drawing = new Drawing(element).addPoint(Vector.fromObject(event, ['pageX', 'pageY']));
-        });
+        }
 
         let requiredDistance: number = 0;
         let lastCursorPosition: Vector = Vector.zero();
 
-        window.addEventListener('pointermove', async (event) => {
+        async function pointermoveHandler(event: PointerEvent) {
             const cursorPosition = Vector.fromObject(event, ['pageX', 'pageY']);
 
             requiredDistance -= lastCursorPosition.distance(cursorPosition);
@@ -76,8 +76,16 @@ export function createParticlesDrawingEffect<TElement extends HTMLElement>(
             const livetime = generateLivetime();
 
             await particle.fadeOut(livetime);
-        });
+        }
 
-        return Registration.void(/* Note: This is OK, because each particle disapears automatically */);
+        return Registration.create(() => {
+            element.addEventListener('pointerenter', pointerenterHandler);
+            window.addEventListener('pointermove', pointermoveHandler);
+
+            return () => {
+                element.removeEventListener('pointerenter', pointerenterHandler);
+                window.removeEventListener('pointermove', pointermoveHandler);
+            };
+        });
     };
 }
