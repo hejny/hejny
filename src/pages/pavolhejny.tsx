@@ -6,7 +6,7 @@ import { TiledBackground } from '../components/TiledBackground/TiledBackground';
 import { AppHead } from '../sections/00-AppHead/AppHead';
 import { CaveSection } from '../sections/01-Cave/Cave';
 import { FooterSection } from '../sections/90-Footer/Footer';
-import styles from './index.module.css';
+import styles from '../styles/common.module.css';
 
 // TODO: What is this - inter/Inter
 const inter = Inter({ subsets: ['latin'] });

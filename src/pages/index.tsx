@@ -12,7 +12,7 @@ import { ReferencesSection } from '../sections/40-References/References';
 import { MyProjectsSection } from '../sections/50-MyProjects/MyProjects';
 import { ContactSection } from '../sections/70-Contact/Contact';
 import { FooterSection } from '../sections/90-Footer/Footer';
-import styles from './index.module.css';
+import styles from '../styles/common.module.css';
 
 // TODO: What is this - inter/Inter
 const inter = Inter({ subsets: ['latin'] });

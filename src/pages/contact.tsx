@@ -8,7 +8,7 @@ import { CaveSection } from '../sections/01-Cave/Cave';
 import { WelcomeSection } from '../sections/10-Welcome/Welcome';
 import { ContactSection } from '../sections/70-Contact/Contact';
 import { FooterSection } from '../sections/90-Footer/Footer';
-import styles from './index.module.css';
+import styles from '../styles/common.module.css';
 
 // TODO: What is this - inter/Inter
 const inter = Inter({ subsets: ['latin'] });
