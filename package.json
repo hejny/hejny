@@ -61,6 +61,7 @@
         "react-i18next": "^12.2.0",
         "seedrandom": "3.0.5",
         "showdown": "2.1.0",
+        "showdown-highlight": "^3.1.0",
         "spacetrim": "0.9.0",
         "styled-components": "5.3.6",
         "ts-jest": "29.0.5",
