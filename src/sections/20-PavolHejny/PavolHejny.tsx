@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import pavolHejny from '../../../public/people/pavol-hejny.jpeg';
 import { Section } from '../../components/Section/Section';
 import styles from './PavolHejny.module.css';
 
@@ -15,9 +16,11 @@ export function PavolHejnySection(props: PavolHejnyProps) {
 
             <Image
                 alt="Portrait photo of Pavol Hejný"
-                src="https://www.gravatar.com/avatar/10bceb8965947164502b4e7b3314733d?s=1024"
-                width={250}
-                height={250}
+                src={pavolHejny}
+                // TODO: [🧑] Make some <ImageGravatar component; This is me@pavolhejny.com
+                //src="https://www.gravatar.com/avatar/10bceb8965947164502b4e7b3314733d?s=1024"
+                // width={1024}
+                // height={1024}
                 draggable="false"
                 placeholder="blur"
             />

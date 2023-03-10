@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import tomasStudenik from '../../../public/reference/tomas-studenik.jpg';
+import janSedo from '../../../public/people/jan-sedo.jpeg';
+import tomasStudenik from '../../../public/people/tomas-studenik.jpeg';
 import { Item } from '../../components/Items/Item';
 import { Items } from '../../components/Items/Items';
 import { Section } from '../../components/Section/Section';
@@ -83,9 +84,11 @@ export function ReferencesSection() {
                             <Image
                                 // TODO: !!! Shadow effect on pictures
                                 alt="Portrait photo of Jan Šedo"
-                                src={`http://www.jansedo.cz/fotka.jpg`}
-                                width={190}
-                                height={299}
+                                src={janSedo}
+                                // TODO: [🧑] Make some <ImageGravatar component; This is jan.sedo@h-mat.cz
+                                //src="https://www.gravatar.com/avatar/0879e2d2136c90854d7c52adc712e915?s=1024"
+                                // width={1024}
+                                // height={1024}
                                 draggable="false"
                                 placeholder="blur"
                             />

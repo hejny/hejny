@@ -8,14 +8,17 @@ const nextConfig = {
         appDir: true,
     },
     images: {
+        /*
         remotePatterns: [
             {
+                // [🧑]
                 protocol: 'https',
                 hostname: 'www.gravatar.com',
                 port: '',
                 pathname: '/avatar/**',
             },
         ],
+        */
     },
 };
 
