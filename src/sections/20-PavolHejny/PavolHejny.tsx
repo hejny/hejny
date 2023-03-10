@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import pavolHejny from '../../../public/people/pavol-hejny.jpeg';
+import pavolHejny from '../../../public/people/pavol-hejny.jpg';
 import { Section } from '../../components/Section/Section';
 import styles from './PavolHejny.module.css';
 

@@ -18,13 +18,18 @@ interface ShuffleProps {
     disable?: boolean;
 
     /**
+     * Take only this number of items
+     */
+    limit?: number;
+
+    /**
      * Items to shuffle
      */
     children: ReactNode;
 }
 
 export function Shuffle(props: ShuffleProps) {
-    const { seed, disable, children } = props;
+    const { seed, disable, limit, children } = props;
 
     const random = seedrandom(useContext(ShuffleSeedContext).toString() + (seed?.toString() || ''));
 
@@ -32,7 +37,11 @@ export function Shuffle(props: ShuffleProps) {
         return children as any;
     }
 
-    const shuffledChildren = [...children].sort(() => (random() > 0.5 ? 1 : -1));
+    let shuffledChildren = [...children].sort(() => (random() > 0.5 ? 1 : -1));
+
+    if (limit) {
+        shuffledChildren = shuffledChildren.slice(0, limit);
+    }
 
     return <>{shuffledChildren}</>;
 }

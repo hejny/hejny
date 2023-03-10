@@ -11,7 +11,7 @@ export default function Document() {
             <Head />
             <body>
                 <DebugContext.Provider value={DEBUG}>
-                    <ShuffleSeedContext.Provider value={new Date().getUTCHours()}>
+                    <ShuffleSeedContext.Provider value={new Date().getUTCMinutes()}>
                         <Main />
                     </ShuffleSeedContext.Provider>
                 </DebugContext.Provider>

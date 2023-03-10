@@ -1,7 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import janSedo from '../../../public/people/jan-sedo.jpeg';
-import tomasStudenik from '../../../public/people/tomas-studenik.jpeg';
+import bobKartous from '../../../public/people/bob-kartous.jpg';
+import janSedo from '../../../public/people/jan-sedo.jpg';
+import maxKozlov from '../../../public/people/max-kozlov.jpg';
+import tomasStudenik from '../../../public/people/tomas-studenik.jpg';
 import { Item } from '../../components/Items/Item';
 import { Items } from '../../components/Items/Items';
 import { Section } from '../../components/Section/Section';
@@ -15,11 +17,10 @@ export function ReferencesSection() {
             <h2>References</h2>
 
             <Items>
-                <Shuffle seed="references" disable>
+                <Shuffle seed="references" limit={3}>
                     <Item>
                         <Item.PersonImage>
                             <Image
-                                // TODO: !!! Shadow effect on pictures
                                 alt="Portrait photo of Tomáš Studeník"
                                 src={tomasStudenik}
                                 draggable="false"
@@ -61,7 +62,7 @@ export function ReferencesSection() {
                             </Translate>
 
                             {/*
-                             Full Version:
+                             Original Version:
 
                                 Pavola znám už 6 let. Zejména z hackathonů a dalších inovačních projektů. Pokud se se
                                 svým týmem zúčastnil, mohli byste si vsadit, že bude mezi nejlepšími třemi. A měli byste
@@ -82,7 +83,6 @@ export function ReferencesSection() {
                     <Item>
                         <Item.PersonImage>
                             <Image
-                                // TODO: !!! Shadow effect on pictures
                                 alt="Portrait photo of Jan Šedo"
                                 src={janSedo}
                                 // TODO: [🧑] Make some <ImageGravatar component; This is jan.sedo@h-mat.cz
@@ -117,10 +117,157 @@ export function ReferencesSection() {
                                     následně využívaly tisíce učitelů.
                                 </p>
                             </Translate>
+                            {/*
+                             Original Version:
+
+                               Pavol vytvořil prototyp naší aplikace H-edu tak, že jsme okamžitě získali investici.
+                                Následně navrhl architekturu systému a využití technologií, které se v testu času
+                                ukázaly jako správně zvolené pro naše účely. Na začátku covidu výborně zareagoval na
+                                potřeby učitelů při výuce a v rekordním čase vytvořil přesně takové řešení, které
+                                následně využívaly tisíce učitelů.
+
+                            */}
                         </Item.Description>
                     </Item>
 
-                    {/* TODO: !!! Reference from person 3 */}
+                    <Item>
+                        <Item.PersonImage>
+                            <Image
+                                alt="Portrait photo of Max Kozlov"
+                                src={maxKozlov}
+                                draggable="false"
+                                placeholder="blur"
+                            />
+                        </Item.PersonImage>
+                        <Item.Title>
+                            <Link href="https://www.linkedin.com/in/themaxkozlov" target={'_blank'}>
+                                Max Kozlov
+                            </Link>
+                        </Item.Title>
+                        <Item.Description>
+                            <Translate locale="en">
+                                <p>
+                                    Pavol is an absolute beast when it comes to creating digital products. I&apos;ve
+                                    seen him - literally overnight - create an integrated chatbot that won us the 1st
+                                    place at Startup Weekend Prague.
+                                </p>
+                                <p>
+                                    He learns any topic or technology quickly and builds even faster, with exceptional
+                                    usability.
+                                </p>
+                                <p>
+                                    I&apos;d recommend Pavol to everyone who wants to see real life results in a
+                                    manageable time frame. Plus he&apos;s really considerate, kind and a pleasure to
+                                    work with.
+                                </p>
+                            </Translate>
+                            <Translate locale="cs">
+                                <p>
+                                    Pavol is an absolute beast when it comes to creating digital products. I&apos;ve
+                                    seen him - literally overnight - create an integrated chatbot that won us the 1st
+                                    place at Startup Weekend Prague.
+                                </p>
+                                <p>
+                                    He learns any topic or technology quickly and builds even faster, with exceptional
+                                    usability.
+                                </p>
+                                <p>
+                                    I&apos;d recommend Pavol to everyone who wants to see real life results in a
+                                    manageable time frame. Plus he&apos;s really considerate, kind and a pleasure to
+                                    work with.
+                                </p>
+                            </Translate>
+                            {/*
+                             Original Version:
+
+                                Pavol is an absolute beast when it comes to creating digital products. I’ve seen him - literally overnight - create an integrated chatbot that won us the 1st place at Startup Weekend Prague.
+
+                                He learns any topic or technology quickly and builds even faster, with exceptional usability.
+
+                                I’d recommend Pavol to everyone who wants to see real life results in a manageable time frame. Plus he’s really considerate, kind and a pleasure to work with.
+
+                            */}
+                        </Item.Description>
+                    </Item>
+
+                    <Item>
+                        <Item.PersonImage>
+                            <Image
+                                // TODO: !!! Ask Bob or Bohumil
+                                alt="Portrait photo of Bohumil Kartous"
+                                src={bobKartous}
+                                draggable="false"
+                                placeholder="blur"
+                            />
+                        </Item.PersonImage>
+                        <Item.Title>
+                            <Link href="https://www.linkedin.com/in/bob-kartous-5b472526/" target={'_blank'}>
+                                Bohumil Kartous
+                            </Link>
+                        </Item.Title>
+                        <Item.Description>
+                            <Translate locale="en">
+                                <p>
+                                    Regarding mu personal, professional experience, Pavol is highly capable innovator
+                                    who&apos;s potential range across digital technologies and socially prioritized
+                                    themes. In projects collaborated on, he brought new visions and approaches to the
+                                    world of education. I am convinced that he is ready to replicate it wherever it will
+                                    make sense.
+                                </p>
+                            </Translate>
+                            <Translate locale="cs">
+                                <p>
+                                    Regarding mu personal, professional experience, Pavol is highly capable innovator
+                                    who&apos;s potential range across digital technologies and socially prioritized
+                                    themes. In projects collaborated on, he brought new visions and approaches to the
+                                    world of education. I am convinced that he is ready to replicate it wherever it will
+                                    make sense.
+                                </p>
+                            </Translate>
+                            {/*
+                             Original Version:
+
+                             Regarding mu personal, professional experience, Pavol is highly capable innovator who’s potential range across digital technologies and socially prioritized themes. In projects collaborated on, he brought new visions and approaches to the world of education. I am convinced that he is ready to replicate it wherever it will make sense.
+
+
+                            */}
+                        </Item.Description>
+                    </Item>
+
+                    {/*
+                    <Item>
+                        <Item.PersonImage>
+                            <Image
+                                alt="Portrait photo of Xxx Xxx"
+                                src={xxxXxx}
+                                draggable="false"
+                                placeholder="blur"
+                            />
+                        </Item.PersonImage>
+                        <Item.Title>
+                            <Link href="http://www.xxxxx.cz/" target={'_blank'}>
+                                Xxxx Xxxx
+                            </Link>
+                        </Item.Title>
+                        <Item.Description>
+                            <Translate locale="en">
+                                <p>
+                                    xxxx
+                                </p>
+                            </Translate>
+                            <Translate locale="cs">
+                                <p>
+                                    xxxx
+                                </p>
+                            </Translate>
+                            {/*
+                             Original Version:
+
+
+                            * /}
+                        </Item.Description>
+                    </Item>
+                    */}
                 </Shuffle>
             </Items>
         </Section>
@@ -131,4 +278,5 @@ export function ReferencesSection() {
  * TODO: Round people
  * TODO: Ask for reference
  * TODO: Add links to multiple socials
+ * TODO: Shadow effect on pictures
  */
