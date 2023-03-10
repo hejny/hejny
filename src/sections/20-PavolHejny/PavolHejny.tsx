@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { useTranslation } from 'react-i18next';
 import pavolHejny from '../../../public/people/pavol-hejny.jpg';
 import { Section } from '../../components/Section/Section';
 import styles from './PavolHejny.module.css';
@@ -10,9 +11,11 @@ interface PavolHejnyProps {
 export function PavolHejnySection(props: PavolHejnyProps) {
     const { variant } = props;
 
+    const { t } = useTranslation('pavolhejny');
+
     return (
         <Section id="pavolhejny" className={styles.about}>
-            <h2>Who I am?</h2>
+            <h2>{t('who i am')}</h2>
 
             <Image
                 alt="Portrait photo of Pavol Hejný"
@@ -25,6 +28,7 @@ export function PavolHejnySection(props: PavolHejnyProps) {
                 placeholder="blur"
             />
 
+            {/* TODO: !!! Translate directly from markdown */}
             <p>
                 Hi, I am Pavol, a developer and tech enthusiast passionate about exploring cutting-edge tools and
                 technologies. As a co-founder of{' '}
@@ -56,6 +60,7 @@ export function PavolHejnySection(props: PavolHejnyProps) {
 }
 
 /**
+ * TODO: Should we translate alt of the images like "Portrait photo of Pavol Hejný"
  * TODO: Add dynamically from https://raw.githubusercontent.com/hejny/hejny/main/documents/contact.md
  *       1) Download from external repo script (and add copy warning)
  *       2) Convert from local markdown to conponent
