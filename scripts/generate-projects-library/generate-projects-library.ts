@@ -43,6 +43,7 @@ async function generateProjectsLibrary({ isCommited }: { isCommited: boolean }) 
 
     const rootDir = join(__dirname, '../../');
     const projectsComponentsDir = join(rootDir, 'public/projects');
+    // TODO: !!!! Remove ALL traces of projects.md
     const projectsDocumentFilePath = join(projectsComponentsDir, 'projects.md');
     const projectsDocumentFileContent = await readFile(projectsDocumentFilePath, 'utf-8').then(removeMarkdownComments);
 
@@ -181,6 +182,8 @@ async function generateProjectsLibrary({ isCommited }: { isCommited: boolean }) 
 }
 
 /**
+ * TODO: !!! Change to new shape of projects - each project has its own markdown
+ * TODO: !!! Make it <Translate>d
  * TODO: When the heading is changes, old file will be still in place, this can be a bit misleading
  * TODO: Maybe rename generateProjectsLibrary
  * TODO: Replace all backgroundImage ACRY by <Image
