@@ -49,6 +49,7 @@ export function FooterSection() {
 }
 
 /**
+ * TODO: !!!! Add all legal stuff
  * TODO: Use meaningfully OR remove </DisplayOn> OR 👀 remake to classes .desktop .mobile .tablet ...
 
  * TODO: Link to MidJourney + * generated with MidJourney
