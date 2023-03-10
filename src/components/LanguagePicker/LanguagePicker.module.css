@@ -6,7 +6,7 @@
     top: 10px;
 }
 
-.language {
+.language img {
     display: block;
     width: 30px;
     height: 20px;
@@ -14,4 +14,15 @@
     object-fit: cover;
     object-position: center center;
     margin: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .LanguagePicker {
+        right: -5px;
+        top: -5px;
+    }
+
+    .language.current {
+        display: none;
+    }
 }

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import csFlag from '../../../public/languages/cs.svg';
 import enFlag from '../../../public/languages/en.svg';
+import { classNames } from '../../utils/classNames';
 import styles from './LanguagePicker.module.css';
 
 export function LanguagePicker() {
@@ -11,22 +12,22 @@ export function LanguagePicker() {
     return (
         <div className={styles.LanguagePicker}>
             <div>
-                <Link href={router.pathname} locale="en" scroll={false}>
-                    <Image
-                        className={styles.language}
-                        src={enFlag}
-                        alt="Switch to English"
-                        title="🇺🇸 Switch to English"
-                    />
+                <Link
+                    href={router.pathname}
+                    locale="en"
+                    scroll={false}
+                    className={classNames(styles.language, router.locale === 'en' && styles.current)}
+                >
+                    <Image src={enFlag} alt="Switch to English" title="🇺🇸 Switch to English" />
                 </Link>
 
-                <Link href={router.pathname} locale="cs" scroll={false}>
-                    <Image
-                        className={styles.language}
-                        src={csFlag}
-                        alt="Přepnout do Češtiny"
-                        title="🇨🇿 Přepnout do Češtiny"
-                    />
+                <Link
+                    href={router.pathname}
+                    locale="cs"
+                    scroll={false}
+                    className={classNames(styles.language, router.locale === 'cs' && styles.current)}
+                >
+                    <Image src={csFlag} alt="Přepnout do Češtiny" title="🇨🇿 Přepnout do Češtiny" />
                 </Link>
             </div>
         </div>
