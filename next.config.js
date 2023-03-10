@@ -17,16 +17,6 @@ const nextConfig = {
             },
         ],
     },
-
-    // !!! Do we need this if not using Static export
-    async exportPathMap() {
-        return {
-            '/': { page: '/' },
-            '/about': { page: '/about' },
-            '/gallery': { page: '/gallery' },
-            '/contact': { page: '/contact' },
-        };
-    },
 };
 
 module.exports = nextConfig;
