@@ -1,5 +1,4 @@
 const { i18n } = require('./next-i18next.config');
-const withExportImages = require('next-export-optimize-images');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -30,5 +29,4 @@ const nextConfig = {
     },
 };
 
-module.exports = withExportImages(nextConfig);
-
+module.exports = nextConfig;
