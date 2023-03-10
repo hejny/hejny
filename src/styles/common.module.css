@@ -90,7 +90,9 @@
     outline: 1px dotted purple;
     /**/
 
-    font-family: 'PassionsConflict', Helvetica Neue;
+    /* TODO: [🔠] Pick best font, look at https://fonts.google.com/specimen/Rubik */
+
+    font-family: 'PassionsConflict', Helvetica Neue /* <- [🔠] Make one place for font-family */;
     font-size: 85px /* <- [🔠] Make one place for font-size */;
     white-space: nowrap;
 

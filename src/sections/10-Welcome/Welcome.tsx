@@ -14,6 +14,7 @@ export function WelcomeSection(props: WelcomeProps) {
         <Section id="welcome" className={styles.welcome}>
             <Link href="/">
                 <h1>From 0 to 1</h1>
+                {/* <- TODO: [🔠] This should be handwritten */}
             </Link>
 
             {variant === 'FULL' && (
