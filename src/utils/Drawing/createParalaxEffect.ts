@@ -107,10 +107,12 @@ export function createParalaxEffect<TElement extends HTMLElement>(options: Paral
         resize();
         applyParalax();
 
-        return Registration.void(/* Note: This is OK, because each particle disapears automatically */);
+        return Registration.void(/* [1] */);
     };
 }
 
 /**
+ * TODO: [1] Propper effect cleanup
+ * TODO: [1] LIB destroyable better way how to work with addEventListener/removeEventListener
  * TODO: [🥟] Have windowSize on one place automatically updated
  */

@@ -1,18 +1,24 @@
+import { IDestroyable } from 'destroyable';
 import { Effect } from './effect';
 
-export function effectToRef<TElement extends HTMLElement>(effect: Effect<TElement>): (element: TElement | null) => void {
-    return (element: TElement | null) => {
+export function effectToRef<TElement extends HTMLElement>(
+    effect: Effect<TElement>,
+): (element: TElement | null) => void {
+    let effectOnElement: null | IDestroyable;
+
+    return async (element: TElement | null) => {
+        if (effectOnElement) {
+            await effectOnElement.destroy();
+        }
+
         if (element === null) {
             return;
         }
 
-        const effectOnElement = effect(element);
-
-        // TODO: Destroy effect
+        effectOnElement = effect(element);
     };
 }
 
 /**
- * TODO: Apply destroy
  * TODO: Extract interfaces
  */

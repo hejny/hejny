@@ -89,3 +89,7 @@ export function createParticlesDrawingEffect<TElement extends HTMLElement>(
         });
     };
 }
+
+/**
+ * TODO: LIB destroyable better way how to work with addEventListener/removeEventListener
+ */
