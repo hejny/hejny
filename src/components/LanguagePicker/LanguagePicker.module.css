@@ -21,7 +21,11 @@
 
     .LanguagePicker {
         right: -5px;
-        top: -5px;
+        top: 20px;
+
+        background-color: rgba(13, 28, 49, 0.61);
+        border-radius: 5px;
+        box-shadow: #cccccc5b 0 0 40px;
     }
 
     .language.current {
