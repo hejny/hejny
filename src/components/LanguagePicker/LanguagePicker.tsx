@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import csFlag from '../../../public/languages/cs.svg';
-import enFlag from '../../../public/languages/en.svg';
+import csFlag from '../../../public/locale-flags/cs.svg';
+import enFlag from '../../../public/locale-flags/en.svg';
 import { classNames } from '../../utils/classNames';
 import styles from './LanguagePicker.module.css';
 
