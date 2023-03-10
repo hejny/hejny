@@ -1,21 +1,21 @@
 import { Inter } from '@next/font/google';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { getStaticPaths, makeStaticProps } from '../../../lib/getStatic';
 import { Vector } from 'xyzt';
-import { CaveOfIdeasInLightbulbWithTransparentLookThr_d3273ad0_Image } from '../../public/wallpapers/Pavol_Hejn_cave_of_ideas_in_lightbulb_with_transparent_look_thr_d3273ad0-097f-4011-b799-1c379bb05ee3_Image';
-import { CaveOfIdeasWithTransparentLookThrough_fe3480c5_Image } from '../../public/wallpapers/Pavol_Hejn_cave_of_ideas_with_transparent_look_through_fe3480c5-76af-45da-ac4e-5177062bcb6b_Image';
-import { CaveWithPresentation_dec31ff2_Image } from '../../public/wallpapers/Pavol_Hejn_cave_with_presentation_dec31ff2-3b9d-42b9-b84f-f87d02d6a391_Image';
-import { CaveWithPrototypingLaboratory_ca9b82b9_Image } from '../../public/wallpapers/Pavol_Hejn_cave_with_prototyping_laboratory_ca9b82b9-0ded-44a3-b7ec-344ebb539439_Image';
-import { DebugGrid } from '../components/DebugGrid/DebugGrid';
-import { ImagineTag } from '../components/ImagineTag/ImagineTag';
-import { Item } from '../components/Items/Item';
-import { Items } from '../components/Items/Items';
-import { Section } from '../components/Section/Section';
-import { TiledBackground } from '../components/TiledBackground/TiledBackground';
-import { AppHead } from '../sections/00-AppHead/AppHead';
-import { CaveSection } from '../sections/01-Cave/Cave';
-import { WelcomeSection } from '../sections/10-Welcome/Welcome';
-import { FooterSection } from '../sections/90-Footer/Footer';
-import styles from '../styles/common.module.css';
+import { CaveOfIdeasInLightbulbWithTransparentLookThr_d3273ad0_Image } from '../../../public/wallpapers/Pavol_Hejn_cave_of_ideas_in_lightbulb_with_transparent_look_thr_d3273ad0-097f-4011-b799-1c379bb05ee3_Image';
+import { CaveOfIdeasWithTransparentLookThrough_fe3480c5_Image } from '../../../public/wallpapers/Pavol_Hejn_cave_of_ideas_with_transparent_look_through_fe3480c5-76af-45da-ac4e-5177062bcb6b_Image';
+import { CaveWithPresentation_dec31ff2_Image } from '../../../public/wallpapers/Pavol_Hejn_cave_with_presentation_dec31ff2-3b9d-42b9-b84f-f87d02d6a391_Image';
+import { CaveWithPrototypingLaboratory_ca9b82b9_Image } from '../../../public/wallpapers/Pavol_Hejn_cave_with_prototyping_laboratory_ca9b82b9-0ded-44a3-b7ec-344ebb539439_Image';
+import { DebugGrid } from '../../components/DebugGrid/DebugGrid';
+import { ImagineTag } from '../../components/ImagineTag/ImagineTag';
+import { Item } from '../../components/Items/Item';
+import { Items } from '../../components/Items/Items';
+import { Section } from '../../components/Section/Section';
+import { TiledBackground } from '../../components/TiledBackground/TiledBackground';
+import { AppHead } from '../../sections/00-AppHead/AppHead';
+import { CaveSection } from '../../sections/01-Cave/Cave';
+import { WelcomeSection } from '../../sections/10-Welcome/Welcome';
+import { FooterSection } from '../../sections/90-Footer/Footer';
+import styles from '../../styles/common.module.css';
 
 // TODO: What is this - inter/Inter
 const inter = Inter({ subsets: ['latin'] });
@@ -110,13 +110,8 @@ export default function Midjourney() {
     );
 }
 
-export async function getStaticProps({ locale }: { locale: string }) {
-    return {
-        props: {
-            ...(await serverSideTranslations(locale, ['common', 'footer'])),
-        },
-    };
-}
+const getStaticProps = makeStaticProps(['common', 'footer']);
+export { getStaticPaths, getStaticProps };
 
 /**
  * TODO: [🪒] Can be getStaticProps shared between all pages?
