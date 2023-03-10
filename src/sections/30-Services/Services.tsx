@@ -63,9 +63,9 @@ export function ServicesSection() {
 }
 
 /**
- * TODO: Make pages internall
+ * TODO: Maybe images of caves should be outline (same style as projects+hacking) and not robust cave
  * TODO: Text should be selectable even inside of <a>
- * TODO:  Examples how can I help you
+ * TODO: Examples how can I help you
  * TODO: Maybe split every item into separate file component
  * TODO: After scrolling highlighting of the section
  * TODO: Rename to HowCanIHelpYou OR Better

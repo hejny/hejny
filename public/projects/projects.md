@@ -1,5 +1,6 @@
 # Hacking
 
+<!-- TODO: !!! Each project on each locale its own markdown -->
 <!-- Note: In this file there are all URLs which will be converted into the hacking cases components -->
 <!-- TODO: Rename all outline.svg to original names -->
 

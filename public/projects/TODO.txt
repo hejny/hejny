@@ -1,3 +1,4 @@
+TODO: !!! Unite outline style of the projects
 TODO: [😴] Is it a good practise to place components in the public folder?
 TODO: [👣] Why is here broken hot-reload and you need to restart next dev to reload
 TODO: MJ images should be as original name <- [🛹] Maybe some BPE script for this

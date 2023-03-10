@@ -14,7 +14,7 @@ import { ContactSection } from '../sections/70-Contact/Contact';
 import { FooterSection } from '../sections/90-Footer/Footer';
 import styles from '../styles/common.module.css';
 
-// TODO: What is this - inter/Inter
+// TODO: [🔠] What is this - inter/Inter
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home({ lang }: any) {
@@ -40,6 +40,13 @@ export default function Home({ lang }: any) {
                     {/* TODO: <PresentationSection /> */}
                     {/* TODO: <PrototypingSection /> */}
                     {/* TODO: <TechnologiesSection /> */}
+                    {/* TODO: <PricingSection />
+                                Cena za služby
+                                Vůbec nejsem fanoušek ceny za hodinu – ve světě rychle automatizace jde pouze o o velmi o krok naprosto špatným směrem který penalizuje efektivitu
+                                Přijímám platby v kryptoměnách nejen v Bitcoinu ale v jste, kterou chcete
+                    */}
+
+                    {/* <WhereToMeetMe> */}
                     <ReferencesSection />
                     <MyProjectsSection />
                     {/* TODO: Finish or remove <HackingSection /> */}

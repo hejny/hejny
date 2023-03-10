@@ -17,6 +17,8 @@
 }
 
 @media only screen and (max-width: 600px) {
+    /* TODO: !!! Better mobile locale switch */
+
     .LanguagePicker {
         right: -5px;
         top: -5px;

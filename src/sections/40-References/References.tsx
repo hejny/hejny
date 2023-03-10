@@ -134,6 +134,7 @@ export function ReferencesSection() {
                         <Item.PersonImage>
                             <Image
                                 alt="Portrait photo of Max Kozlov"
+                                // TODO: !!! Max without background
                                 src={maxKozlov}
                                 draggable="false"
                                 placeholder="blur"
@@ -275,8 +276,8 @@ export function ReferencesSection() {
 }
 
 /**
- * TODO: Round people
- * TODO: Ask for reference
  * TODO: Add links to multiple socials
  * TODO: Shadow effect on pictures
+ * TODO: !!! Same bg on people
+ * TODO: Paralax effect on people
  */
