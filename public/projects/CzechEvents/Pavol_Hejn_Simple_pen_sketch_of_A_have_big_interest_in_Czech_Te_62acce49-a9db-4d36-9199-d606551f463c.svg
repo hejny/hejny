@@ -41,16 +41,16 @@
    showguides="false" />
   <defs
    id="defs429">
-    <filter
+   <filter
    id="glow"
-   x="-0.010876638"
-   y="-0.01403351"
-   width="1.0217544"
-   height="1.0280669">
+   x="-0.0039830328"
+   y="-0.0080837051"
+   width="1.0079487"
+   height="1.0164576">
       <feGaussianBlur
    class="blur"
    result="coloredBlur"
-   stdDeviation="9"
+   stdDeviation="4"
    vector-effect="non-scaling-stroke"
    id="feGaussianBlur416" />
       <feMerge
