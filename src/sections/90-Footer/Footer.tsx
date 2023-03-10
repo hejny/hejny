@@ -27,11 +27,11 @@ export function FooterSection() {
                 */}
 
                 <li>
-                    <Link href="/gallery">Gallery</Link>
+                    <Link href="/gallery">{t('gallery')}</Link>
                 </li>
 
                 <li>
-                    <Link href="/contact/">Contact</Link>
+                    <Link href="/contact/">{t('contact')}</Link>
                 </li>
 
                 <li>

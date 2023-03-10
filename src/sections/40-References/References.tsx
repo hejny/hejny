@@ -32,7 +32,7 @@ export function ReferencesSection() {
                             </Link>
                         </Item.Title>
                         <Item.Description>
-                            <Translate lang="en">
+                            <Translate locale="en">
                                 <p>
                                     I&apos;ve known Pavol for six years. Especially from hackathons and other innovation
                                     projects. If you are with his team, you can bet he&apos;ll be in the top three. And
@@ -46,7 +46,7 @@ export function ReferencesSection() {
                                 </p>
                             </Translate>
 
-                            <Translate lang="cs">
+                            <Translate locale="cs">
                                 <p>
                                     Pavola znám už 6 let. Zejména z hackathonů a dalších inovačních projektů. Pokud se
                                     se svým týmem zúčastnil, mohli byste si vsadit, že bude mezi nejlepšími třemi. A
@@ -99,7 +99,7 @@ export function ReferencesSection() {
                             </Link>
                         </Item.Title>
                         <Item.Description>
-                            <Translate lang="en">
+                            <Translate locale="en">
                                 <p>
                                     Pavol vytvořil prototyp naší aplikace H-edu tak, že jsme okamžitě získali investici.
                                     Následně navrhl architekturu systému a využití technologií, které se v testu času
@@ -108,7 +108,7 @@ export function ReferencesSection() {
                                     následně využívaly tisíce učitelů.
                                 </p>
                             </Translate>
-                            <Translate lang="cs">
+                            <Translate locale="cs">
                                 <p>
                                     Pavol vytvořil prototyp naší aplikace H-edu tak, že jsme okamžitě získali investici.
                                     Následně navrhl architekturu systému a využití technologií, které se v testu času

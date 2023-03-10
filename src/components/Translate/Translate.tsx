@@ -1,19 +1,24 @@
+import { useRouter } from 'next/router';
 import { ReactNode } from 'react';
 
 interface TranslateProps {
-    lang: string;
+    locale: string;
     children: ReactNode;
 }
 
 export function Translate(props: TranslateProps) {
-    const { lang, children } = props;
+    const { locale, children } = props;
 
-    if (lang === 'en') {
-        return <>{children}</>;
+    const router = useRouter();
+
+    if (locale !== router.locale) {
+        return <></>;
     }
-    return <></>;
+
+    return <>{children}</>;
 }
 
 /**
- * !!! Change to translate library and delete the folder
+ *
+ * !!! Change to TranslateMessage
  */
