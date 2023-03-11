@@ -35,6 +35,5 @@ export function LanguagePicker() {
 }
 
 /**
- * TODO: !!! Flags are reversed
  * TODO: Probbably rename to <LanguageSwitcher (@see https://dev.to/adrai/static-html-export-with-i18n-compatibility-in-nextjs-8cd)
  */
