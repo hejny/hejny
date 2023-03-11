@@ -15,16 +15,15 @@ interface IArticleProps {
 }
 
 export function Article(props: IArticleProps) {
-    const { content, isHashUsed } = props;
+    const { content /* [0], isHashUsed */ } = props;
 
-    // TODO: !!! [0] If not using hash, do not use it, if yes use it
     // [0] const hash = useHash();
 
     const markdown = content;
     converter.setFlavor('github');
     const html = converter.makeHtml(markdown);
 
-    // TODO: !!! If not using hash, remove IDs
+    // TODO: [0] If not using hash, remove IDs from html
 
     // [0] const currentSubsection = hash.substring(1);
 
@@ -81,3 +80,7 @@ const converter = new Converter({
         }),
     ],
 });
+
+/**
+ * TODO:[0] Use has if isHashUsed is true
+ */
