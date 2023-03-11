@@ -17,8 +17,3 @@ export function Translate(props: TranslateProps) {
 
     return <>{children}</>;
 }
-
-/**
- *
- * !!! Change to TranslateMessage
- */
