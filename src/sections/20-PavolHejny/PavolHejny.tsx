@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
-import pavolHejny from '../../../public/people/pavol-hejny.jpg';
+import pavolHejny from '../../../public/people/pavol-hejny.transparent.png';
 import { Article } from '../../components/Article/Article';
 import { Section } from '../../components/Section/Section';
 import styles from './PavolHejny.module.css';

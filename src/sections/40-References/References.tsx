@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import bobKartous from '../../../public/people/bob-kartous.jpg';
-import janSedo from '../../../public/people/jan-sedo.jpg';
-import maxKozlov from '../../../public/people/max-kozlov.jpg';
-import tomasStudenik from '../../../public/people/tomas-studenik.jpg';
+import bobKartous from '../../../public/people/bob-kartous.transparent.png';
+import janSedo from '../../../public/people/jan-sedo.transparent.png';
+import maxKozlov from '../../../public/people/max-kozlov.transparent.cropped.png';
+import tomasStudenik from '../../../public/people/tomas-studenik.transparent.png';
 import { Item } from '../../components/Items/Item';
 import { Items } from '../../components/Items/Items';
 import { Section } from '../../components/Section/Section';
@@ -91,6 +91,10 @@ export function ReferencesSection() {
                                 // height={1024}
                                 draggable="false"
                                 placeholder="blur"
+                                style={{
+                                    // TODO: [💫] What is the propper place for this radial-gradient, in JSX or in CSS module + DRY
+                                    background: 'radial-gradient(circle at center, #b4952c 0%, #000000 120%)',
+                                }}
                             />
                         </Item.PersonImage>
                         <Item.Title>
@@ -138,6 +142,10 @@ export function ReferencesSection() {
                                 src={maxKozlov}
                                 draggable="false"
                                 placeholder="blur"
+                                style={{
+                                    // TODO: [💫] What is the propper place for this radial-gradient, in JSX or in CSS module + DRY
+                                    background: 'radial-gradient(circle at center, #b4952c 0%, #000000 120%)',
+                                }}
                             />
                         </Item.PersonImage>
                         <Item.Title>
@@ -276,8 +284,11 @@ export function ReferencesSection() {
 }
 
 /**
+ * TODO: !!! /references page with more button from main page
+ * TODO: !!! Add job title on references
+ * TODO: !!! Why is Bob never random-selected
+ * TODO: !!! Add all other people
  * TODO: Add links to multiple socials
  * TODO: Shadow effect on pictures
- * TODO: !!! Same bg on people
  * TODO: Paralax effect on people
  */

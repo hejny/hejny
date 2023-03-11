@@ -19,6 +19,8 @@
     border-radius: 50px;
 
     box-shadow: #00000077 -25px 25px 0px; /* <- TODO: Paralax effect on shadow */
+    background: radial-gradient(circle at center, #b4952c 0%, #000000 120%)
+        /* <- TODO: [💫] What is the propper place for this radial-gradient, in JSX or in CSS module + DRY */;
 }
 
 @media screen and (max-width: 550px) {

@@ -19,6 +19,8 @@
     height: 250px;
     border-radius: 50px;
 
+    box-shadow: #00000077 -25px 25px 0px; /* <- TODO: Paralax effect on shadow */
+
     /*border: 5px solid #dec36f;*/
     /*box-shadow: #ff981231 0px 0px 15px;*/
 }
