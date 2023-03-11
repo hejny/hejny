@@ -3,16 +3,15 @@
 import chalk from 'chalk';
 import commander from 'commander';
 import { readFile, writeFile } from 'fs/promises';
-import markdownToTxt from 'markdown-to-txt';
-import { decapitalize, normalizeTo_camelCase, normalizeTo_PascalCase } from 'n12';
-import { dirname, join, relative } from 'path';
-import { Converter } from 'showdown';
-import spaceTrim from 'spacetrim';
+import glob from 'glob-promise';
+import { decapitalize, normalizeTo_camelCase } from 'n12';
+import { basename, dirname, join, relative } from 'path';
 import { commit } from '../utils/autocommit/commit';
 import { isWorkingTreeClean } from '../utils/autocommit/isWorkingTreeClean';
 import { generateImport } from '../utils/generateImport';
+import { isFileExisting } from '../utils/isFileExisting';
 import { prettify } from '../utils/prettify';
-import { removeMarkdownComments } from './removeMarkdownComments';
+import { parseProjectMarkdown } from './parseProjectMarkdown';
 
 const program = new commander.Command();
 program.option('--commit', `Autocommit changes`);
@@ -43,69 +42,34 @@ async function generateProjectsLibrary({ isCommited }: { isCommited: boolean }) 
 
     const rootDir = join(__dirname, '../../');
     const projectsComponentsDir = join(rootDir, 'public/projects');
-    // TODO: !!!! Remove ALL traces of projects.md
-    const projectsDocumentFilePath = join(projectsComponentsDir, 'projects.md');
-    const projectsDocumentFileContent = await readFile(projectsDocumentFilePath, 'utf-8').then(removeMarkdownComments);
 
-    const matches = projectsDocumentFileContent.matchAll(/(?<titleMarkdown>^##.*?$)(?<bodyMarkdown>[^^#]+)/gms);
+    for (const projectEnglishPath of await glob(join(projectsComponentsDir, '/**/*.en.md').split('\\').join('/'))) {
+        const projectCzechPath = projectEnglishPath.replace(/\.en\.md$/, '.cs.md');
 
-    // TODO: Make some util - splitMarkdownIntoHeaderSections
-    const sections: Array<{ titleMarkdown: string; bodyMarkdown: string }> = [];
-    for (const line of projectsDocumentFileContent.split('\n').map((line) => line.trim())) {
-        if (line.startsWith('#')) {
-            sections.push({ titleMarkdown: line.replace(/^#+/, ''), bodyMarkdown: `` });
-        } else {
-            const section = sections[sections.length - 1];
-            section.bodyMarkdown += (section.bodyMarkdown.trim() ? '\n' : '') + line;
+        if (!(await isFileExisting(projectCzechPath))) {
+            throw new Error(`Czech version of project don’t exist\n"${projectCzechPath}"`);
         }
-    }
 
-    sections.shift(/* To remove the first paragraph */);
+        const projectEnglish = await readFile(projectEnglishPath, 'utf-8').then(parseProjectMarkdown);
+        const projectCzech = await readFile(projectCzechPath, 'utf-8').then(parseProjectMarkdown);
 
-    for (const { titleMarkdown, bodyMarkdown } of sections) {
-        const title = markdownToTxt(titleMarkdown);
+        const images = [...projectEnglish.images, ...projectCzech.images];
 
-        // TODO:  Find also the links and replace
+        if (images.length === 0) {
+            throw new Error(`Project ${projectEnglish.title} has no image`);
+        } else if (images.length > 1) {
+            console.warn(chalk.yellow(`Only first image will be used in ${projectEnglish.title} `));
+        }
 
-        let imagesMatch = bodyMarkdown.matchAll(/\[!\[(?<alt>.*?)\]\((?<src>.*?)\)\]\((?<href>.*?)\)/g);
-        const images: Array<{ src: string; alt: string; href: string }> = Array.from(imagesMatch).map(
-            ({ groups: { alt, src, href } }: any) => ({ alt, src, href }),
-        );
         const image = images[0];
 
-        if (!image) {
-            console.info({ bodyMarkdown });
-            throw new Error(`Project ${title} has no image`);
-        }
-
-        if (images.length > 1) {
-            console.warn(chalk.yellow(`Only first image will be used in ${title} `));
-        }
-
-        /* 
-        let tagsMatch = bodyMarkdown.matchAll(/`(?<tag>.*?)`/g);
-        const tags: Array<string> = Array.from(tagsMatch).map(({ groups: { tag } }: any) => tag);
-        // TODO: [🛰] Use tags
-        // TODO: [🛰] Remove tags from body
-        */
-
-        let bodyMarkdownWithoutImages = bodyMarkdown;
-        for (const { alt, src, href } of images) {
-            bodyMarkdownWithoutImages = bodyMarkdownWithoutImages.split(`[![${alt}](${src})](${href})`).join('\n');
-        }
-        bodyMarkdownWithoutImages = bodyMarkdownWithoutImages.split('\n\n\n').join('\n\n');
-        bodyMarkdownWithoutImages = spaceTrim(bodyMarkdownWithoutImages);
-
-        const converter = new Converter();
-        const bodyHtml = converter.makeHtml(bodyMarkdownWithoutImages);
-
-        const dirName = normalizeTo_PascalCase(titleMarkdown);
-        const componentName = dirName + 'Project';
-        const projectFilePath = join(projectsComponentsDir, dirName, componentName) + '.tsx';
+        const projectDir = dirname(projectEnglishPath);
+        const componentName = basename(projectDir) + 'Project';
+        const projectFilePath = join(projectDir, componentName) + '.tsx';
         const projectFileOldContent = await readFile(projectFilePath, 'utf-8').catch(() => ``);
 
         // TODO: LIB n12: normalizeTo_camelCase Should make ALWAYS first letter a lowercase - create tests for this case
-        const effectName = decapitalize(normalizeTo_camelCase(titleMarkdown)) + 'Effect';
+        const effectName = decapitalize(normalizeTo_camelCase(basename(projectDir))) + 'Effect';
 
         if (projectFileOldContent.includes(`@not-generated by generate-projects-library`)) {
             console.info(`⏩ ${relative(process.cwd(), projectFilePath).split('\\').join('/')}`);
@@ -136,18 +100,23 @@ async function generateProjectsLibrary({ isCommited }: { isCommited: boolean }) 
             })}
 
             /**
-             * Presentation of project ${title}
+             * Presentation of project ${projectEnglish.title}
              * 
-             * @see /${relative(process.cwd(), projectsDocumentFilePath).split('\\').join('/')}
+             * @see /${relative(process.cwd(), projectEnglishPath).split('\\').join('/')} !!! Is this OK path
+             * @see /${relative(process.cwd(), projectCzechPath).split('\\').join('/')} !!! Is this OK path
              * @generated by generate-projects-library
              */
             export function ${componentName}() {
                 return(
                     <a href="${image.href}" target="_blank" rel="noreferrer">
                         <Item>
-                            <Item.Title>${title}</Item.Title>
+                            <Item.Title>
+                                <Translate locale="en">${projectEnglish.title}</Translate>
+                                <Translate locale="cs">${projectCzech.title}</Translate>
+                            </Item.Title>
                             <Item.Description>
-                                ${bodyHtml.split(`'`).join(`&apos;`)}
+                                <Translate locale="en">${projectEnglish.description}</Translate>
+                                <Translate locale="cs">${projectCzech.description}</Translate>
                             </Item.Description>
                             <Item.Image>
                                 <div
@@ -184,6 +153,7 @@ async function generateProjectsLibrary({ isCommited }: { isCommited: boolean }) 
 /**
  * TODO: !!! Change to new shape of projects - each project has its own markdown
  * TODO: !!! Make it <Translate>d
+ *  * TODO: !!! ACRY remove all traces of projects.md
  * TODO: When the heading is changes, old file will be still in place, this can be a bit misleading
  * TODO: Maybe rename generateProjectsLibrary
  * TODO: Replace all backgroundImage ACRY by <Image
