@@ -35,7 +35,7 @@ export function FooterSection() {
                 </li>
 
                 <li>
-                    <Link href="/!!!">2</Link>
+                    <Link href="/!!!">3</Link>
                 </li>
 
                 {/*
