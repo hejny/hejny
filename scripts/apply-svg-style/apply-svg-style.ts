@@ -71,14 +71,12 @@ async function applySvgStyle() {
         glowDefsElement.innerHTML = `
             <filter id="glow">
                 <feGaussianBlur
-                    result="coloredBlur"
-                    stdDeviation="6"
-                    vector-effect="non-scaling-stroke"
+                    in="SourceGraphic"
+                    result="Blured"
+                    stdDeviation="7"
                 ></feGaussianBlur>
                 <feMerge>
-                    <feMergeNode in="coloredBlur"></feMergeNode>
-                    <feMergeNode in="coloredBlur"></feMergeNode>
-                    <feMergeNode in="coloredBlur"></feMergeNode>
+                    <feMergeNode in="Blured"></feMergeNode>
                     <feMergeNode in="SourceGraphic"></feMergeNode>
                 </feMerge>
             </filter>
