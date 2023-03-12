@@ -1,9 +1,9 @@
-import { AllMyProjectsProject } from '../../../public/projects/AllMyProjects/AllMyProjectsProject';
-import { CollboardModulesSdkProject } from '../../../public/projects/CollboardModulesSdk/CollboardModulesSdkProject';
-import { MapsProject } from '../../../public/projects/Maps/MapsProject';
-import { OpenSourceProject } from '../../../public/projects/OpenSource/OpenSourceProject';
-import { VisualMathematicsProject } from '../../../public/projects/VisualMathematics/VisualMathematicsProject';
-import { VrArProject } from '../../../public/projects/VrAr/VrArProject';
+import { AllMyProjectsProject } from '../../../public/projects/all-projects/AllMyProjectsProject';
+import { CollboardModulesSdkProject } from '../../../public/projects/collboard-modules-sdk/CollboardModulesSdkProject';
+import { MapsProject } from '../../../public/projects/0-maps/MapsProject';
+import { OpenSourceProject } from '../../../public/projects/open-source/OpenSourceProject';
+import { VisualMathematicsProject } from '../../../public/projects/visual-mathematics/VisualMathematicsProject';
+import { VrArProject } from '../../../public/projects/vr-ar/VrArProject';
 import { Items } from '../../components/Items/Items';
 import { Section } from '../../components/Section/Section';
 import { Shuffle } from '../../components/Shuffle/Shuffle';
