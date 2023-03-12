@@ -152,7 +152,6 @@ async function generateProjectsLibrary({ isCommited }: { isCommited: boolean }) 
     // TODO: Maybe generate an index component
 
     console.info(`[ Done 🖼️  Generating projects library ]`);
-    process.exit(0);
 }
 
 /**

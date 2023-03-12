@@ -72,7 +72,6 @@ async function generatePatternsLibrary({ isCommited }: { isCommited: boolean }) 
     }
 
     console.info(`[ Done 🖼️  Generating patterns library ]`);
-    process.exit(0);
 }
 
 /**

@@ -113,7 +113,6 @@ async function generateWallpapersLibrary({ isCommited }: { isCommited: boolean }
     }
 
     console.info(`[ Done 🖼️  Generating wallpapers library ]`);
-    process.exit(0);
 }
 
 /**
