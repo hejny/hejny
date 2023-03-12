@@ -62,3 +62,7 @@ async function applySvgStyle() {
 
     console.info(`[ Done 🖼️  Generating patterns library ]`);
 }
+
+/**
+ * TODO: !!! Remove rootDir from ACRY scripts and use process.cwd()
+ */
