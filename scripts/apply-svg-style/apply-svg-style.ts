@@ -68,22 +68,18 @@ async function applySvgStyle() {
 
         // Note: Normalize <defs/> - Add <defs> with glow effect
         const glowDefsElement = dom.window.document.createElementNS('http://www.w3.org/2000/svg', 'defs');
-        // !!! What is x="-0.012046945" y="-0.012603763" width="1.0240937" height="1.0252078"
-        // !!! id="defs429" id="feGaussianBlur416" id="feMergeNode418" ...
         glowDefsElement.innerHTML = `
-            <filter id="glow" x="-0.012046945" y="-0.012603763" width="1.0240937" height="1.0252078">
+            <filter id="glow">
                 <feGaussianBlur
-                    class="blur"
                     result="coloredBlur"
-                    stdDeviation="4"
+                    stdDeviation="6"
                     vector-effect="non-scaling-stroke"
-                    id="feGaussianBlur416"
                 ></feGaussianBlur>
-                <feMerge id="feMerge426">
-                    <feMergeNode in="coloredBlur" id="feMergeNode418"></feMergeNode>
-                    <feMergeNode in="coloredBlur" id="feMergeNode420"></feMergeNode>
-                    <feMergeNode in="coloredBlur" id="feMergeNode422"></feMergeNode>
-                    <feMergeNode in="SourceGraphic" id="feMergeNode424"></feMergeNode>
+                <feMerge>
+                    <feMergeNode in="coloredBlur"></feMergeNode>
+                    <feMergeNode in="coloredBlur"></feMergeNode>
+                    <feMergeNode in="coloredBlur"></feMergeNode>
+                    <feMergeNode in="SourceGraphic"></feMergeNode>
                 </feMerge>
             </filter>
         `;

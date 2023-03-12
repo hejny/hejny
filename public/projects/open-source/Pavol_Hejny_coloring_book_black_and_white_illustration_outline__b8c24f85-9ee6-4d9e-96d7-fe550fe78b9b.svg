@@ -17,19 +17,13 @@
     xmlns:svg="http://www.w3.org/2000/svg"
 >
     <defs>
-        <filter id="glow" x="-0.012046945" y="-0.012603763" width="1.0240937" height="1.0252078">
-            <feGaussianBlur
-                class="blur"
-                result="coloredBlur"
-                stdDeviation="4"
-                vector-effect="non-scaling-stroke"
-                id="feGaussianBlur416"
-            ></feGaussianBlur>
-            <feMerge id="feMerge426">
-                <feMergeNode in="coloredBlur" id="feMergeNode418"></feMergeNode>
-                <feMergeNode in="coloredBlur" id="feMergeNode420"></feMergeNode>
-                <feMergeNode in="coloredBlur" id="feMergeNode422"></feMergeNode>
-                <feMergeNode in="SourceGraphic" id="feMergeNode424"></feMergeNode>
+        <filter id="glow">
+            <feGaussianBlur result="coloredBlur" stdDeviation="6" vector-effect="non-scaling-stroke"></feGaussianBlur>
+            <feMerge>
+                <feMergeNode in="coloredBlur"></feMergeNode>
+                <feMergeNode in="coloredBlur"></feMergeNode>
+                <feMergeNode in="coloredBlur"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
             </feMerge>
         </filter>
     </defs>
