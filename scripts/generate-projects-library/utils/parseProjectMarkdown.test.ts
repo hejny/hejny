@@ -2,7 +2,7 @@ import { describe, expect, it } from '@jest/globals';
 import spaceTrim from 'spacetrim';
 import { parseProjectMarkdown } from './parseProjectMarkdown';
 
-describe('removeMarkdownComments removes markdown comments', () => {
+describe('parseProjectMarkdown', () => {
     it('will parse simple project', () => {
         expect(
             parseProjectMarkdown(
