@@ -91,6 +91,7 @@ async function generateProjectsLibrary({ isCommited }: { isCommited: boolean }) 
              */
         
             import { Item } from '../../../src/components/Items/Item';
+            import { Translate } from '../../../src/components/Translate/Translate';
             // import { effectToRef } from '../../../src/utils/Drawing/effectToRef';
             // import { ${effectName} } from '../../../src/utils/Drawing/projectsEffectsLibrary';
             ${generateImport({
