@@ -15,7 +15,7 @@ import styles from '../styles/common.module.css';
 // TODO: [🔠] What is this - inter/Inter
 const inter = Inter({ subsets: ['latin'] });
 
-export default function Midjourney() {
+export default function Midjourney(props: any) {
     return (
         <>
             <AppHead subtitle="Gallery" />
@@ -37,6 +37,7 @@ export default function Midjourney() {
                         <p>Technical info about the page</p>
                         <p>Version: {VERSION}</p>
                         <p>Commit message: {process.env.VERCEL_GIT_COMMIT_MESSAGE}</p>
+                        <pre>{JSON.stringify(props.config, null, 4)}</pre>
                         <p>
                             Repository:
                             <Link href="https://github.com/hejny/rapid-prototyping-wizard/">
@@ -57,6 +58,11 @@ export async function getStaticProps({ locale }: { locale: string }) {
     return {
         props: {
             ...(await serverSideTranslations(locale, ['common', 'footer', 'pavolhejny'])),
+            config: {
+                NONCE: 1,
+                VERSION,
+                VERCEL_GIT_COMMIT_MESSAGE: process.env.VERCEL_GIT_COMMIT_MESSAGE || null,
+            },
         },
     };
 }
