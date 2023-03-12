@@ -44,6 +44,7 @@ async function applySvgStyle() {
             continue;
         }
 
+        // Note: Checking that the SVG is the supported one
         const width = parseFloat(svgElement.getAttribute('width')!);
         const height = parseFloat(svgElement.getAttribute('height')!);
         const viewBox = svgElement.getAttribute('viewBox')!;
@@ -52,6 +53,13 @@ async function applySvgStyle() {
             console.warn(`⏩ ${svgName} has unexpected width, height or viewBox`);
             continue;
         }
+
+        // Note: Normalize <defs/>
+        // !!!
+
+        // Note: Apply same style on each <path/>
+        // !!!
+        // TODO: !!! Change  vector-effect="non-scaling-stroke" style= on each <path/>
 
         await writeFile(
             svgPath,
@@ -66,15 +74,7 @@ async function applySvgStyle() {
             'utf-8',
         );
         console.info(`💾 ${svgName}`);
-
-        // !!! break;
     }
-
-    // TODO: !!! Iterate through every SVG
-    // TODO: !!! Check same SVG size
-    // TODO: !!! Change <defs/>
-    // TODO: !!! Change  vector-effect="non-scaling-stroke" style= on each <path/>
-    // TODO: !!! Format the file
 
     console.info(`[ Done 🖼️  Generating patterns library ]`);
 }
