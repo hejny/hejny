@@ -47,7 +47,7 @@ export default function Home({ lang }: any) {
                     */}
 
                     {/* <WhereToMeetMe> */}
-                    <ReferencesSection />
+                    <ReferencesSection variant="SHORT"  />
                     <MyProjectsSection />
                     {/* TODO: Finish or remove <HackingSection /> */}
                     <ContactSection variant="SHORT" />
