@@ -51,7 +51,7 @@ async function applySvgStyle() {
         );
         console.info(`💾 ${relative(process.cwd(), svgPath).split('\\').join('/')}`);
 
-        break;
+        // !!! break;
     }
 
     // TODO: !!! Iterate through every SVG

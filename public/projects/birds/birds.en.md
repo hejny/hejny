@@ -10,3 +10,6 @@ Feeders
 -->
 
 [![Bird outline](./outline.svg)](#)
+
+
+<!-- TODO: [💕] Rename outline.svg to original traced image -->
