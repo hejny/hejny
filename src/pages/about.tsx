@@ -35,12 +35,14 @@ export default function Midjourney() {
                     <Section>
                         <h2>About</h2>
                         <p>Technical info about the page</p>
-                        Version: {VERSION}
-                        <br />
-                        Source:{' '}
-                        <Link href="https://github.com/hejny/rapid-prototyping-wizard/">
-                            https://github.com/hejny/rapid-prototyping-wizard/
-                        </Link>
+                        <p>Version: {VERSION}</p>
+                        <p>Commit message: {process.env.VERCEL_GIT_COMMIT_MESSAGE}</p>
+                        <p>
+                            Repository:
+                            <Link href="https://github.com/hejny/rapid-prototyping-wizard/">
+                                https://github.com/hejny/rapid-prototyping-wizard/
+                            </Link>
+                        </p>
                     </Section>
                 </main>
                 <footer>
@@ -60,6 +62,9 @@ export async function getStaticProps({ locale }: { locale: string }) {
 }
 
 /**
+ * TODO: !!! More details
+ * TODO: !!! From configchecker
+ * TODO: !!! Better formatted
  * TODO: [🪒] Can be getStaticProps shared between all pages?
  * TODO: Make some menu
  * TODO: [🧈] Best way how to share page css

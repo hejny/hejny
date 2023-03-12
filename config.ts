@@ -6,6 +6,10 @@ export const DEBUG = {
     showGrid: false,
 };
 
+
+
+
 /**
+ * TODO: !!! configchecker
  * TODO: Should be this file here or in src folder
  */
