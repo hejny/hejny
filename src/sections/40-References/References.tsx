@@ -24,7 +24,7 @@ export function ReferencesSection(props: ReferencesProps) {
 
             <Items>
                 <Shuffle
-                    /* TODO: !!! Bring back when ShuffleSeedContext provider is working> seed="references" */ seed={new Date().getUTCSeconds()}
+                    /* TODO: !!! Bring back when ShuffleSeedContext provider is working> seed="references" */ seed={new Date().getUTCMinutes()}
                     limit={variant === 'FULL' ? Infinity : 3}
                 >
                     <Item>
@@ -102,7 +102,7 @@ export function ReferencesSection(props: ReferencesProps) {
                                 placeholder="blur"
                                 style={{
                                     // TODO: [💫] What is the propper place for this radial-gradient, in JSX or in CSS module + DRY
-                                    background: 'radial-gradient(circle at center, #b4952c 0%, #000000 120%)',
+                                    backgroundImage: 'radial-gradient(circle at center, #b4952c 0%, #000000 120%)',
                                 }}
                             />
                         </Item.PersonImage>
@@ -153,7 +153,7 @@ export function ReferencesSection(props: ReferencesProps) {
                                 placeholder="blur"
                                 style={{
                                     // TODO: [💫] What is the propper place for this radial-gradient, in JSX or in CSS module + DRY
-                                    background: 'radial-gradient(circle at center, #b4952c 0%, #000000 120%)',
+                                    backgroundImage: 'radial-gradient(circle at center, #b4952c 0%, #000000 120%)',
                                 }}
                             />
                         </Item.PersonImage>
