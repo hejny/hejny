@@ -4,7 +4,7 @@ import chalk from 'chalk';
 import commander from 'commander';
 import { readFile, writeFile } from 'fs/promises';
 import glob from 'glob-promise';
-import { decapitalize, normalizeTo_camelCase } from 'n12';
+import { decapitalize, normalizeTo_camelCase, normalizeTo_PascalCase } from 'n12';
 import { basename, dirname, join, relative } from 'path';
 import { commit } from '../utils/autocommit/commit';
 import { isWorkingTreeClean } from '../utils/autocommit/isWorkingTreeClean';
@@ -64,7 +64,8 @@ async function generateProjectsLibrary({ isCommited }: { isCommited: boolean }) 
         const image = images[0];
 
         const projectDir = dirname(projectEnglishPath);
-        const componentName = basename(projectDir) + 'Project';
+        const componentBaseName = normalizeTo_PascalCase(basename(projectDir));
+        const componentName = `${componentBaseName}Project`;
         const projectFilePath = join(projectDir, componentName) + '.tsx';
         const projectFileOldContent = await readFile(projectFilePath, 'utf-8').catch(() => ``);
 
