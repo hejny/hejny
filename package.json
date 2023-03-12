@@ -49,6 +49,7 @@
         "isomorphic-fetch": "3.0.0",
         "jest": "29.4.0",
         "jest-environment-jsdom": "29.4.0",
+        "jsdom": "^21.1.1",
         "localtunnel": "2.0.2",
         "lodash": "4.17.21",
         "markdown-to-txt": "2.0.1",
