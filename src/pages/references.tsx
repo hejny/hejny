@@ -6,17 +6,17 @@ import { TiledBackground } from '../components/TiledBackground/TiledBackground';
 import { AppHead } from '../sections/00-AppHead/AppHead';
 import { CaveSection } from '../sections/01-Cave/Cave';
 import { WelcomeSection } from '../sections/10-Welcome/Welcome';
-import { ContactSection } from '../sections/70-Contact/Contact';
+import { ReferencesSection } from '../sections/40-References/References';
 import { FooterSection } from '../sections/90-Footer/Footer';
 import styles from '../styles/common.module.css';
 
 // TODO: [🔠] What is this - inter/Inter
 const inter = Inter({ subsets: ['latin'] });
 
-export default function ContactPage() {
+export default function ReferencesPage() {
     return (
         <>
-            <AppHead subtitle="Contact" />
+            <AppHead subtitle="References" />
 
             <div className={styles.page}>
                 <DebugGrid size={new Vector(5, 5)} />
@@ -30,7 +30,7 @@ export default function ContactPage() {
                 </div>
                 <main>
                     <WelcomeSection variant="SHORT" />
-                    <ContactSection variant="FULL" />
+                    <ReferencesSection variant="FULL" />
                 </main>
                 <footer>
                     <FooterSection />

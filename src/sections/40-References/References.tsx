@@ -11,13 +11,22 @@ import { Shuffle } from '../../components/Shuffle/Shuffle';
 import { Translate } from '../../components/Translate/Translate';
 import styles from './References.module.css';
 
-export function ReferencesSection() {
+interface ReferencesProps {
+    variant: 'SHORT' | 'FULL';
+}
+
+export function ReferencesSection(props: ReferencesProps) {
+    const { variant } = props;
+
     return (
         <Section id="references" className={styles.references}>
             <h2>References</h2>
 
             <Items>
-                <Shuffle seed="references" limit={3}>
+                <Shuffle
+                    /* TODO: !!! Bring back when ShuffleSeedContext provider is working> seed="references" */ seed={new Date().getUTCSeconds()}
+                    limit={variant === 'FULL' ? Infinity : 3}
+                >
                     <Item>
                         <Item.PersonImage>
                             <Image

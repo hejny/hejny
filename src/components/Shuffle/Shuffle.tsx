@@ -31,7 +31,8 @@ interface ShuffleProps {
 export function Shuffle(props: ShuffleProps) {
     const { seed, disable, limit, children } = props;
 
-    const random = seedrandom(useContext(ShuffleSeedContext).toString() + (seed?.toString() || ''));
+    const shuffleSeedContext = useContext(ShuffleSeedContext);
+    const random = seedrandom(shuffleSeedContext.toString() + (seed?.toString() || ''));
 
     if (!Array.isArray(children) || disable) {
         return children as any;
@@ -39,11 +40,16 @@ export function Shuffle(props: ShuffleProps) {
 
     let shuffledChildren = [...children].sort(() => (random() > 0.5 ? 1 : -1));
 
-    if (limit) {
+    if (limit && limit !== Infinity) {
         shuffledChildren = shuffledChildren.slice(0, limit);
     }
 
-    return <>{shuffledChildren}</>;
+    return (
+        <>
+            {/* !!! shuffleSeedContext.toString() */}
+            {shuffledChildren}
+        </>
+    );
 }
 
 /**

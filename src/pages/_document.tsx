@@ -11,7 +11,7 @@ export default function Document() {
             <Head />
             <body>
                 <DebugContext.Provider value={DEBUG}>
-                    <ShuffleSeedContext.Provider value={new Date().getUTCMinutes()}>
+                    <ShuffleSeedContext.Provider value={new Date().getUTCSeconds()}>
                         <Main />
                     </ShuffleSeedContext.Provider>
                 </DebugContext.Provider>
@@ -22,5 +22,6 @@ export default function Document() {
 }
 
 /**
+ * TODO: !!! ShuffleSeedContext not working
  * TODO: Is this a good place to insert a <DebugContext.Provider
  */
