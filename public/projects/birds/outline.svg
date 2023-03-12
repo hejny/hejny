@@ -16,12 +16,12 @@
     xmlns="http://www.w3.org/2000/svg"
     xmlns:svg="http://www.w3.org/2000/svg"
 >
-    <defs id="defs429">
-        <filter id="glow" x="-0.79908379" y="-0.81052131" width="2.5979821" height="2.6210593">
+    <defs>
+        <filter id="glow" x="-0.012046945" y="-0.012603763" width="1.0240937" height="1.0252078">
             <feGaussianBlur
                 class="blur"
                 result="coloredBlur"
-                stdDeviation="7"
+                stdDeviation="4"
                 vector-effect="non-scaling-stroke"
                 id="feGaussianBlur416"
             ></feGaussianBlur>
@@ -33,7 +33,6 @@
             </feMerge>
         </filter>
     </defs>
-
     <sodipodi:namedview
         id="namedview39"
         pagecolor="#ffffff"

@@ -16,20 +16,20 @@
     xmlns="http://www.w3.org/2000/svg"
     xmlns:svg="http://www.w3.org/2000/svg"
 >
-    <defs id="defs41">
-        <filter id="glow-9" x="-0.0093612842" y="-0.014040353" width="1.0187215" height="1.0280722">
+    <defs>
+        <filter id="glow" x="-0.012046945" y="-0.012603763" width="1.0240937" height="1.0252078">
             <feGaussianBlur
                 class="blur"
                 result="coloredBlur"
                 stdDeviation="4"
                 vector-effect="non-scaling-stroke"
-                id="feGaussianBlur416-9"
+                id="feGaussianBlur416"
             ></feGaussianBlur>
-            <feMerge id="feMerge426-9">
-                <feMergeNode in="coloredBlur" id="feMergeNode418-1"></feMergeNode>
-                <feMergeNode in="coloredBlur" id="feMergeNode420-5"></feMergeNode>
-                <feMergeNode in="coloredBlur" id="feMergeNode422-9"></feMergeNode>
-                <feMergeNode in="SourceGraphic" id="feMergeNode424-9"></feMergeNode>
+            <feMerge id="feMerge426">
+                <feMergeNode in="coloredBlur" id="feMergeNode418"></feMergeNode>
+                <feMergeNode in="coloredBlur" id="feMergeNode420"></feMergeNode>
+                <feMergeNode in="coloredBlur" id="feMergeNode422"></feMergeNode>
+                <feMergeNode in="SourceGraphic" id="feMergeNode424"></feMergeNode>
             </feMerge>
         </filter>
     </defs>
@@ -53,23 +53,6 @@
         inkscape:window-maximized="1"
         inkscape:current-layer="Layer_1"
     ></sodipodi:namedview>
-    <defs id="defs429">
-        <filter id="glow" x="-0.078453308" y="-0.03603772" width="1.1568464" height="1.0720754">
-            <feGaussianBlur
-                class="blur"
-                result="coloredBlur"
-                stdDeviation="4"
-                vector-effect="non-scaling-stroke"
-                id="feGaussianBlur416"
-            ></feGaussianBlur>
-            <feMerge id="feMerge426">
-                <feMergeNode in="coloredBlur" id="feMergeNode418"></feMergeNode>
-                <feMergeNode in="coloredBlur" id="feMergeNode420"></feMergeNode>
-                <feMergeNode in="coloredBlur" id="feMergeNode422"></feMergeNode>
-                <feMergeNode in="SourceGraphic" id="feMergeNode424"></feMergeNode>
-            </feMerge>
-        </filter>
-    </defs>
 
     <path
         id="path2"

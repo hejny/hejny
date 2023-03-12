@@ -27,10 +27,9 @@ applySvgStyle()
 async function applySvgStyle() {
     console.info(`🎨  Apply style on SVGs`);
 
-
     const svgDir = join(process.cwd(), 'public/projects');
 
-    for (const svgPath of await glob(join(svgDir, '/**/*.svg').split('\\').join('/'))) {
+    svg: for (const svgPath of await glob(join(svgDir, '/**/*.svg').split('\\').join('/'))) {
         const svgName = relative(process.cwd(), svgPath).split('\\').join('/');
         const svgContent = await readFile(svgPath, 'utf-8');
         const htmlContent = wrapSvgInHtml(svgContent);
@@ -41,7 +40,7 @@ async function applySvgStyle() {
         if (!svgElement) {
             console.info({ svgContent, htmlContent });
             console.warn(`⚠ ${svgName} can not find svgElement`);
-            continue;
+            continue svg;
         }
 
         // Note: Checking that the SVG is the supported one
@@ -51,11 +50,44 @@ async function applySvgStyle() {
         if (width !== 3000 || height !== 2000 || viewBox != '0 0 3000 2000') {
             console.info({ width, height, viewBox });
             console.warn(`⏩ ${svgName} has unexpected width, height or viewBox`);
-            continue;
+            continue svg;
         }
 
-        // Note: Normalize <defs/>
-        // !!!
+        // Note: Normalize <defs/> - Remove existing <defs>
+        for (const defsElement of svgElement.querySelectorAll('defs')) {
+            if (defsElement.innerHTML.trim() === '') {
+            } else if (defsElement.children.length === 1 && defsElement.children[0].getAttribute('id') === 'glow') {
+            } else {
+                console.info({ defsElement: defsElement.outerHTML });
+                console.warn(`⏩ ${svgName} has unexpected <defs/>`);
+                continue svg;
+            }
+
+            defsElement.parentElement?.removeChild(defsElement);
+        }
+
+        // Note: Normalize <defs/> - Add <defs> with glow effect
+        const glowDefsElement = dom.window.document.createElementNS('http://www.w3.org/2000/svg', 'defs');
+        // !!! What is x="-0.012046945" y="-0.012603763" width="1.0240937" height="1.0252078"
+        // !!! id="defs429" id="feGaussianBlur416" id="feMergeNode418" ...
+        glowDefsElement.innerHTML = `
+            <filter id="glow" x="-0.012046945" y="-0.012603763" width="1.0240937" height="1.0252078">
+                <feGaussianBlur
+                    class="blur"
+                    result="coloredBlur"
+                    stdDeviation="4"
+                    vector-effect="non-scaling-stroke"
+                    id="feGaussianBlur416"
+                ></feGaussianBlur>
+                <feMerge id="feMerge426">
+                    <feMergeNode in="coloredBlur" id="feMergeNode418"></feMergeNode>
+                    <feMergeNode in="coloredBlur" id="feMergeNode420"></feMergeNode>
+                    <feMergeNode in="coloredBlur" id="feMergeNode422"></feMergeNode>
+                    <feMergeNode in="SourceGraphic" id="feMergeNode424"></feMergeNode>
+                </feMerge>
+            </filter>
+        `;
+        svgElement.insertBefore(glowDefsElement, svgElement.children[0]);
 
         // Note: Apply same style on each <path/>
         // !!!

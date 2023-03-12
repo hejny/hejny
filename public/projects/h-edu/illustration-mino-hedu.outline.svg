@@ -16,6 +16,23 @@
     xmlns="http://www.w3.org/2000/svg"
     xmlns:svg="http://www.w3.org/2000/svg"
 >
+    <defs>
+        <filter id="glow" x="-0.012046945" y="-0.012603763" width="1.0240937" height="1.0252078">
+            <feGaussianBlur
+                class="blur"
+                result="coloredBlur"
+                stdDeviation="4"
+                vector-effect="non-scaling-stroke"
+                id="feGaussianBlur416"
+            ></feGaussianBlur>
+            <feMerge id="feMerge426">
+                <feMergeNode in="coloredBlur" id="feMergeNode418"></feMergeNode>
+                <feMergeNode in="coloredBlur" id="feMergeNode420"></feMergeNode>
+                <feMergeNode in="coloredBlur" id="feMergeNode422"></feMergeNode>
+                <feMergeNode in="SourceGraphic" id="feMergeNode424"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
     <sodipodi:namedview
         id="namedview39"
         pagecolor="#ffffff"
@@ -36,23 +53,7 @@
         inkscape:window-maximized="1"
         inkscape:current-layer="g4482"
     ></sodipodi:namedview>
-    <defs id="defs429">
-        <filter id="glow" x="-0.79908379" y="-0.81052131" width="2.5979821" height="2.6210593">
-            <feGaussianBlur
-                class="blur"
-                result="coloredBlur"
-                stdDeviation="7"
-                vector-effect="non-scaling-stroke"
-                id="feGaussianBlur416"
-            ></feGaussianBlur>
-            <feMerge id="feMerge426">
-                <feMergeNode in="coloredBlur" id="feMergeNode418"></feMergeNode>
-                <feMergeNode in="coloredBlur" id="feMergeNode420"></feMergeNode>
-                <feMergeNode in="coloredBlur" id="feMergeNode422"></feMergeNode>
-                <feMergeNode in="SourceGraphic" id="feMergeNode424"></feMergeNode>
-            </feMerge>
-        </filter>
-    </defs>
+
     <g id="g4482" transform="translate(0.143145)">
         <path
             vector-effect="non-scaling-stroke"
