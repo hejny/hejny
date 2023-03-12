@@ -38,8 +38,7 @@ async function generatePatternsLibrary({ isCommited }: { isCommited: boolean }) 
         throw new Error(`Working tree is not clean`);
     }
 
-    const rootDir = join(__dirname, '../../');
-    const patternsDir = join(rootDir, 'public/patterns');
+    const patternsDir = join(process.cwd(), 'public/patterns');
     const indexFilePath = join(patternsDir, 'index.ts');
 
     const patterns = (

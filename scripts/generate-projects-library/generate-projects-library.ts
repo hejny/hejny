@@ -40,8 +40,7 @@ async function generateProjectsLibrary({ isCommited }: { isCommited: boolean }) 
         throw new Error(`Working tree is not clean`);
     }
 
-    const rootDir = join(__dirname, '../../');
-    const projectsComponentsDir = join(rootDir, 'public/projects');
+    const projectsComponentsDir = join(process.cwd(), 'public/projects');
 
     for (const projectEnglishPath of await glob(join(projectsComponentsDir, '/**/*.en.md').split('\\').join('/'))) {
         const projectCzechPath = projectEnglishPath.replace(/\.en\.md$/, '.cs.md');

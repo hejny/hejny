@@ -27,8 +27,8 @@ applySvgStyle()
 async function applySvgStyle() {
     console.info(`🎨  Apply style on SVGs`);
 
-    const rootDir = join(__dirname, '../../');
-    const svgDir = join(rootDir, 'public/projects');
+
+    const svgDir = join(process.cwd(), 'public/projects');
 
     for (const svgPath of await glob(join(svgDir, '/**/*.svg').split('\\').join('/'))) {
         const svgName = relative(process.cwd(), svgPath).split('\\').join('/');
@@ -78,7 +78,3 @@ async function applySvgStyle() {
 
     console.info(`[ Done 🖼️  Generating patterns library ]`);
 }
-
-/**
- * TODO: !!! Remove rootDir from ACRY scripts and use process.cwd()
- */
