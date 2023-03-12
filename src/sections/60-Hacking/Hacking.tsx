@@ -1,6 +1,6 @@
 import { AllMyProjectsProject } from '../../../public/projects/all-projects/AllMyProjectsProject';
 import { CollboardModulesSdkProject } from '../../../public/projects/collboard-modules-sdk/CollboardModulesSdkProject';
-import { MapsProject } from '../../../public/projects/0-maps/MapsProject';
+import { MapsProject } from '../../../public/projects/maps/MapsProject';
 import { OpenSourceProject } from '../../../public/projects/open-source/OpenSourceProject';
 import { VisualMathematicsProject } from '../../../public/projects/visual-mathematics/VisualMathematicsProject';
 import { VrArProject } from '../../../public/projects/vr-ar/VrArProject';

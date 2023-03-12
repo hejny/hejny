@@ -1,8 +1,8 @@
-import { BirdsProject } from '../../../public/projects/0-birds/BirdsProject';
-import { CollboardProject } from '../../../public/projects/0-collboard/CollboardProject';
+import { BirdsProject } from '../../../public/projects/birds/BirdsProject';
+import { CollboardProject } from '../../../public/projects/collboard/CollboardProject';
 import { CzechEventsProject } from '../../../public/projects/czech-events/CzechEventsProject';
 import { HEduProject } from '../../../public/projects/h-edu/HEduProject';
-import { TownsProject } from '../../../public/projects/0-towns/TownsProject';
+import { TownsProject } from '../../../public/projects/towns/TownsProject';
 import { YourProjectProject } from '../../../public/projects/your-project/YourProjectProject';
 import { Items } from '../../components/Items/Items';
 import { Section } from '../../components/Section/Section';
