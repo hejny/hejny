@@ -36,7 +36,9 @@ export function VrArProject() {
                             LinuxDays.
                         </p>
                     </Translate>
-                    <Translate locale="cs"></Translate>
+                    <Translate locale="cs">
+                        <p>!!</p>
+                    </Translate>
                 </Item.Description>
                 <Item.Image>
                     <div
