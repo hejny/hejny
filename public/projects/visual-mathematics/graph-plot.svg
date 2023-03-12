@@ -60,11 +60,11 @@
         style="
             fill: none;
             stroke: #dec36f;
-            stroke-width: 1.64064;
+            stroke-width: 1;
+            filter: url(#glow);
             stroke-linecap: round;
             stroke-linejoin: round;
             stroke-dasharray: none;
-            filter: url(#glow);
         "
         sodipodi:nodetypes="cccc"
         d="M 1107.579,633.78804 V 1237.5442 M 641.63671,935.66614 h 931.88449"

@@ -90,8 +90,22 @@ async function applySvgStyle() {
         svgElement.insertBefore(glowDefsElement, svgElement.children[0]);
 
         // Note: Apply same style on each <path/>
-        // !!!
-        // TODO: !!! Change  vector-effect="non-scaling-stroke" style= on each <path/>
+        for (const pathElement of svgElement.querySelectorAll('path')) {
+            pathElement.setAttribute('vector-effect', 'non-scaling-stroke');
+            pathElement.setAttribute(
+                'style',
+                `
+                    fill: none;
+                    stroke: #dec36f;
+                    stroke-width: 1;
+                    filter: url(#glow);
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                    stroke-dasharray: none;
+                `,
+                /* <- TODO: In some SVGs was clip-rule: evenodd; and fill-rule: evenodd; stroke-miterlimit: 1.5; stroke-opacity: 1; */
+            );
+        }
 
         await writeFile(
             svgPath,
