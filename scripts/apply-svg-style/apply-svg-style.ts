@@ -31,11 +31,27 @@ async function applySvgStyle() {
     const svgDir = join(rootDir, 'public/projects');
 
     for (const svgPath of await glob(join(svgDir, '/**/*.svg').split('\\').join('/'))) {
+        const svgName = relative(process.cwd(), svgPath).split('\\').join('/');
         const svgContent = await readFile(svgPath, 'utf-8');
         const htmlContent = wrapSvgInHtml(svgContent);
 
         const dom = new JSDOM(htmlContent);
-        const { window } = dom;
+        const svgElement = dom.window.document.body.querySelector('svg');
+
+        if (!svgElement) {
+            console.info({ svgContent, htmlContent });
+            console.warn(`⚠ ${svgName} can not find svgElement`);
+            continue;
+        }
+
+        const width = parseFloat(svgElement.getAttribute('width')!);
+        const height = parseFloat(svgElement.getAttribute('height')!);
+        const viewBox = svgElement.getAttribute('viewBox')!;
+        if (width !== 3000 || height !== 2000 || viewBox != '0 0 3000 2000') {
+            console.info({ width, height, viewBox });
+            console.warn(`⏩ ${svgName} has unexpected width, height or viewBox`);
+            continue;
+        }
 
         await writeFile(
             svgPath,
@@ -49,7 +65,7 @@ async function applySvgStyle() {
                 ),
             'utf-8',
         );
-        console.info(`💾 ${relative(process.cwd(), svgPath).split('\\').join('/')}`);
+        console.info(`💾 ${svgName}`);
 
         // !!! break;
     }

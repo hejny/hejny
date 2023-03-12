@@ -11,7 +11,7 @@ import { isWorkingTreeClean } from '../utils/autocommit/isWorkingTreeClean';
 import { generateImport } from '../utils/generateImport';
 import { isFileExisting } from '../utils/isFileExisting';
 import { prettify } from '../utils/prettify';
-import { parseProjectMarkdown } from './parseProjectMarkdown';
+import { parseProjectMarkdown } from './utils/parseProjectMarkdown';
 
 const program = new commander.Command();
 program.option('--commit', `Autocommit changes`);

@@ -11,7 +11,7 @@ import { Item } from '../../../src/components/Items/Item';
 import { Translate } from '../../../src/components/Translate/Translate';
 // import { effectToRef } from '../../../src/utils/Drawing/effectToRef';
 // import { hEduEffect } from '../../../src/utils/Drawing/projectsEffectsLibrary';
-import illustrationMinoHeduOutline from './illustration-mino-hedu-outline.svg';
+import illustrationMinoHeduOutline from './illustration-mino-hedu.outline.svg';
 
 /**
  * Presentation of project H-edu
