@@ -156,9 +156,6 @@ async function generateProjectsLibrary({ isCommited }: { isCommited: boolean }) 
 }
 
 /**
- * TODO: !!! Change to new shape of projects - each project has its own markdown
- * TODO: !!! Make it <Translate>d
- *  * TODO: !!! ACRY remove all traces of projects.md
  * TODO: When the heading is changes, old file will be still in place, this can be a bit misleading
  * TODO: Maybe rename generateProjectsLibrary
  * TODO: Replace all backgroundImage ACRY by <Image
