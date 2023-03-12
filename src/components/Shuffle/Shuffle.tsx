@@ -57,7 +57,7 @@ export function Shuffle(props: ShuffleProps) {
  *       >         <ModulesProject />
  *       >         <VrArProject />
  *       >     </Shuffle>
- *       >     <AllMyProjectsProject />
+ *       >     <AllProjectsProject />
  *       > </Items>
  *       Do:
  *       > <Items>
@@ -67,7 +67,7 @@ export function Shuffle(props: ShuffleProps) {
  *       >         <MapsProject />
  *       >         <ModulesProject />
  *       >         <VrArProject />
- *       >         <AllMyProjectsProject />
+ *       >         <AllProjectsProject />
  *       >     </Shuffle>
  *       > </Items>
  *       Or with the hook:
@@ -77,6 +77,6 @@ export function Shuffle(props: ShuffleProps) {
  *       >     <MapsProject />
  *       >     <ModulesProject />
  *       >     <VrArProject />
- *       >     <AllMyProjectsProject />
+ *       >     <AllProjectsProject />
  *       > </Items>
  */

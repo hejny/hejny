@@ -1,4 +1,4 @@
-import { AllMyProjectsProject } from '../../../public/projects/all-projects/AllMyProjectsProject';
+import { AllProjectsProject } from '../../../public/projects/all-projects/AllProjectsProject';
 import { CollboardModulesSdkProject } from '../../../public/projects/collboard-modules-sdk/CollboardModulesSdkProject';
 import { MapsProject } from '../../../public/projects/maps/MapsProject';
 import { OpenSourceProject } from '../../../public/projects/open-source/OpenSourceProject';
@@ -25,7 +25,7 @@ export function HackingSection() {
                     <CollboardModulesSdkProject />
                     <VrArProject />
                 </Shuffle>
-                <AllMyProjectsProject />
+                <AllProjectsProject />
             </Items>
         </Section>
     );
