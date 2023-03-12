@@ -4,4 +4,4 @@ Collboard's function visualization module lets you graph functions like sin, cos
 
 <!--TODO: create study cases of topics I worked on, graphs, fractals,...-->
 
-[![Axis of the graph](/public/projects/VisualMathematics/graph-plot.svg)](https://github.com/collboard/function-builder)
+[![Axis of the graph](./graph-plot.svg)](https://github.com/collboard/function-builder)

@@ -9,4 +9,4 @@ TODO: More about
 Feeders
 -->
 
-[![Bird outline](/public/projects/Birds/outline.svg)](#)
+[![Bird outline](./outline.svg)](#)

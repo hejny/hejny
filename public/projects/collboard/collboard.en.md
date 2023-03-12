@@ -8,4 +8,4 @@ Collboard is an online virtual whiteboard that offers simplicity, creativity, an
 
 <!-- [🛰] Tags: `Real time app` -->
 
-[![Tablet with drawing](/public/projects/Collboard/outline.svg)](#)
+[![Tablet with drawing](./outline.svg)](#)
