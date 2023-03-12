@@ -11,7 +11,7 @@ import { Item } from '../../../src/components/Items/Item';
 import { Translate } from '../../../src/components/Translate/Translate';
 // import { effectToRef } from '../../../src/utils/Drawing/effectToRef';
 // import { mapsEffect } from '../../../src/utils/Drawing/projectsEffectsLibrary';
-import background from './europe.svg';
+import europe from './europe.svg';
 
 /**
  * Presentation of project Maps
@@ -40,7 +40,7 @@ export function MapsProject() {
                     <div
                         // ref={effectToRef(mapsEffect)}
                         style={{
-                            backgroundImage: `url(${background.src})`,
+                            backgroundImage: `url(${europe.src})`,
                         }}
                     />
                     {/* <Image alt="Globe" src={background} draggable="false" placeholder="blur" /> */}

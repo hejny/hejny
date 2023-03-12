@@ -77,6 +77,8 @@ async function generateProjectsLibrary({ isCommited }: { isCommited: boolean }) 
             continue;
         }
 
+        const entityName = normalizeTo_camelCase(basename(image.src).replace(/\.(svg|png|jpe?g)$/, ''));
+
         // TODO: Use alt in generated component
         // TODO: Put filename into this import name .replace(/\.[a-z0-9]+$/, ''
 
@@ -96,8 +98,9 @@ async function generateProjectsLibrary({ isCommited }: { isCommited: boolean }) 
             // import { effectToRef } from '../../../src/utils/Drawing/effectToRef';
             // import { ${effectName} } from '../../../src/utils/Drawing/projectsEffectsLibrary';
             ${generateImport({
-                entityName: 'background',
-                entityPath: join(process.cwd(), image.src),
+                isDebug: false,
+                entityName,
+                entityPath: join(dirname(projectEnglishPath), image.src),
                 itselfPath: projectFilePath,
             })}
 
@@ -124,7 +127,7 @@ async function generateProjectsLibrary({ isCommited }: { isCommited: boolean }) 
                                 <div
                                     // ref={effectToRef(${effectName})}
                                     style={{
-                                        backgroundImage: \`url(\${background.src})\`,
+                                        backgroundImage: \`url(\${${entityName}.src})\`,
                                     }}
                                 />
                                 {/* <Image alt="${

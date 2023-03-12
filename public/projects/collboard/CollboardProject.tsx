@@ -11,7 +11,7 @@ import { Item } from '../../../src/components/Items/Item';
 import { Translate } from '../../../src/components/Translate/Translate';
 // import { effectToRef } from '../../../src/utils/Drawing/effectToRef';
 // import { collboardEffect } from '../../../src/utils/Drawing/projectsEffectsLibrary';
-import background from './outline.svg';
+import outline from './outline.svg';
 
 /**
  * Presentation of project Collboard
@@ -40,7 +40,7 @@ export function CollboardProject() {
                     <div
                         // ref={effectToRef(collboardEffect)}
                         style={{
-                            backgroundImage: `url(${background.src})`,
+                            backgroundImage: `url(${outline.src})`,
                         }}
                     />
                     {/* <Image alt="Tablet with drawing" src={background} draggable="false" placeholder="blur" /> */}

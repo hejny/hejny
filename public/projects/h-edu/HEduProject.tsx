@@ -11,7 +11,7 @@ import { Item } from '../../../src/components/Items/Item';
 import { Translate } from '../../../src/components/Translate/Translate';
 // import { effectToRef } from '../../../src/utils/Drawing/effectToRef';
 // import { hEduEffect } from '../../../src/utils/Drawing/projectsEffectsLibrary';
-import background from '../Hedu/outline.svg';
+import outline from './outline.svg';
 
 /**
  * Presentation of project H-edu
@@ -40,7 +40,7 @@ export function HEduProject() {
                     <div
                         // ref={effectToRef(hEduEffect)}
                         style={{
-                            backgroundImage: `url(${background.src})`,
+                            backgroundImage: `url(${outline.src})`,
                         }}
                     />
                     {/* <Image alt="Triangle for counting" src={background} draggable="false" placeholder="blur" /> */}

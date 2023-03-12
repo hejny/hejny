@@ -11,7 +11,7 @@ import { Item } from '../../../src/components/Items/Item';
 import { Translate } from '../../../src/components/Translate/Translate';
 // import { effectToRef } from '../../../src/utils/Drawing/effectToRef';
 // import { czechEventsEffect } from '../../../src/utils/Drawing/projectsEffectsLibrary';
-import background from '../CzechEvents/Pavol_Hejny_Coloring_book_black_and_white_illustration_outline__f429b7c9-7d63-4df8-9f95-07158107df10.svg';
+import pavolHejnyColoringBookBlackAndWhiteIllustrationOutlineF429b7c97d634df89f9507158107df10 from './Pavol_Hejny_Coloring_book_black_and_white_illustration_outline__f429b7c9-7d63-4df8-9f95-07158107df10.svg';
 
 /**
  * Presentation of project Czech.events
@@ -40,7 +40,7 @@ export function CzechEventsProject() {
                     <div
                         // ref={effectToRef(czechEventsEffect)}
                         style={{
-                            backgroundImage: `url(${background.src})`,
+                            backgroundImage: `url(${pavolHejnyColoringBookBlackAndWhiteIllustrationOutlineF429b7c97d634df89f9507158107df10.src})`,
                         }}
                     />
                     {/* <Image alt="Meetup" src={background} draggable="false" placeholder="blur" /> */}

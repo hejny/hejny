@@ -4,10 +4,11 @@ interface ImportOptions {
     entityName: string;
     entityPath: string;
     itselfPath: string;
+    isDebug?: boolean;
 }
 
 export function generateImport(options: ImportOptions): string {
-    const { entityName, entityPath, itselfPath } = options;
+    const { entityName, entityPath, itselfPath, isDebug } = options;
 
     let importPath = relative(dirname(itselfPath), entityPath).replace(/\\/g, '/');
 
@@ -17,7 +18,15 @@ export function generateImport(options: ImportOptions): string {
 
     importPath = importPath.replace(/\.(ts|js)x?$/i, '');
 
-    const importStatement = `import ${entityName} from '${importPath}';`;
+    let importStatement = `import ${entityName} from '${importPath}';`;
+
+    if (isDebug) {
+        importStatement += `/* <- ${JSON.stringify({
+            entityName,
+            entityPath,
+            itselfPath,
+        })} */`;
+    }
 
     return importStatement;
 }

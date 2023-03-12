@@ -11,7 +11,7 @@ import { Item } from '../../../src/components/Items/Item';
 import { Translate } from '../../../src/components/Translate/Translate';
 // import { effectToRef } from '../../../src/utils/Drawing/effectToRef';
 // import { allProjectsEffect } from '../../../src/utils/Drawing/projectsEffectsLibrary';
-import background from '../AllMyProjects/Pavol_Hejn_modular_gadget_as_a_coloring_book_black_and_white_il_05f61e28-a9e6-41e5-9105-0708c5294006.svg';
+import pavolHejnModularGadgetAsAColoringBookBlackAndWhiteIl05f61e28A9e641e591050708c5294006 from './Pavol_Hejn_modular_gadget_as_a_coloring_book_black_and_white_il_05f61e28-a9e6-41e5-9105-0708c5294006.svg';
 
 /**
  * Presentation of project All my projects
@@ -40,7 +40,7 @@ export function AllProjectsProject() {
                     <div
                         // ref={effectToRef(allProjectsEffect)}
                         style={{
-                            backgroundImage: `url(${background.src})`,
+                            backgroundImage: `url(${pavolHejnModularGadgetAsAColoringBookBlackAndWhiteIl05f61e28A9e641e591050708c5294006.src})`,
                         }}
                     />
                     {/* <Image alt="Multiple PC boxes joined together" src={background} draggable="false" placeholder="blur" /> */}

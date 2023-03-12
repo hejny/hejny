@@ -11,7 +11,7 @@ import { Item } from '../../../src/components/Items/Item';
 import { Translate } from '../../../src/components/Translate/Translate';
 // import { effectToRef } from '../../../src/utils/Drawing/effectToRef';
 // import { visualMathematicsEffect } from '../../../src/utils/Drawing/projectsEffectsLibrary';
-import background from '../VisualMathematics/graph-plot.svg';
+import graphPlot from './graph-plot.svg';
 
 /**
  * Presentation of project Visual mathematics
@@ -47,7 +47,7 @@ export function VisualMathematicsProject() {
                     <div
                         // ref={effectToRef(visualMathematicsEffect)}
                         style={{
-                            backgroundImage: `url(${background.src})`,
+                            backgroundImage: `url(${graphPlot.src})`,
                         }}
                     />
                     {/* <Image alt="Axis of the graph" src={background} draggable="false" placeholder="blur" /> */}

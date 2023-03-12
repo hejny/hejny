@@ -11,7 +11,7 @@ import { Item } from '../../../src/components/Items/Item';
 import { Translate } from '../../../src/components/Translate/Translate';
 // import { effectToRef } from '../../../src/utils/Drawing/effectToRef';
 // import { yourProjectEffect } from '../../../src/utils/Drawing/projectsEffectsLibrary';
-import background from '../YourProject/Pavol_Hejn_Coloring_book_black_and_white_illustration_outline_o_fbf45e15-a73d-474c-8d08-98188a1010ef.svg';
+import pavolHejnColoringBookBlackAndWhiteIllustrationOutlineOFbf45e15A73d474c8d0898188a1010ef from './Pavol_Hejn_Coloring_book_black_and_white_illustration_outline_o_fbf45e15-a73d-474c-8d08-98188a1010ef.svg';
 
 /**
  * Presentation of project Your project
@@ -40,7 +40,7 @@ export function YourProjectProject() {
                     <div
                         // ref={effectToRef(yourProjectEffect)}
                         style={{
-                            backgroundImage: `url(${background.src})`,
+                            backgroundImage: `url(${pavolHejnColoringBookBlackAndWhiteIllustrationOutlineOFbf45e15A73d474c8d0898188a1010ef.src})`,
                         }}
                     />
                     {/* <Image alt="Light bulb of ideas" src={background} draggable="false" placeholder="blur" /> */}

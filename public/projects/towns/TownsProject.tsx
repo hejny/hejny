@@ -11,7 +11,7 @@ import { Item } from '../../../src/components/Items/Item';
 import { Translate } from '../../../src/components/Translate/Translate';
 // import { effectToRef } from '../../../src/utils/Drawing/effectToRef';
 // import { townsEffect } from '../../../src/utils/Drawing/projectsEffectsLibrary';
-import background from './Pavol_Hejn_isometric_game_as_a_coloring_book_black_and_white_il_b1cde821-101c-4d3f-ad5b-1f345d4009c5.svg';
+import pavolHejnIsometricGameAsAColoringBookBlackAndWhiteIlB1cde821101c4d3fAd5b1f345d4009c5 from './Pavol_Hejn_isometric_game_as_a_coloring_book_black_and_white_il_b1cde821-101c-4d3f-ad5b-1f345d4009c5.svg';
 
 /**
  * Presentation of project Towns
@@ -40,7 +40,7 @@ export function TownsProject() {
                     <div
                         // ref={effectToRef(townsEffect)}
                         style={{
-                            backgroundImage: `url(${background.src})`,
+                            backgroundImage: `url(${pavolHejnIsometricGameAsAColoringBookBlackAndWhiteIlB1cde821101c4d3fAd5b1f345d4009c5.src})`,
                         }}
                     />
                     {/* <Image alt="Tile of online game" src={background} draggable="false" placeholder="blur" /> */}

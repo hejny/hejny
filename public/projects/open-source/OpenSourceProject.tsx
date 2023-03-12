@@ -11,7 +11,7 @@ import { Item } from '../../../src/components/Items/Item';
 import { Translate } from '../../../src/components/Translate/Translate';
 // import { effectToRef } from '../../../src/utils/Drawing/effectToRef';
 // import { openSourceEffect } from '../../../src/utils/Drawing/projectsEffectsLibrary';
-import background from '../OpenSource/Pavol_Hejny_coloring_book_black_and_white_illustration_outline__b8c24f85-9ee6-4d9e-96d7-fe550fe78b9b.svg';
+import pavolHejnyColoringBookBlackAndWhiteIllustrationOutlineB8c24f859ee64d9e96d7Fe550fe78b9b from './Pavol_Hejny_coloring_book_black_and_white_illustration_outline__b8c24f85-9ee6-4d9e-96d7-fe550fe78b9b.svg';
 
 /**
  * Presentation of project Open Source
@@ -40,7 +40,7 @@ export function OpenSourceProject() {
                     <div
                         // ref={effectToRef(openSourceEffect)}
                         style={{
-                            backgroundImage: `url(${background.src})`,
+                            backgroundImage: `url(${pavolHejnyColoringBookBlackAndWhiteIllustrationOutlineB8c24f859ee64d9e96d7Fe550fe78b9b.src})`,
                         }}
                     />
                     {/* <Image alt="Toolbox" src={background} draggable="false" placeholder="blur" /> */}

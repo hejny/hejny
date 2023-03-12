@@ -11,7 +11,7 @@ import { Item } from '../../../src/components/Items/Item';
 import { Translate } from '../../../src/components/Translate/Translate';
 // import { effectToRef } from '../../../src/utils/Drawing/effectToRef';
 // import { vrArEffect } from '../../../src/utils/Drawing/projectsEffectsLibrary';
-import background from '../VrAr/Pavol_Hejn_coloring_book_black_and_white_illustration_outline_o_850cbc2d-9088-4113-bdbc-8fbf566e170c.svg';
+import pavolHejnColoringBookBlackAndWhiteIllustrationOutlineO850cbc2d90884113Bdbc8fbf566e170c from './Pavol_Hejn_coloring_book_black_and_white_illustration_outline_o_850cbc2d-9088-4113-bdbc-8fbf566e170c.svg';
 
 /**
  * Presentation of project VR/AR
@@ -42,7 +42,7 @@ export function VrArProject() {
                     <div
                         // ref={effectToRef(vrArEffect)}
                         style={{
-                            backgroundImage: `url(${background.src})`,
+                            backgroundImage: `url(${pavolHejnColoringBookBlackAndWhiteIllustrationOutlineO850cbc2d90884113Bdbc8fbf566e170c.src})`,
                         }}
                     />
                     {/* <Image alt="Virtual reality helmet" src={background} draggable="false" placeholder="blur" /> */}

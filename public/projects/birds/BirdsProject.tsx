@@ -11,7 +11,7 @@ import { Item } from '../../../src/components/Items/Item';
 import { Translate } from '../../../src/components/Translate/Translate';
 // import { effectToRef } from '../../../src/utils/Drawing/effectToRef';
 // import { birdsEffect } from '../../../src/utils/Drawing/projectsEffectsLibrary';
-import background from './outline.svg';
+import outline from './outline.svg';
 
 /**
  * Presentation of project Birds
@@ -43,7 +43,7 @@ export function BirdsProject() {
                     <div
                         // ref={effectToRef(birdsEffect)}
                         style={{
-                            backgroundImage: `url(${background.src})`,
+                            backgroundImage: `url(${outline.src})`,
                         }}
                     />
                     {/* <Image alt="Bird outline" src={background} draggable="false" placeholder="blur" /> */}

@@ -11,7 +11,7 @@ import { Item } from '../../../src/components/Items/Item';
 import { Translate } from '../../../src/components/Translate/Translate';
 // import { effectToRef } from '../../../src/utils/Drawing/effectToRef';
 // import { collboardModulesSdkEffect } from '../../../src/utils/Drawing/projectsEffectsLibrary';
-import background from '../CollboardModulesSdk/placeholder.svg';
+import placeholder from './placeholder.svg';
 
 /**
  * Presentation of project Collboard modules SDK
@@ -43,7 +43,7 @@ export function CollboardModulesSdkProject() {
                     <div
                         // ref={effectToRef(collboardModulesSdkEffect)}
                         style={{
-                            backgroundImage: `url(${background.src})`,
+                            backgroundImage: `url(${placeholder.src})`,
                         }}
                     />
                     {/* <Image alt="Pseudo-USB gadget" src={background} draggable="false" placeholder="blur" /> */}
