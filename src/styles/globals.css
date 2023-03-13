@@ -23,3 +23,20 @@ body {
 }
 
 /* TODO: [🎨] ACRY all colors in one place HERE */
+
+.button,
+button {
+    /* !!! Better + var colors + hover + margin + mobile*/
+
+    border: solid 1.5px rgb(78, 78, 78);
+    background-color: rgb(7, 2, 2);
+    color: rgb(78, 78, 78);
+    border-radius: 6px;
+    padding: 7px 18px;
+    font-size: 0.9em;
+    margin: 10px;
+    cursor: pointer;
+    display: inline-block;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+}
