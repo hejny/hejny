@@ -123,7 +123,7 @@ export function ReferencesSection(props: ReferencesProps) {
                                     he responded very well to teachers teaching needs and in record time created exactly
                                     the solution that that thousands of teachers have subsequently used.
                                 </p>
-                                {/* TODO: !!! Better cs translation */}
+                                {/* TODO: !!! Better translation for en */}
                             </Translate>
                             <Translate locale="cs">
                                 <p>
@@ -196,7 +196,7 @@ export function ReferencesSection(props: ReferencesProps) {
                                     Pavla bych doporučil všem, kteří chtějí vidět reálné výsledky v přijatelném čase.
                                     Navíc je opravdu ohleduplný, milý a je radost s ním pracovat.
                                 </p>
-                                {/* TODO: !!! Better cs translation */}
+                                {/* TODO: !!! Better translation for cs  */}
                             </Translate>
                             {/*
                              Original Version:
@@ -243,7 +243,7 @@ export function ReferencesSection(props: ReferencesProps) {
                                     tématy. V projektech, na kterých spolupracoval, přinesl do světa vzdělávání nové
                                     vize a přístupy. Jsem přesvědčen, že je připraven je replikovat všude tam, kde to
                                     bude mít smysl.
-                                    {/* TODO: !!! Better cs translation */}
+                                    {/* TODO: !!! Better translation for cs  */}
                                 </p>
                             </Translate>
                             {/*

@@ -4,7 +4,7 @@ content: >
     před nejnovějšími technologiemi. Dovolte mi, abych vás provedl neustále se měnícím prostředím nových, vznikajících technologií.
     a převratných technologií.
 
-# TODO: !!! Better cs translation
+# TODO: !!! Better translation for cs
 
 consult:
     title: Koznultace
@@ -12,7 +12,7 @@ consult:
         I offer expert advice on various technologies, providing <!-- insightful --> analysis of their
         benefits and limitations to help you make decisions.
 
-# TODO: !!! Better cs translation
+# TODO: !!! Better translation for cs
 
 talk:
     title: Přednáška
@@ -23,7 +23,7 @@ talk:
         <span style="color: #ff0000">nevýhody</span>
         , abych zajistil jejich komplexní pochopení.
 
-# TODO: !!! Better cs translation
+# TODO: !!! Better translation for cs
 
 prototype:
     title: Prototypování
@@ -31,4 +31,4 @@ prototype:
         Váš nový projekt uvedu do reality prostřednictvím efektivního prototypování a bezproblémového fungování.
         od konceptu k realizaci.
 
-# TODO: !!! Better cs translation
+# TODO: !!! Better translation for cs
