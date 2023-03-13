@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { Vector } from 'xyzt';
-import { DebugContext } from '../../pages/_document';
+import { DebugContext } from '../../pages/_app';
 import styles from './DebugGrid.module.css';
 
 interface DebugGridProps {
