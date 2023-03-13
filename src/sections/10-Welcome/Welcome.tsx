@@ -4,7 +4,7 @@ import { Section } from '../../components/Section/Section';
 import styles from './Welcome.module.css';
 
 interface WelcomeProps {
-    variant: 'SHORT' | 'FULL';
+    variant: 'HOMEPAGE' | 'SIDEPAGE';
 }
 
 export function WelcomeSection(props: WelcomeProps) {
@@ -17,7 +17,7 @@ export function WelcomeSection(props: WelcomeProps) {
                 {/* <- TODO: [🔠] This should be handwritten */}
             </Link>
 
-            {variant === 'FULL' && (
+            {variant === 'HOMEPAGE' && (
                 <>
                     <p>
                         <Acronym>Virtual Reality</Acronym>, <Acronym>Augmented Reality</Acronym>,{' '}
@@ -39,10 +39,18 @@ export function WelcomeSection(props: WelcomeProps) {
                     </p>
                 </>
             )}
+
+            {variant === 'SIDEPAGE' && (
+                <Link className="button" href="/">
+                    Back home
+                </Link>
+            )}
         </Section>
     );
 }
 
 /**
+ * TODO: Use somewhere <Acronym>Minimum viable product</Acronym>
+ *     > Je lepší mít funkční MVP než mnoho měsíců-let pracovat kompletním vyladěném řešení https://youtu.be/4Z4EW9kSAX8
  * TODO: Maybe use <Shuffle> for technologies
  */

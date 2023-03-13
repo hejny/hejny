@@ -287,6 +287,12 @@ export function ReferencesSection(props: ReferencesProps) {
                     */}
                 </Shuffle>
             </Items>
+
+            {variant === 'SHORT' && (
+                <Link className="button" href="/references">
+                    More references
+                </Link>
+            )}
         </Section>
     );
 }
@@ -294,7 +300,6 @@ export function ReferencesSection(props: ReferencesProps) {
 /**
  * TODO: !!! /references page with more button from main page
  * TODO: !!! Add job title on references
- * TODO: !!! Why is Bob never random-selected
  * TODO: !!! Add all other people
  * TODO: Add links to multiple socials
  * TODO: Shadow effect on pictures

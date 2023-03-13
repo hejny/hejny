@@ -29,7 +29,7 @@ export default function ReferencesPage() {
                     <TiledBackground />
                 </div>
                 <main>
-                    <WelcomeSection variant="SHORT" />
+                    <WelcomeSection variant="SIDEPAGE" />
                     <ReferencesSection variant="FULL" />
                 </main>
                 <footer>

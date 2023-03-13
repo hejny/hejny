@@ -31,7 +31,7 @@ export default function Midjourney(props: any) {
                     <TiledBackground />
                 </div>
                 <main>
-                    <WelcomeSection variant="SHORT" />
+                    <WelcomeSection variant="SIDEPAGE" />
                     <Section>
                         <h2>About</h2>
                         <p>Technical info about the page</p>

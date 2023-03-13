@@ -34,7 +34,7 @@ export default function Home({ lang }: any) {
                 </div>
 
                 <main>
-                    <WelcomeSection variant="FULL" />
+                    <WelcomeSection variant="HOMEPAGE" />
                     <PavolHejnySection variant="SHORT" />
                     <ServicesSection />
                     {/* TODO: <PresentationSection /> */}
@@ -47,7 +47,7 @@ export default function Home({ lang }: any) {
                     */}
 
                     {/* <WhereToMeetMe> */}
-                    <ReferencesSection variant="SHORT"  />
+                    <ReferencesSection variant="SHORT" />
                     <MyProjectsSection />
                     {/* TODO: Finish or remove <HackingSection /> */}
                     <ContactSection variant="SHORT" />
@@ -70,5 +70,6 @@ export async function getStaticProps({ locale }: { locale: string }) {
 }
 
 /**
+ * TODO: Add somewhere button [Get in touch]
  * TODO: [🪒] Can be getStaticProps shared between all pages?
  */
