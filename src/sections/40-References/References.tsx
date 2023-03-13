@@ -117,12 +117,13 @@ export function ReferencesSection(props: ReferencesProps) {
                         <Item.Description>
                             <Translate locale="en">
                                 <p>
-                                    Pavol vytvořil prototyp naší aplikace H-edu tak, že jsme okamžitě získali investici.
-                                    Následně navrhl architekturu systému a využití technologií, které se v testu času
-                                    ukázaly jako správně zvolené pro naše účely. Na začátku covidu výborně zareagoval na
-                                    potřeby učitelů při výuce a v rekordním čase vytvořil přesně takové řešení, které
-                                    následně využívaly tisíce učitelů.
+                                    Pavol prototyped our H-edu app so that we got immediate investment. He then designed
+                                    the architecture of the system and the use of the technology, which in the test of
+                                    time proved to be the right choice for our purposes. At the beginning of the covid,
+                                    he responded very well to teachers teaching needs and in record time created exactly
+                                    the solution that that thousands of teachers have subsequently used.
                                 </p>
+                                {/* TODO: !!! Better cs translation */}
                             </Translate>
                             <Translate locale="cs">
                                 <p>
@@ -183,19 +184,19 @@ export function ReferencesSection(props: ReferencesProps) {
                             </Translate>
                             <Translate locale="cs">
                                 <p>
-                                    Pavol is an absolute beast when it comes to creating digital products. I&apos;ve
-                                    seen him - literally overnight - create an integrated chatbot that won us the 1st
-                                    place at Startup Weekend Prague.
+                                    Pavol je naprostá bestie, pokud jde o vytváření digitálních produktů. Viděl jsem ho
+                                    - doslova přes noc - vytvořit integrovaného chatbota, který nám vyhrál 1. místo na
+                                    Startup Weekendu Praha.
                                 </p>
                                 <p>
-                                    He learns any topic or technology quickly and builds even faster, with exceptional
-                                    usability.
+                                    Rychle se naučí jakékoliv téma nebo technologii a ještě rychleji staví, a to s
+                                    výjimečnou použitelností.
                                 </p>
                                 <p>
-                                    I&apos;d recommend Pavol to everyone who wants to see real life results in a
-                                    manageable time frame. Plus he&apos;s really considerate, kind and a pleasure to
-                                    work with.
+                                    Pavla bych doporučil všem, kteří chtějí vidět reálné výsledky v přijatelném čase.
+                                    Navíc je opravdu ohleduplný, milý a je radost s ním pracovat.
                                 </p>
+                                {/* TODO: !!! Better cs translation */}
                             </Translate>
                             {/*
                              Original Version:
@@ -237,11 +238,12 @@ export function ReferencesSection(props: ReferencesProps) {
                             </Translate>
                             <Translate locale="cs">
                                 <p>
-                                    Regarding mu personal, professional experience, Pavol is highly capable innovator
-                                    who&apos;s potential range across digital technologies and socially prioritized
-                                    themes. In projects collaborated on, he brought new visions and approaches to the
-                                    world of education. I am convinced that he is ready to replicate it wherever it will
-                                    make sense.
+                                    Pokud jde o jeho osobní a profesní zkušenosti, Pavol je velmi schopný inovátor,
+                                    jehož potenciál sahá napříč digitálními technologiemi a společensky prioritními
+                                    tématy. V projektech, na kterých spolupracoval, přinesl do světa vzdělávání nové
+                                    vize a přístupy. Jsem přesvědčen, že je připraven je replikovat všude tam, kde to
+                                    bude mít smysl.
+                                    {/* TODO: !!! Better cs translation */}
                                 </p>
                             </Translate>
                             {/*
