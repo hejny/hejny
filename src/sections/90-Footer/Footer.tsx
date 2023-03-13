@@ -35,7 +35,7 @@ export function FooterSection() {
                 </li>
 
                 <li>
-                    <Link href="/about">{t('technical details')}</Link>
+                    <Link href="/about">{t('technical-details')}</Link>
                 </li>
 
                 {/*

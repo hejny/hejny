@@ -1,3 +1,16 @@
 .welcome {
     margin-top: 0px;
 }
+
+.welcome p {
+    /*/
+    outline: 1px dotted yellow;
+    /**/
+
+    display: block;
+    font-size: 20px /* <- [🔠] Make one place for font-size */;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    text-align: center;
+}

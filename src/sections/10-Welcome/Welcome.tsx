@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
-import { Acronym } from '../../components/Acronym/Acronym';
+import { Article } from '../../components/Article/Article';
 import { Section } from '../../components/Section/Section';
 import styles from './Welcome.module.css';
 
@@ -11,37 +11,17 @@ interface WelcomeProps {
 export function WelcomeSection(props: WelcomeProps) {
     const { variant } = props;
 
-    const { t } = useTranslation(['welcome', 'app']);
+    const { t: tCommon } = useTranslation();
+    const { t } = useTranslation(['welcome', 'common']);
 
     return (
         <Section id="welcome" className={styles.welcome}>
             <Link href="/">
-                <h1>{t('title', { ns: 'app' })}</h1>
+                <h1>{tCommon('title')}</h1>
                 {/* <- TODO: [🔠] This should be handwritten */}
             </Link>
 
-            {variant === 'HOMEPAGE' && (
-                <>
-                    <p>
-                        <Acronym>Virtual Reality</Acronym>, <Acronym>Augmented Reality</Acronym>,{' '}
-                        <Acronym abbr="XR">Extended Reality</Acronym>, GraphQL <Acronym>Progressive Web Apps</Acronym>,{' '}
-                        <Acronym abbr="SPA">Single-page Apps</Acronym>,<Acronym>Artificial Intelligence</Acronym>,{' '}
-                        <Acronym>Machine Learning</Acronym>, Blockchain, Smart contracts, Web3, Chatbots… 🤯
-                    </p>
-
-                    <p>
-                        Are you realising the <b>full potential of technology in your business?</b>
-                    </p>
-
-                    <p>
-                        With the ever-evolving landscape of <b>exponential Technologies</b>, it can be challenging to
-                        keep up to date and use it to its potential in your business. However, by incorporating
-                        cutting-edge tools such as advanced browser APIs, <Acronym abbr="WASM">Web Assembly</Acronym>,
-                        using TypeScript, and benefiting from GPT when writing code, you can code, you can differentiate
-                        your business and achieve new levels of efficiency, innovation and customer engagement. 🚀
-                    </p>
-                </>
-            )}
+            {variant === 'HOMEPAGE' && <Article content={t('content')} />}
 
             {variant === 'SIDEPAGE' && (
                 <Link className="button" href="/">
