@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { CaveOfIdeasInLightbulbWithTransparentLookThrD3273ad0097f4011B7991c379bb05ee3_cropped_Image } from '../../../public/wallpapers/Pavol_Hejn_cave_of_ideas_in_lightbulb_with_transparent_look_thr_d3273ad0-097f-4011-b799-1c379bb05ee3_cropped_Image';
 import { CaveWithPresentationDec31ff23b9d42b9B84fF87d02d6a391_cropped_Image } from '../../../public/wallpapers/Pavol_Hejn_cave_with_presentation_dec31ff2-3b9d-42b9-b84f-f87d02d6a391_cropped_Image';
 import { CaveWithPrototypingLaboratoryCa9b82b90ded44a3B7ec344ebb539439_cropped_Image } from '../../../public/wallpapers/Pavol_Hejn_cave_with_prototyping_laboratory_ca9b82b9-0ded-44a3-b7ec-344ebb539439_cropped_Image';
@@ -7,9 +8,11 @@ import { Section } from '../../components/Section/Section';
 import styles from './Services.module.css';
 
 export function ServicesSection() {
+    const { t } = useTranslation('services');
+
     return (
         <Section id="services" className={styles.services}>
-            <h2>How can I help you?</h2>
+            <h2>{t('title')}</h2>
             <p>
                 I specialise in building <b>fully functional prototypes</b> from scratch to proof of concept, staying
                 ahead of the latest technologies. Let me guide you through the ever-changing landscape of new, emerging

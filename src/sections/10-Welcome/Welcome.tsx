@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 import { Acronym } from '../../components/Acronym/Acronym';
 import { Section } from '../../components/Section/Section';
 import styles from './Welcome.module.css';
@@ -10,10 +11,12 @@ interface WelcomeProps {
 export function WelcomeSection(props: WelcomeProps) {
     const { variant } = props;
 
+    const { t } = useTranslation(['welcome', 'app']);
+
     return (
         <Section id="welcome" className={styles.welcome}>
             <Link href="/">
-                <h1>From 0 to 1</h1>
+                <h1>{t('title', { ns: 'app' })}</h1>
                 {/* <- TODO: [🔠] This should be handwritten */}
             </Link>
 
@@ -42,7 +45,7 @@ export function WelcomeSection(props: WelcomeProps) {
 
             {variant === 'SIDEPAGE' && (
                 <Link className="button" href="/">
-                    Back home
+                    {t('back-home')}
                 </Link>
             )}
         </Section>

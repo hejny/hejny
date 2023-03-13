@@ -38,9 +38,6 @@ export function FooterSection() {
                     <Link href="/about">{t('technical details')}</Link>
                 </li>
 
-           
-           
-
                 {/*
                 <li>
                     <a href="https://github.com/hejny/rapid-prototyping-wizard/">v{VERSION}</a>

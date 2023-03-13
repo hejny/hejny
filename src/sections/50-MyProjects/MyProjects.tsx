@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { BirdsProject } from '../../../public/projects/birds/BirdsProject';
 import { CollboardProject } from '../../../public/projects/collboard/CollboardProject';
 import { CzechEventsProject } from '../../../public/projects/czech-events/CzechEventsProject';
@@ -10,6 +11,10 @@ import { Shuffle } from '../../components/Shuffle/Shuffle';
 import styles from './MyProjects.module.css';
 
 export function MyProjectsSection() {
+
+    const { t } = useTranslation('projects');
+
+
     return (
         <Section id="projects" className={styles.myProjects}>
             <h2>What have I worked on?</h2>

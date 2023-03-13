@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 import pavolHejny from '../../../public/services/prototyping-1.jpg';
 import { Section } from '../../components/Section/Section';
 import styles from './Contact.module.css';
@@ -10,6 +11,10 @@ interface ContactProps {
 
 export function ContactSection(props: ContactProps) {
     const { variant } = props;
+
+    const { t } = useTranslation('contact');
+
+
     return (
         <Section id="contact">
             <h2>Get in touch!</h2>

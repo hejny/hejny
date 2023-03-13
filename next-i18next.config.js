@@ -6,6 +6,7 @@ module.exports = {
         locales: ['en', 'cs'],
     },
     localePath: join(__dirname, 'locales'),
+    // localeExtension: '',
 };
 
 /**

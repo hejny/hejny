@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 import bobKartous from '../../../public/people/bob-kartous.transparent.png';
 import janSedo from '../../../public/people/jan-sedo.transparent.png';
 import maxKozlov from '../../../public/people/max-kozlov.transparent.cropped.png';
@@ -17,6 +18,8 @@ interface ReferencesProps {
 
 export function ReferencesSection(props: ReferencesProps) {
     const { variant } = props;
+
+    const { t } = useTranslation('references');
 
     return (
         <Section id="references" className={styles.references}>
