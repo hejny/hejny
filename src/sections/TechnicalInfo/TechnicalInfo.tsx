@@ -1,17 +1,18 @@
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
 import { VERCEL_GIT_COMMIT_MESSAGE, VERCEL_GIT_COMMIT_SHA, VERSION } from '../../../config';
+import { Article } from '../../components/Article/Article';
 import { Section } from '../../components/Section/Section';
 import styles from './TechnicalInfo.module.css';
 
 export function TechnicalInfo() {
     const { t } = useTranslation('technical-info');
-    // !!! i18n
 
     return (
         <Section>
-            <h2>About</h2>
-            <p>Technical info about the page</p>
+            <h2>{t('title')}</h2>
+
+            <Article content={t('content')} />
 
             <div className={styles.field}>
                 <span>Version:</span>

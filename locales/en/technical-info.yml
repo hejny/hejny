@@ -1,0 +1,3 @@
+title: About
+# Note: Probbably no need to i18n each field name - Version, Repository and Commit, it is technical info so it can stay in english
+content: Technical info about the page

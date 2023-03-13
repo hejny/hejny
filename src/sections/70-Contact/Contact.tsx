@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import pavolHejny from '../../../public/services/prototyping-1.jpg';
+import { Article } from '../../components/Article/Article';
 import { Section } from '../../components/Section/Section';
 import styles from './Contact.module.css';
 
@@ -13,16 +14,18 @@ export function ContactSection(props: ContactProps) {
     const { variant } = props;
 
     const { t } = useTranslation('contact');
-    // !!! i18n
 
     return (
         <Section id="contact">
-            <h2>Get in touch!</h2>
+            <h2>{t('title')}</h2>
+
+            {/* TODO: !!! Do not make empty div for empty article */}
+            <Article content={t('content')} />
 
             <div className={styles.vcard}>
                 <Image
                     // TODO: !!! Bottom out centered image
-                    // TODO: !!! Shadow effect on pictures
+                    // TODO: Do we need to i18n alt of images?
                     alt="Portrait photo of Pavol Hejný looking behind of 3D printer"
                     src={pavolHejny}
                     width={200}
@@ -87,7 +90,7 @@ export function ContactSection(props: ContactProps) {
 
                     {variant === 'SHORT' && (
                         <li>
-                            <Link href="/contact">More</Link>
+                            <Link href="/contact">{t('more')}</Link>
                         </li>
                     )}
                 </ul>
