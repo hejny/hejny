@@ -43,7 +43,18 @@ export default function Midjourney(props: any) {
 export async function getStaticProps({ locale }: { locale: string }) {
     return {
         props: {
-            ...(await serverSideTranslations(locale, ['common', 'footer', 'technical-info'])),
+            ...(await serverSideTranslations(locale, [
+                'app',
+                'welcome',
+                'pavolhejny',
+                'services',
+                'references',
+                'myprojects',
+                'hacking',
+                'contact',
+                'footer',
+                'technical-info' /* <- TODO: [🗃] Filter only needed for this page */,
+            ])),
         },
     };
 }
