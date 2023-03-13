@@ -193,7 +193,7 @@ export function ReferencesSection(props: ReferencesProps) {
                                     výjimečnou použitelností.
                                 </p>
                                 <p>
-                                    Pavla bych doporučil všem, kteří chtějí vidět reálné výsledky v přijatelném čase.
+                                    Pavola bych doporučil všem, kteří chtějí vidět reálné výsledky v přijatelném čase.
                                     Navíc je opravdu ohleduplný, milý a je radost s ním pracovat.
                                 </p>
                                 {/* TODO: !!! Better translation for cs  */}
