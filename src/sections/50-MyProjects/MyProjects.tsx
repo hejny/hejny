@@ -11,9 +11,8 @@ import { Shuffle } from '../../components/Shuffle/Shuffle';
 import styles from './MyProjects.module.css';
 
 export function MyProjectsSection() {
-
     const { t } = useTranslation('projects');
-
+    // !!! i18n
 
     return (
         <Section id="projects" className={styles.myProjects}>

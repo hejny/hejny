@@ -11,9 +11,8 @@ import { Shuffle } from '../../components/Shuffle/Shuffle';
 import styles from './Hacking.module.css';
 
 export function HackingSection() {
-
     const { t } = useTranslation('hacking');
-
+    // !!! i18n
 
     return (
         <Section id="hacking" className={styles.hacking}>

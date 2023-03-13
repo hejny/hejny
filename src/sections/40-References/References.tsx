@@ -20,6 +20,7 @@ export function ReferencesSection(props: ReferencesProps) {
     const { variant } = props;
 
     const { t } = useTranslation('references');
+    // !!! i18n
 
     return (
         <Section id="references" className={styles.references}>

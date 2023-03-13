@@ -11,13 +11,12 @@ interface WelcomeProps {
 export function WelcomeSection(props: WelcomeProps) {
     const { variant } = props;
 
-    const { t: tCommon } = useTranslation();
     const { t } = useTranslation(['welcome', 'common']);
 
     return (
         <Section id="welcome" className={styles.welcome}>
             <Link href="/">
-                <h1>{tCommon('title')}</h1>
+                <h1>{t('title', { ns: 'common' })}</h1>
                 {/* <- TODO: [🔠] This should be handwritten */}
             </Link>
 

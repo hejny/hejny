@@ -13,7 +13,7 @@ export function ContactSection(props: ContactProps) {
     const { variant } = props;
 
     const { t } = useTranslation('contact');
-
+    // !!! i18n
 
     return (
         <Section id="contact">

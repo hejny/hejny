@@ -6,6 +6,7 @@ import styles from './TechnicalInfo.module.css';
 
 export function TechnicalInfo() {
     const { t } = useTranslation('technical-info');
+    // !!! i18n
 
     return (
         <Section>

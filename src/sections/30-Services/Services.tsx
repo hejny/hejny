@@ -9,6 +9,7 @@ import styles from './Services.module.css';
 
 export function ServicesSection() {
     const { t } = useTranslation('services');
+    // !!! i18n
 
     return (
         <Section id="services" className={styles.services}>
