@@ -20,7 +20,6 @@ export function ReferencesSection(props: ReferencesProps) {
     const { variant } = props;
 
     const { t } = useTranslation('references');
-    // !!! i18n
 
     return (
         <Section id="references" className={styles.references}>
@@ -294,7 +293,7 @@ export function ReferencesSection(props: ReferencesProps) {
 
             {variant === 'SHORT' && (
                 <Link className="button" href="/references">
-                    More references
+                    {t('more-references')}
                 </Link>
             )}
         </Section>
