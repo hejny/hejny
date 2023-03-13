@@ -2,7 +2,7 @@ import { Inter } from '@next/font/google';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
 import { Vector } from 'xyzt';
-import { VERCEL_GIT_COMMIT_MESSAGE, VERSION } from '../../config';
+import { VERCEL_GIT_COMMIT_MESSAGE, VERCEL_GIT_COMMIT_SHA, VERSION } from '../../config';
 import { DebugGrid } from '../components/DebugGrid/DebugGrid';
 import { Section } from '../components/Section/Section';
 import { TiledBackground } from '../components/TiledBackground/TiledBackground';
@@ -36,7 +36,14 @@ export default function Midjourney(props: any) {
                         <h2>About</h2>
                         <p>Technical info about the page</p>
                         <p>Version: {VERSION}</p>
-                        <p>Commit message: {VERCEL_GIT_COMMIT_MESSAGE}</p>
+                        <p>
+                            Commit:{' '}
+                            <Link
+                                href={`https://github.com/hejny/rapid-prototyping-wizard/commit/${VERCEL_GIT_COMMIT_SHA}`}
+                            >
+                                {VERCEL_GIT_COMMIT_MESSAGE}
+                            </Link>
+                        </p>
                         <pre>{JSON.stringify(props.config, null, 4)}</pre>
                         <p>
                             Repository:
@@ -68,8 +75,7 @@ export async function getStaticProps({ locale }: { locale: string }) {
 }
 
 /**
- * TODO: !!! More details
- * TODO: !!! Better formatted
+ * TODO: Better formatted - each field should be aligned
  * TODO: [🪒] Can be getStaticProps shared between all pages?
  * TODO: Make some menu
  * TODO: [🧈] Best way how to share page css
