@@ -56,7 +56,7 @@ export async function getStaticProps({ locale }: { locale: string }) {
                 'pavolhejny',
                 'services',
                 'references',
-                'myprojects',
+                'projects',
                 'hacking',
                 'contact',
                 'footer',
