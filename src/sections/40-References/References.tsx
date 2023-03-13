@@ -147,7 +147,6 @@ export function ReferencesSection(props: ReferencesProps) {
                         <Item.PersonImage>
                             <Image
                                 alt="Portrait photo of Max Kozlov"
-                                // TODO: !!! Max without background
                                 src={maxKozlov}
                                 draggable="false"
                                 placeholder="blur"
