@@ -23,6 +23,11 @@ export function Article(props: IArticleProps) {
     converter.setFlavor('github');
     const html = converter.makeHtml(markdown);
 
+    if (!html) {
+        // Note: Do not make empty div for empty article
+        return <></>;
+    }
+
     // TODO: [0] If not using hash, remove IDs from html
 
     // [0] const currentSubsection = hash.substring(1);

@@ -19,7 +19,6 @@ export function ContactSection(props: ContactProps) {
         <Section id="contact">
             <h2>{t('title')}</h2>
 
-            {/* TODO: !!! Do not make empty div for empty article */}
             <Article content={t('content')} />
 
             <div className={styles.vcard}>

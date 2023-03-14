@@ -215,7 +215,7 @@ export function ReferencesSection(props: ReferencesProps) {
                         <Item.PersonImage>
                             <Image
                                 // TODO: !!! Ask Bob or Bohumil
-                                alt="Portrait photo of Bohumil Kartous"
+                                alt="Portrait photo of Bob Kartous"
                                 src={bobKartous}
                                 draggable="false"
                                 placeholder="blur"
@@ -223,7 +223,7 @@ export function ReferencesSection(props: ReferencesProps) {
                         </Item.PersonImage>
                         <Item.Title>
                             <Link href="https://www.linkedin.com/in/bob-kartous-5b472526/" target={'_blank'}>
-                                Bohumil Kartous
+                            Bob Kartous
                             </Link>
                         </Item.Title>
                         <Item.Description>
