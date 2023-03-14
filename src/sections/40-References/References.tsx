@@ -45,15 +45,16 @@ export function ReferencesSection(props: ReferencesProps) {
                         <Item.Description>
                             <Translate locale="en">
                                 <p>
-                                    I&apos;ve known Pavol for six years. Especially from hackathons and other innovation
-                                    projects. If you are with his team, you can bet he&apos;ll be in the top three. And
-                                    you would have right!
+                                    I&apos;ve known Pavol for 6 years. Especially from hackathons and other innovation
+                                    projects. If you are with his team, you can bet he&apos;ll be in the top three.
+                                    <br />
+                                    And you would have right!
                                 </p>
                                 <p>
                                     Pavol is an innovator who knows the latest technologies and can find quick solutions
                                     to challenges in industry, education and urban development. He&apos;s capable of
                                     making a difference within 24 hours. He is one of the top 10 people in the country
-                                    for rapid prototyping applications.
+                                    for rapid prototyping of applications.
                                 </p>
                             </Translate>
 
@@ -118,18 +119,19 @@ export function ReferencesSection(props: ReferencesProps) {
                                     Pavol built a prototype of our H-edu app so that we could get immediate investment.
                                     He then designed the architecture of the system and the use of the technology, which
                                     proved to be the right choice for our proved to be the right choice for our
-                                    purposes. In the early days of COVID, responded very well to the teaching needs of
-                                    the teachers and in record time created exactly the solution that the solution that
-                                    thousands of teachers have since used.
+                                    purposes. In the early days of covid-19, responded very well to the teaching needs
+                                    of the teachers and in record time created exactly the solution that thousands of
+                                    teachers have since used.
                                 </p>
                             </Translate>
                             <Translate locale="cs">
                                 <p>
                                     Pavol vytvořil prototyp naší aplikace H-edu tak, že jsme okamžitě získali investici.
                                     Následně navrhl architekturu systému a využití technologií, které se v testu času
-                                    ukázaly jako správně zvolené pro naše účely. Na začátku covidu výborně zareagoval na
-                                    potřeby učitelů při výuce a v rekordním čase vytvořil přesně takové řešení, které
-                                    následně využívaly tisíce učitelů.
+                                    ukázaly jako správně zvolené pro naše účely.
+                                    <br />
+                                    Na začátku covidu-19 výborně zareagoval na potřeby učitelů při výuce a v rekordním
+                                    čase vytvořil přesně takové řešení, které následně využívaly tisíce učitelů.
                                 </p>
                             </Translate>
                             {/*
@@ -189,7 +191,9 @@ export function ReferencesSection(props: ReferencesProps) {
                                 <p>Rychle vezme jakoukoliv technologii nebo téma a postaví nad ní fungující produkt.</p>
                                 <p>
                                     Vřele bych Pavola doporučil každému, kdo chce vidět výsledky v reálném životě v
-                                    reálném čase. Navíc je velmi ohleduplný, laskavý a radost s ním spolupracovat.
+                                    reálném čase.
+                                    <br />
+                                    Navíc je velmi ohleduplný, laskavý a radost s ním spolupracovat.
                                 </p>
                             </Translate>
                             {/*
