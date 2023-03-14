@@ -114,13 +114,13 @@ export function ReferencesSection(props: ReferencesProps) {
                         <Item.Description>
                             <Translate locale="en">
                                 <p>
-                                    Pavol prototyped our H-edu app so that we got immediate investment. He then designed
-                                    the architecture of the system and the use of the technology, which in the test of
-                                    time proved to be the right choice for our purposes. At the beginning of the covid,
-                                    he responded very well to teachers teaching needs and in record time created exactly
-                                    the solution that that thousands of teachers have subsequently used.
+                                    Pavol built a prototype of our H-edu app so that we could get immediate investment.
+                                    He then designed the architecture of the system and the use of the technology, which
+                                    proved to be the right choice for our proved to be the right choice for our
+                                    purposes. In the early days of COVID, responded very well to the teaching needs of
+                                    the teachers and in record time created exactly the solution that the solution that
+                                    thousands of teachers have since used.
                                 </p>
-                                {/* TODO: !!! Better translation for en */}
                             </Translate>
                             <Translate locale="cs">
                                 <p>
@@ -181,17 +181,18 @@ export function ReferencesSection(props: ReferencesProps) {
                             </Translate>
                             <Translate locale="cs">
                                 <p>
-                                    Pavol je naprostá bestie, pokud jde o vytváření digitálních produktů. Viděl jsem ho
-                                    - doslova přes noc - vytvořit integrovaného chatbota, který nám vyhrál 1. místo na
-                                    Startup Weekendu Praha.
+                                    Pavol je naprosto špičkový v tvorbě digitálních produktů. Viděl jsem ho - doslova
+                                    přes noc - vytvořit integrovaného chatbota, který nám zajistil první místo na
+                                    Startup Weekendu v Praze.
                                 </p>
                                 <p>
-                                    Rychle se naučí jakékoliv téma nebo technologii a ještě rychleji staví, a to s
-                                    výjimečnou použitelností.
+                                    Rychle se učí jakékoli téma nebo technologii a staví ještě rychleji s vynikající
+                                    použitelností.
                                 </p>
                                 <p>
-                                    Pavola bych doporučil všem, kteří chtějí vidět reálné výsledky v přijatelném čase.
-                                    Navíc je opravdu ohleduplný, milý a je radost s ním pracovat.
+                                    Vřele bych Pavola doporučil každému, kdo chce vidět výsledky v reálném životě v
+                                    rámci řízeného časového rámce. Navíc je velmi ohleduplný, laskavý a potěšení s ním
+                                    spolupracovat.
                                 </p>
                                 {/* TODO: !!! Better translation for cs  */}
                             </Translate>
@@ -300,9 +301,10 @@ export function ReferencesSection(props: ReferencesProps) {
 }
 
 /**
+ * TODO: !! Add active links
  * TODO: !!?? Add job title on references
  * TODO: !! Add all other people
- * TODO: Add links to multiple socials
+ * TODO: !! Add links to multiple socials
  * TODO: Shadow effect on pictures
  * TODO: !! Paralax effect on all black shadows on people + somehow on people
  */
