@@ -81,7 +81,7 @@ export async function getStaticProps({ locale }: { locale: string }) {
 }
 
 /**
- * TODO: !!! Fix react hydration error
+ * TODO: !! Fix Shuffle without React hydration error
  * TODO: !!! All links must work
  * TODO: !!! Replace personal page - all projecrs
  * TODO: Add somewhere button [Get in touch]
