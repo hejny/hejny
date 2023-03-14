@@ -52,7 +52,7 @@ export function FooterSection() {
  * TODO: !! No cookie's sentence 
  * TODO: !! Email & follow subscription
  * TODO: !! Email & follow subscription + Popup as nice alert after 10s
- * TODO: !!!! Add all legal stuff
+ * TODO: !! Add all legal stuff
  * TODO: Use meaningfully OR remove </DisplayOn> OR 👀 remake to classes .desktop .mobile .tablet ...
 
  * TODO: Link to MidJourney + * generated with MidJourney
