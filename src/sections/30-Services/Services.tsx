@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import { CaveOfIdeasInLightbulbWithTransparentLookThrD3273ad0097f4011B7991c379bb05ee3_cropped_Image } from '../../../public/wallpapers/Pavol_Hejn_cave_of_ideas_in_lightbulb_with_transparent_look_thr_d3273ad0-097f-4011-b799-1c379bb05ee3_cropped_Image';
 import { CaveWithPresentationDec31ff23b9d42b9B84fF87d02d6a391_cropped_Image } from '../../../public/wallpapers/Pavol_Hejn_cave_with_presentation_dec31ff2-3b9d-42b9-b84f-f87d02d6a391_cropped_Image';
@@ -55,6 +56,11 @@ export function ServicesSection() {
                     </Item>
                 </a>
             </Items>
+
+            <Link className="button button-featured" href="#contact">
+                {t('action')}
+            </Link>
+            
         </Section>
     );
 }

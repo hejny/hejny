@@ -43,3 +43,10 @@ body {
     color: var(--highlighted-text-color);
     box-shadow: var(--highlighted-text-color) 0 0 5px;
 }
+
+.button.button-featured {
+    box-shadow: rgba(92, 176, 209, 0.699) 0 0 50px;
+    background-color: rgba(14, 120, 134, 0.884);
+    padding: 14px 36px;
+    font-size: 1.5em;
+}
