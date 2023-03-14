@@ -17,7 +17,7 @@ import styles from '../styles/common.module.css';
 // TODO: [🔠] What is this - inter/Inter
 const inter = Inter({ subsets: ['latin'] });
 
-export default function Home({ lang }: any) {
+export default function IndexPage({ lang }: any) {
     return (
         <>
             <AppHead />

@@ -13,7 +13,7 @@ import styles from '../styles/common.module.css';
 // TODO: [🔠] What is this - inter/Inter
 const inter = Inter({ subsets: ['latin'] });
 
-export default function Midjourney(props: any) {
+export default function AboutPage(props: any) {
     return (
         <>
             <AppHead subtitle="Gallery" />
