@@ -16,6 +16,6 @@ describe('normalizeDashes', () => {
     });
 
     it(`skip excluded words`, () => {
-        expect(normalizeDashes(`h-edu script-processing`)).toBe(`h-edu script–processing`);
+        expect(normalizeDashes(`H-edu script-processing`)).toBe(`H-edu script–processing`);
     });
 });
