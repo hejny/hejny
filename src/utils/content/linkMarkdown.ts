@@ -2,6 +2,9 @@ const LINKS = {
     Collboard: 'https://collboard.com',
     'H-edu': 'https://h-edu.cz',
     'Czech.events': 'https://czech.events',
+
+    // !!! České společnosti ornitologické
+    // !!! Startup Weekend(u)
 };
 
 /**
