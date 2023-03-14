@@ -15,7 +15,7 @@ interface ShuffleProps {
     /**
      * Disable shuffling and display items in order as they are.
      */
-    disable?: boolean;
+    isDisabled?: boolean;
 
     /**
      * Take only this number of items
@@ -29,11 +29,13 @@ interface ShuffleProps {
 }
 
 export function Shuffle(props: ShuffleProps) {
-    const { seed, disable, limit, children } = props;
+    const { seed, /*isDisabled,*/ limit, children } = props;
+
+    const isDisabled = true;
 
     const random = seedrandom(useContext(ShuffleSeedContext).toString() + (seed?.toString() || ''));
 
-    if (!Array.isArray(children) || disable) {
+    if (!Array.isArray(children) || isDisabled) {
         return children as any;
     }
 
