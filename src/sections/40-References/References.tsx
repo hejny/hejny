@@ -233,11 +233,10 @@ export function ReferencesSection(props: ReferencesProps) {
                             <Translate locale="cs">
                                 <p>
                                     Pokud jde o jeho osobní a profesní zkušenosti, Pavol je velmi schopný inovátor,
-                                    jehož potenciál sahá napříč digitálními technologiemi a společensky prioritními
-                                    tématy. V projektech, na kterých spolupracoval, přinesl do světa vzdělávání nové
-                                    vize a přístupy. Jsem přesvědčen, že je připraven je replikovat všude tam, kde to
-                                    bude mít smysl.
-                                    {/* TODO: !!! Better translation for cs  */}
+                                    jehož potenciál sahá napříč digitálními technologiemi a společenskými tématy. V
+                                    projektech, na kterých spolupracoval, přinesl do světa vzdělávání nové vize a
+                                    přístupy. Jsem přesvědčen, že je připraven je replikovat všude tam, kde to bude mít
+                                    smysl.
                                 </p>
                             </Translate>
                             {/*
