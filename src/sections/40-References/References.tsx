@@ -228,7 +228,7 @@ export function ReferencesSection(props: ReferencesProps) {
                         <Item.Description>
                             <Translate locale="en">
                                 <p>
-                                    Regarding mu personal, professional experience, Pavol is highly capable innovator
+                                    Regarding my personal, professional experience, Pavol is highly capable innovator
                                     who&apos;s potential range across digital technologies and socially prioritized
                                     themes. In projects collaborated on, he brought new visions and approaches to the
                                     world of education. I am convinced that he is ready to replicate it wherever it will
