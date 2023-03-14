@@ -23,13 +23,10 @@ export function ReferencesSection(props: ReferencesProps) {
 
     return (
         <Section id="references" className={styles.references}>
-            <h2>References</h2>
+            <h2>{t('title')}</h2>
 
             <Items>
-                <Shuffle
-                    /* TODO: !!! Bring back when ShuffleSeedContext provider is working> seed="references" */ seed={new Date().getUTCMinutes()}
-                    limit={variant === 'FULL' ? Infinity : 3}
-                >
+                <Shuffle seed="references" limit={variant === 'FULL' ? Infinity : 3}>
                     <Item>
                         <Item.PersonImage>
                             <Image

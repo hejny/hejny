@@ -67,6 +67,7 @@ export async function getStaticProps({ locale }: { locale: string }) {
 }
 
 /**
+ * TODO: !! i18n + make section
  * TODO: [🪒] Can be getStaticProps shared between all pages?
  * TODO: Make some menu
  */

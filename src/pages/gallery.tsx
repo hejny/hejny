@@ -130,6 +130,7 @@ export async function getStaticProps({ locale }: { locale: string }) {
 }
 
 /**
+ * TODO: !! i18n + make section
  * TODO: [🪒] Can be getStaticProps shared between all pages?
  * TODO: Write better about how are images created
  *       TODO: Connect with section/article about AI generative technology
