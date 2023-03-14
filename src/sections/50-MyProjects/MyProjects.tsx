@@ -1,5 +1,5 @@
+import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
-import { useTranslation } from 'react-i18next';
 import { BirdsProject } from '../../../public/projects/birds/BirdsProject';
 import { CollboardProject } from '../../../public/projects/collboard/CollboardProject';
 import { CzechEventsProject } from '../../../public/projects/czech-events/CzechEventsProject';

@@ -1,6 +1,6 @@
+import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useTranslation } from 'react-i18next';
 import pavolHejny from '../../../public/services/prototyping-1.jpg';
 import { Article } from '../../components/Article/Article';
 import { Section } from '../../components/Section/Section';

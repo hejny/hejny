@@ -87,4 +87,8 @@ export async function getStaticProps({ locale }: { locale: string }) {
  * TODO: !!! Replace personal page - all projecrs
  * TODO: Add somewhere button [Get in touch]
  * TODO: [🪒] Can be getStaticProps shared between all pages?
+ * TODO: Some linting rule not to use:
+ *       NOT> import { useTranslation } from 'react-i18next';
+ *       BUT
+ *       YES> import { useTranslation } from 'next-i18next';
  */

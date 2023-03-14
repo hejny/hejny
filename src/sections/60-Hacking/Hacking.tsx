@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'next-i18next';
 import { AllProjectsProject } from '../../../public/projects/all-projects/AllProjectsProject';
 import { CollboardModulesSdkProject } from '../../../public/projects/collboard-modules-sdk/CollboardModulesSdkProject';
 import { MapsProject } from '../../../public/projects/maps/MapsProject';

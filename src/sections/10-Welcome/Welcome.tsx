@@ -1,5 +1,5 @@
+import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
-import { useTranslation } from 'react-i18next';
 import { Article } from '../../components/Article/Article';
 import { Section } from '../../components/Section/Section';
 import styles from './Welcome.module.css';
