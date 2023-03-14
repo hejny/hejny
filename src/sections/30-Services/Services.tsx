@@ -15,7 +15,7 @@ export function ServicesSection() {
     return (
         <Section id="services" className={styles.services}>
             <h2>{t('title')}</h2>
-            <Article content={t('content')} />
+            <Article content={t('content')} isEnhanced />
 
             <Items>
                 {/* Note: Not using <Shuffle/> here in the services section */}
@@ -24,7 +24,7 @@ export function ServicesSection() {
                     <Item>
                         <Item.FloatingTitle>{t('consult.title')}</Item.FloatingTitle>
                         <Item.Description>
-                            <Article content={t('consult.content')} />
+                            <Article content={t('consult.content')} isEnhanced />
                         </Item.Description>
                         <Item.Image>
                             <CaveOfIdeasInLightbulbWithTransparentLookThrD3273ad0097f4011B7991c379bb05ee3_cropped_Image />
@@ -36,7 +36,7 @@ export function ServicesSection() {
                     <Item>
                         <Item.FloatingTitle>{t('talk.title')}</Item.FloatingTitle>
                         <Item.Description>
-                            <Article content={t('talk.content')} />
+                            <Article content={t('talk.content')} isEnhanced />
                         </Item.Description>
                         <Item.Image>
                             <CaveWithPresentationDec31ff23b9d42b9B84fF87d02d6a391_cropped_Image />
@@ -48,7 +48,7 @@ export function ServicesSection() {
                     <Item>
                         <Item.FloatingTitle>{t('prototype.title')}</Item.FloatingTitle>
                         <Item.Description>
-                            <Article content={t('prototype.content')} />
+                            <Article content={t('prototype.content')} isEnhanced />
                         </Item.Description>
                         <Item.Image>
                             <CaveWithPrototypingLaboratoryCa9b82b90ded44a3B7ec344ebb539439_cropped_Image />

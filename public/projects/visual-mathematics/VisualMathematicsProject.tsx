@@ -32,7 +32,7 @@ export function VisualMathematicsProject() {
                     <Translate locale="en">
                         <p>
                             Collboard&apos;s function visualization module lets you graph functions like sin, cos, and
-                            tan in a visually appealing way. No more intimidating formulas—just connect simple boxes for
+                            tan in a visually appealing way. No more intimidating formulas–just connect simple boxes for
                             a fun and easy math experience.
                         </p>
                     </Translate>

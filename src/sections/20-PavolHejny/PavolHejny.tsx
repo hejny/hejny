@@ -29,7 +29,7 @@ export function PavolHejnySection(props: PavolHejnyProps) {
                 placeholder="blur"
             />
 
-            <Article content={t('content')} />
+            <Article content={t('content')} isEnhanced />
         </Section>
     );
 }

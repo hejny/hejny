@@ -30,6 +30,7 @@ export function ReferencesSection(props: ReferencesProps) {
                     <Item>
                         <Item.PersonImage>
                             <Image
+                                // TODO: !!! Write ask for approval
                                 alt="Portrait photo of Tomáš Studeník"
                                 src={tomasStudenik}
                                 draggable="false"
@@ -166,7 +167,7 @@ export function ReferencesSection(props: ReferencesProps) {
                             <Translate locale="en">
                                 <p>
                                     Pavol is an absolute beast when it comes to creating digital products. I&apos;ve
-                                    seen him - literally overnight - create an integrated chatbot that won us the 1st
+                                    seen him – literally overnight – create an integrated chatbot that won us the 1st
                                     place at Startup Weekend Prague.
                                 </p>
                                 <p>
@@ -181,8 +182,8 @@ export function ReferencesSection(props: ReferencesProps) {
                             </Translate>
                             <Translate locale="cs">
                                 <p>
-                                    Pavol je naprosto špičkový v tvorbě digitálních produktů. Viděl jsem ho - doslova
-                                    přes noc - vytvořit integrovaného chatbota, který nám zajistil první místo na
+                                    Pavol je naprosto špičkový v tvorbě digitálních produktů. Viděl jsem ho – doslova
+                                    přes noc – vytvořit integrovaného chatbota, který nám zajistil první místo na
                                     Startup Weekendu v Praze.
                                 </p>
                                 <p>
@@ -212,7 +213,7 @@ export function ReferencesSection(props: ReferencesProps) {
                     <Item>
                         <Item.PersonImage>
                             <Image
-                                // TODO: !!! Ask Bob or Bohumil
+                                // TODO: !!! Write Ask Bob or Bohumil
                                 alt="Portrait photo of Bob Kartous"
                                 src={bobKartous}
                                 draggable="false"

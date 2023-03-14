@@ -20,7 +20,7 @@ export function WelcomeSection(props: WelcomeProps) {
                 {/* <- TODO: [🔠] This should be handwritten */}
             </Link>
 
-            {variant === 'HOMEPAGE' && <Article content={t('content')} />}
+            {variant === 'HOMEPAGE' && <Article content={t('content')} isEnhanced />}
 
             {variant === 'SIDEPAGE' && (
                 <Link className="button" href="/">

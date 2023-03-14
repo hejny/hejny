@@ -18,7 +18,7 @@ export function MyProjectsSection() {
     return (
         <Section id="projects" className={styles.myProjects}>
             <h2>{t('title')}</h2>
-            <Article content={t('content')} />
+            <Article content={t('content')} isEnhanced />
             <Items>
                 <Shuffle seed="projects">
                     <TownsProject />

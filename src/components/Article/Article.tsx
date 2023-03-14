@@ -1,5 +1,8 @@
 import { Converter } from 'showdown';
 import showdownHighlight from 'showdown-highlight';
+import spaceTrim from 'spacetrim';
+import { linkMarkdown } from '../../utils/content/linkMarkdown';
+import { normalizeDashes } from '../../utils/content/normalizeDashes';
 import styles from './Article.module.css';
 
 interface IArticleProps {
@@ -12,18 +15,29 @@ interface IArticleProps {
      * Make for each heading in markdown unique id and scroll to hash
      */
     isHashUsed?: boolean;
+
+    /**
+     * Is enhanced by adding links and normalize dashes
+     */
+    isEnhanced?: boolean;
 }
 
 export function Article(props: IArticleProps) {
-    const { content /* [0], isHashUsed */ } = props;
+    const { content /* [0], isHashUsed */, isEnhanced } = props;
 
     // [0] const hash = useHash();
 
-    const markdown = content;
+    let markdown = spaceTrim(content || '');
+
+    if (isEnhanced) {
+        markdown = linkMarkdown(markdown);
+        markdown = normalizeDashes(markdown);
+    }
+
     converter.setFlavor('github');
     const html = converter.makeHtml(markdown);
 
-    if (!html) {
+    if (html === '') {
         // Note: Do not make empty div for empty article
         return <></>;
     }

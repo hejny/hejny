@@ -19,7 +19,7 @@ export function ContactSection(props: ContactProps) {
         <Section id="contact">
             <h2>{t('title')}</h2>
 
-            <Article content={t('content')} />
+            <Article content={t('content')} isEnhanced/>
 
             <div className={styles.vcard}>
                 <Image

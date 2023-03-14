@@ -17,7 +17,7 @@ export function HackingSection() {
     return (
         <Section id="hacking" className={styles.hacking}>
             <h2>{t('title')}</h2>
-            <Article content={t('content')} />
+            <Article content={t('content')} isEnhanced/>
             <Items>
                 <Shuffle seed="hacking">
                     <VisualMathematicsProject />
