@@ -184,18 +184,13 @@ export function ReferencesSection(props: ReferencesProps) {
                                 <p>
                                     Pavol je naprosto špičkový v tvorbě digitálních produktů. Viděl jsem ho – doslova
                                     přes noc – vytvořit integrovaného chatbota, který nám zajistil první místo na
-                                    Startup Weekendu v Praze.
+                                    Startup Weekendu v Praze. {/* <- !! Auto-link */}
                                 </p>
-                                <p>
-                                    Rychle se učí jakékoli téma nebo technologii a staví ještě rychleji s vynikající
-                                    použitelností.
-                                </p>
+                                <p>Rychle vezme jakoukoliv technologii nebo téma a postaví nad ní fungující produkt.</p>
                                 <p>
                                     Vřele bych Pavola doporučil každému, kdo chce vidět výsledky v reálném životě v
-                                    rámci řízeného časového rámce. Navíc je velmi ohleduplný, laskavý a potěšení s ním
-                                    spolupracovat.
+                                    reálném čase. Navíc je velmi ohleduplný, laskavý a radost s ním spolupracovat.
                                 </p>
-                                {/* TODO: !!! Better translation for cs  */}
                             </Translate>
                             {/*
                              Original Version:
