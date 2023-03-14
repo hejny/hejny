@@ -304,5 +304,5 @@ export function ReferencesSection(props: ReferencesProps) {
  * TODO: !! Add all other people
  * TODO: Add links to multiple socials
  * TODO: Shadow effect on pictures
- * TODO: Paralax effect on people
+ * TODO: !! Paralax effect on all black shadows on people + somehow on people
  */
