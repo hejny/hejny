@@ -34,8 +34,8 @@ export default function Midjourney() {
                     <Section>
                         <h2>Nothing found here</h2>
                         {/* TODO: Some better texting <p>Sorry for that</p> */}
-                        <Link href={'/'}>
-                            <button>To the homepage</button>
+                        <Link href={'/'} className="button">
+                            To the homepage
                         </Link>
                     </Section>
                 </main>
