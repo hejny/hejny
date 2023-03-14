@@ -223,7 +223,7 @@ export function ReferencesSection(props: ReferencesProps) {
                         </Item.PersonImage>
                         <Item.Title>
                             <Link href="https://www.linkedin.com/in/bob-kartous-5b472526/" target={'_blank'}>
-                            Bob Kartous
+                                Bob Kartous
                             </Link>
                         </Item.Title>
                         <Item.Description>
@@ -303,9 +303,8 @@ export function ReferencesSection(props: ReferencesProps) {
 }
 
 /**
- * TODO: !!! /references page with more button from main page
- * TODO: !!! Add job title on references
- * TODO: !!! Add all other people
+ * TODO: !!?? Add job title on references
+ * TODO: !! Add all other people
  * TODO: Add links to multiple socials
  * TODO: Shadow effect on pictures
  * TODO: Paralax effect on people

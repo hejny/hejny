@@ -91,7 +91,7 @@
     /**/
 
     /* TODO: [🔠] Pick best font, look at https://fonts.google.com/specimen/Rubik */
-    /* TODO: [🔠] !!! Fonts on Samsung internet and other browsers */
+    /* TODO: [🔠] !! Fonts on Samsung internet and other browsers */
 
     font-family: 'PassionsConflict', Helvetica Neue /* <- [🔠] Make one place for font-family */;
     font-size: 85px /* <- [🔠] Make one place for font-size */;
@@ -124,6 +124,5 @@
     grid-column: 1 / span 3;
     grid-row: 5 / span 1;
 }
-
 
 /* TODO: [🧈] Best way how to share page css */
