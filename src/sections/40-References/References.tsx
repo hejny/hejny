@@ -178,8 +178,9 @@ export function ReferencesSection(props: ReferencesProps) {
                                 </p>
                                 <p>
                                     I&apos;d recommend Pavol to everyone who wants to see real life results in a
-                                    manageable time frame. Plus he&apos;s really considerate, kind and a pleasure to
-                                    work with.
+                                    manageable time frame.
+                                    <br />
+                                    Plus he&apos;s really considerate, kind and a pleasure to work with.
                                 </p>
                             </Translate>
                             <Translate locale="cs">
