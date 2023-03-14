@@ -1,6 +1,5 @@
 import { Inter } from '@next/font/google';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import Link from 'next/link';
 import { Vector } from 'xyzt';
 import { DebugGrid } from '../components/DebugGrid/DebugGrid';
 import { Section } from '../components/Section/Section';
@@ -34,9 +33,6 @@ export default function Midjourney() {
                     <Section>
                         <h2>Nothing found here</h2>
                         {/* TODO: Some better texting <p>Sorry for that</p> */}
-                        <Link href={'/'} className="button">
-                            To the homepage
-                        </Link>
                     </Section>
                 </main>
                 <footer>
