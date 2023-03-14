@@ -99,7 +99,7 @@ export function ContactSection(props: ContactProps) {
 }
 
 /**
- * TODO: !! Better footer with - links, form, contact, subscribe, legal (address), copyright, technical
+ * TODO: !! Better footer with - links, form, contact, subscribe, legal (address, Datovka 3te6yxg), copyright, technical
  * TODO: !! Contact form
  * TODO: Add dynamically from https://raw.githubusercontent.com/hejny/hejny/main/documents/contact.md
  *       1) Download from external repo script (and add copy warning)
