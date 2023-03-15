@@ -82,9 +82,10 @@ export async function getStaticProps({ locale }: { locale: string }) {
 }
 
 /**
+ * TODO: !!! Stars ✨ around the cursor on all pages
  * TODO: !! Fix Shuffle without React hydration error
  * TODO: !!! All links must work
- * TODO: !!! Replace personal page - all projecrs
+ * TODO: !!! Replace personal page - all projects
  * TODO: Add somewhere button [Get in touch]
  * TODO: [🪒] Can be getStaticProps shared between all pages?
  * TODO: Some linting rule not to use:

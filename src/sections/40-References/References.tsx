@@ -30,7 +30,6 @@ export function ReferencesSection(props: ReferencesProps) {
                     <Item>
                         <Item.PersonImage>
                             <Image
-                                // TODO: !!! Write ask for approval
                                 alt="Portrait photo of Tomáš Studeník"
                                 src={tomasStudenik}
                                 draggable="false"
@@ -213,7 +212,6 @@ export function ReferencesSection(props: ReferencesProps) {
                     <Item>
                         <Item.PersonImage>
                             <Image
-                                // TODO: !!! Write Ask Bob or Bohumil
                                 alt="Portrait photo of Bob Kartous"
                                 src={bobKartous}
                                 draggable="false"
@@ -306,5 +304,5 @@ export function ReferencesSection(props: ReferencesProps) {
  * TODO: !! Add all other people
  * TODO: !! Add links to multiple socials
  * TODO: Shadow effect on pictures
- * TODO: !! Paralax effect on all black shadows on people + somehow on people
+ * TODO: !!! Paralax effect on all black shadows on people + somehow on people
  */
