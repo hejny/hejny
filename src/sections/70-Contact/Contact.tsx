@@ -16,7 +16,7 @@ export function ContactSection(props: ContactProps) {
     const { t } = useTranslation('contact');
 
     return (
-        <Section id="contact">
+        <Section id="Contact">
             <h2>{t('title')}</h2>
 
             <Article content={t('content')} isEnhanced />

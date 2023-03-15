@@ -22,7 +22,7 @@ export function ReferencesSection(props: ReferencesProps) {
     const { t } = useTranslation('references');
 
     return (
-        <Section id="references" className={styles.ReferencesSection}>
+        <Section id="References" className={styles.ReferencesSection}>
             <h2>{t('title')}</h2>
 
             <Items>

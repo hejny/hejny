@@ -16,7 +16,7 @@ export function MyProjectsSection() {
     const { t } = useTranslation('projects');
 
     return (
-        <Section id="projects" className={styles.MyProjectsSection}>
+        <Section id="Projects" className={styles.MyProjectsSection}>
             <h2>{t('title')}</h2>
             <Article content={t('content')} isEnhanced />
             <Items>

@@ -51,6 +51,7 @@ export default function IndexPage({ lang }: any) {
                     <MyProjectsSection />
                     {/* TODO: Finish or remove <HackingSection /> */}
                     <ContactSection variant="SHORT" />
+                    {/* <SampleSection variant="SHORT" /> */}
                 </main>
 
                 <footer>

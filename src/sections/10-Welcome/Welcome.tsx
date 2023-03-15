@@ -14,7 +14,7 @@ export function WelcomeSection(props: WelcomeProps) {
     const { t } = useTranslation(['welcome', 'common']);
 
     return (
-        <Section id="welcome" className={styles.welcome}>
+        <Section id="Welcome" className={styles.welcome}>
             <Link href="/">
                 <h1>{t('title', { ns: 'common' })}</h1>
                 {/* <- TODO: [🔠] This should be handwritten */}
