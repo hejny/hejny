@@ -13,7 +13,7 @@ export function ServicesSection() {
     const { t } = useTranslation('services');
 
     return (
-        <Section id="services" className={styles.services}>
+        <Section id="services" className={styles.ServicesSection}>
             <h2>{t('title')}</h2>
             <Article content={t('content')} isEnhanced />
 

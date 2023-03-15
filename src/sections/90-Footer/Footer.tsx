@@ -6,7 +6,7 @@ export function FooterSection() {
     const { t } = useTranslation('footer');
 
     return (
-        <div className={styles.footer}>
+        <div className={styles.FooterSection}>
             <ul>
                 <li>© {new Date().getFullYear()}</li>
 

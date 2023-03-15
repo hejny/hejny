@@ -1,14 +1,14 @@
-.about {
+.PavolHejnySection {
     /*/
     outline: 1px dotted green;
     /**/
 }
 
-.about div p {
+.PavolHejnySection div p {
     text-align: left;
 }
 
-.about img {
+.PavolHejnySection img {
     display: block;
     float: left;
 
@@ -24,7 +24,7 @@
 }
 
 @media screen and (max-width: 550px) {
-    .about img {
+    .PavolHejnySection img {
         float: none;
         width: 100%;
         object-fit: cover;

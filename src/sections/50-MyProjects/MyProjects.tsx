@@ -16,7 +16,7 @@ export function MyProjectsSection() {
     const { t } = useTranslation('projects');
 
     return (
-        <Section id="projects" className={styles.myProjects}>
+        <Section id="projects" className={styles.MyProjectsSection}>
             <h2>{t('title')}</h2>
             <Article content={t('content')} isEnhanced />
             <Items>
@@ -36,3 +36,8 @@ export function MyProjectsSection() {
         </Section>
     );
 }
+
+
+/**
+ * TODO: Maybe rename to just Projects
+ */

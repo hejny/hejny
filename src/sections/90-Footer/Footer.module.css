@@ -1,4 +1,4 @@
-.footer {
+.FooterSection {
     /*/
     outline: 1px dotted red; /**/
 
@@ -17,14 +17,14 @@
     padding: 20px;
 }
 
-.footer ul li:not(:first-child):before {
+.FooterSection ul li:not(:first-child):before {
     content: '|';
     color: rgb(17, 96, 117) /* <- [🎨] */;
     margin-left: 10px;
     margin-right: 10px;
 }
 
-.footer ul {
+.FooterSection ul {
     /*/
     outline: 1px dotted red; /**/
 
@@ -38,7 +38,7 @@
     flex-wrap: wrap;
 }
 
-.footer ul li {
+.FooterSection ul li {
     /*/
     outline: 1px dotted red; /**/
 

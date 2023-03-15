@@ -3,7 +3,7 @@ import styles from './Cave.module.css';
 
 export function CaveSection() {
     return (
-        <div className={styles.cave}>
+        <div className={styles.CaveSection}>
             <CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper />
         </div>
     );

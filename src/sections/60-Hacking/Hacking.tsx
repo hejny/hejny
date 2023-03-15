@@ -15,7 +15,7 @@ export function HackingSection() {
     const { t } = useTranslation('hacking');
 
     return (
-        <Section id="hacking" className={styles.hacking}>
+        <Section id="hacking" className={styles.HackingSection}>
             <h2>{t('title')}</h2>
             <Article content={t('content')} isEnhanced/>
             <Items>

@@ -15,7 +15,7 @@ export function PavolHejnySection(props: PavolHejnyProps) {
     const { t } = useTranslation('pavolhejny');
 
     return (
-        <Section id="pavolhejny" className={styles.about}>
+        <Section id="pavolhejny" className={styles.PavolHejnySection}>
             <h2>{t('title')}</h2>
 
             <Image

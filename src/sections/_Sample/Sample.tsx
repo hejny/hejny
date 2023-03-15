@@ -8,10 +8,7 @@ export function SampleSection() {
     const { t } = useTranslation('sample');
 
     return (
-        <Section
-            id="sample"
-            /* <- !!! Make ids case-insensitive */ className={styles.SampleSection /* <- !!! Unite ACRY sections */}
-        >
+        <Section id="sample" /* <- !!! Make ids case-insensitive */ className={styles.SampleSection}>
             <h2>{t('title')}</h2>
 
             <Article content={t('content')} isEnhanced />

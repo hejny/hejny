@@ -12,7 +12,7 @@
     /*margin: 10px;*/
 }
 
-.item .imageContainer /* <- TODO: [🦂] CSS class imageContainer vs image-container*/ {
+.item .imageContainer {
     /*/
     outline: 1px dotted red;
     /**/
