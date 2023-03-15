@@ -13,6 +13,8 @@ import styles from '../styles/common.module.css';
 // TODO: [🔠] What is this - inter/Inter
 const inter = Inter({ subsets: ['latin'] });
 
+export const config = { amp: 'hybrid' };
+
 export default function AboutPage(props: any) {
     return (
         <>

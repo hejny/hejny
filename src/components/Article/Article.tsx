@@ -68,8 +68,11 @@ export function Article(props: IArticleProps) {
                 }}
                 */
             />
+            {/*
+            TODO: <style> can not be in <div> because of AMP
+
             <style>
-                {/* [0] !currentSubsection
+                 [0] !currentSubsection
                     ? ``
                     : `
                         #${currentSubsection}{
@@ -83,8 +86,9 @@ export function Article(props: IArticleProps) {
                         }
                         * /
 
-                `*/}
+                `
             </style>
+            */}
         </>
     );
 }
