@@ -62,6 +62,8 @@ export default function IndexPage({ lang }: any) {
     );
 }
 
+export const config = { amp: true };
+
 export async function getStaticProps({ locale }: { locale: string }) {
     return {
         props: {
@@ -82,6 +84,7 @@ export async function getStaticProps({ locale }: { locale: string }) {
 }
 
 /**
+ * TODO: !! AMP probbably on every page
  * TODO: !! Fix Shuffle without React hydration error
  * TODO: !!! All links must work
  * TODO: !!! Replace personal page - all projecrs

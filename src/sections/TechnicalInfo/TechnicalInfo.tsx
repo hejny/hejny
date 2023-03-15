@@ -1,4 +1,5 @@
 import { useTranslation } from 'next-i18next';
+import { useAmp } from 'next/amp';
 import Link from 'next/link';
 import { VERCEL_GIT_COMMIT_MESSAGE, VERCEL_GIT_COMMIT_SHA, VERSION } from '../../../config';
 import { Article } from '../../components/Article/Article';
@@ -7,6 +8,7 @@ import styles from './TechnicalInfo.module.css';
 
 export function TechnicalInfo() {
     const { t } = useTranslation('technical-info');
+    const isAmp = useAmp();
 
     return (
         <Section>
@@ -35,6 +37,14 @@ export function TechnicalInfo() {
                         {VERCEL_GIT_COMMIT_MESSAGE}
                     </Link>
                 </span>
+            </div>
+
+            <div className={styles.field}>
+                <span>
+                    {' '}
+                    <Link href="https://amp.dev/">AMP:</Link>
+                </span>
+                <span>{isAmp ? 'Active' : 'Inactive' /* <- TODO: Best wording for this */}</span>
             </div>
         </Section>
     );
