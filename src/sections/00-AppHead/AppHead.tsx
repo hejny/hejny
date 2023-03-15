@@ -18,8 +18,10 @@ export function AppHead(props: AppHeadProps) {
                     name="description"
                     content="With the ever-evolving landscape of technology, it can be challenging to keep up to date and use it to its potential in your business. However, by incorporating cutting-edge tools such as advanced browser APIs, >Web Assembly, using TypeScript, and benefiting from GPT when writing code, you can code, you can differentiate your business and achieve new levels of efficiency, innovation and customer engagement. 🚀"
                 />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href={favicon.src} />
+
+                <meta charSet="utf-8" />
+                <meta name="viewport" content="width=device-width" />
 
                 <meta property="og:title" content={`From 0 to 1`} />
                 <meta property="og:image" content={cave_of_ideas_with_transparent_look_through.src} />
