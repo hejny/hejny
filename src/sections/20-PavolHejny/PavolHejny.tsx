@@ -20,6 +20,7 @@ export function PavolHejnySection(props: PavolHejnyProps) {
 
             <Image
                 alt="Portrait photo of Pavol Hejný"
+                priority
                 src={pavolHejny}
                 // TODO: [🧑] Make some <ImageGravatar component; This is me@pavolhejny.com
                 //src="https://www.gravatar.com/avatar/10bceb8965947164502b4e7b3314733d?s=1024"

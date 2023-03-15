@@ -58,7 +58,7 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
             <Image // <- Note: [0]
                 // width={1920} <- Note: [1]
                 alt="Cave of ideas foreground"
-                priority={true}
+                priority
                 quality={85 /* <- Note: [3] */}
                 draggable="false"
                 placeholder="blur"
@@ -126,7 +126,7 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
                 <Image
                     // width={1920} <- Note: [1]
                     alt="Cave of ideas background"
-                    priority={true}
+                    priority
                     quality={75 /* <- Note: [3] */}
                     draggable="false"
                     placeholder="blur"
