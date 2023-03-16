@@ -3,7 +3,7 @@ import showdownHighlight from 'showdown-highlight';
 import spaceTrim from 'spacetrim';
 import { linkMarkdown } from '../../utils/content/linkMarkdown';
 import { normalizeDashes } from '../../utils/content/normalizeDashes';
-import { emojifyRef } from '../../utils/emojifyRef';
+import { Html } from '../Html/Html';
 import styles from './Article.module.css';
 
 interface IArticleProps {
@@ -49,10 +49,11 @@ export function Article(props: IArticleProps) {
 
     return (
         <>
-            <div
+            <Html
                 className={styles.Article}
-                dangerouslySetInnerHTML={{ __html: html }}
-                ref={emojifyRef}
+                html={html}
+                // !!! ref={emojifyRef}
+
                 /*
                 [0]
                 ref={(element) => {
