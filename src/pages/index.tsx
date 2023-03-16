@@ -1,4 +1,4 @@
-import { Inter } from '@next/font/google';
+import { Oswald } from '@next/font/google';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { Vector } from 'xyzt';
 import { DebugGrid } from '../components/DebugGrid/DebugGrid';
@@ -13,16 +13,16 @@ import { MyProjectsSection } from '../sections/50-MyProjects/MyProjects';
 import { ContactSection } from '../sections/70-Contact/Contact';
 import { FooterSection } from '../sections/90-Footer/Footer';
 import styles from '../styles/common.module.css';
+import { classNames } from '../utils/classNames';
 
-// TODO: [🔠] What is this - inter/Inter
-const inter = Inter({ subsets: ['latin'] });
+const oswaltFont = Oswald({ weight: '400', style: 'normal', subsets: ['latin', 'latin-ext'] });
 
 export default function IndexPage({ lang }: any) {
     return (
         <>
             <AppHead />
 
-            <div className={styles.page}>
+            <div className={classNames(styles.page, oswaltFont.className)}>
                 <DebugGrid size={new Vector(3, 5)} />
 
                 <header>
@@ -65,9 +65,7 @@ export default function IndexPage({ lang }: any) {
 export async function getStaticProps({ locale }: { locale: string }) {
     return {
         props: {
-            ...(await serverSideTranslations(locale, [
-                'common',
-            ])),
+            ...(await serverSideTranslations(locale, ['common'])),
         },
     };
 }
@@ -79,6 +77,7 @@ export async function getStaticProps({ locale }: { locale: string }) {
  * TODO: !!! Make this a personal page - all projects
  * TODO: Add somewhere button [Get in touch]
  * TODO: [🪒] Can be getStaticProps shared between all pages?
+ * TODO: [🪒] Can be fonts shared between all pages?
  * TODO: Some linting rule not to use:
  *       NOT> import { useTranslation } from 'react-i18next';
  *       BUT

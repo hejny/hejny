@@ -1,3 +1,4 @@
+import { Passions_Conflict } from '@next/font/google';
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
 import { Article } from '../../components/Article/Article';
@@ -8,6 +9,8 @@ interface WelcomeProps {
     variant: 'HOMEPAGE' | 'SIDEPAGE';
 }
 
+const passionsConflictFont = Passions_Conflict({ weight: '400', style: 'normal', subsets: ['latin'] });
+
 export function WelcomeSection(props: WelcomeProps) {
     const { variant } = props;
 
@@ -16,7 +19,7 @@ export function WelcomeSection(props: WelcomeProps) {
     return (
         <Section id="Welcome" className={styles.welcome}>
             <Link href="/">
-                <h1>{t('title')}</h1>
+                <h1 className={passionsConflictFont.className}>{t('title')}</h1>
                 {/* <- TODO: [🔠] This should be handwritten */}
             </Link>
 

@@ -1,4 +1,4 @@
-import { Inter } from '@next/font/google';
+import { Oswald } from '@next/font/google';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { Vector } from 'xyzt';
 import { DebugGrid } from '../components/DebugGrid/DebugGrid';
@@ -9,16 +9,16 @@ import { CaveSection } from '../sections/01-Cave/Cave';
 import { WelcomeSection } from '../sections/10-Welcome/Welcome';
 import { FooterSection } from '../sections/90-Footer/Footer';
 import styles from '../styles/common.module.css';
+import { classNames } from '../utils/classNames';
 
-// TODO: !!! [🔠] What is this - inter/Inter
-const inter = Inter({ subsets: ['latin'] });
+const oswaltFont = Oswald(/* TODO: Specify */);
 
 export default function NotFoundPage() {
     return (
         <>
             <AppHead subtitle="Gallery" />
 
-            <div className={styles.page}>
+            <div className={classNames(styles.page, oswaltFont.className)}>
                 <DebugGrid size={new Vector(5, 5)} />
                 <header>
                     {/* TODO: Do some system for multiple pages */}
@@ -46,10 +46,7 @@ export default function NotFoundPage() {
 export async function getStaticProps({ locale }: { locale: string }) {
     return {
         props: {
-            ...(await serverSideTranslations(locale, [
-                'common',
-             
-            ])),
+            ...(await serverSideTranslations(locale, ['common'])),
         },
     };
 }
@@ -57,5 +54,6 @@ export async function getStaticProps({ locale }: { locale: string }) {
 /**
  * TODO: !! i18n + make section
  * TODO: [🪒] Can be getStaticProps shared between all pages?
+ * TODO: [🪒] Can be fonts shared between all pages?
  * TODO: Make some menu
  */

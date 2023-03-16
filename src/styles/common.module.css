@@ -93,7 +93,7 @@
     /* TODO: [🔠] Pick best font, look at https://fonts.google.com/specimen/Rubik */
     /* TODO: [🔠] !! Fonts on Samsung internet and other browsers */
 
-    font-family: 'PassionsConflict', Helvetica Neue /* <- [🔠] Make one place for font-family */;
+    font-weight: bold /* <- [🔠] Make one place for font */;
     font-size: 85px /* <- [🔠] Make one place for font-size */;
     white-space: nowrap;
 

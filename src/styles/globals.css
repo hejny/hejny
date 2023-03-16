@@ -1,13 +1,3 @@
-@font-face {
-    font-family: PassionsConflict /* <- [🔠] Make one place for font-family */;
-    src: url(../../public/fonts/PassionsConflict-Regular.ttf);
-}
-
-@font-face {
-    font-family: Oswald /* <- [🔠] Make one place for font-family */;
-    src: url(../../public/fonts/Oswald/Oswald-VariableFont_wght.ttf);
-}
-
 html {
     color-scheme: dark;
     image-rendering: smooth;
@@ -18,8 +8,6 @@ html {
 
 body {
     background-color: #121121 /* <- TODO: Color to config */;
-    font-family: 'Oswald', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
-        sans-serif /* <- [🔠] Make one place for font-family */;
 }
 
 /* TODO: [🎨] ACRY all colors in one place HERE */

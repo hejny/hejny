@@ -1,4 +1,4 @@
-import { Inter } from '@next/font/google';
+import { Oswald } from '@next/font/google';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { Vector } from 'xyzt';
 import { DebugGrid } from '../components/DebugGrid/DebugGrid';
@@ -7,16 +7,16 @@ import { AppHead } from '../sections/00-AppHead/AppHead';
 import { CaveSection } from '../sections/01-Cave/Cave';
 import { FooterSection } from '../sections/90-Footer/Footer';
 import styles from '../styles/common.module.css';
+import { classNames } from '../utils/classNames';
 
-// TODO: [🔠] What is this - inter/Inter
-const inter = Inter({ subsets: ['latin'] });
+const oswaltFont = Oswald({ weight: '400', style: 'normal', subsets: ['latin', 'latin-ext'] });
 
 export default function PavolHejnyPage() {
     return (
         <>
             <AppHead />
 
-            <div className={styles.page}>
+            <div className={classNames(styles.page, oswaltFont.className)}>
                 <DebugGrid size={new Vector(3, 5)} />
 
                 <header>
@@ -40,15 +40,14 @@ export default function PavolHejnyPage() {
 export async function getStaticProps({ locale }: { locale: string }) {
     return {
         props: {
-            ...(await serverSideTranslations(locale, [
-                'common',
-            ])),
+            ...(await serverSideTranslations(locale, ['common'])),
         },
     };
 }
 
 /**
  * TODO: [🪒] Can be getStaticProps shared between all pages?
+ * TODO: [🪒] Can be fonts shared between all pages?
  * TODO: !! Replace this also as personal page
  * TODO: [🧈] Best way how to share page css
  * TODO: Custom 404 page
