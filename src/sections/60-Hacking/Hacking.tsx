@@ -12,12 +12,12 @@ import { Shuffle } from '../../components/Shuffle/Shuffle';
 import styles from './Hacking.module.css';
 
 export function HackingSection() {
-    const { t } = useTranslation('hacking');
+    const { t } = useTranslation();
 
     return (
         <Section id="Hacking" className={styles.HackingSection}>
-            <h2>{t('title')}</h2>
-            <Article content={t('content')} isEnhanced/>
+            <h2>{t('Hacking.title')}</h2>
+            <Article content={t('Hacking.content')} isEnhanced/>
             <Items>
                 <Shuffle seed="hacking">
                     <VisualMathematicsProject />

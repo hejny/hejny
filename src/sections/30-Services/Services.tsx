@@ -10,21 +10,21 @@ import { Section } from '../../components/Section/Section';
 import styles from './Services.module.css';
 
 export function ServicesSection() {
-    const { t } = useTranslation('services');
+    const { t } = useTranslation();
 
     return (
         <Section id="Services" className={styles.ServicesSection}>
-            <h2>{t('title')}</h2>
-            <Article content={t('content')} isEnhanced />
+            <h2>{t('Services.title')}</h2>
+            <Article content={t('Services.content')} isEnhanced />
 
             <Items>
                 {/* Note: Not using <Shuffle/> here in the services section */}
 
                 <a href="#contact">
                     <Item>
-                        <Item.FloatingTitle>{t('consult.title')}</Item.FloatingTitle>
+                        <Item.FloatingTitle>{t('Services.consult.title')}</Item.FloatingTitle>
                         <Item.Description>
-                            <Article content={t('consult.content')} isEnhanced />
+                            <Article content={t('Services.consult.content')} isEnhanced />
                         </Item.Description>
                         <Item.Image>
                             <CaveOfIdeasInLightbulbWithTransparentLookThrD3273ad0097f4011B7991c379bb05ee3_cropped_Image />
@@ -34,9 +34,9 @@ export function ServicesSection() {
 
                 <a href="#contact">
                     <Item>
-                        <Item.FloatingTitle>{t('talk.title')}</Item.FloatingTitle>
+                        <Item.FloatingTitle>{t('Services.talk.title')}</Item.FloatingTitle>
                         <Item.Description>
-                            <Article content={t('talk.content')} isEnhanced />
+                            <Article content={t('Services.talk.content')} isEnhanced />
                         </Item.Description>
                         <Item.Image>
                             <CaveWithPresentationDec31ff23b9d42b9B84fF87d02d6a391_cropped_Image />
@@ -46,9 +46,9 @@ export function ServicesSection() {
 
                 <a href="#contact">
                     <Item>
-                        <Item.FloatingTitle>{t('prototype.title')}</Item.FloatingTitle>
+                        <Item.FloatingTitle>{t('Services.prototype.title')}</Item.FloatingTitle>
                         <Item.Description>
-                            <Article content={t('prototype.content')} isEnhanced />
+                            <Article content={t('Services.prototype.content')} isEnhanced />
                         </Item.Description>
                         <Item.Image>
                             <CaveWithPrototypingLaboratoryCa9b82b90ded44a3B7ec344ebb539439_cropped_Image />
@@ -58,7 +58,7 @@ export function ServicesSection() {
             </Items>
 
             <Link className="button button-featured" href="#contact">
-                {t('action')}{/* <- !!! Stars ✨ around this button */}
+                {t('Services.action')}{/* <- !!! Stars ✨ around this button */}
             </Link>
         </Section>
     );

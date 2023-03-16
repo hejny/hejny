@@ -13,12 +13,12 @@ import { Shuffle } from '../../components/Shuffle/Shuffle';
 import styles from './MyProjects.module.css';
 
 export function MyProjectsSection() {
-    const { t } = useTranslation('projects');
+    const { t } = useTranslation();
 
     return (
         <Section id="Projects" className={styles.MyProjectsSection}>
-            <h2>{t('title')}</h2>
-            <Article content={t('content')} isEnhanced />
+            <h2>{t('Projects.title')}</h2>
+            <Article content={t('Projects.content')} isEnhanced />
             <Items>
                 <Shuffle seed="projects">
                     <TownsProject />
@@ -31,7 +31,7 @@ export function MyProjectsSection() {
             </Items>
 
             <Link className="button" href="https://pavolhejny.com/documents/projects.html">
-                {t('all-projects')}
+                {t('Projects.all-projects')}
             </Link>
         </Section>
     );

@@ -11,20 +11,20 @@ interface WelcomeProps {
 export function WelcomeSection(props: WelcomeProps) {
     const { variant } = props;
 
-    const { t } = useTranslation(['welcome', 'common']);
+    const { t } = useTranslation();
 
     return (
         <Section id="Welcome" className={styles.welcome}>
             <Link href="/">
-                <h1>{t('title', { ns: 'common' })}</h1>
+                <h1>{t('title')}</h1>
                 {/* <- TODO: [🔠] This should be handwritten */}
             </Link>
 
-            {variant === 'HOMEPAGE' && <Article content={t('content')} isEnhanced />}
+            {variant === 'HOMEPAGE' && <Article content={t('Welcome.content')} isEnhanced />}
 
             {variant === 'SIDEPAGE' && (
                 <Link className="button" href="/">
-                    {t('back-home')}
+                    {t('Welcome.back-home')}
                 </Link>
             )}
         </Section>

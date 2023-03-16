@@ -48,15 +48,7 @@ export async function getStaticProps({ locale }: { locale: string }) {
         props: {
             ...(await serverSideTranslations(locale, [
                 'common',
-                'welcome',
-                'pavolhejny',
-                'services',
-                'references',
-                'projects',
-                'hacking',
-                'contact',
-                'footer',
-                'technical-info' /* <- TODO: [🗃] Filter only needed for this page */,
+             
             ])),
         },
     };

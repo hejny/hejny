@@ -12,11 +12,11 @@ interface PavolHejnyProps {
 export function PavolHejnySection(props: PavolHejnyProps) {
     const { variant } = props;
 
-    const { t } = useTranslation('pavolhejny');
+    const { t } = useTranslation();
 
     return (
         <Section id="PavolHejny" className={styles.PavolHejnySection}>
-            <h2>{t('title')}</h2>
+            <h2>{t('PavolHejny.title')}</h2>
 
             <Image
                 alt="Portrait photo of Pavol Hejný"
@@ -30,7 +30,7 @@ export function PavolHejnySection(props: PavolHejnyProps) {
                 placeholder="blur"
             />
 
-            <Article content={t('content')} isEnhanced />
+            <Article content={t('PavolHejny.content')} isEnhanced />
         </Section>
     );
 }

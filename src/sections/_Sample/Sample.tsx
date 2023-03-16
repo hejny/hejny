@@ -10,16 +10,15 @@ interface SampleProps {
 export function SampleSection(props: SampleProps) {
     const { variant } = props;
 
-    // TODO: !!! Make only one namespace for i18n
-    const { t } = useTranslation('Sample');
+    const { t } = useTranslation();
 
     return (
         <Section id="Sample" className={styles.SampleSection}>
-            <h2>{t('title')}</h2>
+            <h2>{t('Sample.title')}</h2>
 
-            <Article content={t('content')} isEnhanced />
+            <Article content={t('Sample.content')} isEnhanced />
 
-            {variant === 'FULL' && <Article content={t('content')} isEnhanced />}
+            {variant === 'FULL' && <Article content={t('Sample.content')} isEnhanced />}
 
             {/* ... */}
         </Section>

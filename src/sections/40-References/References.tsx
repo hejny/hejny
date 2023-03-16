@@ -19,11 +19,11 @@ interface ReferencesProps {
 export function ReferencesSection(props: ReferencesProps) {
     const { variant } = props;
 
-    const { t } = useTranslation('references');
+    const { t } = useTranslation();
 
     return (
         <Section id="References" className={styles.ReferencesSection}>
-            <h2>{t('title')}</h2>
+            <h2>{t('References.title')}</h2>
 
             <Items>
                 <Shuffle seed="references" limit={variant === 'FULL' ? Infinity : 3}>
@@ -291,7 +291,7 @@ export function ReferencesSection(props: ReferencesProps) {
 
             {variant === 'SHORT' && (
                 <Link className="button" href="/references">
-                    {t('more-references')}
+                    {t('References.more-references')}
                 </Link>
             )}
         </Section>

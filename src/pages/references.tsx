@@ -43,18 +43,7 @@ export default function ReferencesPage() {
 export async function getStaticProps({ locale }: { locale: string }) {
     return {
         props: {
-            ...(await serverSideTranslations(locale, [
-                'common',
-                'welcome',
-                'pavolhejny',
-                'services',
-                'references',
-                'projects',
-                'hacking',
-                'contact',
-                'footer',
-                'technical-info' /* <- TODO: [🗃] Filter only needed for this page */,
-            ])),
+            ...(await serverSideTranslations(locale, ['common'])),
         },
     };
 }

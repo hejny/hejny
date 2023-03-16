@@ -13,13 +13,13 @@ interface ContactProps {
 export function ContactSection(props: ContactProps) {
     const { variant } = props;
 
-    const { t } = useTranslation('contact');
+    const { t } =useTranslation();
 
     return (
         <Section id="Contact">
-            <h2>{t('title')}</h2>
+            <h2>{t('Contact.title')}</h2>
 
-            <Article content={t('content')} isEnhanced />
+            <Article content={t('Contact.content')} isEnhanced />
 
             <div className={styles.vcard}>
                 <Image
@@ -89,7 +89,7 @@ export function ContactSection(props: ContactProps) {
 
                     {variant === 'SHORT' && (
                         <li>
-                            <Link href="/contact">{t('more')}</Link>
+                            <Link href="/contact">{t('Contact.more')}</Link>
                         </li>
                     )}
                 </ul>

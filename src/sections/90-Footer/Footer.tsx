@@ -3,7 +3,7 @@ import Link from 'next/link';
 import styles from './Footer.module.css';
 
 export function FooterSection() {
-    const { t } = useTranslation('footer');
+    const { t } = useTranslation();
 
     return (
         <div className={styles.FooterSection}>
@@ -17,7 +17,7 @@ export function FooterSection() {
                 */}
 
                 <li>
-                    <Link href="/">{t('home')}</Link>
+                    <Link href="/">{t('Footer.home')}</Link>
                 </li>
 
                 {/*
@@ -27,15 +27,15 @@ export function FooterSection() {
                 */}
 
                 <li>
-                    <Link href="/gallery">{t('gallery')}</Link>
+                    <Link href="/gallery">{t('Footer.gallery')}</Link>
                 </li>
 
                 <li>
-                    <Link href="/contact">{t('contact')}</Link>
+                    <Link href="/contact">{t('Footer.contact')}</Link>
                 </li>
 
                 <li>
-                    <Link href="/about">{t('technical-details')}</Link>
+                    <Link href="/about">{t('Footer.technical-details')}</Link>
                 </li>
 
                 {/*

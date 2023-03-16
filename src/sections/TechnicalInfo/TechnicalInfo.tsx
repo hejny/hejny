@@ -6,13 +6,13 @@ import { Section } from '../../components/Section/Section';
 import styles from './TechnicalInfo.module.css';
 
 export function TechnicalInfo() {
-    const { t } = useTranslation('technical-info');
+    const { t } = useTranslation();
 
     return (
         <Section>
-            <h2>{t('title')}</h2>
+            <h2>{t('TechnicalInfo.title')}</h2>
 
-            <Article content={t('content')} isEnhanced />
+            <Article content={t('TechnicalInfo.content')} isEnhanced />
 
             <div className={styles.field}>
                 <span>Version:</span>
