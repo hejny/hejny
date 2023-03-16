@@ -10,15 +10,19 @@ interface HtmlProps {
 export function Html(props: HtmlProps) {
     const { html, className } = props;
 
-    const content = parse(html, {
+    const content = parse(
+        html,
         /*
-        replace(domNode) {
-            if (domNode.type === 'tag') {
-                return <>{domToReact(domNode.children)}</>;
-            }
-        },
+        Maybe TODO:
+        {
+            replace(domNode) {
+                if (domNode instanceof Element && domNode.tagName === 'img' && domNode.attribs.class === 'emoji') {
+                    return <Image alt={domNode.attribs.alt} src={domNode.attribs.src} width={'10'} height={'10'} />;
+                }
+            },
+        }
         */
-    });
+    );
 
     return <div className={classNames(styles.html, className)}>{content}</div>;
 }

@@ -1,6 +1,7 @@
 import { Converter } from 'showdown';
 import showdownHighlight from 'showdown-highlight';
 import spaceTrim from 'spacetrim';
+import { emojifyHtml } from '../../utils/content/emojifyHtml';
 import { linkMarkdown } from '../../utils/content/linkMarkdown';
 import { normalizeDashes } from '../../utils/content/normalizeDashes';
 import { Html } from '../Html/Html';
@@ -18,7 +19,7 @@ interface IArticleProps {
     isHashUsed?: boolean;
 
     /**
-     * Is enhanced by adding links and normalize dashes
+     * Is enhanced by adding links, normalize dashes and emojify
      */
     isEnhanced?: boolean;
 }
@@ -36,11 +37,15 @@ export function Article(props: IArticleProps) {
     }
 
     converter.setFlavor('github');
-    const html = converter.makeHtml(markdown);
+    let html = converter.makeHtml(markdown);
 
     if (html === '') {
         // Note: Do not make empty div for empty article
         return <></>;
+    }
+
+    if (isEnhanced) {
+        html = emojifyHtml(html);
     }
 
     // TODO: [0] If not using hash, remove IDs from html
@@ -51,8 +56,7 @@ export function Article(props: IArticleProps) {
         <>
             <Html
                 className={styles.Article}
-                html={html}
-                // !!! ref={emojifyRef}
+                {...{ html }}
 
                 /*
                 [0]
@@ -109,4 +113,5 @@ const converter = new Converter({
 
 /**
  * TODO:[0] Use has if isHashUsed is true
+ * TODO: Maybe rename to <Content/> or <MarkdownContent/> or <Markdown/>
  */

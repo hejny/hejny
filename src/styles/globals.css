@@ -38,3 +38,13 @@ body {
     padding: 14px 36px;
     font-size: 1.5em;
 }
+
+.emoji {
+    display: inline;
+    width: 1.8em;
+    height: 1.8em;
+    vertical-align: bottom;
+    filter: invert(100%);
+    padding: 0;
+    margin: -3px;
+}

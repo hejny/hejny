@@ -58,7 +58,8 @@ export function ServicesSection() {
             </Items>
 
             <Link className="button button-featured" href="#contact">
-                {t('Services.action')}{/* <- !!! Stars ✨ around this button */}
+                <Article content={t('Services.action')} isEnhanced />
+                {/* <- !!! Stars ✨ around this button */}
             </Link>
         </Section>
     );
