@@ -6,7 +6,7 @@ import { Section } from '../../components/Section/Section';
 import styles from './Welcome.module.css';
 
 interface WelcomeProps {
-    variant: 'HOMEPAGE' | 'SIDEPAGE';
+    variant: 'HOMEPAGE' | 'SIDEPAGE' | 'PAVOLHEJNY';
 }
 
 const passionsConflictFont = Passions_Conflict({ weight: '400', style: 'normal', subsets: ['latin', 'latin-ext'] });
@@ -37,6 +37,7 @@ export function WelcomeSection(props: WelcomeProps) {
 }
 
 /**
+ * TODO: !!! Better utilize PAVOLHEJNY
  * TODO: Use somewhere <Acronym>Minimum viable product</Acronym>
  *     > Je lepší mít funkční MVP než mnoho měsíců-let pracovat kompletním vyladěném řešení https://youtu.be/4Z4EW9kSAX8
  * TODO: Maybe use <Shuffle> for technologies
