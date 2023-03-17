@@ -303,5 +303,4 @@ export function ReferencesSection(props: ReferencesProps) {
  * TODO: !!?? Add job title on references
  * TODO: !! Add all other people
  * TODO: !! Add links to multiple socials
- * TODO: Shadow effect on pictures
  */
