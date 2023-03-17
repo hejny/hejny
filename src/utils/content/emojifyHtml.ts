@@ -1,5 +1,5 @@
-import emoji1F680 from 'openmoji/black/svg/1F680.svg';
-import emoji1F92F from 'openmoji/black/svg/1F92F.svg';
+import emoji1F680 from 'openmoji/color/svg/1F680.svg';
+import emoji1F92F from 'openmoji/color/svg/1F92F.svg';
 
 type EmojiMap = { [emoji: string]: string };
 
