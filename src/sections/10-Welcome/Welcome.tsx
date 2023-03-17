@@ -9,7 +9,7 @@ interface WelcomeProps {
     variant: 'HOMEPAGE' | 'SIDEPAGE';
 }
 
-const passionsConflictFont = Passions_Conflict({ weight: '400', style: 'normal', subsets: ['latin'] });
+const passionsConflictFont = Passions_Conflict({ weight: '400', style: 'normal', subsets: ['latin', 'latin-ext'] });
 
 export function WelcomeSection(props: WelcomeProps) {
     const { variant } = props;
@@ -19,7 +19,9 @@ export function WelcomeSection(props: WelcomeProps) {
     return (
         <Section id="Welcome" className={styles.WelcomeSection}>
             <Link href="/">
-                <h1 className={passionsConflictFont.className}>{t('title')}</h1>
+                <h1 className={passionsConflictFont.className}>
+                    <Article content={t('title')} isEnhanced />
+                </h1>
                 {/* <- TODO: [🔠] This should be handwritten */}
             </Link>
 
