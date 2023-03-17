@@ -44,7 +44,7 @@ body {
     width: 1.8em;
     height: 1.8em;
     vertical-align: bottom;
-    filter: invert(100%);
+    /* filter: invert(100%); */
     padding: 0;
     margin: -3px;
 }
