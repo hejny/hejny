@@ -109,7 +109,7 @@
 
     grid-column: 1 / span 1;
 
-    font-size: 30px /* <- [🔠] Make one place for font-size */;
+    font-size: 30px;
     margin-top: -7px;
 }
 
@@ -138,7 +138,7 @@
 
     padding: 5px;
     border-radius: 5px /* <- TODO: Unite border-radius ACRY*/;
-    font-size: 30px /* <- [🔠] Make one place for font-size */;
+    font-size: 30px;
     /*background-color: rgba(56, 74, 150, 0.486); <- TODO: Unite glass effect ACRY */
 
     backdrop-filter: blur(10px) /* <- TODO: Unite glass effect ACRY */;
@@ -174,7 +174,7 @@
     padding-left: 25px;
     padding-right: 25px;
 
-    font-size: 15px /* <- [🔠] Make one place for font-size */;
+    font-size: 15px;
     transition: color 0.3s ease-in-out /* <- TODO: Unite transition effects ACRY */;
 }
 

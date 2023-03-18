@@ -96,11 +96,8 @@ margin-bottom: 60px;
     outline: 1px dotted purple;
     /**/
 
-    /* TODO: [🔠] Pick best font, look at https://fonts.google.com/specimen/Rubik */
-    /* TODO: [🔠] !! Fonts on Samsung internet and other browsers */
 
-    /*font-weight: bold /* <- [🔠] Make one place for font */
-    font-size: 85px /* <- [🔠] Make one place for font-size */;
+    font-size: 85px;
     white-space: nowrap;
 
     text-shadow: #dec36f 0px 0px 25px /* <- [🎨] */;
@@ -116,7 +113,7 @@ margin-bottom: 60px;
 
 @media only screen and (max-width: 600px) {
     .page main h1 {
-        font-size: 70px /* <- [🔠] Make one place for font-size */;
+        font-size: 70px;
     }
 }
 

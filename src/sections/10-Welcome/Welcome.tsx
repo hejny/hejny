@@ -22,7 +22,7 @@ export function WelcomeSection(props: WelcomeProps) {
                 <h1 className={passionsConflictFont.className}>
                     <Article content={t('title')} isEnhanced />
                 </h1>
-                {/* <- TODO: [🔠] This should be handwritten */}
+                {/* <- TODO: !!! This should be handwritten */}
             </Link>
 
             {variant === 'HOMEPAGE' && <Article content={t('Welcome.content')} isEnhanced />}
