@@ -1,11 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Vector } from 'xyzt';
-import { Color } from '../../src/utils/color/Color';
 import { createParalaxEffect } from '../../src/utils/Drawing/createParalaxEffect';
-import { createParticlesDrawingEffect } from '../../src/utils/Drawing/createParticlesDrawingEffect';
 import { effectToRef } from '../../src/utils/Drawing/effectToRef';
 import { joinEffects } from '../../src/utils/Drawing/joinEffects';
+import { starryEffect } from '../../src/utils/Drawing/starryEffect';
 import cave_of_ideas_with_transparent_look_through_fe3480c5_76af_45da_ac4e_5177062bcb6b_background from './Pavol_Hejn_cave_of_ideas_with_transparent_look_through_fe3480c5-76af-45da-ac4e-5177062bcb6b_background.png';
 import cave_of_ideas_with_transparent_look_through_fe3480c5_76af_45da_ac4e_5177062bcb6b_foreground from './Pavol_Hejn_cave_of_ideas_with_transparent_look_through_fe3480c5-76af-45da-ac4e-5177062bcb6b_foreground.png';
 
@@ -101,25 +99,7 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
                             distance: -1, // <- TODO: -1 here is bit ugly - either some new option isInverse OR not distance but ammount,...or some better name?
                             reactOn: ['SCROLL'],
                         }),
-                        createParticlesDrawingEffect({
-                            generatePosition(cursorPosition) {
-                                const distance = Math.random() * 30;
-                                const rotation = Math.random() * Math.PI * 2;
-                                return cursorPosition.add(Vector.fromPolar(rotation, distance));
-                            },
-                            generateSize() {
-                                return Math.random() * 5 + 3;
-                            },
-                            generateColor() {
-                                return Color.fromString('#feeac4' /* <- [🎨] */);
-                            },
-                            generateLivetime() {
-                                return Math.random() * 2000 + 100;
-                            },
-                            generateDistance() {
-                                return Math.random() * 100 + 50;
-                            },
-                        }),
+                        starryEffect,
                     ),
                 )}
             >

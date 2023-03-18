@@ -71,6 +71,7 @@ export async function getStaticProps({ locale }: { locale: string }) {
 }
 
 /**
+ * TODO: !!! Stars ✨ around the cursor on all pages
  * TODO: !! Fix Shuffle without React hydration error
  * TODO: !!! All links must work
  * TODO: !!! Make this a personal page - all projects

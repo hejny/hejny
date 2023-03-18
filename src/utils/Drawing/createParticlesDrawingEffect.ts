@@ -1,5 +1,5 @@
 import { Registration } from 'destroyable';
-import { forTime } from 'waitasecond';
+import { forEver, forTime } from 'waitasecond';
 import { Vector } from 'xyzt';
 import { Color } from '../color/Color';
 import { Drawing } from './Drawing';
@@ -79,7 +79,17 @@ export function createParticlesDrawingEffect<TElement extends HTMLElement>(
             await particle.fadeOut(livetime);
         }
 
-        const elementSize = Vector.fromObject(element.getBoundingClientRect(), ['width', 'height']);
+        const elementBoundingClientRect = element.getBoundingClientRect();
+        const elementPosition = Vector.fromObject(elementBoundingClientRect, ['top', 'left']);
+        const elementSize = Vector.fromObject(elementBoundingClientRect, ['width', 'height']);
+
+        // !!!! This is not on the topleft corner of the element but topleft of whole page
+        const particle = new Particle({
+            place: element,
+            position: elementPosition,
+            size: 50,
+            color: Color.fromHex('#ffff00'),
+        });
 
         return Registration.join(
             Registration.create(() => {
@@ -95,7 +105,9 @@ export function createParticlesDrawingEffect<TElement extends HTMLElement>(
                 async tick() {
                     const particle = new Particle({
                         place: element,
-                        position: new Vector(Math.random() * elementSize.x, Math.random() * elementSize.y),
+                        position: elementPosition.add(
+                            new Vector(Math.random() * elementSize.x, Math.random() * elementSize.y),
+                        ),
                         size: generateSize(),
                         color: generateColor(),
                     });
@@ -105,6 +117,7 @@ export function createParticlesDrawingEffect<TElement extends HTMLElement>(
                     /* not await */ particle.fadeOut(livetime * 10 /* <- !!! Configurable from outside */);
                 },
                 async waiter() {
+                    await forEver();
                     await forTime(Math.random() * 1000 * 0.3 /* <- !!! Configurable from outside */);
                 },
             }),
