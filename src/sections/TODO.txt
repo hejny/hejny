@@ -1,4 +1,3 @@
-TODO: !!! Make Sample section
 TODO: !! Make TalkSection
 TODO: !! Make CalendarSection
 TODO: !! Make ContactForm

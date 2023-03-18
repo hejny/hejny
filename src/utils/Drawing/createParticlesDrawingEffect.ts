@@ -1,4 +1,5 @@
 import { Registration } from 'destroyable';
+import { forTime } from 'waitasecond';
 import { Vector } from 'xyzt';
 import { Color } from '../color/Color';
 import { Drawing } from './Drawing';
@@ -78,15 +79,36 @@ export function createParticlesDrawingEffect<TElement extends HTMLElement>(
             await particle.fadeOut(livetime);
         }
 
-        return Registration.create(() => {
-            element.addEventListener('pointerenter', pointerenterHandler);
-            window.addEventListener('pointermove', pointermoveHandler);
+        const elementSize = Vector.fromObject(element.getBoundingClientRect(), ['width', 'height']);
 
-            return () => {
-                element.removeEventListener('pointerenter', pointerenterHandler);
-                window.removeEventListener('pointermove', pointermoveHandler);
-            };
-        });
+        return Registration.join(
+            Registration.create(() => {
+                element.addEventListener('pointerenter', pointerenterHandler);
+                window.addEventListener('pointermove', pointermoveHandler);
+
+                return () => {
+                    element.removeEventListener('pointerenter', pointerenterHandler);
+                    window.removeEventListener('pointermove', pointermoveHandler);
+                };
+            }),
+            Registration.loop({
+                async tick() {
+                    const particle = new Particle({
+                        place: element,
+                        position: new Vector(Math.random() * elementSize.x, Math.random() * elementSize.y),
+                        size: generateSize(),
+                        color: generateColor(),
+                    });
+
+                    const livetime = generateLivetime();
+
+                    /* not await */ particle.fadeOut(livetime * 10 /* <- !! Configurable from outside */);
+                },
+                async waiter() {
+                    await forTime(Math.random() * 1000 * 0.3 /* <- !! Configurable from outside */);
+                },
+            }),
+        );
     };
 }
 

@@ -23,7 +23,7 @@ const oswaltFont = Oswald({ weight: '400', style: 'normal', subsets: ['latin', '
 export default function GalleryPage() {
     return (
         <>
-            <AppHead subtitle="Gallery" />
+            <AppHead subtitle="Gallery"  /* <- TODO: !! Translate *//>
 
             <div className={classNames(styles.page, oswaltFont.className)}>
                 <DebugGrid size={new Vector(5, 5)} />
@@ -37,7 +37,8 @@ export default function GalleryPage() {
                 </div>
                 <main>
                     <WelcomeSection variant="SIDEPAGE" />
-                    <Section>
+                    <Section>{/* <- TODO: !! Make propper secrion from this */}
+                        {/* TODO: !! Translate */}
                         <h2>Gallery</h2>
                         <p>Images used on this page are generated using MidJourney:</p>
 

@@ -18,7 +18,7 @@ const oswaltFont = Oswald({ weight: '400', style: 'normal', subsets: ['latin', '
 export default function PavolHejnyPage() {
     return (
         <>
-            <AppHead />
+            <AppHead /* <- TODO: !! Use subtitle and translate it */ />
 
             <div className={classNames(styles.page, oswaltFont.className)}>
                 <DebugGrid size={new Vector(3, 5)} />
