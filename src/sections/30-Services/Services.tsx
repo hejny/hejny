@@ -1,5 +1,6 @@
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
+import { Vector } from 'xyzt';
 import { CaveOfIdeasInLightbulbWithTransparentLookThrD3273ad0097f4011B7991c379bb05ee3_cropped_Image } from '../../../public/wallpapers/Pavol_Hejn_cave_of_ideas_in_lightbulb_with_transparent_look_thr_d3273ad0-097f-4011-b799-1c379bb05ee3_cropped_Image';
 import { CaveWithPresentationDec31ff23b9d42b9B84fF87d02d6a391_cropped_Image } from '../../../public/wallpapers/Pavol_Hejn_cave_with_presentation_dec31ff2-3b9d-42b9-b84f-f87d02d6a391_cropped_Image';
 import { CaveWithPrototypingLaboratoryCa9b82b90ded44a3B7ec344ebb539439_cropped_Image } from '../../../public/wallpapers/Pavol_Hejn_cave_with_prototyping_laboratory_ca9b82b9-0ded-44a3-b7ec-344ebb539439_cropped_Image';
@@ -7,6 +8,9 @@ import { Article } from '../../components/Article/Article';
 import { Item } from '../../components/Items/Item';
 import { Items } from '../../components/Items/Items';
 import { Section } from '../../components/Section/Section';
+import { Color } from '../../utils/color/Color';
+import { createParticlesDrawingEffect } from '../../utils/Drawing/createParticlesDrawingEffect';
+import { effectToRef } from '../../utils/Drawing/effectToRef';
 import styles from './Services.module.css';
 
 export function ServicesSection() {
@@ -57,7 +61,31 @@ export function ServicesSection() {
                 </a>
             </Items>
 
-            <Link className="button button-featured" href="#contact">
+            <Link
+                className="button button-featured"
+                href="#contact"
+                ref={effectToRef(
+                    createParticlesDrawingEffect({
+                        generatePosition(cursorPosition) {
+                            const distance = Math.random() * 30;
+                            const rotation = Math.random() * Math.PI * 2;
+                            return cursorPosition.add(Vector.fromPolar(rotation, distance));
+                        },
+                        generateSize() {
+                            return Math.random() * 5 + 3;
+                        },
+                        generateColor() {
+                            return Color.fromString('#c40232' /* <- [🎨] */);
+                        },
+                        generateLivetime() {
+                            return Math.random() * 2000 + 100;
+                        },
+                        generateDistance() {
+                            return Math.random() * 100 + 50;
+                        },
+                    }),
+                )}
+            >
                 <Article content={t('Services.action')} isEnhanced />
                 {/* <- !!! Stars ✨ around this button */}
             </Link>

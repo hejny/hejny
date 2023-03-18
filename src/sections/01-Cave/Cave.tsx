@@ -10,7 +10,6 @@ export function CaveSection() {
 }
 
 /**
- * TODO: !!! Starry ✨ effect without any interaction
  * TODO: !! Extend the cave with Dalle-2
  *  TODO: Maybe remove - this is just wrapper component
  */
