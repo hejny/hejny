@@ -77,7 +77,7 @@ export function createParalaxEffect<TElement extends HTMLElement>(options: Paral
                         '%c⚫',
                         spaceTrim(`
                             display: inline-block;
-                
+
                             ${`` /* Note: width and height can not be used in console.log* /}
                             padding-left: 10px;
                             padding-right: 90px;
@@ -86,7 +86,7 @@ export function createParalaxEffect<TElement extends HTMLElement>(options: Paral
 
                             background-color: red;
                             border: 2px solid black
-                    
+
                         `)
                             .split('\n')
                             .join(''),
