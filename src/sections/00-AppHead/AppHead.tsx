@@ -20,18 +20,30 @@ export function AppHead(props: AppHeadProps) {
     return (
         <>
             <Head>
-                <title>{`${!subtitle ? `` : `${subtitle} ✨ `}${title}`}</title>
-                <meta name="description" content={description} />
-                <link rel="icon" href={favicon.src} />
-
+                {/* Technical */}
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width" />
 
+                {/* Primary meta tags */}
+                <title>{`${!subtitle ? `` : `${subtitle} ✨ `}${title}`}</title>
+                <meta name="description" content={description} />
+                <link rel="icon" href={favicon.src} />
+                <meta name="theme-color" content="#000000" />
+
+                {/* Facebook */}
                 <meta property="og:title" content={title} />
                 <meta property="og:description" content={description} />
                 <meta property="og:image" content={cave_of_ideas_with_transparent_look_through.src} />
 
-                <meta name="theme-color" content="#000000" />
+                {/* Twitter */}
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta
+                    property="twitter:url"
+                    content="https://prototyping.hejny.org/" /* <- TODO: Self URL into some configuration */
+                />
+                <meta property="twitter:title" content={title} />
+                <meta property="twitter:description" content={description} />
+                <meta property="twitter:image" content={cave_of_ideas_with_transparent_look_through.src} />
             </Head>
             <LanguagePicker />
         </>
