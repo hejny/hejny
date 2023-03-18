@@ -102,10 +102,10 @@ export function createParticlesDrawingEffect<TElement extends HTMLElement>(
 
                     const livetime = generateLivetime();
 
-                    /* not await */ particle.fadeOut(livetime * 10 /* <- !!! Configurable from outside */);
+                    /* not await */ particle.fadeOut(livetime * 10 /* <- !! Configurable from outside */);
                 },
                 async waiter() {
-                    await forTime(Math.random() * 1000 * 0.3 /* <- !!! Configurable from outside */);
+                    await forTime(Math.random() * 1000 * 0.3 /* <- !! Configurable from outside */);
                 },
             }),
         );
