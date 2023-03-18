@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { forTime } from 'waitasecond';
 import { Vector } from 'xyzt';
 import { Color } from '../../src/utils/color/Color';
 import { createParalaxEffect } from '../../src/utils/Drawing/createParalaxEffect';
@@ -119,6 +120,11 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
                             generateDistance() {
                                 return Math.random() * 100 + 50;
                             },
+                        }).addCopilot(async () => {
+                            await forTime(Math.random() * 1000);
+                            return new Vector(0, 0);
+
+                            // !!! Implement some effect
                         }),
                     ),
                 )}

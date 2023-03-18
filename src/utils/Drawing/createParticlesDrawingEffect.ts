@@ -1,5 +1,5 @@
 import { Registration } from 'destroyable';
-import { Vector } from 'xyzt';
+import { IVector, Vector } from 'xyzt';
 import { Color } from '../color/Color';
 import { Drawing } from './Drawing';
 import { Effect } from './effect';
@@ -33,12 +33,23 @@ interface ParticlesDrawingEffectOptions {
     generateDistance(): number;
 }
 
+type ParticlesDrawingEffect<TElement extends HTMLElement> = Effect<TElement> & {
+    /**
+     * Creates automatic-acter which draws particles automatically
+     *
+     * @param drawCopilotTick is one tick of this automatic-acter which should "sleep" by awaiting itself
+     */
+    addCopilot(drawCopilotTick: () => Promise<IVector>): ParticlesDrawingEffect<TElement>;
+};
+
 export function createParticlesDrawingEffect<TElement extends HTMLElement>(
     options: ParticlesDrawingEffectOptions,
-): Effect<TElement> {
+): ParticlesDrawingEffect<TElement> {
     const { generatePosition, generateSize, generateColor, generateLivetime, generateDistance } = options;
 
-    return (element: TElement) => {
+    const copilots = [];
+
+    const effect = (element: TElement) => {
         let drawing: Drawing | null = null;
 
         function pointerenterHandler(event: PointerEvent) {
@@ -88,6 +99,15 @@ export function createParticlesDrawingEffect<TElement extends HTMLElement>(
             };
         });
     };
+
+    effect.addCopilot = (drawCopilotTick: () => Promise<IVector>) => {
+        // !!! This should be inside a destoyable loop
+        while (true) {
+            drawCopilotTick;
+        }
+    };
+
+    return effect;
 }
 
 /**
