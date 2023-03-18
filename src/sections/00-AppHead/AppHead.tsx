@@ -32,12 +32,17 @@ export function AppHead(props: AppHeadProps) {
                 <link rel="icon" href={favicon.src} />
                 <meta name="theme-color" content="#000000" />
 
-                {/* Facebook */}
+                {/* Open Graph (Facebook) */}
                 <meta property="og:title" content={title} />
                 <meta property="og:site_name" content={title} />
                 <meta property="og:description" content={description} />
                 <meta property="og:image" content={homeUrl + cave_of_ideas_with_transparent_look_through.src} />
                 <meta property="og:url" content={homeUrl} />
+                <meta property="og:type" content="website" /* <- TODO: Make this dynamic */ />
+
+                {/* Facebook */}
+                <meta property="fb:page_id" content="hejny" />
+                <meta property="fb:app_id" content="179993545901102" />
 
                 {/* Twitter */}
                 <meta property="twitter:card" content="summary_large_image" />
