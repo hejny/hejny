@@ -32,8 +32,13 @@ export function AppHead(props: AppHeadProps) {
 
                 {/* Facebook */}
                 <meta property="og:title" content={title} />
+                <meta property="og:site_name" content={title} />
                 <meta property="og:description" content={description} />
                 <meta property="og:image" content={cave_of_ideas_with_transparent_look_through.src} />
+                <meta
+                    property="og:url"
+                    content="https://prototyping.hejny.org/" /* <- TODO: Self URL into some configuration */
+                />
 
                 {/* Twitter */}
                 <meta property="twitter:card" content="summary_large_image" />
