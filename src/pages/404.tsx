@@ -16,7 +16,7 @@ const oswaltFont = Oswald(/* TODO: Specify */);
 export default function NotFoundPage() {
     return (
         <>
-            <AppHead subtitle="Gallery" />
+            <AppHead subtitle="Not found" /* <- TODO: !! Translate */ />
 
             <div className={classNames(styles.page, oswaltFont.className)}>
                 <DebugGrid size={new Vector(5, 5)} />
