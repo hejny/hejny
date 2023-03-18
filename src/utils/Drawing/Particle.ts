@@ -11,9 +11,9 @@ interface ParticleOptions {
 }
 
 export class Particle extends Destroyable implements IDestroyable {
-    private readonly particleElement: HTMLElement;
+    public readonly particleElement: HTMLElement;
 
-    public constructor(private readonly options: ParticleOptions) {
+    public constructor(public readonly options: ParticleOptions) {
         super();
 
         this.particleElement = document.createElement('div');
