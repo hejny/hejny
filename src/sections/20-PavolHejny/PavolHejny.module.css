@@ -23,13 +23,9 @@
         /* <- TODO: [💫] What is the propper place for this radial-gradient, in JSX or in CSS module + DRY */;
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 400px) {
     .PavolHejnySection img {
-        float: none;
-        width: 100%;
+        width: 50vw;
         height: auto;
-        object-fit: cover;
-        object-position: 50% 30%;
-        box-shadow: none;
     }
 }
