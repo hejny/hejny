@@ -87,6 +87,7 @@ export function ServicesSection() {
                 )}
             >
                 <Article content={t('Services.action')} isEnhanced />
+                {/* <- !!! Stars ✨ around this button */}
             </Link>
         </Section>
     );
