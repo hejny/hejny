@@ -17,6 +17,8 @@ export function AppHead(props: AppHeadProps) {
     const title = removeMarkdownFormatting(removeMarkdownLinks(t('title') || ''));
     const description = removeMarkdownFormatting(removeMarkdownLinks(t('description') || ''));
 
+    const homeUrl = 'https://prototyping.hejny.org'; /* <- TODO: Self URL into some configuration */
+
     return (
         <>
             <Head>
@@ -34,21 +36,15 @@ export function AppHead(props: AppHeadProps) {
                 <meta property="og:title" content={title} />
                 <meta property="og:site_name" content={title} />
                 <meta property="og:description" content={description} />
-                <meta property="og:image" content={cave_of_ideas_with_transparent_look_through.src} />
-                <meta
-                    property="og:url"
-                    content="https://prototyping.hejny.org/" /* <- TODO: Self URL into some configuration */
-                />
+                <meta property="og:image" content={homeUrl + cave_of_ideas_with_transparent_look_through.src} />
+                <meta property="og:url" content={homeUrl} />
 
                 {/* Twitter */}
                 <meta property="twitter:card" content="summary_large_image" />
-                <meta
-                    property="twitter:url"
-                    content="https://prototyping.hejny.org/" /* <- TODO: Self URL into some configuration */
-                />
+                <meta property="twitter:url" content={homeUrl} />
                 <meta property="twitter:title" content={title} />
                 <meta property="twitter:description" content={description} />
-                <meta property="twitter:image" content={cave_of_ideas_with_transparent_look_through.src} />
+                <meta property="twitter:image" content={homeUrl + cave_of_ideas_with_transparent_look_through.src} />
             </Head>
             <LanguagePicker />
         </>
