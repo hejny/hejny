@@ -39,9 +39,7 @@ type ParticlesDrawingEffect<TElement extends HTMLElement> = Effect<TElement> & {
      *
      * @param drawCopilotTick is one tick of this automatic-acter which should "sleep" by awaiting itself
      */
-    addCopilot(
-        drawCopilotTick: () => Promise<IVector>,
-    ): ParticlesDrawingEffect<TElement>;
+    addCopilot(drawCopilotTick: () => Promise<IVector>): ParticlesDrawingEffect<TElement>;
 };
 
 export function createParticlesDrawingEffect<TElement extends HTMLElement>(
@@ -102,12 +100,12 @@ export function createParticlesDrawingEffect<TElement extends HTMLElement>(
         });
     };
 
-    effect.addCopilot = ( drawCopilotTick: () => Promise<IVector>)=>{
-
-        while(true){
-            drawCopilotTick
+    effect.addCopilot = (drawCopilotTick: () => Promise<IVector>) => {
+        // !!! This should be inside a destoyable loop
+        while (true) {
+            drawCopilotTick;
         }
-    }
+    };
 
     return effect;
 }

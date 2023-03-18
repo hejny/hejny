@@ -123,6 +123,8 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
                         }).addCopilot(async () => {
                             await forTime(Math.random() * 1000);
                             return new Vector(0, 0);
+
+                            // !!! Implement some effect
                         }),
                     ),
                 )}
