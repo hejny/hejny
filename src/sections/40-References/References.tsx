@@ -85,7 +85,7 @@ export function ReferencesSection(props: ReferencesProps) {
                                 Je jedním z top 10 lidí v Česku na rychlé prototypování aplikací.
 
                                 IT je pro něj nejen denním chlebíčkem, ale také životním koníčkem.
-                             
+
                              */}
                         </Item.Description>
                     </Item>
