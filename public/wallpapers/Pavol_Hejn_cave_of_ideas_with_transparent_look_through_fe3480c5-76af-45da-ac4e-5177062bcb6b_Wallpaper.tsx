@@ -38,7 +38,7 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
                     justifyContent: 'end',
                     alignItems: 'end',
 
-                    paddingBottom: 120,
+                    paddingBottom: 80,// !!!optimize 
                     paddingRight: 5,
                 }}
             >
