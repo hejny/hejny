@@ -18,17 +18,29 @@ export function PavolHejnySection(props: PavolHejnyProps) {
         <Section id="PavolHejny" className={styles.PavolHejnySection}>
             <h2>{t('PavolHejny.title')}</h2>
 
-            <Image
-                alt="Portrait photo of Pavol Hejný"
-                priority
-                src={pavolHejny}
-                // TODO: [🧑] Make some <ImageGravatar component; This is me@pavolhejny.com
-                //src="https://www.gravatar.com/avatar/10bceb8965947164502b4e7b3314733d?s=1024"
-                // width={1024}
-                // height={1024}
-                draggable="false"
-                placeholder="blur"
-            />
+            {/* !!! Tidy up the commit with clipping */}
+            <svg width="0" height="0">
+                <defs>
+                    <clipPath id="squircle" clipPathUnits="objectBoundingBox">
+                        <path d="M .5,0 C .1,0 0,.1 0,.5 0,.9 .1,1 .5,1 .9,1 1,.9 1,.5 1,.1 .9,0 .5,0 Z"></path>
+                    </clipPath>
+                </defs>
+            </svg>
+
+            <div className={styles.person}>
+                <Image
+                    alt="Portrait photo of Pavol Hejný"
+                    priority
+                    src={pavolHejny}
+                    // TODO: [🧑] Make some <ImageGravatar component; This is me@pavolhejny.com
+                    //src="https://www.gravatar.com/avatar/10bceb8965947164502b4e7b3314733d?s=1024"
+                    // width={1024}
+                    // height={1024}
+                    draggable="false"
+                    placeholder="blur"
+                />
+                <div className={styles.personBackground} />
+            </div>
 
             <Article content={t('PavolHejny.content')} isEnhanced />
         </Section>
