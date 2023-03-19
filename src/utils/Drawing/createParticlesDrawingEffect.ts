@@ -1,5 +1,5 @@
 import { Registration } from 'destroyable';
-import { forTime } from 'waitasecond';
+import { forTime, forAnimationFrame  } from 'waitasecond';
 import { Vector } from 'xyzt';
 import { Color } from '../color/Color';
 import { Drawing } from './Drawing';
@@ -105,6 +105,7 @@ export function createParticlesDrawingEffect<TElement extends HTMLElement>(
                     /* not await */ particle.fadeOut(livetime * 3 /* <- !! Configurable from outside */);
                 },
                 async waiter() {
+                    await forAnimationFrame(/* To pause when sleeping; for example when mobile screen off */);
                     await forTime(Math.random() * 1000 * 0.3 /* <- !! Configurable from outside */);
                 },
             }),
