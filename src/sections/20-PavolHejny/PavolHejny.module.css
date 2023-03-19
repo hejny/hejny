@@ -25,8 +25,8 @@
     box-shadow: #00000077 -25px 25px 0px; /* <- TODO: Paralax effect on shadow */
     /* <- TODO: Make box-shadow work after clip-path effect */
 
-    /*background: #ccc; /* <- !!![8] Remove*/
-    /*backdrop-filter: blur(0); /* <- !!![8] Remove*/
+    /*background: #ccc; /* <- TODO: !!![8] Remove*/
+    /*backdrop-filter: blur(0); /* <- TODO: !!![8] Remove*/
 
     overflow: clip;
     /*clip-path: margin-box;/**/
@@ -46,7 +46,7 @@
 }
 
 .person .personBackground {
-    /*display: none; /* <- !!![8] Remove*/
+    /*display: none; /* <- TODO: !!![8] Remove*/
 
     z-index: 1;
 

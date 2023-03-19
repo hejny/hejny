@@ -83,7 +83,7 @@ export function createParticlesDrawingEffect<TElement extends HTMLElement>(
 
         return Registration.join(
             Registration.create(() => {
-                element.addEventListener('pointerenter', pointerenterHandler);
+                element.addEventListener('pointerenter', pointerenterHandler); /* <- TODO: !!! Better on mobile */
                 window.addEventListener('pointermove', pointermoveHandler);
 
                 return () => {

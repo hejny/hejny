@@ -18,7 +18,7 @@ export function PavolHejnySection(props: PavolHejnyProps) {
         <Section id="PavolHejny" className={styles.PavolHejnySection}>
             <h2>{t('PavolHejny.title')}</h2>
 
-            {/* !!! Tidy up the commit with clipping */}
+            {/* TODO: !!! Tidy up the commit with clipping */}
             <svg width="0" height="0">
                 <defs>
                     <clipPath id="squircle" clipPathUnits="objectBoundingBox">

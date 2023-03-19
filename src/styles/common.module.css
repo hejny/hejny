@@ -69,7 +69,7 @@
     color: var(--normal-text-color);
 }
 
-/* !!! move to welcome section */
+/* TODO: !!! move to welcome section */
 .page h1,
 .page h2,
 .page b,
@@ -77,9 +77,9 @@
     color: var(--highlighted-text-color);
 }
 
-.page h1{
-line-height: 70%;
-margin-bottom: 60px;
+.page h1 {
+    line-height: 70%;
+    margin-bottom: 60px;
 }
 
 .page h2 {
@@ -95,7 +95,6 @@ margin-bottom: 60px;
     /*/
     outline: 1px dotted purple;
     /**/
-
 
     font-size: 85px;
     white-space: nowrap;
