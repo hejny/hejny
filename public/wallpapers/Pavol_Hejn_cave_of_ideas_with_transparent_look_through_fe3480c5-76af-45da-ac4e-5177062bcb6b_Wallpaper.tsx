@@ -83,6 +83,7 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
                     createParalaxEffect({
                         distance: 1,
                         reactOn: ['POINTER'],
+                        applyOn: 'ELEMENT',
                     }),
                 )}
                 */
@@ -101,6 +102,7 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
                         createParalaxEffect({
                             distance: -1, // <- TODO: -1 here is bit ugly - either some new option isInverse OR not distance but ammount,...or some better name?
                             reactOn: ['SCROLL'],
+                            applyOn: 'ELEMENT',
                         }),
                         createParticlesDrawingEffect({
                             generatePosition(cursorPosition) {

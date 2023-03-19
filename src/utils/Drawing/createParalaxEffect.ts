@@ -5,6 +5,7 @@ import { Effect } from './effect';
 interface ParalaxEffectOptions {
     distance: number;
     reactOn: Array<'SCROLL' | 'POINTER'>;
+    applyOn: 'ELEMENT' | 'SHADOW';
 
     debug?: {
         tag: string;
@@ -12,7 +13,7 @@ interface ParalaxEffectOptions {
 }
 
 export function createParalaxEffect<TElement extends HTMLElement>(options: ParalaxEffectOptions): Effect<TElement> {
-    const { distance, reactOn, debug } = options;
+    const { distance, reactOn, applyOn, debug } = options;
 
     return (element: TElement) => {
         let windowSize: Vector;
@@ -100,8 +101,12 @@ export function createParalaxEffect<TElement extends HTMLElement>(options: Paral
                 console.info(debug.tag, { pointerPosition, scrollPosition, cursorRelativePosition, offcenter });
             }
 
-            // scale(1.01) translate(...
-            element.style.transform = `translate(${offcenter.x}px,${offcenter.y}px)`;
+            if (applyOn === 'ELEMENT') {
+                // scale(1.01) translate(...
+                element.style.transform = `translate(${offcenter.x}px,${offcenter.y}px)`;
+            } else if (applyOn === 'SHADOW') {
+                element.style.boxShadow = `#00000077 ${offcenter.x}px ${offcenter.y}px 0px` /* <- TODO: !!! At first take initial box-shadow from css */;
+            }
         }
 
         resize();
@@ -112,6 +117,8 @@ export function createParalaxEffect<TElement extends HTMLElement>(options: Paral
 }
 
 /**
+ * TODO: !!! Make origin for SCROLL actual position of element on page NOT top of the page
+ * TODO: !!! Apply scroll initally to avoid blink when scrolling on already initially scrolled page
  * TODO: [1] Propper effect cleanup
  * TODO: [1] LIB destroyable better way how to work with addEventListener/removeEventListener
  * TODO: [🥟] Have windowSize on one place automatically updated

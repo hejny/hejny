@@ -3,6 +3,8 @@ import Image from 'next/image';
 import pavolHejny from '../../../public/people/pavol-hejny.transparent.png';
 import { Article } from '../../components/Article/Article';
 import { Section } from '../../components/Section/Section';
+import { createParalaxEffect } from '../../utils/Drawing/createParalaxEffect';
+import { effectToRef } from '../../utils/Drawing/effectToRef';
 import styles from './PavolHejny.module.css';
 
 interface PavolHejnyProps {
@@ -28,6 +30,14 @@ export function PavolHejnySection(props: PavolHejnyProps) {
                 // height={1024}
                 draggable="false"
                 placeholder="blur"
+                ref={effectToRef(
+                    createParalaxEffect({
+                        distance: 0.5,
+                        reactOn: ['SCROLL'] /* <- TODO: !!! Tweak to perfection */,
+                        applyOn: 'SHADOW',
+                    }),
+                    // <- TODO: !!! Also paralax Background - Maybe in one createParalaxEffect OR join two
+                )}
             />
 
             <Article content={t('PavolHejny.content')} isEnhanced />
