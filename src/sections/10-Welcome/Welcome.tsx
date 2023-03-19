@@ -30,11 +30,11 @@ export function WelcomeSection(props: WelcomeProps) {
                             alt={removeMarkdownFormatting(removeMarkdownLinks(t('title') || ''))}
                             src={logoHandrittenEn}
                         />
-                        // TODO: !!! Pick the best one
-                        // TODO: !!! Logo more thick
-                        // TODO: !!! Glow around the logo
-                        // TODO: !!! Mobile wrap / size
-                        // TODO: !!! CS should be also handwritten
+                        // TODO: !!! Pick the best one handwritten logo
+                        // TODO: !!! All handwritten logos more thick
+                        // TODO: !!! Glow around the handwritten logo
+                        // TODO: !!! Handwritten logo mobile wrap / size
+                        // TODO: !!! Logo CS should be also handwritten
                     )}
 
                     {i18n.language === 'cs' && <Article content={t('title')} isEnhanced />}
