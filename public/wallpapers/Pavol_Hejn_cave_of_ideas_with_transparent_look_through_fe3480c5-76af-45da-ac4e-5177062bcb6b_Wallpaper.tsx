@@ -27,6 +27,7 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
         >
             <div
                 style={{
+// !!! ALL styles to css
                     zIndex: 4,
                     order: 4,
 
@@ -37,7 +38,7 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
                     justifyContent: 'end',
                     alignItems: 'end',
 
-                    paddingBottom: 60,
+                    paddingBottom: 120,
                     paddingRight: 5,
                 }}
             >
