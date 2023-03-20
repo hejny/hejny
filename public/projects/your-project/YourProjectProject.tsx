@@ -22,7 +22,7 @@ import pavolHejnColoringBookBlackAndWhiteIllustrationOutlineOFbf45e15A73d474c8d0
  */
 export function YourProjectProject() {
     return (
-        <a href="https://pavolhejny.com/documents/projects.html" target="_blank" rel="noreferrer">
+        <a href="/#contact" target="_blank" rel="noreferrer">
             <Item>
                 <Item.Title>
                     <Translate locale="en">Your project</Translate>

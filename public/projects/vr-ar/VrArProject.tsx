@@ -22,7 +22,11 @@ import pavolHejnColoringBookBlackAndWhiteIllustrationOutlineO850cbc2d90884113Bdb
  */
 export function VrArProject() {
     return (
-        <a href="https://pavolhejny.com/documents/projects.html#-vr-paint" target="_blank" rel="noreferrer">
+        <a
+            href="https://github.com/hejny/hejny/blob/main/documents/projects.md#-vr-paint"
+            target="_blank"
+            rel="noreferrer"
+        >
             <Item>
                 <Item.Title>
                     <Translate locale="en">VR/AR</Translate>
@@ -37,7 +41,7 @@ export function VrArProject() {
                         </p>
                     </Translate>
                     <Translate locale="cs">
-                        <p>TODO: !!</p>
+                        <p>!!</p>
                     </Translate>
                 </Item.Description>
                 <Item.Image>

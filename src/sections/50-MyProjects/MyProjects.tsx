@@ -30,13 +30,12 @@ export function MyProjectsSection() {
                 <YourProjectProject />
             </Items>
 
-            <Link className="button" href="https://pavolhejny.com/documents/projects.html">
+            <Link className="button" href="https://github.com/hejny/hejny/blob/main/documents/projects.md">
                 {t('Projects.all-projects')}
             </Link>
         </Section>
     );
 }
-
 
 /**
  * TODO: Maybe rename to just Projects
