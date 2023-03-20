@@ -4,6 +4,7 @@ module.exports = {
     i18n: {
         defaultLocale: 'en',
         locales: ['en', 'cs'],
+        localeDetection: false,
         domains: [
             {
                 domain: 'www.pavolhejny.com',
