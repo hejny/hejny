@@ -10,11 +10,11 @@ module.exports = {
 
     domains: [
         {
-            domain: 'pavolhejny.com',
+            domain: 'www.pavolhejny.com',
             defaultLocale: 'en',
         },
         {
-            domain: 'pavolhejny.cz',
+            domain: 'www.pavolhejny.cz',
             defaultLocale: 'cs',
         },
     ],
