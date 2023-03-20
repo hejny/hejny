@@ -1,5 +1,4 @@
 import { useTranslation } from 'next-i18next';
-import Link from 'next/link';
 import { BirdsProject } from '../../../public/projects/birds/BirdsProject';
 import { CollboardProject } from '../../../public/projects/collboard/CollboardProject';
 import { CzechEventsProject } from '../../../public/projects/czech-events/CzechEventsProject';
@@ -30,9 +29,9 @@ export function MyProjectsSection() {
                 <YourProjectProject />
             </Items>
 
-            <Link className="button" href="https://github.com/hejny/hejny/blob/main/documents/projects.md">
+            <a className="button" href="https://github.com/hejny/hejny/blob/main/documents/projects.md">
                 {t('Projects.all-projects')}
-            </Link>
+            </a>
         </Section>
     );
 }
