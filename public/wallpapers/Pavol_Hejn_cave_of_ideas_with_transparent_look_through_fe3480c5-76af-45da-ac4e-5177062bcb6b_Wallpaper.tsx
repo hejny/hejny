@@ -27,7 +27,7 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
         >
             <div
                 style={{
-// !!! ALL styles to css
+// TODO: !!! ALL styles to css
                     zIndex: 4,
                     order: 4,
 
@@ -38,7 +38,7 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
                     justifyContent: 'end',
                     alignItems: 'end',
 
-                    paddingBottom: 80,// !!!optimize 
+                    paddingBottom: 80,// TODO: !!!optimize 
                     paddingRight: 5,
                 }}
             >
@@ -139,7 +139,7 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
 
                         objectFit: 'cover',
                         objectPosition: '50% 80%',
-backgroundColor: '#444400', // !!! do not blink + bpe format !!! TODOs
+backgroundColor: '#444400', // TODO: !!! do not blink + bpe format TODO: !!! TODOs
                     }}
                 />
             </div>
@@ -148,7 +148,7 @@ backgroundColor: '#444400', // !!! do not blink + bpe format !!! TODOs
 }
 
 /**
-!!! outpaint for desktop OR upscale to have more details 
+TODO: !!! outpaint for desktop OR upscale to have more details 
  * Note: [0] Foreground <Image> is not wrapped into <div> but background is because ref works on <div> but not <Image>
  * Note+TODO: [1] Is it important to explicitelly set width on the images for the optimization?
  * Note+TODO: [3] Has this any effect on png images; tweaking with quality but nothing changed in page load size

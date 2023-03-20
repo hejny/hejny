@@ -37,7 +37,7 @@ export function VrArProject() {
                         </p>
                     </Translate>
                     <Translate locale="cs">
-                        <p>!!</p>
+                        <p>TODO: !!</p>
                     </Translate>
                 </Item.Description>
                 <Item.Image>
