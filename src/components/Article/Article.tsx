@@ -76,7 +76,7 @@ export function Article(props: IArticleProps) {
                 */
             />
             {/*
-          TODO: <style> can not be in <div> because of AMP
+            TODO: <style> can not be in <div> because of AMP
 
             <style>
                  [0] !currentSubsection
@@ -87,7 +87,7 @@ export function Article(props: IArticleProps) {
                         }
 
                         /*
-                      TODO: Also all items to the next heading
+                        TODO: Also all items to the next heading
                         #${currentSubsection} + * {
                           color: red;
                         }
@@ -112,6 +112,6 @@ const converter = new Converter({
 });
 
 /**
- * TODO: [0] Use has if isHashUsed is true
+ * TODO:[0] Use has if isHashUsed is true
  * TODO: Maybe rename to <Content/> or <MarkdownContent/> or <Markdown/>
  */

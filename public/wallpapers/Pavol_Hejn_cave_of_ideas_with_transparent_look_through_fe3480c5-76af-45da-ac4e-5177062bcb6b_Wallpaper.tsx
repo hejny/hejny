@@ -150,6 +150,6 @@ backgroundColor: '#444400', // !!! do not blink + bpe format !!! TODOs
 /**
 !!! outpaint for desktop OR upscale to have more details 
  * Note: [0] Foreground <Image> is not wrapped into <div> but background is because ref works on <div> but not <Image>
- * Note+ TODO: [1] Is it important to explicitelly set width on the images for the optimization?
- * Note+ TODO: [3] Has this any effect on png images; tweaking with quality but nothing changed in page load size
+ * Note+TODO: [1] Is it important to explicitelly set width on the images for the optimization?
+ * Note+TODO: [3] Has this any effect on png images; tweaking with quality but nothing changed in page load size
  */

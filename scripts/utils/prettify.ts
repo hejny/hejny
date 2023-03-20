@@ -22,7 +22,7 @@ export async function prettify(fileContents: string, parser = 'typescript'): Pro
             ${block(spaceTrim(fileContents))}
 
             /*
-              TODO: ${'!'}${'!'}${'!'} ${(error as Error).name} occurred during prettify:
+                TODO: ${'!'}${'!'}${'!'} ${(error as Error).name} occurred during prettify:
 
 
                 ${block((error as Error).message)}

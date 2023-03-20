@@ -124,7 +124,7 @@ export async function getStaticProps({ locale }: { locale: string }) {
  * TODO: [🪒] Can be getStaticProps shared between all pages?
  * TODO: [🪒] Can be fonts shared between all pages?
  * TODO: Write better about how are images created
- *     TODO: Connect with section/article about AI generative technology
+ *       TODO: Connect with section/article about AI generative technology
  * TODO: Some image frames
  * TODO: Make some menu
  * TODO: [🧈] Best way how to share page css

@@ -47,7 +47,7 @@ async function generatePatternsLibrary({ isCommited }: { isCommited: boolean }) 
         const entityName =
             normalizeTo_snake_case(basename(entityPath)) + '_' + index; /* <- TODO: Probbably some beter name */
         return { entityName, entityPath };
-    }); /* TODO: Consistent order> .sort(()=>{
+    }); /*  TODO: Consistent order> .sort(()=>{
 
     }) */
 
