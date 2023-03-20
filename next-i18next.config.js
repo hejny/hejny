@@ -7,6 +7,17 @@ module.exports = {
     },
     localePath: join(__dirname, 'locales'),
     localeExtension: 'yml',
+
+    domains: [
+        {
+            domain: 'example.com',
+            defaultLocale: 'pavolhejny.com',
+        },
+        {
+            domain: 'example.nl',
+            defaultLocale: 'pavolhejny.cz',
+        },
+    ],
 };
 
 /**
