@@ -37,9 +37,9 @@ export function ReferencesSection(props: ReferencesProps) {
                             />
                         </Item.PersonImage>
                         <Item.Title>
-                            <Link href="https://www.tomas-studenik.com/" target={'_blank'}>
+                            <a href="https://www.tomas-studenik.com/" target="_blank" rel="noreferrer">
                                 Tomáš Studeník
-                            </Link>
+                            </a>
                         </Item.Title>
                         <Item.Description>
                             <Translate locale="en">
@@ -108,7 +108,7 @@ export function ReferencesSection(props: ReferencesProps) {
                             />
                         </Item.PersonImage>
                         <Item.Title>
-                            <Link href="http://www.jansedo.cz/" target={'_blank'}>
+                            <Link href="http://www.jansedo.cz/" target="_blank">
                                 Jan Šedo
                             </Link>
                         </Item.Title>
@@ -160,7 +160,7 @@ export function ReferencesSection(props: ReferencesProps) {
                             />
                         </Item.PersonImage>
                         <Item.Title>
-                            <Link href="https://www.linkedin.com/in/themaxkozlov" target={'_blank'}>
+                            <Link href="https://www.linkedin.com/in/themaxkozlov" target="_blank">
                                 Max Kozlov
                             </Link>
                         </Item.Title>
@@ -219,7 +219,7 @@ export function ReferencesSection(props: ReferencesProps) {
                             />
                         </Item.PersonImage>
                         <Item.Title>
-                            <Link href="https://www.linkedin.com/in/bob-kartous-5b472526/" target={'_blank'}>
+                            <Link href="https://www.linkedin.com/in/bob-kartous-5b472526/" target="_blank">
                                 Bob Kartous
                             </Link>
                         </Item.Title>
@@ -263,7 +263,7 @@ export function ReferencesSection(props: ReferencesProps) {
                             />
                         </Item.PersonImage>
                         <Item.Title>
-                            <Link href="http://www.xxxxx.cz/" target={'_blank'}>
+                            <Link href="http://www.xxxxx.cz/" target="_blank">
                                 Xxxx Xxxx
                             </Link>
                         </Item.Title>
