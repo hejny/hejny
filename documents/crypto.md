@@ -27,3 +27,5 @@
 -   **Stellar:** *(preparing)*
 -   **Ripple:** *(preparing)*
 -   **Tezos:** *(preparing)*
+
+<!-- !!! Verify the addresses after the transfer -->
