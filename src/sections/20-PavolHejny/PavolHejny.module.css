@@ -22,12 +22,6 @@
     margin-bottom: 25px;
     border-radius: 50px; /* <- TODO: !!! ACRY irelevant */
 
-    box-shadow: #00000077 -25px 25px 0px; /* <- TODO: Paralax effect on shadow */
-    /* <- TODO: Make box-shadow work after clip-path effect */
-
-    /*background: #ccc; /* <- TODO: !!![8] Remove*/
-    /*backdrop-filter: blur(0); /* <- TODO: !!![8] Remove*/
-
     overflow: clip;
     /*clip-path: margin-box;/**/
     /*clip-path: margin-box circle(25% at 25% 25%);/**/
@@ -46,10 +40,7 @@
 }
 
 .person .personBackground {
-    /*display: none; /* <- TODO: !!![8] Remove*/
-
     z-index: 1;
-
     position: fixed;
     top: 0;
     bottom: 0;
@@ -57,10 +48,32 @@
     right: 0;
     background-image: radial-gradient(
         circle at 20% 50%,
-        #b4952c 0%,
-        #000000 120%
-    ); /* <- TODO: !! Maybe better background */
+        #ce9243 0%,
+        #000000 80%
+    ); /* <- TODO: !! Maybe better background:
+                    - Image
+                    - Pattern
+                    - #b4952c
+                    - #ce9243
+                    -
+                    -
+                    -
+
+    
+        */
     /*background-image: url(../../../public/patterns/Pavol_Hejn_Wallpaper_by_Titian_1177b75d-6e65-49ba-ba53-c3a5861dbc8d.png);*/
+}
+
+.personShadow {
+    z-index: 0;
+    position: absolute;
+}
+
+.personShadow .personShadowInner {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    transform: translate(-25px, 25px) /* <- TODO: Paralax effect on shadow */;
 }
 
 @media screen and (max-width: 400px) {
