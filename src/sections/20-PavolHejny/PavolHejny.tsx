@@ -50,7 +50,7 @@ export function PavolHejnySection(props: PavolHejnyProps) {
                         <path
                             d="M .5,0 C .1,0 0,.1 0,.5 0,.9 .1,1 .5,1 .9,1 1,.9 1,.5 1,.1 .9,0 .5,0 Z" /* <- TODO: [1] DRY the shape */
                             style={{
-                                fill: '#77777777' /* <- TODO: Color (and probbably shape) should be in CSS not in HTML */,
+                                fill: '#33333377' /* <- TODO: Color (and probbably shape) should be in CSS not in HTML */,
                             }}
                         ></path>
                     </svg>
