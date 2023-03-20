@@ -139,7 +139,7 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
 
                         objectFit: 'cover',
                         objectPosition: '50% 80%',
-backgroundColor: '#00ff00', // !!! do not blink + bpe format !!! TODOs
+backgroundColor: '#444400', // !!! do not blink + bpe format !!! TODOs
                     }}
                 />
             </div>
