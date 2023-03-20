@@ -1,5 +1,8 @@
 module.exports = {
     ignoreWorkflows: [
+        'contributing',
+        'partners',
+        'badges',
         //'aiGeneratedWallpaperPrepare',
         //'aiGeneratedWallpaperLand',
         'aiGeneratedWallpaperTrigger',
