@@ -2,22 +2,21 @@ const { join } = require('path');
 
 module.exports = {
     i18n: {
-        defaultLocale: 'en',
+        // defaultLocale: 'en',
         locales: ['en', 'cs'],
+        domains: [
+            {
+                domain: 'www.pavolhejny.com',
+                defaultLocale: 'en',
+            },
+            {
+                domain: 'www.pavolhejny.cz',
+                defaultLocale: 'cs',
+            },
+        ],
     },
     localePath: join(__dirname, 'locales'),
     localeExtension: 'yml',
-
-    domains: [
-        {
-            domain: 'www.pavolhejny.com',
-            defaultLocale: 'en',
-        },
-        {
-            domain: 'www.pavolhejny.cz',
-            defaultLocale: 'cs',
-        },
-    ],
 };
 
 /**
