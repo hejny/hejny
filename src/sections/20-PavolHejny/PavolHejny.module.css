@@ -81,4 +81,12 @@
         width: 50vw;
         height: auto;
     }
+
+personShadow .personShadowInner {
+    width: 50vw;
+    height: 50vw;
+    /*!!! use aspect ratio*/
 }
+}
+
+/*!!! rename repo*/
