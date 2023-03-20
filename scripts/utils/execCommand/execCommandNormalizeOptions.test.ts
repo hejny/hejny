@@ -88,7 +88,7 @@ describe('how normalizing exec options works', () => {
         });
     });
 
-    /* TODO:
+    /* TODO: 
     it('can normalize multiple commands', async () => {});
     */
 });

@@ -13,7 +13,7 @@ export function Html(props: HtmlProps) {
     const content = parse(
         html,
         /*
-        Maybe TODO:
+        Maybe TODO: 
         {
             replace(domNode) {
                 if (domNode instanceof Element && domNode.tagName === 'img' && domNode.attribs.class === 'emoji') {

@@ -20,7 +20,7 @@ export function execCommandNormalizeOptions(options: IExecCommandOptions): Pick<
         timeout = Infinity;
     } else {
         /*
-        TODO:
+     TODO: 
         if ((options as any).commands !== undefined) {
             commands = (options as any).commands;
         } else {
