@@ -3,6 +3,9 @@ import { forAnimationFrame, forTime } from 'waitasecond';
 import { IVector } from 'xyzt';
 import { Color } from '../color/Color';
 
+/**
+ * @@@
+ */
 interface ParticleOptions {
     place: HTMLElement;
     position: IVector;
@@ -10,7 +13,11 @@ interface ParticleOptions {
     color: Color;
 }
 
+/**
+ * @@@
+ */
 export class Particle extends Destroyable implements IDestroyable {
+
     public readonly particleElement: HTMLElement;
 
     public constructor(public readonly options: ParticleOptions) {

@@ -1,6 +1,9 @@
 import { IDestroyable } from 'destroyable';
 import { Effect } from './effect';
 
+/**
+ * @@@
+ */
 export function effectToRef<TElement extends HTMLElement>(
     effect: Effect<TElement>,
 ): (element: TElement | null) => void {
