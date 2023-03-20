@@ -186,7 +186,7 @@ export function ReferencesSection(props: ReferencesProps) {
                                 <p>
                                     Pavol je naprosto špičkový v tvorbě digitálních produktů. Viděl jsem ho – doslova
                                     přes noc – vytvořit integrovaného chatbota, který nám zajistil první místo na
-                                    Startup Weekendu v Praze. {/* <- TODO: !! Auto-link */}
+                                    Startup Weekendu v Praze. {/* <- !! Auto-link */}
                                 </p>
                                 <p>Rychle vezme jakoukoliv technologii nebo téma a postaví nad ní fungující produkt.</p>
                                 <p>

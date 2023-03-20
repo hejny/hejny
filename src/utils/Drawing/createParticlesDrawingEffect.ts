@@ -83,7 +83,7 @@ export function createParticlesDrawingEffect<TElement extends HTMLElement>(
 
         return Registration.join(
             Registration.create(() => {
-                element.addEventListener('pointerenter', pointerenterHandler); /* <- TODO: TODO: !!! Better on mobile */
+                element.addEventListener('pointerenter', pointerenterHandler); /* <- TODO: !!! Better on mobile */
                 window.addEventListener('pointermove', pointermoveHandler);
 
                 return () => {
@@ -102,11 +102,11 @@ export function createParticlesDrawingEffect<TElement extends HTMLElement>(
 
                     const livetime = generateLivetime();
 
-                    /* not await */ particle.fadeOut(livetime * 5 /* <- TODO: !! Configurable from outside */);
+                    /* not await */ particle.fadeOut(livetime * 5 /* <- !! Configurable from outside */);
                 },
                 async waiter() {
                     await forAnimationFrame(/* To pause when sleeping; for example when mobile screen off */);
-                    await forTime(Math.random() * 1000 * 0.1 /* <- TODO: !! Configurable from outside */);
+                    await forTime(Math.random() * 1000 * 0.1 /* <- !! Configurable from outside */);
                 },
             }),
         );

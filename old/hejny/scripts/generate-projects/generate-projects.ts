@@ -20,7 +20,7 @@ async function main() {
     program.parse(process.argv);
     const { commit: isCommit } = program.opts();
 
-    // TODO: !!!projects Better semantics function findProjects creates organizations?!
+    // !!!projects Better semantics function findProjects creates organizations?!
     const organizations = await findProjectsOnGithub();
 
     // TODO: Remove date - but for now it is useful for testing Github action
@@ -69,7 +69,7 @@ async function main() {
 }
 
 /**
- * TODO: TODO: !!!projects All projects must have emoji icons
+ * TODO: !!!projects All projects must have emoji icons
  * TODO: [🥳] Also include project from here https://docs.google.com/spreadsheets/d/1tGQBOknXYAnn9rDCE7KsbpyapVb6NKdwiONwPJl3DF0/edit?usp=sharing
- *       - TODO: !!!projects Maybe EVERY project should have a Github page?
+ *       - !!!projects Maybe EVERY project should have a Github page?
  */

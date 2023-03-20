@@ -5,10 +5,10 @@ const LINKS = {
     'Česká společnost ornitologická': 'https://www.birdlife.cz/',
     'České společnosti ornitologické': 'https://www.birdlife.cz/',
     'Startup Weekendu': 'https://startovani.cz/',
-    // TODO: TODO: !!! 'Startup Weekend': 'https://startovani.cz/',
+    // TODO: !!! 'Startup Weekend': 'https://startovani.cz/',
 
-    // TODO: TODO: !!! České společnosti ornitologické vs Česká společnost ornitologická
-    // TODO: TODO: !!! Startup Weekend vs Startup Weekendu
+    // TODO: !!! České společnosti ornitologické vs Česká společnost ornitologická
+    // TODO: !!! Startup Weekend vs Startup Weekendu
 };
 
 /**

@@ -19,9 +19,9 @@ export function PavolHejnySection(props: PavolHejnyProps) {
             <h2>{t('PavolHejny.title')}</h2>
 
             <>
-                {/* TODO: TODO: !!! Make <Person/> component from this */}
-                {/* TODO: TODO: !!! Tidy up the commit with clipping */}
-                {/* TODO: TODO: !!! Pick the best squircle */}
+                {/* TODO: !!! Make <Person/> component from this */}
+                {/* TODO: !!! Tidy up the commit with clipping */}
+                {/* TODO: !!! Pick the best squircle */}
                 <svg width="0" height="0">
                     <defs>
                         <clipPath id="squircle" clipPathUnits="objectBoundingBox">
