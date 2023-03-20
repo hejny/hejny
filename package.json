@@ -1,5 +1,5 @@
 {
-    "name": "rapid-prototyping-wizard",
+    "name": "hejny",
     "version": "0.53.0",
     "private": false,
     "license": "SEE LICENSE IN LICENSE",
@@ -7,7 +7,7 @@
     "homepage": "https://www.pavolhejny.com/",
     "repository": {
         "type": "git",
-        "url": "https://github.com/hejny/rapid-prototyping-wizard"
+        "url": "https://github.com/hejny/hejny"
     },
     "scripts": {
         "dev": "next dev -p 4455",
@@ -23,7 +23,7 @@
         "prettier": "prettier --config .prettierrc --ignore-unknown --write \"{pages,public,styles}/**/*\"",
         "prettier-commit": "git diff --exit-code && npm run prettier && git add . && git commit --allow-empty -m \"🧹 Prettier\"",
         "preversion": "git pull && npm run prettier-commit && npm run lint && npm test",
-        "postversion": "git push && git push --tags && echo \"Check the deploy process: https://github.com/hejny/rapid-prototyping-wizard/actions/\""
+        "postversion": "git push && git push --tags && echo \"Check the deploy process: https://github.com/hejny/hejny/actions/\""
     },
     "dependencies": {
         "@next/font": "13.1.1",

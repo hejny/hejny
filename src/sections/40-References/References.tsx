@@ -108,9 +108,9 @@ export function ReferencesSection(props: ReferencesProps) {
                             />
                         </Item.PersonImage>
                         <Item.Title>
-                            <Link href="http://www.jansedo.cz/" target="_blank">
+                            <a href="http://www.jansedo.cz/" target="_blank" rel="noreferrer">
                                 Jan Šedo
-                            </Link>
+                            </a>
                         </Item.Title>
                         <Item.Description>
                             <Translate locale="en">
@@ -160,9 +160,9 @@ export function ReferencesSection(props: ReferencesProps) {
                             />
                         </Item.PersonImage>
                         <Item.Title>
-                            <Link href="https://www.linkedin.com/in/themaxkozlov" target="_blank">
+                            <a href="https://www.linkedin.com/in/themaxkozlov" target="_blank" rel="noreferrer">
                                 Max Kozlov
-                            </Link>
+                            </a>
                         </Item.Title>
                         <Item.Description>
                             <Translate locale="en">
@@ -219,9 +219,13 @@ export function ReferencesSection(props: ReferencesProps) {
                             />
                         </Item.PersonImage>
                         <Item.Title>
-                            <Link href="https://www.linkedin.com/in/bob-kartous-5b472526/" target="_blank">
+                            <a
+                                href="https://www.linkedin.com/in/bob-kartous-5b472526/"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
                                 Bob Kartous
-                            </Link>
+                            </a>
                         </Item.Title>
                         <Item.Description>
                             <Translate locale="en">
@@ -263,9 +267,9 @@ export function ReferencesSection(props: ReferencesProps) {
                             />
                         </Item.PersonImage>
                         <Item.Title>
-                            <Link href="http://www.xxxxx.cz/" target="_blank">
+                            <a href="http://www.xxxxx.cz/" target="_blank" rel="noreferrer">
                                 Xxxx Xxxx
-                            </Link>
+                            </a>
                         </Item.Title>
                         <Item.Description>
                             <Translate locale="en">

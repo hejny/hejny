@@ -40,7 +40,7 @@ export function FooterSection() {
 
                 {/*
                 <li>
-                    <a href="https://github.com/hejny/rapid-prototyping-wizard/">v{VERSION}</a>
+                    <a href="https://github.com/hejny/hejny/">v{VERSION}</a>
                 </li>
                 */}
             </ul>
