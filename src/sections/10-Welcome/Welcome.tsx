@@ -30,16 +30,16 @@ export function WelcomeSection(props: WelcomeProps) {
                             alt={removeMarkdownFormatting(removeMarkdownLinks(t('title') || ''))}
                             src={logoHandrittenEn}
                         />
-                        // TODO: !!! Pick the best one handwritten logo
-                        // TODO: !!! All handwritten logos more thick
-                        // TODO: !!! Glow around the handwritten logo
-                        // TODO: !!! Handwritten logo mobile wrap / size
-                        // TODO: !!! Logo CS should be also handwritten
+                        // TODO: TODO: !!! Pick the best one handwritten logo
+                        // TODO: TODO: !!! All handwritten logos more thick
+                        // TODO: TODO: !!! Glow around the handwritten logo
+                        // TODO: TODO: !!! Handwritten logo mobile wrap / size
+                        // TODO: TODO: !!! Logo CS should be also handwritten
                     )}
 
                     {i18n.language === 'cs' && <Article content={t('title')} isEnhanced />}
                 </h1>
-                {/* <- TODO: !!! This should be handwritten */}
+                {/* <- TODO: TODO: !!! This should be handwritten */}
             </Link>
 
             {variant === 'HOMEPAGE' && <Article content={t('Welcome.content')} isEnhanced />}
@@ -54,7 +54,7 @@ export function WelcomeSection(props: WelcomeProps) {
 }
 
 /**
- * TODO: !!! Better utilize PAVOLHEJNY
+ * TODO: TODO: !!! Better utilize PAVOLHEJNY
  * TODO: Use somewhere <Acronym>Minimum viable product</Acronym>
  *     > Je lepší mít funkční MVP než mnoho měsíců-let pracovat kompletním vyladěném řešení https://youtu.be/4Z4EW9kSAX8
  * TODO: Maybe use <Shuffle> for technologies
