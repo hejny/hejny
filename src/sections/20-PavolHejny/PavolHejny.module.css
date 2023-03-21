@@ -85,6 +85,8 @@
 personShadow .personShadowInner {
     width: 50vw;
     height: 50vw;
+
+border: 1px solid red;
     /*!!! use aspect ratio*/
 }
 }
