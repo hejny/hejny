@@ -20,6 +20,7 @@
     height: 250px;
     margin-right: 25px;
     margin-bottom: 25px;
+margin-top: 25px;
     border-radius: 50px; /* <- TODO: !!! ACRY irelevant */
 
     overflow: clip;
