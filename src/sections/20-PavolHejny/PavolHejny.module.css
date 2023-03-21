@@ -74,7 +74,7 @@ margin-top: 25px;
     width: 250px;
     height: 250px;
     position: relative;
-    transform: translate(-25px, 25px) /* <- TODO: Paralax effect on shadow */;
+    transform: translate(-25px, calc(25px + 25px)) /* <- TODO: Paralax effect on shadow */;
 }
 
 @media screen and (max-width: 400px) {
