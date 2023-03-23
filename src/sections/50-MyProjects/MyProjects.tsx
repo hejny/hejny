@@ -19,13 +19,14 @@ export function MyProjectsSection() {
             <h2>{t('Projects.title')}</h2>
             <Article content={t('Projects.content')} isEnhanced />
             <Items>
-                <Shuffle seed="projects">
+                
                     <TownsProject />
-                    <BirdsProject />
                     <CollboardProject />
                     <CzechEventsProject />
+
+                    <BirdsProject />
                     <HEduProject />
-                </Shuffle>
+                
                 <YourProjectProject />
             </Items>
 
