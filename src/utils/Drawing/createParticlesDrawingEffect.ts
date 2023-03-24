@@ -1,5 +1,5 @@
 import { Registration } from 'destroyable';
-import { forTime, forAnimationFrame  } from 'waitasecond';
+import { forAnimationFrame, forTime } from 'waitasecond';
 import { Vector } from 'xyzt';
 import { Color } from '../color/Color';
 import { Drawing } from './Drawing';

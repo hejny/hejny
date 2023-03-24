@@ -8,7 +8,6 @@ import { YourProjectProject } from '../../../public/projects/your-project/YourPr
 import { Article } from '../../components/Article/Article';
 import { Items } from '../../components/Items/Items';
 import { Section } from '../../components/Section/Section';
-import { Shuffle } from '../../components/Shuffle/Shuffle';
 import styles from './MyProjects.module.css';
 
 export function MyProjectsSection() {
