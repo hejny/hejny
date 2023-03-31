@@ -27,7 +27,7 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
         >
             <div
                 style={{
-// TODO: !!! ALL styles to css
+                    // TODO: !!! ALL styles to css
                     zIndex: 4,
                     order: 4,
 
@@ -38,7 +38,7 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
                     justifyContent: 'end',
                     alignItems: 'end',
 
-                    paddingBottom: 80,// TODO: !!!optimize 
+                    paddingBottom: 80, // TODO: !!!optimize
                     paddingRight: 5,
                 }}
             >
@@ -139,7 +139,7 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
 
                         objectFit: 'cover',
                         objectPosition: '50% 80%',
-backgroundColor: '#444400', // TODO: !!! do not blink + bpe format TODO: !!! TODOs
+                        backgroundColor: '#444400', // TODO: !!! do not blink + bpe format TODO: !!! TODOs
                     }}
                 />
             </div>
