@@ -4,7 +4,10 @@ import { IVector } from 'xyzt';
 import { Color } from '../color/Color';
 
 /**
- * @@@
+ * Class representing a particle ⁘
+ * 
+ * @extends Destroyable
+ * @implements IDestroyable
  */
 interface ParticleOptions {
     place: HTMLElement;
