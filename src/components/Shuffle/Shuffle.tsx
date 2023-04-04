@@ -29,9 +29,9 @@ interface ShuffleProps {
 }
 
 export function Shuffle(props: ShuffleProps) {
-    const { seed, /*isDisabled,*/ limit, children } = props;
+    const { seed, isDisabled, limit, children } = props;
 
-    const isDisabled = true;
+    // const isDisabled = true;
 
     const random = seedrandom(useContext(ShuffleSeedContext).toString() + (seed?.toString() || ''));
 

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import bobKartous from '../../../public/people/bob-kartous.transparent.png';
 import janSedo from '../../../public/people/jan-sedo.transparent.png';
 import maxKozlov from '../../../public/people/max-kozlov.transparent.cropped.png';
+import terezaTexlova from '../../../public/people/tereza-texlova.transparent.png';
 import tomasStudenik from '../../../public/people/tomas-studenik.transparent.png';
 import { Item } from '../../components/Items/Item';
 import { Items } from '../../components/Items/Items';
@@ -256,6 +257,48 @@ export function ReferencesSection(props: ReferencesProps) {
                         </Item.Description>
                     </Item>
 
+                    <Item>
+                        <Item.PersonImage>
+                            <Image
+                                alt="Portrait photo of Tereza Texlová"
+                                src={terezaTexlova}
+                                draggable="false"
+                                placeholder="blur"
+                            />
+                        </Item.PersonImage>
+                        <Item.Title>
+                            <a href="https://www.linkedin.com/in/tereza-texlova/" target="_blank" rel="noreferrer">
+                                Tereza Texlová
+                            </a>
+                        </Item.Title>
+                        <Item.Description>
+                            <Translate locale="en">
+                                <p>
+                                    Pavol and I have worked together on several projects, the main being czech.events --
+                                    the only newsletter you really want to get. I&apos;ve worked with many developers
+                                    before, but Pavol&apos;s combination of technical skills, together with public
+                                    speaking and the ability to kick-start new ideas, is imposing.
+                                </p>
+                                <p>I am looking forward to our next super exciting project!</p>
+                            </Translate>
+                            <Translate locale="cs">
+                                <p>
+                                    S Pavolem jsme spolupracovali na několika projektech, z nichž hlavní je Czech.events
+                                    - jediný newsletter, který opravdu chcete dostávat. Pracoval jsem už s mnoha
+                                    vývojáři, ale Pavolova kombinace technických dovedností spolu s veřejným
+                                    vystupováním a schopností nastartovat nové nápady je impozantní.
+                                </p>
+                                <p>Těším se na náš další super zajímavý projekt!</p>
+                            </Translate>
+                            {/*
+                             Original Version:
+
+                             Pavol and I have worked together on several projects, the main being czech.events -- the only newsletter you really want to get. I've worked with many developers before, but Pavol's combination of technical skills, together with public speaking and the ability to kick-start new ideas, is imposing. 
+                             I am looking forward to our next super exciting project!
+
+                            */}
+                        </Item.Description>
+                    </Item>
                     {/*
                     <Item>
                         <Item.PersonImage>
