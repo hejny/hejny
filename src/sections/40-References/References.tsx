@@ -86,7 +86,7 @@ export function ReferencesSection(props: ReferencesProps) {
                                 Je jedním z top 10 lidí v Česku na rychlé prototypování aplikací.
 
                                 IT je pro něj nejen denním chlebíčkem, ale také životním koníčkem.
-                             
+
                              */}
                         </Item.Description>
                     </Item>
@@ -293,7 +293,7 @@ export function ReferencesSection(props: ReferencesProps) {
                             {/*
                              Original Version:
 
-                             Pavol and I have worked together on several projects, the main being czech.events -- the only newsletter you really want to get. I've worked with many developers before, but Pavol's combination of technical skills, together with public speaking and the ability to kick-start new ideas, is imposing. 
+                             Pavol and I have worked together on several projects, the main being czech.events -- the only newsletter you really want to get. I've worked with many developers before, but Pavol's combination of technical skills, together with public speaking and the ability to kick-start new ideas, is imposing.
                              I am looking forward to our next super exciting project!
 
                             */}
