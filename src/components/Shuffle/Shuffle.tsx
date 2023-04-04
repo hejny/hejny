@@ -31,12 +31,14 @@ interface ShuffleProps {
 export function Shuffle(props: ShuffleProps) {
     const { seed, isDisabled, limit, children } = props;
 
-    // const isDisabled = true;
-
     const random = seedrandom(useContext(ShuffleSeedContext).toString() + (seed?.toString() || ''));
 
-    if (!Array.isArray(children) || isDisabled) {
+    if (!Array.isArray(children)) {
         return children as any;
+    }
+
+    if (isDisabled) {
+        return children.slice(0, limit);
     }
 
     let shuffledChildren = [...children].sort(() => (random() > 0.5 ? 1 : -1));
