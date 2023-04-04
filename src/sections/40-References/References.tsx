@@ -27,7 +27,7 @@ export function ReferencesSection(props: ReferencesProps) {
             <h2>{t('References.title')}</h2>
 
             <Items>
-                <Shuffle seed="references" limit={variant === 'FULL' ? Infinity : 3}>
+                <Shuffle seed="references" limit={variant === 'FULL' ? Infinity : 3} isDisabled>
                     <Item>
                         <Item.PersonImage>
                             <Image
