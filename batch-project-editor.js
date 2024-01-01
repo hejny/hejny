@@ -10,5 +10,6 @@ module.exports = {
         'aiGeneratedWallpaperPick',
         'aiGeneratedWallpaperUseInReadme',
         'aiGeneratedWallpaperUseInGithub',
+        'publishPatchVersion',
     ],
 };
