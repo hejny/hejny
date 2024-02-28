@@ -18,14 +18,11 @@ export function MyProjectsSection() {
             <h2>{t('Projects.title')}</h2>
             <Article content={t('Projects.content')} isEnhanced />
             <Items>
-                
-                    <TownsProject />
-                    <CollboardProject />
-                    <CzechEventsProject />
-
-                    <BirdsProject />
-                    <HEduProject />
-                
+                <TownsProject />
+                <CollboardProject />
+                <CzechEventsProject />
+                <BirdsProject />
+                <HEduProject />
                 <YourProjectProject />
             </Items>
 
@@ -37,5 +34,6 @@ export function MyProjectsSection() {
 }
 
 /**
+ * TODO: !!! Add WebGPT and Promptbook
  * TODO: Maybe rename to just Projects
  */
