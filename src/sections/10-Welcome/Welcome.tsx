@@ -2,7 +2,10 @@ import { Passions_Conflict } from '@next/font/google';
 import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
 import Link from 'next/link';
-import logoHandrittenEn from '../../../public/handwritten/all-en/from-0-to-1 (6).svg';
+import {
+    default as logoHandrittenCs,
+    default as logoHandrittenEn,
+} from '../../../public/handwritten/all-en/from-0-to-1 (6).svg'; // <- TODO: !!! Different for cs and en https://www.calligrapher.ai/
 import { Article } from '../../components/Article/Article';
 import { Section } from '../../components/Section/Section';
 import { removeMarkdownFormatting } from '../../utils/content/removeMarkdownFormatting';
@@ -30,16 +33,15 @@ export function WelcomeSection(props: WelcomeProps) {
                             alt={removeMarkdownFormatting(removeMarkdownLinks(t('title') || ''))}
                             src={logoHandrittenEn}
                         />
-                        // TODO: !!! Pick the best one handwritten logo
-                        // TODO: !!! All handwritten logos more thick
-                        // TODO: !!! Glow around the handwritten logo
-                        // TODO: !!! Handwritten logo mobile wrap / size
-                        // TODO: !!! Logo CS should be also handwritten
                     )}
-
-                    {i18n.language === 'cs' && <Article content={t('title')} isEnhanced />}
+                    {i18n.language === 'cs' && (
+                        <Image
+                            className={styles.logoHandritten}
+                            alt={removeMarkdownFormatting(removeMarkdownLinks(t('title') || ''))}
+                            src={logoHandrittenCs}
+                        />
+                    )}
                 </h1>
-                {/* <- TODO: !!! This should be handwritten */}
             </Link>
 
             {variant === 'HOMEPAGE' && <Article content={t('Welcome.content')} isEnhanced />}
