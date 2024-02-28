@@ -9,8 +9,9 @@ const LINKS = {
     'Czech.events': 'https://czech.events',
     'Česká společnost ornitologická': 'https://www.birdlife.cz/',
     'České společnosti ornitologické': 'https://www.birdlife.cz/',
+    'Czech Ornithological Society': 'https://www.birdlife.cz/en/',
     'Startup Weekendu': 'https://startovani.cz/',
-    'my Githubu': 'https://github.com/hejny',
+    'my Github': 'https://github.com/hejny',
     'mém Githubu': 'https://github.com/hejny',
 
     // TODO: !!! 'Startup Weekend': 'https://startovani.cz/',

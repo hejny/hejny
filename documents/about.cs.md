@@ -1,6 +1,10 @@
+
+https://pavolhejny.cz/
+
+<!--
 ## Krátká verze
 
-<!-- TODO: !!!1 Short version, Full version, 1st person, 3rd person  -->
+<!-- TODO: !!!1 Short version, Full version, 1st person, 3rd person  -- >
 
 **Pavol Hejný** je vývojář aplikací pro vzdělávání.
 Spolupracoval na pořádání mnoha technologických konferencí, hackathonů a soutěží.
@@ -17,3 +21,4 @@ Má přehled o technologickém dění v České republice a lidem, kteří mají
 ## Fotka
 
 ![Pavol Hejný](https://www.gravatar.com/avatar/10bceb8965947164502b4e7b3314733d?s=256)
+-->

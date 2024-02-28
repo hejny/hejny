@@ -2,20 +2,14 @@
 # 👨‍💼 Pavol Hejný
 -->
 
-Hi I am Pavol.
+Hi I am Pavol,
 
-I am co-founder of a platform for teachers, [H-Edu](https://www.h-edu.cz/); when the quarantine on March 2020 began, he founded an **online virtual board** [**CollBoard.com**](https://collboard.com/). He worked on several projects of the Czech Ornithological Society([Česká společnost ornitologická](https://www.birdlife.cz/)) and in the past, he also developed his [**online game Towns**](https://github.com/townsgame).
+a developer who is passionate about using new tools and technologies. I specialise in creating fully functional user applications using the latest artificial intelligence models. I am a member of the [Ainautes](https://www.ainautes.com/) consulting group, which supports with the deployment of generative AI around the world.  
+I develop the [WebGPT](https://webgpt.cz/?partner=ph&utm_medium=referral&utm_source=personal%E2%80%93page&utm_content=pavolhejny.com&utm_campaign=partner%E2%80%93ph) web page generation service.  
+Before the massive emergence of generative AI, I created the first Czech virtual whiteboard, [Collboard](https://collboard.com/), and electronic textbooks, [H-edu](https://xn--hedu-086a.cz/), which were used by tens of thousands of children. I have also worked on many scientific projects for the [Czech Ornithological Society](https://www.birdlife.cz/en/). I regularly give lectures at conferences, sit on juries, and act as a mentor in many Czech and international competitions. I have a special heart for this, and I love **open-source** – you can find many of my things on my GitHub.
 
-In terms of community, he has organized several conferences. For example, [in autumn 2019, he organized the CzechFuture.tech](https://blog.pavolhejny.com/nulty-rocnik-czech-future-tech/). He co-organized some hackathons like Educational hackathon or Startup Weekends in Prague.
-
-At the same time, he participated in many events and startup competitions as a **mentor** and a **jury**.
-
-He has spoken at many conferences such as [**DevConf**](https://www.devconf.info/)**,** [**LinuxDays**](https://www.linuxdays.cz/)**,** [**OpenAlt**](https://www.openalt.cz/)**,** [**Czech VR Fest**](https://www.facebook.com/czechvrfest/), + many other meetups like [Frontendisti](https://www.facebook.com/frontendisti/), [ITnetwork.cz](https://www.facebook.com/itnetworkcz/), [Jobs Dev](https://www.facebook.com/jobsdevcz/), etc.
-
-He has an overview of what is happening in the Czech Republic for IT & startup events. That's why he is sending out a regular monthly email about the most exciting events at [Czech.events](https://czech.events/).
-
--   [![British flag](./assets/languages/us-uk.svg) Bio in English](./documents/about.md)
--   [![Česká vlajka](./assets/languages/cs.svg) Bio v Češtině](./documents/about.cs.md)
+-   [![British flag](./public/locale-flags/en.svg) Bio in English](https://pavolhejny.com/)
+-   [![Česká vlajka](./public/locale-flags/cs.svg) Bio v Češtině](https://pavolhejny.cz/)
 
 ## 📩 Contact
 
@@ -32,8 +26,10 @@ He has an overview of what is happening in the Czech Republic for IT & startup e
 
 <!-- TODO: !!!5 Describe the projects -->
 
-Some projects I have worked on:<br/>
+Some of the projects I have worked on:<br/>
 
+-   [⏣ WebGPT](https://webgpt.cz/?partner=ph&utm_medium=referral&utm_source=personal-page&utm_content=readme&utm_campaign=partner-ph)
+-   [📖 Prompt book](https://github.com/webgptorg/promptbook)
 -   [🖋 Collboard](https://collboard.com/)
 -   [📚 H-edu](https://www.h-edu.cz/)
 -   [🐦 Birds.cz](https://birds.cz/)
