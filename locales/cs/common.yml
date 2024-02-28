@@ -9,26 +9,27 @@ description: >
 
 Welcome:
     content: >
-        VR/AR/XR, GraphQL, Progressive Web Apps, AI, ML, Blockchain, Web3,... 🤯
+        Generative AI, ML, (Chat)GPT, LLM, Dalle, MidJourney, Stable diffusion, Sora,  VR/AR/XR, GraphQL,  Blockchain, Web3, PWAs... 🤯
 
 
-        Využíváte **plný potenciál technologií ve Vašem podnikání?**
+        Využíváte **plný potenciál technologií a generativní umělé inteligence ve Vašem podnikání?**
 
 
-        Technologie se neustále vyvíjejí a může být náročné udržet krok s dobou a
-        plně využívat jejich potenciál. S tím Vám rád pomohu.
+
+    technologie se neustále vyvíjí a momentálně zažívám mohutnou vlnu nástupu generativní umělé inteligence. je prakticky nemožné udržet si povědomí o všem co se děje a odfiltrovat klíčové technologie od šumu. S tím Vám rád pomohu.
     back-home: Zpět na hlavní stránku
 
 PavolHejny:
     title: Kdo jsem?
     content: >
-        Jsem Pavol, vývojář, který s nadšením využívá nové nástroje a technologie.
-        Spoluzaložil jsem virtuální tabuli Collboard  a elektronické učebnice H-edu.
-        Pracoval jsem na mnoha projektech České společnosti ornitologické. Přednášel
+        Jsem Pavol, vývojář, který s nadšením využívá nové nástroje a technologie. momentálně se specializuji na tvorbu plně funkčních aplikací které využívají nejnovější modely umělé inteligence
+
+        jsem členem konzultační skupiny Ainautes, která pomáhat s nasazením generativního Ai po celém světě
+
+        zároveň pracuji na nástroje na generování webu Webgpt.cz před masivním nástupem generativní umělé inteligence jsem vytvořil první českou virtuální tabuli Collboard  a elektronické učebnice H-edu.
+        Pracoval jsem na mnoha vědeckých projektech České společnosti ornitologické. Přednášel
         jsem na mnoha technologických a startupových konferencích + byl v porotě a
-        mentorem mnoha soutěží - například Startup Weekendu. Také pracuji na
-        Czech.events, newsletteru s nejzajímavějšími technologickými a startup
-        událostmi v Čechách.
+        mentorem mnoha českých i mezinárodních soutěží. k tomu jsem srdcem zvlášť a miluju Open Source mnoho z mých věcí najdete na mém Githubu. 
 
 Services:
     title: Jak Vám pomohu?
@@ -39,7 +40,7 @@ Services:
             Nabízím odborné poradenství v oblasti různých technologií a poskytuji
             analýzu jejich výhod a omezení, která vám pomůže při rozhodování.
     talk:
-        title: Přednáška
+        title: Přednáška/ školení
         content: >
             Poskytnu přehled různých technologií a přístupů s přihlédnutím na jejich
             <span style="color: #11ff11">výhody</span> a <span style="color:
