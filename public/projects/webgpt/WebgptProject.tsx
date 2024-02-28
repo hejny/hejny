@@ -22,7 +22,11 @@ import pavolHejnIsometricGameAsAColoringBookBlackAndWhiteIlB1cde821101c4d3fAd5b1
  */
 export function WebgptProject() {
     return (
-        <a href="https://towns.cz/" target="_blank" rel="noreferrer">
+        <a
+            href="https://webgpt.cz/?partner=ph&utm_medium=referral&utm_source=personal-page&utm_content=projects-section&utm_campaign=partner-ph"
+            target="_blank"
+            rel="noreferrer"
+        >
             <Item>
                 <Item.Title>
                     <Translate locale="en">WebGPT</Translate>

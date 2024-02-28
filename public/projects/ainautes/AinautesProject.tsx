@@ -22,7 +22,7 @@ import pavolHejnyColoringBookBlackAndWhiteIllustrationOutlineF429b7c97d634df89f9
  */
 export function AinautesProject() {
     return (
-        <a href="https://czech.events/" target="_blank" rel="noreferrer">
+        <a href="https://www.ainautes.com/" target="_blank" rel="noreferrer">
             <Item>
                 <Item.Title>
                     <Translate locale="en">Ainautes</Translate>
