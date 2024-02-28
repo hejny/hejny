@@ -1,9 +1,9 @@
 import { useTranslation } from 'next-i18next';
+import { AinautesProject } from '../../../public/projects/ainautes/AinautesProject';
 import { BirdsProject } from '../../../public/projects/birds/BirdsProject';
 import { CollboardProject } from '../../../public/projects/collboard/CollboardProject';
-import { CzechEventsProject } from '../../../public/projects/czech-events/CzechEventsProject';
 import { HEduProject } from '../../../public/projects/h-edu/HEduProject';
-import { TownsProject } from '../../../public/projects/towns/TownsProject';
+import { WebgptProject } from '../../../public/projects/webgpt/WebgptProject';
 import { YourProjectProject } from '../../../public/projects/your-project/YourProjectProject';
 import { Article } from '../../components/Article/Article';
 import { Items } from '../../components/Items/Items';
@@ -18,12 +18,20 @@ export function MyProjectsSection() {
             <h2>{t('Projects.title')}</h2>
             <Article content={t('Projects.content')} isEnhanced />
             <Items>
-                <TownsProject />
+                <WebgptProject />
                 <CollboardProject />
-                <CzechEventsProject />
+                <AinautesProject />
                 <BirdsProject />
                 <HEduProject />
                 <YourProjectProject />
+
+                {/* 
+                Note: Old projects
+                
+                - <TownsProject />
+                - <CzechEventsProject />
+                
+                */}
             </Items>
 
             <a className="button" href="https://github.com/hejny/hejny/blob/main/documents/projects.md">
