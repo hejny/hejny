@@ -1,3 +1,4 @@
+import "@total-typescript/ts-reset";
 import { ConfigChecker } from 'configchecker';
 import packageJson from './package.json';
 
