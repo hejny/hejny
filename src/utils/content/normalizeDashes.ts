@@ -1,4 +1,4 @@
-const EXCLUDED_WORDS = ['H-edu'];
+const EXCLUDED_WORDS = ['H-edu','h-edu'];
 
 /**
  * Normalize minus as dashes (- U+0014) to propper dashes (– U+2013)
@@ -12,6 +12,9 @@ export function normalizeDashes(contentText: string): string {
     for (const word of EXCLUDED_WORDS) {
         normalizedText = normalizedText.split(word.split('-').join('–')).join(word);
     }
+
+    // TODO: !!! Exclude also all URL addresses NOT https://xn--hedu-086a.cz/ BUT https://h-edu.cz/
+
     return normalizedText;
 }
 
