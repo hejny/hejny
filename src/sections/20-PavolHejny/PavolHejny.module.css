@@ -20,8 +20,8 @@
     height: 250px;
     margin-right: 25px;
     margin-bottom: 25px;
-margin-top: 25px;
-    border-radius: 50px; /* <- TODO: !!! ACRY irelevant */
+    margin-top: 25px;
+    border-radius: 50px; /* <- TODO: !! ACRY irelevant */
 
     overflow: clip;
     /*clip-path: margin-box;/**/
@@ -51,7 +51,7 @@ margin-top: 25px;
         circle at 20% 50%,
         #ce9243 0%,
         #000000 80%
-    ); /* <- TODO: !! Maybe better background:
+    ); /* <- TODO: ! Maybe better background:
                     - Image
                     - Pattern
                     - #b4952c
@@ -83,13 +83,13 @@ margin-top: 25px;
         height: auto;
     }
 
-.personShadow .personShadowInner {
-    width: 50vw;
-    height: 50vw;
+    .personShadow .personShadowInner {
+        width: 50vw;
+        height: 50vw;
 
-/*border: 1px solid red;*/
-    /*!!! use aspect ratio*/
-}
+        /*border: 1px solid red;*/
+        /*!! use aspect ratio*/
+    }
 }
 
-/*!!! rename repo*/
+/*!! rename repo*/

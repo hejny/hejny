@@ -18,7 +18,7 @@ const oswaltFont = Oswald({ weight: '400', style: 'normal', subsets: ['latin', '
 export default function PavolHejnyPage() {
     return (
         <>
-            <AppHead /* <- TODO: !! Use subtitle and translate it */ />
+            <AppHead /* <- TODO: ! Use subtitle and translate it */ />
 
             <div className={classNames(styles.page, oswaltFont.className)}>
                 <DebugGrid size={new Vector(3, 5)} />
@@ -59,7 +59,7 @@ export async function getStaticProps({ locale }: { locale: string }) {
 /**
  * TODO: [🪒] Can be getStaticProps shared between all pages?
  * TODO: [🪒] Can be fonts shared between all pages?
- * TODO: !!! Replace this also as personal page
+ * TODO: !! Replace this also as personal page
  * TODO: [🧈] Best way how to share page css
  * TODO: Custom 404 page
  * TODO: The best way to import the fonts

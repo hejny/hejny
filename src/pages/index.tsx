@@ -71,9 +71,9 @@ export async function getStaticProps({ locale }: { locale: string }) {
 }
 
 /**
- * TODO: !! Fix Shuffle without React hydration error
- * TODO: !!! All links must work
- * TODO: !!! Make this a personal page - all projects
+ * TODO: ! Fix Shuffle without React hydration error
+ * TODO: !! All links must work
+ * TODO: !! Make this a personal page - all projects
  * TODO: Add somewhere button [Get in touch]
  * TODO: [🪒] Can be getStaticProps shared between all pages?
  * TODO: [🪒] Can be fonts shared between all pages?

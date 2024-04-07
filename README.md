@@ -24,7 +24,7 @@ Before the massive emergence of generative AI, I created the first Czech virtual
 
 ## 👨‍🏭 Projects
 
-<!-- TODO: !!!5 Describe the projects -->
+<!-- TODO: !!5 Describe the projects -->
 
 Some of the projects I have worked on:<br/>
 

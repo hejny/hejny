@@ -16,7 +16,7 @@ const oswaltFont = Oswald(/* TODO: Specify */);
 export default function NotFoundPage() {
     return (
         <>
-            <AppHead subtitle="Not found" /* <- TODO: !! Translate */ />
+            <AppHead subtitle="Not found" /* <- TODO: ! Translate */ />
 
             <div className={classNames(styles.page, oswaltFont.className)}>
                 <DebugGrid size={new Vector(5, 5)} />
@@ -52,7 +52,7 @@ export async function getStaticProps({ locale }: { locale: string }) {
 }
 
 /**
- * TODO: !! i18n + make section
+ * TODO: ! i18n + make section
  * TODO: [🪒] Can be getStaticProps shared between all pages?
  * TODO: [🪒] Can be fonts shared between all pages?
  * TODO: Make some menu

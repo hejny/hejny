@@ -187,7 +187,7 @@ export function ReferencesSection(props: ReferencesProps) {
                                 <p>
                                     Pavol je naprosto špičkový v tvorbě digitálních produktů. Viděl jsem ho – doslova
                                     přes noc – vytvořit integrovaného chatbota, který nám zajistil první místo na
-                                    Startup Weekendu v Praze. {/* <- TODO: !! Auto-link */}
+                                    Startup Weekendu v Praze. {/* <- TODO: ! Auto-link */}
                                 </p>
                                 <p>Rychle vezme jakoukoliv technologii nebo téma a postaví nad ní fungující produkt.</p>
                                 <p>
@@ -346,12 +346,12 @@ export function ReferencesSection(props: ReferencesProps) {
 }
 
 /**
- * TODO: !!!! Add organization and position of referees
- * TODO: !!!! Add Daria and Bronwyn
- * TODO: !!!! Link to LinkedIn
- * TODO: !! Add active links
+ * TODO: !!! Add organization and position of referees
+ * TODO: !!! Add Daria and Bronwyn
+ * TODO: !!! Link to LinkedIn
+ * TODO: ! Add active links
  * TODO: !!?? Add job title on references
- * TODO: !! Add all other people
- * TODO: !! Add links to multiple socials
- * TODO: !!!! Add Daria and Bronwyn
+ * TODO: ! Add all other people
+ * TODO: ! Add links to multiple socials
+ * TODO: !!! Add Daria and Bronwyn
  */

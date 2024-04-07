@@ -14,10 +14,10 @@ const LINKS = {
     'my Github': 'https://github.com/hejny',
     'mém Githubu': 'https://github.com/hejny',
 
-    // TODO: !!! 'Startup Weekend': 'https://startovani.cz/',
+    // TODO: !! 'Startup Weekend': 'https://startovani.cz/',
 
-    // TODO: !!! České společnosti ornitologické vs Česká společnost ornitologická
-    // TODO: !!! Startup Weekend vs Startup Weekendu
+    // TODO: !! České společnosti ornitologické vs Česká společnost ornitologická
+    // TODO: !! Startup Weekend vs Startup Weekendu
 };
 
 /**

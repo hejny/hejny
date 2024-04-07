@@ -28,4 +28,4 @@
 -   **Ripple:** *(preparing)*
 -   **Tezos:** *(preparing)*
 
-<!-- !!! Verify the addresses after the transfer -->
+<!-- !! Verify the addresses after the transfer -->

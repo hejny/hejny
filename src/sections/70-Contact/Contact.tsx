@@ -13,7 +13,7 @@ interface ContactProps {
 export function ContactSection(props: ContactProps) {
     const { variant } = props;
 
-    const { t } =useTranslation();
+    const { t } = useTranslation();
 
     return (
         <Section id="Contact">
@@ -23,7 +23,7 @@ export function ContactSection(props: ContactProps) {
 
             <div className={styles.vcard}>
                 <Image
-                    // TODO: !! Bottom out centered image
+                    // TODO: ! Bottom out centered image
                     // TODO: Do we need to i18n alt of images?
                     alt="Portrait photo of Pavol Hejný looking behind of 3D printer"
                     src={pavolHejny}
@@ -99,8 +99,8 @@ export function ContactSection(props: ContactProps) {
 }
 
 /**
- * TODO: !! Better footer with - links, form, contact, subscribe, legal (address, Datovka 3te6yxg), copyright, technical
- * TODO: !! Contact form
+ * TODO: ! Better footer with - links, form, contact, subscribe, legal (address, Datovka 3te6yxg), copyright, technical
+ * TODO: ! Contact form
  * TODO: Add dynamically from https://raw.githubusercontent.com/hejny/hejny/main/documents/contact.md
  *       1) Download from external repo script (and add copy warning)
  *       2) Convert from local markdown to conponent

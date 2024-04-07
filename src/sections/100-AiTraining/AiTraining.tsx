@@ -22,6 +22,6 @@ export function AiTrainingSection() {
 }
 
 /**
- * TODO: !!! Add WebGPT and Promptbook
+ * TODO: !! Add WebGPT and Promptbook
  * TODO: Maybe rename to just Projects
  */

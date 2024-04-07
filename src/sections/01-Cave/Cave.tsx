@@ -10,6 +10,6 @@ export function CaveSection() {
 }
 
 /**
- * TODO: !! Extend the cave with Dalle-2
+ * TODO: ! Extend the cave with Dalle-2
  *  TODO: Maybe remove - this is just wrapper component
  */

@@ -5,7 +5,7 @@ import Link from 'next/link';
 import {
     default as logoHandrittenCs,
     default as logoHandrittenEn,
-} from '../../../public/handwritten/all-en/from-0-to-1 (6).svg'; // <- TODO: !!! Different for cs and en https://www.calligrapher.ai/
+} from '../../../public/handwritten/all-en/from-0-to-1 (6).svg'; // <- TODO: !! Different for cs and en https://www.calligrapher.ai/
 import { Article } from '../../components/Article/Article';
 import { Section } from '../../components/Section/Section';
 import { removeMarkdownFormatting } from '../../utils/content/removeMarkdownFormatting';
@@ -56,7 +56,7 @@ export function WelcomeSection(props: WelcomeProps) {
 }
 
 /**
- * TODO: !!! Better utilize PAVOLHEJNY
+ * TODO: !! Better utilize PAVOLHEJNY
  * TODO: Use somewhere <Acronym>Minimum viable product</Acronym>
  *     > Je lepší mít funkční MVP než mnoho měsíců-let pracovat kompletním vyladěném řešení https://youtu.be/4Z4EW9kSAX8
  * TODO: Maybe use <Shuffle> for technologies

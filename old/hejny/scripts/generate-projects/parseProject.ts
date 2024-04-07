@@ -20,9 +20,9 @@ export async function parseProject(
     if (
         fork &&
         name !== 'graffiti-wall' &&
-        name !== 'school-calculator-frontend' /* <- TODO: !!!projects Put to projects-organization.ts */
+        name !== 'school-calculator-frontend' /* <- TODO: !!projects Put to projects-organization.ts */
     ) {
-        // TODO: !!!projects de-fork the https://github.com/Hackathon-Vzdelavani/school-calculator-frontend and https://github.com/Hackathon-Vzdelavani/school-calculator-frontend
+        // TODO: !!projects de-fork the https://github.com/Hackathon-Vzdelavani/school-calculator-frontend and https://github.com/Hackathon-Vzdelavani/school-calculator-frontend
         console.log(`Skipping ${html_url} because it is forked project`);
         return null;
     }

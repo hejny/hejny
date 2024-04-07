@@ -16,7 +16,7 @@ const oswaltFont = Oswald({ weight: '400', style: 'normal', subsets: ['latin', '
 export default function ReferencesPage() {
     return (
         <>
-            <AppHead subtitle="References" /* <- TODO: !! Translate */ />
+            <AppHead subtitle="References" /* <- TODO: ! Translate */ />
 
             <div className={classNames(styles.page, oswaltFont.className)}>
                 <DebugGrid size={new Vector(5, 5)} />
