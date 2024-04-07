@@ -59,6 +59,7 @@ export async function getStaticProps({ locale }: { locale: string }) {
 }
 
 /**
+ * TODO: !!! Can there be /ai-skoleni/ /ai-training/ not generic /cs/ /en/ prefix?
  * TODO: ! Fix Shuffle without React hydration error
  * TODO: !! All links must work
  * TODO: !! Make this a personal page - all projects
