@@ -108,26 +108,27 @@ AiTraining:
         Pro více informací mě kontaktujte.
 
     variant1:
-        title: AI Školení
-        price: 10 000,- Kč
+        title: Vývoj pomocí AI
+        price: 20 000,- Kč
         content: |
-            Provedu vás světem umělé inteligence a generativních technologií.
+            zvyšte efektivitu vašeho vývoje pomocí ai co máte v ceně
 
-            - 1 a
-            - 2 b
-            - 3 c
-            - 4 d
+            - dojedu k vám do kanceláře / firmy v rámci České republiky nebo online 
+            - první část bude hodinová prezentace a ukázka jak lze vyvíjet pomocí
+            - AI test driven development 
+            - všechny ukázky jsou v typescriptu
 
-            !!!
+            Ukážu vám příklady dobré ho využití nerativní umělé inteligence při vývoji a jakým způsobem software psát tak, aby uměla inteligenci Co nejedí co nejvíce zvyšovala vaši efektivitu Ukážu vám v jakých situacích se nejvíce hodí k drápko pilot V jakých chat v jakých kompplíčen A v jakých příjme využití ipi po školení dostanete přístup ke všem ukázkám a materiálu
     variant2:
-        title: AI Školení
+        title: Vývoj AI aplikací
         price: 50 000,- Kč
         content: |
-            Provedu vás světem umělé inteligence a generativních technologií.
 
-            1. Foo
-            2. Bar
-            3. Baz
-            4. Quux
+            tahle volba je pro vás ideální, Pokud sami vyvíjíte ai produkt. ať už jde o firemní chat automatizace zákaznické podpory generování reklamních příspěvků prezentací nebo čehokoliv nebo jakékoliv využití jazykových nebo obrázkových modelů pokud je vaše aplikace jen trochu složitá potřebujete nějakou rozumnou metodiku jak věci dobře integrovat dohromady sledovat jejich výkon testovat zda je všechno
 
-            !!!
+            1. základní přehled dostupných modelů které můžete pro vaší aplikaci využít
+            2. metodiky prompting 
+            3. pipelining a orchestrace
+            4. jakým způsobem testovat výkon modelu odchytávat chyby a co nejmenšími problémy přecházet na vyšší modely jakmile jsou k dispozici
+
+            součástí tohoto celého je celý vývojářský den kde Vám Všechny změny věci ukážu Pak si můžeme sednout nad konkrétním kódem Já sám jsem primárně typescript vývoj
