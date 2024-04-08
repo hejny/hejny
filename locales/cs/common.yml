@@ -1,11 +1,11 @@
 title: Pavol Hejný 🖊 Tvořím něco z ničeho nic
 
-description: >
+description: |
     Specializuji se na tvorbu **plně funkčních prototypů** od nuly až po
     ověření konceptu.
 
 Welcome:
-    content: >
+    content: |
         ChatGPT, GPT-4, Anthropic Claude, Gemini, AI, ML, (Chat)GPT, LLM, DALL-E, Midjourney,
         Stable Diffusion, Sora, VR/AR/XR, TypeScript, blockchain, Web3, PWA... 🤯
 
@@ -28,7 +28,7 @@ Welcome:
 
 PavolHejny:
     title: Kdo jsem?
-    content: >
+    content: |
         Jsem Pavol, vývojář, který s nadšením využívá nové nástroje a technologie.
 
         Momentálně se specializuji na tvorbu plně funkčních uživatelských aplikací, které využívají nejnovější modely umělé inteligence.
@@ -49,18 +49,18 @@ Services:
     content: ''
     consult:
         title: Konzultace
-        content: >
+        content: |
             Nabízím odborné poradenství v oblasti technologií pro vaši aplikaci a poskytuji
             analýzu jejich výhod a omezení, která vám pomůže při rozhodování.
     talk:
         title: Přednáška/ školení
-        content: >
+        content: |
             Poskytnu přehled různých technologií a přístupů s přihlédnutím na jejich
             <span style="color: #11ff11">výhody</span> a <span style="color:
             #ff0000">nevýhody</span>.
     prototype:
         title: Prototypování
-        content: >
+        content: |
             Specializuji se na tvorbu **plně funkčních prototypů** od nuly až po
             ověření konceptu.
     action: Spojme se 🚀
@@ -97,7 +97,7 @@ Sample:
 AiTraining:
     title: AI Školení
     more-about-pavol: Více o Mně
-    content: >
+    content: |
         Nabízím školení v oblasti umělé inteligence a generativních technologií.
         Vzdělávám vývojáře, designéry a manažery, kteří chtějí využít potenciál AI ve svém podnikání.
 
@@ -106,3 +106,28 @@ AiTraining:
         Vzdělávání může být individuální nebo skupinové, online nebo offline.
 
         Pro více informací mě kontaktujte.
+
+    variant1:
+        title: AI Školení
+        price: 10 000,- Kč
+        content: |
+            Provedu vás světem umělé inteligence a generativních technologií.
+
+            - 1 a
+            - 2 b
+            - 3 c
+            - 4 d
+
+            aaaa
+    variant2:
+        title: AI Školení
+        price: 50 000,- Kč
+        content: |
+            Provedu vás světem umělé inteligence a generativních technologií.
+
+            1. Foo
+            2. Bar
+            3. Baz
+            4. Quux
+
+            aaaa

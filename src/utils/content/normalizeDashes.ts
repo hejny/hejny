@@ -6,14 +6,14 @@ const EXCLUDED_WORDS = ['H-edu', 'h-edu'];
  * @param contentText text with minus as dashes (- U+0014)
  * @returns text with en dashes (– U+2013)
  */
-export function normalizeDashes(contentText: string): string {
-    let normalizedText = contentText.split(/*/(?<=[a-z]+)\-(?=[a-z]+)/gi*/ '-').join('–');
+export function normalizeDashes(text: string): string {
+    // Replace single dashes with an en dash (–)
+    let normalizedText = text.replace(/(?<!^\s*)-/gm, '–');
 
-    for (const word of EXCLUDED_WORDS) {
-        normalizedText = normalizedText.split(word.split('-').join('–')).join(word);
+    // Skip excluded words
+    for (const excludedWord of EXCLUDED_WORDS) {
+        normalizedText = normalizedText.split(excludedWord.split('-').join('–')).join(excludedWord);
     }
-
-    // TODO: !! Exclude also all URL addresses NOT https://xn--hedu-086a.cz/ BUT https://h-edu.cz/
 
     return normalizedText;
 }

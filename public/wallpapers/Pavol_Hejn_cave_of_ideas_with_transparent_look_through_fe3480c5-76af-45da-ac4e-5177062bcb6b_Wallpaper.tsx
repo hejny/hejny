@@ -52,7 +52,7 @@ export function CaveOfIdeasWithTransparentLookThrough_fe3480c5_Wallpaper() {
                         textShadow: 'none',
                     }}
                 >
-                    ⬅ Created by MidJourney 4 & Stable Diffusion in 2022
+                    ⬅ AI
                 </Link>
             </div>
 

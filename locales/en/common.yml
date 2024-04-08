@@ -1,11 +1,11 @@
 title: Pavol Hejny 🖊 From 0 to 1
 
-description: >
+description: |
     I specialise in building **fully functional prototypes** from scratch to
     proof of concept, staying ahead of the latest technologies.
 
 Welcome:
-    content: >
+    content: |
         ChatGPT, GPT-4, Anthropic Claude, Gemini, AI, ML, (Chat)GPT, LLM, DALL-E, Midjourney,
         Stable Diffusion, Sora, VR/AR/XR, TypeScript, blockchain, Web3, PWA... 🤯
 
@@ -28,7 +28,7 @@ Welcome:
 
 PavolHejny:
     title: Who I am?
-    content: >
+    content: |
         I'm Pavol, a developer who is passionate about using new tools and technologies.
 
         I specialise in creating fully functional user applications using the latest artificial intelligence models.
@@ -45,25 +45,25 @@ PavolHejny:
 
 Services:
     title: How can I help you?
-    content: >
+    content: |
         I specialise in building **fully functional prototypes** from scratch to
         proof of concept, staying ahead of the latest technologies. Let me guide you
         through the ever-changing landscape of new, emerging and disruptive
         technologies.
     consult:
         title: Consult
-        content: >
+        content: |
             I offer expert advice on various technologies, providing <!-- insightful
             --> analysis of their benefits and limitations to help you make decisions.
     talk:
         title: Talk
-        content: >
+        content: |
             I provide overviews of various technologies, highlighting their <span
             style="color: #11ff11">pros</span> and <span style="color:
             #ff0000">cons</span> to ensure a well-rounded understanding.
     prototype:
         title: Prototype
-        content: >
+        content: |
             I will bring your new project into the reality through effective
             prototyping and seamless transition from concept to implementation.
     action: Get in touch 🚀
@@ -81,7 +81,7 @@ Projects:
 
 Hacking:
     title: Hacking!
-    content: >
+    content: |
         These are some hackathon undertakings and proof of concept initiatives I
         have been involved in.
 

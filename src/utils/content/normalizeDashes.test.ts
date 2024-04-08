@@ -1,4 +1,5 @@
 import { describe, expect, it } from '@jest/globals';
+import spaceTrim from 'spacetrim';
 
 import { normalizeDashes } from './normalizeDashes';
 
@@ -17,5 +18,25 @@ describe('normalizeDashes', () => {
 
     it(`skip excluded words`, () => {
         expect(normalizeDashes(`H-edu script-processing`)).toBe(`H-edu script–processing`);
+    });
+
+    it(`skip markdown lists words`, () => {
+        expect(
+            normalizeDashes(
+                spaceTrim(`
+                    The Foo-bar principle:
+
+                    - Foo
+                    - Bar
+                `),
+            ),
+        ).toBe(
+            spaceTrim(`
+                The Foo–bar principle:
+
+                - Foo
+                - Bar
+            `),
+        );
     });
 });
