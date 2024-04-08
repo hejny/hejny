@@ -7,8 +7,7 @@ import { Section } from '../../components/Section/Section';
 import styles from './PavolHejny.module.css';
 
 interface PavolHejnyProps {
-    variant: 'SHORT' | 'FULL';
-
+  
     /**
      * Additional content to be placed after the main content
      */
@@ -16,7 +15,7 @@ interface PavolHejnyProps {
 }
 
 export function PavolHejnySection(props: PavolHejnyProps) {
-    const { variant, children } = props;
+    const { children } = props;
 
     const { t } = useTranslation();
 

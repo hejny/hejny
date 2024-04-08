@@ -1,6 +1,5 @@
 import { useTranslation } from 'next-i18next';
-import { CollboardProject } from '../../../public/projects/collboard/CollboardProject';
-import { WebgptProject } from '../../../public/projects/webgpt/WebgptProject';
+import Link from 'next/link';
 import { Article } from '../../components/Article/Article';
 import { Items } from '../../components/Items/Items';
 import { Section } from '../../components/Section/Section';
@@ -11,11 +10,19 @@ export function AiTrainingSection() {
 
     return (
         <Section id="AiTraining" className={styles.AiTrainingSection}>
-            <h2>{t('Projects.title')}</h2>
-            <Article content={t('Projects.content')} isEnhanced />
-            <Items>
-                <WebgptProject />
-                <CollboardProject />
+            <h2>{t('AiTraining.title')}</h2>
+            <Article content={t('AiTraining.content')} isEnhanced />
+            <Items itemsOnRow={2}>
+                <div>
+                    <h3>Varianta 1</h3>
+                    <Link className="button" href="/">
+                        10 000 Kč
+                    </Link>
+                </div>
+
+                <div>
+                    <h3>Varianta 2</h3>
+                </div>
             </Items>
         </Section>
     );
