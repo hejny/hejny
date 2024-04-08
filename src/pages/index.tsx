@@ -35,7 +35,7 @@ export default function IndexPage({ lang }: any) {
 
                 <main>
                     <WelcomeSection variant="HOMEPAGE" />
-                    <PavolHejnySection variant="SHORT" />
+                    <PavolHejnySection/>
                     <ServicesSection />
                     {/* TODO: <PresentationSection /> */}
                     {/* TODO: <PrototypingSection /> */}
