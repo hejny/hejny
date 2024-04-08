@@ -118,7 +118,7 @@ AiTraining:
             - 3 c
             - 4 d
 
-            aaaa
+            !!!
     variant2:
         title: AI Školení
         price: 50 000,- Kč
@@ -130,4 +130,4 @@ AiTraining:
             3. Baz
             4. Quux
 
-            aaaa
+            !!!
