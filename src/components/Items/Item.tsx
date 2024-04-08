@@ -17,6 +17,14 @@ Item.Title = function Title({ children }: { children: ReactNode }) {
 };
 
 /**
+ * <Title/> used in <Item/>
+ */
+Item.Subtitle = function Subtitle({ children }: { children: ReactNode }) {
+    // TODO: Probbably place here semantic <h3> tag
+    return <div className={styles.subtitle}>{children}</div>;
+};
+
+/**
  * <FloatingTitle/> used in <Item/>
  */
 Item.FloatingTitle = function FloatingTitle({ children }: { children: ReactNode }) {

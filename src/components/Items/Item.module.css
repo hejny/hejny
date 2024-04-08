@@ -113,6 +113,20 @@
     margin-top: -7px;
 }
 
+.item .subtitle {
+    /*/
+    outline: 1px dotted rgb(58, 58, 255);
+    /**/
+
+    z-index: 1;
+    order: 1;
+
+    grid-column: 1 / span 1;
+
+    font-size: 20px;
+    margin-top: -7px;
+}
+
 .item .floatingTitle {
     /*/
     outline: 1px dotted rgb(58, 58, 255);

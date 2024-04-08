@@ -42,6 +42,7 @@ export function ReferencesSection(props: ReferencesProps) {
                                 Tomáš Studeník
                             </a>
                         </Item.Title>
+                        <Item.Subtitle>!!!</Item.Subtitle>
                         <Item.Description>
                             <Translate locale="en">
                                 <p>
@@ -113,6 +114,7 @@ export function ReferencesSection(props: ReferencesProps) {
                                 Jan Šedo
                             </a>
                         </Item.Title>
+                        <Item.Subtitle>!!!</Item.Subtitle>
                         <Item.Description>
                             <Translate locale="en">
                                 <p>
@@ -165,6 +167,7 @@ export function ReferencesSection(props: ReferencesProps) {
                                 Max Kozlov
                             </a>
                         </Item.Title>
+                        <Item.Subtitle>!!!</Item.Subtitle>
                         <Item.Description>
                             <Translate locale="en">
                                 <p>
@@ -228,6 +231,7 @@ export function ReferencesSection(props: ReferencesProps) {
                                 Bob Kartous
                             </a>
                         </Item.Title>
+                        <Item.Subtitle>!!!</Item.Subtitle>
                         <Item.Description>
                             <Translate locale="en">
                                 <p>
@@ -271,6 +275,7 @@ export function ReferencesSection(props: ReferencesProps) {
                                 Tereza Texlová
                             </a>
                         </Item.Title>
+                        <Item.Subtitle>!!!</Item.Subtitle>
                         <Item.Description>
                             <Translate locale="en">
                                 <p>
