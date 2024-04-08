@@ -1,5 +1,6 @@
 import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
+import { ReactNode } from 'react';
 import pavolHejny from '../../../public/people/pavol-hejny.transparent.png';
 import { Article } from '../../components/Article/Article';
 import { Section } from '../../components/Section/Section';
@@ -7,10 +8,15 @@ import styles from './PavolHejny.module.css';
 
 interface PavolHejnyProps {
     variant: 'SHORT' | 'FULL';
+
+    /**
+     * Additional content to be placed after the main content
+     */
+    children?: ReactNode;
 }
 
 export function PavolHejnySection(props: PavolHejnyProps) {
-    const { variant } = props;
+    const { variant, children } = props;
 
     const { t } = useTranslation();
 
@@ -57,6 +63,8 @@ export function PavolHejnySection(props: PavolHejnyProps) {
                 </div>
             </>
             <Article content={t('PavolHejny.content')} isEnhanced />
+
+            {children}
         </Section>
     );
 }

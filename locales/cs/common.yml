@@ -93,3 +93,16 @@ Footer:
 Sample:
     title: Sample section
     content: Sample text with [sample link](/sample)
+
+AiTraining:
+    title: AI Školení
+    more-about-pavol: Více o Mně
+    content: >
+        Nabízím školení v oblasti umělé inteligence a generativních technologií.
+        Vzdělávám vývojáře, designéry a manažery, kteří chtějí využít potenciál AI ve svém podnikání.
+
+        Školení mohou být zaměřena na konkrétní technologie, jako je GPT-3, DALL-E, nebo na obecné principy AI a ML.
+
+        Vzdělávání může být individuální nebo skupinové, online nebo offline.
+
+        Pro více informací mě kontaktujte.

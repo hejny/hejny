@@ -1,4 +1,4 @@
-import { Passions_Conflict } from '@next/font/google';
+import { Caveat } from '@next/font/google';
 import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -16,7 +16,7 @@ interface WelcomeProps {
     variant: 'HOMEPAGE' | 'SIDEPAGE' | 'PAVOLHEJNY';
 }
 
-const passionsConflictFont = Passions_Conflict({ weight: '400', style: 'normal', subsets: ['latin', 'latin-ext'] });
+const handwrittenFont = Caveat({ weight: '400', style: 'normal', subsets: ['latin', 'latin-ext'] });
 
 export function WelcomeSection(props: WelcomeProps) {
     const { variant } = props;
@@ -26,7 +26,7 @@ export function WelcomeSection(props: WelcomeProps) {
     return (
         <Section id="Welcome" className={styles.WelcomeSection}>
             <Link href="/">
-                <h1 className={passionsConflictFont.className}>
+                <h1 className={handwrittenFont.className}>
                     {i18n.language === 'en' && (
                         <Image
                             className={styles.logoHandritten}
