@@ -33,7 +33,7 @@ export default function PavolHejnyPage() {
 
                 <main>
                     <WelcomeSection variant="PAVOLHEJNY" />
-                    <PavolHejnySection variant="FULL" />
+                    <PavolHejnySection />
                     <MyProjectsSection />
 
                     {/* TODO: Services OR/AND References - some link to 0-1 */}
