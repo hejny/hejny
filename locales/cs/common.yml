@@ -108,7 +108,9 @@ AiTraining:
         Pro více informací mě kontaktujte.
 
     variant1:
-        title: Varianta 1\nVývoj pomocí AI
+        title: |
+            Varianta 1
+            Vývoj pomocí AI
         price: 20 000,- Kč
         content: |
             zvyšte efektivitu vašeho vývoje pomocí ai co máte v ceně
@@ -117,18 +119,34 @@ AiTraining:
             - první část bude hodinová prezentace a ukázka jak lze vyvíjet pomocí
             - AI test driven development 
             - všechny ukázky jsou v typescriptu
+            - a
+            - a
+            - a
+            - a
+            - a
+            - a
+            - a mnoho dalšího
 
             Ukážu vám příklady dobré ho využití nerativní umělé inteligence při vývoji a jakým způsobem software psát tak, aby uměla inteligenci Co nejedí co nejvíce zvyšovala vaši efektivitu Ukážu vám v jakých situacích se nejvíce hodí k drápko pilot V jakých chat v jakých kompplíčen A v jakých příjme využití ipi po školení dostanete přístup ke všem ukázkám a materiálu
     variant2:
-        title: Varianta 2\nVývoj AI aplikací
+        title: |
+            Varianta 2
+            Vývoj AI aplikací
         price: 50 000,- Kč
         content: |
 
             tahle volba je pro vás ideální, Pokud sami vyvíjíte ai produkt. ať už jde o firemní chat automatizace zákaznické podpory generování reklamních příspěvků prezentací nebo čehokoliv nebo jakékoliv využití jazykových nebo obrázkových modelů pokud je vaše aplikace jen trochu složitá potřebujete nějakou rozumnou metodiku jak věci dobře integrovat dohromady sledovat jejich výkon testovat zda je všechno
 
-            1. základní přehled dostupných modelů které můžete pro vaší aplikaci využít
-            2. metodiky prompting 
-            3. pipelining a orchestrace
-            4. jakým způsobem testovat výkon modelu odchytávat chyby a co nejmenšími problémy přecházet na vyšší modely jakmile jsou k dispozici
+            -  základní přehled dostupných modelů které můžete pro vaší aplikaci využít
+            -  metodiky prompting 
+            -  pipelining a orchestrace
+            -  jakým způsobem testovat výkon modelu odchytávat chyby a co nejmenšími problémy přecházet na vyšší modely jakmile jsou k dispozici
+            -  a
+            -  a
+            -  a
+            -  a
+            -  a
+            -  a
+            - a mnoho dalšího
 
             součástí tohoto celého je celý vývojářský den kde Vám Všechny změny věci ukážu Pak si můžeme sednout nad konkrétním kódem Já sám jsem primárně typescript vývoj

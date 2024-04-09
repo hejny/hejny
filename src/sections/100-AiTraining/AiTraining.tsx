@@ -12,7 +12,7 @@ export function AiTrainingSection() {
         <Section id="AiTraining" className={styles.AiTrainingSection}>
             <h2>{t('AiTraining.title')}</h2>
             <Article content={t('AiTraining.content')} isEnhanced />
-            <Items itemsOnRow={2}>
+            <Items itemsOnRow={2} className={styles.variants}>
                 <AiTrainingVariant variant="variant1" />
                 <AiTrainingVariant variant="variant2" />
             </Items>

@@ -5,3 +5,10 @@
 
     /* TODO: Use or remove empty css */
 }
+
+.variants > div {
+    outline: 1px solid rgb(245, 224, 185);
+    border-radius: 30px;
+    margin: 10px;
+    padding: 10px;
+}
