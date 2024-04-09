@@ -108,9 +108,8 @@ AiTraining:
         Pro více informací mě kontaktujte.
 
     variant1:
-        title: |
-            Varianta 1
-            Vývoj pomocí AI
+        title: >
+            Varianta 1: Vývoj pomocí AI
         price: 20 000,- Kč
         content: |
             zvyšte efektivitu vašeho vývoje pomocí ai co máte v ceně
@@ -129,9 +128,8 @@ AiTraining:
 
             Ukážu vám příklady dobré ho využití nerativní umělé inteligence při vývoji a jakým způsobem software psát tak, aby uměla inteligenci Co nejedí co nejvíce zvyšovala vaši efektivitu Ukážu vám v jakých situacích se nejvíce hodí k drápko pilot V jakých chat v jakých kompplíčen A v jakých příjme využití ipi po školení dostanete přístup ke všem ukázkám a materiálu
     variant2:
-        title: |
-            Varianta 2
-            Vývoj AI aplikací
+        title: >
+            Varianta 2: Vývoj AI aplikací
         price: 50 000,- Kč
         content: |
 

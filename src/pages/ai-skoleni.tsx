@@ -17,7 +17,6 @@ import styles from '../styles/common.module.css';
 import { classNames } from '../utils/classNames';
 
 const oswaltFont = Oswald({ weight: '400', style: 'normal', subsets: ['latin', 'latin-ext'] });
-const handwrittenFont = Caveat({ weight: '400', style: 'normal', subsets: ['latin', 'latin-ext'] });
 
 export default function AiTrainingPage({ lang }: any) {
     const { t } = useTranslation();
