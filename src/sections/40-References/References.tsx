@@ -42,7 +42,7 @@ export function ReferencesSection(props: ReferencesProps) {
                                 Tomáš Studeník
                             </a>
                         </Item.Title>
-                        <Item.Subtitle>!!!</Item.Subtitle>
+                        <Item.Subtitle>Hacker</Item.Subtitle>
                         <Item.Description>
                             <Translate locale="en">
                                 <p>
@@ -114,7 +114,7 @@ export function ReferencesSection(props: ReferencesProps) {
                                 Jan Šedo
                             </a>
                         </Item.Title>
-                        <Item.Subtitle>!!!</Item.Subtitle>
+                        <Item.Subtitle>Zakladatel H-edu</Item.Subtitle>
                         <Item.Description>
                             <Translate locale="en">
                                 <p>
@@ -167,7 +167,7 @@ export function ReferencesSection(props: ReferencesProps) {
                                 Max Kozlov
                             </a>
                         </Item.Title>
-                        <Item.Subtitle>!!!</Item.Subtitle>
+                        <Item.Subtitle>Tvůrce</Item.Subtitle>
                         <Item.Description>
                             <Translate locale="en">
                                 <p>
