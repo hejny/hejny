@@ -107,17 +107,22 @@ AiTraining:
 
         Školení mohou být zaměřena na konkrétní technologie, jako je GPT-3, DALL-E-3, nebo na obecné principy AI a ML.
 
+        V rámci školení jsou výrazně úročeny mé dlouholeté zkušenosti s vývojem a také dlouhodobý vhled do vývoje rozsáhlých aplikací, založených na AI jazykových modelech. 
+
     variant1:
         title: >
             Varianta 1: Vývoj pomocí AI
-        price: 20 000,- Kč
+        price: 35 000,- Kč
         content: |
             Ať už **vyvíjíte jakýkoliv software** a chcete mnohonásobně zvýšit efektivitu pomocí AI:
 
+            -  Týden předem s vámi na **nezávazném hovoru** proberu na online hovoru, co přesně řešíte.
             -  V rámci Vaší firmy v ČR nebo online.
-            -  Hodinová prezentace a ukázka, jak lze vývoj efektivně realizovat s využitím AI:
+            -   Prezentace a workshop na půl dne a ukázka, jak lze vývoj efektivně realizovat s využitím AI:
+                -  Pro 5~50 lidí (předem přizpůsobím míru interaktivity na základě počtu lidí) 
                 -  Představím efektivní využití GitHub Copilota a (Chat)GPT.
                 -  Vysvětlím přístup AI test driven development.
+                -  Automatická tvorba dokumentace z kódu nebo kód z dokumentace
                 -  Ukážu příklady dobrého využití generativní umělé inteligence při vývoji.
                 -  Poskytnu následnou konzultaci a podporu při vývoji Vaší aplikace.
             -  Všechny ukázky jsou v TypeScriptu nebo JavaScriptu *(dle Vaší preference)*.
@@ -127,14 +132,14 @@ AiTraining:
     variant2:
         title: >
             Varianta 2: Vývoj AI aplikací
-        price: 50 000,- Kč
+        price: Cena dohodou
         content: |
             Pokud **vyvíjíte AI produkt**, ať už jde o firemní chat, automatizaci zákaznické podpory, generování reklamních příspěvků či prezentace,
             nebo jakékoliv další využití jazykových či obrázkových modelů, potřebujete při složitější aplikaci rozumnou metodiku.
 
             Je důležité vědět, jak správně integrovat jednotlivé komponenty, sledovat jejich výkon a testovat, zda vše funguje jak má.
 
-            -  Týden předem s vámi proberu na online hovoru, co přesně řešíte.
+            -  Týden předem s vámi na **nezávazném hovoru** proberu na online hovoru, co přesně řešíte. Podle toho vám navrhnu postup i cenu na míru. 
             -  Pokud mi poskytnete přístupy ke svému kódu, mohu se podívat na konkrétní detaily *(samozřejmě s možností podepsání NDA)*.
             -  V rámci Vaší firmy v ČR nebo online.
             -  Dvouhodinová detailní prezentace na míru Vaší potřebě:
