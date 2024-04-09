@@ -1,0 +1,44 @@
+/**
+ * Note: This is the config style, it is used to configure the whole page.
+ */
+
+:root {
+    /* 🎨 Note: This is a color palette computed by colorful-192x108-16bit-v15palette algorithm */
+
+    /* Note: --palette-0 is The most common color to appear at the bottom of the wallpaper. */
+    --palette-0: #111122;
+    --palette-0-triplet: 17, 17, 34;
+    /* Note: --palette-1 is 1st most satulighted color of the bottom half of the wallpaper which is contrast enough (30%) against the primary color. */
+    --palette-1: #ffbb77;
+    --palette-1-triplet: 255, 187, 119;
+    /* Note: --palette-2 is The most common color to appear at the bottom of the wallpaper. */
+    --palette-2: #111122;
+    --palette-2-triplet: 17, 17, 34;
+    /* Note: --palette-3 is 1st most satulighted color of the bottom half of the wallpaper which is contrast enough (30%) against the primary color. */
+    --palette-3: #ffbb77;
+    --palette-3-triplet: 255, 187, 119;
+    /* Note: --palette-4 is The most common color to appear at the bottom of the wallpaper. */
+    --palette-4: #111122;
+    --palette-4-triplet: 17, 17, 34;
+    /* Note: --palette-5 is 1st most satulighted color of the bottom half of the wallpaper which is contrast enough (30%) against the primary color. */
+    --palette-5: #ffbb77;
+    --palette-5-triplet: 255, 187, 119;
+    /* Note: --palette-6 is The most common color to appear at the bottom of the wallpaper. */
+    --palette-6: #111122;
+    --palette-6-triplet: 17, 17, 34;
+    /* Note: --palette-7 is 1st most satulighted color of the bottom half of the wallpaper which is contrast enough (30%) against the primary color. */
+    --palette-7: #ffbb77;
+    --palette-7-triplet: 255, 187, 119;
+    /* Note: --palette-8 is The most common color to appear at the bottom of the wallpaper. */
+    --palette-8: #111122;
+    --palette-8-triplet: 17, 17, 34;
+    /* Note: --palette-9 is 1st most satulighted color of the bottom half of the wallpaper which is contrast enough (30%) against the primary color. */
+    --palette-9: #ffbb77;
+    --palette-9-triplet: 255, 187, 119;
+    /* Note: --palette-10 is The most common color to appear at the bottom of the wallpaper. */
+    --palette-10: #111122;
+    --palette-10-triplet: 17, 17, 34;
+    /* Note: --palette-11 is 1st most satulighted color of the bottom half of the wallpaper which is contrast enough (30%) against the primary color. */
+    --palette-11: #ffbb77;
+    --palette-11-triplet: 255, 187, 119;
+}

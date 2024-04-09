@@ -1,0 +1,104 @@
+/**
+ * @deprecated Theese styles are just legacy relics from the past, important stuff is in custom-elements instead
+ * 
+ * Note: This is the style of the interactive components in the page
+ */
+
+/* https://webgpt.cz/_next/static/css/7b92e89d54c50ff9.css */
+
+.ai-gallery {
+    --on-row: 6;
+    --gap: 0;
+    --aspect: 1.61;
+    --scale: 3;
+}
+
+@media only screen and (max-width: 1200px) {
+    .ai-gallery {
+        --on-row: 3;
+        --gap: 2px;
+        --aspect: 1;
+        --scale: 3;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .ai-gallery {
+        --on-row: 2;
+        --gap: 2px;
+        --aspect: 1;
+        --scale: 4;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .ai-gallery {
+        --on-row: 2;
+        --gap: 3px;
+        --aspect: 1.61;
+        --scale: 1.5;
+    }
+}
+
+.ai-gallery,
+.ai-gallery * {
+    transition: all 0.2s ease-in-out;
+}
+
+.ai-gallery-items {
+    height: calc(100vw * var(--aspect) * 6 / var(--on-row) / var(--on-row));
+    margin-bottom: 20px;
+}
+
+.ai-gallery-items .inner {
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(var(--on-row), 1fr);
+    grid-gap: var(--gap);
+}
+
+.ai-gallery-items .inner > * {
+    width: 100%;
+    aspect-ratio: 1 / var(--aspect);
+}
+
+.ai-gallery-items .inner a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: clip;
+}
+
+.ai-gallery-items .inner a iframe {
+    pointer-events: none;
+    width: calc(100% * var(--scale));
+    height: calc(100% * var(--scale));
+    transform: scale(calc(1 / var(--scale)));
+    transform-origin: 50% 50%;
+}
+
+.ai-gallery .placeholder {
+    overflow: clip;
+    background: #000;
+    position: relative;
+    animation-duration: 1.7s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: ai-placeholder-animate;
+    background: #f6f7f8;
+    background: linear-gradient(90deg, #eee 2%, #ccc 18%, #eee 33%);
+    background-size: 1300px;
+}
+
+@keyframes ai-placeholder-animate {
+    0% {
+        background-position: -650px 0;
+    }
+    to {
+        background-position: 650px 0;
+    }
+}

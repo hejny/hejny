@@ -1,0 +1,69 @@
+@property --background-rotation {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+a[is='call-to-action'] {
+    /*/
+    outline: 1px dotted rgb(255, 38, 38) !important;
+    /**/
+
+    margin: 5px;
+
+    /* Note: Align the call-to-action to center of the paragraph */
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    cursor: pointer;
+
+    padding-left: 15px;
+    padding-right: 15px;
+
+    width: fit-content;
+    height: 45px;
+
+    justify-content: center /* <-[x] */;
+    align-items: center /* <-[y] */;
+    text-align: center;
+
+    border-radius: 5px;
+
+    text-decoration: none !important;
+    font-size: 1.2rem;
+    color: var(--palette-1);
+    --background-rotation: -22deg;
+    background: linear-gradient(
+        var(--background-rotation),
+        rgba(var(--palette-0-triplet), 1) -50%,
+        rgba(var(--palette-2-triplet), 1) 150%
+    );
+    outline: none;
+    border: 1px solid var(--palette-1);
+
+    transition: --background-rotation 2s ease-out;
+}
+
+a[is='call-to-action']:hover {
+    --background-rotation: calc(180deg - 22deg);
+}
+
+a[is='call-to-action'] * {
+    text-decoration: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: inherit;
+}
+
+a[is='call-to-action'] img {
+    transition: all 0.3s ease-out;
+    transform-origin: center;
+    transform: scale(1.3);
+
+    animation-name: emphasize;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
+}

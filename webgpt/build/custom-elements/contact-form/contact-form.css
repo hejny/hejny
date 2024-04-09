@@ -1,0 +1,64 @@
+form[is='contact-form'] {
+    /*/
+    outline: 1px dotted rgb(255, 38, 38) !important;
+    /**/
+
+    padding: 5px;
+
+    outline: none;
+    border: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch /* <-[x] (reversed directions) */;
+}
+
+form[is='contact-form'] label {
+    /*/
+    outline: 1px dotted rgb(255, 38, 38) !important;
+    /**/
+
+    display: block;
+    margin: 5px;
+
+    text-align: left;
+}
+
+form[is='contact-form'] label p {
+    display: inline-block;
+    width: 120px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+form[is='contact-form'] input,
+form[is='contact-form'] button,
+form[is='contact-form'] textarea,
+form[is='contact-form'] select,
+form[is='contact-form'] input[type='checkbox'] {
+    max-width: 100%;
+
+    padding: 10px;
+    border-radius: 6px;
+
+    background-color: rgba(var(--palette-0-triplet), 0.5);
+    color: var(--palette-1);
+    outline: none;
+    border: 2px solid rgba(var(--palette-3-triplet), 0.3);
+}
+
+form[is='contact-form'] input[type='checkbox'] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+form[is='contact-form'] textarea {
+    display: block;
+    width: 100%;
+    height: 300px;
+}
+
+form[is='contact-form'] label:has(input[type='submit']),
+form[is='contact-form'] label:has(button) {
+    text-align: center;
+}

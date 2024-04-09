@@ -1,0 +1,291 @@
+/**
+ * Note: This is the style of the "one" layout
+ */
+
+.one_Layout__DnRAQ {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 5vw auto 5vw;
+    grid-template-rows: minmax(40vw, 34vh) 10vh 10vh auto min-content;
+    align-items: stretch;
+    justify-content: stretch;
+}
+
+@media only screen and (min-width: 900px) {
+    .one_Layout__DnRAQ {
+        grid-template-columns: 1fr 800px 1fr;
+    }
+}
+
+.one_Layout__DnRAQ header {
+    z-index: 1;
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
+}
+
+.one_Layout__DnRAQ .one_background__qSI60 {
+    z-index: 2;
+    grid-column: 1 / span 3;
+    grid-row: 2 / span 3;
+    pointer-events: none;
+}
+
+.one_Layout__DnRAQ main {
+    z-index: 3;
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 3;
+    text-align: center;
+    color: rgba(var(--palette-1-triplet), 0.8);
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.one_Layout__DnRAQ a {
+    color: rgba(var(--palette-1-triplet), 0.8);
+    text-decoration: none;
+}
+
+.one_Layout__DnRAQ p a {
+    color: var(--palette-1);
+    text-decoration: underline;
+}
+
+.one_Layout__DnRAQ p a:hover {
+    color: rgba(var(--palette-1-triplet), 0.8);
+}
+
+.one_Layout__DnRAQ a:hover,
+.one_Layout__DnRAQ b,
+.one_Layout__DnRAQ h1,
+.one_Layout__DnRAQ h2 {
+    color: var(--palette-1);
+}
+
+.one_Layout__DnRAQ h1 {
+    text-shadow: var(--palette-0);
+}
+
+.one_Layout__DnRAQ footer {
+    z-index: 3;
+    grid-column: 1 / span 3;
+    grid-row: 5 / span 1;
+}
+
+.poster_Layout__aQjzf {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 5vw auto 5vw;
+    grid-template-rows: 60vw 10vh 10vh auto;
+    align-items: stretch;
+    justify-content: stretch;
+}
+
+@media only screen and (min-width: 900px) {
+    .poster_Layout__aQjzf {
+        grid-template-columns: 1fr 800px 1fr;
+    }
+}
+
+.poster_Layout__aQjzf header {
+    z-index: 1;
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
+}
+
+.poster_Layout__aQjzf .poster_background__WwAmY {
+    z-index: 2;
+    grid-column: 1 / span 3;
+    grid-row: 2 / span 3;
+    pointer-events: none;
+}
+
+.poster_Layout__aQjzf main {
+    z-index: 3;
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 3;
+    text-align: center;
+    color: rgba(var(--palette-1-triplet), 0.8);
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.poster_Layout__aQjzf a {
+    color: rgba(var(--palette-1-triplet), 0.8);
+    text-decoration: none;
+}
+
+.poster_Layout__aQjzf p a {
+    color: var(--palette-1);
+    text-decoration: underline;
+}
+
+.poster_Layout__aQjzf p a:hover {
+    color: rgba(var(--palette-1-triplet), 0.8);
+}
+
+.poster_Layout__aQjzf a:hover,
+.poster_Layout__aQjzf b,
+.poster_Layout__aQjzf h1,
+.poster_Layout__aQjzf h2 {
+    color: var(--palette-1);
+}
+
+.poster_Layout__aQjzf h1 {
+    text-shadow: var(--palette-0);
+}
+
+.poster_Layout__aQjzf .poster_menu__ezx8h,
+.poster_Layout__aQjzf footer {
+    display: none;
+}
+
+.poster-2_Layout__zak0e {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    grid-template: '🟦' 1fr/1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.poster-2_Layout__zak0e header {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    grid-area: 🟦;
+}
+
+.poster-2_Layout__zak0e header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.poster-2_Layout__zak0e .poster-2_background__Yq1jt {
+    display: none;
+}
+
+.poster-2_Layout__zak0e main {
+    z-index: 3;
+    grid-area: 🟦;
+    max-width: 800px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 30px;
+    overflow: hidden;
+    text-shadow: 0 0 20px var(--palette-0);
+}
+
+.poster-2_Layout__zak0e a {
+    color: rgba(var(--palette-1-triplet), 0.8);
+    text-decoration: none;
+}
+
+.poster-2_Layout__zak0e p a {
+    color: var(--palette-1);
+    text-decoration: underline;
+}
+
+.poster-2_Layout__zak0e p a:hover {
+    color: rgba(var(--palette-1-triplet), 0.8);
+}
+
+.poster-2_Layout__zak0e a:hover,
+.poster-2_Layout__zak0e b,
+.poster-2_Layout__zak0e h1,
+.poster-2_Layout__zak0e h2 {
+    color: var(--palette-1);
+}
+
+.poster-2_Layout__zak0e h1 {
+    text-shadow: var(--palette-0);
+}
+
+.poster-2_Layout__zak0e .poster-2_menu__CIs5C,
+.poster-2_Layout__zak0e footer {
+    display: none;
+}
+
+.PickLayoutModal_PickLayoutModal__ZUCc4 {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: '🟦' 1fr/1fr;
+    align-content: space-between;
+}
+
+.PickLayoutModal_PickLayoutModal__ZUCc4 .PickLayoutModal_fillModal__SejFJ {
+    grid-area: 🟦;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    align-content: space-between;
+}
+
+.PickLayoutModal_PickLayoutModal__ZUCc4 .PickLayoutModal_fillModal__SejFJ .PickLayoutModal_result__TVgEs {
+    z-index: 1;
+    box-sizing: border-box;
+    margin: 10px;
+    border-radius: 20px;
+    overflow: clip;
+    display: grid;
+    grid-template: '🟦' 1fr '⬜' 50px;
+}
+
+.PickLayoutModal_PickLayoutModal__ZUCc4
+    .PickLayoutModal_fillModal__SejFJ
+    .PickLayoutModal_result__TVgEs
+    img.PickLayoutModal_image__PWUdR {
+    z-index: 10;
+    grid-area: 🟦;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.PickLayoutModal_PickLayoutModal__ZUCc4
+    .PickLayoutModal_fillModal__SejFJ
+    .PickLayoutModal_result__TVgEs
+    .PickLayoutModal_actions__noqcE {
+    z-index: 20;
+    grid-area: 🟦;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    pointer-events: none;
+    padding: 10px;
+}
+
+.PickLayoutModal_PickLayoutModal__ZUCc4
+    .PickLayoutModal_fillModal__SejFJ
+    .PickLayoutModal_result__TVgEs
+    .PickLayoutModal_prompt__SyIhr {
+    z-index: 20;
+    grid-area: ⬜;
+    width: 100%;
+    height: 100%;
+    color: #ccc;
+    background-color: #222;
+    padding: 10px;
+}
+
+.PickLayoutModal_PickLayoutModal__ZUCc4
+    .PickLayoutModal_fillModal__SejFJ
+    .PickLayoutModal_result__TVgEs
+    .PickLayoutModal_actions__noqcE
+    .PickLayoutModal_pick__Eio4C {
+    cursor: pointer;
+    pointer-events: all;
+    background-color: #299ca0;
+}
