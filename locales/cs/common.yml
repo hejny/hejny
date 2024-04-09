@@ -112,35 +112,33 @@ AiTraining:
             Varianta 1: Vývoj pomocí AI
         price: 20 000,- Kč
         content: |
-            Ať už **vyvíjíte cokoliv** a chcete mnohonásobně **zvýšit efektivitu pomocí AI**
+            Ať už **vyvíjíte jakýkoliv software** a chcete mnohonásobně zvýšit efektivitu pomocí AI:
 
-            -  Dojedu k vám do firmy v rámci České republiky (nebo online)
-            -  Hodinová prezentace a ukázka jak lze vyvíjet pomocí AI
-                -  Efektivní využítí Github Copilot
-                -  Efektivní využítí (Chat)GPT
-                -  AI test driven development 
-                -  Ukážu vám příklady dobré ho využití generativní umělé inteligence při vývoji
-            -  Náslená konzultace a pomoc při vývoji vaší aplikace
-            -  Všechny ukázky jsou v TypeScriptu
-            -  Možnost češtiny nebo angličtiny
-            -  A mnoho dalšího
+            -  V rámci Vaší firmy v ČR nebo online.
+            -  Hodinová prezentace a ukázka, jak lze vývoj efektivně realizovat s využitím AI:
+                -  Představím efektivní využití GitHub Copilota a (Chat)GPT.
+                -  Vysvětlím přístup AI test driven development.
+                -  Ukážu příklady dobrého využití generativní umělé inteligence při vývoji.
+                -  Poskytnu následnou konzultaci a podporu při vývoji Vaší aplikace.
+            -  Všechny ukázky jsou v TypeScriptu nebo JavaScriptu *(dle Vaší preference)*.
+            -  V češtině nebo angličtině.
+            -  A mnoho dalších informací a technik.
 
     variant2:
         title: >
             Varianta 2: Vývoj AI aplikací
         price: 50 000,- Kč
         content: |
-            Pokud vyvíjíte **Ai produkt**, ať už jde o firemní chat, automatizaci zákaznické podpory, generování reklamních příspěvků, prezentací
-            případně jakékoliv využití jazykových nebo obrázkových modelů
+            Pokud **vyvíjíte AI produkt**, ať už jde o firemní chat, automatizaci zákaznické podpory, generování reklamních příspěvků či prezentace,
+            nebo jakékoliv další využití jazykových či obrázkových modelů, potřebujete při složitější aplikaci rozumnou metodiku.
 
-            Pokud je vaše aplikace jen trochu složitá potřebujete nějakou rozumnou metodiku,
-            jak věci dobře integrovat dohromady sledovat jejich výkon testovat zda je všechno
+            Je důležité vědět, jak správně integrovat jednotlivé komponenty, sledovat jejich výkon a testovat, zda vše funguje jak má.
 
-            -  Týden předem s vámi na online callu proberu co přesně řešíte
-               Pokud mi dáte přístupy ke svému kódu, dokážu se podívat na konkrétní detaily (samozřejmě s možností podepsat NDA)
-            -  Dojedu k vám do firmy v rámci České republiky (nebo online)
-            -  Dvouhodinová detailní prezentace na míru vaší potřebě
-                -  Přehled dostupných modelů které můžete pro vaší aplikaci využít
+            -  Týden předem s vámi proberu na online hovoru, co přesně řešíte.
+            -  Pokud mi poskytnete přístupy ke svému kódu, mohu se podívat na konkrétní detaily *(samozřejmě s možností podepsání NDA)*.
+            -  V rámci Vaší firmy v ČR nebo online.
+            -  Dvouhodinová detailní prezentace na míru Vaší potřebě:
+                -  Přehled dostupných modelů, které můžete pro Vaší aplikaci využít
                 -  Přehled dostupných technologií pro vývoj
                 -  Přehled dostupných knihoven pro integraci AI modelů
                 -  Metodiky promptingu 
@@ -148,6 +146,11 @@ AiTraining:
                 -  Odchytávání chyb
                 -  Testování výkonu
                 -  Přechod na vyšší modely
-            -  Náslená konzultace a pomoc při vývoji vaší aplikace
-            -  nejlépe rozumím webovým případně mobilním aplikacím psaným v typescriptu nebo javascriptu, Pokud však programujete v něčem jiném, není to z hlediska konzultace překážka, mám zkušenosti s dalšími jazyky avšak nejspíš vám v tom případě nedokážu pomoci v velmi odborných nejencích a detailech
-            -  A mnoho dalšího
+            -  Náslená konzultace a pomoc při vývoji Vaší aplikace
+            -  Všechny ukázky jsou v TypeScriptu nebo JavaScriptu *(dle Vaší preference)*.
+            -  V češtině nebo angličtině.
+            -  A mnoho dalších informací a technik.
+
+            Nejlépe rozumím webovým a případně mobilním aplikacím psaným v TypeScriptu nebo JavaScriptu.
+            Pokud ale programujete v jiném jazyku, nevadí to, mám zkušenosti s dalšími programovacími jazyky a dokážu konzultovat i tak,
+            ačkoliv nemusím být schopen pomoci s velmi specifickými dotazy a detaily.

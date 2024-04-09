@@ -351,6 +351,8 @@ export function ReferencesSection(props: ReferencesProps) {
 }
 
 /**
+ * TODO: !!! Translate all references
+ * TODO: !!! Add position and organization of references
  * TODO: !!! Add organization and position of referees
  * TODO: !!! Add Daria and Bronwyn
  * TODO: !!! Link to LinkedIn
