@@ -4,10 +4,11 @@ description: |
     Specializuji se na tvorbu **plně funkčních prototypů** od nuly až po
     ověření konceptu.
 
+# !!! Transfer to english
 Welcome:
     content: |
-        ChatGPT, GPT-4, Anthropic Claude, Gemini, AI, ML, (Chat)GPT, LLM, DALL-E, Midjourney,
-        Stable Diffusion, Sora, VR/AR/XR, TypeScript, blockchain, Web3, PWA... 🤯
+        ChatGPT, AI, ML, GPT-4, Anthropic Claude 3, Gemini, LLM, DALL-E, Midjourney,
+        Stable Diffusion, Sora,... 🤯
 
 
         Využíváte **plný potenciál technologií** a generativní umělé inteligence ve vašem podnikání?
@@ -26,16 +27,17 @@ Welcome:
 
     back-home: Zpět na hlavní stránku
 
+# !!! Transfer to english
 PavolHejny:
     title: Kdo jsem?
     content: |
         Jsem Pavol, vývojář, který s nadšením využívá nové nástroje a technologie.
 
-        Momentálně se specializuji na tvorbu plně funkčních uživatelských aplikací, které využívají nejnovější modely umělé inteligence.
+        Momentálně se specializuji na tvorbu aplikací, které využívají nejnovější modely umělé inteligence.
 
         Jsem členem konzultační skupiny Ainautes, která pomáhá s nasazením generativního AI po celém světě.
 
-        Vyvíjím službu WebGPT na generování webových stránek.
+        Vyvíjím službu WebGPT na generování webových stránek a také vlastní knihovnu pro orchestraci jazykových modelů Promptbook.
 
         Před masivním nástupem generativní umělé inteligence jsem vytvořil první českou virtuální tabuli Collboard a elektronické učebnice H-edu,
         které využívají desítky tisíc dětí.
@@ -44,6 +46,7 @@ PavolHejny:
         Pravidelně přednáším na konferencích, zasedám v porotě a jsem mentorem mnoha českých i mezinárodních soutěží.
         K tomu jsem srdcem zvláště a miluji **open source** - mnoho z mých věcí najdete na mém Githubu.
 
+# !!! Link to training
 Services:
     title: Jak Vám pomohu?
     content: ''
@@ -94,61 +97,57 @@ Sample:
     title: Sample section
     content: Sample text with [sample link](/sample)
 
+# !!! Transfer to english
 AiTraining:
     title: AI Školení
     more-about-pavol: Více o Mně
     content: |
-        Nabízím školení v oblasti umělé inteligence a generativních technologií.
+        Nabízím školení v oblasti generativní umělé inteligence.
         Vzdělávám vývojáře, designéry a manažery, kteří chtějí využít potenciál AI ve svém podnikání.
 
-        Školení mohou být zaměřena na konkrétní technologie, jako je GPT-3, DALL-E, nebo na obecné principy AI a ML.
-
-        Vzdělávání může být individuální nebo skupinové, online nebo offline.
-
-        Pro více informací mě kontaktujte.
+        Školení mohou být zaměřena na konkrétní technologie, jako je GPT-3, DALL-E-3, nebo na obecné principy AI a ML.
 
     variant1:
         title: >
             Varianta 1: Vývoj pomocí AI
         price: 20 000,- Kč
         content: |
-            ať už **vyvíjíte cokoliv** a chcete svou efektivitu mnohonásobně **zvýšit pomocí Ai**
+            Ať už **vyvíjíte cokoliv** a chcete mnohonásobně **zvýšit efektivitu pomocí AI**
 
+            -  Dojedu k vám do firmy v rámci České republiky (nebo online)
+            -  Hodinová prezentace a ukázka jak lze vyvíjet pomocí AI
+                -  Efektivní využítí Github Copilot
+                -  Efektivní využítí (Chat)GPT
+                -  AI test driven development 
+                -  Ukážu vám příklady dobré ho využití generativní umělé inteligence při vývoji
+            -  Náslená konzultace a pomoc při vývoji vaší aplikace
+            -  Všechny ukázky jsou v TypeScriptu
+            -  Možnost češtiny nebo angličtiny
+            -  A mnoho dalšího
 
-            zvyšte efektivitu vašeho vývoje pomocí ai co máte v ceně
-
-            - dojedu k vám do kanceláře / firmy v rámci České republiky nebo online 
-            - první část bude hodinová prezentace a ukázka jak lze vyvíjet pomocí
-            - AI test driven development 
-            - všechny ukázky jsou v typescriptu
-            - a
-            - a
-            - a
-            - a
-            - a
-            - a
-            - a mnoho dalšího
-
-            Ukážu vám příklady dobré ho využití nerativní umělé inteligence při vývoji a jakým způsobem software psát tak, aby uměla inteligenci Co nejedí co nejvíce zvyšovala vaši efektivitu Ukážu vám v jakých situacích se nejvíce hodí k drápko pilot V jakých chat v jakých kompplíčen A v jakých příjme využití ipi po školení dostanete přístup ke všem ukázkám a materiálu
     variant2:
         title: >
             Varianta 2: Vývoj AI aplikací
         price: 50 000,- Kč
         content: |
-            pokud vyvíjíte **Ai produkt** ať už jde o firemní chat
+            Pokud vyvíjíte **Ai produkt**, ať už jde o firemní chat, automatizaci zákaznické podpory, generování reklamních příspěvků, prezentací
+            případně jakékoliv využití jazykových nebo obrázkových modelů
 
-            tahle volba je pro vás ideální, Pokud sami vyvíjíte ai produkt. ať už jde o firemní chat automatizace zákaznické podpory generování reklamních příspěvků prezentací nebo čehokoliv nebo jakékoliv využití jazykových nebo obrázkových modelů pokud je vaše aplikace jen trochu složitá potřebujete nějakou rozumnou metodiku jak věci dobře integrovat dohromady sledovat jejich výkon testovat zda je všechno
+            Pokud je vaše aplikace jen trochu složitá potřebujete nějakou rozumnou metodiku,
+            jak věci dobře integrovat dohromady sledovat jejich výkon testovat zda je všechno
 
-            -  základní přehled dostupných modelů které můžete pro vaší aplikaci využít
-            -  metodiky prompting 
-            -  pipelining a orchestrace
-            -  jakým způsobem testovat výkon modelu odchytávat chyby a co nejmenšími problémy přecházet na vyšší modely jakmile jsou k dispozici
-            -  a
-            -  a
-            -  a
-            -  a
-            -  týden předem s vámi na online kolo proberu co přesně řešíte a Pokud mi dáte přístupy ke svému kódu, dokážu se podívat na konkrétní detaily samozřejmě možnost podepsat nda
+            -  Týden předem s vámi na online callu proberu co přesně řešíte
+               Pokud mi dáte přístupy ke svému kódu, dokážu se podívat na konkrétní detaily (samozřejmě s možností podepsat NDA)
+            -  Dojedu k vám do firmy v rámci České republiky (nebo online)
+            -  Dvouhodinová detailní prezentace na míru vaší potřebě
+                -  Přehled dostupných modelů které můžete pro vaší aplikaci využít
+                -  Přehled dostupných technologií pro vývoj
+                -  Přehled dostupných knihoven pro integraci AI modelů
+                -  Metodiky promptingu 
+                -  Pipelining a orchestrace
+                -  Odchytávání chyb
+                -  Testování výkonu
+                -  Přechod na vyšší modely
+            -  Náslená konzultace a pomoc při vývoji vaší aplikace
             -  nejlépe rozumím webovým případně mobilním aplikacím psaným v typescriptu nebo javascriptu, Pokud však programujete v něčem jiném, není to z hlediska konzultace překážka, mám zkušenosti s dalšími jazyky avšak nejspíš vám v tom případě nedokážu pomoci v velmi odborných nejencích a detailech
-            - a mnoho dalšího
-
-            součástí tohoto celého je celý vývojářský den kde Vám Všechny změny věci ukážu Pak si můžeme sednout nad konkrétním kódem Já sám jsem primárně typescript vývoj
+            -  A mnoho dalšího
