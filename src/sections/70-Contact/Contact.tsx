@@ -94,6 +94,35 @@ export function ContactSection(props: ContactProps) {
                     )}
                 </ul>
             </div>
+
+            <form is="contact-form">
+                <label>
+                    <p>Jméno:</p>
+                    <input name="name" placeholder="Vaše jméno" type="text" />
+                </label>
+                <label>
+                    <p>Email:</p>
+                    <input name="email" placeholder="jan.novak@seznam.cz" type="email" />
+                </label>
+                <label>
+                    <p>Telefonní číslo:</p>
+                    <input name="phone" placeholder="+420123456789" type="tel" />
+                </label>
+                <label>
+                    <p>Zájem o školení na téma:</p>
+                    <select name="variant">
+                        <option value="Varianta 1: Vývoj pomocí AI">Varianta 1: Vývoj pomocí AI</option>
+                        <option value="Varianta 2: Vývoj AI aplikací">Varianta 2: Vývoj AI aplikací</option>
+                    </select>
+                </label>
+                <label>
+                    <p>Zpráva:</p>
+                    <textarea name="message" placeholder="Můžete nám napsat jaké jsou vaše požadavky"></textarea>
+                </label>
+                <label>
+                    <input type="submit" value="Odeslat" />
+                </label>
+            </form>
         </Section>
     );
 }

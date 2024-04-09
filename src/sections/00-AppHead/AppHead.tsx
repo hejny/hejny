@@ -50,6 +50,27 @@ export function AppHead(props: AppHeadProps) {
                 <meta property="twitter:title" content={title} />
                 <meta property="twitter:description" content={description} />
                 <meta property="twitter:image" content={homeUrl + cave_of_ideas_with_transparent_look_through.src} />
+
+                {/* WebGPT */}
+                <link rel="stylesheet" href="/webgpt/config.css" />
+                <link rel="stylesheet" href="/webgpt/build/common.css" />
+                <link rel="stylesheet" href="/webgpt/build/article.css" />
+                <link rel="stylesheet" href="/webgpt/build/one.layout.css" />
+                <link rel="stylesheet" href="/webgpt/build/ai-components.css" />
+                <link rel="stylesheet" href="/webgpt/build/custom-elements/call-to-action/call-to-action.css" />
+                <link rel="stylesheet" href="/webgpt/build/custom-elements/contact-form/contact-form.css" />
+                <link rel="stylesheet" href="/webgpt/build/custom-elements/person-list/person-list.css" />
+                <script src="/webgpt/build/custom-elements/custom-elements-polyfill.js" async defer></script>
+                <script src="/webgpt/build/custom-elements/environment.js" async defer></script>
+                <script src="/webgpt/build/custom-elements/call-to-action/call-to-action.js" async defer></script>
+                <script src="/webgpt/build/custom-elements/contact-form/contact-form.js" async defer></script>
+                <script src="/webgpt/build/custom-elements/person-list/person-list.js" async defer></script>
+
+                <script
+                    src="https://webgpt.cz/api/register-script?wallpaperId=tvorim-z-niceho-nic-3jklh2c55izg"
+                    async
+                    defer
+                ></script>
             </Head>
             <LanguagePicker />
         </>

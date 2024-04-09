@@ -13,7 +13,11 @@ export function AiTrainingVariant(props: AiTrainingVariantProps) {
     return (
         <div>
             <h3>{t(`AiTraining.${variant}.title`)}</h3>
-            <Link className="button" href="#!!!">
+            <Link
+                className="button"
+                href="#contact"
+                // <- TODO: !!! Better
+            >
                 {t(`AiTraining.${variant}.price`)}
             </Link>
             <Article content={t(`AiTraining.${variant}.content`)} isEnhanced />
