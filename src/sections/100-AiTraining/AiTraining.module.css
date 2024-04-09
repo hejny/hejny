@@ -6,7 +6,8 @@
     /* TODO: Use or remove empty css */
 }
 
-.variants > div {
+.variants > div > div {
+    /* Note: [✌] Two nested divs to use <Items/> together with nice outline */
     outline: 1px solid rgb(245, 224, 185);
     border-radius: 30px;
     margin: 10px;
