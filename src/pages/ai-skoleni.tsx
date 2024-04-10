@@ -1,9 +1,11 @@
-import { Caveat, Oswald } from '@next/font/google';
+import { Oswald } from '@next/font/google';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
 import { Vector } from 'xyzt';
+import { Article } from '../components/Article/Article';
 import { DebugGrid } from '../components/DebugGrid/DebugGrid';
+import { Section } from '../components/Section/Section';
 import { TiledBackground } from '../components/TiledBackground/TiledBackground';
 import { AppHead } from '../sections/00-AppHead/AppHead';
 import { CaveSection } from '../sections/01-Cave/Cave';
@@ -39,6 +41,9 @@ export default function AiTrainingPage({ lang }: any) {
                 <main>
                     <WelcomeSection variant="HOMEPAGE" />
                     <AiTrainingSection />
+                    <Section id="AiTrainingFaq">
+                        <Article content={t('AiTraining.faq')} isEnhanced />
+                    </Section>
                     <PavolHejnySection>
                         <Link className="button" href="/">
                             {t('AiTraining.more-about-pavol')}

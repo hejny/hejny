@@ -109,7 +109,7 @@ AiTraining:
 
         Školení mohou být zaměřena na konkrétní technologie, jako je GPT-3, DALL-E-3, nebo na obecné principy AI a ML.
 
-        V rámci školení jsou výrazně úročeny mé dlouholeté zkušenosti s vývojem a také dlouhodobý vhled do vývoje rozsáhlých aplikací, založených na AI jazykových modelech. 
+        V rámci školení jsou výrazně úročeny mé dlouholeté zkušenosti s vývojem a také dlouhodobý vhled do vývoje rozsáhlých aplikací, založených na AI jazykových modelech.
 
     variant1:
         title: >
@@ -161,3 +161,7 @@ AiTraining:
             Nejlépe rozumím webovým a případně mobilním aplikacím psaným v TypeScriptu nebo JavaScriptu.
             Pokud ale programujete v jiném jazyku, nevadí to, mám zkušenosti s dalšími programovacími jazyky a dokážu konzultovat i tak,
             ačkoliv nemusím být schopen pomoci s velmi specifickými dotazy a detaily.
+    faq: |
+        ## FAQ
+
+        ### Jak probíhá školení?

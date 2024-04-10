@@ -116,6 +116,13 @@
     }
 }
 
+.page blockquote {
+    border: 1px solid rgba(245, 224, 185, 0.5); /* <- [🎨] */
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.3em;
+}
+
 .page footer {
     /*/
     outline: 1px dotted green;

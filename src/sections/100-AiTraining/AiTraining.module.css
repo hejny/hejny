@@ -8,7 +8,7 @@
 
 .variants > div > div {
     /* Note: [✌] Two nested divs to use <Items/> together with nice outline */
-    outline: 1px solid rgb(245, 224, 185);
+    outline: 1px solid rgba(245, 224, 185, 0.5); /* <- [🎨] */
     border-radius: 30px;
     margin: 10px;
     padding: 10px;
