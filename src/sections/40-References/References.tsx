@@ -42,7 +42,7 @@ export function ReferencesSection(props: ReferencesProps) {
                                 Tomáš Studeník
                             </a>
                         </Item.Title>
-                        <Item.Subtitle>Hacker</Item.Subtitle>
+                        <Item.Subtitle>Startupper</Item.Subtitle>
                         <Item.Description>
                             <Translate locale="en">
                                 <p>
@@ -231,7 +231,9 @@ export function ReferencesSection(props: ReferencesProps) {
                                 Bob Kartous
                             </a>
                         </Item.Title>
-                        <Item.Subtitle>!!!</Item.Subtitle>
+                        <Item.Subtitle>
+                            Prorektor VŠEM, poradce ministra školství Mikuláše Beka, autor knih No Future a Future ON!
+                        </Item.Subtitle>
                         <Item.Description>
                             <Translate locale="en">
                                 <p>
