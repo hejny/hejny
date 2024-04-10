@@ -39,4 +39,42 @@ describe('normalizeDashes', () => {
             `),
         );
     });
+
+    it(`skip markdown lines`, () => {
+        expect(
+            normalizeDashes(
+                spaceTrim(`
+                    Foo-foo
+
+                    ---
+
+                    Bar
+                `),
+            ),
+        ).toBe(
+            spaceTrim(`
+                    Foo–foo
+
+                    ---
+                    
+                    Bar
+            `),
+        );
+    });
+
+    it(`skip comments`, () => {
+        expect(
+            normalizeDashes(
+                spaceTrim(`
+                    Foo-foo
+                    <!--Hello-->
+                `),
+            ),
+        ).toBe(
+            spaceTrim(`
+                    Foo–foo
+                    <!--Hello-->
+            `),
+        );
+    });
 });

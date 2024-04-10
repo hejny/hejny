@@ -105,24 +105,22 @@ AiTraining:
     more-about-pavol: Více o Mně
     content: |
         Nabízím školení v oblasti generativní umělé inteligence.
-        Vzdělávám vývojáře, designéry a manažery, kteří chtějí využít potenciál AI ve svém podnikání.
+        Vzdělávám vývojářské týmy, aby mohly efektivně využívat AI v jejich aplikacích.
 
-        Školení mohou být zaměřena na konkrétní technologie, jako je GPT-3, DALL-E-3, nebo na obecné principy AI a ML.
-
-        V rámci školení jsou výrazně úročeny mé dlouholeté zkušenosti s vývojem a také dlouhodobý vhled do vývoje rozsáhlých aplikací, založených na AI jazykových modelech.
+        V rámci školení jsou úročeny mé více než 15ti leté zkušenosti s vývojem.
 
     variant1:
         title: >
             Varianta 1: Vývoj pomocí AI
         price: 35 000,- Kč
         content: |
-            Ať už **vyvíjíte jakýkoliv software** a chcete mnohonásobně zvýšit efektivitu pomocí AI:
+            Ať už **vyvíjíte jakýkoliv software** a chcete zvýšit efektivitu vývoje o 25% pomocí AI:
 
             -  Týden předem s vámi na **nezávazném hovoru** proberu na online hovoru, co přesně řešíte.
             -  V rámci Vaší firmy v ČR nebo online.
             -   Prezentace a workshop na půl dne a ukázka, jak lze vývoj efektivně realizovat s využitím AI:
                 -  Pro 5~50 lidí (předem přizpůsobím míru interaktivity na základě počtu lidí) 
-                -  Představím efektivní využití GitHub Copilota a (Chat)GPT.
+                -  Představím efektivní využití GitHub Copilota a (Chat)GPT při vývoji.
                 -  Vysvětlím přístup AI test driven development.
                 -  Automatická tvorba dokumentace z kódu nebo kód z dokumentace
                 -  Ukážu příklady dobrého využití generativní umělé inteligence při vývoji.
@@ -153,14 +151,11 @@ AiTraining:
                 -  Odchytávání chyb
                 -  Testování výkonu
                 -  Přechod na vyšší modely
-            -  Následný půlden konzultace nad kódem a pomoc při vývoji Vaší aplikace
+            -  Následný půlden konzultace nad Vaším kódem a pomoc při vývoji Vaší aplikace
             -  Všechny ukázky jsou v TypeScriptu nebo JavaScriptu *(dle Vaší preference)*.
             -  V češtině nebo angličtině.
             -  A mnoho dalších informací a technik.
 
-            Nejlépe rozumím webovým a případně mobilním aplikacím psaným v TypeScriptu nebo JavaScriptu.
-            Pokud ale programujete v jiném jazyku, nevadí to, mám zkušenosti s dalšími programovacími jazyky a dokážu konzultovat i tak,
-            ačkoliv nemusím být schopen pomoci s velmi specifickými dotazy a detaily.
     faq: |
         ## FAQ
 
@@ -169,6 +164,12 @@ AiTraining:
         Školení probíhá v rámci vaší firmy nebo online. Přijeďu k vám v rámci ČR, případně mohu dojet do blízkého zahraničí (Bratislava, Vídeň,...)
 
 
+        ### Kterou variantu si vybrat?
+
+        Oběma variantám předchází **nezávazný hovor**, kde si společně probereme, co přesně řešíte.
+        1) Pokud vyvíjíte úplně cokoliv, varianta 1 je pro Vás.
+        2) Pro firmy, které specificky vyvíjí AI aplikace, je varianta 2.
+
         ### Jak dlouho trvá školení a kdy se může konat?
 
         - **Varianta 1**: Školení trvá **půl dne** a může se konat kdykoliv po domluvě.
@@ -176,13 +177,68 @@ AiTraining:
                           Pokud je Vaše firma v Praze, můžeme ho rozdělit na dva dny, např. středa odpoledne a čtvrtek dopoledne.
                     
 
-        ### Proč TypeScript
+        ### Jaké máte zkušenosti s vývojem a AI?
+
+        - Programování se věnuji od roku 2007
+        - Webové aplikace od roku 2008 *(PHP, Flash)*
+        - V JavaScriptu od roku 2012
+        - V TypeScriptu od roku 2015
+        - První generativní AI jsem začal používat v roce 2021 s nástupem GPT-2
+
+        ### Vyvíjeme aplikaci X v jazyce Y, dokážete nám pomoci?
+
+        Já sám nejlépe rozumím webovým a mobilním aplikacím psaným v TypeScriptu nebo JavaScriptu.
+        Pokud ale programujete v jiném jazyku, nevadí to, mám zkušenosti s dalšími programovacími jazyky a dokážu konzultovat i tak,
+        ačkoliv nemusím být schopen pomoci s velmi specifickými dotazy a detaily.
+
+
+        ### O kolik může AI zvýšit efektivitu vývoje? Vyplatí se mi školení?
+
+        To je velmi individuální a záleží na konkrétní aplikaci.
+        V praxi to však bývá překvapivě podstatné zvýšení efektivity, avšak nejde o zázrak, který by nahradil vývojáře.
+
+        Generativní AI může zvýšit efektivitu hlavně u jasně zadefinovaných úkolů, kde jde o to "jen napsat kód".
+        Naopak architektura aplikace a její návrh vyžadují seniorního vývojáře.
+        Stejně tak občas narazíte na chybu, se kterou si poradí jen lidský vývojář.
+
+        Jak píšu, velmi záleží na konkrétní aplikaci, avšak obecně lze říci:
+
+        - **25%** času na jasně definované zadání; v tom pomůže GenAI na 30%
+        - **25%** času na návrh a architekturu aplikace; zde GenAI nepomůže
+        - **15%** času na psaní testů; v tom pomůže GenAI na 60%
+        - **20%** času na implementaci; v tom pomůže GenAI na 50%
+        - **15%** času na dokumentaci; v tom pomůže GenAI na 90%
+
+        `(0.25*0.3)+(0.25*0)+(0.15*0.6)+(0.20*0.5)+(0.15.0.9) = 0.265`
+
+        Celkově tedy může AI zvýšit efektivitu vývoje **cca o 25%**, tzn. čtvrtinu.
+
+        Pokud máte mzdové náklady na vývojáře 100 000 Kč/měsíc a máte 5 vývojářů, ušetříte až **125 000 Kč každý měsíc**.
+
+        > Tzn. školení za ve variantě 1 za 35 000 Kč se vám **vrátí za méně než 10 dní**.
+
+        *Zanedbávám zde náklady na Github Copilot a ChatGPT+, které jsou zanedbatelné ve srovnání s mzdovými náklady.*
+
+        *Jde samozřejmě o velmi zjednodušený model, ale může vám pomoci při rozhodování.*
+
+        ### O kolik je lepší školení než jen začít používat GitHub Copilot?
+
+        Už samotným používáním GitHub Copilotu můžete zvýšit efektivitu vývoje.
+        Nicméně, pokud nevíte, jak správně využít jeho potenciál, nejspíše se správnou metodikou nevytěžíte maximum z jeho možností.
+
+        ### Jaké jsou možnosti platby?
+
+        50% platba na účet předem a poloviční po školení. Fakturu vystavím na své [IČO 07401426](https://rejstrik.penize.cz/ares/07401426-pavol-hejny).
+        Platba možná i v Eurech na EUR účet podle aktuálního kurzu.
+
+        ### Proč jsou ukázky v TypeScriptu
 
         `TypeScript` je jazyk, ve kterém mám nejvíce zkušeností a jde o jazyk, který je velmi vhodný pro vývoj velkých uživatelských aplikací.
         `JavaScript` je to samé, ale bez typové kontroly, což může být vhodnější pro menší projekty.
 
         Pokud Vaše firma využívá jiný jazyk, nevadí, dokážu se přizpůsobit. Sám mám zkušenosti s `Javou`, `Pythonem`, `C`, `C++`, `PHP` a `Haskellem`.
 
+        ---
 
         ## Partneři
 

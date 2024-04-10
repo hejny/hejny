@@ -10,6 +10,11 @@ export function normalizeDashes(text: string): string {
     // Replace single dashes with an en dash (–)
     let normalizedText = text.replace(/(?<!^\s*)-/gm, '–');
 
+    // Replace multiple dashes back to single dashes
+    normalizedText = normalizedText.replace(/–{2,}/gm, (_) => {
+        return '-'.repeat(_.length);
+    });
+
     // Skip excluded words
     for (const excludedWord of EXCLUDED_WORDS) {
         normalizedText = normalizedText.split(excludedWord.split('-').join('–')).join(excludedWord);
