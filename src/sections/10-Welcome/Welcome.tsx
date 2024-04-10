@@ -24,7 +24,7 @@ export function WelcomeSection(props: WelcomeProps) {
     const { t, i18n } = useTranslation();
 
     return (
-        <Section id="Welcome" className={styles.WelcomeSection}>
+        <Section id="Welcome" className={styles.WelcomeSection} isNotArticle>
             <Link href="/">
                 <h1 className={handwrittenFont.className}>
                     {i18n.language === 'en' && (

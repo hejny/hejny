@@ -1,4 +1,4 @@
-const EXCLUDED_WORDS = ['H-edu', 'h-edu'];
+const EXCLUDED_WORDS = ['H-edu', 'h-edu', '<!--', '-->'];
 
 /**
  * Normalize minus as dashes (- U+0014) to propper dashes (– U+2013)

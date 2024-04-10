@@ -10,10 +10,16 @@ export function AiTrainingVariant(props: AiTrainingVariantProps) {
     const { variant } = props;
     const { t } = useTranslation();
 
+    const [row1, row2] = t(`AiTraining.${variant}.title`).split(': ', 2);
+
     return (
         <div>
             <div>
-                <h3>{t(`AiTraining.${variant}.title`)}</h3>
+                <h3>
+                    {row1}
+                    <br />
+                    {row2}
+                </h3>
                 <Link
                     className="button"
                     href="#contact"

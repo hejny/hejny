@@ -13,6 +13,7 @@ const LINKS = {
     'Startup Weekendu': 'https://startovani.cz/',
     'my Github': 'https://github.com/hejny',
     'mém Githubu': 'https://github.com/hejny',
+    // 'Tomáš Kapler': 'https://www.kapler.cz/ai-skoleni/',
 
     // TODO: !! 'Startup Weekend': 'https://startovani.cz/',
 
