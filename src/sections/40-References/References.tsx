@@ -232,7 +232,8 @@ export function ReferencesSection(props: ReferencesProps) {
                             </a>
                         </Item.Title>
                         <Item.Subtitle>
-                            Prorektor VŠEM, poradce ministra školství Mikuláše Beka, autor knih No Future a Future ON!
+                            Prorektor VŠEM, poradce ministra školství Mikuláše Beka, autor knih No Future a Future ON
+                            {/* !!! */}
                         </Item.Subtitle>
                         <Item.Description>
                             <Translate locale="en">
