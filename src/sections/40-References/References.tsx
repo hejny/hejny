@@ -167,7 +167,7 @@ export function ReferencesSection(props: ReferencesProps) {
                                 Max Kozlov
                             </a>
                         </Item.Title>
-                        <Item.Subtitle>Tvůrce</Item.Subtitle>
+                        <Item.Subtitle>Founder & CEO - Undout</Item.Subtitle>
                         <Item.Description>
                             <Translate locale="en">
                                 <p>
