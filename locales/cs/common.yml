@@ -156,6 +156,8 @@ AiTraining:
             -  V češtině nebo angličtině.
             -  A mnoho dalších informací a technik.
 
+#!!! enhance faq
+
     faq: |
         ## FAQ
 
@@ -230,6 +232,12 @@ AiTraining:
 
         50% platba na účet předem a poloviční po školení. Fakturu vystavím na své [IČO 07401426](https://rejstrik.penize.cz/ares/07401426-pavol-hejny).
         Platba možná i v Eurech na EUR účet podle aktuálního kurzu.
+
+        ### Proč je školení dražší než jiná školení
+
+        Toto školení je školení od vývojáře pro vývojáře. dozvíte se mnoho interních
+
+        Pokud však potřebujete přehled nástrojů
 
         ### Proč jsou ukázky v TypeScriptu
 
