@@ -156,7 +156,7 @@ AiTraining:
             -  V češtině nebo angličtině.
             -  A mnoho dalších informací a technik.
 
-#!!! enhance faq
+    #!!! enhance faq
 
     faq: |
         ## FAQ
@@ -235,9 +235,11 @@ AiTraining:
 
         ### Proč je školení dražší než jiná školení
 
-        Toto školení je školení od vývojáře pro vývojáře. dozvíte se mnoho interních
+        Toto školení je školení od vývojáře pro vývojáře. dozvíte se mnoho interních poznatků přímo z vývoje aplikací.
 
-        Pokud však potřebujete přehled nástrojů
+        Zajímá-li vás nejaktuálnější přehled AI nástrojů, doporučuji školení od [Tomáše Kaplera](https://www.kapler.cz/ai-skoleni).
+        Pokud vás víc zajímá vhled do AI jako takého *(nikoliv AI v kontextu vývoje aplikací)*,
+        mohu Vám doporučit školení od Ainautes, kteří se specializují na zasazení AI do širšího kontextu.
 
         ### Proč jsou ukázky v TypeScriptu
 
