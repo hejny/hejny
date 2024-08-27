@@ -2,11 +2,17 @@
 # 👨‍💼 Pavol Hejný
 -->
 
-Hi I am Pavol,
+I'm Pavol, a developer passionate about new tools and technologies.
 
-a developer who is passionate about using new tools and technologies. I specialise in creating fully functional user applications using the latest artificial intelligence models. I am a member of the [Ainautes](https://www.ainautes.com/) consulting group, which supports with the deployment of generative AI around the world.  
-I develop the [WebGPT](https://webgpt.cz/?partner=ph&utm_medium=referral&utm_source=personal%E2%80%93page&utm_content=pavolhejny.com&utm_campaign=partner%E2%80%93ph) web page generation service.  
-Before the massive emergence of generative AI, I created the first Czech virtual whiteboard, [Collboard](https://collboard.com/), and electronic textbooks, [H-edu](https://xn--hedu-086a.cz/), which were used by tens of thousands of children. I have also worked on many scientific projects for the [Czech Ornithological Society](https://www.birdlife.cz/en/). I regularly give lectures at conferences, sit on juries, and act as a mentor in many Czech and international competitions. I have a special heart for this, and I love **open-source** – you can find many of my things on my GitHub.
+I specialize in creating fully functional user applications using the latest artificial intelligence models.
+
+I am a member of the [Ainautes](https://www.ainautes.com/) consulting group, which supports the deployment of generative AI around the world.
+
+Currently, I work on the [Promptbook framework](https://www.npmjs.com/package/@promptbook/utils), which enables easy and smart abstraction and orchestration of large-language models (like ChatGPT).
+
+Before the massive emergence of generative AI, I created the first Czech virtual whiteboard, [Collboard](https://collboard.com/), and electronic textbooks, [H-edu](https://www.h-edu.cz/), used by tens of thousands of children.
+
+I have also worked on many scientific projects for the [Czech Ornithological Society](https://www.birdlife.cz/). I regularly give lectures at conferences, sit on juries, and act as a mentor in many Czech and international competitions. I have a special heart for this, and I love open source – you can find many of my projects on [my GitHub](https://github.com/hejny) or [website](https://www.pavolhejny.com/).
 
 -   [![British flag](./public/locale-flags/en.svg) Bio in English](https://pavolhejny.com/)
 -   [![Česká vlajka](./public/locale-flags/cs.svg) Bio v Češtině](https://pavolhejny.cz/)
