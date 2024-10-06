@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef } from 'react';
 import { Vector } from 'xyzt';
 import { Color } from '../../utils/color/Color';
 import { randomColor } from '../../utils/color/randomColor';
+import { $randomItem } from '../../utils/randomItem';
 import styles from './ChaosCanvas.module.css';
 
 interface ChaosCanvasProps {}
@@ -9,8 +10,12 @@ interface ChaosCanvasProps {}
 export function ChaosCanvas(props: ChaosCanvasProps) {
     const {} = props;
 
-    const worldSize = useMemo(() => new Vector(327, 102), []);
-    const tileSize = useMemo(() => new Vector(10, 10), []);
+    const imageSize = useMemo(() => new Vector(3277, 1024), []);
+    const tileSize = useMemo(() => Vector.square(15), []);
+    const worldSize = useMemo(
+        () => imageSize.divide(tileSize).map((value) => Math.round(value)),
+        [imageSize, tileSize],
+    );
 
     const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -30,6 +35,23 @@ export function ChaosCanvas(props: ChaosCanvasProps) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         const worldCenter = worldSize.scale(1 / 2);
+
+        const RANDOM_IMAGE_COLORS = [
+            Color.fromString('#000000'),
+            Color.fromString('#000000'),
+            Color.fromString('#000000'),
+            Color.fromString('#000000'),
+            Color.fromString('#091022'),
+            Color.fromString('#ab4e22'),
+            Color.fromString('#1e1a26'),
+            Color.fromString('#523939'),
+            Color.fromString('#70463b'),
+            Color.fromString('#6f4741'),
+            Color.fromString('#342b33'),
+            Color.fromString('#191526'),
+            Color.fromString('#372d34'),
+        ];
+        const PATTERN_IMAGE_COLORS = [Color.fromString('#d29063'), Color.fromString('#EEDF6C')];
 
         /*/
         // Random dots:
@@ -56,25 +78,44 @@ export function ChaosCanvas(props: ChaosCanvasProps) {
 
                 let color: Color;
 
-                color = randomColor();
+                color = Color.fromString('#000').transparent;
+                // color = $randomItem(...RANDOM_IMAGE_COLORS);
+                // color = randomColor();
                 // color = Math.random() > 0.5 ? Color.fromString('black') : Color.fromString('white');
 
-                /*/
-                // Circle:
-                const distance = worldCenter.distance(position);
-                if (distance < (size.x * Math.random()) / 5) {
-                    color = color.grayscale;
+                /**/
+                // Strong gradient from left :
+                if (Math.pow((worldSize.x - currentTilePosition.x) / worldSize.x, 2) > Math.random()) {
+                    color = Math.random() > 0.8 ? randomColor() : $randomItem(...RANDOM_IMAGE_COLORS);
                 }
                 /**/
 
                 /**/
-                // Linear Gradient:
+                // Strong gradient from right:
+                if (Math.pow(currentTilePosition.x / worldSize.x, 2) > Math.random()) {
+                    color =
+                        (currentTilePosition.x + currentTilePosition.y) % 2
+                            ? PATTERN_IMAGE_COLORS[0]
+                            : PATTERN_IMAGE_COLORS[1];
+                }
+                /**/
+
+                /**/
+                // Circle:
+                const distance = worldCenter.distance(currentTilePosition);
+                if (distance < (worldSize.x * Math.random()) / 2) {
+                    color = Color.fromString('#000').transparent;
+                }
+                /**/
+
+                /*/
+                // Linear Gradient from left to right:
                 if (worldSize.x * Math.random() < currentTilePosition.x) {
                     // color = color.grayscale;
                     color =
                         (currentTilePosition.x + currentTilePosition.y) % 2
-                            ? Color.fromString('black')
-                            : Color.fromString('white');
+                            ? PATTERN_IMAGE_COLORS[0]
+                            : PATTERN_IMAGE_COLORS[1];
                 } else {
                     // position = position.add(Vector.zero().map(() => Math.random() * 2 - 1));
                     // currentTileSize = currentTileSize.scale(Math.floor(Math.random() * 3));
@@ -82,8 +123,8 @@ export function ChaosCanvas(props: ChaosCanvasProps) {
                 }
                 /**/
 
-                /**/
-                // Linear Gradient:
+                /*/
+                // Linear Gradient from center:
                 if (
                     Math.pow(worldSize.x / 2 - currentTilePosition.x, 2) / Math.pow(worldSize.x, 2) <
                     Math.random() * 0.2
@@ -127,7 +168,7 @@ export function ChaosCanvas(props: ChaosCanvasProps) {
                 /**/
             }
         }
-    }, [canvasRef, worldSize]);
+    }, [canvasRef, worldSize, tileSize]);
 
     return (
         <div className={styles.ChaosCanvas}>
