@@ -1,3 +1,5 @@
+try {
+
 /**
  * Contact form element represents main contact form in a page.
  *
@@ -57,6 +59,17 @@ class ContactFormElement extends HTMLFormElement {
 
 console.info('🌟 Defining <contact-form/>');
 customElements.define('contact-form', ContactFormElement, { extends: 'form' });
+
+} catch (error) {
+    if (
+        error.message.includes('has already been declared') ||
+        error.message.includes('has already been used with this registry')
+    ) {
+        // Note: Just ignore this error
+    } else {
+        throw error;
+    }
+}
 
 /**
  * TODO: [🏏] Track (click) actions across all custom elements - Form should be recorded both as click action and as form submission
