@@ -27,6 +27,7 @@
         "postversion": "git push && git push --tags && echo \"Check the deploy process: https://github.com/hejny/hejny/actions/\""
     },
     "dependencies": {
+        "@calcom/embed-react": "^1.5.1",
         "@next/font": "13.1.1",
         "configchecker": "1.5.1",
         "destroyable": "0.12.0",

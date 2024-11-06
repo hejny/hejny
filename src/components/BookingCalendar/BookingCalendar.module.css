@@ -1,0 +1,11 @@
+.BookingCalendar {
+    max-width: 100%;
+
+    padding: 10px;
+    border-radius: 6px;
+
+    background-color: rgba(var(--palette-0-triplet), 0.5);
+    color: var(--palette-1);
+    outline: none;
+    border: 2px solid rgba(var(--palette-3-triplet), 0.3);
+}

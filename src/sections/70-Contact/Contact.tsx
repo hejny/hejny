@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import pavolHejny from '../../../public/services/prototyping-1.jpg';
 import { Article } from '../../components/Article/Article';
+import { BookingCalendar } from '../../components/BookingCalendar/BookingCalendar';
 import { Section } from '../../components/Section/Section';
 import styles from './Contact.module.css';
 
@@ -16,7 +17,7 @@ export function ContactSection(props: ContactProps) {
     const { t } = useTranslation();
 
     return (
-        <Section id="Contact">
+        <Section id="Contact" className={styles.Contact}>
             <h2>{t('Contact.title')}</h2>
 
             <Article content={t('Contact.content')} isEnhanced />
@@ -65,6 +66,14 @@ export function ContactSection(props: ContactProps) {
                             </li>
                             <li>
                                 <a href="https://blog.pavolhejny.com">Blog</a>
+                            </li>
+                            <li>
+                                <a href="https://cal.com/hejny/meet">Booking calendar</a>
+                            </li>
+                            <li>
+                                <a href="https://docs.google.com/document/d/1M0Py3W4eul8WMfzlvlHHBs50tP2hQ1f519QomfAOhcM/edit?usp=sharing">
+                                    CV
+                                </a>
                             </li>
                             <li>
                                 <a href="https://www.blockchain.com/btc/address/bc1qyuy7j80lxepv2wjdvflgajyatpmyqkmc75spvq">
@@ -123,6 +132,9 @@ export function ContactSection(props: ContactProps) {
                     <input type="submit" value="Odeslat" />
                 </label>
             </form>
+
+            <BookingCalendar />
+            {/* <iframe title="Book meeting in calendar" src="https://cal.com/hejny/meet" /> */}
         </Section>
     );
 }
