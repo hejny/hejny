@@ -7,7 +7,6 @@ import { Section } from '../../components/Section/Section';
 import styles from './PavolHejny.module.css';
 
 interface PavolHejnyProps {
-  
     /**
      * Additional content to be placed after the main content
      */
@@ -63,6 +62,12 @@ export function PavolHejnySection(props: PavolHejnyProps) {
             </>
             <Article content={t('PavolHejny.content')} isEnhanced />
 
+            <a
+                className="button"
+                href="https://docs.google.com/document/d/1M0Py3W4eul8WMfzlvlHHBs50tP2hQ1f519QomfAOhcM/edit?usp=sharing"
+            >
+                Show CV
+            </a>
             {children}
         </Section>
     );
