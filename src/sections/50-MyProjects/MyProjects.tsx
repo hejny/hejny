@@ -3,7 +3,7 @@ import { AinautesProject } from '../../../public/projects/ainautes/AinautesProje
 import { BirdsProject } from '../../../public/projects/birds/BirdsProject';
 import { CollboardProject } from '../../../public/projects/collboard/CollboardProject';
 import { HEduProject } from '../../../public/projects/h-edu/HEduProject';
-import { WebgptProject } from '../../../public/projects/webgpt/WebgptProject';
+import { PromptbookProject } from '../../../public/projects/promptbook/PromptbookProject';
 import { YourProjectProject } from '../../../public/projects/your-project/YourProjectProject';
 import { Article } from '../../components/Article/Article';
 import { Items } from '../../components/Items/Items';
@@ -18,7 +18,7 @@ export function MyProjectsSection() {
             <h2>{t('Projects.title')}</h2>
             <Article content={t('Projects.content')} isEnhanced />
             <Items>
-                <WebgptProject />
+                <PromptbookProject />
                 <CollboardProject />
                 <AinautesProject />
                 <BirdsProject />

@@ -34,8 +34,8 @@ I have also worked on many scientific projects for the [Czech Ornithological Soc
 
 Some of the projects I have worked on:<br/>
 
+-   [📖 Promptbook](https://github.com/webgptorg/promptbook)
 -   [⏣ WebGPT](https://webgpt.cz/?partner=ph&utm_medium=referral&utm_source=personal-page&utm_content=readme&utm_campaign=partner-ph)
--   [📖 Prompt book](https://github.com/webgptorg/promptbook)
 -   [🖋 Collboard](https://collboard.com/)
 -   [📚 H-edu](https://www.h-edu.cz/)
 -   [🐦 Birds.cz](https://birds.cz/)
