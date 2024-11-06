@@ -71,6 +71,13 @@ export function AppHead(props: AppHeadProps) {
                     async
                     defer
                 ></script>
+
+                {/* Note: [🔌] Integration code for Korálky Katlas */}
+                <script
+                    async
+                    defer
+                    src="https://promptbook.studio/api/embed/miniapp.js?id=9196a9be-2f09-447f-a6ba-099444cbe148"
+                ></script>
             </Head>
             <LanguagePicker />
         </>
