@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import bobKartous from '../../../public/people/bob-kartous-transparent.png';
 import janSedo from '../../../public/people/jan-sedo-transparent.png';
-import maxKozlov from '../../../public/people/max-kozlov.transparent.cropped.png';
+import maxKozlov from '../../../public/people/max-kozlov-transparent.png';
 import terezaTexlova from '../../../public/people/tereza-texlova-transparent.png';
 import tomasStudenik from '../../../public/people/tomas-studenik-transparent.png';
 import { Item } from '../../components/Items/Item';
