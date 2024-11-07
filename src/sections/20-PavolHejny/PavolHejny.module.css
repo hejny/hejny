@@ -92,4 +92,26 @@
     }
 }
 
+.signature {
+    /*/
+    outline: 1px dotted green;
+    /**/
+
+    display: flex;
+    justify-content: flex-end;
+
+    width: 95%;
+    height: 0;
+    overflow: visible;
+}
+
+.signature img {
+    /*/
+    outline: 1px dotted olive;
+    /**/
+
+    width: auto;
+    height: 70px;
+}
+
 /*!! rename repo*/

@@ -1,6 +1,7 @@
 import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
 import { ReactNode } from 'react';
+import pavolHejnyHandritten from '../../../public/handwritten/pavol-hejny.svg';
 import pavolHejny from '../../../public/people/pavol-hejny-transparent.png';
 import { Article } from '../../components/Article/Article';
 import { Section } from '../../components/Section/Section';
@@ -62,6 +63,9 @@ export function PavolHejnySection(props: PavolHejnyProps) {
             </>
             <Article content={t('PavolHejny.content')} isEnhanced />
 
+            <div className={styles.signature}>
+                <Image alt={'Pavol Hejný'} src={pavolHejnyHandritten} />
+            </div>
             <a
                 className="button"
                 href="https://docs.google.com/document/d/1M0Py3W4eul8WMfzlvlHHBs50tP2hQ1f519QomfAOhcM/edit?usp=sharing"
