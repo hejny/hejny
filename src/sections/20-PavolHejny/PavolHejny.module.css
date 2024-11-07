@@ -114,4 +114,16 @@
     height: 70px;
 }
 
+@media screen and (max-width: 750px) {
+    .signature {
+        /*/
+        outline: 1px dotted green;
+        /**/
+
+        width: 100%;
+        justify-content: center;
+        height: auto;
+    }
+}
+
 /*!! rename repo*/
