@@ -33,11 +33,9 @@ PavolHejny:
     content: |
         Jsem Pavol, vývojář s více než 15ti letou denní zkušeností s vývojem aplikací. Mám za sebou několik desítek velkých úspěšných projektů. 
 
-        Momentálně se specializuji na tvorbu aplikací, které využívají generativní umělělou inteligenci.
+         V tuto chvíli vyvíjím framework Promptbook, který umožňuje využívat AI modely výrazně jednodušeji než kdy dříve.
 
         Jsem členem konzultační skupiny Ainautes, která pomáhá s nasazením generativního AI po celém světě.
-
-        V tuto chvíli vyvíjím službu WebGPT na generování webových stránek a také vlastní knihovnu pro orchestraci jazykových modelů Promptbook.
 
         Před masivním nástupem generativní umělé inteligence jsem vytvořil první českou virtuální tabuli Collboard a elektronické učebnice H-edu,
         které využívají desítky tisíc dětí a pomohli mnoho školám překlenout začátky pandemie. 
@@ -46,7 +44,7 @@ PavolHejny:
 
         Pravidelně přednáším na konferencích, zasedám v porotě a jsem mentorem mnoha českých i mezinárodních soutěží.
 
-        K tomu jsem srdcem zvláště a miluji **open source** - mnoho z mých věcí najdete na mém Githubu.
+        K tomu jsem srdcem zvláště a miluji open-source - mnoho z mých věcí najdete na mém Githubu.
 
 # !!! Link to training
 Services:

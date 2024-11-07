@@ -2,8 +2,8 @@ const LINKS = {
     WebGPT: 'https://webgpt.cz/?partner=ph&utm_medium=referral&utm_source=personal-page&utm_content=pavolhejny.com&utm_campaign=partner-ph',
     'Ai*nautes': 'https://www.ainautes.com',
     Ainautes: 'https://www.ainautes.com',
+    // 'Promptbook framework': 'https://github.com/webgptorg/promptbook',
     Promptbook: 'https://github.com/webgptorg/promptbook',
-    'Prompt book': 'https://github.com/webgptorg/promptbook',
     Collboard: 'https://collboard.com',
     'H-edu': 'https://h-edu.cz',
     'Czech.events': 'https://czech.events',
@@ -13,6 +13,8 @@ const LINKS = {
     'Startup Weekendu': 'https://startovani.cz/',
     'my Github': 'https://github.com/hejny',
     'mém Githubu': 'https://github.com/hejny',
+    'open-source': 'https://github.com/hejny',
+
     // 'Tomáš Kapler': 'https://www.kapler.cz/ai-skoleni/',
 
     // TODO: !! 'Startup Weekend': 'https://startovani.cz/',
