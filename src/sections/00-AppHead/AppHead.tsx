@@ -114,9 +114,10 @@ export function AppHead(props: AppHeadProps) {
           defer
         ></script>
 
-        {/* Note: [🔌] Integration code for Korálky Katlas */}
+       
+        </Head>
         <Script strategy="afterInteractive" id="b21d4127-7d02-45a8-89f9-4f76fe133352">
-          {`
+            {`
             // [🔌] Integration code of Promptbook app 💭 Advanced Chatbot into https://ptbk.io/ or https://pavolhejny.com/
 
             const bookAppScript = document.createElement('script');
@@ -136,7 +137,6 @@ export function AppHead(props: AppHeadProps) {
         
         `}
         </Script>
-      </Head>
       <LanguagePicker />
     </>
   );
