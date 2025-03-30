@@ -73,11 +73,27 @@ export function AppHead(props: AppHeadProps) {
                 ></script>
 
                 {/* Note: [🔌] Integration code for Korálky Katlas */}
-                <script
-                    async
-                    defer
-                    src="https://promptbook.studio/api/embed/miniapp.js?id=9196a9be-2f09-447f-a6ba-099444cbe148"
-                ></script>
+                <Script>
+                    {`
+                        // [🔌] Integration code of Promptbook app 💭 Advanced Chatbot into https://ptbk.io/ or https://pavolhejny.com/
+
+                        const bookAppScript = document.createElement('script');
+                        bookAppScript.async = true;
+                        bookAppScript.src = "https://promptbook.studio/api/embed/miniapp.js?id=b21d4127-7d02-45a8-89f9-4f76fe133352";
+                        document.head.appendChild(bookAppScript);
+
+                        bookAppScript.addEventListener('load', () => {
+                            activateEmbeddedChatbot(
+                                {
+                                    "theme": "LIGHT",
+                                    "position": "BOTTOM_RIGHT",
+                                    "isTestingMode": false
+                                }
+                            );
+                        });  
+                    
+                    `}
+                </Script>
             </Head>
             <LanguagePicker />
         </>
