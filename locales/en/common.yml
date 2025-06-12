@@ -103,3 +103,157 @@ TechnicalInfo:
 Sample:
     title: Sample section
     content: Sample text with [sample link](/sample)
+
+AiTraining:
+    title: AI Training
+    more-about-pavol: More about me
+    content: |
+        I offer training in the field of generative artificial intelligence.
+        I educate development teams so they can effectively use AI in their applications.
+
+        The training leverages my more than 15 years of development experience.
+
+    variant1:
+        title: >
+            Variant 1: Development with AI
+        price: €1,400
+        content: |
+            Whether you **develop any software** and want to increase development efficiency by 25% using AI:
+
+            -  A week in advance, I will discuss what exactly you are solving in a **non-binding call** online.
+            -  Within your company in the Czech Republic or online.
+            -   Presentation and workshop for half a day and demonstration of how development can be efficiently implemented using AI:
+                -  For 5~50 people (I will adjust the level of interactivity in advance based on the number of people) 
+                -  I will introduce efficient use of GitHub Copilot and (Chat)GPT in development.
+                -  I will explain the AI test driven development approach.
+                -  Automatic creation of documentation from code or code from documentation
+                -  I will show examples of good use of generative artificial intelligence in development.
+                -  I will provide subsequent consultation and support in developing your application.
+            -  All demonstrations are in TypeScript or JavaScript *(according to your preference)*.
+            -  In Czech or English.
+            -  And many other information and techniques.
+
+    variant2:
+        title: >
+            Variant 2: AI Application Development
+        price: Price by agreement
+        content: |
+            If you **develop AI products**, whether it's corporate chat, customer support automation, generating advertising posts or presentations,
+            or any other use of language or image models, you need a reasonable methodology for more complex applications.
+
+            It's important to know how to properly integrate individual components, monitor their performance and test whether everything works as it should.
+
+            -  A week in advance, I will discuss what exactly you are solving in a **non-binding call** online. Based on that, I will suggest a custom approach and price. 
+            -  If you provide me with access to your code, I can look at specific details *(of course with the possibility of signing an NDA)*.
+            -  Within your company in the Czech Republic or online.
+            -  Half-day detailed presentation and workshop tailored to your needs:
+                -  Overview of available models you can use for your application
+                -  Overview of available technologies for development
+                -  Overview of available libraries for AI model integration
+                -  Prompting methodologies 
+                -  Pipelining and orchestration
+                -  Error handling
+                -  Performance testing
+                -  Transition to higher models
+            -  Subsequent half-day consultation over your code and help with developing your application
+            -  All demonstrations are in TypeScript or JavaScript *(according to your preference)*.
+            -  In Czech or English.
+            -  And many other information and techniques.
+
+    faq: |
+        ## FAQ
+
+        ### How does the training work?
+
+        The training takes place within your company or online. I will come to you within the Czech Republic, or I can travel to nearby abroad (Bratislava, Vienna,...)
+
+
+        ### Which variant to choose?
+
+        Both variants are preceded by a **non-binding call** where we will discuss together what exactly you are solving.
+        1) If you develop absolutely anything, variant 1 is for you.
+        2) For companies that specifically develop AI applications, variant 2 is suitable.
+
+        ### How long does the training take and when can it take place?
+
+        - **Variant 1**: Training lasts **half a day** and can take place anytime by agreement.
+        - **Variant 2**: Training lasts one day and it's best if it starts in the morning and ends in the evening.
+                          If your company is in Prague, we can split it into two days, e.g. Wednesday afternoon and Thursday morning.
+                    
+
+        ### What experience do you have with development and AI?
+
+        - I have been programming since 2007
+        - Web applications since 2008 *(PHP, Flash)*
+        - In JavaScript since 2012
+        - In TypeScript since 2015
+        - I started using the first generative AI in 2021 with the advent of GPT-2
+
+        ### We develop application X in language Y, can you help us?
+
+        I myself best understand web and mobile applications written in TypeScript or JavaScript.
+        However, if you program in another language, it doesn't matter, I have experience with other programming languages and can consult even so,
+        although I may not be able to help with very specific questions and details.
+
+
+        ### How much can AI increase development efficiency? Is the training worth it for me?
+
+        This is very individual and depends on the specific application.
+        In practice, however, it is usually a surprisingly substantial increase in efficiency, but it's not a miracle that would replace developers.
+
+        Generative AI can increase efficiency mainly for clearly defined tasks where it's about "just writing code".
+        On the contrary, application architecture and its design require a senior developer.
+        Similarly, sometimes you encounter an error that only a human developer can handle.
+
+        As I write, it depends very much on the specific application, but generally it can be said:
+
+        - **25%** time on clearly defined tasks; GenAI will help with this by 30%
+        - **25%** time on application design and architecture; GenAI won't help here
+        - **15%** time on writing tests; GenAI will help with this by 60%
+        - **20%** time on implementation; GenAI will help with this by 50%
+        - **15%** time on documentation; GenAI will help with this by 90%
+
+        `(0.25*0.3)+(0.25*0)+(0.15*0.6)+(0.20*0.5)+(0.15.0.9) = 0.265`
+
+        Overall, AI can increase development efficiency by **about 25%**, i.e. a quarter.
+
+        If you have salary costs for developers of €4,000/month and you have 5 developers, you can save up to **€5,000 every month**.
+
+        > This means training in variant 1 for €1,400 will **pay for itself in less than 10 days**.
+
+        *I'm neglecting the costs of Github Copilot and ChatGPT+ here, which are negligible compared to salary costs.*
+
+        *This is of course a very simplified model, but it can help you make decisions.*
+
+        ### How much better is training than just starting to use GitHub Copilot?
+
+        Just by using GitHub Copilot you can increase development efficiency.
+        However, if you don't know how to properly utilize its potential, you probably won't get the maximum out of its possibilities with the right methodology.
+
+        ### What are the payment options?
+
+        50% payment to account in advance and half after training. I will issue an invoice to my business ID. 
+        Payment also possible in Euros to EUR account according to current exchange rate.
+
+        ### Why is training more expensive than other training?
+
+        This training is training from developer to developer. You will learn many internal insights directly from application development.
+
+        If you are interested in the most current overview of AI tools, I recommend training from [Tomáš Kapler](https://www.kapler.cz/ai-skoleni).
+        If you are more interested in insight into AI as such *(not AI in the context of application development)*,
+        I can recommend training from Ainautes, who specialize in placing AI in a broader context.
+
+        ### Why are the examples in TypeScript?
+
+        `TypeScript` is the language I have the most experience with and it's a language that is very suitable for developing large user applications.
+        `JavaScript` is the same, but without type checking, which may be more suitable for smaller projects.
+
+        If your company uses another language, it doesn't matter, I can adapt. I myself have experience with `Java`, `Python`, `C`, `C++`, `PHP` and `Haskell`.
+
+        ---
+
+        ## Partners
+
+        - If you are more interested in insight into AI as such *(not AI in the context of application development)*,
+          I can recommend training from Ainautes, who specialize in placing AI in a broader context.
+        - If you are interested in the most current overview of AI tools, I recommend following [Tomáš Kapler](https://www.kapler.cz/) and his [AI newsletter](https://www.kapler.cz/) and [training](https://www.kapler.cz/ai-skoleni/).

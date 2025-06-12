@@ -68,17 +68,3 @@ export async function getStaticProps({ locale }: { locale: string }) {
         },
     };
 }
-
-/**
- * TODO: !!! Can there be /ai-skoleni/ /ai-training/ not generic /cs/ /en/ prefix?
- * TODO: ! Fix Shuffle without React hydration error
- * TODO: !! All links must work
- * TODO: !! Make this a personal page - all projects
- * TODO: Add somewhere button [Get in touch]
- * TODO: [🪒] Can be getStaticProps shared between all pages?
- * TODO: [🪒] Can be fonts shared between all pages?
- * TODO: Some linting rule not to use:
- *       NOT> import { useTranslation } from 'react-i18next';
- *       BUT
- *       YES> import { useTranslation } from 'next-i18next';
- */
