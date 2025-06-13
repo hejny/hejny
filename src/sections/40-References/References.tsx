@@ -10,7 +10,6 @@ import { Item } from '../../components/Items/Item';
 import { Items } from '../../components/Items/Items';
 import { Section } from '../../components/Section/Section';
 import { Shuffle } from '../../components/Shuffle/Shuffle';
-import { Translate } from '../../components/Translate/Translate';
 import styles from './References.module.css';
 
 interface ReferencesProps {
@@ -39,56 +38,14 @@ export function ReferencesSection(props: ReferencesProps) {
                         </Item.PersonImage>
                         <Item.Title>
                             <a href="https://www.tomas-studenik.com/" target="_blank" rel="noreferrer">
-                                Tomáš Studeník
+                                {t('References.tomas-studenik.name')}
                             </a>
                         </Item.Title>
-                        <Item.Subtitle>Startupper</Item.Subtitle>
+                        <Item.Subtitle>{t('References.tomas-studenik.position')}</Item.Subtitle>
                         <Item.Description>
-                            <Translate locale="en">
-                                <p>
-                                    I&apos;ve known Pavol for 6 years. Especially from hackathons and other innovation
-                                    projects. If you are with his team, you can bet he&apos;ll be in the top three.
-                                    <br />
-                                    And you would have right!
-                                </p>
-                                <p>
-                                    Pavol is an innovator who knows the latest technologies and can find quick solutions
-                                    to challenges in industry, education and urban development. He&apos;s capable of
-                                    making a difference within 24 hours. He is one of the top 10 people in the country
-                                    for rapid prototyping of applications.
-                                </p>
-                            </Translate>
-
-                            <Translate locale="cs">
-                                <p>
-                                    Pavola znám už 6 let. Zejména z hackathonů a dalších inovačních projektů. Pokud se
-                                    se svým týmem zúčastnil, mohli byste si vsadit, že bude mezi nejlepšími třemi. A
-                                    měli byste pravdu!
-                                </p>
-                                <p>
-                                    Pavol je inovátor, který se orientuje v nejnovějších technologiích a dokáže nacházet
-                                    rychlá řešení výzev v průmyslu, vzdělávání či rozvoji měst. Dokáže během 24 hodin
-                                    postavit funkční aplilkaci. Je jedním z top 10 lidí v Česku na rychlé prototypování
-                                    aplikací.
-                                </p>
-                            </Translate>
-
-                            {/*
-                             Original Version:
-
-                                Pavola znám už 6 let. Zejména z hackathonů a dalších inovačních projektů. Pokud se se
-                                svým týmem zúčastnil, mohli byste si vsadit, že bude mezi nejlepšími třemi. A měli byste
-                                pravdu.
-
-                                Pavol je softwarový inovátor, který se orientuje v nejnovějších technologiích a dokáže
-                                nacházet rychlá řešení výzev v průmyslu, vzdělávání či rozvoji měst. Dokáže během 24
-                                hodin postavit funkční aplilkaci, ...
-
-                                Je jedním z top 10 lidí v Česku na rychlé prototypování aplikací.
-
-                                IT je pro něj nejen denním chlebíčkem, ale také životním koníčkem.
-                             
-                             */}
+                            <div style={{ whiteSpace: 'pre-line' }}>
+                                {t('References.tomas-studenik.content')}
+                            </div>
                         </Item.Description>
                     </Item>
 
@@ -111,41 +68,14 @@ export function ReferencesSection(props: ReferencesProps) {
                         </Item.PersonImage>
                         <Item.Title>
                             <a href="http://www.jansedo.cz/" target="_blank" rel="noreferrer">
-                                Jan Šedo
+                                {t('References.jan-sedo.name')}
                             </a>
                         </Item.Title>
-                        <Item.Subtitle>Zakladatel H-edu</Item.Subtitle>
+                        <Item.Subtitle>{t('References.jan-sedo.position')}</Item.Subtitle>
                         <Item.Description>
-                            <Translate locale="en">
-                                <p>
-                                    Pavol built a prototype of our H-edu app so that we could get immediate investment.
-                                    He then designed the architecture of the system and the use of the technology, which
-                                    proved to be the right choice for our proved to be the right choice for our
-                                    purposes. In the early days of covid-19, responded very well to the teaching needs
-                                    of the teachers and in record time created exactly the solution that thousands of
-                                    teachers have since used.
-                                </p>
-                            </Translate>
-                            <Translate locale="cs">
-                                <p>
-                                    Pavol vytvořil prototyp naší aplikace H-edu tak, že jsme okamžitě získali investici.
-                                    Následně navrhl architekturu systému a využití technologií, které se v testu času
-                                    ukázaly jako správně zvolené pro naše účely.
-                                    <br />
-                                    Na začátku covidu-19 výborně zareagoval na potřeby učitelů při výuce a v rekordním
-                                    čase vytvořil přesně takové řešení, které následně využívaly tisíce učitelů.
-                                </p>
-                            </Translate>
-                            {/*
-                             Original Version:
-
-                               Pavol vytvořil prototyp naší aplikace H-edu tak, že jsme okamžitě získali investici.
-                                Následně navrhl architekturu systému a využití technologií, které se v testu času
-                                ukázaly jako správně zvolené pro naše účely. Na začátku covidu výborně zareagoval na
-                                potřeby učitelů při výuce a v rekordním čase vytvořil přesně takové řešení, které
-                                následně využívaly tisíce učitelů.
-
-                            */}
+                            <div style={{ whiteSpace: 'pre-line' }}>
+                                {t('References.jan-sedo.content')}
+                            </div>
                         </Item.Description>
                     </Item>
 
@@ -164,52 +94,14 @@ export function ReferencesSection(props: ReferencesProps) {
                         </Item.PersonImage>
                         <Item.Title>
                             <a href="https://www.linkedin.com/in/themaxkozlov" target="_blank" rel="noreferrer">
-                                Max Kozlov
+                                {t('References.max-kozlov.name')}
                             </a>
                         </Item.Title>
-                        <Item.Subtitle>Founder & CEO - Undout</Item.Subtitle>
+                        <Item.Subtitle>{t('References.max-kozlov.position')}</Item.Subtitle>
                         <Item.Description>
-                            <Translate locale="en">
-                                <p>
-                                    Pavol is an absolute beast when it comes to creating digital products. I&apos;ve
-                                    seen him – literally overnight – create an integrated chatbot that won us the 1st
-                                    place at Startup Weekend Prague.
-                                </p>
-                                <p>
-                                    He learns any topic or technology quickly and builds even faster, with exceptional
-                                    usability.
-                                </p>
-                                <p>
-                                    I&apos;d recommend Pavol to everyone who wants to see real life results in a
-                                    manageable time frame.
-                                    <br />
-                                    Plus he&apos;s really considerate, kind and a pleasure to work with.
-                                </p>
-                            </Translate>
-                            <Translate locale="cs">
-                                <p>
-                                    Pavol je naprosto špičkový v tvorbě digitálních produktů. Viděl jsem ho – doslova
-                                    přes noc – vytvořit integrovaného chatbota, který nám zajistil první místo na
-                                    Startup Weekendu v Praze. {/* <- TODO: ! Auto-link */}
-                                </p>
-                                <p>Rychle vezme jakoukoliv technologii nebo téma a postaví nad ní fungující produkt.</p>
-                                <p>
-                                    Vřele bych Pavola doporučil každému, kdo chce vidět výsledky v reálném životě v
-                                    reálném čase.
-                                    <br />
-                                    Navíc je velmi ohleduplný, laskavý a radost s ním spolupracovat.
-                                </p>
-                            </Translate>
-                            {/*
-                             Original Version:
-
-                                Pavol is an absolute beast when it comes to creating digital products. I’ve seen him - literally overnight - create an integrated chatbot that won us the 1st place at Startup Weekend Prague.
-
-                                He learns any topic or technology quickly and builds even faster, with exceptional usability.
-
-                                I’d recommend Pavol to everyone who wants to see real life results in a manageable time frame. Plus he’s really considerate, kind and a pleasure to work with.
-
-                            */}
+                            <div style={{ whiteSpace: 'pre-line' }}>
+                                {t('References.max-kozlov.content')}
+                            </div>
                         </Item.Description>
                     </Item>
 
@@ -228,39 +120,14 @@ export function ReferencesSection(props: ReferencesProps) {
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                Bob Kartous
+                                {t('References.bob-kartous.name')}
                             </a>
                         </Item.Title>
-                        <Item.Subtitle>
-                            Prorektor VŠEM, poradce ministra školství Mikuláše Beka, autor knih No Future a Future ON
-                            {/* !!! */}
-                        </Item.Subtitle>
+                        <Item.Subtitle>{t('References.bob-kartous.position')}</Item.Subtitle>
                         <Item.Description>
-                            <Translate locale="en">
-                                <p>
-                                    Regarding my personal, professional experience, Pavol is highly capable innovator
-                                    who&apos;s potential range across digital technologies and socially prioritized
-                                    themes. In projects collaborated on, he brought new visions and approaches to the
-                                    world of education. I am convinced that he is ready to replicate it wherever it will
-                                    make sense.
-                                </p>
-                            </Translate>
-                            <Translate locale="cs">
-                                <p>
-                                    Pokud jde o jeho osobní a profesní zkušenosti, Pavol je velmi schopný inovátor,
-                                    jehož potenciál sahá napříč digitálními technologiemi a společenskými tématy. V
-                                    projektech, na kterých spolupracoval, přinesl do světa vzdělávání nové vize a
-                                    přístupy. Jsem přesvědčen, že je připraven je replikovat všude tam, kde to bude mít
-                                    smysl.
-                                </p>
-                            </Translate>
-                            {/*
-                             Original Version:
-
-                             Regarding mu personal, professional experience, Pavol is highly capable innovator who’s potential range across digital technologies and socially prioritized themes. In projects collaborated on, he brought new visions and approaches to the world of education. I am convinced that he is ready to replicate it wherever it will make sense.
-
-
-                            */}
+                            <div style={{ whiteSpace: 'pre-line' }}>
+                                {t('References.bob-kartous.content')}
+                            </div>
                         </Item.Description>
                     </Item>
 
@@ -275,36 +142,14 @@ export function ReferencesSection(props: ReferencesProps) {
                         </Item.PersonImage>
                         <Item.Title>
                             <a href="https://www.linkedin.com/in/tereza-texlova/" target="_blank" rel="noreferrer">
-                                Tereza Texlová
+                                {t('References.tereza-texlova.name')}
                             </a>
                         </Item.Title>
-                        <Item.Subtitle>!!!</Item.Subtitle>
+                        <Item.Subtitle>{t('References.tereza-texlova.position')}</Item.Subtitle>
                         <Item.Description>
-                            <Translate locale="en">
-                                <p>
-                                    Pavol and I have worked together on several projects, the main being czech.events --
-                                    the only newsletter you really want to get. I&apos;ve worked with many developers
-                                    before, but Pavol&apos;s combination of technical skills, together with public
-                                    speaking and the ability to kick-start new ideas, is imposing.
-                                </p>
-                                <p>I am looking forward to our next super exciting project!</p>
-                            </Translate>
-                            <Translate locale="cs">
-                                <p>
-                                    S Pavolem jsme spolupracovali na několika projektech, z nichž hlavní je Czech.events
-                                    - jediný newsletter, který opravdu chcete dostávat. Pracoval jsem už s mnoha
-                                    vývojáři, ale Pavolova kombinace technických dovedností spolu s veřejným
-                                    vystupováním a schopností nastartovat nové nápady je impozantní.
-                                </p>
-                                <p>Těším se na náš další super zajímavý projekt!</p>
-                            </Translate>
-                            {/*
-                             Original Version:
-
-                             Pavol and I have worked together on several projects, the main being czech.events -- the only newsletter you really want to get. I've worked with many developers before, but Pavol's combination of technical skills, together with public speaking and the ability to kick-start new ideas, is imposing. 
-                             I am looking forward to our next super exciting project!
-
-                            */}
+                            <div style={{ whiteSpace: 'pre-line' }}>
+                                {t('References.tereza-texlova.content')}
+                            </div>
                         </Item.Description>
                     </Item>
                     {/*

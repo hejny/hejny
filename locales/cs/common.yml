@@ -70,8 +70,41 @@ Services:
 References:
     title: Reference
     more-references: Zobrazit další reference
+    tomas-studenik:
+        name: Tomáš Studeník
+        position: Startupper
+        content: |
+            Pavola znám už 6 let. Zejména z hackathonů a dalších inovačních projektů. Pokud se se svým týmem zúčastnil, mohli byste si vsadit, že bude mezi nejlepšími třemi. A měli byste pravdu!
 
-    # TODO: Maybe bring here actual references
+            Pavol je inovátor, který se orientuje v nejnovějších technologiích a dokáže nacházet rychlá řešení výzev v průmyslu, vzdělávání či rozvoji měst. Dokáže během 24 hodin postavit funkční aplilkaci. Je jedním z top 10 lidí v Česku na rychlé prototypování aplikací.
+    jan-sedo:
+        name: Jan Šedo
+        position: Zakladatel H-edu
+        content: |
+            Pavol vytvořil prototyp naší aplikace H-edu tak, že jsme okamžitě získali investici. Následně navrhl architekturu systému a využití technologií, které se v testu času ukázaly jako správně zvolené pro naše účely.
+            Na začátku covidu-19 výborně zareagoval na potřeby učitelů při výuce a v rekordním čase vytvořil přesně takové řešení, které následně využívaly tisíce učitelů.
+    max-kozlov:
+        name: Max Kozlov
+        position: Founder & CEO - Undout
+        content: |
+            Pavol je naprosto špičkový v tvorbě digitálních produktů. Viděl jsem ho – doslova přes noc – vytvořit integrovaného chatbota, který nám zajistil první místo na Startup Weekendu v Praze.
+
+            Rychle vezme jakoukoliv technologii nebo téma a postaví nad ní fungující produkt.
+
+            Vřele bych Pavola doporučil každému, kdo chce vidět výsledky v reálném životě v reálném čase.
+            Navíc je velmi ohleduplný, laskavý a radost s ním spolupracovat.
+    bob-kartous:
+        name: Bob Kartous
+        position: Prorektor VŠEM, poradce ministra školství Mikuláše Beka, autor knih No Future a Future ON
+        content: |
+            Pokud jde o jeho osobní a profesní zkušenosti, Pavol je velmi schopný inovátor, jehož potenciál sahá napříč digitálními technologiemi a společenskými tématy. V projektech, na kterých spolupracoval, přinesl do světa vzdělávání nové vize a přístupy. Jsem přesvědčen, že je připraven je replikovat všude tam, kde to bude mít smysl.
+    tereza-texlova:
+        name: Tereza Texlová
+        position: Spoluzakladatelka Czech.events
+        content: |
+            S Pavolem jsme spolupracovali na několika projektech, z nichž hlavní je Czech.events - jediný newsletter, který opravdu chcete dostávat. Pracoval jsem už s mnoha vývojáři, ale Pavolova kombinace technických dovedností spolu s veřejným vystupováním a schopností nastartovat nové nápady je impozantní.
+
+            Těším se na náš další super zajímavý projekt!
 
 Projects:
     title: Mé projekty

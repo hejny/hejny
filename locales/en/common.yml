@@ -68,7 +68,41 @@ Services:
 References:
     title: References
     more-references: See more references
-    # TODO: Maybe bring here actual references
+    tomas-studenik:
+        name: Tomáš Studeník
+        position: Startupper
+        content: |
+            I've known Pavol for 6 years. Especially from hackathons and other innovation projects. If you are with his team, you can bet he'll be in the top three.
+            And you would have right!
+
+            Pavol is an innovator who knows the latest technologies and can find quick solutions to challenges in industry, education and urban development. He's capable of making a difference within 24 hours. He is one of the top 10 people in the country for rapid prototyping of applications.
+    jan-sedo:
+        name: Jan Šedo
+        position: Founder of H-edu
+        content: |
+            Pavol built a prototype of our H-edu app so that we could get immediate investment. He then designed the architecture of the system and the use of the technology, which proved to be the right choice for our purposes. In the early days of covid-19, responded very well to the teaching needs of the teachers and in record time created exactly the solution that thousands of teachers have since used.
+    max-kozlov:
+        name: Max Kozlov
+        position: Founder & CEO - Undout
+        content: |
+            Pavol is an absolute beast when it comes to creating digital products. I've seen him – literally overnight – create an integrated chatbot that won us the 1st place at Startup Weekend Prague.
+
+            He learns any topic or technology quickly and builds even faster, with exceptional usability.
+
+            I'd recommend Pavol to everyone who wants to see real life results in a manageable time frame.
+            Plus he's really considerate, kind and a pleasure to work with.
+    bob-kartous:
+        name: Bob Kartous
+        position: Vice-Rector VŠEM, advisor to Minister of Education Mikuláš Bek, author of books No Future and Future ON
+        content: |
+            Regarding my personal, professional experience, Pavol is highly capable innovator who's potential range across digital technologies and socially prioritized themes. In projects collaborated on, he brought new visions and approaches to the world of education. I am convinced that he is ready to replicate it wherever it will make sense.
+    tereza-texlova:
+        name: Tereza Texlová
+        position: Co-founder Czech.events
+        content: |
+            Pavol and I have worked together on several projects, the main being czech.events -- the only newsletter you really want to get. I've worked with many developers before, but Pavol's combination of technical skills, together with public speaking and the ability to kick-start new ideas, is imposing.
+
+            I am looking forward to our next super exciting project!
 
 Projects:
     title: What have I worked on?
