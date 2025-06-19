@@ -85,7 +85,7 @@ export function AppHead(props: AppHeadProps) {
             bookAppScript.addEventListener('load', () => {
                 activateEmbeddedChatbot(
                     {
-                        "theme": "LIGHT",
+                        "theme": "DARK",
                         "position": "BOTTOM_RIGHT",
                         "isTestingMode": false
                     }
