@@ -4,8 +4,8 @@
     padding: 10px;
     border-radius: 6px;
 
-    background-color: rgba(var(--palette-0-triplet), 0.5);
-    color: var(--palette-1);
+    background-color: rgba(var(--hejny-palette-0-triplet), 0.5);
+    color: var(--hejny-palette-1);
     outline: none;
-    border: 2px solid rgba(var(--palette-3-triplet), 0.3);
+    border: 2px solid rgba(var(--hejny-palette-3-triplet), 0.3);
 }

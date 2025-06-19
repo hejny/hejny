@@ -202,7 +202,7 @@
 
 .item:hover .description {
     /* TODO: Also the outline image should be highlighted */
-    color: var(--palette-1);
+    color: var(--hejny-palette-1);
 }
 
 .item .description a::before {

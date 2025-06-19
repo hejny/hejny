@@ -91,7 +91,7 @@ person-item person-avatar {
     font-size: 0 /* <- Note: This is a hack to have zero margin on avatar picture */;
     border-radius: 30px;
     overflow: clip;
-    background-image: radial-gradient(circle at 50% 80%, var(--palette-2) 10%, var(--palette-0) 100%);
+    background-image: radial-gradient(circle at 50% 80%, var(--hejny-palette-2) 10%, var(--hejny-palette-0) 100%);
 
     opacity: 0.9;
     filter: saturate(0.9);

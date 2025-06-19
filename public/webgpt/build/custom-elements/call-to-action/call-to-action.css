@@ -32,15 +32,15 @@ a[is='call-to-action'] {
 
     text-decoration: none !important;
     font-size: 1.2rem;
-    color: var(--palette-1);
+    color: var(--hejny-palette-1);
     --background-rotation: -22deg;
     background: linear-gradient(
         var(--background-rotation),
-        rgba(var(--palette-0-triplet), 1) -50%,
-        rgba(var(--palette-2-triplet), 1) 150%
+        rgba(var(--hejny-palette-0-triplet), 1) -50%,
+        rgba(var(--hejny-palette-2-triplet), 1) 150%
     );
     outline: none;
-    border: 1px solid var(--palette-1);
+    border: 1px solid var(--hejny-palette-1);
 
     transition: --background-rotation 2s ease-out;
 }

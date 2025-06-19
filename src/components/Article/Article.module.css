@@ -148,10 +148,10 @@
 
 .Article .button {
     display: inline-block;
-    border: 1px solid rgba(var(--palette-1-triplet), 0.8);
-    background-color: rgba(var(--palette-2-triplet), 0.8);
-    box-shadow: 0 0 20px rgba(var(--palette-4-triplet), 0.5);
-    color: rgba(var(--palette-1-triplet), 0.8);
+    border: 1px solid rgba(var(--hejny-palette-1-triplet), 0.8);
+    background-color: rgba(var(--hejny-palette-2-triplet), 0.8);
+    box-shadow: 0 0 20px rgba(var(--hejny-palette-4-triplet), 0.5);
+    color: rgba(var(--hejny-palette-1-triplet), 0.8);
     border-radius: 6px;
     padding: 7px 18px;
     margin: 10px;
