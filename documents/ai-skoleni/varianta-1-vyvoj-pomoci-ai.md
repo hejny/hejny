@@ -1,6 +1,6 @@
 # **AI pro vývojáře: 2denní hands-on bootcamp**
 
-Zrychlete vývoj, zvyšte kvalitu a přitom zůstaňte v bezpečí. Tenhle intenzivní bootcamp ukazuje, jak zapojit AI do každodenní práce programátorů – od jednoduchého generování kousků kódu až k AI agentům, kteří programují za vás. Probereme také architektury vývoje pomocí AI a testování až po PR reviews, dokumentaci a týmové procesy pomocí AI. Bez kouzelných frází, zato s měřitelnými výsledky.
+Zrychlete vývoj, zvyšte kvalitu a přitom zůstaňte v bezpečí. Tenhle intenzivní bootcamp vám ukáže, jak zapojit AI do každodenní práce programátorů – od jednoduchého generování kousků kódu až k AI agentům, kteří programují za vás.
 
 ## **Proč byste u toho neměli chybět**
 
@@ -14,19 +14,20 @@ Vývojářské týmy (web, backend, firmware/MCU), tech leadi, QA a DevOps, kte�
 
 ## **Co se během 2 dnů naučíte**
 
+-   **AI v IDE:** inline edits, repo-aware chat, „edits“ na vybraných souborech.
 -   **Vibecoding & AI pair-programming:** jak převést záměr → kód, constraints, akceptační kritéria.
 -   **Testy, dokumentace, refaktor:** generování unit/property testů, zvýšení coverage, PR šablony, ADR.
--   **Návrh správného řešení:** trade-off tabulky (latence, paměť, TCO), architektura pro web/MCU.
 -   **Security & privacy v praxi:** threat-modeling s AI, SAST hinting, bezpečné prompty, práce s tajemstvími.
 -   **UX/UI s AI:** wireframy, flows, a11y checklisty, generování UI komponent a microcopy.
 -   **GitHub AI & PR review:** chat nad repem, návrhy testů, automatické shrnutí diffů a release notes.
--   **AI v IDE:** inline edits, repo-aware chat, „edits“ na vybraných souborech.
 -   **Terminál a Claude Code/CLI:** repo-agenti, generování commitů, changelogů a skriptů.
 -   **Vibekanban/Scrum s AI:** user stories, AC, grooming, stand-up/retro sumáře bez bullshitu.
 -   **Best practices:** jak správně psát prompty, co funguje a co ne, jak se vyhnout common pitfalls.
 -   **Právo & copyright:** licence, provenance, co nikdy nevkládat do promptu, interní politika.
 -   **AI ve firemním workflow:** guardrails, CODEOWNERS, pre-commit, stylotéka promptů, „golden examples“.
 -   **Agentní systémy:** jak nastavit AI agenty, kteří budou programovat za vás, a jak je správně řídit.
+
+<div style="page-break-after: always;"></div>
 
 ## **Program ve zkratce**
 

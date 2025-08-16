@@ -24,6 +24,8 @@ Vývojáři frontendu a backendu, mobilních i interních systémů, tech leadi 
 -   **Náklady a výkon:** caching, batchování, streaming, monitoring metrik (latence p95, deflection rate, cena/požadavek).
 -   **Agentní systémy:** jak spustit AI agenty, kteří budou dělat cokoli, co jim určíte.
 
+<div style="page-break-after: always;"></div>
+
 ## **Program ve zkratce**
 
 **Den 1 – Od nápadu k prototypu (8 h):**Use-case workshop → výběr modelu → návrh architektury (RAG/agent) → **Lab: Hello, RAG** (LlamaIndex/LangChain + Responses API) → měření kvality, rychlosti a nákladů na první baseline. [docs.llamaindex.ai](https://docs.llamaindex.ai/en/stable/optimizing/production_rag/?utm_source=chatgpt.com)
