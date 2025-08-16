@@ -17,6 +17,7 @@
     "scripts": {
         "dev": "npx chokidar \"locales/**/*.yml\" -c \"npx kill-port 4455 && next dev -p 4455\" --initial --debounce 500",
         "build": "next build",
+        "prebuild": "node scripts/generate-documents-pdf.js",
         "start": "next start",
         "lint": "next lint",
         "test": "npm run test-unit && npm run test-integration",
@@ -54,7 +55,8 @@
         "spacetrim": "0.9.0",
         "typescript": "4.9.4",
         "waitasecond": "1.11.1",
-        "xyzt": "^5.4.0"
+        "xyzt": "^5.4.0",
+        "pdfkit": "0.15.0"
     },
     "devDependencies": {
         "@types/isomorphic-fetch": "0.0.36",
