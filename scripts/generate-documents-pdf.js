@@ -75,7 +75,7 @@ function renderMarkdownToPdf(markdown, doc) {
             const text = headingMatch[2].trim();
             const size = Math.max(24 - (level - 1) * 2, 12);
             doc.moveDown(0.4);
-            doc.fontSize(size).font('Helvetica-Bold').text(text, {
+            doc.fontSize(size).font('dejavu-bold').text(text, {
                 paragraphGap: 2,
             });
             doc.moveDown(0.2);
@@ -87,10 +87,12 @@ function renderMarkdownToPdf(markdown, doc) {
         if (bulletMatch) {
             const indent = bulletMatch[1].replace(/\t/g, '    ').length;
             const bulletText = bulletMatch[3];
-            doc.fontSize(12).font('Helvetica').text('• ' + bulletText, {
-                indent: indent * 4,
-                paragraphGap: 2,
-            });
+            doc.fontSize(12)
+                .font('dejavu')
+                .text('• ' + bulletText, {
+                    indent: indent * 4,
+                    paragraphGap: 2,
+                });
             continue;
         }
 
@@ -100,10 +102,12 @@ function renderMarkdownToPdf(markdown, doc) {
             const indent = orderedMatch[1].replace(/\t/g, '    ').length;
             const num = orderedMatch[2];
             const itemText = orderedMatch[3];
-            doc.fontSize(12).font('Helvetica').text(num + '. ' + itemText, {
-                indent: indent * 4,
-                paragraphGap: 2,
-            });
+            doc.fontSize(12)
+                .font('dejavu')
+                .text(num + '. ' + itemText, {
+                    indent: indent * 4,
+                    paragraphGap: 2,
+                });
             continue;
         }
 
@@ -117,7 +121,7 @@ function renderMarkdownToPdf(markdown, doc) {
                 i++;
             }
             doc.moveDown(0.2);
-            doc.fontSize(11).font('Courier').text(codeLines.join('\n'), {
+            doc.fontSize(11).font('dejavu-mono').text(codeLines.join('\n'), {
                 paragraphGap: 4,
             });
             doc.moveDown(0.2);
@@ -125,7 +129,7 @@ function renderMarkdownToPdf(markdown, doc) {
         }
 
         // Paragraph
-        doc.fontSize(12).font('Helvetica').text(line, {
+        doc.fontSize(12).font('dejavu').text(line, {
             paragraphGap: 4,
         });
     }
@@ -139,6 +143,7 @@ function renderMarkdownToPdf(markdown, doc) {
 function generatePdf(sourcePath, targetPath) {
     const md = fs.readFileSync(sourcePath, 'utf8');
 
+    /*
     // Skip generation if up-to-date
     try {
         const targetStat = fs.statSync(targetPath);
@@ -150,6 +155,7 @@ function generatePdf(sourcePath, targetPath) {
     } catch {
         // proceed
     }
+    */
 
     fs.mkdirSync(path.dirname(targetPath), { recursive: true });
 
@@ -171,7 +177,7 @@ function generatePdf(sourcePath, targetPath) {
         .find((l) => l.trim().length > 0);
     if (firstLine) {
         const title = firstLine.replace(/^#\s+/, '').trim();
-        doc.font('Helvetica-Bold').fontSize(26).text(title, { align: 'left' });
+        doc.font('dejavu-bold').fontSize(26).text(title, { align: 'left' });
         doc.moveDown(1);
     }
 
