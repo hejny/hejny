@@ -143,7 +143,7 @@
                                                     decoding="async"
                                                     data-nimg="1"
                                                     class="IconForLink_IconForLink__A0JuL icon LinkOfGroupComponent_icon__F86tt icon"
-                                                    style="color:transparent"
+                                                    style="color: transparent"
                                                     src="/_next/static/media/Email_white.3680be0b.svg"
                                                 />
                                                 <span class="LinkOfGroupComponent_text__zFEZr text">
@@ -165,7 +165,7 @@
                                                     decoding="async"
                                                     data-nimg="1"
                                                     class="IconForLink_IconForLink__A0JuL icon LinkOfGroupComponent_icon__F86tt icon"
-                                                    style="color:transparent"
+                                                    style="color: transparent"
                                                     src="/_next/static/media/Facebook_white.caf02a3e.svg"
                                                 />
                                                 <span class="LinkOfGroupComponent_text__zFEZr text">Facebook</span>
@@ -185,7 +185,7 @@
                                                     decoding="async"
                                                     data-nimg="1"
                                                     class="IconForLink_IconForLink__A0JuL icon LinkOfGroupComponent_icon__F86tt icon"
-                                                    style="color:transparent"
+                                                    style="color: transparent"
                                                     src="/_next/static/media/Instagram_white.3c37c515.svg"
                                                 />
                                                 <span class="LinkOfGroupComponent_text__zFEZr text">Instagram</span>
@@ -205,7 +205,7 @@
                                                     decoding="async"
                                                     data-nimg="1"
                                                     class="IconForLink_IconForLink__A0JuL icon LinkOfGroupComponent_icon__F86tt icon"
-                                                    style="color:transparent"
+                                                    style="color: transparent"
                                                     src="/_next/static/media/LinkedIN_white.f9c89548.svg"
                                                 />
                                                 <span class="LinkOfGroupComponent_text__zFEZr text">LinkedIn</span>
@@ -225,7 +225,9 @@
                          */
                         (() => {
                             const rootElement = window.document.currentScript.parentElement;
-                            for (const componentElement of Array.from(rootElement.querySelectorAll('[data-ai-component]'))) {
+                            for (const componentElement of Array.from(
+                                rootElement.querySelectorAll('[data-ai-component]'),
+                            )) {
                                 if (componentElement.getAttribute('data-ai-activated')) {
                                     continue;
                                 }
@@ -246,10 +248,14 @@
                                                         : e.setAttribute('data-toggle-state', 'closed');
                                             }),
                                                 window.addEventListener('click', (n) => {
-                                                    t.contains(n.target) || e.setAttribute('data-toggle-state', 'closed');
+                                                    t.contains(n.target) ||
+                                                        e.setAttribute('data-toggle-state', 'closed');
                                                 });
                                             let n = e.querySelector('[data-ai-element="background"]');
-                                            if (!n) throw Error('Menu must have child element[data-ai-element="backgroundElement"]');
+                                            if (!n)
+                                                throw Error(
+                                                    'Menu must have child element[data-ai-element="backgroundElement"]',
+                                                );
                                             if (!n) throw Error('Menu must have child <ul/>');
                                             let a = e.querySelector('nav');
                                             if (!a) throw Error('Menu must have child <nav/>');
@@ -271,7 +277,7 @@
                 <!---------------[ /Menu ]--------------->
             </div>
             <header>
-                <div class="HeaderWallpaper_HeaderWallpaper__nOK4h" style="background-color:#54423f">
+                <div class="HeaderWallpaper_HeaderWallpaper__nOK4h" style="background-color: #54423f">
                     <div class="HeaderWallpaper_inner__tleSw">
                         <img
                             src="/images/44a1a39a18e94184441c089b7fa45e63b439fa0c9355bbcf98576153d7671c2b.png"
@@ -279,7 +285,13 @@
                             draggable="false"
                             loading="eager"
                             height="1080"
-                            style="object-fit:cover;width:100%;height:100%;background-color:#54423f;print-color-adjust:exact"
+                            style="
+                                object-fit: cover;
+                                width: 100%;
+                                height: 100%;
+                                background-color: #54423f;
+                                print-color-adjust: exact;
+                            "
                             width="1920"
                             quality="97"
                         />
@@ -297,7 +309,7 @@
                         <!---------------[ Content: ]--------------->
                         <!--⏣ Following is the content of the main page:-->
                         <div>
-                            <div style="font-family:Caveat, sans-serif">
+                            <div style="font-family: Caveat, sans-serif">
                                 <h1 id="tvorim-z-niceho">Tvořím z ničeho nic</h1>
                             </div>
                             <div style=", sans-serif">
@@ -468,7 +480,9 @@
                              */
                             (() => {
                                 const rootElement = window.document.currentScript.parentElement;
-                                for (const componentElement of Array.from(rootElement.querySelectorAll('[data-ai-component]'))) {
+                                for (const componentElement of Array.from(
+                                    rootElement.querySelectorAll('[data-ai-component]'),
+                                )) {
                                     if (componentElement.getAttribute('data-ai-activated')) {
                                         continue;
                                     }
@@ -496,16 +510,25 @@
                                                 let i = o.map((e) => {
                                                         let { id: t, primaryColor: n } = e;
                                                         return '\n        <a href="/'
-                                                            .concat(t, '">\n            <iframe\n                src="/')
+                                                            .concat(
+                                                                t,
+                                                                '">\n            <iframe\n                src="/',
+                                                            )
                                                             .concat(
                                                                 t,
                                                                 '?mode=show-thumbnail"\n                allowtransparency="false"\n                scrolling="no"\n                frameborder="0"\n                style="background-color: ',
                                                             )
-                                                            .concat(n, ';"\n            ></iframe>\n        </a>\n        \n    ');
+                                                            .concat(
+                                                                n,
+                                                                ';"\n            ></iframe>\n        </a>\n        \n    ',
+                                                            );
                                                     }),
                                                     l =
                                                         '\n    <div class="aiai ai-gallery">\n        <div class="ai-gallery-items">\n            <div class="inner">\n                '
-                                                            .concat(i.join('\n\n\n'), '\n            </div>\n        </div>\n        ')
+                                                            .concat(
+                                                                i.join('\n\n\n'),
+                                                                '\n            </div>\n        </div>\n        ',
+                                                            )
                                                             .concat(t, '\n    </div>\n');
                                                 e.innerHTML = l;
                                             })(componentElement);
@@ -583,7 +606,7 @@
                                             decoding="async"
                                             data-nimg="1"
                                             class="IconForLink_IconForLink__A0JuL icon LinkOfGroupComponent_icon__F86tt icon"
-                                            style="color:transparent"
+                                            style="color: transparent"
                                             src="/_next/static/media/Email_white.3680be0b.svg"
                                         />
                                         <span class="LinkOfGroupComponent_text__zFEZr text">me@pavolhejny.com</span>
@@ -602,7 +625,7 @@
                                             decoding="async"
                                             data-nimg="1"
                                             class="IconForLink_IconForLink__A0JuL icon LinkOfGroupComponent_icon__F86tt icon"
-                                            style="color:transparent"
+                                            style="color: transparent"
                                             src="/_next/static/media/Email_white.3680be0b.svg"
                                         />
                                         <span class="LinkOfGroupComponent_text__zFEZr text">info@webgpt.cz</span>
@@ -622,7 +645,7 @@
                                             decoding="async"
                                             data-nimg="1"
                                             class="IconForLink_IconForLink__A0JuL icon LinkOfGroupComponent_icon__F86tt icon"
-                                            style="color:transparent"
+                                            style="color: transparent"
                                             src="/_next/static/media/Facebook_white.caf02a3e.svg"
                                         />
                                         <span class="LinkOfGroupComponent_text__zFEZr text">Facebook</span>
@@ -642,7 +665,7 @@
                                             decoding="async"
                                             data-nimg="1"
                                             class="IconForLink_IconForLink__A0JuL icon LinkOfGroupComponent_icon__F86tt icon"
-                                            style="color:transparent"
+                                            style="color: transparent"
                                             src="/_next/static/media/Instagram_white.3c37c515.svg"
                                         />
                                         <span class="LinkOfGroupComponent_text__zFEZr text">Instagram</span>
@@ -662,7 +685,7 @@
                                             decoding="async"
                                             data-nimg="1"
                                             class="IconForLink_IconForLink__A0JuL icon LinkOfGroupComponent_icon__F86tt icon"
-                                            style="color:transparent"
+                                            style="color: transparent"
                                             src="/_next/static/media/LinkedIN_white.f9c89548.svg"
                                         />
                                         <span class="LinkOfGroupComponent_text__zFEZr text">LinkedIn</span>

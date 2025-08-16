@@ -1,22 +1,20 @@
 # Tvořím z ničeho nic
 
-
-
 > Využíváte plný potenciál technologií a generativní umělé inteligence ve vašem podnikání?
 
-V dnešním rychle se vyvíjejícím světě je důležité neustále se adaptovat a přijímat nové technologie. Já, Pavol Hejný, a můj tým odborníků jsme zde, abychom vás naučili, jak využívat pokročilé *modely umělé inteligence*, *blockchain*, *Web3* a další inovativní technologie pro oživení vašeho podnikání. Připravujeme vás na budoucnost s **AI školením** na míru vašim potřebám.
+V dnešním rychle se vyvíjejícím světě je důležité neustále se adaptovat a přijímat nové technologie. Já, Pavol Hejný, a můj tým odborníků jsme zde, abychom vás naučili, jak využívat pokročilé _modely umělé inteligence_, _blockchain_, _Web3_ a další inovativní technologie pro oživení vašeho podnikání. Připravujeme vás na budoucnost s **AI školením** na míru vašim potřebám.
 
 ## Proč se učit s námi?
 
-- **Komplexní Přístup**: Od základních principů AI a ML, přes pokročilé techniky s použitím *ChatGPT*, *GPT-4*, *Anthropic Claude*, až po implementaci ve vašich projektech.
-- **Praktická Školení**: S našimi kursy se dozvíte, jak využít *generativní umělou inteligenci* a *modely umělé inteligence* pro vytváření realistických *aplikací*, vizuálních obsahů s *DALL-E*, *Midjourney*, či textových modelů s *Stable Diffusion*.
-- **Podpora a Komunita**: Staneš se součástí aktivní komunity vývojářů a nadšenců do AI. Každý kurz zahrnuje mentoring a přístup ke skupinám, kde můžete sdílet zkušenosti a získat podporu.
+-   **Komplexní Přístup**: Od základních principů AI a ML, přes pokročilé techniky s použitím _ChatGPT_, _GPT-4_, _Anthropic Claude_, až po implementaci ve vašich projektech.
+-   **Praktická Školení**: S našimi kursy se dozvíte, jak využít _generativní umělou inteligenci_ a _modely umělé inteligence_ pro vytváření realistických _aplikací_, vizuálních obsahů s _DALL-E_, _Midjourney_, či textových modelů s _Stable Diffusion_.
+-   **Podpora a Komunita**: Staneš se součástí aktivní komunity vývojářů a nadšenců do AI. Každý kurz zahrnuje mentoring a přístup ke skupinám, kde můžete sdílet zkušenosti a získat podporu.
 
 ### Kdo je tedy kurz určen?
 
-- Podnikatelům a manažerům, kteří chtějí rozumět a aplikovat AI ve svých strategiích.
-- Vývojářům a technologům, kteří potřebují rozšířit své znalosti v AI, *blockchainu* a dalších technologiích.
-- Studentům a nadšencům do technologií, kteří se chtějí učit od předních expertů v oboru.
+-   Podnikatelům a manažerům, kteří chtějí rozumět a aplikovat AI ve svých strategiích.
+-   Vývojářům a technologům, kteří potřebují rozšířit své znalosti v AI, _blockchainu_ a dalších technologiích.
+-   Studentům a nadšencům do technologií, kteří se chtějí učit od předních expertů v oboru.
 
 <a is="call-to-action" role="button" href="#buy">🛒 Koupit kurz</a>
 
