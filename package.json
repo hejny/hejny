@@ -17,7 +17,6 @@
     "scripts": {
         "dev": "npx chokidar \"locales/**/*.yml\" -c \"npx kill-port 4455 && next dev -p 4455\" --initial --debounce 500",
         "build": "next build",
-        "prebuild": "node scripts/generate-documents-pdf.js",
         "start": "next start",
         "lint": "next lint",
         "test": "npm run test-unit && npm run test-integration",
@@ -28,7 +27,9 @@
         "test-with-lighthouse": " lighthouse https://collboard.com/ --output html --output-path ./other/lighthouse-reports/report.html --view",
         "prettier": "prettier --config .prettierrc --ignore-unknown --write \"{pages,public,styles}/**/*\"",
         "prettier-commit": "git diff --exit-code && npm run prettier && git add . && git commit --allow-empty -m \"🧹 Prettier\"",
-        "preversion": "git pull && npm run prettier-commit && npm run lint && npm test",
+        "generate-documents": "node scripts/generate-documents-pdf.js",
+        "generate-documents-commit": "npm run generate-documents && git add . && git commit --allow-empty -m \"🏭🖼️ Generate PDF documents\"",
+        "preversion": "git pull && npm run generate-documents-commit && npm run prettier-commit && npm run lint && npm test",
         "postversion": "git push && git push --tags && echo \"Check the deploy process: https://github.com/hejny/hejny/actions/\""
     },
     "dependencies": {

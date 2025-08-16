@@ -67,7 +67,7 @@
         },
             {
             "name": "🏭🖼️ Generate documents PDF",
-            "commands": [" npm run prebuild"],
+            "commands": ["npm run generate-documents"],
             "onlySingle": true,
             "focus": true
         },
