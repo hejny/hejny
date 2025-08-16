@@ -1,17 +1,16 @@
 # **Vyvíjíme AI aplikace: 2denní hands-on bootcamp pro vývojáře**
 
-Vymyslet smysluplný use-case, vybrat správný model, postavit prototyp a dovést ho do produkce – spolehlivě, bezpečně a měřitelně. Tenhle kurz je pro týmy, které chtějí **AI funkce v reálných aplikacích** (web/e-shop, interní nástroje, mobil) – ne sliby, ale výsledky.
+Chcete integrovat AI do svých aplikací a procesů? Tento bootcamp je určen pro vývojáře, kteří chtějí rychle a efektivně implementovat AI funkce do svých projektů. Od jednoduchých automatizací až po komplexní agentní systémy – naučíme vás, jak na to s důrazem na kvalitu, bezpečnost a provoz.
 
 ## **Proč byste u toho neměli chybět**
 
 -   **Od nápadu k prototypu za 1 den**, druhý den věnujeme kvalitě, bezpečnosti a provozu.
 -   Naučíte se stavět AI funkce tak, aby šly **testovat a verifikovat** (golden sady, automatizované evaly). [deepeval.com](https://deepeval.com/docs/evaluation-introduction?utm_source=chatgpt.com)[GitHub](https://github.com/confident-ai/deepeval?utm_source=chatgpt.com)[docs.ragas.io](https://docs.ragas.io/en/latest/?utm_source=chatgpt.com)
--   Budete používat **structured outputs** (JSON Schema), takže integrace do backendu nebolí a UI nepadá na špatných formátech. [OpenAI Platform](https://platform.openai.com/docs/guides/structured-outputs?utm_source=chatgpt.com)[Microsoft Learn](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/structured-outputs?utm_source=chatgpt.com)
 -   Bezpečnost neobětujeme rychlosti: projdeme **OWASP LLM Top 10** a praktické guardrails pro produkci. [OWASP](https://owasp.org/www-project-top-10-for-large-language-model-applications/?utm_source=chatgpt.com)[GitHub](https://github.com/OWASP/www-project-top-10-for-large-language-model-applications/?utm_source=chatgpt.com)
 
 ## **Pro koho je školení určené**
 
-Vývojáři webu/backendu, mobilů i interních systémů, tech leadi a architekti, kteří chtějí přidat AI funkce do stávajících produktů nebo rozjet nové. Dává smysl pro týmy do **15 osob** (ideálně 2 lektory pro vysokou interaktivitu).
+Vývojáři frontendu a backendu, mobilních i interních systémů, tech leadi a architekti, kteří chtějí přidat AI funkce do stávajících produktů nebo rozjet nové. Dává smysl pro týmy do **15 osob** (ideálně 2 lektory pro vysokou interaktivitu).
 
 ## **Co se během 2 dnů naučíte**
 
@@ -23,6 +22,7 @@ Vývojáři webu/backendu, mobilů i interních systémů, tech leadi a architek
 -   **Structured outputs & integrace:** JSON Schema, validace, stabilní kontrakty. [OpenAI Platform](https://platform.openai.com/docs/guides/structured-outputs?utm_source=chatgpt.com)
 -   **Bezpečnost a governance:** hrozby podle OWASP LLM Top 10, mitigace a provozní zásady. [OWASP](https://owasp.org/www-project-top-10-for-large-language-model-applications/?utm_source=chatgpt.com)
 -   **Náklady a výkon:** caching, batchování, streaming, monitoring metrik (latence p95, deflection rate, cena/požadavek).
+-   **Agentní systémy:** jak spustit AI agenty, kteří budou dělat cokoli, co jim určíte.
 
 ## **Program ve zkratce**
 
