@@ -75,7 +75,7 @@ function renderMarkdownToPdf(markdown, doc) {
             const text = headingMatch[2].trim();
             const size = Math.max(24 - (level - 1) * 2, 12);
             doc.moveDown(0.4);
-            doc.fontSize(size).font('dejavu-bold').text(text, {
+            doc.fontSize(size).font('Helvetica-Bold').text(text, {
                 paragraphGap: 2,
             });
             doc.moveDown(0.2);
@@ -88,7 +88,7 @@ function renderMarkdownToPdf(markdown, doc) {
             const indent = bulletMatch[1].replace(/\t/g, '    ').length;
             const bulletText = bulletMatch[3];
             doc.fontSize(12)
-                .font('dejavu')
+                .font('Helvetica')
                 .text('• ' + bulletText, {
                     indent: indent * 4,
                     paragraphGap: 2,
@@ -103,7 +103,7 @@ function renderMarkdownToPdf(markdown, doc) {
             const num = orderedMatch[2];
             const itemText = orderedMatch[3];
             doc.fontSize(12)
-                .font('dejavu')
+                .font('Helvetica')
                 .text(num + '. ' + itemText, {
                     indent: indent * 4,
                     paragraphGap: 2,
@@ -121,7 +121,7 @@ function renderMarkdownToPdf(markdown, doc) {
                 i++;
             }
             doc.moveDown(0.2);
-            doc.fontSize(11).font('dejavu-mono').text(codeLines.join('\n'), {
+            doc.fontSize(11).font('Courier').text(codeLines.join('\n'), {
                 paragraphGap: 4,
             });
             doc.moveDown(0.2);
@@ -129,7 +129,7 @@ function renderMarkdownToPdf(markdown, doc) {
         }
 
         // Paragraph
-        doc.fontSize(12).font('dejavu').text(line, {
+        doc.fontSize(12).font('Helvetica').text(line, {
             paragraphGap: 4,
         });
     }
@@ -170,6 +170,9 @@ function generatePdf(sourcePath, targetPath) {
     const writeStream = fs.createWriteStream(targetPath);
     doc.pipe(writeStream);
 
+    // Remove DejaVu font registration to prevent ENOENT errors
+    // Use only built-in fonts (Helvetica, Courier)
+
     // Title (first non-empty line)
     const firstLine = md
         .replace(/\r\n/g, '\n')
@@ -177,7 +180,7 @@ function generatePdf(sourcePath, targetPath) {
         .find((l) => l.trim().length > 0);
     if (firstLine) {
         const title = firstLine.replace(/^#\s+/, '').trim();
-        doc.font('dejavu-bold').fontSize(26).text(title, { align: 'left' });
+        doc.font('Helvetica-Bold').fontSize(26).text(title, { align: 'left' });
         doc.moveDown(1);
     }
 
@@ -212,17 +215,17 @@ async function main() {
     log('Found', files.length, 'markdown files');
 
     let success = 0;
+    const pdfPromises = [];
     for (const file of files) {
         const rel = path.relative(SOURCE_DIR, file);
         const out = path.join(TARGET_DIR, rel.replace(/\.md$/i, '.pdf'));
-        try {
-            // eslint-disable-next-line no-await-in-loop
-            await generatePdf(file, out);
-            success++;
-        } catch (e) {
-            // Continue with next file
-        }
+        pdfPromises.push(
+            generatePdf(file, out)
+                .then(() => { success++; })
+                .catch(() => { /* ignore errors */ })
+        );
     }
+    await Promise.all(pdfPromises);
     log(`Completed: ${success}/${files.length} PDFs generated/updated`);
 }
 
