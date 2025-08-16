@@ -1,4 +1,5 @@
 import { removeMarkdownFormatting } from './removeMarkdownFormatting';
+import { describe, expect, it } from '@jest/globals';
 
 describe('removeMarkdownFormatting', () => {
     it('should remove bold formatting from a string', () => {

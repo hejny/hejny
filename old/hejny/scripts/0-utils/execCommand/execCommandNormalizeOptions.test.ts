@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals';
 import { execCommandNormalizeOptions } from './execCommandNormalizeOptions';
 
 describe('how normalizing exec options works', () => {

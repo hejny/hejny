@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals';
 import { execCommand } from './execCommand';
 
 describe('basic usage of execCommand', () => {
