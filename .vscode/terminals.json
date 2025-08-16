@@ -65,6 +65,12 @@
             "onlySingle": true,
             "focus": true
         },
+            {
+            "name": "🏭🖼️ Generate documents PDF",
+            "commands": [" npm run prebuild"],
+            "onlySingle": true,
+            "focus": true
+        },
         {
             "name": "🔼👑 Release major version",
             "command": "npm version major",
