@@ -5,8 +5,8 @@ Chcete integrovat AI do svých aplikací a procesů? Tento bootcamp je určen pr
 ## Proč byste u toho neměli chybět
 
 1.  **Od nápadu k prototypu za 1 den**, druhý den věnujeme kvalitě, bezpečnosti a provozu.
-2.  Naučíte se stavět AI funkce tak, aby šly **testovat a verifikovat** (golden sady, automatizované evaly). [deepeval.com](https://deepeval.com/docs/evaluation-introduction?utm_source=chatgpt.com)[GitHub](https://github.com/confident-ai/deepeval?utm_source=chatgpt.com)[docs.ragas.io](https://docs.ragas.io/en/latest/?utm_source=chatgpt.com)
-3.  Bezpečnost neobětujeme rychlosti: projdeme **OWASP LLM Top 10** a praktické guardrails pro produkci. [OWASP](https://owasp.org/www-project-top-10-for-large-language-model-applications/?utm_source=chatgpt.com)[GitHub](https://github.com/OWASP/www-project-top-10-for-large-language-model-applications/?utm_source=chatgpt.com)
+2.  Naučíte se stavět AI funkce tak, aby šly **testovat a verifikovat** (golden sady, automatizované evaly). [deepeval.com](https://deepeval.com/docs/evaluation-introduction)[GitHub](https://github.com/confident-ai/deepeval)[docs.ragas.io](https://docs.ragas.io/en/latest/)
+3.  Bezpečnost neobětujeme rychlosti: projdeme **OWASP LLM Top 10** a praktické guardrails pro produkci. [OWASP](https://owasp.org/www-project-top-10-for-large-language-model-applications/)[GitHub](https://github.com/OWASP/www-project-top-10-for-large-language-model-applications/)
 
 ## Pro koho je školení určené
 
@@ -18,11 +18,11 @@ Přihlásit se může i celý firemní tým – v tom případě umíme obsah p�
 
 -   **Use-case design:** jak vybírat problémy, kde AI dává hodnotu (interní asistenti, vyhledávání v datech, sumarizace, generování obsahu).
 -   **Volba modelu & poskytovatele:** kdy nasadit uzavřené modely (Responses API) vs. otevřené; kompromisy cena/latence/kontext.
--   **Architektury AI aplikací:** **RAG** (ingest → chunking → embeddings → retrieval → generace), hybridní vyhledávání, reranking, a kdy přidat agenty/tool-calling. [docs.llamaindex.ai](https://docs.llamaindex.ai/en/stable/optimizing/production_rag/?utm_source=chatgpt.com)
+-   **Architektury AI aplikací:** **RAG** (ingest → chunking → embeddings → retrieval → generace), hybridní vyhledávání, reranking, a kdy přidat agenty/tool-calling. [docs.llamaindex.ai](https://docs.llamaindex.ai/en/stable/optimizing/production_rag/)
 -   **UX pro AI:** transparentnost, „escape hatches“, zdrojování odpovědí, práce s chybami a fallback na člověka.
--   **Kvalita a testování:** golden sady, LLM-as-judge/heuristiky, CI evaly s **DeepEval** a **Ragas**. [deepeval.com](https://deepeval.com/docs/evaluation-introduction?utm_source=chatgpt.com)[docs.ragas.io](https://docs.ragas.io/en/latest/?utm_source=chatgpt.com)
--   **Structured outputs & integrace:** JSON Schema, validace, stabilní kontrakty. [OpenAI Platform](https://platform.openai.com/docs/guides/structured-outputs?utm_source=chatgpt.com)
--   **Bezpečnost a governance:** hrozby podle OWASP LLM Top 10, mitigace a provozní zásady. [OWASP](https://owasp.org/www-project-top-10-for-large-language-model-applications/?utm_source=chatgpt.com)
+-   **Kvalita a testování:** golden sady, LLM-as-judge/heuristiky, CI evaly s **DeepEval** a **Ragas**. [deepeval.com](https://deepeval.com/docs/evaluation-introduction)[docs.ragas.io](https://docs.ragas.io/en/latest/)
+-   **Structured outputs & integrace:** JSON Schema, validace, stabilní kontrakty. [OpenAI Platform](https://platform.openai.com/docs/guides/structured-outputs)
+-   **Bezpečnost a governance:** hrozby podle OWASP LLM Top 10, mitigace a provozní zásady. [OWASP](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
 -   **Náklady a výkon:** caching, batchování, streaming, monitoring metrik (latence p95, deflection rate, cena/požadavek).
 -   **Agentní systémy:** jak spustit AI agenty, kteří budou dělat cokoli, co jim určíte.
 
@@ -37,9 +37,9 @@ Přihlásit se může i celý firemní tým – v tom případě umíme obsah p�
 
 ## Co si účastníci odnesou
 
--   **Referenční kód**: minimální RAG aplikace + příklady structured-output pipeline. [docs.llamaindex.ai](https://docs.llamaindex.ai/en/stable/optimizing/production_rag/?utm_source=chatgpt.com)[OpenAI Platform](https://platform.openai.com/docs/guides/structured-outputs?utm_source=chatgpt.com)
--   **Checklisty & šablony**: výběr use-case, architektura RAG, prompt-UI, bezpečnostní checklist podle OWASP LLM Top 10, metriky kvality a nákladů. [OWASP](https://owasp.org/www-project-top-10-for-large-language-model-applications/?utm_source=chatgpt.com)
--   **Eval toolchain** připravený do CI (DeepEval/Ragas) včetně ukázkových „goldens“. [deepeval.com](https://deepeval.com/docs/evaluation-introduction?utm_source=chatgpt.com)[docs.ragas.io](https://docs.ragas.io/en/latest/?utm_source=chatgpt.com)
+-   **Referenční kód**: minimální RAG aplikace + příklady structured-output pipeline. [docs.llamaindex.ai](https://docs.llamaindex.ai/en/stable/optimizing/production_rag/)[OpenAI Platform](https://platform.openai.com/docs/guides/structured-outputs)
+-   **Checklisty & šablony**: výběr use-case, architektura RAG, prompt-UI, bezpečnostní checklist podle OWASP LLM Top 10, metriky kvality a nákladů. [OWASP](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
+-   **Eval toolchain** připravený do CI (DeepEval/Ragas) včetně ukázkových „goldens“. [deepeval.com](https://deepeval.com/docs/evaluation-introduction)[docs.ragas.io](https://docs.ragas.io/en/latest/)
 
 ## Praktické info
 
