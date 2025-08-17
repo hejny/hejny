@@ -10,7 +10,9 @@ Chcete integrovat AI do svých aplikací a procesů? Tento bootcamp je určen pr
 
 ## Pro koho je školení určené
 
-Vývojáři frontendu a backendu, mobilních i interních systémů, tech leadi a architekti, kteří chtějí přidat AI funkce do stávajících produktů nebo rozjet nové. Dává smysl pro týmy do **15 osob** (ideálně 2 lektory pro vysokou interaktivitu).
+Školení je zaměřené na jednotlivé vývojáře (frontend, backend, mobilní, interní systémy), tech leady i architekty, kteří chtějí přidat AI funkce do svých produktů nebo rozjet nové projekty.
+
+Přihlásit se může i celý firemní tým – v tom případě umíme obsah přizpůsobit konkrétním technologiím a scénářům firmy, aby se školení co nejvíce promítlo do reálné praxe.
 
 ## Co se během 2 dnů naučíte
 
@@ -26,11 +28,12 @@ Vývojáři frontendu a backendu, mobilních i interních systémů, tech leadi 
 
 <div style="page-break-after: always;"></div>
 
-## Program ve zkratce
+## Firemní přínosy
 
-**Den 1 – Od nápadu k prototypu (8 h):**Use-case workshop → výběr modelu → návrh architektury (RAG/agent) → **Lab: Hello, RAG** (LlamaIndex/LangChain + Responses API) → měření kvality, rychlosti a nákladů na první baseline. [docs.llamaindex.ai](https://docs.llamaindex.ai/en/stable/optimizing/production_rag/?utm_source=chatgpt.com)
-
-**Den 2 – Kvalita, bezpečnost a produkce (8 h):**Testování & evaluace (DeepEval/Ragas) → structured outputs a robustní integrace → bezpečnost podle OWASP LLM Top 10 → **Capstone Lab**: od POC k mini-produktu s guardrails a reportem kvality. [deepeval.com](https://deepeval.com/docs/evaluation-introduction?utm_source=chatgpt.com)[docs.ragas.io](https://docs.ragas.io/en/latest/?utm_source=chatgpt.com)[OpenAI Platform](https://platform.openai.com/docs/guides/structured-outputs?utm_source=chatgpt.com)[OWASP](https://owasp.org/www-project-top-10-for-large-language-model-applications/?utm_source=chatgpt.com)
+-   **Rychlejší inovace:** tým si odnese prototypy, které lze dál rozvíjet v produkci.
+-   **Best practices pod jednou střechou:** kvalita, testování, bezpečnost a provozní zásady nastavené od začátku.
+-   **Udržitelnost a náklady:** know-how, jak navrhovat AI funkce efektivně, aby dlouhodobě nezatěžovaly rozpočty ani infrastrukturu.
+-   **Zacílení na vlastní stack:** možnost workshopu přizpůsobeného konkrétním technologiím a use-case vaší firmy.
 
 ## Co si účastníci odnesou
 
