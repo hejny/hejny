@@ -46,6 +46,7 @@ Optimální velikost skupiny je **do 15 lidí** pro maximum interaktivity.
 
 ## Praktické info
 
+-   **Režie:** 2×8 hodin čistého času + oběd a 2 coffee breaky denně.
 -   **Kapacita:** ideál do 15 osob (možnost 2 lektorů).
--   **Předpoklady:** Git, VS Code/JetBrains, přístup k firemnímu GitHubu, povolené AI pluginy.
+-   **Předpoklady:** Git, VS Code / JetBrains, přístup k firemnímu GitHubu, povolené AI pluginy.
 -   **Formát cvičení:** každé LAB ve dvou variantách (web / MCU), týmové párování vítáno.

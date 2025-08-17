@@ -44,5 +44,6 @@ Přihlásit se může i celý firemní tým – v tom případě umíme obsah p�
 ## Praktické info
 
 -   **Režie:** 2×8 hodin čistého času + oběd a 2 coffee breaky denně.
--   **Technika:** notebook s Dockerem, Python 3.10+, GitHub; API klíče a sandbox dodáme.
+-   **Kapacita:** ideál do 15 osob (možnost 2 lektorů).
+-   **Technika:** notebook s Dockerem, VSCode / JetBrains, TypeScript / Python, GitHub; API klíče a sandbox dodáme.
 -   **Formát:** ~60 % praxe, ~40 % best practices; on-site / online.
