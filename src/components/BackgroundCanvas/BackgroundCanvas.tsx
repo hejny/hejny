@@ -1,5 +1,5 @@
 import { Color } from '@promptbook/color';
-import { useCallback, useEffect, useMemo, useRef } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Vector } from 'xyzt';
 import styles from './BackgroundCanvas.module.css';
 
@@ -18,6 +18,7 @@ interface BackgroundCanvasProps {
     animationSpeed?: number;
     noiseIntensity?: number;
     className?: string;
+    showControls?: boolean;
 }
 
 export function BackgroundCanvas({
@@ -27,12 +28,14 @@ export function BackgroundCanvas({
     animationSpeed = 0.002,
     noiseIntensity = 0.15,
     className = '',
+    showControls = true,
 }: BackgroundCanvasProps) {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const animationFrameRef = useRef<number>();
     const timeRef = useRef<number>(0);
     const frameCountRef = useRef(0);
     const lastFpsReportTimeRef = useRef(0);
+    const [isPlaying, setIsPlaying] = useState(true);
 
     // Initialize gradient points with predefined colors similar to the examples
     const gradientPoints = useMemo(() => {
@@ -119,8 +122,7 @@ export function BackgroundCanvas({
                 Math.floor(g).toString(16).padStart(2, '0') +
                 Math.floor(b).toString(16).padStart(2, '0');
 
-            const color = Color.fromHex(hex);
-            return a < 1 ? color.clone().withAlpha(a) : color;
+            return Color.fromHex(hex);
         },
         [gradientPoints, noise],
     );
@@ -193,6 +195,11 @@ export function BackgroundCanvas({
     // Animation loop
     const animate = useCallback(
         (currentTime: number) => {
+            if (!isPlaying) {
+                animationFrameRef.current = requestAnimationFrame(animate);
+                return;
+            }
+
             const deltaTime = (currentTime - timeRef.current) * animationSpeed;
             timeRef.current = currentTime;
 
@@ -208,7 +215,7 @@ export function BackgroundCanvas({
 
             animationFrameRef.current = requestAnimationFrame(animate);
         },
-        [updateGradientPoints, render, animationSpeed],
+        [updateGradientPoints, render, animationSpeed, isPlaying],
     );
 
     // Start animation
@@ -224,7 +231,32 @@ export function BackgroundCanvas({
         };
     }, [animate]);
 
+    const toggleAnimation = useCallback(() => {
+        setIsPlaying(prev => !prev);
+    }, []);
+
     return (
-        <canvas ref={canvasRef} width={width} height={height} className={`${styles.backgroundCanvas} ${className}`} />
+        <div className={styles.backgroundCanvasContainer}>
+            <canvas ref={canvasRef} width={width} height={height} className={`${styles.backgroundCanvas} ${className}`} />
+            {showControls && (
+                <div className={styles.controlPanel}>
+                    <button 
+                        onClick={toggleAnimation}
+                        className={styles.playPauseButton}
+                        title={isPlaying ? 'Pause animation' : 'Play animation'}
+                    >
+                        {isPlaying ? (
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                            </svg>
+                        ) : (
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        )}
+                    </button>
+                </div>
+            )}
+        </div>
     );
 }
