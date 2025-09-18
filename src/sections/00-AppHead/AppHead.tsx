@@ -8,11 +8,28 @@ import { removeMarkdownFormatting } from '../../utils/content/removeMarkdownForm
 import { removeMarkdownLinks } from '../../utils/content/removeMarkdownLinks';
 
 interface AppHeadProps {
+    /**
+     * Optional subtitle to show before the main title.
+     */
     subtitle?: string;
+
+    /**
+     * Whether to show the language picker in the top-right corner.
+     *
+     * @default true
+     */
+    isLanguagePickerVisible?: boolean;
+
+    /**
+     * Whether to enable the chatbot integration.
+     *
+     * @default true
+     */
+    isChatbotEnabled?: boolean;
 }
 
 export function AppHead(props: AppHeadProps) {
-    const { subtitle } = props;
+    const { subtitle, isLanguagePickerVisible, isChatbotEnabled } = props;
 
     const { t } = useTranslation();
     const title = removeMarkdownFormatting(removeMarkdownLinks(t('title') || ''));
@@ -73,28 +90,30 @@ export function AppHead(props: AppHeadProps) {
                     defer
                 ></script>
             </Head>
-            <Script strategy="afterInteractive" id="5e408aff-6fc5-42f1-9db9-fa8601c626ae">
-                {`
-            // [🔌] Integration code of Promptbook app 💭 Advanced Chatbot into https://ptbk.io/ or https://pavolhejny.com/
+            {isChatbotEnabled && (
+                <Script strategy="afterInteractive" id="5e408aff-6fc5-42f1-9db9-fa8601c626ae">
+                    {`
+                        // [🔌] Integration code of Promptbook app 💭 Advanced Chatbot into https://ptbk.io/ or https://pavolhejny.com/
 
-            const bookAppScript = document.createElement('script');
-            bookAppScript.async = true;
-            bookAppScript.src = "https://promptbook.studio/api/embed/miniapp.js?id=5e408aff-6fc5-42f1-9db9-fa8601c626ae";
-            document.head.appendChild(bookAppScript);
+                        const bookAppScript = document.createElement('script');
+                        bookAppScript.async = true;
+                        bookAppScript.src = "https://promptbook.studio/api/embed/miniapp.js?id=5e408aff-6fc5-42f1-9db9-fa8601c626ae";
+                        document.head.appendChild(bookAppScript);
 
-            bookAppScript.addEventListener('load', () => {
-                activateEmbeddedChatbot(
-                    {
-                        "theme": "DARK",
-                        "position": "BOTTOM_RIGHT",
-                        "isTestingMode": false
-                    }
-                );
-            });  
-        
-        `}
-            </Script>
-            <LanguagePicker />
+                        bookAppScript.addEventListener('load', () => {
+                            activateEmbeddedChatbot(
+                                {
+                                    "theme": "DARK",
+                                    "position": "BOTTOM_RIGHT",
+                                    "isTestingMode": false
+                                }
+                            );
+                        });  
+                    
+                    `}
+                </Script>
+            )}
+            {isLanguagePickerVisible && <LanguagePicker />}
         </>
     );
 }

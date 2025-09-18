@@ -1,183 +1,229 @@
-import { useEffect, useMemo, useRef } from 'react';
+import { Color } from '@promptbook/color';
+import { useCallback, useEffect, useMemo, useRef } from 'react';
 import { Vector } from 'xyzt';
-import { Color } from '../../utils/color/Color';
-import { randomColor } from '../../utils/color/randomColor';
-import { $randomItem } from '../../utils/randomItem';
-import styles from './BackgroundCanvas.module.css';
 
-interface BackgroundCanvasProps {}
+interface GradientPoint {
+    position: Vector;
+    color: Color;
+    velocity: Vector;
+    target: Vector;
+    influence: number;
+}
 
-export function BackgroundCanvas(props: BackgroundCanvasProps) {
-    const {} = props;
+interface BackgroundCanvasProps {
+    width?: number;
+    height?: number;
+    pointCount?: number;
+    animationSpeed?: number;
+    noiseIntensity?: number;
+    className?: string;
+}
 
-    const imageSize = useMemo(() => new Vector(3277, 1024), []);
-    const tileSize = useMemo(() => Vector.square(15), []);
-    const worldSize = useMemo(
-        () => imageSize.divide(tileSize).map((value) => Math.round(value)),
-        [imageSize, tileSize],
+export function BackgroundCanvas({
+    width = window.innerWidth,
+    height = window.innerHeight,
+    pointCount = 4,
+    animationSpeed = 0.002,
+    noiseIntensity = 0.15,
+    className = '',
+}: BackgroundCanvasProps) {
+    const canvasRef = useRef<HTMLCanvasElement>(null);
+    const animationFrameRef = useRef<number>();
+    const timeRef = useRef<number>(0);
+
+    // Initialize gradient points with predefined colors similar to the examples
+    const gradientPoints = useMemo(() => {
+        const colors = [
+            Color.fromString('#4A90E2'), // Blue
+            Color.fromString('#E94B6A'), // Pink/Red
+            Color.fromString('#F5A623'), // Orange
+            Color.fromString('#9013FE'), // Purple
+            Color.fromString('#00BCD4'), // Cyan
+            Color.fromString('#FF9800'), // Amber
+        ];
+
+        return Array.from({ length: pointCount }, (_, index) => {
+            const position = new Vector(Math.random() * width, Math.random() * height);
+
+            return {
+                position,
+                color: colors[index % colors.length],
+                velocity: new Vector((Math.random() - 0.5) * 0.5, (Math.random() - 0.5) * 0.5),
+                target: new Vector(Math.random() * width, Math.random() * height),
+                influence: 200 + Math.random() * 300,
+            } as GradientPoint;
+        });
+    }, [pointCount, width, height]);
+
+    // Smooth noise function for elegant texture
+    const noise = useCallback(
+        (x: number, y: number, time: number): number => {
+            const scale1 = 0.005;
+            const scale2 = 0.02;
+            const scale3 = 0.1;
+
+            const n1 = Math.sin(x * scale1 + time) * Math.cos(y * scale1);
+            const n2 = Math.sin(x * scale2 + time * 1.3) * Math.cos(y * scale2 + time * 0.7);
+            const n3 = Math.sin(x * scale3 + time * 2) * Math.cos(y * scale3 + time * 1.5);
+
+            return (n1 + n2 * 0.5 + n3 * 0.25) * noiseIntensity;
+        },
+        [noiseIntensity],
     );
 
-    const canvasRef = useRef<HTMLCanvasElement>(null);
+    // Calculate color at a specific pixel
+    const calculatePixelColor = useCallback(
+        (x: number, y: number, time: number): Color => {
+            const pixel = new Vector(x, y);
+            let totalWeight = 0;
+            let r = 0,
+                g = 0,
+                b = 0,
+                a = 0;
 
-    useEffect(() => {
-        const canvas = canvasRef.current;
+            // Calculate weighted average of all gradient points
+            gradientPoints.forEach((point) => {
+                const distance = pixel.distance(point.position);
+                const weight = Math.exp(-distance / point.influence);
 
-        if (!canvas) {
-            return;
-        }
+                totalWeight += weight;
+                const color = point.color;
 
-        const ctx = canvas.getContext('2d');
+                // Color class uses values 0-255, so work directly with those
+                r += color.red * weight;
+                g += color.green * weight;
+                b += color.blue * weight;
+                a += color.alpha * weight;
+            });
 
-        if (ctx === null) {
-            return;
-        }
+            if (totalWeight > 0) {
+                r /= totalWeight;
+                g /= totalWeight;
+                b /= totalWeight;
+                a /= totalWeight;
+            }
 
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+            // Add noise for texture (scale to color range 0-255)
+            const noiseValue = noise(x, y, time) * 20; // Noise intensity
+            r = Math.max(0, Math.min(255, r + noiseValue));
+            g = Math.max(0, Math.min(255, g + noiseValue));
+            b = Math.max(0, Math.min(255, b + noiseValue));
 
-        const worldCenter = worldSize.scale(1 / 2);
+            // Create a hex string and use Color.fromHex
+            const hex =
+                '#' +
+                Math.floor(r).toString(16).padStart(2, '0') +
+                Math.floor(g).toString(16).padStart(2, '0') +
+                Math.floor(b).toString(16).padStart(2, '0');
 
-        const RANDOM_IMAGE_COLORS = [
-            Color.fromString('#000000'),
-            Color.fromString('#000000'),
-            Color.fromString('#000000'),
-            Color.fromString('#000000'),
-            Color.fromString('#091022'),
-            Color.fromString('#ab4e22'),
-            Color.fromString('#1e1a26'),
-            Color.fromString('#523939'),
-            Color.fromString('#70463b'),
-            Color.fromString('#6f4741'),
-            Color.fromString('#342b33'),
-            Color.fromString('#191526'),
-            Color.fromString('#372d34'),
-        ];
-        const PATTERN_IMAGE_COLORS = [Color.fromString('#d29063'), Color.fromString('#EEDF6C')];
+            const color = Color.fromHex(hex);
+            return a < 1 ? color.withAlpha(a) : color;
+        },
+        [gradientPoints, noise],
+    );
 
-        /*/
-        // Random dots:
-        const dotsCount = Math.round(size.x * size.y * 5);
+    // Update gradient points animation
+    const updateGradientPoints = useCallback(
+        (deltaTime: number) => {
+            gradientPoints.forEach((point) => {
+                // Move towards target with some inertia
+                const toTarget = point.target.subtract(point.position);
+                const distance = toTarget.magnitude;
 
-        for (let i = 0; i < dotsCount; i++) {
-            const position = Vector.zero()
-                .map(() => Math.random())
-                .multiply(size)
-                .map((value) => Math.floor(value));
-
-            ctx.fillStyle = randomColor().toString();
-            ctx.fillRect(position.x, position.y, 1, 1);
-        }
-        /**/
-
-        for (let y = 0; y < worldSize.y; y++) {
-            for (let x = 0; x < worldSize.x; x++) {
-                let rotation = 45;
-                let polygonSides = 4;
-                let currentTilePosition = new Vector(x, y);
-                let currentTileSize = tileSize;
-                let isCurrentSkipped = false;
-
-                let color: Color;
-
-                color = Color.fromString('#000').transparent;
-                // color = $randomItem(...RANDOM_IMAGE_COLORS);
-                // color = randomColor();
-                // color = Math.random() > 0.5 ? Color.fromString('black') : Color.fromString('white');
-
-                /**/
-                // Strong gradient from left :
-                if (Math.pow((worldSize.x - currentTilePosition.x) / worldSize.x, 2) > Math.random()) {
-                    color = Math.random() > 0.8 ? randomColor() : $randomItem(...RANDOM_IMAGE_COLORS);
-                }
-                /**/
-
-                /**/
-                // Strong gradient from right:
-                if (Math.pow(currentTilePosition.x / worldSize.x, 2) > Math.random()) {
-                    color =
-                        (currentTilePosition.x + currentTilePosition.y) % 2
-                            ? PATTERN_IMAGE_COLORS[0]
-                            : PATTERN_IMAGE_COLORS[1];
-                }
-                /**/
-
-                /**/
-                // Circle:
-                const distance = worldCenter.distance(currentTilePosition);
-                if (distance < (worldSize.x * Math.random()) / 2) {
-                    color = Color.fromString('#000').transparent;
-                }
-                /**/
-
-                /*/
-                // Linear Gradient from left to right:
-                if (worldSize.x * Math.random() < currentTilePosition.x) {
-                    // color = color.grayscale;
-                    color =
-                        (currentTilePosition.x + currentTilePosition.y) % 2
-                            ? PATTERN_IMAGE_COLORS[0]
-                            : PATTERN_IMAGE_COLORS[1];
-                } else {
-                    // position = position.add(Vector.zero().map(() => Math.random() * 2 - 1));
-                    // currentTileSize = currentTileSize.scale(Math.floor(Math.random() * 3));
-                    // isCurrentSkipped = Math.random() > 0.5;
-                }
-                /**/
-
-                /*/
-                // Linear Gradient from center:
-                if (
-                    Math.pow(worldSize.x / 2 - currentTilePosition.x, 2) / Math.pow(worldSize.x, 2) <
-                    Math.random() * 0.2
-                ) {
-                    color = color.transparent;
-                }
-                /**/
-
-                if (isCurrentSkipped) {
-                    continue;
+                if (distance < 50) {
+                    // Generate new random target
+                    point.target = new Vector(Math.random() * width, Math.random() * height);
                 }
 
-                ctx.fillStyle = color.toString();
+                // Apply smooth movement
+                const force = toTarget.scale(0.001);
+                point.velocity = point.velocity.add(force).scale(0.98);
+                point.position = point.position.add(point.velocity.scale(deltaTime));
 
-                /**/
-                // Square tile:
-                ctx.fillRect(
-                    currentTilePosition.x * tileSize.x,
-                    currentTilePosition.y * tileSize.y,
-                    currentTileSize.x,
-                    currentTileSize.y,
-                );
-                /**/
+                // Wrap around screen edges
+                if (point.position.x < -100) point.position = new Vector(width + 100, point.position.y);
+                if (point.position.x > width + 100) point.position = new Vector(-100, point.position.y);
+                if (point.position.y < -100) point.position = new Vector(point.position.x, height + 100);
+                if (point.position.y > height + 100) point.position = new Vector(point.position.x, -100);
+            });
+        },
+        [gradientPoints, width, height],
+    );
 
-                /*/
-                // N Polygon:
-                ctx.beginPath();
-                for (let i = 0; i < polygonSides; i++) {
-                    const angle = (i / polygonSides) * Math.PI * 2 + (rotation / 180) * Math.PI;
-                    const x = (position.x + 2 / 3) * tileSize.x + Math.cos(angle) * tileSize.x;
-                    const y = (position.y + 2 / 3) * tileSize.y + Math.sin(angle) * tileSize.y;
+    // Render the gradient with optimized sampling
+    const render = useCallback(
+        (time: number) => {
+            const canvas = canvasRef.current;
+            if (!canvas) return;
 
-                    if (i === 0) {
-                        ctx.moveTo(x, y);
-                    } else {
-                        ctx.lineTo(x, y);
+            const ctx = canvas.getContext('2d');
+            if (!ctx) return;
+
+            const imageData = ctx.createImageData(width, height);
+            const data = imageData.data;
+
+            // Sample every few pixels for performance, then interpolate
+            const sampleRate = 4;
+
+            for (let y = 0; y < height; y += sampleRate) {
+                for (let x = 0; x < width; x += sampleRate) {
+                    const color = calculatePixelColor(x, y, time);
+
+                    // Fill the sample area
+                    for (let dy = 0; dy < sampleRate && y + dy < height; dy++) {
+                        for (let dx = 0; dx < sampleRate && x + dx < width; dx++) {
+                            const index = ((y + dy) * width + (x + dx)) * 4;
+                            data[index] = color.red; // Already 0-255
+                            data[index + 1] = color.green; // Already 0-255
+                            data[index + 2] = color.blue; // Already 0-255
+                            data[index + 3] = Math.floor(color.alpha * 255);
+                        }
                     }
                 }
-                ctx.closePath();
-                ctx.fill();
-                /**/
             }
-        }
-    }, [canvasRef, worldSize, tileSize]);
+
+            ctx.putImageData(imageData, 0, 0);
+        },
+        [width, height, calculatePixelColor],
+    );
+
+    // Animation loop
+    const animate = useCallback(
+        (currentTime: number) => {
+            const deltaTime = (currentTime - timeRef.current) * animationSpeed;
+            timeRef.current = currentTime;
+
+            updateGradientPoints(deltaTime);
+            render(currentTime * 0.001);
+
+            animationFrameRef.current = requestAnimationFrame(animate);
+        },
+        [updateGradientPoints, render, animationSpeed],
+    );
+
+    // Start animation
+    useEffect(() => {
+        timeRef.current = performance.now();
+        animationFrameRef.current = requestAnimationFrame(animate);
+
+        return () => {
+            if (animationFrameRef.current) {
+                cancelAnimationFrame(animationFrameRef.current);
+            }
+        };
+    }, [animate]);
 
     return (
-        <div className={styles.BackgroundCanvas}>
-            <canvas
-                className={styles.canvas}
-                ref={canvasRef}
-                width={worldSize.x * tileSize.x}
-                height={worldSize.y * tileSize.y}
-            />
-        </div>
+        <canvas
+            ref={canvasRef}
+            width={width}
+            height={height}
+            className={className}
+            style={{
+                width: '100%',
+                height: '100%',
+                display: 'block',
+            }}
+        />
     );
 }

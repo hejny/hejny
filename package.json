@@ -36,6 +36,7 @@
     "dependencies": {
         "@calcom/embed-react": "^1.5.1",
         "@next/font": "13.1.1",
+        "@promptbook/color": "^0.101.0-5",
         "@promptbook/markdown-utils": "^0.101.0-5",
         "configchecker": "1.5.1",
         "destroyable": "0.12.0",
@@ -60,7 +61,7 @@
         "spacetrim": "0.9.0",
         "typescript": "4.9.4",
         "waitasecond": "1.11.1",
-        "xyzt": "^5.4.0"
+        "xyzt": "^5.4.3"
     },
     "devDependencies": {
         "@types/isomorphic-fetch": "0.0.36",
