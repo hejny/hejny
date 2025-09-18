@@ -1,0 +1,8 @@
+.BackgroundCanvas {
+    /* TODO: Use or remove empty css */
+}
+
+.canvas {
+    image-rendering: pixelated;
+    background-color: transparent;
+}
