@@ -35,7 +35,7 @@ export function BackgroundCanvas({
     const timeRef = useRef<number>(0);
     const frameCountRef = useRef(0);
     const lastFpsReportTimeRef = useRef(0);
-    const [isPlaying, setIsPlaying] = useState(true);
+    const [isPlaying, setIsPlaying] = useState(false);
     const [isPanelVisible, setIsPanelVisible] = useState(true);
 
     // Initialize gradient points with predefined colors similar to the examples
@@ -196,22 +196,19 @@ export function BackgroundCanvas({
     // Animation loop
     const animate = useCallback(
         (currentTime: number) => {
-            if (!isPlaying) {
-                animationFrameRef.current = requestAnimationFrame(animate);
-                return;
-            }
+            if (isPlaying) {
+                const deltaTime = (currentTime - timeRef.current) * animationSpeed;
+                timeRef.current = currentTime;
 
-            const deltaTime = (currentTime - timeRef.current) * animationSpeed;
-            timeRef.current = currentTime;
+                updateGradientPoints(deltaTime);
+                render(currentTime * 0.001);
 
-            updateGradientPoints(deltaTime);
-            render(currentTime * 0.001);
-
-            frameCountRef.current++;
-            if (currentTime > lastFpsReportTimeRef.current + 1000) {
-                console.log(`FPS: ${frameCountRef.current}`);
-                frameCountRef.current = 0;
-                lastFpsReportTimeRef.current = currentTime;
+                frameCountRef.current++;
+                if (currentTime > lastFpsReportTimeRef.current + 1000) {
+                    console.log(`FPS: ${frameCountRef.current}`);
+                    frameCountRef.current = 0;
+                    lastFpsReportTimeRef.current = currentTime;
+                }
             }
 
             animationFrameRef.current = requestAnimationFrame(animate);
@@ -219,10 +216,14 @@ export function BackgroundCanvas({
         [updateGradientPoints, render, animationSpeed, isPlaying],
     );
 
-    // Start animation
+    // Initial render and animation setup
     useEffect(() => {
         timeRef.current = performance.now();
         lastFpsReportTimeRef.current = timeRef.current;
+        
+        // Render initial frame
+        render(0);
+        
         animationFrameRef.current = requestAnimationFrame(animate);
 
         return () => {
@@ -230,7 +231,7 @@ export function BackgroundCanvas({
                 cancelAnimationFrame(animationFrameRef.current);
             }
         };
-    }, [animate]);
+    }, [animate, render]);
 
     const toggleAnimation = useCallback(() => {
         setIsPlaying(prev => !prev);
