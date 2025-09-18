@@ -157,22 +157,21 @@ export function BackgroundCanvas({
                 return;
             }
 
-            if (isPlaying) {
-                const scaledDeltaTime = deltaTime * animationSpeed;
-                timeRef.current = currentTime;
+        if (isPlaying) {
+            const scaledDeltaTime = deltaTime * animationSpeed;
+            timeRef.current = currentTime;
 
-                updateGradientPoints(scaledDeltaTime);
-                render(currentTime);
+            updateGradientPoints(scaledDeltaTime);
+            render(currentTime);
 
-                frameCountRef.current++;
-                if (currentTime > lastFpsReportTimeRef.current + 1000) {
-                    console.log(`FPS: ${frameCountRef.current}`);
-                    frameCountRef.current = 0;
-                    lastFpsReportTimeRef.current = currentTime;
-                }
-            } else {
-                timeRef.current = currentTime;
+            frameCountRef.current++;
+            if (currentTime > lastFpsReportTimeRef.current + 1000) {
+                console.log(`FPS: ${frameCountRef.current}`);
+                frameCountRef.current = 0;
+                lastFpsReportTimeRef.current = currentTime;
             }
+        }
+        // Don't update timeRef.current when paused to prevent animation jumping
 
             animationFrameRef.current = requestAnimationFrame(animate);
         },
@@ -197,7 +196,13 @@ export function BackgroundCanvas({
     }, [animate, render]);
 
     const toggleAnimation = useCallback(() => {
-        setIsPlaying(prev => !prev);
+        setIsPlaying(prev => {
+            // When resuming animation, reset the time reference to prevent jumping
+            if (!prev) {
+                timeRef.current = performance.now();
+            }
+            return !prev;
+        });
     }, []);
 
     const hideControlPanel = useCallback(() => {

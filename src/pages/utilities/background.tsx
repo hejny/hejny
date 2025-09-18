@@ -12,7 +12,7 @@ export default function BackgroundPage() {
                 height={1000}
                 pointCount={15}
                 animationSpeed={0.01}
-                noiseIntensity={0.1}
+                noiseIntensity={0.5}
             />
         </>
     );
