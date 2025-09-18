@@ -241,6 +241,28 @@ export function BackgroundCanvas({
         setIsPanelVisible(false);
     }, []);
 
+    const downloadCanvas = useCallback(() => {
+        const canvas = canvasRef.current;
+        if (!canvas) return;
+
+        try {
+            // Convert canvas to PNG data URL
+            const dataURL = canvas.toDataURL('image/png');
+            
+            // Create a temporary link element
+            const link = document.createElement('a');
+            link.href = dataURL;
+            link.download = `background-canvas-${new Date().toISOString().slice(0, 19).replace(/:/g, '-')}.png`;
+            
+            // Trigger download
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        } catch (error) {
+            console.error('Failed to download canvas:', error);
+        }
+    }, []);
+
     return (
         <div className={styles.backgroundCanvasContainer}>
             <canvas ref={canvasRef} width={width} height={height} className={`${styles.backgroundCanvas} ${className}`} />
@@ -260,6 +282,15 @@ export function BackgroundCanvas({
                                 <path d="M8 5v14l11-7z"/>
                             </svg>
                         )}
+                    </button>
+                    <button 
+                        onClick={downloadCanvas}
+                        className={styles.downloadButton}
+                        title="Download canvas as PNG"
+                    >
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                        </svg>
                     </button>
                     <button 
                         onClick={hideControlPanel}
