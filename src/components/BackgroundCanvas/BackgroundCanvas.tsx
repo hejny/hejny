@@ -5,7 +5,7 @@ import styles from './BackgroundCanvas.module.css';
 
 interface GradientPoint {
     position: Vector;
-    color: Color;
+    color: string; // Use hex string instead of Color object for performance
     velocity: Vector;
     target: Vector;
     influence: number;
@@ -26,7 +26,7 @@ export function BackgroundCanvas({
     height = window.innerHeight,
     pointCount = 4,
     animationSpeed = 0.002,
-    noiseIntensity = 0.15,
+    noiseIntensity = 0.05, // Reduced default noise
     className = '',
     showControls = true,
 }: BackgroundCanvasProps) {
@@ -38,15 +38,15 @@ export function BackgroundCanvas({
     const [isPlaying, setIsPlaying] = useState(false);
     const [isPanelVisible, setIsPanelVisible] = useState(true);
 
-    // Initialize gradient points with predefined colors similar to the examples
+    // Initialize gradient points with predefined colors
     const gradientPoints = useMemo(() => {
         const colors = [
-            Color.fromString('#4A90E2'), // Blue
-            Color.fromString('#E94B6A'), // Pink/Red
-            Color.fromString('#F5A623'), // Orange
-            Color.fromString('#9013FE'), // Purple
-            Color.fromString('#00BCD4'), // Cyan
-            Color.fromString('#FF9800'), // Amber
+            '#4A90E2', // Blue
+            '#E94B6A', // Pink/Red
+            '#F5A623', // Orange
+            '#9013FE', // Purple
+            '#00BCD4', // Cyan
+            '#FF9800', // Amber
         ];
 
         return Array.from({ length: pointCount }, (_, index) => {
@@ -61,72 +61,6 @@ export function BackgroundCanvas({
             } as GradientPoint;
         });
     }, [pointCount, width, height]);
-
-    // Smooth noise function for elegant texture
-    const noise = useCallback(
-        (x: number, y: number, time: number): number => {
-            const scale1 = 0.005;
-            const scale2 = 0.02;
-            const scale3 = 0.1;
-
-            const n1 = Math.sin(x * scale1 + time) * Math.cos(y * scale1);
-            const n2 = Math.sin(x * scale2 + time * 1.3) * Math.cos(y * scale2 + time * 0.7);
-            const n3 = Math.sin(x * scale3 + time * 2) * Math.cos(y * scale3 + time * 1.5);
-
-            return (n1 + n2 * 0.5 + n3 * 0.25) * noiseIntensity;
-        },
-        [noiseIntensity],
-    );
-
-    // Calculate color at a specific pixel
-    const calculatePixelColor = useCallback(
-        (x: number, y: number, time: number): Color => {
-            const pixel = new Vector(x, y);
-            let totalWeight = 0;
-            let r = 0,
-                g = 0,
-                b = 0,
-                a = 0;
-
-            // Calculate weighted average of all gradient points
-            gradientPoints.forEach((point) => {
-                const distance = pixel.distance(point.position);
-                const weight = Math.exp(-distance / point.influence);
-
-                totalWeight += weight;
-                const color = point.color;
-
-                // Color class uses values 0-255, so work directly with those
-                r += color.red * weight;
-                g += color.green * weight;
-                b += color.blue * weight;
-                a += color.alpha * weight;
-            });
-
-            if (totalWeight > 0) {
-                r /= totalWeight;
-                g /= totalWeight;
-                b /= totalWeight;
-                a /= totalWeight;
-            }
-
-            // Add noise for texture (scale to color range 0-255)
-            const noiseValue = noise(x, y, time) * 20; // Noise intensity
-            r = Math.max(0, Math.min(255, r + noiseValue));
-            g = Math.max(0, Math.min(255, g + noiseValue));
-            b = Math.max(0, Math.min(255, b + noiseValue));
-
-            // Create a hex string and use Color.fromHex
-            const hex =
-                '#' +
-                Math.floor(r).toString(16).padStart(2, '0') +
-                Math.floor(g).toString(16).padStart(2, '0') +
-                Math.floor(b).toString(16).padStart(2, '0');
-
-            return Color.fromHex(hex);
-        },
-        [gradientPoints, noise],
-    );
 
     // Update gradient points animation
     const updateGradientPoints = useCallback(
@@ -156,7 +90,7 @@ export function BackgroundCanvas({
         [gradientPoints, width, height],
     );
 
-    // Render the gradient with optimized sampling
+    // Optimized render using canvas gradients instead of per-pixel calculation
     const render = useCallback(
         (time: number) => {
             const canvas = canvasRef.current;
@@ -165,43 +99,70 @@ export function BackgroundCanvas({
             const ctx = canvas.getContext('2d');
             if (!ctx) return;
 
-            const imageData = ctx.createImageData(width, height);
-            const data = imageData.data;
+            // Clear canvas
+            ctx.fillStyle = '#000000';
+            ctx.fillRect(0, 0, width, height);
 
-            // Sample every few pixels for performance, then interpolate
-            const sampleRate = 4;
+            // Use globalCompositeOperation for better blending
+            ctx.globalCompositeOperation = 'screen';
 
-            for (let y = 0; y < height; y += sampleRate) {
-                for (let x = 0; x < width; x += sampleRate) {
-                    const color = calculatePixelColor(x, y, time);
+            // Draw each gradient point as a radial gradient
+            gradientPoints.forEach((point, index) => {
+                const gradient = ctx.createRadialGradient(
+                    point.position.x, point.position.y, 0,
+                    point.position.x, point.position.y, point.influence
+                );
 
-                    // Fill the sample area
-                    for (let dy = 0; dy < sampleRate && y + dy < height; dy++) {
-                        for (let dx = 0; dx < sampleRate && x + dx < width; dx++) {
-                            const index = ((y + dy) * width + (x + dx)) * 4;
-                            data[index] = color.red; // Already 0-255
-                            data[index + 1] = color.green; // Already 0-255
-                            data[index + 2] = color.blue; // Already 0-255
-                            data[index + 3] = Math.floor(color.alpha * 255);
-                        }
-                    }
-                }
+                // Add subtle noise effect using time-based alpha variation
+                const noiseOffset = Math.sin(time * 0.001 + index * 2.1) * noiseIntensity;
+                const alpha = Math.max(0.1, 0.6 + noiseOffset);
+
+                // Create color with alpha
+                const color = Color.fromString(point.color);
+                const colorWithAlpha = `rgba(${color.red}, ${color.green}, ${color.blue}, ${alpha})`;
+                const colorTransparent = `rgba(${color.red}, ${color.green}, ${color.blue}, 0)`;
+
+                gradient.addColorStop(0, colorWithAlpha);
+                gradient.addColorStop(0.3, colorWithAlpha.replace(alpha.toString(), (alpha * 0.7).toString()));
+                gradient.addColorStop(1, colorTransparent);
+
+                ctx.fillStyle = gradient;
+                ctx.fillRect(0, 0, width, height);
+            });
+
+            // Reset composite operation
+            ctx.globalCompositeOperation = 'source-over';
+
+            // Add subtle texture overlay for visual richness
+            if (noiseIntensity > 0) {
+                ctx.globalAlpha = noiseIntensity * 0.3;
+                ctx.fillStyle = `hsl(${(time * 0.01) % 360}, 30%, 50%)`;
+                ctx.globalCompositeOperation = 'overlay';
+                ctx.fillRect(0, 0, width, height);
+                ctx.globalAlpha = 1;
+                ctx.globalCompositeOperation = 'source-over';
             }
-
-            ctx.putImageData(imageData, 0, 0);
         },
-        [width, height, calculatePixelColor],
+        [width, height, gradientPoints, noiseIntensity],
     );
 
-    // Animation loop
+    // Optimized animation loop with frame skipping for consistent performance
     const animate = useCallback(
         (currentTime: number) => {
+            const deltaTime = currentTime - timeRef.current;
+            
+            // Skip frames if we're running too slow (target: 60fps = ~16.67ms per frame)
+            if (deltaTime < 16 && frameCountRef.current > 0) {
+                animationFrameRef.current = requestAnimationFrame(animate);
+                return;
+            }
+
             if (isPlaying) {
-                const deltaTime = (currentTime - timeRef.current) * animationSpeed;
+                const scaledDeltaTime = deltaTime * animationSpeed;
                 timeRef.current = currentTime;
 
-                updateGradientPoints(deltaTime);
-                render(currentTime * 0.001);
+                updateGradientPoints(scaledDeltaTime);
+                render(currentTime);
 
                 frameCountRef.current++;
                 if (currentTime > lastFpsReportTimeRef.current + 1000) {
@@ -209,6 +170,8 @@ export function BackgroundCanvas({
                     frameCountRef.current = 0;
                     lastFpsReportTimeRef.current = currentTime;
                 }
+            } else {
+                timeRef.current = currentTime;
             }
 
             animationFrameRef.current = requestAnimationFrame(animate);
