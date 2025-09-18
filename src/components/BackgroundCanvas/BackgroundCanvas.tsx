@@ -36,6 +36,7 @@ export function BackgroundCanvas({
     const frameCountRef = useRef(0);
     const lastFpsReportTimeRef = useRef(0);
     const [isPlaying, setIsPlaying] = useState(true);
+    const [isPanelVisible, setIsPanelVisible] = useState(true);
 
     // Initialize gradient points with predefined colors similar to the examples
     const gradientPoints = useMemo(() => {
@@ -235,10 +236,14 @@ export function BackgroundCanvas({
         setIsPlaying(prev => !prev);
     }, []);
 
+    const hideControlPanel = useCallback(() => {
+        setIsPanelVisible(false);
+    }, []);
+
     return (
         <div className={styles.backgroundCanvasContainer}>
             <canvas ref={canvasRef} width={width} height={height} className={`${styles.backgroundCanvas} ${className}`} />
-            {showControls && (
+            {showControls && isPanelVisible && (
                 <div className={styles.controlPanel}>
                     <button 
                         onClick={toggleAnimation}
@@ -254,6 +259,15 @@ export function BackgroundCanvas({
                                 <path d="M8 5v14l11-7z"/>
                             </svg>
                         )}
+                    </button>
+                    <button 
+                        onClick={hideControlPanel}
+                        className={styles.hideButton}
+                        title="Hide control panel"
+                    >
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                        </svg>
                     </button>
                 </div>
             )}
