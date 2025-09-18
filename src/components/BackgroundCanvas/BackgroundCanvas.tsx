@@ -1,6 +1,7 @@
 import { Color } from '@promptbook/color';
 import { useCallback, useEffect, useMemo, useRef } from 'react';
 import { Vector } from 'xyzt';
+import styles from './BackgroundCanvas.module.css';
 
 interface GradientPoint {
     position: Vector;
@@ -30,6 +31,8 @@ export function BackgroundCanvas({
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const animationFrameRef = useRef<number>();
     const timeRef = useRef<number>(0);
+    const frameCountRef = useRef(0);
+    const lastFpsReportTimeRef = useRef(0);
 
     // Initialize gradient points with predefined colors similar to the examples
     const gradientPoints = useMemo(() => {
@@ -117,7 +120,7 @@ export function BackgroundCanvas({
                 Math.floor(b).toString(16).padStart(2, '0');
 
             const color = Color.fromHex(hex);
-            return a < 1 ? color.withAlpha(a) : color;
+            return a < 1 ? color.clone().withAlpha(a) : color;
         },
         [gradientPoints, noise],
     );
@@ -196,6 +199,13 @@ export function BackgroundCanvas({
             updateGradientPoints(deltaTime);
             render(currentTime * 0.001);
 
+            frameCountRef.current++;
+            if (currentTime > lastFpsReportTimeRef.current + 1000) {
+                console.log(`FPS: ${frameCountRef.current}`);
+                frameCountRef.current = 0;
+                lastFpsReportTimeRef.current = currentTime;
+            }
+
             animationFrameRef.current = requestAnimationFrame(animate);
         },
         [updateGradientPoints, render, animationSpeed],
@@ -204,6 +214,7 @@ export function BackgroundCanvas({
     // Start animation
     useEffect(() => {
         timeRef.current = performance.now();
+        lastFpsReportTimeRef.current = timeRef.current;
         animationFrameRef.current = requestAnimationFrame(animate);
 
         return () => {
@@ -214,16 +225,6 @@ export function BackgroundCanvas({
     }, [animate]);
 
     return (
-        <canvas
-            ref={canvasRef}
-            width={width}
-            height={height}
-            className={className}
-            style={{
-                width: '100%',
-                height: '100%',
-                display: 'block',
-            }}
-        />
+        <canvas ref={canvasRef} width={width} height={height} className={`${styles.backgroundCanvas} ${className}`} />
     );
 }
