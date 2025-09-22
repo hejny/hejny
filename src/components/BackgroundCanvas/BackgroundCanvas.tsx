@@ -25,7 +25,7 @@ export function BackgroundCanvas({
     width = window.innerWidth,
     height = window.innerHeight,
     pointCount = 4,
-    animationSpeed = 0.002,
+    animationSpeed = 50, // pixels per second
     noiseIntensity = 0.05, // Reduced default noise
     className = '',
     showControls = true,
@@ -75,9 +75,10 @@ export function BackgroundCanvas({
                     point.target = new Vector(Math.random() * width, Math.random() * height);
                 }
 
-                // Apply smooth movement
-                const force = toTarget.scale(0.001);
+                // Apply smooth movement with normalized force
+                const force = toTarget.normalize().scale(0.1); // Use normalized direction with consistent force
                 point.velocity = point.velocity.add(force).scale(0.98);
+                // deltaTime is already scaled by animationSpeed (pixels per second)
                 point.position = point.position.add(point.velocity.scale(deltaTime));
 
                 // Wrap around screen edges
@@ -158,7 +159,9 @@ export function BackgroundCanvas({
             }
 
         if (isPlaying) {
-            const scaledDeltaTime = deltaTime * animationSpeed;
+            // Convert deltaTime from milliseconds to seconds for pixels per second calculation
+            const deltaTimeInSeconds = deltaTime / 1000;
+            const scaledDeltaTime = deltaTimeInSeconds * animationSpeed;
             timeRef.current = currentTime;
 
             updateGradientPoints(scaledDeltaTime);
