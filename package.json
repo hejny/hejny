@@ -21,6 +21,7 @@
         "lint": "next lint",
         "test": "npm run test-unit && npm run test-integration",
         "test-unit": "jest",
+        "test-types": "tsc --noEmit",
         "TODO-test-integration": "ts-node ./scripts/integration-test-with-server/integration-test-with-server.ts",
         "test-integration": "echo \"Integration tests are not yet implemented\"",
         "test-integration-without-server": "./node_modules/.bin/cypress run",
