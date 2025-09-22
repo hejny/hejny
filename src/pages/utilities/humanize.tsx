@@ -1,6 +1,5 @@
-import { AppHead } from '../../sections/00-AppHead/AppHead';
-import { humanizeAiText } from '@promptbook/utils';
 import { MiniappHumanizeAiText } from '../../components/MiniappHumanizeAiText/MiniappHumanizeAiText';
+import { AppHead } from '../../sections/00-AppHead/AppHead';
 
 export default function BackgroundPage() {
     return (
