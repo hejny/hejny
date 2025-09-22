@@ -13,27 +13,34 @@
             "focus": true
         },
         {
-            "name": "🧪 Lint",
+            "name": "🧪 Test types + lint",
+            "command": "npm run test-types && npm run lint",
+            "execute": false
+        },
+        {
+            "name": "🧪 Types test",
+            "command": "npm run test-types",
+            "execute": false
+        },
+        {
+            "name": "🧪 Lint test",
             "command": "npm run lint",
-            "onlySingle": true,
-            "focus": true
+            "execute": false
         },
         {
             "name": "🩹 Lint fix",
             "command": "npm run lint -- --fix",
-            "onlySingle": true
+            "execute": false
         },
         {
             "name": "🧪 Unit tests",
             "command": "npm run test-unit",
-            "onlySingle": true,
-            "focus": true
+            "execute": false
         },
         {
             "name": "🧪 Integration tests",
             "command": "npm run test-integration",
-            "onlySingle": true,
-            "focus": true
+            "execute": false
         },
         {
             "name": "🧪🔥 Integration tests (interactive)",
@@ -65,7 +72,7 @@
             "onlySingle": true,
             "focus": true
         },
-            {
+        {
             "name": "🏭🖼️ Generate documents PDF",
             "commands": ["npm run generate-documents"],
             "onlySingle": true,
