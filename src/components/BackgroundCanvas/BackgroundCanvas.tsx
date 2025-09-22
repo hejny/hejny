@@ -98,21 +98,35 @@ export function BackgroundCanvas({
             const canvas = canvasRef.current;
             if (!canvas) return;
 
-            const ctx = canvas.getContext('2d', { alpha: true });
+            const ctx = canvas.getContext('2d', { 
+                alpha: true,
+                desynchronized: false,
+                colorSpace: 'srgb'
+            });
             if (!ctx) return;
 
-            // Enable anti-aliasing and smoothing for better circle edges
+            // Set device pixel ratio for high-DPI displays
+            const devicePixelRatio = window.devicePixelRatio || 1;
+            
+            // Enable maximum quality anti-aliasing and smoothing
             ctx.imageSmoothingEnabled = true;
             ctx.imageSmoothingQuality = 'high';
             
-            // Clear canvas
+            // Apply slight blur for ultra-smooth edges
+            ctx.filter = 'blur(0.5px)';
+            
+            // Clear canvas with perfect black
+            ctx.clearRect(0, 0, width, height);
             ctx.fillStyle = '#000000';
             ctx.fillRect(0, 0, width, height);
+            
+            // Reset filter for gradient rendering
+            ctx.filter = 'none';
 
             // Use globalCompositeOperation for better blending
             ctx.globalCompositeOperation = 'screen';
 
-            // Draw each gradient point as a radial gradient
+            // Draw each gradient point as a radial gradient with ultra-smooth transitions
             gradientPoints.forEach((point, index) => {
                 const gradient = ctx.createRadialGradient(
                     point.position.x,
@@ -129,15 +143,17 @@ export function BackgroundCanvas({
 
                 // Create color with alpha
                 const color = Color.fromString(point.color);
-                const colorWithAlpha = `rgba(${color.red}, ${color.green}, ${color.blue}, ${alpha})`;
-                const colorTransparent = `rgba(${color.red}, ${color.green}, ${color.blue}, 0)`;
 
-                gradient.addColorStop(0, colorWithAlpha);
-                gradient.addColorStop(0.2, colorWithAlpha.replace(alpha.toString(), (alpha * 0.9).toString()));
-                gradient.addColorStop(0.4, colorWithAlpha.replace(alpha.toString(), (alpha * 0.6).toString()));
-                gradient.addColorStop(0.7, colorWithAlpha.replace(alpha.toString(), (alpha * 0.3).toString()));
-                gradient.addColorStop(0.9, colorWithAlpha.replace(alpha.toString(), (alpha * 0.1).toString()));
-                gradient.addColorStop(1, colorTransparent);
+                // Create ultra-smooth gradient with many stops using exponential falloff
+                const stops = 10;
+                for (let i = 0; i <= stops; i++) {
+                    const t = i / stops;
+                    // Use exponential curve for natural falloff: f(t) = e^(-3*t)
+                    const falloff = Math.exp(-3 * t);
+                    const currentAlpha = alpha * falloff;
+                    const colorStop = `rgba(${color.red}, ${color.green}, ${color.blue}, ${currentAlpha})`;
+                    gradient.addColorStop(t, colorStop);
+                }
 
                 ctx.fillStyle = gradient;
                 ctx.fillRect(0, 0, width, height);
