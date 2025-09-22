@@ -98,9 +98,13 @@ export function BackgroundCanvas({
             const canvas = canvasRef.current;
             if (!canvas) return;
 
-            const ctx = canvas.getContext('2d');
+            const ctx = canvas.getContext('2d', { alpha: true });
             if (!ctx) return;
 
+            // Enable anti-aliasing and smoothing for better circle edges
+            ctx.imageSmoothingEnabled = true;
+            ctx.imageSmoothingQuality = 'high';
+            
             // Clear canvas
             ctx.fillStyle = '#000000';
             ctx.fillRect(0, 0, width, height);
@@ -129,7 +133,10 @@ export function BackgroundCanvas({
                 const colorTransparent = `rgba(${color.red}, ${color.green}, ${color.blue}, 0)`;
 
                 gradient.addColorStop(0, colorWithAlpha);
-                gradient.addColorStop(0.3, colorWithAlpha.replace(alpha.toString(), (alpha * 0.7).toString()));
+                gradient.addColorStop(0.2, colorWithAlpha.replace(alpha.toString(), (alpha * 0.9).toString()));
+                gradient.addColorStop(0.4, colorWithAlpha.replace(alpha.toString(), (alpha * 0.6).toString()));
+                gradient.addColorStop(0.7, colorWithAlpha.replace(alpha.toString(), (alpha * 0.3).toString()));
+                gradient.addColorStop(0.9, colorWithAlpha.replace(alpha.toString(), (alpha * 0.1).toString()));
                 gradient.addColorStop(1, colorTransparent);
 
                 ctx.fillStyle = gradient;
