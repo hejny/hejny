@@ -76,7 +76,8 @@ export function BackgroundCanvas({
                 }
 
                 // Apply smooth movement with normalized force
-                const force = toTarget.normalize().scale(0.1); // Use normalized direction with consistent force
+                const force =
+                    toTarget.magnitude > 0 && toTarget.normalized ? toTarget.normalized.scale(0.1) : new Vector(0, 0); // Use normalized direction with consistent force, fallback to zero vector
                 point.velocity = point.velocity.add(force).scale(0.98);
                 // deltaTime is already scaled by animationSpeed (pixels per second)
                 point.position = point.position.add(point.velocity.scale(deltaTime));
@@ -110,8 +111,12 @@ export function BackgroundCanvas({
             // Draw each gradient point as a radial gradient
             gradientPoints.forEach((point, index) => {
                 const gradient = ctx.createRadialGradient(
-                    point.position.x, point.position.y, 0,
-                    point.position.x, point.position.y, point.influence
+                    point.position.x,
+                    point.position.y,
+                    0,
+                    point.position.x,
+                    point.position.y,
+                    point.influence,
                 );
 
                 // Add subtle noise effect using time-based alpha variation
@@ -151,30 +156,30 @@ export function BackgroundCanvas({
     const animate = useCallback(
         (currentTime: number) => {
             const deltaTime = currentTime - timeRef.current;
-            
+
             // Skip frames if we're running too slow (target: 60fps = ~16.67ms per frame)
             if (deltaTime < 16 && frameCountRef.current > 0) {
                 animationFrameRef.current = requestAnimationFrame(animate);
                 return;
             }
 
-        if (isPlaying) {
-            // Convert deltaTime from milliseconds to seconds for pixels per second calculation
-            const deltaTimeInSeconds = deltaTime / 1000;
-            const scaledDeltaTime = deltaTimeInSeconds * animationSpeed;
-            timeRef.current = currentTime;
+            if (isPlaying) {
+                // Convert deltaTime from milliseconds to seconds for pixels per second calculation
+                const deltaTimeInSeconds = deltaTime / 1000;
+                const scaledDeltaTime = deltaTimeInSeconds * animationSpeed;
+                timeRef.current = currentTime;
 
-            updateGradientPoints(scaledDeltaTime);
-            render(currentTime);
+                updateGradientPoints(scaledDeltaTime);
+                render(currentTime);
 
-            frameCountRef.current++;
-            if (currentTime > lastFpsReportTimeRef.current + 1000) {
-                console.log(`FPS: ${frameCountRef.current}`);
-                frameCountRef.current = 0;
-                lastFpsReportTimeRef.current = currentTime;
+                frameCountRef.current++;
+                if (currentTime > lastFpsReportTimeRef.current + 1000) {
+                    console.log(`FPS: ${frameCountRef.current}`);
+                    frameCountRef.current = 0;
+                    lastFpsReportTimeRef.current = currentTime;
+                }
             }
-        }
-        // Don't update timeRef.current when paused to prevent animation jumping
+            // Don't update timeRef.current when paused to prevent animation jumping
 
             animationFrameRef.current = requestAnimationFrame(animate);
         },
@@ -185,10 +190,10 @@ export function BackgroundCanvas({
     useEffect(() => {
         timeRef.current = performance.now();
         lastFpsReportTimeRef.current = timeRef.current;
-        
+
         // Render initial frame
         render(0);
-        
+
         animationFrameRef.current = requestAnimationFrame(animate);
 
         return () => {
@@ -199,7 +204,7 @@ export function BackgroundCanvas({
     }, [animate, render]);
 
     const toggleAnimation = useCallback(() => {
-        setIsPlaying(prev => {
+        setIsPlaying((prev) => {
             // When resuming animation, reset the time reference to prevent jumping
             if (!prev) {
                 timeRef.current = performance.now();
@@ -219,12 +224,12 @@ export function BackgroundCanvas({
         try {
             // Convert canvas to PNG data URL
             const dataURL = canvas.toDataURL('image/png');
-            
+
             // Create a temporary link element
             const link = document.createElement('a');
             link.href = dataURL;
             link.download = `background-canvas-${new Date().toISOString().slice(0, 19).replace(/:/g, '-')}.png`;
-            
+
             // Trigger download
             document.body.appendChild(link);
             link.click();
@@ -236,40 +241,37 @@ export function BackgroundCanvas({
 
     return (
         <div className={styles.backgroundCanvasContainer}>
-            <canvas ref={canvasRef} width={width} height={height} className={`${styles.backgroundCanvas} ${className}`} />
+            <canvas
+                ref={canvasRef}
+                width={width}
+                height={height}
+                className={`${styles.backgroundCanvas} ${className}`}
+            />
             {showControls && isPanelVisible && (
                 <div className={styles.controlPanel}>
-                    <button 
+                    <button
                         onClick={toggleAnimation}
                         className={styles.playPauseButton}
                         title={isPlaying ? 'Pause animation' : 'Play animation'}
                     >
                         {isPlaying ? (
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
                             </svg>
                         ) : (
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M8 5v14l11-7z"/>
+                                <path d="M8 5v14l11-7z" />
                             </svg>
                         )}
                     </button>
-                    <button 
-                        onClick={downloadCanvas}
-                        className={styles.downloadButton}
-                        title="Download canvas as PNG"
-                    >
+                    <button onClick={downloadCanvas} className={styles.downloadButton} title="Download canvas as PNG">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
                         </svg>
                     </button>
-                    <button 
-                        onClick={hideControlPanel}
-                        className={styles.hideButton}
-                        title="Hide control panel"
-                    >
+                    <button onClick={hideControlPanel} className={styles.hideButton} title="Hide control panel">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
                         </svg>
                     </button>
                 </div>
