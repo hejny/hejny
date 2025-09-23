@@ -17,9 +17,6 @@ interface BackgroundCanvasProps {
     pointCount?: number;
     animationSpeed?: number;
     noiseIntensity?: number;
-    noiseScale?: number;
-    noiseSpeed?: number;
-    noiseType?: 'grain' | 'perlin' | 'film';
     className?: string;
     showControls?: boolean;
 }
@@ -29,10 +26,7 @@ export function BackgroundCanvas({
     height = 1080, // Always use Full HD height
     pointCount = 4,
     animationSpeed = 50, // pixels per second
-    noiseIntensity = 0.15, // Subtle but visible noise
-    noiseScale = 2.0, // Scale of noise pattern
-    noiseSpeed = 0.5, // Speed of noise animation
-    noiseType = 'grain', // Type of noise effect
+    noiseIntensity = 0.05, // Reduced default noise
     className = '',
     showControls = true,
 }: BackgroundCanvasProps) {
@@ -43,102 +37,6 @@ export function BackgroundCanvas({
     const lastFpsReportTimeRef = useRef(0);
     const [isPlaying, setIsPlaying] = useState(false);
     const [isPanelVisible, setIsPanelVisible] = useState(true);
-
-    // Noise generation functions
-    const generateGrainNoise = useCallback((ctx: CanvasRenderingContext2D, time: number) => {
-        const imageData = ctx.createImageData(width, height);
-        const data = imageData.data;
-        const animatedTime = time * noiseSpeed * 0.001;
-
-        // Create grain-like noise pattern
-        for (let i = 0; i < data.length; i += 4) {
-            const pixelIndex = i / 4;
-            const x = pixelIndex % width;
-            const y = Math.floor(pixelIndex / width);
-            
-            // Generate noise value with multiple octaves for more natural look
-            const noise1 = (Math.sin(x * 0.1 * noiseScale + animatedTime) * Math.cos(y * 0.1 * noiseScale + animatedTime) + 1) / 2;
-            const noise2 = (Math.sin(x * 0.02 * noiseScale - animatedTime * 0.7) * Math.cos(y * 0.02 * noiseScale - animatedTime * 0.7) + 1) / 2;
-            const noise3 = Math.random() * 0.3; // Random component for grain texture
-            
-            const combinedNoise = (noise1 * 0.5 + noise2 * 0.3 + noise3 * 0.2) * noiseIntensity;
-            
-            // Apply noise as grayscale modulation
-            const noiseValue = Math.floor(combinedNoise * 255);
-            data[i] = noiseValue;     // Red
-            data[i + 1] = noiseValue; // Green
-            data[i + 2] = noiseValue; // Blue
-            data[i + 3] = Math.floor(combinedNoise * 60); // Alpha for subtlety
-        }
-
-        return imageData;
-    }, [width, height, noiseScale, noiseSpeed, noiseIntensity]);
-
-    const generatePerlinNoise = useCallback((ctx: CanvasRenderingContext2D, time: number) => {
-        const imageData = ctx.createImageData(width, height);
-        const data = imageData.data;
-        const animatedTime = time * noiseSpeed * 0.001;
-
-        // Simplified Perlin-like noise using multiple sine waves
-        for (let i = 0; i < data.length; i += 4) {
-            const pixelIndex = i / 4;
-            const x = pixelIndex % width;
-            const y = Math.floor(pixelIndex / width);
-            
-            // Create smooth Perlin-like noise with multiple frequencies
-            const scale1 = noiseScale * 0.005;
-            const scale2 = noiseScale * 0.01;
-            const scale3 = noiseScale * 0.02;
-            
-            const noise1 = Math.sin(x * scale1 + animatedTime) * Math.cos(y * scale1 + animatedTime);
-            const noise2 = Math.sin(x * scale2 - animatedTime * 0.6) * Math.cos(y * scale2 - animatedTime * 0.6) * 0.5;
-            const noise3 = Math.sin(x * scale3 + animatedTime * 0.8) * Math.cos(y * scale3 + animatedTime * 0.8) * 0.25;
-            
-            const combinedNoise = ((noise1 + noise2 + noise3) + 1.75) / 3.5 * noiseIntensity;
-            
-            // Smooth gradients for Perlin effect
-            const noiseValue = Math.floor(combinedNoise * 200);
-            data[i] = noiseValue;
-            data[i + 1] = noiseValue;
-            data[i + 2] = noiseValue;
-            data[i + 3] = Math.floor(combinedNoise * 40);
-        }
-
-        return imageData;
-    }, [width, height, noiseScale, noiseSpeed, noiseIntensity]);
-
-    const generateFilmNoise = useCallback((ctx: CanvasRenderingContext2D, time: number) => {
-        const imageData = ctx.createImageData(width, height);
-        const data = imageData.data;
-        const animatedTime = time * noiseSpeed * 0.001;
-
-        // Film grain with vertical streaks and random dust particles
-        for (let i = 0; i < data.length; i += 4) {
-            const pixelIndex = i / 4;
-            const x = pixelIndex % width;
-            const y = Math.floor(pixelIndex / width);
-            
-            // Vertical film streaks
-            const streakNoise = Math.sin(x * 0.05 * noiseScale + animatedTime) * 0.3;
-            
-            // Random dust and scratches
-            const dustNoise = (Math.random() - 0.5) * 0.4;
-            
-            // Subtle horizontal lines (film scanlines)
-            const scanlineNoise = Math.sin(y * 0.1 * noiseScale) * 0.1;
-            
-            const combinedNoise = (streakNoise + dustNoise + scanlineNoise + 1) / 2 * noiseIntensity;
-            
-            // Warmer tone for film effect
-            const baseValue = Math.floor(combinedNoise * 180);
-            data[i] = baseValue + 20;     // Slightly more red
-            data[i + 1] = baseValue + 10; // Slightly more green
-            data[i + 2] = baseValue;      // Base blue
-            data[i + 3] = Math.floor(combinedNoise * 50);
-        }
-
-        return imageData;
-    }, [width, height, noiseScale, noiseSpeed, noiseIntensity]);
 
     // Initialize gradient points with predefined colors
     const gradientPoints = useMemo(() => {
@@ -264,41 +162,17 @@ export function BackgroundCanvas({
             // Reset composite operation
             ctx.globalCompositeOperation = 'source-over';
 
-            // Add sophisticated noise overlay
+            // Add subtle texture overlay for visual richness
             if (noiseIntensity > 0) {
-                let noiseImageData: ImageData;
-                
-                // Generate noise based on selected type
-                switch (noiseType) {
-                    case 'perlin':
-                        noiseImageData = generatePerlinNoise(ctx, time);
-                        break;
-                    case 'film':
-                        noiseImageData = generateFilmNoise(ctx, time);
-                        break;
-                    case 'grain':
-                    default:
-                        noiseImageData = generateGrainNoise(ctx, time);
-                        break;
-                }
-
-                // Apply noise with elegant blending
-                ctx.globalCompositeOperation = 'screen';
-                ctx.globalAlpha = 0.8;
-                ctx.putImageData(noiseImageData, 0, 0);
-                
-                // Add subtle color variation
+                ctx.globalAlpha = noiseIntensity * 0.3;
+                ctx.fillStyle = `hsl(${(time * 0.01) % 360}, 30%, 50%)`;
                 ctx.globalCompositeOperation = 'overlay';
-                ctx.globalAlpha = noiseIntensity * 0.2;
-                ctx.fillStyle = `hsl(${(time * 0.005) % 360}, 20%, 60%)`;
                 ctx.fillRect(0, 0, width, height);
-                
-                // Reset for next frame
                 ctx.globalAlpha = 1;
                 ctx.globalCompositeOperation = 'source-over';
             }
         },
-        [width, height, gradientPoints, noiseIntensity, noiseType, generateGrainNoise, generatePerlinNoise, generateFilmNoise],
+        [width, height, gradientPoints, noiseIntensity],
     );
 
     // Optimized animation loop with frame skipping for consistent performance
