@@ -6,10 +6,7 @@ export default function BackgroundPage() {
         <>
             <AppHead subtitle="Background" isLanguagePickerVisible={false} isChatbotEnabled={false} />
             <BackgroundCanvas
-                // width={1920}
-                // height={1080}
-                width={1000}
-                height={1000}
+                // Now uses Full HD (1920x1080) by default
                 pointCount={15}
                 animationSpeed={25}
                 noiseIntensity={0.5}

@@ -22,8 +22,8 @@ interface BackgroundCanvasProps {
 }
 
 export function BackgroundCanvas({
-    width = window.innerWidth,
-    height = window.innerHeight,
+    width = 1920, // Always use Full HD width
+    height = 1080, // Always use Full HD height
     pointCount = 4,
     animationSpeed = 50, // pixels per second
     noiseIntensity = 0.05, // Reduced default noise
