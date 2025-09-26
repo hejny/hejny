@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BackgroundCanvas Noise Demo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+        
+        canvas {
+            display: block;
+            width: 100vw;
+            height: 100vh;
+        }
+        
+        .controls {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            z-index: 1000;
+        }
+        
+        .control-group {
+            margin: 10px 0;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        input[type="range"] {
+            width: 200px;
+        }
+        
+        .value-display {
+            color: #00ff00;
+            font-weight: bold;
+        }
+        
+        button {
+            background: #4A90E2;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        
+        button:hover {
+            background: #357abd;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    
+    <div class="controls">
+        <h3>Noise Controls</h3>
+        
+        <div class="control-group">
+            <label for="noiseIntensity">Noise Intensity: <span id="noiseIntensityValue" class="value-display">0.5</span></label>
+            <input type="range" id="noiseIntensity" min="0" max="1" step="0.01" value="0.5">
+        </div>
+        
+        <div class="control-group">
+            <label for="noiseScale">Noise Scale: <span id="noiseScaleValue" class="value-display">100</span></label>
+            <input type="range" id="noiseScale" min="50" max="300" step="10" value="100">
+        </div>
+        
+        <div class="control-group">
+            <label for="noiseFrequency">Noise Frequency: <span id="noiseFrequencyValue" class="value-display">0.8</span></label>
+            <input type="range" id="noiseFrequency" min="0.1" max="2" step="0.1" value="0.8">
+        </div>
+        
+        <div class="control-group">
+            <label for="pointCount">Point Count: <span id="pointCountValue" class="value-display">15</span></label>
+            <input type="range" id="pointCount" min="3" max="30" step="1" value="15">
+        </div>
+        
+        <div class="control-group">
+            <button id="playPause">⏸️ Pause</button>
+            <button id="reset">🔄 Reset</button>
+        </div>
+    </div>
+
+    <script>
+        class NoiseDemo {
+            constructor() {
+                this.canvas = document.getElementById('canvas');
+                this.ctx = this.canvas.getContext('2d');
+                this.isPlaying = true;
+                this.time = 0;
+                
+                // Configuration
+                this.config = {
+                    noiseIntensity: 0.5,
+                    noiseScale: 100,
+                    noiseFrequency: 0.8,
+                    pointCount: 15,
+                    animationSpeed: 50
+                };
+                
+                this.gradientPoints = [];
+                this.animationFrame = null;
+                
+                this.initCanvas();
+                this.initGradientPoints();
+                this.initControls();
+                this.animate();
+            }
+            
+            initCanvas() {
+                this.canvas.width = window.innerWidth;
+                this.canvas.height = window.innerHeight;
+                
+                window.addEventListener('resize', () => {
+                    this.canvas.width = window.innerWidth;
+                    this.canvas.height = window.innerHeight;
+                    this.initGradientPoints();
+                });
+            }
+            
+            initGradientPoints() {
+                const colors = [
+                    '#4A90E2', '#E94B6A', '#F5A623', '#9013FE', 
+                    '#00BCD4', '#FF9800', '#E91E63', '#9C27B0',
+                    '#673AB7', '#3F51B5', '#2196F3', '#03A9F4'
+                ];
+                
+                this.gradientPoints = Array.from({ length: this.config.pointCount }, (_, index) => ({
+                    x: Math.random() * this.canvas.width,
+                    y: Math.random() * this.canvas.height,
+                    targetX: Math.random() * this.canvas.width,
+                    targetY: Math.random() * this.canvas.height,
+                    velocityX: (Math.random() - 0.5) * 0.5,
+                    velocityY: (Math.random() - 0.5) * 0.5,
+                    color: colors[index % colors.length],
+                    influence: 200 + Math.random() * 300
+                }));
+            }
+            
+            initControls() {
+                const controls = ['noiseIntensity', 'noiseScale', 'noiseFrequency', 'pointCount'];
+                
+                controls.forEach(control => {
+                    const slider = document.getElementById(control);
+                    const display = document.getElementById(control + 'Value');
+                    
+                    slider.addEventListener('input', (e) => {
+                        this.config[control] = parseFloat(e.target.value);
+                        display.textContent = e.target.value;
+                        
+                        if (control === 'pointCount') {
+                            this.initGradientPoints();
+                        }
+                    });
+                });
+                
+                document.getElementById('playPause').addEventListener('click', () => {
+                    this.toggleAnimation();
+                });
+                
+                document.getElementById('reset').addEventListener('click', () => {
+                    this.reset();
+                });
+            }
+            
+            generatePerlinNoise(x, y, time) {
+                const scaledX = x / this.config.noiseScale;
+                const scaledY = y / this.config.noiseScale;
+                const scaledTime = time * this.config.noiseFrequency * 0.001;
+                
+                let noise = 0;
+                let amplitude = 1;
+                let frequency = 1;
+                let maxValue = 0;
+                
+                for (let i = 0; i < 3; i++) {
+                    noise += Math.sin(scaledX * frequency + scaledTime) * 
+                            Math.cos(scaledY * frequency + scaledTime * 0.7) * 
+                            amplitude;
+                    maxValue += amplitude;
+                    amplitude *= 0.6;
+                    frequency *= 1.8;
+                }
+                
+                return noise / maxValue;
+            }
+            
+            generateElegantNoise(x, y, time, index) {
+                const perlin = this.generatePerlinNoise(x, y, time);
+                
+                const centerX = this.canvas.width / 2;
+                const centerY = this.canvas.height / 2;
+                const distanceFromCenter = Math.sqrt((x - centerX) ** 2 + (y - centerY) ** 2);
+                const circularWave = Math.sin(distanceFromCenter * 0.01 + time * 0.002 + index * Math.PI * 0.3) * 0.3;
+                
+                const angle = Math.atan2(y - centerY, x - centerX);
+                const spiralWave = Math.sin(angle * 3 + time * 0.001 + index * 0.5) * 0.2;
+                
+                return perlin * 0.6 + circularWave * 0.3 + spiralWave * 0.1;
+            }
+            
+            updateGradientPoints(deltaTime) {
+                this.gradientPoints.forEach(point => {
+                    const toTargetX = point.targetX - point.x;
+                    const toTargetY = point.targetY - point.y;
+                    const distance = Math.sqrt(toTargetX ** 2 + toTargetY ** 2);
+                    
+                    if (distance < 50) {
+                        point.targetX = Math.random() * this.canvas.width;
+                        point.targetY = Math.random() * this.canvas.height;
+                    }
+                    
+                    const forceX = distance > 0 ? (toTargetX / distance) * 0.1 : 0;
+                    const forceY = distance > 0 ? (toTargetY / distance) * 0.1 : 0;
+                    
+                    point.velocityX = (point.velocityX + forceX) * 0.98;
+                    point.velocityY = (point.velocityY + forceY) * 0.98;
+                    
+                    point.x += point.velocityX * deltaTime;
+                    point.y += point.velocityY * deltaTime;
+                    
+                    // Wrap around edges
+                    if (point.x < -100) point.x = this.canvas.width + 100;
+                    if (point.x > this.canvas.width + 100) point.x = -100;
+                    if (point.y < -100) point.y = this.canvas.height + 100;
+                    if (point.y > this.canvas.height + 100) point.y = -100;
+                });
+            }
+            
+            render() {
+                const { ctx, canvas } = this;
+                
+                // Clear canvas
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = '#000000';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                
+                // Draw gradients
+                ctx.globalCompositeOperation = 'screen';
+                
+                this.gradientPoints.forEach((point, index) => {
+                    const positionNoise = this.generateElegantNoise(point.x, point.y, this.time, index);
+                    const noiseOffset = positionNoise * this.config.noiseIntensity * 20;
+                    
+                    const noisyX = point.x + Math.cos(this.time * 0.001 + index) * noiseOffset;
+                    const noisyY = point.y + Math.sin(this.time * 0.001 + index) * noiseOffset;
+                    
+                    const influenceNoise = this.generateElegantNoise(noisyX, noisyY, this.time * 0.5, index);
+                    const noisyInfluence = point.influence + influenceNoise * this.config.noiseIntensity * 50;
+                    
+                    const gradient = ctx.createRadialGradient(
+                        noisyX, noisyY, 0,
+                        noisyX, noisyY, Math.max(50, noisyInfluence)
+                    );
+                    
+                    const alphaNoise = this.generateElegantNoise(noisyX, noisyY, this.time * this.config.noiseFrequency, index);
+                    const alpha = Math.max(0.1, Math.min(0.9, 0.6 + alphaNoise * this.config.noiseIntensity));
+                    
+                    // Parse color
+                    const hex = point.color.substring(1);
+                    const r = parseInt(hex.substr(0, 2), 16);
+                    const g = parseInt(hex.substr(2, 2), 16);
+                    const b = parseInt(hex.substr(4, 2), 16);
+                    
+                    for (let i = 0; i <= 12; i++) {
+                        const t = i / 12;
+                        const falloff = Math.exp(-3 * t);
+                        
+                        const stopNoise = this.generatePerlinNoise(noisyX + t * 50, noisyY + t * 50, this.time + i * 0.1);
+                        const stopAlpha = alpha * falloff * (1 + stopNoise * this.config.noiseIntensity * 0.3);
+                        const clampedAlpha = Math.max(0, Math.min(1, stopAlpha));
+                        
+                        gradient.addColorStop(t, `rgba(${r}, ${g}, ${b}, ${clampedAlpha})`);
+                    }
+                    
+                    ctx.fillStyle = gradient;
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+                });
+                
+                ctx.globalCompositeOperation = 'source-over';
+                
+                // Add highly visible noise texture
+                if (this.config.noiseIntensity > 0) {
+                    const grainSize = 2;
+                    const grainWidth = Math.ceil(canvas.width / grainSize);
+                    const grainHeight = Math.ceil(canvas.height / grainSize);
+                    const imageData = ctx.createImageData(grainWidth, grainHeight);
+                    const data = imageData.data;
+                    
+                    for (let i = 0; i < data.length; i += 4) {
+                        const pixelIndex = i / 4;
+                        const x = (pixelIndex % imageData.width) * grainSize;
+                        const y = Math.floor(pixelIndex / imageData.width) * grainSize;
+                        
+                        const noise1 = this.generateElegantNoise(x, y, this.time * 0.5, 0);
+                        const noise2 = this.generatePerlinNoise(x * 2, y * 2, this.time * 0.3);
+                        const combinedNoise = (noise1 + noise2) * 0.5;
+                        
+                        const intensity = combinedNoise * this.config.noiseIntensity * 120;
+                        const grain = Math.max(-80, Math.min(80, intensity));
+                        
+                        data[i] = 128 + grain;
+                        data[i + 1] = 128 + grain;
+                        data[i + 2] = 128 + grain;
+                        data[i + 3] = Math.abs(grain) * 2;
+                    }
+                    
+                    const tempCanvas = document.createElement('canvas');
+                    tempCanvas.width = imageData.width;
+                    tempCanvas.height = imageData.height;
+                    const tempCtx = tempCanvas.getContext('2d');
+                    tempCtx.putImageData(imageData, 0, 0);
+                    
+                    ctx.globalAlpha = Math.min(0.8, this.config.noiseIntensity * 1.2);
+                    ctx.globalCompositeOperation = 'overlay';
+                    ctx.imageSmoothingEnabled = false;
+                    ctx.drawImage(tempCanvas, 0, 0, canvas.width, canvas.height);
+                    
+                    ctx.globalAlpha = Math.min(0.6, this.config.noiseIntensity * 0.8);
+                    ctx.globalCompositeOperation = 'multiply';
+                    ctx.drawImage(tempCanvas, 0, 0, canvas.width, canvas.height);
+                    
+                    ctx.globalAlpha = 1;
+                    ctx.globalCompositeOperation = 'source-over';
+                    
+                    // Film grain
+                    if (this.config.noiseIntensity > 0.3) {
+                        ctx.globalAlpha = this.config.noiseIntensity * 0.3;
+                        ctx.globalCompositeOperation = 'screen';
+                        
+                        for (let i = 0; i < canvas.width * canvas.height * 0.001; i++) {
+                            const x = Math.random() * canvas.width;
+                            const y = Math.random() * canvas.height;
+                            const brightness = Math.random() * 255;
+                            
+                            ctx.fillStyle = `rgb(${brightness}, ${brightness}, ${brightness})`;
+                            ctx.fillRect(x, y, 1, 1);
+                        }
+                        
+                        ctx.globalAlpha = 1;
+                        ctx.globalCompositeOperation = 'source-over';
+                    }
+                }
+            }
+            
+            animate() {
+                if (this.isPlaying) {
+                    this.time += 16;
+                    this.updateGradientPoints(this.config.animationSpeed / 1000);
+                    this.render();
+                }
+                
+                this.animationFrame = requestAnimationFrame(() => this.animate());
+            }
+            
+            toggleAnimation() {
+                this.isPlaying = !this.isPlaying;
+                const button = document.getElementById('playPause');
+                button.textContent = this.isPlaying ? '⏸️ Pause' : '▶️ Play';
+            }
+            
+            reset() {
+                this.time = 0;
+                this.initGradientPoints();
+            }
+        }
+        
+        // Start the demo when page loads
+        window.addEventListener('load', () => {
+            new NoiseDemo();
+        });
+    </script>
+</body>
+</html>

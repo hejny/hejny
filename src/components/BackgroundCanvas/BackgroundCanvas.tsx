@@ -234,39 +234,74 @@ export function BackgroundCanvas({
             // Reset composite operation
             ctx.globalCompositeOperation = 'source-over';
 
-            // Add sophisticated noise texture overlay for visual richness
+            // Add highly visible noise texture overlay
             if (noiseIntensity > 0) {
-                // Create elegant noise-based texture overlay
-                const imageData = ctx.createImageData(Math.ceil(width / 4), Math.ceil(height / 4)); // Lower resolution for performance
+                // Create visible grain texture with higher resolution and intensity
+                const grainSize = 2; // Size of each grain pixel
+                const grainWidth = Math.ceil(width / grainSize);
+                const grainHeight = Math.ceil(height / grainSize);
+                const imageData = ctx.createImageData(grainWidth, grainHeight);
                 const data = imageData.data;
-
+                
                 for (let i = 0; i < data.length; i += 4) {
                     const pixelIndex = i / 4;
-                    const x = (pixelIndex % imageData.width) * 4;
-                    const y = Math.floor(pixelIndex / imageData.width) * 4;
-
-                    const noise = generateElegantNoise(x, y, time * 0.3, 0);
-                    const intensity = noise * noiseIntensity * 30;
-
-                    // Create subtle color variations
-                    data[i] = 128 + intensity; // Red
-                    data[i + 1] = 128 + intensity * 0.8; // Green
-                    data[i + 2] = 128 + intensity * 0.6; // Blue
-                    data[i + 3] = Math.abs(intensity) * 0.1; // Alpha - very subtle
+                    const x = (pixelIndex % imageData.width) * grainSize;
+                    const y = Math.floor(pixelIndex / imageData.width) * grainSize;
+                    
+                    // Generate high-contrast noise for visible grain
+                    const noise1 = generateElegantNoise(x, y, time * 0.5, 0);
+                    const noise2 = generatePerlinNoise(x * 2, y * 2, time * 0.3);
+                    const combinedNoise = (noise1 + noise2) * 0.5;
+                    
+                    // Create strong, visible grain effect
+                    const intensity = combinedNoise * noiseIntensity * 120; // Much higher intensity
+                    const grain = Math.max(-80, Math.min(80, intensity));
+                    
+                    // Apply grain as brightness variation
+                    data[i] = 128 + grain;     // Red
+                    data[i + 1] = 128 + grain; // Green  
+                    data[i + 2] = 128 + grain; // Blue
+                    data[i + 3] = Math.abs(grain) * 2; // Higher alpha for visibility
                 }
-
-                // Scale up the noise texture
+                
+                // Draw the noise texture with high visibility
                 const tempCanvas = document.createElement('canvas');
                 tempCanvas.width = imageData.width;
                 tempCanvas.height = imageData.height;
                 const tempCtx = tempCanvas.getContext('2d');
                 if (tempCtx) {
                     tempCtx.putImageData(imageData, 0, 0);
-
-                    ctx.globalAlpha = noiseIntensity * 0.4;
+                    
+                    // Apply noise with strong visibility
+                    ctx.globalAlpha = Math.min(0.8, noiseIntensity * 1.2); // Higher alpha
                     ctx.globalCompositeOperation = 'overlay';
-                    ctx.imageSmoothingEnabled = true;
+                    ctx.imageSmoothingEnabled = false; // Keep grain sharp
                     ctx.drawImage(tempCanvas, 0, 0, width, height);
+                    
+                    // Add additional soft noise layer for texture depth
+                    ctx.globalAlpha = Math.min(0.6, noiseIntensity * 0.8);
+                    ctx.globalCompositeOperation = 'multiply';
+                    ctx.drawImage(tempCanvas, 0, 0, width, height);
+                    
+                    ctx.globalAlpha = 1;
+                    ctx.globalCompositeOperation = 'source-over';
+                }
+                
+                // Add film grain effect for extra texture
+                if (noiseIntensity > 0.3) {
+                    ctx.globalAlpha = noiseIntensity * 0.3;
+                    ctx.globalCompositeOperation = 'screen';
+                    
+                    // Create random dots for film grain
+                    for (let i = 0; i < width * height * 0.001; i++) {
+                        const x = Math.random() * width;
+                        const y = Math.random() * height;
+                        const brightness = Math.random() * 255;
+                        
+                        ctx.fillStyle = `rgb(${brightness}, ${brightness}, ${brightness})`;
+                        ctx.fillRect(x, y, 1, 1);
+                    }
+                    
                     ctx.globalAlpha = 1;
                     ctx.globalCompositeOperation = 'source-over';
                 }
