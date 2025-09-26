@@ -17,6 +17,8 @@ interface BackgroundCanvasProps {
     pointCount?: number;
     animationSpeed?: number;
     noiseIntensity?: number;
+    noiseScale?: number;
+    noiseFrequency?: number;
     className?: string;
     showControls?: boolean;
 }
@@ -26,7 +28,9 @@ export function BackgroundCanvas({
     height = 1080, // Always use Full HD height
     pointCount = 4,
     animationSpeed = 50, // pixels per second
-    noiseIntensity = 0.05, // Reduced default noise
+    noiseIntensity = 0.03, // Elegant subtle noise
+    noiseScale = 100, // Scale of noise patterns
+    noiseFrequency = 0.8, // Frequency of noise animation
     className = '',
     showControls = true,
 }: BackgroundCanvasProps) {
@@ -37,6 +41,57 @@ export function BackgroundCanvas({
     const lastFpsReportTimeRef = useRef(0);
     const [isPlaying, setIsPlaying] = useState(false);
     const [isPanelVisible, setIsPanelVisible] = useState(true);
+
+    // Sophisticated noise generation functions for elegant, organic effects
+    const generatePerlinNoise = useCallback(
+        (x: number, y: number, time: number): number => {
+            // Simplified Perlin noise implementation for performance
+            const scaledX = x / noiseScale;
+            const scaledY = y / noiseScale;
+            const scaledTime = time * noiseFrequency * 0.001;
+
+            // Create multiple octaves for rich noise texture
+            let noise = 0;
+            let amplitude = 1;
+            let frequency = 1;
+            let maxValue = 0;
+
+            // Use 3 octaves for elegant detail without being overwhelming
+            for (let i = 0; i < 3; i++) {
+                noise +=
+                    Math.sin(scaledX * frequency + scaledTime) *
+                    Math.cos(scaledY * frequency + scaledTime * 0.7) *
+                    amplitude;
+                maxValue += amplitude;
+                amplitude *= 0.6; // Each octave contributes less
+                frequency *= 1.8; // Each octave is higher frequency
+            }
+
+            return noise / maxValue; // Normalize to [-1, 1]
+        },
+        [noiseScale, noiseFrequency],
+    );
+
+    const generateElegantNoise = useCallback(
+        (x: number, y: number, time: number, index: number): number => {
+            // Combine multiple noise techniques for sophisticated, elegant result
+            const perlin = generatePerlinNoise(x, y, time);
+
+            // Add subtle circular waves based on position and point index
+            const centerX = width / 2;
+            const centerY = height / 2;
+            const distanceFromCenter = Math.sqrt((x - centerX) ** 2 + (y - centerY) ** 2);
+            const circularWave = Math.sin(distanceFromCenter * 0.01 + time * 0.002 + index * Math.PI * 0.3) * 0.3;
+
+            // Add gentle spiral motion
+            const angle = Math.atan2(y - centerY, x - centerX);
+            const spiralWave = Math.sin(angle * 3 + time * 0.001 + index * 0.5) * 0.2;
+
+            // Combine all components with elegant weighting
+            return perlin * 0.6 + circularWave * 0.3 + spiralWave * 0.1;
+        },
+        [generatePerlinNoise, width, height],
+    );
 
     // Initialize gradient points with predefined colors
     const gradientPoints = useMemo(() => {
@@ -98,60 +153,77 @@ export function BackgroundCanvas({
             const canvas = canvasRef.current;
             if (!canvas) return;
 
-            const ctx = canvas.getContext('2d', { 
+            const ctx = canvas.getContext('2d', {
                 alpha: true,
                 desynchronized: false,
-                colorSpace: 'srgb'
+                colorSpace: 'srgb',
             });
             if (!ctx) return;
 
             // Set device pixel ratio for high-DPI displays
             const devicePixelRatio = window.devicePixelRatio || 1;
-            
+
             // Enable maximum quality anti-aliasing and smoothing
             ctx.imageSmoothingEnabled = true;
             ctx.imageSmoothingQuality = 'high';
-            
+
             // Apply slight blur for ultra-smooth edges
             ctx.filter = 'blur(0.5px)';
-            
+
             // Clear canvas with perfect black
             ctx.clearRect(0, 0, width, height);
             ctx.fillStyle = '#000000';
             ctx.fillRect(0, 0, width, height);
-            
+
             // Reset filter for gradient rendering
             ctx.filter = 'none';
 
             // Use globalCompositeOperation for better blending
             ctx.globalCompositeOperation = 'screen';
 
-            // Draw each gradient point as a radial gradient with ultra-smooth transitions
+            // Draw each gradient point as a radial gradient with sophisticated noise effects
             gradientPoints.forEach((point, index) => {
+                // Apply elegant noise to position for organic movement
+                const positionNoise = generateElegantNoise(point.position.x, point.position.y, time, index);
+                const noiseOffset = positionNoise * noiseIntensity * 20; // Scale for position offset
+
+                const noisyX = point.position.x + Math.cos(time * 0.001 + index) * noiseOffset;
+                const noisyY = point.position.y + Math.sin(time * 0.001 + index) * noiseOffset;
+
+                // Apply noise to influence radius for breathing effect
+                const influenceNoise = generateElegantNoise(noisyX, noisyY, time * 0.5, index);
+                const noisyInfluence = point.influence + influenceNoise * noiseIntensity * 50;
+
                 const gradient = ctx.createRadialGradient(
-                    point.position.x,
-                    point.position.y,
+                    noisyX,
+                    noisyY,
                     0,
-                    point.position.x,
-                    point.position.y,
-                    point.influence,
+                    noisyX,
+                    noisyY,
+                    Math.max(50, noisyInfluence), // Ensure minimum influence
                 );
 
-                // Add subtle noise effect using time-based alpha variation
-                const noiseOffset = Math.sin(time * 0.001 + index * 2.1) * noiseIntensity;
-                const alpha = Math.max(0.1, 0.6 + noiseOffset);
+                // Apply sophisticated noise to alpha for elegant pulsing
+                const alphaNoise = generateElegantNoise(noisyX, noisyY, time * noiseFrequency, index);
+                const baseAlpha = 0.6;
+                const alpha = Math.max(0.1, Math.min(0.9, baseAlpha + alphaNoise * noiseIntensity));
 
-                // Create color with alpha
+                // Create color with noise-modified alpha
                 const color = Color.fromString(point.color);
 
                 // Create ultra-smooth gradient with many stops using exponential falloff
-                const stops = 10;
+                const stops = 12; // More stops for smoother transitions
                 for (let i = 0; i <= stops; i++) {
                     const t = i / stops;
                     // Use exponential curve for natural falloff: f(t) = e^(-3*t)
                     const falloff = Math.exp(-3 * t);
-                    const currentAlpha = alpha * falloff;
-                    const colorStop = `rgba(${color.red}, ${color.green}, ${color.blue}, ${currentAlpha})`;
+
+                    // Add subtle noise variation to each gradient stop for texture
+                    const stopNoise = generatePerlinNoise(noisyX + t * 50, noisyY + t * 50, time + i * 0.1);
+                    const stopAlpha = alpha * falloff * (1 + stopNoise * noiseIntensity * 0.3);
+                    const clampedAlpha = Math.max(0, Math.min(1, stopAlpha));
+
+                    const colorStop = `rgba(${color.red}, ${color.green}, ${color.blue}, ${clampedAlpha})`;
                     gradient.addColorStop(t, colorStop);
                 }
 
@@ -162,17 +234,54 @@ export function BackgroundCanvas({
             // Reset composite operation
             ctx.globalCompositeOperation = 'source-over';
 
-            // Add subtle texture overlay for visual richness
+            // Add sophisticated noise texture overlay for visual richness
             if (noiseIntensity > 0) {
-                ctx.globalAlpha = noiseIntensity * 0.3;
-                ctx.fillStyle = `hsl(${(time * 0.01) % 360}, 30%, 50%)`;
-                ctx.globalCompositeOperation = 'overlay';
-                ctx.fillRect(0, 0, width, height);
-                ctx.globalAlpha = 1;
-                ctx.globalCompositeOperation = 'source-over';
+                // Create elegant noise-based texture overlay
+                const imageData = ctx.createImageData(Math.ceil(width / 4), Math.ceil(height / 4)); // Lower resolution for performance
+                const data = imageData.data;
+
+                for (let i = 0; i < data.length; i += 4) {
+                    const pixelIndex = i / 4;
+                    const x = (pixelIndex % imageData.width) * 4;
+                    const y = Math.floor(pixelIndex / imageData.width) * 4;
+
+                    const noise = generateElegantNoise(x, y, time * 0.3, 0);
+                    const intensity = noise * noiseIntensity * 30;
+
+                    // Create subtle color variations
+                    data[i] = 128 + intensity; // Red
+                    data[i + 1] = 128 + intensity * 0.8; // Green
+                    data[i + 2] = 128 + intensity * 0.6; // Blue
+                    data[i + 3] = Math.abs(intensity) * 0.1; // Alpha - very subtle
+                }
+
+                // Scale up the noise texture
+                const tempCanvas = document.createElement('canvas');
+                tempCanvas.width = imageData.width;
+                tempCanvas.height = imageData.height;
+                const tempCtx = tempCanvas.getContext('2d');
+                if (tempCtx) {
+                    tempCtx.putImageData(imageData, 0, 0);
+
+                    ctx.globalAlpha = noiseIntensity * 0.4;
+                    ctx.globalCompositeOperation = 'overlay';
+                    ctx.imageSmoothingEnabled = true;
+                    ctx.drawImage(tempCanvas, 0, 0, width, height);
+                    ctx.globalAlpha = 1;
+                    ctx.globalCompositeOperation = 'source-over';
+                }
             }
         },
-        [width, height, gradientPoints, noiseIntensity],
+        [
+            width,
+            height,
+            gradientPoints,
+            noiseIntensity,
+            noiseScale,
+            noiseFrequency,
+            generateElegantNoise,
+            generatePerlinNoise,
+        ],
     );
 
     // Optimized animation loop with frame skipping for consistent performance
