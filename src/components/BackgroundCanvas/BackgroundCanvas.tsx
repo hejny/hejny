@@ -19,8 +19,11 @@ interface BackgroundCanvasProps {
     noiseIntensity?: number;
     noiseScale?: number;
     noiseFrequency?: number;
+    colors?: string[];
     className?: string;
     showControls?: boolean;
+    isPlaying?: boolean;
+    onPlayingChange?: (isPlaying: boolean) => void;
 }
 
 export function BackgroundCanvas({
@@ -31,16 +34,26 @@ export function BackgroundCanvas({
     noiseIntensity = 0.03, // Elegant subtle noise
     noiseScale = 100, // Scale of noise patterns
     noiseFrequency = 0.8, // Frequency of noise animation
+    colors,
     className = '',
     showControls = true,
+    isPlaying: externalIsPlaying,
+    onPlayingChange,
 }: BackgroundCanvasProps) {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const animationFrameRef = useRef<number>();
     const timeRef = useRef<number>(0);
     const frameCountRef = useRef(0);
     const lastFpsReportTimeRef = useRef(0);
-    const [isPlaying, setIsPlaying] = useState(false);
+    const [isPlaying, setIsPlaying] = useState(externalIsPlaying ?? false);
     const [isPanelVisible, setIsPanelVisible] = useState(true);
+
+    // Sync external isPlaying state with internal state
+    useEffect(() => {
+        if (externalIsPlaying !== undefined) {
+            setIsPlaying(externalIsPlaying);
+        }
+    }, [externalIsPlaying]);
 
     // Sophisticated noise generation functions for elegant, organic effects
     const generatePerlinNoise = useCallback(
@@ -93,9 +106,9 @@ export function BackgroundCanvas({
         [generatePerlinNoise, width, height],
     );
 
-    // Initialize gradient points with predefined colors
+    // Initialize gradient points with predefined or custom colors
     const gradientPoints = useMemo(() => {
-        const colors = [
+        const defaultColors = [
             '#4A90E2', // Blue
             '#E94B6A', // Pink/Red
             '#F5A623', // Orange
@@ -104,18 +117,20 @@ export function BackgroundCanvas({
             '#FF9800', // Amber
         ];
 
+        const colorsToUse = colors || defaultColors;
+
         return Array.from({ length: pointCount }, (_, index) => {
             const position = new Vector(Math.random() * width, Math.random() * height);
 
             return {
                 position,
-                color: colors[index % colors.length],
+                color: colorsToUse[index % colorsToUse.length],
                 velocity: new Vector((Math.random() - 0.5) * 0.5, (Math.random() - 0.5) * 0.5),
                 target: new Vector(Math.random() * width, Math.random() * height),
                 influence: 200 + Math.random() * 300,
             } as GradientPoint;
         });
-    }, [pointCount, width, height]);
+    }, [pointCount, width, height, colors]);
 
     // Update gradient points animation
     const updateGradientPoints = useCallback(
@@ -234,72 +249,80 @@ export function BackgroundCanvas({
             // Reset composite operation
             ctx.globalCompositeOperation = 'source-over';
 
-            // Add highly visible noise texture overlay
+            // Add pixel-level noise texture overlay - no scaling artifacts
             if (noiseIntensity > 0) {
-                // Create visible grain texture with higher resolution and intensity
-                const grainSize = 2; // Size of each grain pixel
-                const grainWidth = Math.ceil(width / grainSize);
-                const grainHeight = Math.ceil(height / grainSize);
-                const imageData = ctx.createImageData(grainWidth, grainHeight);
+                // Generate noise at actual pixel resolution to avoid grid artifacts
+                const imageData = ctx.createImageData(width, height);
                 const data = imageData.data;
                 
-                for (let i = 0; i < data.length; i += 4) {
-                    const pixelIndex = i / 4;
-                    const x = (pixelIndex % imageData.width) * grainSize;
-                    const y = Math.floor(pixelIndex / imageData.width) * grainSize;
-                    
-                    // Generate high-contrast noise for visible grain
-                    const noise1 = generateElegantNoise(x, y, time * 0.5, 0);
-                    const noise2 = generatePerlinNoise(x * 2, y * 2, time * 0.3);
-                    const combinedNoise = (noise1 + noise2) * 0.5;
-                    
-                    // Create strong, visible grain effect
-                    const intensity = combinedNoise * noiseIntensity * 120; // Much higher intensity
-                    const grain = Math.max(-80, Math.min(80, intensity));
-                    
-                    // Apply grain as brightness variation
-                    data[i] = 128 + grain;     // Red
-                    data[i + 1] = 128 + grain; // Green  
-                    data[i + 2] = 128 + grain; // Blue
-                    data[i + 3] = Math.abs(grain) * 2; // Higher alpha for visibility
+                // Process every 4th pixel for performance while maintaining quality
+                const pixelStep = Math.max(1, Math.floor(4 / Math.max(0.1, noiseIntensity)));
+                
+                for (let y = 0; y < height; y += pixelStep) {
+                    for (let x = 0; x < width; x += pixelStep) {
+                        // Generate high-quality noise for each pixel
+                        const noise1 = generateElegantNoise(x, y, time * 0.5, 0);
+                        const noise2 = generatePerlinNoise(x * 0.5, y * 0.5, time * 0.3);
+                        const combinedNoise = (noise1 + noise2) * 0.5;
+                        
+                        // Create subtle but visible grain effect
+                        const intensity = combinedNoise * noiseIntensity * 60;
+                        const grain = Math.max(-40, Math.min(40, intensity));
+                        
+                        // Fill block of pixels for performance
+                        for (let dy = 0; dy < pixelStep && y + dy < height; dy++) {
+                            for (let dx = 0; dx < pixelStep && x + dx < width; dx++) {
+                                const pixelIndex = ((y + dy) * width + (x + dx)) * 4;
+                                
+                                // Apply grain as brightness variation
+                                data[pixelIndex] = 128 + grain;     // Red
+                                data[pixelIndex + 1] = 128 + grain; // Green  
+                                data[pixelIndex + 2] = 128 + grain; // Blue
+                                data[pixelIndex + 3] = Math.abs(grain) * 1.5; // Alpha for visibility
+                            }
+                        }
+                    }
                 }
                 
-                // Draw the noise texture with high visibility
+                // Apply the pixel-perfect noise texture
                 const tempCanvas = document.createElement('canvas');
-                tempCanvas.width = imageData.width;
-                tempCanvas.height = imageData.height;
+                tempCanvas.width = width;
+                tempCanvas.height = height;
                 const tempCtx = tempCanvas.getContext('2d');
                 if (tempCtx) {
                     tempCtx.putImageData(imageData, 0, 0);
                     
-                    // Apply noise with strong visibility
-                    ctx.globalAlpha = Math.min(0.8, noiseIntensity * 1.2); // Higher alpha
+                    // Apply noise with overlay blend for subtle texture
+                    ctx.globalAlpha = Math.min(0.4, noiseIntensity * 0.8);
                     ctx.globalCompositeOperation = 'overlay';
-                    ctx.imageSmoothingEnabled = false; // Keep grain sharp
-                    ctx.drawImage(tempCanvas, 0, 0, width, height);
+                    ctx.imageSmoothingEnabled = true; // Smooth blending
+                    ctx.drawImage(tempCanvas, 0, 0);
                     
-                    // Add additional soft noise layer for texture depth
-                    ctx.globalAlpha = Math.min(0.6, noiseIntensity * 0.8);
-                    ctx.globalCompositeOperation = 'multiply';
-                    ctx.drawImage(tempCanvas, 0, 0, width, height);
+                    // Add soft multiply layer for depth
+                    ctx.globalAlpha = Math.min(0.3, noiseIntensity * 0.6);
+                    ctx.globalCompositeOperation = 'soft-light';
+                    ctx.drawImage(tempCanvas, 0, 0);
                     
                     ctx.globalAlpha = 1;
                     ctx.globalCompositeOperation = 'source-over';
                 }
                 
-                // Add film grain effect for extra texture
-                if (noiseIntensity > 0.3) {
-                    ctx.globalAlpha = noiseIntensity * 0.3;
+                // Add subtle film grain for extra organic texture
+                if (noiseIntensity > 0.2) {
+                    ctx.globalAlpha = noiseIntensity * 0.15;
                     ctx.globalCompositeOperation = 'screen';
                     
-                    // Create random dots for film grain
-                    for (let i = 0; i < width * height * 0.001; i++) {
+                    // Create organic random grain points
+                    const grainDensity = Math.floor(width * height * noiseIntensity * 0.0003);
+                    for (let i = 0; i < grainDensity; i++) {
                         const x = Math.random() * width;
                         const y = Math.random() * height;
-                        const brightness = Math.random() * 255;
+                        const brightness = 100 + Math.random() * 155;
                         
-                        ctx.fillStyle = `rgb(${brightness}, ${brightness}, ${brightness})`;
-                        ctx.fillRect(x, y, 1, 1);
+                        // Vary grain size slightly for organic feel
+                        const grainSize = Math.random() > 0.7 ? 2 : 1;
+                        ctx.fillStyle = `rgba(${brightness}, ${brightness}, ${brightness}, 0.6)`;
+                        ctx.fillRect(Math.floor(x), Math.floor(y), grainSize, grainSize);
                     }
                     
                     ctx.globalAlpha = 1;

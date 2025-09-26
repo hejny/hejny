@@ -1,0 +1,285 @@
+.controlsContainer {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+    width: 300px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.showButton {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: rgba(74, 144, 226, 0.9);
+    backdrop-filter: blur(10px);
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.showButton:hover {
+    background: rgba(55, 122, 189, 0.9);
+    transform: translateY(-1px);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 15px;
+}
+
+.header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.hideButton {
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.hideButton:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.controlGroup {
+    margin: 15px 0;
+}
+
+.controlGroup label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.valueDisplay {
+    color: #00ff88;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+}
+
+.slider {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #4A90E2;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #ffffff;
+    transition: all 0.2s ease;
+}
+
+.slider::-webkit-slider-thumb:hover {
+    background: #357abd;
+    transform: scale(1.1);
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #4A90E2;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #ffffff;
+    transition: all 0.2s ease;
+}
+
+.slider::-moz-range-thumb:hover {
+    background: #357abd;
+    transform: scale(1.1);
+}
+
+.colorSection {
+    margin: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
+
+.colorSection h4 {
+    margin: 0 0 15px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.colorGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.colorControl {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.colorControl label {
+    margin: 0;
+    font-size: 13px;
+    min-width: 70px;
+    color: #ffffff;
+}
+
+.colorInputWrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.colorInput {
+    width: 40px;
+    height: 30px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: none;
+    outline: none;
+    transition: transform 0.2s ease;
+}
+
+.colorInput:hover {
+    transform: scale(1.1);
+}
+
+.colorValue {
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    color: #cccccc;
+    min-width: 70px;
+}
+
+.actionButtons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 15px;
+}
+
+.actionButton {
+    flex: 1;
+    background: #4A90E2;
+    color: white;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.actionButton:hover {
+    background: #357abd;
+    transform: translateY(-1px);
+}
+
+.actionButton:active {
+    transform: translateY(0);
+}
+
+/* Scrollbar styling */
+.controlsContainer::-webkit-scrollbar {
+    width: 6px;
+}
+
+.controlsContainer::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
+.controlsContainer::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+
+.controlsContainer::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .controlsContainer {
+        width: calc(100vw - 40px);
+        max-width: 300px;
+    }
+    
+    .showButton {
+        font-size: 12px;
+        padding: 10px 14px;
+    }
+    
+    .actionButtons {
+        flex-direction: column;
+    }
+}
+
+/* Animation for show/hide */
+.controlsContainer {
+    animation: fadeIn 0.3s ease-out;
+}
+
+.showButton {
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
