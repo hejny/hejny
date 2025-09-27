@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Canvas Test</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        .container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+        
+        /* Simulate the BackgroundCanvas styles */
+        .backgroundCanvasContainer {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .backgroundCanvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+            background: linear-gradient(45deg, #4A90E2, #E94B6A, #F5A623, #9013FE);
+        }
+        
+        .controlPanel {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 10;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .playPauseButton, .downloadButton, .hideButton {
+            width: 48px;
+            height: 48px;
+            border: none;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.9);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        }
+        
+        .playPauseButton:hover, .downloadButton:hover, .hideButton:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .showButton {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 10;
+            padding: 12px 16px;
+            border: none;
+            border-radius: 24px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.9);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            font-family: system-ui, -apple-system, sans-serif;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        }
+        
+        .showButton:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .info {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="backgroundCanvasContainer">
+            <div class="backgroundCanvas"></div>
+            
+            <!-- Control Panel (shown by default) -->
+            <div class="controlPanel" id="controlPanel">
+                <button class="playPauseButton" onclick="toggleAnimation()" title="Play/Pause animation">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z" id="playIcon"/>
+                        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" id="pauseIcon" style="display:none"/>
+                    </svg>
+                </button>
+                <button class="downloadButton" onclick="downloadTest()" title="Download canvas as PNG">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+                    </svg>
+                </button>
+                <button class="hideButton" onclick="toggleControlPanel()" title="Hide control panel">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Show Button (hidden by default) -->
+            <button class="showButton hidden" id="showButton" onclick="toggleControlPanel()" title="Show controls">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                Controls
+            </button>
+        </div>
+        
+        <div class="info">
+            <h2>Background Canvas - Collapsible Controls Test</h2>
+            <p>Click the ✕ button in the top-right to hide the controls</p>
+            <p>Click the "Controls" button to show them again</p>
+            <p>This demonstrates the collapsible functionality!</p>
+        </div>
+    </div>
+
+    <script>
+        let isPlaying = false;
+        let isPanelVisible = true;
+        
+        function toggleAnimation() {
+            isPlaying = !isPlaying;
+            const playIcon = document.getElementById('playIcon');
+            const pauseIcon = document.getElementById('pauseIcon');
+            
+            if (isPlaying) {
+                playIcon.style.display = 'none';
+                pauseIcon.style.display = 'block';
+            } else {
+                playIcon.style.display = 'block';
+                pauseIcon.style.display = 'none';
+            }
+        }
+        
+        function toggleControlPanel() {
+            isPanelVisible = !isPanelVisible;
+            const controlPanel = document.getElementById('controlPanel');
+            const showButton = document.getElementById('showButton');
+            
+            if (isPanelVisible) {
+                controlPanel.classList.remove('hidden');
+                showButton.classList.add('hidden');
+            } else {
+                controlPanel.classList.add('hidden');
+                showButton.classList.remove('hidden');
+            }
+        }
+        
+        function downloadTest() {
+            alert('Download functionality would work here!');
+        }
+        
+        // Add some animation to the background
+        let hue = 0;
+        function animateBackground() {
+            if (isPlaying) {
+                hue += 0.5;
+                const canvas = document.querySelector('.backgroundCanvas');
+                canvas.style.background = `linear-gradient(${45 + hue}deg, 
+                    hsl(${210 + hue}, 70%, 60%), 
+                    hsl(${340 + hue}, 70%, 60%), 
+                    hsl(${35 + hue}, 70%, 60%), 
+                    hsl(${270 + hue}, 70%, 60%))`;
+            }
+            requestAnimationFrame(animateBackground);
+        }
+        animateBackground();
+    </script>
+</body>
+</html>

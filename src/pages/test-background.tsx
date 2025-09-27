@@ -76,7 +76,7 @@ export default function TestBackgroundPage() {
                     noiseScale={noiseScale}
                     noiseFrequency={noiseFrequency}
                     colors={colors}
-                    showControls={false}
+                    showControls={true}
                     isPlaying={isPlaying}
                     onPlayingChange={setIsPlaying}
                     className=""
