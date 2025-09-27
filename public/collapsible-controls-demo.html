@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collapsible Background Controls Demo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Collapsible Controls Styles */
+        .controls-container {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            z-index: 1000;
+            font-family: Arial, sans-serif;
+            width: 300px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .show-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(74, 144, 226, 0.9);
+            backdrop-filter: blur(10px);
+            color: white;
+            border: none;
+            padding: 12px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            z-index: 1000;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .show-button:hover {
+            background: rgba(55, 122, 189, 0.9);
+            transform: translateY(-1px);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 15px;
+        }
+
+        .header h3 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .hide-button {
+            background: none;
+            border: none;
+            color: #ffffff;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 4px;
+            transition: background-color 0.2s ease;
+        }
+
+        .hide-button:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .control-group {
+            margin: 15px 0;
+        }
+
+        .control-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            font-size: 14px;
+            color: #ffffff;
+        }
+
+        .value-display {
+            color: #00ff88;
+            font-weight: bold;
+            font-family: 'Courier New', monospace;
+        }
+
+        .slider {
+            width: 100%;
+            -webkit-appearance: none;
+            appearance: none;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 3px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #4A90E2;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid #ffffff;
+            transition: all 0.2s ease;
+        }
+
+        .slider::-webkit-slider-thumb:hover {
+            background: #357abd;
+            transform: scale(1.1);
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 15px;
+        }
+
+        .action-button {
+            flex: 1;
+            background: #4A90E2;
+            color: white;
+            border: none;
+            padding: 10px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: bold;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        .action-button:hover {
+            background: #357abd;
+            transform: translateY(-1px);
+        }
+
+        .canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #1a1a2e, #16213e);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .tip {
+            margin-top: 20px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            font-size: 12px;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <!-- Canvas Background -->
+    <div class="canvas" id="canvas">
+        <h1 style="color: white; text-align: center; padding-top: 40vh; margin: 0; font-size: 2em;">
+            Background Canvas Preview
+        </h1>
+        <p style="color: #ccc; text-align: center; margin-top: 20px; font-size: 1.2em;">
+            Use the controls to adjust the background settings
+        </p>
+    </div>
+
+    <!-- Show Button (initially hidden) -->
+    <button class="show-button hidden" id="showButton" onclick="showControls()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+        </svg>
+        Controls
+    </button>
+
+    <!-- Controls Container -->
+    <div class="controls-container" id="controlsContainer">
+        <div class="header">
+            <h3>Background Controls</h3>
+            <button class="hide-button" onclick="hideControls()" title="Hide controls">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                </svg>
+            </button>
+        </div>
+
+        <div class="control-group">
+            <label for="noiseIntensity">
+                Noise Intensity: <span class="value-display" id="noiseIntensityValue">0.50</span>
+            </label>
+            <input
+                type="range"
+                id="noiseIntensity"
+                min="0"
+                max="1"
+                step="0.01"
+                value="0.5"
+                class="slider"
+                oninput="updateValue('noiseIntensity', 'noiseIntensityValue', this.value)"
+            />
+        </div>
+
+        <div class="control-group">
+            <label for="noiseScale">
+                Noise Scale: <span class="value-display" id="noiseScaleValue">100</span>
+            </label>
+            <input
+                type="range"
+                id="noiseScale"
+                min="50"
+                max="300"
+                step="10"
+                value="100"
+                class="slider"
+                oninput="updateValue('noiseScale', 'noiseScaleValue', this.value)"
+            />
+        </div>
+
+        <div class="control-group">
+            <label for="noiseFrequency">
+                Noise Frequency: <span class="value-display" id="noiseFrequencyValue">0.8</span>
+            </label>
+            <input
+                type="range"
+                id="noiseFrequency"
+                min="0.1"
+                max="2"
+                step="0.1"
+                value="0.8"
+                class="slider"
+                oninput="updateValue('noiseFrequency', 'noiseFrequencyValue', this.value)"
+            />
+        </div>
+
+        <div class="control-group">
+            <label for="pointCount">
+                Point Count: <span class="value-display" id="pointCountValue">15</span>
+            </label>
+            <input
+                type="range"
+                id="pointCount"
+                min="3"
+                max="30"
+                step="1"
+                value="15"
+                class="slider"
+                oninput="updateValue('pointCount', 'pointCountValue', this.value)"
+            />
+        </div>
+
+        <div class="control-group">
+            <label for="animationSpeed">
+                Animation Speed: <span class="value-display" id="animationSpeedValue">50</span>
+            </label>
+            <input
+                type="range"
+                id="animationSpeed"
+                min="10"
+                max="100"
+                step="5"
+                value="50"
+                class="slider"
+                oninput="updateValue('animationSpeed', 'animationSpeedValue', this.value)"
+            />
+        </div>
+
+        <div class="action-buttons">
+            <button class="action-button" onclick="randomizeSettings()">
+                🎨 Randomize
+            </button>
+            <button class="action-button" onclick="resetSettings()">
+                🔄 Reset
+            </button>
+        </div>
+
+        <div class="tip">
+            <strong>Tip:</strong> Click the X button in the header or try the controls! You can collapse this panel to minimize it and fully preview the canvas. Click the "Controls" button to expand it again.
+        </div>
+    </div>
+
+    <script>
+        function showControls() {
+            document.getElementById('controlsContainer').classList.remove('hidden');
+            document.getElementById('showButton').classList.add('hidden');
+        }
+
+        function hideControls() {
+            document.getElementById('controlsContainer').classList.add('hidden');
+            document.getElementById('showButton').classList.remove('hidden');
+        }
+
+        function updateValue(sliderId, valueId, value) {
+            const valueElement = document.getElementById(valueId);
+            if (sliderId.includes('Intensity') || sliderId.includes('Frequency')) {
+                valueElement.textContent = parseFloat(value).toFixed(2);
+            } else {
+                valueElement.textContent = value;
+            }
+            
+            // Update canvas background based on settings (demo effect)
+            updateCanvasBackground();
+        }
+
+        function updateCanvasBackground() {
+            const intensity = document.getElementById('noiseIntensity').value;
+            const canvas = document.getElementById('canvas');
+            const opacity = Math.min(1, intensity * 2);
+            canvas.style.background = `linear-gradient(45deg, 
+                rgba(26, 26, 46, ${opacity}), 
+                rgba(22, 33, 62, ${opacity}))`;
+        }
+
+        function randomizeSettings() {
+            document.getElementById('noiseIntensity').value = (Math.random()).toFixed(2);
+            document.getElementById('noiseScale').value = Math.floor(Math.random() * 250) + 50;
+            document.getElementById('noiseFrequency').value = (Math.random() * 1.9 + 0.1).toFixed(1);
+            document.getElementById('pointCount').value = Math.floor(Math.random() * 28) + 3;
+            document.getElementById('animationSpeed').value = Math.floor(Math.random() * 90) + 10;
+            
+            // Update all displayed values
+            updateValue('noiseIntensity', 'noiseIntensityValue', document.getElementById('noiseIntensity').value);
+            updateValue('noiseScale', 'noiseScaleValue', document.getElementById('noiseScale').value);
+            updateValue('noiseFrequency', 'noiseFrequencyValue', document.getElementById('noiseFrequency').value);
+            updateValue('pointCount', 'pointCountValue', document.getElementById('pointCount').value);
+            updateValue('animationSpeed', 'animationSpeedValue', document.getElementById('animationSpeed').value);
+        }
+
+        function resetSettings() {
+            document.getElementById('noiseIntensity').value = '0.5';
+            document.getElementById('noiseScale').value = '100';
+            document.getElementById('noiseFrequency').value = '0.8';
+            document.getElementById('pointCount').value = '15';
+            document.getElementById('animationSpeed').value = '50';
+            
+            // Update all displayed values
+            updateValue('noiseIntensity', 'noiseIntensityValue', '0.5');
+            updateValue('noiseScale', 'noiseScaleValue', '100');
+            updateValue('noiseFrequency', 'noiseFrequencyValue', '0.8');
+            updateValue('pointCount', 'pointCountValue', '15');
+            updateValue('animationSpeed', 'animationSpeedValue', '50');
+        }
+
+        // Initialize canvas background
+        updateCanvasBackground();
+    </script>
+</body>
+</html>
