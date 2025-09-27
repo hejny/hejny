@@ -150,10 +150,10 @@ export function BackgroundCanvas({
                 ctx.fillRect(0, 0, width, height);
             });
 
-            // Reset composite operation
+            // Reset composite operation before applying noise (final layer)
             ctx.globalCompositeOperation = 'source-over';
 
-            // Apply simple pixel-level noise
+            // Apply noise as the final layer on top of all gradients
             if (noiseFrequency > 0 && noiseIntensity > 0) {
                 const imageData = ctx.getImageData(0, 0, width, height);
                 const data = imageData.data;
@@ -181,6 +181,7 @@ export function BackgroundCanvas({
                     }
                 }
 
+                // Put the modified image data back - this is the final rendering step
                 ctx.putImageData(imageData, 0, 0);
             }
         },
