@@ -76,13 +76,13 @@
         frequencySlider.addEventListener('input', (e) => {
             noiseFrequency = parseFloat(e.target.value);
             frequencyValue.textContent = noiseFrequency.toFixed(2);
-            applyNoise();
+            regenerate(); // Always regenerate from clean background
         });
 
         intensitySlider.addEventListener('input', (e) => {
             noiseIntensity = parseFloat(e.target.value);
             intensityValue.textContent = noiseIntensity.toFixed(2);
-            applyNoise();
+            regenerate(); // Always regenerate from clean background
         });
 
         function createGradientBackground() {
