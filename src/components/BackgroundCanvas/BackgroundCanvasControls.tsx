@@ -6,7 +6,6 @@ interface BackgroundCanvasControlsProps {
     pointCount: number;
     animationSpeed: number;
     noiseIntensity: number;
-    noiseScale: number;
     noiseFrequency: number;
     colors: string[];
     isPlaying: boolean;
@@ -15,7 +14,6 @@ interface BackgroundCanvasControlsProps {
     onPointCountChange: (value: number) => void;
     onAnimationSpeedChange: (value: number) => void;
     onNoiseIntensityChange: (value: number) => void;
-    onNoiseScaleChange: (value: number) => void;
     onNoiseFrequencyChange: (value: number) => void;
     onColorChange: (index: number, color: string) => void;
     onPlayingChange: (isPlaying: boolean) => void;
@@ -29,14 +27,12 @@ export function BackgroundCanvasControls({
     pointCount,
     animationSpeed,
     noiseIntensity,
-    noiseScale,
     noiseFrequency,
     colors,
     isPlaying,
     onPointCountChange,
     onAnimationSpeedChange,
     onNoiseIntensityChange,
-    onNoiseScaleChange,
     onNoiseFrequencyChange,
     onColorChange,
     onPlayingChange,
@@ -64,10 +60,6 @@ export function BackgroundCanvasControls({
         onNoiseIntensityChange(value);
     }, [onNoiseIntensityChange]);
 
-    const handleNoiseScaleChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
-        const value = parseInt(event.target.value, 10);
-        onNoiseScaleChange(value);
-    }, [onNoiseScaleChange]);
 
     const handleNoiseFrequencyChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
         const value = parseFloat(event.target.value);
@@ -156,32 +148,17 @@ export function BackgroundCanvasControls({
                 />
             </div>
 
-            <div className={styles.controlGroup}>
-                <label htmlFor="noiseScale">
-                    Noise Scale: <span className={styles.valueDisplay}>{noiseScale}</span>
-                </label>
-                <input
-                    type="range"
-                    id="noiseScale"
-                    min="50"
-                    max="300"
-                    step="10"
-                    value={noiseScale}
-                    onChange={handleNoiseScaleChange}
-                    className={styles.slider}
-                />
-            </div>
 
             <div className={styles.controlGroup}>
                 <label htmlFor="noiseFrequency">
-                    Noise Frequency: <span className={styles.valueDisplay}>{noiseFrequency.toFixed(1)}</span>
+                    Noise Frequency: <span className={styles.valueDisplay}>{noiseFrequency.toFixed(2)}</span>
                 </label>
                 <input
                     type="range"
                     id="noiseFrequency"
-                    min="0.1"
-                    max="2"
-                    step="0.1"
+                    min="0"
+                    max="1"
+                    step="0.01"
                     value={noiseFrequency}
                     onChange={handleNoiseFrequencyChange}
                     className={styles.slider}

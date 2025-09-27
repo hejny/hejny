@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Noise Demo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: #000;
+            color: #fff;
+        }
+        canvas {
+            border: 1px solid #333;
+            display: block;
+            margin: 20px 0;
+        }
+        .controls {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        label {
+            font-size: 14px;
+            font-weight: bold;
+        }
+        input[type="range"] {
+            width: 200px;
+        }
+        .value-display {
+            color: #4A90E2;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Pixel-Level Noise Demo</h1>
+    <p>This demonstrates the new simple noise system with frequency and intensity controls.</p>
+    
+    <canvas id="canvas" width="800" height="400"></canvas>
+    
+    <div class="controls">
+        <div class="control-group">
+            <label for="frequency">Noise Frequency: <span id="frequencyValue" class="value-display">0.10</span></label>
+            <input type="range" id="frequency" min="0" max="1" step="0.01" value="0.1">
+        </div>
+        
+        <div class="control-group">
+            <label for="intensity">Noise Intensity: <span id="intensityValue" class="value-display">0.20</span></label>
+            <input type="range" id="intensity" min="0" max="1" step="0.01" value="0.2">
+        </div>
+        
+        <button onclick="regenerate()">Regenerate Background</button>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const frequencySlider = document.getElementById('frequency');
+        const intensitySlider = document.getElementById('intensity');
+        const frequencyValue = document.getElementById('frequencyValue');
+        const intensityValue = document.getElementById('intensityValue');
+
+        let noiseFrequency = 0.1;
+        let noiseIntensity = 0.2;
+
+        // Update values when sliders change
+        frequencySlider.addEventListener('input', (e) => {
+            noiseFrequency = parseFloat(e.target.value);
+            frequencyValue.textContent = noiseFrequency.toFixed(2);
+            applyNoise();
+        });
+
+        intensitySlider.addEventListener('input', (e) => {
+            noiseIntensity = parseFloat(e.target.value);
+            intensityValue.textContent = noiseIntensity.toFixed(2);
+            applyNoise();
+        });
+
+        function createGradientBackground() {
+            const width = canvas.width;
+            const height = canvas.height;
+            
+            // Clear canvas with black
+            ctx.fillStyle = '#000000';
+            ctx.fillRect(0, 0, width, height);
+            
+            // Create simple gradient points
+            const colors = ['#4A90E2', '#E94B6A', '#F5A623', '#9013FE'];
+            
+            ctx.globalCompositeOperation = 'screen';
+            
+            colors.forEach((color, index) => {
+                const x = Math.random() * width;
+                const y = Math.random() * height;
+                const radius = 150 + Math.random() * 200;
+                
+                const gradient = ctx.createRadialGradient(x, y, 0, x, y, radius);
+                
+                // Extract RGB from hex
+                const r = parseInt(color.substr(1, 2), 16);
+                const g = parseInt(color.substr(3, 2), 16);
+                const b = parseInt(color.substr(5, 2), 16);
+                
+                gradient.addColorStop(0, `rgba(${r}, ${g}, ${b}, 0.6)`);
+                gradient.addColorStop(1, `rgba(${r}, ${g}, ${b}, 0)`);
+                
+                ctx.fillStyle = gradient;
+                ctx.fillRect(0, 0, width, height);
+            });
+            
+            ctx.globalCompositeOperation = 'source-over';
+        }
+
+        function applyNoise() {
+            if (noiseFrequency === 0 || noiseIntensity === 0) return;
+            
+            const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            const data = imageData.data;
+
+            for (let i = 0; i < data.length; i += 4) {
+                // Check if this pixel should be affected (frequency control)
+                if (Math.random() < noiseFrequency) {
+                    // Get original pixel values
+                    const originalR = data[i];
+                    const originalG = data[i + 1];
+                    const originalB = data[i + 2];
+
+                    // Apply noise intensity - random bit changes
+                    // Intensity of 1 means up to full range change (can go negative/wrap around)
+                    const maxChange = Math.floor(255 * noiseIntensity);
+                    const changeR = (Math.random() - 0.5) * 2 * maxChange;
+                    const changeG = (Math.random() - 0.5) * 2 * maxChange;
+                    const changeB = (Math.random() - 0.5) * 2 * maxChange;
+
+                    // Apply changes with wrapping (like bit manipulation)
+                    data[i] = (originalR + changeR) & 0xFF;
+                    data[i + 1] = (originalG + changeG) & 0xFF;
+                    data[i + 2] = (originalB + changeB) & 0xFF;
+                    // Keep alpha unchanged
+                }
+            }
+
+            ctx.putImageData(imageData, 0, 0);
+        }
+
+        function regenerate() {
+            createGradientBackground();
+            applyNoise();
+        }
+
+        // Initialize
+        regenerate();
+    </script>
+</body>
+</html>
