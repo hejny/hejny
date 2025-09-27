@@ -228,6 +228,22 @@
     transform: translateY(0);
 }
 
+.playButton {
+    background: #44ff44;
+}
+
+.playButton:hover {
+    background: #33cc33;
+}
+
+.pauseButton {
+    background: #ff4444;
+}
+
+.pauseButton:hover {
+    background: #cc3333;
+}
+
 /* Scrollbar styling */
 .controlsContainer::-webkit-scrollbar {
     width: 6px;

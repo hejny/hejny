@@ -9,6 +9,7 @@ interface BackgroundCanvasControlsProps {
     noiseScale: number;
     noiseFrequency: number;
     colors: string[];
+    isPlaying: boolean;
     
     // Callbacks for prop changes
     onPointCountChange: (value: number) => void;
@@ -17,6 +18,7 @@ interface BackgroundCanvasControlsProps {
     onNoiseScaleChange: (value: number) => void;
     onNoiseFrequencyChange: (value: number) => void;
     onColorChange: (index: number, color: string) => void;
+    onPlayingChange: (isPlaying: boolean) => void;
     
     // Control actions
     onReset: () => void;
@@ -30,12 +32,14 @@ export function BackgroundCanvasControls({
     noiseScale,
     noiseFrequency,
     colors,
+    isPlaying,
     onPointCountChange,
     onAnimationSpeedChange,
     onNoiseIntensityChange,
     onNoiseScaleChange,
     onNoiseFrequencyChange,
     onColorChange,
+    onPlayingChange,
     onReset,
     onRandomizeColors,
 }: BackgroundCanvasControlsProps) {
@@ -208,6 +212,27 @@ export function BackgroundCanvasControls({
             </div>
 
             <div className={styles.actionButtons}>
+                <button 
+                    onClick={() => onPlayingChange(!isPlaying)}
+                    className={`${styles.actionButton} ${isPlaying ? styles.pauseButton : styles.playButton}`}
+                    title={isPlaying ? 'Pause animation' : 'Play animation'}
+                >
+                    {isPlaying ? (
+                        <>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                            </svg>
+                            Pause
+                        </>
+                    ) : (
+                        <>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z" />
+                            </svg>
+                            Play
+                        </>
+                    )}
+                </button>
                 <button 
                     onClick={onRandomizeColors}
                     className={styles.actionButton}

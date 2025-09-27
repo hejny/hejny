@@ -134,12 +134,14 @@ export default function TestBackgroundPage() {
                     noiseScale={noiseScale}
                     noiseFrequency={noiseFrequency}
                     colors={colors}
+                    isPlaying={isPlaying}
                     onPointCountChange={setPointCount}
                     onAnimationSpeedChange={setAnimationSpeed}
                     onNoiseIntensityChange={setNoiseIntensity}
                     onNoiseScaleChange={setNoiseScale}
                     onNoiseFrequencyChange={setNoiseFrequency}
                     onColorChange={handleColorChange}
+                    onPlayingChange={setIsPlaying}
                     onReset={resetToDefaults}
                     onRandomizeColors={handleRandomizeColors}
                 />
