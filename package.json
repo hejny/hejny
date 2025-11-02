@@ -37,9 +37,9 @@
     "dependencies": {
         "@calcom/embed-react": "^1.5.1",
         "@next/font": "13.1.1",
-        "@promptbook/color": "0.103.0-29",
-        "@promptbook/markdown-utils": "0.103.0-29",
-        "@promptbook/utils": "0.103.0-29",
+        "@promptbook/color": "0.103.0-30",
+        "@promptbook/markdown-utils": "0.103.0-30",
+        "@promptbook/utils": "0.103.0-30",
         "configchecker": "1.5.1",
         "destroyable": "0.12.0",
         "html-react-parser": "3.0.12",
