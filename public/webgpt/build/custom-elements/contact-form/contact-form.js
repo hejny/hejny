@@ -57,7 +57,7 @@ try {
     }
 
     console.info('🌟 Defining <contact-form/>');
-    customElements.define('contact-form', ContactFormElement, { extends: 'form' });
+    customElements.define('x-disabled-contact-form', ContactFormElement, { extends: 'form' });
 } catch (error) {
     if (
         error.message.includes('has already been declared') ||

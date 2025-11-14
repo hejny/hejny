@@ -1,11 +1,13 @@
 import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
 import Link from 'next/link';
+import spaceTrim from 'spacetrim';
 import pavolHejny from '../../../public/services/prototyping-1.jpg';
 import { Article } from '../../components/Article/Article';
 import { BookingCalendar } from '../../components/BookingCalendar/BookingCalendar';
 import { Section } from '../../components/Section/Section';
 import styles from './Contact.module.css';
+import { supabase } from './supabase';
 
 interface ContactProps {
     variant: 'SHORT' | 'FULL';
@@ -104,7 +106,55 @@ export function ContactSection(props: ContactProps) {
                 </ul>
             </div>
 
-            <form is="contact-form">
+            <form
+                is="contact-form"
+                onSubmit={async (event) => {
+                    event.preventDefault();
+
+                    const formData = new FormData(event.currentTarget);
+
+                    const name = formData.get('name') as string | null;
+                    const email = formData.get('email') as string | null;
+                    const phone = formData.get('phone') as string | null;
+                    const variant = formData.get('variant') as string | null;
+                    const message = formData.get('message') as string | null;
+
+                    const userAgent = typeof window !== 'undefined' ? window.navigator.userAgent : undefined;
+                    const referrer = typeof window !== 'undefined' ? document.referrer : undefined;
+
+                    const { error: supabaseError } = await supabase.from('Contact').insert([
+                        {
+                            fullname: name || null,
+                            email: email || null,
+                            phone: phone || null,
+
+                            userAgent,
+                            referrer,
+                            // Note: ipAddress would need to be handled server-side for security
+
+                            appName: 'Pavol Hejný',
+                            placeName: 'contact-section',
+                            url: window.location.href,
+
+                            userNote: spaceTrim(
+                                (block) => `
+                                Variant: ${variant}
+                                Message:
+                                ${block(message || '(no message provided)')}
+                            `,
+                            ),
+
+                            isContacted: false,
+                        },
+                    ]);
+
+                    if (supabaseError) {
+                        throw new Error(supabaseError.message);
+                    }
+
+                    alert('Děkujeme za váš zájem! Brzy se vám ozveme.');
+                }}
+            >
                 <label>
                     <p>Jméno:</p>
                     <input name="name" placeholder="Vaše jméno" type="text" />
