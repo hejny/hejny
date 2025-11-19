@@ -37,9 +37,9 @@
     "dependencies": {
         "@calcom/embed-react": "^1.5.1",
         "@next/font": "13.1.1",
-        "@promptbook/color": "0.103.0-43",
-        "@promptbook/markdown-utils": "0.103.0-43",
-        "@promptbook/utils": "0.103.0-43",
+        "@promptbook/color": "0.103.0-44",
+        "@promptbook/markdown-utils": "0.103.0-44",
+        "@promptbook/utils": "0.103.0-44",
         "@supabase/ssr": "^0.7.0",
         "@supabase/supabase-js": "^2.81.1",
         "configchecker": "1.5.1",
