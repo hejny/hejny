@@ -170,7 +170,7 @@ export function ContactSection(props: ContactProps) {
                 <label>
                     <p>Zájem o školení na téma:</p>
                     <select name="variant">
-                        <option value="-">Vyberte variant</option>
+                        <option value="-">Vyberte variantu školení</option>
                         <option value="Varianta 1: Vývoj pomocí AI">Varianta 1: Vývoj pomocí AI</option>
                         <option value="Varianta 2: Vývoj AI aplikací">Varianta 2: Vývoj AI aplikací</option>
                     </select>
