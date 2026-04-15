@@ -324,11 +324,11 @@ In short: tools like Claude Code, Codex, or GitHub Copilot are the engines; Prom
 How the workflow works
 ptbk coder init prepares the project for the coder workflow, seeds project-owned generic templates in prompts/templates/, creates a starter AGENTS.md context file, adds helper npm run coder:* scripts, ensures .gitignore ignores /.tmp, and configures VS Code prompt screenshots in prompts/screenshots/.
 ptbk coder generate-boilerplates creates prompt files in prompts/.
-You replace placeholder @@@ sections with real coding tasks.
+You replace placeholder sections with real coding tasks.
 ptbk coder run sends the next ready [ ] prompt to the selected coding agent.
 Promptbook Coder marks the prompt as done [x], records runner metadata, then stages, commits, and pushes the resulting changes.
 ptbk coder verify reviews completed prompts, archives finished files to prompts/done/, and appends a repair prompt when more work is needed.
-Prompts marked with [-] are not ready yet, prompts containing @@@ are treated as not fully written, and prompts with more ! markers have higher priority.
+Prompts marked with [-] are not ready yet, prompts containing are treated as not fully written, and prompts with more ! markers have higher priority.
 
 Features
 Multi-runner execution: openai-codex, github-copilot, cline, claude-code, opencode, gemini
