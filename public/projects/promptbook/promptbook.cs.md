@@ -1,3 +1,3 @@
 # Promptbook
 
-Transparentní aplikace nad jazykovými modely
+Persistentní AI agenti pro cíle, znalosti, pravidla a firemní kontext

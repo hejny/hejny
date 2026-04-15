@@ -1,4 +1,4 @@
-[ ]
+[x] ~$0.00 10 minutes by OpenAI Codex `gpt-5.4`
 
 [✨💊] Pavol is now doing the AI, update a page
 
@@ -521,3 +521,4 @@ We welcome contributions and feedback to make Book language better for everyone!
 ```text
 Founder & CTO | We capture senior expertise and personality, then scale it through AI agents | Built 100+ agents | 20,000+ hours freed for strategy
 ```
+

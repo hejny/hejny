@@ -1,28 +1,31 @@
-title: Pavol Hejný 🖊 Tvořím něco z ničeho nic
+title: Pavol Hejný 🖊 AI, které opravdu pomáhá
 
 description: |
-    Specializuji se na tvorbu **plně funkčních prototypů** od nuly až po
-    ověření konceptu.
+    Pomáhám firmám zavádět AI agenty, AI coding a firemní AI procesy tak,
+    aby místo hype přinášely skutečnou hodnotu.
 
 # !!! Transfer to english
 Welcome:
     content: |
-        ChatGPT, AI, ML, GPT, Anthropic Claude, Gemini, LLM, GitHub Co-pilot, Cursor, RAG, MCP, Books... 🤯
+        ChatGPT, Claude, Gemini, GitHub Copilot, Cursor, RAG, MCP, Agents, Books... 🤯
 
 
-        > Využíváte **plný potenciál umělé inteligence** ve vašem podnikání?
+        > Přemýšlíte, kde má **AI ve firmě skutečně smysl** a kde je to jen drahý buzzword?
 
 
-        Technologie se neustále vyvíjí a momentálně zažíváme mohutnou vlnu nástupu **generativní umělé inteligence**,
-        která se čím dál více podobá masivnímu nástupu osobních počítačů nebo počátkům internetu.
+        AI používám od jejích prvních vln v praxi každý den. Prošli jsme slepé cesty, hype experimenty i slepou důvěru v nástroje,
+        která firmy stojí čas, peníze i důvěru v technologii.
 
 
-        Je jisté, že prakticky každé odvětví lidské činnosti bude touto revolucí ovlivněno,
-        a také vzniknou vítězové i poražení této ohromné změny.
+        Pomáhám firmám nastavit AI tak, aby byla užitečná v reálném provozu:
+        od AI codingu a práce s agenty až po quality checky, kontext, pravidla, bezpečnost dat a řízení změn.
 
 
-        Udržet si povědomí o všem, co se na poli AI děje; odfiltrovat klíčové momenty od denního šumu.
-        **S tím vším vám rád pomohu.**
+        Neřeším jen to, co model umí. Řeším hlavně to, jak ho zapojit do firmy, týmu a produktu tak,
+        aby přinášel hodnotu i za půl roku, nejen při první demoverzi.
+
+
+        **Pokud chcete AI využívat naplno bez zbytečného hype, rád pomohu.**
 
     back-home: Zpět na hlavní stránku
 
@@ -31,40 +34,42 @@ PavolHejny:
     title: Kdo jsem?
     content: |
         Jsem Pavol, vývojář s více než 15letou každodenní zkušeností s vývojem aplikací.
-        Mám za sebou několik velkých a úspěšných projektů.
 
-        V současnosti vyvíjím Promptbook, nástroj který umožňuje využívat AI modely výrazně jednodušeji než kdy dříve.
+        Dnes se soustředím hlavně na AI: pomáhám firmám spouštět jejich vlastní AI, nastavovat agentní workflow a zavádět procesy pro bezpečné a efektivní AI coding.
 
-        Jsem členem konzultační skupiny Ainautes, která pomáhá s nasazením generativní AI po celém světě.
+        Jsem Founder & CTO v Promptbooku, ekosystému pro persistentní AI agenty, kteří pracují s cíli, znalostmi, pravidly a firemním kontextem místo jednorázového chatování.
 
-        Před masivním nástupem generativní umělé inteligence jsem vytvořil první českou virtuální tabuli Collboard a elektronické učebnice H-edu, které využívají desítky tisíc dětí a pomohly mnoha školám překlenout začátky pandemie.
+        V praxi řeším témata jako AI vendor lock-in, ochranu dat, spolehlivost výstupů, rulesety, knowledge base, management oprávnění a automatizaci rutinní práce napříč firmou.
 
-        Také jsem pracoval na mnoha vědeckých projektech České společnosti ornitologické.
+        Ve vývoji prosazuji AI coding s procesem: práce s PRD, Gitem, testy, CI/CD, code review, backlogem a měřením toho, zda čas lidí i tokeny agentů dávají smysl.
 
-        Pravidelně přednáším na konferencích, zasedám v porotách a jsem mentorem mnoha českých i mezinárodních soutěží.
+        Vedle Promptbooku jsem členem konzultační skupiny Ainautes a pravidelně přednáším o AI ve firmách, vibe-codingu a rozdílu mezi hype a produkční realitou.
 
-        Většinu z mých projektů najdete open-source na mém GitHubu.
+        Dříve jsem vytvořil virtuální tabuli Collboard a elektronické učebnice H-edu, pracoval na vědeckých projektech České společnosti ornitologické a postavil řadu dalších produktů od prototypu po produkci.
+
+        Většinu mých projektů najdete open-source na mém GitHubu.
 
 # !!! Link to training
 Services:
     title: Jak Vám pomohu?
-    content: ''
+    content: |
+        AI není jeden nástroj ani jedno školení. Je to průběžný proces, který potřebuje dobrý výběr use-casů,
+        pravidla, kontext a kontrolu kvality.
     consult:
-        title: Konzultace
+        title: AI konzultace
         content: |
-            Nabízím odborné poradenství v oblasti technologií pro vaši aplikaci a poskytuji
-            analýzu jejich výhod a omezení, která vám pomůže při rozhodování.
+            Pomohu vám vyhodnotit, kde AI skutečně dává smysl, jaké nástroje zvolit,
+            jak ošetřit data, oprávnění, vendor lock-in a jak nastavit firemní proces.
     talk:
-        title: Přednáška/ školení
+        title: Přednáška / workshop
         content: |
-            Poskytnu přehled různých technologií a přístupů s přihlédnutím na jejich
-            <span style="color: #11ff11">výhody</span> a <span style="color:
-            #ff0000">nevýhody</span>.
+            Přednáším o AI ve firmách, AI codingu, agentních workflow i o tom,
+            kde končí hype a začíná použitelný produkční proces.
     prototype:
-        title: Prototypování
+        title: AI agent / prototyp
         content: |
-            Specializuji se na tvorbu **plně funkčních prototypů** od nuly až po
-            ověření konceptu.
+            Postavím pilotní řešení, interního agenta nebo prototyp workflow,
+            na kterém si bezpečně ověříte přínos dřív, než AI pustíte do produkce.
     action: Spojme se 🚀
 
 References:

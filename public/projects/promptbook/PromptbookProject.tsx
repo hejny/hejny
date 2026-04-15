@@ -22,11 +22,7 @@ import pavolHejnIsometricGameAsAColoringBookBlackAndWhiteIlB1cde821101c4d3fAd5b1
  */
 export function PromptbookProject() {
     return (
-        <a
-            href="https://webgpt.cz/?partner=ph&utm_medium=referral&utm_source=personal-page&utm_content=projects-section&utm_campaign=partner-ph"
-            target="_blank"
-            rel="noreferrer"
-        >
+        <a href="https://ptbk.io/" target="_blank" rel="noreferrer">
             <Item>
                 <Item.Title>
                     <Translate locale="en">Promptbook</Translate>
@@ -34,10 +30,10 @@ export function PromptbookProject() {
                 </Item.Title>
                 <Item.Description>
                     <Translate locale="en">
-                        <p>Build responsible, controlled and transparent applications on top of LLM models</p>
+                        <p>Persistent AI agents with goals, knowledge, rules, and company context</p>
                     </Translate>
                     <Translate locale="cs">
-                        <p>Transparentní aplikace nad jazykovými modely</p>
+                        <p>Persistentní AI agenti pro cíle, znalosti, pravidla a firemní kontext</p>
                     </Translate>
                 </Item.Description>
                 <Item.Image>

@@ -1,68 +1,72 @@
-title: Pavol Hejny 🖊 From 0 to 1
+title: Pavol Hejny 🖊 AI That Actually Helps
 
 description: |
-    I specialise in building **fully functional prototypes** from scratch to
-    proof of concept, staying ahead of the latest technologies.
+    I help companies deploy AI agents, AI coding, and company-wide AI processes
+    that deliver real value instead of hype.
 
 Welcome:
     content: |
-        ChatGPT, AI, ML, GPT, Anthropic Claude, Gemini, LLM, GitHub Co-pilot, Cursor, RAG, MCP, Books... 🤯
+        ChatGPT, Claude, Gemini, GitHub Copilot, Cursor, RAG, MCP, Agents, Books... 🤯
 
 
-        Are you leveraging the **full potential of AI** in your business?
+        Are you trying to figure out where **AI really makes sense** in your company and where it is just expensive buzzword theater?
 
 
-        Technology is constantly evolving and we are currently experiencing a massive wave of the emergence of **generative AI**,
-        which is becoming more and more like the massive rise of the personal computer or the early days of the internet.
+        I have been using AI in practice since its early waves. We have already gone through blind alleys, hype experiments,
+        and misplaced trust in tools that cost companies time, money, and confidence.
 
 
-        It is almost certain that virtually every sector of human activity will be affected by this revolution,
-        and there will be winners and losers from this massive change.
+        I help companies make AI useful in real operations:
+        from AI coding and agent workflows to quality checks, context management, rules, data safety, and change management.
 
 
-        It is virtually impossible to maintain an awareness of all that is happening in the field of technology and to filter out the key technologies from the daily noise.
-        **I'd be happy to help you with all of that.**
+        I do not focus only on what the model can do. I focus on how to plug it into a company, team, and product
+        so it still creates value six months later, not only in the first demo.
+
+
+        **If you want to use AI fully without unnecessary hype, I can help.**
 
     back-home: Back home
 
 PavolHejny:
     title: Who I am?
     content: |
-        I'm Pavol, a developer who is passionate about using new tools and technologies.
+        I'm Pavol, a developer with more than 15 years of day-to-day experience building software.
 
-        Currently, I am focusing on the Promptbook framework - a new way of using AI models in a more human-like way.
+        Today I focus mainly on AI: I help companies launch their own AI, design agent workflows, and introduce processes for safe and effective AI coding.
 
-        I am a member of the Ainautes consulting group, which supports with the deployment of generative AI around the world.
+        I am the Founder & CTO of Promptbook, an ecosystem for persistent AI agents that work with goals, knowledge, rules, and company context instead of one-off chats.
 
-        Before the massive emergence of generative AI, I have created the first Czech virtual whiteboard, Collboard, and electronic textbooks, H-edu, which were used by tens of thousands of children.
+        In practice, I work on topics such as AI vendor lock-in, data protection, output reliability, rulesets, knowledge bases, permission management, and automation of routine work across a company.
 
-        I have also worked on many scientific projects for the Czech Ornithological Society.
-        I regularly give lectures at conferences, sit on juries, and act as a mentor in many Czech and international competitions.
-        I have a special heart for this, and I love open-source - you can find many of my things on my GitHub.
+        In software development, I push AI coding with process: PRDs, Git, automated tests, CI/CD, code review, backlog automation, and measuring whether human time and agent tokens are actually being used well.
+
+        Alongside Promptbook, I am a member of the Ainautes consulting group and I regularly speak about AI in organizations, vibe-coding, and the gap between hype and production reality.
+
+        Before this AI wave, I created the virtual whiteboard Collboard and the H-edu digital textbooks, worked on scientific projects for the Czech Ornithological Society, and built many other products from prototype to production.
+
+        Many of my projects are open source and available on my GitHub.
 
 Services:
     title: How can I help you?
     content: |
-        I specialise in building **fully functional prototypes** from scratch to
-        proof of concept, staying ahead of the latest technologies. Let me guide you
-        through the ever-changing landscape of new, emerging and disruptive
-        technologies.
+        AI is not one tool and not one workshop. It is an ongoing process that needs
+        the right use cases, rules, context, and quality control.
     consult:
-        title: Consult
+        title: AI consulting
         content: |
-            I offer expert advice on various technologies, providing <!-- insightful
-            --> analysis of their benefits and limitations to help you make decisions.
+            I help you evaluate where AI truly makes sense, which tools to choose,
+            how to handle data, permissions, vendor lock-in, and how to set up the right internal process.
     talk:
-        title: Talk
+        title: Talk / workshop
         content: |
-            I provide overviews of various technologies, highlighting their <span
-            style="color: #11ff11">pros</span> and <span style="color:
-            #ff0000">cons</span> to ensure a well-rounded understanding.
+            I speak about AI in companies, AI coding, agent workflows, and where hype ends
+            and a usable production process begins.
     prototype:
-        title: Prototype
+        title: AI agent / prototype
         content: |
-            I will bring your new project into the reality through effective
-            prototyping and seamless transition from concept to implementation.
+            I can build a pilot solution, internal agent, or workflow prototype
+            that lets you validate the real benefit before AI reaches production.
     action: Get in touch 🚀
 
 References:
